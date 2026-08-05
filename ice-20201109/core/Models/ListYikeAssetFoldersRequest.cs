@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListYikeAssetFoldersRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The project ID. If this parameter is omitted, folders in the default project are returned.</para>
+        /// <para>The project ID. If this parameter is not specified, the default project is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ProductionId</para>

@@ -10,18 +10,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// <para>The material ID. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs. The following material types are supported:</para>
+        /// <para>The material IDs. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs.</para>
         /// <list type="bullet">
-        /// <item><description><para>video</para>
-        /// </description></item>
-        /// <item><description><para>audio</para>
-        /// </description></item>
-        /// <item><description><para>image</para>
-        /// </description></item>
-        /// <item><description><para>liveStream</para>
-        /// </description></item>
-        /// <item><description><para>editingProject</para>
-        /// </description></item>
+        /// <item><description>&quot;video&quot;: video</description></item>
+        /// <item><description>&quot;audio&quot;: audio</description></item>
+        /// <item><description>&quot;image&quot;: image</description></item>
+        /// <item><description>&quot;liveStream&quot;: live stream</description></item>
+        /// <item><description>&quot;editingProject&quot;: editing project</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

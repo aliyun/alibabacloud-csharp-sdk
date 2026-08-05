@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteYikeAssetMediaInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of the IDs or InputUrl values of media assets that could not be deleted.</para>
+        /// <para>The list of IDs or InputUrls that failed to be deleted.</para>
         /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]

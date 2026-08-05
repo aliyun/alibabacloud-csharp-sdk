@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveTranscodeJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</para>
+        /// <para>The search keyword. You can search by task ID or name. Name supports fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24ecbb5c-4f98-4194-9400-f17102e27fc5</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</para>
+        /// <para>The sort order. Sorts by CreateTime. Default value: desc.</para>
         /// <list type="bullet">
-        /// <item><description><para>asc</para>
-        /// </description></item>
-        /// <item><description><para>desc</para>
-        /// </description></item>
+        /// <item><description>asc: ascending order</description></item>
+        /// <item><description>desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,12 +54,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start mode of the transcoding job.</para>
+        /// <para>The start mode.</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The transcoding job immediately starts.</para>
-        /// </description></item>
-        /// <item><description><para>1: The transcoding job starts at the scheduled time.</para>
-        /// </description></item>
+        /// <item><description>0: start immediately</description></item>
+        /// <item><description>1: scheduled start</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,8 +68,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? StartMode { get; set; }
 
         /// <summary>
-        /// <para>The state of the job.</para>
-        /// <para>0: The job is not started. 1: The job is in progress. 2: The job is stopped.</para>
+        /// <para>The task status.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: not started</para>
+        /// </description></item>
+        /// <item><description><para>1: running</para>
+        /// </description></item>
+        /// <item><description><para>2: stopped</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,16 +86,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the template used by the transcoding job.</para>
+        /// <para>The template type corresponding to the transcoding task.</para>
         /// <list type="bullet">
-        /// <item><description><para>normal</para>
-        /// </description></item>
-        /// <item><description><para>narrow-band</para>
-        /// </description></item>
-        /// <item><description><para>audio-only</para>
-        /// </description></item>
-        /// <item><description><para>origin</para>
-        /// </description></item>
+        /// <item><description>normal: standard</description></item>
+        /// <item><description>narrow-band: narrow bandwidth high definition</description></item>
+        /// <item><description>audio-only: audio only</description></item>
+        /// <item><description>origin: original quality</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

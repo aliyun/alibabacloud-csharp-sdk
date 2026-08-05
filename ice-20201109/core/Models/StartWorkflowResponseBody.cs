@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow task.</para>
+        /// <para>The workflow task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>22dad741d086a50325f9</b></b></b></para>

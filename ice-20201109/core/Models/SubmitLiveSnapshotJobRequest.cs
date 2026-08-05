@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The snapshot callback URL.</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot exceed 255 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>Both HTTP and HTTPS URLs are supported.</para>
-        /// </description></item>
+        /// <item><description>Maximum length: 255.</description></item>
+        /// <item><description>HTTP and HTTPS are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +24,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The task name.</para>
         /// <list type="bullet">
-        /// <item><description>It cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Maximum length: 128.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The information about the output snapshot.</para>
+        /// <para>The snapshot output information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SnapshotOutput")]
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The output endpoint of the snapshot.</para>
+            /// <para>The snapshot output endpoint.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the snapshot. The value can only be oss.</para>
+            /// <para>The snapshot storage type. Currently, only oss is supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The information about the input stream.</para>
+        /// <para>The stream input information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamInput")]
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitLiveSnapshotJobRequestStreamInput StreamInput { get; set; }
         public class SubmitLiveSnapshotJobRequestStreamInput : TeaModel {
             /// <summary>
-            /// <para>The type of the input stream. The value can only be rtmp.</para>
+            /// <para>The stream input type. Currently, only rtmp is supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -102,9 +100,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The URL of the input stream.</para>
+            /// <para>The stream input URL.</para>
             /// <list type="bullet">
-            /// <item><description>It cannot exceed 255 characters in length.</description></item>
+            /// <item><description>Maximum length: 255.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

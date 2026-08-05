@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetYikeStoryboardJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The storyboard job ID. You can obtain this ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">SubmitStoryboardJob</a> operation.</para>
+        /// <para>The job ID. You can obtain this value from the response parameters of <a href="https://help.aliyun.com/document_detail/461964.html">Submit a packaging job</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>A JSON object that contains the parameters for the job. The structure of this object varies based on the AI algorithm.</para>
+        /// <para>The algorithm job parameters. This is a JSON object whose content varies depending on the algorithm.</para>
         /// </summary>
         [NameInMap("JobParams")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FileURL { get; set; }
 
             /// <summary>
-            /// <para>The model parameters.</para>
+            /// <para>The random seed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModelParams { get; set; }
 
             /// <summary>
-            /// <para>The narration voice.</para>
+            /// <para>The narration voice ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sys_YoungGracefulWoman</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>The shot generation mode.</para>
+            /// <para>The shot prompt generation mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>multi</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ShotPromptMode { get; set; }
 
             /// <summary>
-            /// <para>The shot splitting mode.</para>
+            /// <para>The shot split mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>firstPersonNarration</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The job title.</para>
             /// <para>\- Maximum length: 128 bytes.</para>
-            /// <para>\- UTF-8 encoding.</para>
+            /// <para>\- UTF-8 encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-title</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public GetYikeStoryboardJobResponseBodyJobResult JobResult { get; set; }
         public class GetYikeStoryboardJobResponseBodyJobResult : TeaModel {
             /// <summary>
-            /// <para>A list of IDs for storyboards that encountered an exception.</para>
+            /// <para>The list of exception storyboard IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;st_2053348871\&quot;]</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ExceptionStoryboardIds { get; set; }
 
             /// <summary>
-            /// <para>A list of shots that failed to generate.</para>
+            /// <para>The list of failed shots.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;errorCode\&quot;:\&quot;NoMediaData\&quot;,\&quot;storyboardId\&quot;:\&quot;st_2118280473\&quot;,\&quot;shotId\&quot;:\&quot;54\&quot;}]</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string OutputUrl { get; set; }
 
             /// <summary>
-            /// <para>Detailed information about each storyboard in the job.</para>
+            /// <para>The detailed storyboard information for the storyboard generation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string StoryboardInfoList { get; set; }
 
             /// <summary>
-            /// <para>A comma-separated list of successful storyboard IDs.</para>
+            /// <para>The list of successful storyboard IDs, separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>st_2118280473, st_2118280471</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SuccessStoryboardIds { get; set; }
 
             /// <summary>
-            /// <para>A list of IDs for successful storyboards.</para>
+            /// <para>The list of successful storyboards.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;st_2118280473\&quot;]</para>
@@ -214,11 +214,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Succeeded</b>: The job completed successfully.</para>
+        /// <item><description><para><b>Succeeded</b>: The job is processed.</para>
         /// </description></item>
-        /// <item><description><para><b>Failed</b>: The job failed to complete.</para>
+        /// <item><description><para><b>Failed</b>: The job failed.</para>
         /// </description></item>
-        /// <item><description><para><b>Running</b>: The job is in progress.</para>
+        /// <item><description><para><b>Running</b>: The job is being processed.</para>
         /// </description></item>
         /// </list>
         /// 

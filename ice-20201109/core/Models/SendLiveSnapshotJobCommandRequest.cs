@@ -10,15 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendLiveSnapshotJobCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The operation command.</para>
-        /// <para>Valid values:</para>
+        /// <para>The operation instruction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>stop</para>
-        /// </description></item>
-        /// <item><description><para>restart</para>
-        /// </description></item>
-        /// <item><description><para>start</para>
-        /// </description></item>
+        /// <item><description>start: starts the task.</description></item>
+        /// <item><description>stop: stops the task.</description></item>
+        /// <item><description>restart: restarts the task.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot job.</para>
+        /// <para>The ID of the snapshot task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

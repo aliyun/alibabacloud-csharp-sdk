@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetYikeAssetMediaInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The media asset IDs, separated by commas.</para>
+        /// <para>The IDs of the media assets to query, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b>,<b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListYikeProductionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results returned on each page.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. If more results are available, you can use this token in the next request to retrieve the next page of results. If this field is empty, all results have been returned.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of projects.</para>
+        /// <para>The project list.</para>
         /// </summary>
         [NameInMap("ProductionList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CoverUrl { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the project.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-07T02:21:36Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator name.</para>
+            /// <para>The username of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_183320223010****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ProductionId { get; set; }
 
             /// <summary>
-            /// <para>The title of the project.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Harvest</para>

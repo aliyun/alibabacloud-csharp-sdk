@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template.</para>
+        /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>

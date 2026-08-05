@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameters</a>.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameter</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;param&quot;: &quot;sample&quot;}</para>

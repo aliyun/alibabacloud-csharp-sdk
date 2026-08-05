@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CancelIProductionJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// <para>The details about the access denial. This field is returned only when RAM authentication fails.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public CancelIProductionJobResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class CancelIProductionJobResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The operation that failed the permission check.</para>
+            /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ice:CancelIProductionJob</para>
@@ -27,14 +27,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity. Values:</para>
+            /// <para>The identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>RAM user: a UID</para>
-            /// </description></item>
-            /// <item><description><para>RAM role: RoleName:RoleSessionName</para>
-            /// </description></item>
-            /// <item><description><para>Federated user: ProviderType/ProviderName</para>
-            /// </description></item>
+            /// <item><description>RAM user: RAM user UID</description></item>
+            /// <item><description>RAM role: RoleName:RoleSessionName</description></item>
+            /// <item><description>Federated: ProviderType/ProviderName</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The account to which the principal belongs.</para>
+            /// <para>The account to which the authenticate principal belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>82303720</b></b></para>
@@ -55,14 +52,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of identity that made the request. Valid values:</para>
+            /// <para>The type of the identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SubUser: RAM user</para>
-            /// </description></item>
-            /// <item><description><para>AssumedRoleUser: RAM role</para>
-            /// </description></item>
-            /// <item><description><para>Federated: SSO federated user</para>
-            /// </description></item>
+            /// <item><description>SubUser: RAM user</description></item>
+            /// <item><description>AssumedRoleUser: RAM role</description></item>
+            /// <item><description>Federated: SSO federated identity</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,12 +77,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of policy that resulted in the denial. Valid values:</para>
+            /// <para>The type of denial by the access policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ImplicitDeny</b>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</para>
-            /// </description></item>
-            /// <item><description><para><b>ExplicitDeny</b>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</para>
-            /// </description></item>
+            /// <item><description><b>ImplicitDeny</b>: The resource owner has not configured a relevant permission policy for the current user. Access to unauthorized operations is denied by default.</description></item>
+            /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,18 +91,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The type of policy that triggered the permission failure.</para>
+            /// <para>The type of the policy that caused the access denial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ControlPolicy</b>: control policy</para>
-            /// </description></item>
-            /// <item><description><para><b>SessionPolicy</b>: an additional policy attached to a temporary token.</para>
-            /// </description></item>
-            /// <item><description><para><b>AssumeRolePolicy</b>: the trust policy of a RAM role.</para>
-            /// </description></item>
-            /// <item><description><para><b>AccountLevelIdentityBasedPolicy</b>: an identity-based policy at the account level (custom or system).</para>
-            /// </description></item>
-            /// <item><description><para><b>ResourceGroupLevelIdentityBasedPolicy</b>: an identity-based policy scoped to a resource group.</para>
-            /// </description></item>
+            /// <item><description><b>ControlPolicy</b>: control policy.</description></item>
+            /// <item><description><b>SessionPolicy</b>: an additional permission policy attached to a temporary token.</description></item>
+            /// <item><description><b>AssumeRolePolicy</b>: the trust policy of a RAM role.</description></item>
+            /// <item><description><b>AccountLevelIdentityBasedPolicy</b>: an identity-access policy at the account authorization scope, including custom policies and system policies.</description></item>
+            /// <item><description><b>ResourceGroupLevelIdentityBasedPolicy</b>: an identity-access policy at the resource group authorization scope, including custom policies and system policies.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +110,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -133,7 +120,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>

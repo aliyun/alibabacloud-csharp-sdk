@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>2876-6263-4B75-8F2C-CD0F7FCF</b></b></para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public AddTemplateResponseBodyTemplate Template { get; set; }
         public class AddTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// <para>The template configurations.</para>
+            /// <para>See the Timeline template Config documentation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>参见Config文档</para>
+            /// <para>See the Config documentation</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The URL of the template thumbnail.</para>
+            /// <para>The template cover URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></para>
@@ -47,16 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CoverUrl { get; set; }
 
             /// <summary>
-            /// <para>The source from which the template was created.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>AliyunConsole</para>
-            /// </description></item>
-            /// <item><description><para>WebSDK</para>
-            /// </description></item>
-            /// <item><description><para>OpenAPI</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The template creation source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAPI</para>
@@ -66,16 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateSource { get; set; }
 
             /// <summary>
-            /// <para>The source from which the template was modified.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>AliyunConsole</para>
-            /// </description></item>
-            /// <item><description><para>WebSDK</para>
-            /// </description></item>
-            /// <item><description><para>OpenAPI</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The template modification source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAPI</para>
@@ -95,7 +77,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the preview video.</para>
+            /// <para>The media asset ID of the preview video.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>01bf24bf41c78b2754cb3187</b></b></para>
@@ -105,22 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PreviewMedia { get; set; }
 
             /// <summary>
-            /// <para>The template state.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>UploadFailed: Failed to upload the video.</para>
-            /// </description></item>
-            /// <item><description><para>ProcessFailed: Failed to process the advanced template.</para>
-            /// </description></item>
-            /// <item><description><para>Available: The template is available.</para>
-            /// </description></item>
-            /// <item><description><para>Uploading: The video is being uploaded.</para>
-            /// </description></item>
-            /// <item><description><para>Created: The template is created but not ready for use.</para>
-            /// </description></item>
-            /// <item><description><para>Processing: The advanced template is being processed.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The template status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -140,14 +107,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The template type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Timeline: regular template.</para>
-            /// </description></item>
-            /// <item><description><para>VETemplate: advanced template.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The templatetype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Timeline</para>

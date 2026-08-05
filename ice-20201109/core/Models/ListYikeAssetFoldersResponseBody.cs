@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>The maximum number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Token</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of folders.</para>
+        /// <para>The total number of folders.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78</para>

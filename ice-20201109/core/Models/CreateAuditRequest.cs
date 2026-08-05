@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateAuditRequest : TeaModel {
         /// <summary>
-        /// <para>The review results. You can specify the results for a maximum of 20 videos at a time. The value must be converted to a string. For more information about the parameters in AuditContent, see the &quot;AuditContent&quot; section of this topic.</para>
+        /// <para>The array of review content. A maximum of 20 videos can be reviewed at a time. Convert the array to a string before passing it as the parameter value. For the specific parameter structure, see the AuditContent table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateAvatarTrainingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAvatarTrainingJobResponseBodyData Data { get; set; }
         public class CreateAvatarTrainingJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the digital human training job.</para>
+            /// <para>The ID of the digital human training task.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>d718e2ff4f018ccf419a7b71</b></b></para>

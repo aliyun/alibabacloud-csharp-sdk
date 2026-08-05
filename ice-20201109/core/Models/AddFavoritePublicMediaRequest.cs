@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddFavoritePublicMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the Media Assets.</para>
+        /// <para>The IMS media asset IDs.</para>
         /// <list type="bullet">
-        /// <item><description>Separate multiple IDs with commas.</description></item>
+        /// <item><description>Separate multiple IDs with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCustomizedVoiceJobRequest : TeaModel {
         /// <summary>
-        /// <para>The OSS URL where the demo audio will be saved.</para>
+        /// <para>The audio output address of the sample.  </para>
         /// <list type="bullet">
-        /// <item><description><para>If specified, the service generates a demo audio file at the provided OSS URL after training completes.</para>
-        /// </description></item>
-        /// <item><description><remarks>
-        /// <para>Notice: </para>
+        /// <item><description>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  </description></item>
+        /// <item><description>If you do not specify this parameter, no sample audio is generated.<remarks>
+        /// <para>Notice: The address must be a valid public OSS address under your account.</para>
         /// </remarks>
-        /// <para>The URL must be a valid public address for an OSS object in your account.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DemoAudioMediaURL { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the voice.</para>
+        /// <para>The voice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

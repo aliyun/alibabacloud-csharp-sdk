@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreatePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the MPS queue.</para>
+        /// <para>The pipeline name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The priority. Default value: 6. Valid values: 1 to 10. A greater value specifies a higher priority.</para>
+        /// <para>The priority, ranging from 1 to 10. Default value: 6. A larger value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -31,15 +31,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The type of the MPS queue. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>Standard: standard MPS queue.</para>
+        /// <para>The pipeline type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Standard: standard pipeline.</para>
         /// </description></item>
-        /// <item><description><para>Boost: MPS queue with transcoding speed boosted.</para>
+        /// <item><description><para>Boost: double-speed transcoding pipeline.</para>
         /// </description></item>
-        /// <item><description><para>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</para>
+        /// <item><description><para>NarrowBandHDV2: Narrowband HD 2.0 pipeline.</para>
         /// </description></item>
-        /// </ol>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

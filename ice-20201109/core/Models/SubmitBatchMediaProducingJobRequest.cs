@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitBatchMediaProducingJobRequest : TeaModel {
         /// <summary>
-        /// <para>A client-side token used to ensure request idempotence.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The editing configuration. For the structure definition, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</para>
+        /// <para>The editing configuration. For the specific structure definition, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingConfig { get; set; }
 
         /// <summary>
-        /// <para>The input configuration. For the structure definition, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</para>
+        /// <para>The input configuration. For the specific structure definition, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         ///         &quot;<b><b>4549d886810b46c30f6e</b></b>&quot; ]
         ///   }],
         ///   &quot;TitleArray&quot;: [
-        ///       &quot;回龙观盒马鲜生开业啦&quot;,
-        ///       &quot;盒马鲜生开业啦&quot; ],
+        ///       &quot;Hema Fresh grand opening in Huilongguan&quot;,
+        ///       &quot;Hema Fresh grand opening&quot; ],
         ///   &quot;SpeechTextArray&quot;: [
-        ///       &quot;附近的商场新开了一家盒马鲜生，今天是第一天开业&quot;
-        ///       &quot;商场里的人不少，零食、酒水都比较便宜大家也快来看看呀&quot; ]
+        ///       &quot;A new Hema Fresh store just opened in the nearby mall, today is the first day of business&quot;
+        ///       &quot;There are quite a few people in the mall, snacks and beverages are relatively cheap, come check it out&quot; ]
         /// }</para>
         /// </summary>
         [NameInMap("InputConfig")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputConfig { get; set; }
 
         /// <summary>
-        /// <para>The output configuration. For the structure definition, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</para>
+        /// <para>The output configuration. For the specific structure definition, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The template parameters. You can configure multiple templates for one-click smart video creation. The system randomly selects one template to apply. For more information, see <a href="https://help.aliyun.com/zh/ims/use-cases/batch-video-production-public-parameters?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_5.342860c5H30VVS%5C&scm=20140722.H_2877814._.OR_help-T_cn~zh-V_1#32c3bea6182sy">TemplateConfig parameters</a>.</para>
+        /// <para>The template parameters. You can configure multiple one-click video production templates, and one is randomly selected and applied. For details, see <a href="https://www.alibabacloud.com/help/en/ims/use-cases/batch-video-production-public-parameters#32c3bea6182sy">TemplateConfig metric description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;<b><b>b4549d46c88681030f6e</b></b>&quot;,&quot;<b><b>549d46c88b4681030f6e</b></b>&quot;]</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// <para>Custom business and callback configurations. For the structure definition, see <a href="~~357745#section-urj-v3f-0s1~~">UserData configuration</a>.</para>
+        /// <para>The user business configuration and callback configuration. For the specific structure definition, see <a href="~~357745#section-urj-v3f-0s1~~">UserData configuration</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</para>

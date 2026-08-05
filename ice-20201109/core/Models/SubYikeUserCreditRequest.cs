@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubYikeUserCreditRequest : TeaModel {
         /// <summary>
-        /// <para>The amount of credit to deduct. The value must be greater than 0 and cannot exceed the credit balance of the sub-account.</para>
+        /// <para>The number of credits to deduct. The value must be greater than 0 and cannot exceed the credit balance of the RAM user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Credit { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the sub-account.</para>
+        /// <para>The ID of the RAM user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

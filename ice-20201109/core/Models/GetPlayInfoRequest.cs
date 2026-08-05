@@ -9,17 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPlayInfoRequest : TeaModel {
-        /// <summary>
-        /// <para>The validity period of the playback URL, in seconds. The value defaults to 3600, which is also the minimum.</para>
-        /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The InputURL used to register the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</para>
+        /// <para>The InputURL specified when the media asset was registered. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</para>
         /// <remarks>
-        /// <para>Specify at least one of MediaId and InputURL.</para>
+        /// <para>At least one of MediaId and InputURL must be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The media asset ID.</para>
         /// <remarks>
-        /// <para>Specify at least one of MediaId and InputURL.</para>
+        /// <para>At least one of MediaId and InputURL must be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

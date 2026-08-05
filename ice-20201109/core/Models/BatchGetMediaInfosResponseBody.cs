@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetMediaInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of media IDs for which information could not be retrieved.</para>
+        /// <para>The list of media assets that failed to be retrieved.</para>
         /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
         public List<string> IgnoredList { get; set; }
 
         /// <summary>
-        /// <para>A list of media assets.</para>
+        /// <para>The collection of media assets that meet the specified requirements.</para>
         /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<BatchGetMediaInfosResponseBodyMediaInfos> MediaInfos { get; set; }
         public class BatchGetMediaInfosResponseBodyMediaInfos : TeaModel {
             /// <summary>
-            /// <para>A list of basic file information.</para>
+            /// <para>The list of file basic information.</para>
             /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoList : TeaModel {
                 /// <summary>
-                /// <para>The audio streams.</para>
+                /// <para>The audio stream information. A media asset may have multiple audio streams.</para>
                 /// </summary>
                 [NameInMap("AudioStreamInfoList")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Channels { get; set; }
 
                     /// <summary>
-                    /// <para>The full name of the codec.</para>
+                    /// <para>The long name of the codec.</para>
                     /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
-                    /// <para>The time base of the codec.</para>
+                    /// <para>The codec time base.</para>
                     /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The frame rate.</para>
+                    /// <para>The audio frame rate.</para>
                     /// </summary>
                     [NameInMap("Fps")]
                     [Validation(Required=false)]
                     public string Fps { get; set; }
 
                     /// <summary>
-                    /// <para>The index of the stream.</para>
+                    /// <para>The audio stream index.</para>
                     /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string NumFrames { get; set; }
 
                     /// <summary>
-                    /// <para>The profile.</para>
+                    /// <para>The codec profile.</para>
                     /// </summary>
                     [NameInMap("Profile")]
                     [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>The basic information about the file, such as the duration and file size.</para>
+                /// <para>The file basic information, including duration and size.</para>
                 /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The region where the file is stored.</para>
+                    /// <para>The storage region of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -285,14 +285,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>The subtitle streams.</para>
+                /// <para>The subtitle stream information. A media asset can have multiple subtitle streams.</para>
                 /// </summary>
                 [NameInMap("SubtitleStreamInfoList")]
                 [Validation(Required=false)]
                 public List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The full name of the codec.</para>
+                    /// <para>The long name of the codec.</para>
                     /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
-                    /// <para>The time base of the codec.</para>
+                    /// <para>The codec time base.</para>
                     /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The index of the stream.</para>
+                    /// <para>The audio stream index.</para>
                     /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>The video streams.</para>
+                /// <para>The video stream information. A media asset can have multiple video streams.</para>
                 /// </summary>
                 [NameInMap("VideoStreamInfoList")]
                 [Validation(Required=false)]
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
-                    /// <para>The full name of the codec.</para>
+                    /// <para>The long name of the codec.</para>
                     /// </summary>
                     [NameInMap("CodecLongName")]
                     [Validation(Required=false)]
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CodecTagString { get; set; }
 
                     /// <summary>
-                    /// <para>The time base of the codec.</para>
+                    /// <para>The codec time base.</para>
                     /// </summary>
                     [NameInMap("CodecTimeBase")]
                     [Validation(Required=false)]
@@ -434,28 +434,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The frame rate.</para>
+                    /// <para>The video frame rate.</para>
                     /// </summary>
                     [NameInMap("Fps")]
                     [Validation(Required=false)]
                     public string Fps { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether B-frames exist.</para>
+                    /// <para>Indicates whether the video stream contains B-frames.</para>
                     /// </summary>
                     [NameInMap("HasBFrames")]
                     [Validation(Required=false)]
                     public string HasBFrames { get; set; }
 
                     /// <summary>
-                    /// <para>The height of the video.</para>
+                    /// <para>The height.</para>
                     /// </summary>
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The index of the stream.</para>
+                    /// <para>The video stream index.</para>
                     /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
@@ -469,14 +469,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Lang { get; set; }
 
                     /// <summary>
-                    /// <para>The level.</para>
+                    /// <para>The codec level.</para>
                     /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is an alias for <c>NumFrames</c>.</para>
+                    /// <para>The total number of frames.</para>
                     /// </summary>
                     [NameInMap("Nb_frames")]
                     [Validation(Required=false)]
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string PixFmt { get; set; }
 
                     /// <summary>
-                    /// <para>The profile.</para>
+                    /// <para>The codec profile.</para>
                     /// </summary>
                     [NameInMap("Profile")]
                     [Validation(Required=false)]
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Timebase { get; set; }
 
                     /// <summary>
-                    /// <para>The width of the video.</para>
+                    /// <para>The width.</para>
                     /// </summary>
                     [NameInMap("Width")]
                     [Validation(Required=false)]
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo : TeaModel {
                 /// <summary>
-                /// <para>The business associated with the media asset.</para>
+                /// <para>The business to which the media asset belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ICE</para>
@@ -590,7 +590,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time the media asset was created.</para>
+                /// <para>The time when the media asset was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:10Z</para>
@@ -600,7 +600,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time the media asset was deleted.</para>
+                /// <para>The time when the media asset was deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:10Z</para>
@@ -610,7 +610,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string DeletedTime { get; set; }
 
                 /// <summary>
-                /// <para>The description.</para>
+                /// <para>The content description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>description</para>
@@ -620,7 +620,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the media asset in its source system.</para>
+                /// <para>The address of the media asset to be registered in the corresponding system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -630,7 +630,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string InputURL { get; set; }
 
                 /// <summary>
-                /// <para>The media ID.</para>
+                /// <para>The media asset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b><b><b>c48fb37407365d4f2cd8</b></b></b></para>
@@ -650,17 +650,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaTags { get; set; }
 
                 /// <summary>
-                /// <para>The media type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><c>Image</c></para>
-                /// </description></item>
-                /// <item><description><para><c>Video</c></para>
-                /// </description></item>
-                /// <item><description><para><c>Audio</c></para>
-                /// </description></item>
-                /// <item><description><para><c>Text</c></para>
-                /// </description></item>
-                /// </list>
+                /// <para>The media type of the media asset. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>video</para>
@@ -670,7 +660,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaType { get; set; }
 
                 /// <summary>
-                /// <para>The time the media asset was last modified.</para>
+                /// <para>The time when the media asset was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:12Z</para>
@@ -695,12 +685,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 /// <summary>
                 /// <para>The source. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><c>OSS</c></para>
-                /// </description></item>
-                /// <item><description><para><c>VOD</c></para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -720,7 +704,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string SpriteImages { get; set; }
 
                 /// <summary>
-                /// <para>The status of the media asset.</para>
+                /// <para>The resource status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -762,21 +746,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The dynamic information about the media asset.</para>
+            /// <para>The media asset type.</para>
             /// </summary>
             [NameInMap("MediaDynamicInfo")]
             [Validation(Required=false)]
             public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo MediaDynamicInfo { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo : TeaModel {
                 /// <summary>
-                /// <para>The type of dynamic metadata. Valid values:</para>
+                /// <para>The type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>&quot;ai&quot;</c>: Standardized data derived from raw AI results.</para>
-                /// </description></item>
-                /// <item><description><para><c>&quot;user-defined&quot;</c>: The user-defined metadata.</para>
-                /// </description></item>
-                /// <item><description><para><c>&quot;system&quot;</c>: The system-generated data.</para>
-                /// </description></item>
+                /// <item><description>&quot;ai&quot;: AI data that is generated after unified processing of AI raw results.</description></item>
+                /// <item><description>&quot;user-defined&quot;: user-defined metadata.</description></item>
+                /// <item><description>&quot;system&quot;: system built-in metadata.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("DynamicMetaData")]
@@ -784,7 +765,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData DynamicMetaData { get; set; }
                 public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData : TeaModel {
                     /// <summary>
-                    /// <para>The content of the dynamic metadata.</para>
+                    /// <para>The media asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>system</para>
@@ -798,7 +779,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The media ID.</para>
+            /// <para>The media asset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

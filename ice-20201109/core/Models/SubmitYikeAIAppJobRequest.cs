@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The AI application runtime parameters, as a JSON string.</para>
+        /// <para>The runtime parameters of the AI application. The value is a JSON-serialized string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;testKey&quot;:&quot;testValue&quot;}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppParams { get; set; }
 
         /// <summary>
-        /// <para>The ID of the folder. If provided, the output is saved to this folder.</para>
+        /// <para>The folder ID. This parameter is used to save results to the specified folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-cReaEcVqQK</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project. If provided, the output is saved to this project.</para>
+        /// <para>The project ID. This parameter is used to save results to the specified project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ProductionId</para>

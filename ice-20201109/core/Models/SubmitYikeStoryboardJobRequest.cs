@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AspectRatio { get; set; }
 
         /// <summary>
-        /// <para>The storyboard generation execution mode.</para>
+        /// <para>The execution mode for storyboard generation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>FullPipeline</c>: Executes the full generation pipeline, including both storyboard creation and shot video generation.</para>
+        /// <item><description><para>FullPipeline: full pipeline generation, which includes storyboard generation and shot video generation.</para>
         /// </description></item>
-        /// <item><description><para><c>StoryboardOnly</c>: Generates only the storyboard.</para>
+        /// <item><description><para>StoryboardOnly: generates only the storyboard.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ExecMode { get; set; }
 
         /// <summary>
-        /// <para>The OSS address of the file.</para>
+        /// <para>The OSS URL of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FileURL { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the model, in JSON format.</para>
+        /// <para>The model feature parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ShotSplitMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip a failed shot. The default value is <c>true</c>.</para>
+        /// <para>Specifies whether to skip failed shots. Default value: True.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StyleId { get; set; }
 
         /// <summary>
-        /// <para>The job title. It must be a UTF-8 encoded string of up to 128 bytes. If you do not specify a title, the system generates a default one based on the date.</para>
+        /// <para>The task title. If not specified, a default title is automatically generated based on the date. The title cannot exceed 128 bytes in length and must be UTF-8 encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-title</para>
@@ -138,9 +138,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Custom settings in JSON format. This parameter can contain the following field:</para>
+        /// <para>The custom settings in JSON format. Fields:</para>
         /// <list type="bullet">
-        /// <item><description>The <c>NotifyAddress</c> field specifies the callback URL that is invoked when the job is complete. Both MNS and HTTP callbacks are supported.</description></item>
+        /// <item><description>NotifyAddress: the callback URL for task completion. MNS callbacks and HTTP callbacks are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

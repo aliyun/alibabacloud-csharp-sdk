@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaMarksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the media asset.</para>
+        /// <para>The media asset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The marks of the media asset.</para>
+        /// <para>The mark information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

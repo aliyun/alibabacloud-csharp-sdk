@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateYikeAssetUploadResponseBody : TeaModel {
         /// <summary>
-        /// <para>OSS URL of the file without authentication.</para>
+        /// <para>The OSS URL of the file (without authentication).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FileURL { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Upload URL.</para>
+        /// <para>The upload address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string UploadAddress { get; set; }
 
         /// <summary>
-        /// <para>Upload credential.</para>
+        /// <para>The upload credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJFbmRwb2ludCI6Imm****</para>

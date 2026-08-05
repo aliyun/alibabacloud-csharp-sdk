@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateSearchLibRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the search library, in JSON string format. The fields include the following:</para>
+        /// <para>The configuration of the search library. The value is in JSON string format. Fields:</para>
         /// <list type="bullet">
-        /// <item><description>faceGroupIds: The IDs of custom face recognition libraries. You can create these libraries by calling the CreateRecognitionLib operation. You can specify up to three library IDs, separated by commas (,).</description></item>
+        /// <item><description>faceGroupIds: the IDs of self-registered face libraries created by calling CreateRecognitionLib. A maximum of three self-registered face library IDs are supported, separated by commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SearchLibConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the search library. The name can contain letters and digits. For IP camera (IPC) monitoring scenarios, the name must start with the <c>IPCamera_</c> prefix. For other scenarios, you can use a custom name.</para>
+        /// <para>The name of the search library. The name must be a combination of letters and digits. For network monitoring camera (IPC) scenarios, the prefix must be &quot;IPCamera_&quot;. For other scenarios, you can customize the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

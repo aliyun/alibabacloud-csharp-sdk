@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetYikeAIAppJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Yike AI App ID.</para>
+        /// <para>The AI application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The input parameters for the Yike AI App, provided as a JSON string.</para>
+        /// <para>The input parameters for running the AI application. The value is a string obtained after JSON serialize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppParams { get; set; }
 
         /// <summary>
-        /// <para>The UTC time when the job finished, in <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+        /// <para>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-06T18:53:18.809+08:00</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ExecutionFinishTime { get; set; }
 
         /// <summary>
-        /// <para>The UTC time when the job started, in <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+        /// <para>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-06T18:53:34.001+08:00</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>cdb3e74639973036bc84</b></b></para>
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job results.</para>
+        /// <para>The task execution result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetYikeAIAppJobResponseBodyResult Result { get; set; }
         public class GetYikeAIAppJobResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The audio results.</para>
+            /// <para>The audio task result.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The OSS URL of the output file.</para>
+                /// <para>The downloadable OSS URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3</a></para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The image results.</para>
+            /// <para>The image task result.</para>
             /// </summary>
             [NameInMap("ImageResult")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The OSS URL of the output file.</para>
+                /// <para>The downloadable OSS URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png</a></para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The video results.</para>
+            /// <para>The video task result.</para>
             /// </summary>
             [NameInMap("VideoResult")]
             [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The OSS URL of the output file.</para>
+                /// <para>The downloadable OSS URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></para>
@@ -186,18 +186,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Created</c>: The job is created.</para>
-        /// </description></item>
-        /// <item><description><para><c>Queuing</c>: The job is queued for processing.</para>
-        /// </description></item>
-        /// <item><description><para><c>Executing</c>: The job is running.</para>
-        /// </description></item>
-        /// <item><description><para><c>Finished</c>: The job completed successfully.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failed</c>: The job failed.</para>
-        /// </description></item>
+        /// <item><description>Created: The task is created.</description></item>
+        /// <item><description>Queuing: The task is queuing.</description></item>
+        /// <item><description>Executing: The task is being executed.</description></item>
+        /// <item><description>Finished: The task is completed.</description></item>
+        /// <item><description>Failed: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

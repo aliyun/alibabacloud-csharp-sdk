@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveSnapshotJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>a046-263c-3560-978a-fb287666</b></b></para>

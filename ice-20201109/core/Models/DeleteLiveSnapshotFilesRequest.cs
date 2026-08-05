@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveSnapshotFilesRequest : TeaModel {
         /// <summary>
-        /// <para>A list of creation timestamps for the files to delete. You can specify up to 200 timestamps per request.</para>
+        /// <para>The list of creation timestamps. A maximum of 200 entries can be deleted at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateTimestampList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<long?> CreateTimestampList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the original OSS files. The default value is false.</para>
+        /// <para>Specifies whether to delete the original files. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

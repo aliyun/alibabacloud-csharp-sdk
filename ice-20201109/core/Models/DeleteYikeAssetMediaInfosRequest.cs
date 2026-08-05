@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteYikeAssetMediaInfosRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a logical delete or a permanent delete. Valid values:</para>
+        /// <para>Specifies whether to logically delete the media asset information and files. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): Performs a logical delete. This action moves the media asset to the recycle bin and retains its associated file.</para>
-        /// </description></item>
-        /// <item><description><para>false: Performs a permanent delete. This action deletes both the media asset information and the associated file.</para>
-        /// </description></item>
+        /// <item><description>true (default): logically deletes the media asset. The media asset is moved to the recycle bin, and the files are retained.</description></item>
+        /// <item><description>false: deletes the media asset information and files.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? LogicDelete { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of media asset IDs.</para>
+        /// <para>The media asset IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b>,<b><b>15d4a4b0448391508f2cb486</b></b></para>

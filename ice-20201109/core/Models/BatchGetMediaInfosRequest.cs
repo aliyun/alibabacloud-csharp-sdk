@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetMediaInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The types of additional media asset information to return. If this parameter is not specified, only basic information is returned. Valid values are:</para>
-        /// <para>-FileInfo</para>
-        /// <para>-DynamicMetaData</para>
+        /// <para>The additional information about the media asset to return in the batch query. By default, only BasicInfo is returned. The additional information includes:</para>
+        /// <para>\-FileInfo</para>
+        /// <para>\-DynamicMetaData</para>
         /// 
         /// <b>Example:</b>
         /// <para>FileInfo,DynamicMetaData</para>
@@ -22,14 +22,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AdditionType { get; set; }
 
         /// <summary>
-        /// <para>The authentication timeout, in seconds.</para>
+        /// <para>The authentication expiration time. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description><para>Minimum value: <b>1</b>.</para>
-        /// </description></item>
-        /// <item><description><para>Maximum value: 86400.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 3600.</para>
-        /// </description></item>
+        /// <item><description>Minimum value: <b>1</b>.</description></item>
+        /// <item><description>Maximum value: 86400.</description></item>
+        /// <item><description>Default value: 3600.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of media asset IDs to query.</para>
+        /// <para>The IDs of the media assets to query, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b>,<b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

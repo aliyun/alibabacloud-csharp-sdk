@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The category ID. You can obtain the category ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description><para>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <b>Media Asset Management</b> &gt; <b>Category Management</b> to view the category ID.</para>
-        /// </description></item>
-        /// <item><description><para>View the value of CateId returned by the AddCategory operation that you called to create a category.</para>
-        /// </description></item>
-        /// <item><description><para>View the value of CateId returned by the GetCategories operation that you called to query a category.</para>
-        /// </description></item>
+        /// <item><description>Log on to the <a href="https://ims.console.aliyun.com">IMS console</a>, and choose <b>Media Asset Management</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
+        /// <item><description>When you create a category by calling the create category operation, the category ID is the value of the CateId response parameter.</description></item>
+        /// <item><description>When you query a category by calling the get category operation, the category ID is the value of the CateId response parameter.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

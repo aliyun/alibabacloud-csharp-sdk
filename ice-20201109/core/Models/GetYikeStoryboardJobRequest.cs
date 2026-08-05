@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetYikeStoryboardJobRequest : TeaModel {
         /// <summary>
-        /// <para>The storyboard job ID.</para>
+        /// <para>The snapshot task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>

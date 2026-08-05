@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCustomizedVoiceJobResponseBodyData Data { get; set; }
         public class SubmitCustomizedVoiceJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier for the voice cloning job.</para>
+            /// <para>The voice cloning task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>d718e2ff4f018ccf419a7b71</b></b></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier for the voice.</para>
+            /// <para>The voice ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xiaozhuan</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -49,12 +49,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.                  </description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

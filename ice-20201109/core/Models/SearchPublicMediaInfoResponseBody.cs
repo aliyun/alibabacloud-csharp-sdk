@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchPublicMediaInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Public copyright media asset information</para>
+        /// <para>The public copyright media asset information.</para>
         /// </summary>
         [NameInMap("PublicMediaInfos")]
         [Validation(Required=false)]
         public List<SearchPublicMediaInfoResponseBodyPublicMediaInfos> PublicMediaInfos { get; set; }
         public class SearchPublicMediaInfoResponseBodyPublicMediaInfos : TeaModel {
             /// <summary>
-            /// <para>Indicates whether you have purchased a resource plan that includes this media asset.</para>
+            /// <para>Indicates whether a resource plan that includes this media asset has been purchased.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? Authorized { get; set; }
 
             /// <summary>
-            /// <para>Whether the media asset is collected.</para>
+            /// <para>Indicates whether the media asset has been added to favorites.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? Favorite { get; set; }
 
             /// <summary>
-            /// <para>Media asset information</para>
+            /// <para>The media asset information.</para>
             /// </summary>
             [NameInMap("MediaInfo")]
             [Validation(Required=false)]
             public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfo MediaInfo { get; set; }
             public class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfo : TeaModel {
                 /// <summary>
-                /// <para>Dynamic metadata</para>
+                /// <para>The dynamic metadata.</para>
                 /// </summary>
                 [NameInMap("DynamicMetaData")]
                 [Validation(Required=false)]
                 public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData DynamicMetaData { get; set; }
                 public class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData : TeaModel {
                     /// <summary>
-                    /// <para>Metadata JSON string</para>
+                    /// <para>The metadata JSON string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;{\&quot;AuditionUrl\&quot;: \&quot;<a href="http://xxx%5C%5C">http://xxx\\</a>&quot;, \&quot;AuditionCount\&quot;: 3...}&quot;</para>
@@ -61,14 +61,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Data { get; set; }
 
                     /// <summary>
-                    /// <para>Type. Valid values:</para>
+                    /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>&quot;ai&quot;: AI data processed and normalized from original AI results</para>
-                    /// </description></item>
-                    /// <item><description><para>&quot;user-defined&quot;: User-defined metadata</para>
-                    /// </description></item>
-                    /// <item><description><para>&quot;system&quot;: System-provided</para>
-                    /// </description></item>
+                    /// <item><description>&quot;ai&quot;: AI data that is generated after unified processing of AI raw results.</description></item>
+                    /// <item><description>&quot;user-defined&quot;: user-defined metadata.</description></item>
+                    /// <item><description>&quot;system&quot;: system built-in metadata.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -88,7 +85,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
                 public class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo : TeaModel {
                     /// <summary>
-                    /// <para>Media Asset Business Type</para>
+                    /// <para>The business type of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>general</para>
@@ -98,7 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string BusinessType { get; set; }
 
                     /// <summary>
-                    /// <para>Categorization</para>
+                    /// <para>The category of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>category</para>
@@ -108,7 +105,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// <para>Thumbnail URL</para>
+                    /// <para>The cover URL of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></para>
@@ -118,7 +115,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CoverURL { get; set; }
 
                     /// <summary>
-                    /// <para>Media Asset Creation Time</para>
+                    /// <para>The time when the media asset was created.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-12-26T06:04:49Z</para>
@@ -128,7 +125,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>Media Asset Deletion Time</para>
+                    /// <para>The time when the media asset was deleted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-12-29T06:04:49Z</para>
@@ -138,7 +135,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string DeletedTime { get; set; }
 
                     /// <summary>
-                    /// <para>Content description</para>
+                    /// <para>The content description of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>description</para>
@@ -158,7 +155,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string MediaId { get; set; }
 
                     /// <summary>
-                    /// <para>Label</para>
+                    /// <para>The tags of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tag1</para>
@@ -168,7 +165,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string MediaTags { get; set; }
 
                     /// <summary>
-                    /// <para>Media asset media type</para>
+                    /// <para>The media type of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>audio</para>
@@ -178,7 +175,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string MediaType { get; set; }
 
                     /// <summary>
-                    /// <para>Updated At</para>
+                    /// <para>The time when the media asset was last modified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-12-26T06:04:50Z</para>
@@ -188,7 +185,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string ModifiedTime { get; set; }
 
                     /// <summary>
-                    /// <para>Source</para>
+                    /// <para>The source of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oss</para>
@@ -198,7 +195,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Source { get; set; }
 
                     /// <summary>
-                    /// <para>sprite</para>
+                    /// <para>The sprite images of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<b><b><b>83ec44d58b2069def2e</b></b></b>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<b><b><b>e438b14ff39293eaec25</b></b></b>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</para>
@@ -208,7 +205,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string SpriteImages { get; set; }
 
                     /// <summary>
-                    /// <para>Resource status</para>
+                    /// <para>The status of the resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -218,7 +215,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>title</para>
+                    /// <para>The title of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>title</para>
@@ -228,7 +225,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Title { get; set; }
 
                     /// <summary>
-                    /// <para>User Data</para>
+                    /// <para>The user data of the media asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>userDataTest</para>
@@ -240,7 +237,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>Media asset ID</para>
+                /// <para>The media asset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>icepublic-<b><b>87b921bb4a55908a72a0537e</b></b></para>
@@ -252,7 +249,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>Remaining validity period of the resource plan (Day)</para>
+            /// <para>The remaining validity period of the resource plan, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -264,7 +261,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>3CFB-2767-54FD-B311-BD15A4C1</b></b></para>
@@ -274,7 +271,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total amount of Data under the current request conditions.</para>
+        /// <para>The total number of entries that match the request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

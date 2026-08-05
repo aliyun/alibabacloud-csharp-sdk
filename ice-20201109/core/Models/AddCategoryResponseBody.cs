@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the category.</para>
+        /// <para>The media asset category information.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CateName { get; set; }
 
             /// <summary>
-            /// <para>The level of the category. A value of <b>0</b> indicates a level-1 category, a value of <b>1</b> indicates a level-2 category, and a value of <b>2</b> indicates a level-3 category.</para>
+            /// <para>The category level. The first-level category has a level of <b>0</b>, the second-level category has a level of <b>1</b>, and the third-level category has a level of <b>2</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? Level { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent category. By default, if ParentId is left empty or less than 1, -1 is returned, which indicates that the created category is the root directory.</para>
+            /// <para>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? ParentId { get; set; }
 
             /// <summary>
-            /// <para>The type of the category. Valid values:</para>
+            /// <para>The category type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>default</b>: audio, video, and image files. This is the default value.</para>
-            /// </description></item>
-            /// <item><description><para><b>material</b>: short video materials.</para>
-            /// </description></item>
+            /// <item><description><b>default</b> (default): audio, video, and image category.</description></item>
+            /// <item><description><b>material</b>: short video material category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

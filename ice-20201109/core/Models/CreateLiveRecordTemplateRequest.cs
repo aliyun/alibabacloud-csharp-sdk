@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveRecordTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Live Record Template.</para>
+        /// <para>The template name.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<CreateLiveRecordTemplateRequestRecordFormat> RecordFormat { get; set; }
         public class CreateLiveRecordTemplateRequestRecordFormat : TeaModel {
             /// <summary>
-            /// <para>The duration of a recording cycle in seconds. If you omit this parameter, it defaults to 6 hours.</para>
+            /// <para>The cycle recording duration. Unit: seconds. If this parameter is not specified, the default value is 6 hours.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If a stream interruption during a recording cycle lasts less than 3 minutes, the recording continues in the same Recording File.</description></item>
+            /// <item><description>If a live stream is interrupted during a recording cycle but resumes within 3 minutes, the recording continues in the same recording file.</description></item>
             /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>A Recording File is finalized only after a stream interruption lasts for more than 3 minutes. To change this default 3-minute threshold, submit a ticket.</description></item>
+            /// <item><description>A live stream must be interrupted for more than 3 minutes before the last recording file is generated. If you need to modify the default 3-minute interruption time, submit a ticket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? CycleDuration { get; set; }
 
             /// <summary>
-            /// <para>The recording format.</para>
+            /// <para>The format.</para>
             /// <remarks>
-            /// <para>If you set this parameter to <c>m3u8</c>, you must also specify the <c>SliceOssObjectPrefix</c> and <c>SliceDuration</c> parameters.</para>
+            /// <para>If you select the m3u8 format, you must also set the request parameters SliceOssObjectPrefix and SliceDuration.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The name of the Recording File stored in Object Storage Service (OSS).</para>
+            /// <para>The name of the recording file stored in OSS.</para>
             /// <list type="bullet">
-            /// <item><description><para>The file name must be less than 256 bytes and supports the following variables: {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</para>
+            /// <item><description><para>The file name must be less than 256 bytes and supports variable matching, including {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</para>
             /// </description></item>
-            /// <item><description><para>The value must include either the {StartTime} or {EscapedStartTime} variable and either the {EndTime} or {EscapedEndTime} variable.</para>
+            /// <item><description><para>The parameter value must contain {StartTime} or {EscapedStartTime} and {EndTime} or {EscapedEndTime}.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string OssObjectPrefix { get; set; }
 
             /// <summary>
-            /// <para>The duration of each slice in seconds.</para>
+            /// <para>The duration of a single slice. Unit: seconds.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when <c>Format</c> is set to <c>m3u8</c>.</para>
+            /// <para>This parameter takes effect only when Format is set to m3u8.</para>
             /// </remarks>
-            /// <para>The default value is 30. The value must be an integer from 5 to 30.</para>
+            /// <para>If this parameter is not specified, the default value is 30 seconds. Valid values: 5 to 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -90,13 +90,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The name of the TS slice.</para>
             /// <remarks>
-            /// <para>This parameter is required only when <c>Format</c> is set to <c>m3u8</c>.</para>
+            /// <para>This parameter is required only when Format is set to m3u8.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>The file name must be less than 256 bytes and supports the following variables: {JobId}, {UnixTimestamp}, and {Sequence}.</para>
-            /// </description></item>
-            /// <item><description><para>The value must include the {UnixTimestamp} and {Sequence} variables.</para>
-            /// </description></item>
+            /// <item><description>The default slice duration is 30 seconds. The name must be less than 256 bytes and supports variable matching, including {JobId}, {UnixTimestamp}, and {Sequence}.</description></item>
+            /// <item><description>The parameter value must contain the {UnixTimestamp} and {Sequence} variables.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

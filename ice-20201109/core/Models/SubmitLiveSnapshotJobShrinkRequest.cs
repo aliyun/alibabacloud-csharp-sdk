@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The snapshot callback URL.</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot exceed 255 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>Both HTTP and HTTPS URLs are supported.</para>
-        /// </description></item>
+        /// <item><description>Maximum length: 255.</description></item>
+        /// <item><description>HTTP and HTTPS are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +24,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The task name.</para>
         /// <list type="bullet">
-        /// <item><description>It cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Maximum length: 128.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The information about the output snapshot.</para>
+        /// <para>The snapshot output information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SnapshotOutput")]
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SnapshotOutputShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about the input stream.</para>
+        /// <para>The stream input information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamInput")]

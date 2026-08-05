@@ -9,20 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaInfoRequest : TeaModel {
-        /// <summary>
-        /// <para>The validity period of the signed URL, in seconds.</para>
-        /// </summary>
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The address of the media asset to query. You must first register the media asset in the IMS media library and bind it to a <c>mediaId</c>.</para>
+        /// <para>The address of the media asset in the corresponding system. Before use, the media asset must be registered in the IMS content library and bound to an IMS mediaId.</para>
         /// <list type="bullet">
-        /// <item><description>Object Storage Service (OSS) URL. Two formats are supported:</description></item>
+        /// <item><description>OSS address. Two formats are supported:</description></item>
         /// </list>
-        /// <para><c>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</c></para>
-        /// <para><c>oss://example-bucket/example.mp4</c>. When you use this format, the OSS region defaults to the service endpoint region.</para>
+        /// <para>http(s)://example-bucket.oss-ap-southeast-1.aliyuncs.com/example.mp4 or</para>
+        /// <para>oss://example-bucket/example.mp4. This format assumes the OSS region is the same as the service access region by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset in Intelligent Media Services (IMS). If you omit this parameter, you must specify <c>InputURL</c>.</para>
+        /// <para>The IMS media asset ID. If this parameter is empty, InputURL is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -42,13 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The type of URL to return for the media asset file.</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>oss</c>: Returns the OSS URL. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><c>cdn</c>: Returns the Content Delivery Network (CDN) URL. A CDN URL is returned only if the media asset was imported from Video on Demand (VOD) and has a CDN domain name configured in VOD.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the media file address in the response:</para>
         /// 
         /// <b>Example:</b>
         /// <para>cdn</para>
@@ -58,12 +49,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputType { get; set; }
 
         /// <summary>
-        /// <para>Whether to return detailed information for specific media asset fields. The only supported field is <c>AiRoughData.StandardSmartTagJob</c>, which specifies how the result of a tag analysis task is returned.</para>
+        /// <para>Specifies whether to return detailed information for the corresponding media asset fields. The following fields are supported:
+        /// AiRoughData.StandardSmartTagJob: Specifies whether to return detailed tagging results if the media asset has been submitted for tag analysis.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>false</c>: The task result is returned as a URL. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><c>true</c>: The task result is returned as a string.</para>
-        /// </description></item>
+        /// <item><description>Default value: false. The task result is returned as a URL.</description></item>
+        /// <item><description>true: The task result is returned as text.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

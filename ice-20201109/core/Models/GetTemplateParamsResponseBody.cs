@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetTemplateParamsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried parameters.</para>
+        /// <para>The parameter list.</para>
         /// </summary>
         [NameInMap("ParamList")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The thumbnail URL of the original material.</para>
+            /// <para>The thumbnail URL of the original media.</para>
             /// </summary>
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
 
             /// <summary>
-            /// <para>The height of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</para>
+            /// <para>The height of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The URL of the original material.</para>
+            /// <para>The URL of the original media.</para>
             /// </summary>
             [NameInMap("MediaUrl")]
             [Validation(Required=false)]
             public string MediaUrl { get; set; }
 
             /// <summary>
-            /// <para>In-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</para>
+            /// <para>The in-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.5</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public float? TimelineIn { get; set; }
 
             /// <summary>
-            /// <para>Out-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</para>
+            /// <para>The out-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.5</para>
@@ -81,16 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public float? TimelineOut { get; set; }
 
             /// <summary>
-            /// <para>The material type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Video</para>
-            /// </description></item>
-            /// <item><description><para>Text</para>
-            /// </description></item>
-            /// <item><description><para>Image</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The media type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Image</para>
@@ -100,7 +91,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The width of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</para>
+            /// <para>The width of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -110,7 +101,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Width { get; set; }
 
             /// <summary>
-            /// <para>The horizontal distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</para>
+            /// <para>The horizontal distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -120,7 +111,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? X { get; set; }
 
             /// <summary>
-            /// <para>The vertical distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</para>
+            /// <para>The vertical distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -132,7 +123,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>2876-6263-4B75-8F2C-CD0F7FCF</b></b></para>

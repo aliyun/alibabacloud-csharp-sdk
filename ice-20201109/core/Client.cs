@@ -455,12 +455,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category.</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -510,12 +510,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category.</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -565,12 +565,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category.</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -588,12 +588,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category.</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -739,7 +739,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more public Media Assets to your Favorites list by their media IDs.</para>
+        /// <para>Adds all media assets to the favorite based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -781,7 +781,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more public Media Assets to your Favorites list by their media IDs.</para>
+        /// <para>Adds all media assets to the favorite based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -823,7 +823,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more public Media Assets to your Favorites list by their media IDs.</para>
+        /// <para>Adds all media assets to the favorite based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -841,7 +841,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more public Media Assets to your Favorites list by their media IDs.</para>
+        /// <para>Adds all media assets to the favorite based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1695,16 +1695,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a template.</para>
+        /// <para>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
-        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// <item><description>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</description></item>
+        /// <item><description>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
+        /// <h3>Limits</h3>
+        /// <para>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1776,16 +1778,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a template.</para>
+        /// <para>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
-        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// <item><description>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</description></item>
+        /// <item><description>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
+        /// <h3>Limits</h3>
+        /// <para>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1857,16 +1861,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a template.</para>
+        /// <para>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
-        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// <item><description>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</description></item>
+        /// <item><description>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
+        /// <h3>Limits</h3>
+        /// <para>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1884,16 +1890,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a template.</para>
+        /// <para>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3>Usage notes</h3>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
-        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// <item><description>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</description></item>
+        /// <item><description>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
+        /// <h3>Limits</h3>
+        /// <para>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2039,7 +2047,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies search index information including index status and configurations.</para>
+        /// <para>Modifies search index information, including the index status or index configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2093,7 +2101,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies search index information including index status and configurations.</para>
+        /// <para>Modifies search index information, including the index status or index configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,7 +2155,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies search index information including index status and configurations.</para>
+        /// <para>Modifies search index information, including the index status or index configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2165,7 +2173,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies search index information including index status and configurations.</para>
+        /// <para>Modifies search index information, including the index status or index configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information for multiple media assets in a single request by providing their <c>mediaId</c> values.</para>
+        /// <para>Retrieves information about multiple media assets by specifying multiple mediaId values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2501,7 +2509,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information for multiple media assets in a single request by providing their <c>mediaId</c> values.</para>
+        /// <para>Retrieves information about multiple media assets by specifying multiple mediaId values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2551,7 +2559,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information for multiple media assets in a single request by providing their <c>mediaId</c> values.</para>
+        /// <para>Retrieves information about multiple media assets by specifying multiple mediaId values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2569,7 +2577,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information for multiple media assets in a single request by providing their <c>mediaId</c> values.</para>
+        /// <para>Retrieves information about multiple media assets by specifying multiple mediaId values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2715,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves multiple media assets.</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2749,7 +2757,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves multiple media assets.</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2791,7 +2799,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves multiple media assets.</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2809,7 +2817,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves multiple media assets.</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3019,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all specified media assets from favorites based on the input mediaId list.</para>
+        /// <para>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3053,7 +3061,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all specified media assets from favorites based on the input mediaId list.</para>
+        /// <para>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3095,7 +3103,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all specified media assets from favorites based on the input mediaId list.</para>
+        /// <para>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3113,7 +3121,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all specified media assets from favorites based on the input mediaId list.</para>
+        /// <para>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3131,7 +3139,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke CancelIProductionJob to cancel an Intelligent Production job.</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3177,7 +3185,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke CancelIProductionJob to cancel an Intelligent Production job.</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3223,7 +3231,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke CancelIProductionJob to cancel an Intelligent Production job.</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,7 +3249,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke CancelIProductionJob to cancel an Intelligent Production job.</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3671,7 +3679,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits manual review results for media assets.</para>
+        /// <para>Submits a manual review for a media asset by calling CreateAudit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3713,7 +3721,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits manual review results for media assets.</para>
+        /// <para>Submits a manual review for a media asset by calling CreateAudit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3755,7 +3763,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits manual review results for media assets.</para>
+        /// <para>Submits a manual review for a media asset by calling CreateAudit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3773,7 +3781,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits manual review results for media assets.</para>
+        /// <para>Submits a manual review for a media asset by calling CreateAudit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3791,12 +3799,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
+        /// <para>Creates a digital human training task and configures the basic information and training material information for the digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</para>
+        /// <para>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3862,12 +3870,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
+        /// <para>Creates a digital human training task and configures the basic information and training material information for the digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</para>
+        /// <para>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3933,12 +3941,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
+        /// <para>Creates a digital human training task and configures the basic information and training material information for the digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</para>
+        /// <para>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3956,12 +3964,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
+        /// <para>Creates a digital human training task and configures the basic information and training material information for the digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</para>
+        /// <para>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4299,15 +4307,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a voice cloning job and initializes its basic information.</para>
+        /// <para>Creates a voice cloning task to initialize the basic configuration information for the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</description></item>
-        /// <item><description>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</description></item>
+        /// <item><description>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4366,15 +4373,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a voice cloning job and initializes its basic information.</para>
+        /// <para>Creates a voice cloning task to initialize the basic configuration information for the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</description></item>
-        /// <item><description>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</description></item>
+        /// <item><description>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4433,15 +4439,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a voice cloning job and initializes its basic information.</para>
+        /// <para>Creates a voice cloning task to initialize the basic configuration information for the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</description></item>
-        /// <item><description>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</description></item>
+        /// <item><description>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4460,15 +4465,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a voice cloning job and initializes its basic information.</para>
+        /// <para>Creates a voice cloning task to initialize the basic configuration information for the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</description></item>
-        /// <item><description>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</description></item>
+        /// <item><description>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4675,14 +4679,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
+        /// <para>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</description></item>
-        /// <item><description>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</description></item>
+        /// <item><description>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</description></item>
+        /// <item><description>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4763,14 +4767,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
+        /// <para>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</description></item>
-        /// <item><description>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</description></item>
+        /// <item><description>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</description></item>
+        /// <item><description>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4851,14 +4855,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
+        /// <para>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</description></item>
-        /// <item><description>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</description></item>
+        /// <item><description>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</description></item>
+        /// <item><description>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4877,14 +4881,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</para>
+        /// <para>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</description></item>
-        /// <item><description>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</description></item>
+        /// <item><description>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</description></item>
+        /// <item><description>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5867,12 +5871,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</para>
+        /// <para>Creates a real-time recording template for submitting real-time recording tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</para>
+        /// <para>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5924,12 +5928,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</para>
+        /// <para>Creates a real-time recording template for submitting real-time recording tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</para>
+        /// <para>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5981,12 +5985,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</para>
+        /// <para>Creates a real-time recording template for submitting real-time recording tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</para>
+        /// <para>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6004,12 +6008,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</para>
+        /// <para>Creates a real-time recording template for submitting real-time recording tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</para>
+        /// <para>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6027,7 +6031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
+        /// <para>Creates a live snapshot template that can be used to create snapshot tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6081,7 +6085,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
+        /// <para>Creates a live snapshot template that can be used to create snapshot tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6135,7 +6139,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
+        /// <para>Creates a live snapshot template that can be used to create snapshot tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6153,7 +6157,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
+        /// <para>Creates a live snapshot template that can be used to create snapshot tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6171,12 +6175,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
+        /// <para>Creates a real-time transcoding template for submitting real-time transcoding tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Shanghai region supports real-time media transcoding.</para>
+        /// <para>Real-time media transcoding is supported only in the Shanghai region.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6232,12 +6236,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
+        /// <para>Creates a real-time transcoding template for submitting real-time transcoding tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Shanghai region supports real-time media transcoding.</para>
+        /// <para>Real-time media transcoding is supported only in the Shanghai region.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6293,12 +6297,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
+        /// <para>Creates a real-time transcoding template for submitting real-time transcoding tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Shanghai region supports real-time media transcoding.</para>
+        /// <para>Real-time media transcoding is supported only in the Shanghai region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6316,12 +6320,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
+        /// <para>Creates a real-time transcoding template for submitting real-time transcoding tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Shanghai region supports real-time media transcoding.</para>
+        /// <para>Real-time media transcoding is supported only in the Shanghai region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7075,7 +7079,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
+        /// <para>Creates a media processing pipeline for automated and batch processing of media files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7125,7 +7129,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
+        /// <para>Creates a media processing pipeline for automated and batch processing of media files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7175,7 +7179,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
+        /// <para>Creates a media processing pipeline for automated and batch processing of media files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7193,7 +7197,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
+        /// <para>Creates a media processing pipeline for automated and batch processing of media files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8015,13 +8019,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</para>
+        /// <para>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8075,13 +8078,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</para>
+        /// <para>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8135,13 +8137,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</para>
+        /// <para>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8159,13 +8160,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</para>
+        /// <para>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8183,7 +8183,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a search library to store media assets.</para>
+        /// <para>Creates a search media library. You can use the library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8229,7 +8229,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a search library to store media assets.</para>
+        /// <para>Creates a search media library. You can use the library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8275,7 +8275,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a search library to store media assets.</para>
+        /// <para>Creates a search media library. You can use the library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8293,7 +8293,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a search library to store media assets.</para>
+        /// <para>Creates a search media library. You can use the library to store media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8735,22 +8735,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</para>
+        /// <para>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Overview</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</description></item>
-        /// <item><description>If an upload credential expires (the default validity is 3,000 seconds), call the <c>RefreshUploadMedia</c> operation to get a new one.</description></item>
-        /// <item><description>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <c>GetMediaInfo</c> operation to check the media asset\&quot;s status.</description></item>
-        /// <item><description>Use the returned <c>MediaId</c> for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</description></item>
-        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</description></item>
+        /// <item><description>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8817,22 +8817,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</para>
+        /// <para>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Overview</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</description></item>
-        /// <item><description>If an upload credential expires (the default validity is 3,000 seconds), call the <c>RefreshUploadMedia</c> operation to get a new one.</description></item>
-        /// <item><description>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <c>GetMediaInfo</c> operation to check the media asset\&quot;s status.</description></item>
-        /// <item><description>Use the returned <c>MediaId</c> for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</description></item>
-        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</description></item>
+        /// <item><description>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8899,22 +8899,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</para>
+        /// <para>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Overview</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</description></item>
-        /// <item><description>If an upload credential expires (the default validity is 3,000 seconds), call the <c>RefreshUploadMedia</c> operation to get a new one.</description></item>
-        /// <item><description>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <c>GetMediaInfo</c> operation to check the media asset\&quot;s status.</description></item>
-        /// <item><description>Use the returned <c>MediaId</c> for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</description></item>
-        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</description></item>
+        /// <item><description>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8933,22 +8933,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</para>
+        /// <para>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Overview</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</description></item>
-        /// <item><description>If an upload credential expires (the default validity is 3,000 seconds), call the <c>RefreshUploadMedia</c> operation to get a new one.</description></item>
-        /// <item><description>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <c>GetMediaInfo</c> operation to check the media asset\&quot;s status.</description></item>
-        /// <item><description>Use the returned <c>MediaId</c> for media asset lifecycle management or media processing.</description></item>
+        /// <item><description>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</description></item>
+        /// <item><description>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</description></item>
+        /// <item><description>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</description></item>
+        /// <item><description>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</description></item>
-        /// <item><description>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</description></item>
+        /// <item><description>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9611,7 +9611,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload credential for a Yike media asset.</para>
+        /// <para>Retrieves the upload credential for a media asset on Yike.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9657,7 +9657,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload credential for a Yike media asset.</para>
+        /// <para>Retrieves the upload credential for a media asset on Yike.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9703,7 +9703,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload credential for a Yike media asset.</para>
+        /// <para>Retrieves the upload credential for a media asset on Yike.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9721,7 +9721,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload credential for a Yike media asset.</para>
+        /// <para>Retrieves the upload credential for a media asset on Yike.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10147,7 +10147,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
+        /// <para>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10189,7 +10189,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
+        /// <para>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10231,7 +10231,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
+        /// <para>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10249,7 +10249,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
+        /// <para>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10523,7 +10523,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
+        /// <para>Deletes a digital human training task that is in the init (draft) or training failed status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10565,7 +10565,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
+        /// <para>Deletes a digital human training task that is in the init (draft) or training failed status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10607,7 +10607,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
+        /// <para>Deletes a digital human training task that is in the init (draft) or training failed status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10625,7 +10625,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
+        /// <para>Deletes a digital human training task that is in the init (draft) or training failed status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10648,7 +10648,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// <para>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10695,7 +10695,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// <para>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10742,7 +10742,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// <para>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10765,7 +10765,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</para>
+        /// <para>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12575,7 +12575,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</para>
+        /// <para>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12631,7 +12631,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</para>
+        /// <para>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12687,7 +12687,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</para>
+        /// <para>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12705,7 +12705,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</para>
+        /// <para>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16343,7 +16343,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more media assets.</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16389,7 +16389,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more media assets.</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16435,7 +16435,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more media assets.</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16453,7 +16453,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more media assets.</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18683,13 +18683,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
+        /// <para>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -18719,13 +18719,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
+        /// <para>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -18755,13 +18755,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
+        /// <para>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</para>
         /// </description>
         /// 
         /// <returns>
@@ -18775,13 +18775,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
+        /// <para>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</para>
         /// </description>
         /// 
         /// <returns>
@@ -24119,12 +24119,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media asset information using an Intelligent Media Services (IMS) <c>mediaId</c> or an <c>InputURL</c>.</para>
+        /// <para>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><c>MediaId</c> takes precedence. If <c>MediaId</c> is empty, <c>InputURL</c> must not be null.</para>
+        /// <para>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24182,12 +24182,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media asset information using an Intelligent Media Services (IMS) <c>mediaId</c> or an <c>InputURL</c>.</para>
+        /// <para>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><c>MediaId</c> takes precedence. If <c>MediaId</c> is empty, <c>InputURL</c> must not be null.</para>
+        /// <para>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24245,12 +24245,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media asset information using an Intelligent Media Services (IMS) <c>mediaId</c> or an <c>InputURL</c>.</para>
+        /// <para>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><c>MediaId</c> takes precedence. If <c>MediaId</c> is empty, <c>InputURL</c> must not be null.</para>
+        /// <para>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24268,12 +24268,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves media asset information using an Intelligent Media Services (IMS) <c>mediaId</c> or an <c>InputURL</c>.</para>
+        /// <para>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><c>MediaId</c> takes precedence. If <c>MediaId</c> is empty, <c>InputURL</c> must not be null.</para>
+        /// <para>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24983,13 +24983,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</para>
+        /// <para>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limitations</h3>
-        /// <para>This API can only retrieve editing job data from the past year.</para>
+        /// <h3>Limits</h3>
+        /// <para>This operation only supports querying media producing node data from the last year.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25031,13 +25031,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</para>
+        /// <para>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limitations</h3>
-        /// <para>This API can only retrieve editing job data from the past year.</para>
+        /// <h3>Limits</h3>
+        /// <para>This operation only supports querying media producing node data from the last year.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25079,13 +25079,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</para>
+        /// <para>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limitations</h3>
-        /// <para>This API can only retrieve editing job data from the past year.</para>
+        /// <h3>Limits</h3>
+        /// <para>This operation only supports querying media producing node data from the last year.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25103,13 +25103,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</para>
+        /// <para>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limitations</h3>
-        /// <para>This API can only retrieve editing job data from the past year.</para>
+        /// <h3>Limits</h3>
+        /// <para>This operation only supports querying media producing node data from the last year.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25367,7 +25367,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</para>
+        /// <para>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25417,7 +25417,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</para>
+        /// <para>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25467,7 +25467,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</para>
+        /// <para>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25485,7 +25485,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</para>
+        /// <para>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27251,7 +27251,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</para>
+        /// <para>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27289,7 +27289,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</para>
+        /// <para>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27327,7 +27327,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</para>
+        /// <para>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27345,7 +27345,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</para>
+        /// <para>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28327,7 +28327,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike AI App job.</para>
+        /// <para>Retrieves the task result of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28369,7 +28369,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike AI App job.</para>
+        /// <para>Retrieves the task result of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28411,7 +28411,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike AI App job.</para>
+        /// <para>Retrieves the task result of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28429,7 +28429,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike AI App job.</para>
+        /// <para>Retrieves the task result of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28447,7 +28447,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets media asset information.</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28489,7 +28489,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets media asset information.</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28531,7 +28531,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets media asset information.</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28549,7 +28549,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets media asset information.</para>
+        /// <para>Retrieves the content information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28567,7 +28567,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike storyboard job.</para>
+        /// <para>Retrieves an AI application task for storyboard generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28609,7 +28609,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike storyboard job.</para>
+        /// <para>Retrieves an AI application task for storyboard generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28651,7 +28651,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike storyboard job.</para>
+        /// <para>Retrieves an AI application task for storyboard generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28669,7 +28669,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Yike storyboard job.</para>
+        /// <para>Retrieves an AI application task for storyboard generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29287,15 +29287,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</para>
+        /// <para>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation lists AI agent instances. Filter results by agent ID (<c>AIAgentId</c>). Optionally, specify a time range (<c>StartTime</c> and <c>EndTime</c>), the number of results per page (<c>PageSize</c>), and the page number (<c>PageNumber</c>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</para>
+        /// <para>This operation allows you to query the list of AI agent instances based on the specified agent ID (<c>AIAgentId</c>), along with optional parameters such as time range (<c>StartTime</c> and <c>EndTime</c>), page size (<c>PageSize</c>), and page number (<c>PageNumber</c>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</para>
         /// <remarks>
-        /// <para>Notice: 
-        /// Default pagination values: PageSize is 10. PageNumber is 1.</para>
+        /// <para>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29354,15 +29353,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</para>
+        /// <para>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation lists AI agent instances. Filter results by agent ID (<c>AIAgentId</c>). Optionally, specify a time range (<c>StartTime</c> and <c>EndTime</c>), the number of results per page (<c>PageSize</c>), and the page number (<c>PageNumber</c>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</para>
+        /// <para>This operation allows you to query the list of AI agent instances based on the specified agent ID (<c>AIAgentId</c>), along with optional parameters such as time range (<c>StartTime</c> and <c>EndTime</c>), page size (<c>PageSize</c>), and page number (<c>PageNumber</c>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</para>
         /// <remarks>
-        /// <para>Notice: 
-        /// Default pagination values: PageSize is 10. PageNumber is 1.</para>
+        /// <para>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29421,15 +29419,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</para>
+        /// <para>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation lists AI agent instances. Filter results by agent ID (<c>AIAgentId</c>). Optionally, specify a time range (<c>StartTime</c> and <c>EndTime</c>), the number of results per page (<c>PageSize</c>), and the page number (<c>PageNumber</c>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</para>
+        /// <para>This operation allows you to query the list of AI agent instances based on the specified agent ID (<c>AIAgentId</c>), along with optional parameters such as time range (<c>StartTime</c> and <c>EndTime</c>), page size (<c>PageSize</c>), and page number (<c>PageNumber</c>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</para>
         /// <remarks>
-        /// <para>Notice: 
-        /// Default pagination values: PageSize is 10. PageNumber is 1.</para>
+        /// <para>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -29448,15 +29445,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</para>
+        /// <para>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation lists AI agent instances. Filter results by agent ID (<c>AIAgentId</c>). Optionally, specify a time range (<c>StartTime</c> and <c>EndTime</c>), the number of results per page (<c>PageSize</c>), and the page number (<c>PageNumber</c>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</para>
+        /// <para>This operation allows you to query the list of AI agent instances based on the specified agent ID (<c>AIAgentId</c>), along with optional parameters such as time range (<c>StartTime</c> and <c>EndTime</c>), page size (<c>PageSize</c>), and page number (<c>PageNumber</c>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</para>
         /// <remarks>
-        /// <para>Notice: 
-        /// Default pagination values: PageSize is 10. PageNumber is 1.</para>
+        /// <para>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -33635,7 +33631,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of live stream transcoding jobs.</para>
+        /// <para>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33701,7 +33697,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of live stream transcoding jobs.</para>
+        /// <para>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33767,7 +33763,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of live stream transcoding jobs.</para>
+        /// <para>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33785,7 +33781,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of live stream transcoding jobs.</para>
+        /// <para>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34387,7 +34383,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of media information analysis jobs.</para>
+        /// <para>Queries the list of media information tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34453,7 +34449,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of media information analysis jobs.</para>
+        /// <para>Queries the list of media information tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34519,7 +34515,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of media information analysis jobs.</para>
+        /// <para>Queries the list of media information tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34537,7 +34533,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of media information analysis jobs.</para>
+        /// <para>Queries the list of media information tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39123,7 +39119,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Yike folders.</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39173,7 +39169,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Yike folders.</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39223,7 +39219,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Yike folders.</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39241,7 +39237,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Yike folders.</para>
+        /// <para>Retrieves the list of folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39259,7 +39255,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Yike projects.</para>
+        /// <para>Retrieves the list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39317,7 +39313,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Yike projects.</para>
+        /// <para>Retrieves the list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39375,7 +39371,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Yike projects.</para>
+        /// <para>Retrieves the list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39393,7 +39389,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Yike projects.</para>
+        /// <para>Retrieves the list of Yike projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42123,12 +42119,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
+        /// <para>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// <para>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42226,12 +42222,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
+        /// <para>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// <para>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42329,12 +42325,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
+        /// <para>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// <para>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42352,12 +42348,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</para>
+        /// <para>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</para>
+        /// <para>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42519,7 +42515,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset in the asset library.</para>
+        /// <para>Registers a content library resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42573,7 +42569,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset in the asset library.</para>
+        /// <para>Registers a content library resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42627,7 +42623,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset in the asset library.</para>
+        /// <para>Registers a content library resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42645,7 +42641,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a media asset in the asset library.</para>
+        /// <para>Registers a content library resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43095,7 +43091,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</para>
+        /// <para>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43149,7 +43145,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</para>
+        /// <para>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43203,7 +43199,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</para>
+        /// <para>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43221,7 +43217,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</para>
+        /// <para>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43239,12 +43235,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media assets that match the specified conditions.</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</para>
+        /// <para>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43314,12 +43310,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media assets that match the specified conditions.</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</para>
+        /// <para>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43389,12 +43385,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media assets that match the specified conditions.</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</para>
+        /// <para>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43412,12 +43408,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media assets that match the specified conditions.</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</para>
+        /// <para>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44283,12 +44279,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</para>
+        /// <para>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44350,12 +44346,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</para>
+        /// <para>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44417,12 +44413,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</para>
+        /// <para>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44440,12 +44436,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</para>
+        /// <para>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44463,7 +44459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for media assets that meet the conditions based on the parameters provided by the User.</para>
+        /// <para>Searches for media assets that match the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44533,7 +44529,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for media assets that meet the conditions based on the parameters provided by the User.</para>
+        /// <para>Searches for media assets that match the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44603,7 +44599,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for media assets that meet the conditions based on the parameters provided by the User.</para>
+        /// <para>Searches for media assets that match the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44621,7 +44617,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for media assets that meet the conditions based on the parameters provided by the User.</para>
+        /// <para>Searches for media assets that match the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45083,7 +45079,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a command to process a live stream snapshot job.</para>
+        /// <para>Sends an instruction for a real-time snapshot task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45129,7 +45125,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a command to process a live stream snapshot job.</para>
+        /// <para>Sends an instruction for a real-time snapshot task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45175,7 +45171,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a command to process a live stream snapshot job.</para>
+        /// <para>Sends an instruction for a real-time snapshot task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45193,7 +45189,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a command to process a live stream snapshot job.</para>
+        /// <para>Sends an instruction for a real-time snapshot task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45903,17 +45899,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</para>
+        /// <para>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</description></item>
-        /// <item><description><b>ApsaraVideo VOD storage</b>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</description></item>
-        /// <item><description><b>Object Storage</b>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</description></item>
-        /// <item><description>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</description></item>
-        /// <item><description>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</description></item>
+        /// <item><description>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</description></item>
+        /// <item><description>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+        /// -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+        /// -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -45964,17 +45960,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</para>
+        /// <para>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</description></item>
-        /// <item><description><b>ApsaraVideo VOD storage</b>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</description></item>
-        /// <item><description><b>Object Storage</b>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</description></item>
-        /// <item><description>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</description></item>
-        /// <item><description>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</description></item>
+        /// <item><description>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</description></item>
+        /// <item><description>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+        /// -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+        /// -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46025,17 +46021,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</para>
+        /// <para>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</description></item>
-        /// <item><description><b>ApsaraVideo VOD storage</b>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</description></item>
-        /// <item><description><b>Object Storage</b>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</description></item>
-        /// <item><description>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</description></item>
-        /// <item><description>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</description></item>
+        /// <item><description>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</description></item>
+        /// <item><description>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+        /// -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+        /// -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46054,17 +46050,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</para>
+        /// <para>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</description></item>
-        /// <item><description><b>ApsaraVideo VOD storage</b>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</description></item>
-        /// <item><description><b>Object Storage</b>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</description></item>
-        /// <item><description>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</description></item>
-        /// <item><description>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</description></item>
+        /// <item><description>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</description></item>
+        /// <item><description>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+        /// -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+        /// -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47607,14 +47603,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</para>
+        /// <para>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</description></item>
-        /// <item><description>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</description></item>
+        /// <item><description>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</description></item>
+        /// <item><description>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47669,14 +47665,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</para>
+        /// <para>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</description></item>
-        /// <item><description>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</description></item>
+        /// <item><description>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</description></item>
+        /// <item><description>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47731,14 +47727,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</para>
+        /// <para>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</description></item>
-        /// <item><description>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</description></item>
+        /// <item><description>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</description></item>
+        /// <item><description>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47757,14 +47753,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</para>
+        /// <para>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</description></item>
-        /// <item><description>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</description></item>
+        /// <item><description>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</description></item>
+        /// <item><description>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47783,15 +47779,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop an agent instance.</para>
+        /// <para>Stops an agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Feature description</b>: Stops and terminates a running agent instance and release the associated resources.</description></item>
+        /// <item><description><b>Feature description</b>: This operation stops and terminates a running agent instance and releases related resources.</description></item>
         /// <item><description><b>Parameter notes</b>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</description></item>
-        /// <item><description><b>Common scenarios</b>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</description></item>
+        /// <item><description><b>Common scenarios</b>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47834,15 +47830,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop an agent instance.</para>
+        /// <para>Stops an agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Feature description</b>: Stops and terminates a running agent instance and release the associated resources.</description></item>
+        /// <item><description><b>Feature description</b>: This operation stops and terminates a running agent instance and releases related resources.</description></item>
         /// <item><description><b>Parameter notes</b>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</description></item>
-        /// <item><description><b>Common scenarios</b>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</description></item>
+        /// <item><description><b>Common scenarios</b>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47885,15 +47881,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop an agent instance.</para>
+        /// <para>Stops an agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Feature description</b>: Stops and terminates a running agent instance and release the associated resources.</description></item>
+        /// <item><description><b>Feature description</b>: This operation stops and terminates a running agent instance and releases related resources.</description></item>
         /// <item><description><b>Parameter notes</b>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</description></item>
-        /// <item><description><b>Common scenarios</b>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</description></item>
+        /// <item><description><b>Common scenarios</b>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47912,15 +47908,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop an agent instance.</para>
+        /// <para>Stops an agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Feature description</b>: Stops and terminates a running agent instance and release the associated resources.</description></item>
+        /// <item><description><b>Feature description</b>: This operation stops and terminates a running agent instance and releases related resources.</description></item>
         /// <item><description><b>Parameter notes</b>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</description></item>
-        /// <item><description><b>Common scenarios</b>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</description></item>
+        /// <item><description><b>Common scenarios</b>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48463,7 +48459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deducts credits from a sub-account.</para>
+        /// <para>Deducts user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48509,7 +48505,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deducts credits from a sub-account.</para>
+        /// <para>Deducts user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48555,7 +48551,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deducts credits from a sub-account.</para>
+        /// <para>Deducts user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48573,7 +48569,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deducts credits from a sub-account.</para>
+        /// <para>Deducts user credits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48799,12 +48795,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</para>
+        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48870,12 +48866,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</para>
+        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48941,12 +48937,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</para>
+        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48964,12 +48960,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</para>
+        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48987,12 +48983,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API converts text into a high-quality audio file of speech.</para>
+        /// <para>Converts provided text content into a high-quality speech audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49058,12 +49054,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API converts text into a high-quality audio file of speech.</para>
+        /// <para>Converts provided text content into a high-quality speech audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49129,12 +49125,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API converts text into a high-quality audio file of speech.</para>
+        /// <para>Converts provided text content into a high-quality speech audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49152,12 +49148,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API converts text into a high-quality audio file of speech.</para>
+        /// <para>Converts provided text content into a high-quality speech audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49515,20 +49511,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</para>
+        /// <para>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+        /// <item><description>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</description></item>
-        /// <item><description>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</description></item>
-        /// <item><description>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</description></item>
+        /// <item><description>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</description></item>
+        /// <item><description>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</description></item>
+        /// <item><description>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -49593,20 +49589,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</para>
+        /// <para>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+        /// <item><description>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</description></item>
-        /// <item><description>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</description></item>
-        /// <item><description>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</description></item>
+        /// <item><description>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</description></item>
+        /// <item><description>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</description></item>
+        /// <item><description>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -49671,20 +49667,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</para>
+        /// <para>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+        /// <item><description>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</description></item>
-        /// <item><description>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</description></item>
-        /// <item><description>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</description></item>
+        /// <item><description>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</description></item>
+        /// <item><description>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</description></item>
+        /// <item><description>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -49703,20 +49699,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</para>
+        /// <para>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+        /// <item><description>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</description></item>
-        /// <item><description>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</description></item>
-        /// <item><description>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</description></item>
-        /// <item><description>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</description></item>
+        /// <item><description>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</description></item>
+        /// <item><description>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</description></item>
+        /// <item><description>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</description></item>
+        /// <item><description>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50159,17 +50155,200 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a CosyVoice voice cloning training task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</description></item>
-        /// <item><description>When you submit a voice cloning job, the <c>VoiceId</c> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</description></item>
-        /// <item><description>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <c>JobId</c> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</description></item>
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitCosyVoiceCustomizedVoiceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCosyVoiceCustomizedVoiceJobResponse
+        /// </returns>
+        public SubmitCosyVoiceCustomizedVoiceJobResponse SubmitCosyVoiceCustomizedVoiceJobWithOptions(SubmitCosyVoiceCustomizedVoiceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audios))
+            {
+                query["Audios"] = request.Audios;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemoAudioMediaURL))
+            {
+                query["DemoAudioMediaURL"] = request.DemoAudioMediaURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["Gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceName))
+            {
+                query["VoiceName"] = request.VoiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCosyVoiceCustomizedVoiceJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCosyVoiceCustomizedVoiceJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a CosyVoice voice cloning training task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitCosyVoiceCustomizedVoiceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCosyVoiceCustomizedVoiceJobResponse
+        /// </returns>
+        public async Task<SubmitCosyVoiceCustomizedVoiceJobResponse> SubmitCosyVoiceCustomizedVoiceJobWithOptionsAsync(SubmitCosyVoiceCustomizedVoiceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audios))
+            {
+                query["Audios"] = request.Audios;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemoAudioMediaURL))
+            {
+                query["DemoAudioMediaURL"] = request.DemoAudioMediaURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["Gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceName))
+            {
+                query["VoiceName"] = request.VoiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCosyVoiceCustomizedVoiceJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCosyVoiceCustomizedVoiceJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a CosyVoice voice cloning training task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitCosyVoiceCustomizedVoiceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCosyVoiceCustomizedVoiceJobResponse
+        /// </returns>
+        public SubmitCosyVoiceCustomizedVoiceJobResponse SubmitCosyVoiceCustomizedVoiceJob(SubmitCosyVoiceCustomizedVoiceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCosyVoiceCustomizedVoiceJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a CosyVoice voice cloning training task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitCosyVoiceCustomizedVoiceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCosyVoiceCustomizedVoiceJobResponse
+        /// </returns>
+        public async Task<SubmitCosyVoiceCustomizedVoiceJobResponse> SubmitCosyVoiceCustomizedVoiceJobAsync(SubmitCosyVoiceCustomizedVoiceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCosyVoiceCustomizedVoiceJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a voice cloning task of the Basic edition.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </description></item>
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50216,17 +50395,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a voice cloning task of the Basic edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</description></item>
-        /// <item><description>When you submit a voice cloning job, the <c>VoiceId</c> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</description></item>
-        /// <item><description>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <c>JobId</c> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</description></item>
+        /// <item><description>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </description></item>
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50273,17 +50451,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a voice cloning task of the Basic edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</description></item>
-        /// <item><description>When you submit a voice cloning job, the <c>VoiceId</c> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</description></item>
-        /// <item><description>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <c>JobId</c> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</description></item>
+        /// <item><description>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </description></item>
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50302,17 +50479,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a voice cloning task of the Basic edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</description></item>
-        /// <item><description>When you submit a voice cloning job, the <c>VoiceId</c> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</description></item>
-        /// <item><description>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <c>JobId</c> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</description></item>
+        /// <item><description>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </description></item>
+        /// <item><description>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51259,12 +51435,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the <c>SubmitIProductionJob</c> operation to submit an intelligent production job.</para>
+        /// <para>Submits an intelligent production job by calling SubmitIProductionJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -51352,12 +51528,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the <c>SubmitIProductionJob</c> operation to submit an intelligent production job.</para>
+        /// <para>Submits an intelligent production job by calling SubmitIProductionJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -51445,12 +51621,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the <c>SubmitIProductionJob</c> operation to submit an intelligent production job.</para>
+        /// <para>Submits an intelligent production job by calling SubmitIProductionJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51468,12 +51644,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use the <c>SubmitIProductionJob</c> operation to submit an intelligent production job.</para>
+        /// <para>Submits an intelligent production job by calling SubmitIProductionJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51491,14 +51667,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</para>
+        /// <para>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</description></item>
-        /// <item><description>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</description></item>
+        /// <item><description>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51565,14 +51741,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</para>
+        /// <para>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</description></item>
-        /// <item><description>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</description></item>
+        /// <item><description>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51639,14 +51815,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</para>
+        /// <para>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</description></item>
-        /// <item><description>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</description></item>
+        /// <item><description>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51665,14 +51841,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</para>
+        /// <para>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</description></item>
-        /// <item><description>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</description></item>
+        /// <item><description>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51691,14 +51867,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream recording job.</para>
+        /// <para>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// <para>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+        /// Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+        /// If the preset recording templates do not meet your requirements, create a custom recording template.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -51766,14 +51942,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream recording job.</para>
+        /// <para>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// <para>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+        /// Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+        /// If the preset recording templates do not meet your requirements, create a custom recording template.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -51841,14 +52017,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream recording job.</para>
+        /// <para>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// <para>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+        /// Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+        /// If the preset recording templates do not meet your requirements, create a custom recording template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51866,14 +52042,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream recording job.</para>
+        /// <para>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// <para>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+        /// Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+        /// If the preset recording templates do not meet your requirements, create a custom recording template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51891,7 +52067,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
+        /// <para>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51959,7 +52135,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
+        /// <para>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -52027,7 +52203,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
+        /// <para>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52045,7 +52221,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
+        /// <para>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52651,12 +52827,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a media processing job</para>
+        /// <para>Submits a media processing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52710,12 +52886,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a media processing job</para>
+        /// <para>Submits a media processing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52769,12 +52945,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a media processing job</para>
+        /// <para>Submits a media processing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52792,12 +52968,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a media processing job</para>
+        /// <para>Submits a media processing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53011,37 +53187,43 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The <c>SubmitMediaProducingJob</c> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</para>
+        /// <para>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</b></description></item>
-        /// <item><description>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</description></item>
-        /// <item><description>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</description></item>
-        /// <item><description>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</description></item>
-        /// <item><description>Job status query:<ol>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</description></item>
-        /// <item><description>When you submit an editing and compositing job, you can include a callback URL in the <b>UserData</b> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</description></item>
+        /// <item><description><para><b>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</b></para>
+        /// </description></item>
+        /// <item><description><para>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</para>
+        /// </description></item>
+        /// <item><description><para>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </para>
+        /// </description></item>
+        /// <item><description><para>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </para>
+        /// </description></item>
+        /// <item><description><para>Task status query:</para>
+        /// <ol>
+        /// <item><description>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</description></item>
+        /// <item><description>When committing a media producing job, you can set <b>UserData</b> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</description></item>
+        /// <item><description><para>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</para>
+        /// </description></item>
         /// </list>
-        /// <h2>Limitations</h2>
+        /// <h2>Limits</h2>
         /// <list type="bullet">
-        /// <item><description>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<remarks>
-        /// <para>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</para>
+        /// <item><description>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<remarks>
+        /// <para>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</description></item>
-        /// <item><description>The maximum number of tracks is 100 for each type: video, image, and subtitle.</description></item>
-        /// <item><description>While there is no limit on the number of assets, their total size must not exceed 1 TB.</description></item>
-        /// <item><description>The region of the input or output OSS bucket must match the IMS region.</description></item>
-        /// <item><description>When the output is a video, the following resolution limits apply:<list type="bullet">
-        /// <item><description>Both the width and height must be at least 128 px.</description></item>
-        /// <item><description>Neither the width nor the height can exceed 4096 px.</description></item>
-        /// <item><description>The shorter side cannot exceed 2160 px.</description></item>
+        /// <item><description>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</description></item>
+        /// <item><description>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </description></item>
+        /// <item><description>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </description></item>
+        /// <item><description>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </description></item>
+        /// <item><description>When the output is a video, the following resolution limits apply to the produced video:<list type="bullet">
+        /// <item><description>Both width and height must be at least 128 px.</description></item>
+        /// <item><description>Both width and height cannot exceed 4096 px.</description></item>
+        /// <item><description>The short side cannot exceed 2160 px.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -53132,37 +53314,43 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The <c>SubmitMediaProducingJob</c> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</para>
+        /// <para>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</b></description></item>
-        /// <item><description>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</description></item>
-        /// <item><description>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</description></item>
-        /// <item><description>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</description></item>
-        /// <item><description>Job status query:<ol>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</description></item>
-        /// <item><description>When you submit an editing and compositing job, you can include a callback URL in the <b>UserData</b> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</description></item>
+        /// <item><description><para><b>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</b></para>
+        /// </description></item>
+        /// <item><description><para>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</para>
+        /// </description></item>
+        /// <item><description><para>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </para>
+        /// </description></item>
+        /// <item><description><para>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </para>
+        /// </description></item>
+        /// <item><description><para>Task status query:</para>
+        /// <ol>
+        /// <item><description>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</description></item>
+        /// <item><description>When committing a media producing job, you can set <b>UserData</b> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</description></item>
+        /// <item><description><para>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</para>
+        /// </description></item>
         /// </list>
-        /// <h2>Limitations</h2>
+        /// <h2>Limits</h2>
         /// <list type="bullet">
-        /// <item><description>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<remarks>
-        /// <para>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</para>
+        /// <item><description>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<remarks>
+        /// <para>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</description></item>
-        /// <item><description>The maximum number of tracks is 100 for each type: video, image, and subtitle.</description></item>
-        /// <item><description>While there is no limit on the number of assets, their total size must not exceed 1 TB.</description></item>
-        /// <item><description>The region of the input or output OSS bucket must match the IMS region.</description></item>
-        /// <item><description>When the output is a video, the following resolution limits apply:<list type="bullet">
-        /// <item><description>Both the width and height must be at least 128 px.</description></item>
-        /// <item><description>Neither the width nor the height can exceed 4096 px.</description></item>
-        /// <item><description>The shorter side cannot exceed 2160 px.</description></item>
+        /// <item><description>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</description></item>
+        /// <item><description>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </description></item>
+        /// <item><description>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </description></item>
+        /// <item><description>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </description></item>
+        /// <item><description>When the output is a video, the following resolution limits apply to the produced video:<list type="bullet">
+        /// <item><description>Both width and height must be at least 128 px.</description></item>
+        /// <item><description>Both width and height cannot exceed 4096 px.</description></item>
+        /// <item><description>The short side cannot exceed 2160 px.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -53253,37 +53441,43 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The <c>SubmitMediaProducingJob</c> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</para>
+        /// <para>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</b></description></item>
-        /// <item><description>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</description></item>
-        /// <item><description>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</description></item>
-        /// <item><description>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</description></item>
-        /// <item><description>Job status query:<ol>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</description></item>
-        /// <item><description>When you submit an editing and compositing job, you can include a callback URL in the <b>UserData</b> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</description></item>
+        /// <item><description><para><b>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</b></para>
+        /// </description></item>
+        /// <item><description><para>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</para>
+        /// </description></item>
+        /// <item><description><para>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </para>
+        /// </description></item>
+        /// <item><description><para>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </para>
+        /// </description></item>
+        /// <item><description><para>Task status query:</para>
+        /// <ol>
+        /// <item><description>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</description></item>
+        /// <item><description>When committing a media producing job, you can set <b>UserData</b> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</description></item>
+        /// <item><description><para>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</para>
+        /// </description></item>
         /// </list>
-        /// <h2>Limitations</h2>
+        /// <h2>Limits</h2>
         /// <list type="bullet">
-        /// <item><description>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<remarks>
-        /// <para>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</para>
+        /// <item><description>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<remarks>
+        /// <para>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</description></item>
-        /// <item><description>The maximum number of tracks is 100 for each type: video, image, and subtitle.</description></item>
-        /// <item><description>While there is no limit on the number of assets, their total size must not exceed 1 TB.</description></item>
-        /// <item><description>The region of the input or output OSS bucket must match the IMS region.</description></item>
-        /// <item><description>When the output is a video, the following resolution limits apply:<list type="bullet">
-        /// <item><description>Both the width and height must be at least 128 px.</description></item>
-        /// <item><description>Neither the width nor the height can exceed 4096 px.</description></item>
-        /// <item><description>The shorter side cannot exceed 2160 px.</description></item>
+        /// <item><description>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</description></item>
+        /// <item><description>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </description></item>
+        /// <item><description>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </description></item>
+        /// <item><description>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </description></item>
+        /// <item><description>When the output is a video, the following resolution limits apply to the produced video:<list type="bullet">
+        /// <item><description>Both width and height must be at least 128 px.</description></item>
+        /// <item><description>Both width and height cannot exceed 4096 px.</description></item>
+        /// <item><description>The short side cannot exceed 2160 px.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -53304,37 +53498,43 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The <c>SubmitMediaProducingJob</c> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</para>
+        /// <para>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</b></description></item>
-        /// <item><description>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</description></item>
-        /// <item><description>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</description></item>
-        /// <item><description>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</description></item>
-        /// <item><description>Job status query:<ol>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</description></item>
-        /// <item><description>When you submit an editing and compositing job, you can include a callback URL in the <b>UserData</b> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</description></item>
+        /// <item><description><para><b>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</b></para>
+        /// </description></item>
+        /// <item><description><para>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</para>
+        /// </description></item>
+        /// <item><description><para>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </para>
+        /// </description></item>
+        /// <item><description><para>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </para>
+        /// </description></item>
+        /// <item><description><para>Task status query:</para>
+        /// <ol>
+        /// <item><description>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</description></item>
+        /// <item><description>When committing a media producing job, you can set <b>UserData</b> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</description></item>
+        /// <item><description><para>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</para>
+        /// </description></item>
         /// </list>
-        /// <h2>Limitations</h2>
+        /// <h2>Limits</h2>
         /// <list type="bullet">
-        /// <item><description>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<remarks>
-        /// <para>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</para>
+        /// <item><description>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<remarks>
+        /// <para>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</description></item>
-        /// <item><description>The maximum number of tracks is 100 for each type: video, image, and subtitle.</description></item>
-        /// <item><description>While there is no limit on the number of assets, their total size must not exceed 1 TB.</description></item>
-        /// <item><description>The region of the input or output OSS bucket must match the IMS region.</description></item>
-        /// <item><description>When the output is a video, the following resolution limits apply:<list type="bullet">
-        /// <item><description>Both the width and height must be at least 128 px.</description></item>
-        /// <item><description>Neither the width nor the height can exceed 4096 px.</description></item>
-        /// <item><description>The shorter side cannot exceed 2160 px.</description></item>
+        /// <item><description>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</description></item>
+        /// <item><description>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </description></item>
+        /// <item><description>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </description></item>
+        /// <item><description>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </description></item>
+        /// <item><description>When the output is a video, the following resolution limits apply to the produced video:<list type="bullet">
+        /// <item><description>Both width and height must be at least 128 px.</description></item>
+        /// <item><description>Both width and height cannot exceed 4096 px.</description></item>
+        /// <item><description>The short side cannot exceed 2160 px.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -55251,7 +55451,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55309,7 +55509,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55367,7 +55567,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55385,7 +55585,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56383,14 +56583,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</para>
+        /// <para>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56467,14 +56666,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</para>
+        /// <para>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56551,14 +56749,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</para>
+        /// <para>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56577,14 +56774,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</para>
+        /// <para>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -57071,7 +57267,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57125,7 +57321,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57179,7 +57375,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57197,7 +57393,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits an AI application task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57215,7 +57411,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits a storyboard generation task for the Yike AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57311,7 +57507,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits a storyboard generation task for the Yike AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57407,7 +57603,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits a storyboard generation task for the Yike AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57425,7 +57621,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a Yike AI application job.</para>
+        /// <para>Submits a storyboard generation task for the Yike AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58115,12 +58311,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a category.</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58166,12 +58362,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a category.</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58217,12 +58413,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a category.</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58240,12 +58436,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a category.</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58423,7 +58619,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom template.</para>
+        /// <para>Modifies the information of a user-defined template for media processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58473,7 +58669,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom template.</para>
+        /// <para>Modifies the information of a user-defined template for media processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58523,7 +58719,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom template.</para>
+        /// <para>Modifies the information of a user-defined template for media processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58541,7 +58737,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom template.</para>
+        /// <para>Modifies the information of a user-defined template for media processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61879,7 +62075,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the marks of a media asset.</para>
+        /// <para>Updates media asset mark information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61925,7 +62121,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the marks of a media asset.</para>
+        /// <para>Updates media asset mark information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61971,7 +62167,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the marks of a media asset.</para>
+        /// <para>Updates media asset mark information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61989,7 +62185,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the marks of a media asset.</para>
+        /// <para>Updates media asset mark information.</para>
         /// </summary>
         /// 
         /// <param name="request">

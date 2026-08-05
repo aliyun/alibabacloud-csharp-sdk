@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubYikeUserCreditResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the operation fails. A possible value is:</para>
+        /// <para>The error code returned when the deduction fails. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</c>: The sub-account\&quot;s credit balance is insufficient.</description></item>
+        /// <item><description>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: the credit balance of the RAM user is insufficient.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,12 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded.</para>
+        /// <para>Indicates whether the deduction is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The operation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

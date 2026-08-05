@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The category name.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value can be up to 64 bytes in length.</para>
-        /// </description></item>
-        /// <item><description><para>The value must be encoded in UTF-8.</para>
-        /// </description></item>
+        /// <item><description>The maximum length is 64 bytes.</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CateName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent category.</para>
+        /// <para>The parent category ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -37,12 +35,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// <para>The type of the category. Valid values:</para>
+        /// <para>The category type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>default: audio, video, and image files. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para>material: short video materials.</para>
-        /// </description></item>
+        /// <item><description>default (default): audio, video, and image category.                                 </description></item>
+        /// <item><description>material: short video material category.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

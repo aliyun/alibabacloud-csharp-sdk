@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteAvatarTrainingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteAvatarTrainingJobResponseBodyData Data { get; set; }
         public class DeleteAvatarTrainingJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the digital human training job.</para>
+            /// <para>The ID of the digital human training task.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>d718e2ff4f018ccf419a7b71</b></b></para>
@@ -41,10 +41,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

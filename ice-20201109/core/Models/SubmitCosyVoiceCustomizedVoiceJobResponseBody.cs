@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class CreateCustomizedVoiceJobResponseBody : TeaModel {
+    public class SubmitCosyVoiceCustomizedVoiceJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateCustomizedVoiceJobResponseBodyData Data { get; set; }
-        public class CreateCustomizedVoiceJobResponseBodyData : TeaModel {
+        public SubmitCosyVoiceCustomizedVoiceJobResponseBodyData Data { get; set; }
+        public class SubmitCosyVoiceCustomizedVoiceJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The voice cloning task ID.</para>
+            /// <para>The ID of the voice cloning task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><b><b>29faef8144638ba42eb8e037</b></b></para>
+            /// <para>bfb786c639894f4d80648792021****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <para>The voice ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xiaozhuan</para>
+            /// <para>Voice-l*****</para>
             /// </summary>
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
@@ -39,20 +39,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// <para>C0C02296-113C-5838-8FE9-8F3A32998DDC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

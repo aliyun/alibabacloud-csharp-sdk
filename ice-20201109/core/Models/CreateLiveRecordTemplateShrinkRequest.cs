@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveRecordTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Live Record Template.</para>
+        /// <para>The template name.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the template is the default template.</para>
+            /// <para>Indicates whether the template is a default template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The template state.</para>
+            /// <para>The template status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The subtype name of the template.</para>
+            /// <para>The template subtype name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Remux</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Subtype { get; set; }
 
             /// <summary>
-            /// <para>The template configurations.</para>
+            /// <para>The template configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The type ID of the template.</para>
+            /// <para>The templatetype ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>The type name of the template.</para>
+            /// <para>The templatetype name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TranscodeTemplate</para>

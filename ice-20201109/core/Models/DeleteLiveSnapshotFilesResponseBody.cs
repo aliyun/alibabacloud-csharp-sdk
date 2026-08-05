@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveSnapshotFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of deletion results.</para>
+        /// <para>The list of deletion results.</para>
         /// </summary>
         [NameInMap("DeleteFileResultList")]
         [Validation(Required=false)]
         public List<DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList> DeleteFileResultList { get; set; }
         public class DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList : TeaModel {
             /// <summary>
-            /// <para>The creation timestamp of the file.</para>
+            /// <para>The creation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1660638613798</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The deletion result. A value of <c>OK</c> indicates the operation succeeded. Other values indicate that it failed.</para>
+            /// <para>The deletion result. OK indicates that the deletion was successful. Other values indicate that the deletion failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>2876-6263-4B75-8F2C-CD0F7FCF</b></b></para>

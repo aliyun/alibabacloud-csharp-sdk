@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID.</para>
+        /// <para>The agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AIAgentId { get; set; }
 
         /// <summary>
-        /// <para>End time of the query in ISO 8601 format. No default value.</para>
+        /// <para>The end time of the query in ISO 8601 format. No default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-02T00:00:00Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default is 1. Valid values: 1 to 100.</para>
+        /// <para>The page number. Default value: 1. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of results per page. Default is 10. Valid values: 0 to 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Start time of the query in ISO 8601 format. No default value.</para>
+        /// <para>The start time of the query in ISO 8601 format. No default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-01T00:00:00Z</para>

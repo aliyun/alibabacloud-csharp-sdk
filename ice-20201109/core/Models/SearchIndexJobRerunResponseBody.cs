@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchIndexJobRerunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SearchIndexJobRerunResponseBodyData Data { get; set; }
         public class SearchIndexJobRerunResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The media asset IDs that do not exist.</para>
+            /// <para>The list of media asset IDs that do not exist.</para>
             /// </summary>
             [NameInMap("MediaIdsNoExist")]
             [Validation(Required=false)]
@@ -46,12 +46,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

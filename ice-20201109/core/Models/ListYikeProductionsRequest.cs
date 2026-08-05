@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListYikeProductionsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return on each page.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token from a previous response. Use this to retrieve the next page of results.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return on each page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

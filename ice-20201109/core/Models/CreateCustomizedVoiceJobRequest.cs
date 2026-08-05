@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The gender. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>female</para>
-        /// </description></item>
-        /// <item><description><para>male</para>
-        /// </description></item>
+        /// <item><description>female: female.</description></item>
+        /// <item><description>male: male.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,12 +27,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>story</para>
-        /// </description></item>
-        /// <item><description><para>interaction</para>
-        /// </description></item>
-        /// <item><description><para>navigation</para>
-        /// </description></item>
+        /// <item><description>story: story.</description></item>
+        /// <item><description>interaction: interaction.</description></item>
+        /// <item><description>navigation: navigation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,25 +43,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The voice description.</para>
         /// <list type="bullet">
-        /// <item><description>Must be 256 characters or fewer.</description></item>
+        /// <item><description>The description cannot exceed 256 characters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个个性化声音</para>
+        /// <para>This is a personalized voice</para>
         /// </summary>
         [NameInMap("VoiceDesc")]
         [Validation(Required=false)]
         public string VoiceDesc { get; set; }
 
         /// <summary>
-        /// <para>The custom voice ID. This is typically an English name or Pinyin.</para>
+        /// <para>The custom voice ID (English name or pinyin of the voice).</para>
         /// <list type="bullet">
-        /// <item><description><para>Must be unique among your other custom voices.</para>
-        /// </description></item>
-        /// <item><description><para>Must be 32 characters or fewer.</para>
-        /// </description></item>
-        /// <item><description><para>Can contain only letters and numbers.</para>
-        /// </description></item>
+        /// <item><description>The ID cannot be the same as any of your other custom voice IDs.</description></item>
+        /// <item><description>The ID cannot exceed 32 characters.</description></item>
+        /// <item><description>Only letters and numbers are supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,9 +70,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string VoiceId { get; set; }
 
         /// <summary>
-        /// <para>The voice name, typically in Chinese.</para>
+        /// <para>The voice name (generally a Chinese name).</para>
         /// <list type="bullet">
-        /// <item><description>Must be 32 characters or fewer.</description></item>
+        /// <item><description>The name cannot exceed 32 characters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

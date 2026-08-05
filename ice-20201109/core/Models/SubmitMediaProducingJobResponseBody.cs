@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitMediaProducingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The producing job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The media ID.</para>
+        /// <para>The ID of the produced media asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>c469e944b5a856828dc2</b></b></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The editing project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>b4549d46c88681030f6e</b></b></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The VOD media ID. Returned if the output destination is VOD.</para>
+        /// <para>The VOD media asset ID. This parameter is returned when the video output location is VOD.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d8s4h75ci975745c14b</b></b></para>

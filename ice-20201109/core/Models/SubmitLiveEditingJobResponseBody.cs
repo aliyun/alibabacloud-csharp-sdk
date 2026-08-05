@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveEditingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the live editing job.</para>
+        /// <para>The ID of the live editing task.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d80e4e4044975745c14b</b></b></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the output media asset.</para>
+        /// <para>The media asset ID of the output.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>c469e944b5a856828dc2</b></b></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the output file.</para>
+        /// <para>The URL of the output.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>36-3C1E-4417-BDB2-1E034F</b></b></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VOD media asset. This parameter is returned only if the output destination is VOD.</para>
+        /// <para>The VOD media asset ID. This parameter is returned when the video output destination is VOD.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>d7578s4h75ci945c14b</b></b></para>

@@ -1,3 +1,7 @@
+2026-08-05 Version: 6.19.0
+- Support API SubmitCosyVoiceCustomizedVoiceJob.
+
+
 2026-07-01 Version: 6.18.2
 - Update API GetProjectExportJob: add response parameters Body.ProjectExportJob.ExportResult.AudioUrl.
 - Update API GetProjectExportJob: add response parameters Body.ProjectExportJob.ExportResult.SrtList.

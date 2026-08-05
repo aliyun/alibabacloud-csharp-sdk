@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaClipByFaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the entity.</para>
+        /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2d3bf1e35a1e42b5ab338d701efa****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>The value of this parameter is the same as that of the FaceSearchToken parameter in the SearchMediaByFace request. This specifies to return media asset clips that meet the same query conditions.</para>
+        /// <para>The value must be the same as the FaceSearchToken value in the <a href="https://help.aliyun.com/document_detail/612893.html">coarse search operation</a>. This parameter is used to determine paginated results under the same search condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FaceSearchToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset.</para>
+        /// <para>The media asset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

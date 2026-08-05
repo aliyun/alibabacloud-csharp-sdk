@@ -11,21 +11,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
     public class AddTemplateRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</para>
-        /// </description></item>
+        /// <item><description>The standard template Config is an encapsulation based on the cloud editing Timeline. Custom template Config provides more flexibility. If you have special requirements, familiarize yourself with the Config structure and customize the template. For details, see <a href="https://help.aliyun.com/document_detail/456193.html">Standard template Config details</a>.</description></item>
+        /// <item><description>For more template Config examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Common standard template Config examples</a>.</description></item>
+        /// <item><description>For one-click video production template Config configurations, see <a href="https://help.aliyun.com/document_detail/2878274.html">One-click video production template configuration parameter description</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>参见Timeline模板Config文档</para>
+        /// <para>See the Timeline template Config documentation</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The URL of the template thumbnail.</para>
+        /// <para>The template cover URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></para>
@@ -35,7 +34,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom template.</para>
+        /// <para>The custom template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Template name</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template preview video.</para>
+        /// <para>The media asset ID of the template preview video.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>01bf24bf41c78b2754cb3187</b></b></para>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PreviewMedia { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the materials associated with the template for use by the regular template editor.</para>
+        /// <para>The media assets associated with the template, used by the standard template editor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;video&quot;:[&quot;1805a0c6ca544fb395a06ca683619655&quot;]}</para>
@@ -65,16 +64,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RelatedMediaids { get; set; }
 
         /// <summary>
-        /// <para>The source from which the template is created. Valid values:</para>
+        /// <para>The template creation source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OpenAPI</para>
-        /// </description></item>
-        /// <item><description><para>AliyunConsole</para>
-        /// </description></item>
-        /// <item><description><para>WebSDK</para>
-        /// </description></item>
+        /// <item><description>OpenAPI: created by using OpenAPI.</description></item>
+        /// <item><description>AliyunConsole: created by using the Alibaba Cloud Management Console.</description></item>
+        /// <item><description>WebSDK: created by using WebSDK.</description></item>
         /// </list>
-        /// <!---->
         /// 
         /// <b>Example:</b>
         /// <para>OpenAPI</para>
@@ -84,22 +79,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The template state. Valid values:</para>
+        /// <para>The template status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Available: The template is available.</para>
-        /// </description></item>
-        /// <item><description><para>Created: The template is created but not ready for use.</para>
-        /// </description></item>
-        /// <item><description><para>Uploading: The video is being uploaded.</para>
-        /// </description></item>
-        /// <item><description><para>Processing: The advanced template is being processed.</para>
-        /// </description></item>
-        /// <item><description><para>UploadFailed: Failed to upload the video.</para>
-        /// </description></item>
-        /// <item><description><para>ProcessFailed: Failed to process the advanced template.</para>
-        /// </description></item>
+        /// <item><description>Available: normal.</description></item>
+        /// <item><description>Created: created but not yet available.</description></item>
+        /// <item><description>Uploading: uploading.</description></item>
+        /// <item><description>Processing: advanced template is being analyzed.</description></item>
+        /// <item><description>UploadFailed: upload failed.</description></item>
+        /// <item><description>ProcessFailed: advanced template analysis failed.</description></item>
         /// </list>
-        /// <!---->
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -109,14 +97,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The template type. Valid values:</para>
+        /// <para>The templatetype. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</para>
-        /// </description></item>
-        /// <item><description><para>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</para>
-        /// </description></item>
+        /// <item><description>Timeline (standard template): a template created based on the Timeline of a video clip node (multiple materials on multiple tracks are concatenated in sequence). This templatetype can be used to implement effects such as image-to-video conversion, photo albums, intros and outros, and default watermarks.</description></item>
+        /// <item><description>VETemplate (advanced template): a template created based on Adobe After Effects (AE) effects. This templatetype can be used to implement advanced media effects with complex animations.</description></item>
+        /// <item><description>BatchEditing (one-click video production template): supports configurations for sticker watermarks, background music, background images, narration subtitle styles, title subtitle styles, and output resolution parameters. These configurations are automatically applied when you commit a one-click video production node.</description></item>
         /// </list>
-        /// <!---->
         /// 
         /// <b>Example:</b>
         /// <para>Timeline</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AlterSearchIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the index.</para>
+        /// <para>The index configuration.</para>
         /// <remarks>
-        /// <para>You must specify either IndexStatus or IndexConfig.</para>
+        /// <para>Notice:  You must specify either IndexStatus or IndexConfig.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,15 +23,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string IndexConfig { get; set; }
 
         /// <summary>
-        /// <para>The state of the index. Valid values:</para>
+        /// <para>The index status. Default value: Active. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>active (default): the index is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>Deactive: the index is not enabled.</para>
-        /// </description></item>
+        /// <item><description>Active: activated.</description></item>
+        /// <item><description>Deactive: deactivated.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify either IndexStatus or IndexConfig.</para>
+        /// <para>Notice:  You must specify either IndexStatus or IndexConfig.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,14 +40,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string IndexStatus { get; set; }
 
         /// <summary>
-        /// <para>The category of the index. Valid values:</para>
+        /// <para>The index type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>mm: large visual model.</para>
-        /// </description></item>
-        /// <item><description><para>face: face recognition.</para>
-        /// </description></item>
-        /// <item><description><para>aiLabel: smart tagging.</para>
-        /// </description></item>
+        /// <item><description>mm: large model.</description></item>
+        /// <item><description>face: face.</description></item>
+        /// <item><description>aiLabel: intelligent tag.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,12 +56,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string IndexType { get; set; }
 
         /// <summary>
-        /// <para>The name of the search library.</para>
+        /// <para>The search library name.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you leave this parameter empty, the search index is created in the default search library of Intelligent Media Service (IMS). Default value: ims-default-search-lib.</para>
-        /// </description></item>
-        /// <item><description><para>To query information about an existing search library, call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API operation.</para>
-        /// </description></item>
+        /// <item><description>If no search library name is specified, the search index is created in the default IMS search library. Default value: ims-default-search-lib.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> operation to query existing search library information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

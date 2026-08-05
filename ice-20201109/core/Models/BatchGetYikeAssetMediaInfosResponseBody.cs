@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetYikeAssetMediaInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of IDs of media assets that failed to be obtained.</para>
+        /// <para>The list of IDs that failed to be retrieved.</para>
         /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]
         public List<string> IgnoredList { get; set; }
 
         /// <summary>
-        /// <para>The list of matched media assets.</para>
+        /// <para>The collection of media assets that meet the requirements.</para>
         /// </summary>
         [NameInMap("MediaInfos")]
         [Validation(Required=false)]
         public List<BatchGetYikeAssetMediaInfosResponseBodyMediaInfos> MediaInfos { get; set; }
         public class BatchGetYikeAssetMediaInfosResponseBodyMediaInfos : TeaModel {
             /// <summary>
-            /// <para>The business data.</para>
+            /// <para>The business information.</para>
             /// </summary>
             [NameInMap("BizData")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string AuditStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the creation job.</para>
+                /// <para>The ID of the creation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string CreationJobId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the folder.</para>
+                /// <para>The folder ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pd_0617169475</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the media asset is a favorite.</para>
+                /// <para>Indicates whether the media asset is marked as a favorite.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string IsLogicalDeleted { get; set; }
 
                 /// <summary>
-                /// <para>The sub-type of the media asset.</para>
+                /// <para>The media asset subtype.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Image</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaAssetSubType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the media asset.</para>
+                /// <para>The media asset type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HistoricalUpload</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaAssetType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the production.</para>
+                /// <para>The project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pd_0617169475</para>
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The list of file information.</para>
+            /// <para>The file list information.</para>
             /// </summary>
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoList> FileInfoList { get; set; }
             public class BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoList : TeaModel {
                 /// <summary>
-                /// <para>The basic information about the file, including the duration and size.</para>
+                /// <para>The basic file information, including duration and size.</para>
                 /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
-                    /// <para>The duration of the file.</para>
+                    /// <para>The duration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Duration { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the file.</para>
+                    /// <para>The file name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example.mp4</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileName { get; set; }
 
                     /// <summary>
-                    /// <para>The size of the file, in bytes.</para>
+                    /// <para>The file size in bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>191</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileSize { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the file.</para>
+                    /// <para>The file status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the file.</para>
+                    /// <para>The file type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>source_file</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string FileUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The container format of the file.</para>
+                    /// <para>The container format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>jpg</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The region where the file is stored.</para>
+                    /// <para>The storage region of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Biz { get; set; }
 
                 /// <summary>
-                /// <para>The business type.</para>
+                /// <para>The business type of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>general</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string BusinessType { get; set; }
 
                 /// <summary>
-                /// <para>The category of the media asset.</para>
+                /// <para>The category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>category</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the cover image.</para>
+                /// <para>The cover URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string DeletedTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the media asset.</para>
+                /// <para>The content description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sample_description</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The source URL of the media asset.</para>
+                /// <para>The address of the media asset to be registered in the corresponding system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string InputURL { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the media asset.</para>
+                /// <para>The media asset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><em><b><b>64623a94eca8516569c8f</b></b></em></para>
@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the media asset.</para>
+                /// <para>The tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag1，tag2</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MediaTags { get; set; }
 
                 /// <summary>
-                /// <para>The type of the media asset.</para>
+                /// <para>The media type of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>video</para>
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Snapshots { get; set; }
 
                 /// <summary>
-                /// <para>The source of the media asset.</para>
+                /// <para>The source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string SpriteImages { get; set; }
 
                 /// <summary>
-                /// <para>The status of the media asset.</para>
+                /// <para>The resource status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The title of the media asset.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>title</para>
@@ -468,7 +468,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string TranscodeStatus { get; set; }
 
                 /// <summary>
-                /// <para>The custom user data.</para>
+                /// <para>The user data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UserData</para>
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The ID of the media asset.</para>
+            /// <para>The media asset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

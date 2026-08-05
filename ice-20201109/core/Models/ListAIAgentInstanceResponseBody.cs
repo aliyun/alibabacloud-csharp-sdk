@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of agent instance objects.</para>
+        /// <para>The list of agent instance structs.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListAIAgentInstanceResponseBodyInstances> Instances { get; set; }
         public class ListAIAgentInstanceResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>Template configuration used by the agent instance.</para>
+            /// <para>The template configuration used by the agent instance.</para>
             /// </summary>
             [NameInMap("AgentConfig")]
             [Validation(Required=false)]
             public AIAgentConfig AgentConfig { get; set; }
 
             /// <summary>
-            /// <para>URL of the call log file. The file contains a JSON-formatted CallLog structure.</para>
+            /// <para>The URL of the agent conversation call log file. The file contains the CallLog struct in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/call_logs/12345.json">https://example.com/call_logs/12345.json</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CallLogUrl { get; set; }
 
             /// <summary>
-            /// <para>Runtime configuration required by the agent.</para>
+            /// <para>The runtime configuration required by the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</para>
@@ -44,13 +44,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentRuntimeConfig RuntimeConfig { get; set; }
 
             /// <summary>
-            /// <para>Instance status:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Created: The call started but no connection was established between both ends.</para>
+            /// <item><description><para>Created: The call is initiated but the connection between the two ends is not established.</para>
             /// </description></item>
-            /// <item><description><para>Executing: The call is in progress and a connection is established between both ends.</para>
+            /// <item><description><para>Executing: The call is in progress and the connection between the two ends is established.</para>
             /// </description></item>
-            /// <item><description><para>Finished: The call ended.</para>
+            /// <item><description><para>Finished: The call has ended.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Template configuration used by the agent instance.</para>
+            /// <para>The template configuration used by the agent instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;: {&quot;VoiceId&quot;: &quot;zhixiaoxia&quot;}}</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentTemplateConfig TemplateConfig { get; set; }
 
             /// <summary>
-            /// <para>User-defined information.</para>
+            /// <para>The user-defined data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>

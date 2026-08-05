@@ -10,14 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitStandardCustomizedVoiceJobRequest : TeaModel {
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description><para>The material assets IDs of the materials for training.</para>
-        /// </description></item>
-        /// <item><description><para>Separate multiple media IDs with commas (,).</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The list of media asset IDs for training audio materials. Separate multiple media asset IDs with commas (,).</para>
         /// <remarks>
-        /// <para>: The total duration of all materials must be within 15 to 30 minutes. The duration of each material must be greater than 1 minute.</para>
+        /// <para>Notice: The total duration of all materials must be between 15 and 30 minutes, and the duration of each individual material must be greater than 1 minute.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,14 +23,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Audios { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description><para>The media asset ID of the authentication audio.</para>
-        /// </description></item>
-        /// <item><description><para>Upload an audio file for identity authentication. If the voiceprint extracted from the uploaded file differs from that of the training file, the job fails.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b>: Clearly read and record the following text: I confirm to customize human voice cloning and provide audio files that contain my voice for training. I promise that I am responsible for the customized content and that the content complies with laws and regulations.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The media asset ID of the authentication audio. Upload an audio clip to verify your identity. The task fails if the voiceprint does not match the training audio.</para>
+        /// <remarks>
+        /// <para>Notice: Read and record the following statement clearly: I confirm that I am initiating voice cloning customization. The training audio is provided by me. I commit to being responsible for the customized content and guarantee that no illegal or non-compliant content will be created.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>571c704445f9a0ee011406c2</b></b></para>
@@ -45,13 +36,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Authentication { get; set; }
 
         /// <summary>
-        /// <para>The URL of the sample audio file.</para>
+        /// <para>The audio output address for the sample.  </para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is specified, a sample audio file is generated at the specified Object Storage Service (OSS) URL after the training is complete.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is not specified, no sample audio file is generated.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b>: The URL must be a valid public OSS URL within your Alibaba Cloud account.</para>
+        /// <item><description>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  </description></item>
+        /// <item><description>If you do not specify this parameter, no sample audio is generated.<remarks>
+        /// <para>Notice: The address must be a valid public OSS URL under your account.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -65,10 +55,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The gender. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>female</para>
-        /// </description></item>
-        /// <item><description><para>male</para>
-        /// </description></item>
+        /// <item><description>female</description></item>
+        /// <item><description>male</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,10 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Gender { get; set; }
 
         /// <summary>
-        /// <para>The voice name.</para>
-        /// <list type="bullet">
-        /// <item><description>The name can be up to 32 characters in length.</description></item>
-        /// </list>
+        /// <para>The voice name. The name can be up to 32 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Basic</para>

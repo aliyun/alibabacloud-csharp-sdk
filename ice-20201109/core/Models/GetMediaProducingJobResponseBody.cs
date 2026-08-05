@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaProducingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the media producing job.</para>
+        /// <para>The media producing job information.</para>
         /// </summary>
         [NameInMap("MediaProducingJob")]
         [Validation(Required=false)]
         public GetMediaProducingJobResponseBodyMediaProducingJob MediaProducingJob { get; set; }
         public class GetMediaProducingJobResponseBodyMediaProducingJob : TeaModel {
             /// <summary>
-            /// <para>The clip parameters of the template used for the job.</para>
+            /// <para>The template parameters of the media producing job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VideoArray&quot;:[&quot;<b><b>05512043f49f697f7425</b></b>&quot;,&quot;<b><b>05512043f49f697f7425</b></b>&quot;,&quot;<b><b>05512043f49f697f7425</b></b>&quot;]}</para>
@@ -27,7 +27,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ClipsParam { get; set; }
 
             /// <summary>
-            /// <para>The error code of the media producing job. &gt;Notice: This parameter is returned only if the job fails.</para>
+            /// <para>The error code of the media producing job.</para>
+            /// <remarks>
+            /// <para>Notice: Check this field when the job fails.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>ExceededMaximumValue</para>
@@ -37,7 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The time in UTC when the media producing job was completed, formatted as <c>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</c>.</para>
+            /// <para>The time when the media producing job was completed, in UTC.</para>
+            /// <para>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-23T13:33:52Z</para>
@@ -47,7 +51,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time in UTC when the media producing job was created, formatted as <c>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</c>.</para>
+            /// <para>The time when the media producing job was created, in UTC.</para>
+            /// <para>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-23T13:33:40Z</para>
@@ -57,7 +62,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The duration of the output media. &gt;Notice: This parameter is returned only if the job is successful and the output is an audio or video file.</para>
+            /// <para>The duration of the output media asset.</para>
+            /// <remarks>
+            /// <para>Notice: This field has a value only when the producing job succeeds and the output media asset type is audio or video.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>30.500000</para>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The ID of the media producing job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>cdb3e74639973036bc84</b></b></para>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the output media asset.</para>
+            /// <para>The resource ID of the output media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>0cc6ba49eab379332c5b</b></b></para>
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the output media file.</para>
+            /// <para>The resource file URL of the output media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></para>
@@ -99,9 +107,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The error message of the media producing job.</para>
             /// <remarks>
-            /// <para>Notice: </para>
+            /// <para>Notice: Check this field when the job fails.</para>
             /// </remarks>
-            /// <para>This parameter is returned only if the job fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified &quot;Width_Height&quot; has exceeded maximum value.</para>
@@ -111,7 +118,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The time in UTC when the media producing job was last modified, formatted as <c>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</c>.</para>
+            /// <para>The time when the media producing job was last modified, in UTC.</para>
+            /// <para>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-23T13:33:49Z</para>
@@ -120,15 +128,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
-            /// <summary>
-            /// <para>The progress of the job. Valid values: 0 to 100.</para>
-            /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the cloud editing project.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>fddd7748b58bf1d47e95</b></b></para>
@@ -140,16 +145,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The status of the media producing job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Init</c> (Initialized)</para>
-            /// </description></item>
-            /// <item><description><para><c>Queuing</c> (In queue)</para>
-            /// </description></item>
-            /// <item><description><para><c>Processing</c> (In progress)</para>
-            /// </description></item>
-            /// <item><description><para><c>Success</c> (Successful)</para>
-            /// </description></item>
-            /// <item><description><para><c>Failed</c> (Failed)</para>
-            /// </description></item>
+            /// <item><description>Init: init state.</description></item>
+            /// <item><description>Queuing: queuing.</description></item>
+            /// <item><description>Processing: processing.</description></item>
+            /// <item><description>Success: succeeded.</description></item>
+            /// <item><description>Failed: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>If the job is a subtask of a batch smart one-click video creation task, this parameter contains the subtask\&quot;s materials, such as the title and speech script.</para>
+            /// <para>If this media producing job is a subtask of a batch intelligent one-click video production job, this field returns the material information used by the subtask, such as the narration text and title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Title&quot;: &quot;标题&quot;, &quot;SpeechText&quot;: &quot;批量智能一键成片口播文案&quot;}</para>
+            /// <para>{&quot;Title&quot;: &quot;Title&quot;, &quot;SpeechText&quot;: &quot;Narration text for batch intelligent one-click video production&quot;}</para>
             /// </summary>
             [NameInMap("SubJobMaterials")]
             [Validation(Required=false)]
             public string SubJobMaterials { get; set; }
 
             /// <summary>
-            /// <para>The ID of the template used for the job.</para>
+            /// <para>The template ID of the media producing job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>6e76134d739cc3e85d3e</b></b></para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Timeline { get; set; }
 
             /// <summary>
-            /// <para>The user data, in JSON format.</para>
+            /// <para>The custom settings in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22,%22Key%22:%22Valuexxx%22%7D">http://xx.xx.xxx&quot;,&quot;Key&quot;:&quot;Valuexxx&quot;}</a></para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string UserData { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media asset in VOD (Video on Demand). This ID is returned if the job\&quot;s output is stored in VOD.</para>
+            /// <para>If the output of the media producing job is delivered to ApsaraVideo VOD, the output is registered as a VOD media asset. The vodMediaId is the media asset ID in VOD.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>332c5b0cc6ba49eab379</b></b></para>

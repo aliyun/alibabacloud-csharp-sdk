@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitASRJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job description. The maximum length is 128 bytes.</para>
+        /// <para>The task description. The value can be up to 128 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The duration of the segment to transcribe.</para>
+        /// <para>The duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:10</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>The configuration for speech-to-text conversion:</para>
+        /// <para>The audio-to-text recognition configuration:</para>
         /// <list type="bullet">
-        /// <item><description>HotwordLibraryIdList: A list of custom vocabulary IDs. Only one custom vocabulary ID is currently supported. Future releases will support multiple IDs.</description></item>
+        /// <item><description>HotwordLibraryIdList: the list of hotword library IDs. Currently, only one hotword library ID can be specified. Support for multiple hotword library IDs is planned for the future.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingConfig { get; set; }
 
         /// <summary>
-        /// <para>The input configuration. Specify either an OSS URL or a media ID from the media library.</para>
+        /// <para>The input configuration. OSS URLs and content library material IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or <b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputFile { get; set; }
 
         /// <summary>
-        /// <para>The start time of the segment to be transcribed from the media file.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The job title. The maximum length is 128 bytes.</para>
+        /// <para>The task title. The value can be up to 128 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test title</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>User-defined settings in JSON format. Use this to pass business-related data, such as the operating environment or other job details.</para>
+        /// <para>The custom settings. You can pass in business information such as the business environment and task information. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

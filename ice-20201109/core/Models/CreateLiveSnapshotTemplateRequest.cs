@@ -10,18 +10,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLiveSnapshotTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The naming format of the snapshot captured in overwrite mode.</para>
+        /// <para>The overwrite snapshot file format.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</para>
-        /// </description></item>
-        /// <item><description><para>It cannot exceed 255 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</para>
-        /// </description></item>
-        /// <item><description><para>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</para>
-        /// </description></item>
-        /// <item><description><para>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</para>
-        /// </description></item>
+        /// <item><description>The value cannot start with &quot;/&quot;. Only the .jpg suffix is supported.</description></item>
+        /// <item><description>Maximum length: 255.</description></item>
+        /// <item><description>Supported placeholder: {JobId}: snapshot task ID.</description></item>
+        /// <item><description>The placeholders {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</description></item>
+        /// <item><description>At least one of the overwrite snapshot format or sequence snapshot format must be specified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,16 +27,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OverwriteFormat { get; set; }
 
         /// <summary>
-        /// <para>The naming format of the snapshot captured in time series mode.</para>
+        /// <para>The sequence snapshot file format.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</para>
-        /// </description></item>
-        /// <item><description><para>It cannot exceed 255 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</para>
-        /// </description></item>
-        /// <item><description><para>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</para>
-        /// </description></item>
+        /// <item><description>The value cannot start with &quot;/&quot;. Only the .jpg suffix is supported.</description></item>
+        /// <item><description>Maximum length: 255.</description></item>
+        /// <item><description>Supported placeholders: {JobId}: snapshot task ID, {Date}: snapshot date, {UnixTimestamp}: timestamp, {Sequence}: serial number. At least one of {UnixTimestamp} or {Sequence} must be specified.</description></item>
+        /// <item><description>At least one of the overwrite snapshot format or sequence snapshot format must be specified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,9 +43,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SequenceFormat { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The template name.</para>
         /// <list type="bullet">
-        /// <item><description>It cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Maximum length: 128.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,9 +57,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The interval between two adjacent snapshots. Unit: seconds.</para>
+        /// <para>The snapshot time interval. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: [5,3600].</description></item>
+        /// <item><description>Valid values: 5 to 3600.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

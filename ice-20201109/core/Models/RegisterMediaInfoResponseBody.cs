@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class RegisterMediaInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the media asset in IMS.</para>
+        /// <para>The IMS media asset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b></para>
