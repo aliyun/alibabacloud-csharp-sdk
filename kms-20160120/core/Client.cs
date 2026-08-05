@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 {"us-west-1", "kms.us-west-1.aliyuncs.com"},
                 {"us-east-1", "kms.us-east-1.aliyuncs.com"},
+                {"na-south-1", "kms.na-south-1.aliyuncs.com"},
                 {"me-east-1", "kms.me-east-1.aliyuncs.com"},
                 {"me-central-1", "kms.me-central-1.aliyuncs.com"},
                 {"eu-west-1", "kms.eu-west-1.aliyuncs.com"},
@@ -41,6 +42,7 @@ namespace AlibabaCloud.SDK.Kms20160120
                 {"cn-qingdao", "kms.cn-qingdao.aliyuncs.com"},
                 {"cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"},
                 {"cn-hongkong", "kms.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"},
                 {"cn-heyuan", "kms.cn-heyuan.aliyuncs.com"},
                 {"cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"},
                 {"cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"},
@@ -1761,6 +1763,182 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AsymmetricVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves secret values in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>The caller must have the <c>kms:GetSecretValue</c> permission on all secrets in the batch.</description></item>
+        /// <item><description>If a secret uses a customer master key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetSecretValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetSecretValueResponse
+        /// </returns>
+        public BatchGetSecretValueResponse BatchGetSecretValueWithOptions(BatchGetSecretValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetSecretValueShrinkRequest request = new BatchGetSecretValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecretsList))
+            {
+                request.SecretsListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecretsList, "SecretsList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretsListShrink))
+            {
+                query["SecretsList"] = request.SecretsListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetSecretValue",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetSecretValueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves secret values in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>The caller must have the <c>kms:GetSecretValue</c> permission on all secrets in the batch.</description></item>
+        /// <item><description>If a secret uses a customer master key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetSecretValueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetSecretValueResponse
+        /// </returns>
+        public async Task<BatchGetSecretValueResponse> BatchGetSecretValueWithOptionsAsync(BatchGetSecretValueRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetSecretValueShrinkRequest request = new BatchGetSecretValueShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecretsList))
+            {
+                request.SecretsListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecretsList, "SecretsList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretsListShrink))
+            {
+                query["SecretsList"] = request.SecretsListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetSecretValue",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetSecretValueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves secret values in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>The caller must have the <c>kms:GetSecretValue</c> permission on all secrets in the batch.</description></item>
+        /// <item><description>If a secret uses a customer master key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetSecretValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetSecretValueResponse
+        /// </returns>
+        public BatchGetSecretValueResponse BatchGetSecretValue(BatchGetSecretValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchGetSecretValueWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves secret values in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>The caller must have the <c>kms:GetSecretValue</c> permission on all secrets in the batch.</description></item>
+        /// <item><description>If a secret uses a customer master key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetSecretValueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetSecretValueResponse
+        /// </returns>
+        public async Task<BatchGetSecretValueResponse> BatchGetSecretValueAsync(BatchGetSecretValueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchGetSecretValueWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11565,14 +11743,14 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// <para>Queries all version information of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Version information does not include secret values. By default, only secret versions that have version stages are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11627,14 +11805,14 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// <para>Queries all version information of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Version information does not include secret values. By default, only secret versions that have version stages are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11689,14 +11867,14 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// <para>Queries all version information of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Version information does not include secret values. By default, only secret versions that have version stages are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11715,14 +11893,14 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all version IDs and stage labels of a specified secret.</para>
+        /// <para>Queries all version information of a secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Version information does not include secret values. By default, only secret versions that have version stages are returned.</description></item>
         /// </list>
         /// </description>
         /// 
