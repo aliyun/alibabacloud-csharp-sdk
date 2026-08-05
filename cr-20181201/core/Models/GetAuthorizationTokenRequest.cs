@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The validity period of the temporary credential, in hours. Valid values: 1 to 24.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ExpiresInHours")]
+        [Validation(Required=false)]
+        public int? ExpiresInHours { get; set; }
+
+        /// <summary>
         /// <para>The repository instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 

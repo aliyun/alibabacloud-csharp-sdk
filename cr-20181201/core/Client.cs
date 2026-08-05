@@ -7867,16 +7867,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
+        /// <para>Retrieves a temporary username and password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as those of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7894,6 +7894,10 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiresInHours))
+            {
+                query["ExpiresInHours"] = request.ExpiresInHours;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -7919,16 +7923,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
+        /// <para>Retrieves a temporary username and password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as those of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7946,6 +7950,10 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiresInHours))
+            {
+                query["ExpiresInHours"] = request.ExpiresInHours;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -7971,16 +7979,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
+        /// <para>Retrieves a temporary username and password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as those of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7999,16 +8007,16 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a temporary account and temporary password for logging on to an instance.</para>
+        /// <para>Retrieves a temporary username and password for logging on to an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</para>
         /// <list type="bullet">
-        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</description></item>
-        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when you log on to the instance with the username and password of the Alibaba Cloud account.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when you log on to the instance with the username and password of the RAM user.</description></item>
+        /// <item><description>The permissions granted by a temporary token obtained through STS are the same as those of the STS token.</description></item>
         /// </list>
         /// </description>
         /// 

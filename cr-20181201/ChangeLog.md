@@ -1,3 +1,7 @@
+2026-08-05 Version: 2.2.2
+- Update API GetAuthorizationToken: add request parameters ExpiresInHours.
+
+
 2026-07-29 Version: 2.2.1
 - Update API ListRepoTag: add request parameters MaxResults.
 - Update API ListRepoTag: add request parameters NextToken.

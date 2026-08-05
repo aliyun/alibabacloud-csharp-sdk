@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The password used to log on to the Registry.</para>
+        /// <para>The password used to log on to the registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username used to log on to the Registry.</para>
+        /// <para>The username used to log on to the registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>temp_user_cr</para>
