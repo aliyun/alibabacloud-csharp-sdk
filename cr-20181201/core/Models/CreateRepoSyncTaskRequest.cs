@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? Override { get; set; }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
         /// <summary>
         /// <para>Image repository ID in the source instance</para>
         /// <para>This parameter is required.</para>

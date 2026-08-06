@@ -248,6 +248,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public long? ModifiedTime { get; set; }
 
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
             /// <summary>
             /// <para>The ID of the batch sync task. This ID is the same as the sync record ID (<c>SyncRecordId</c>).</para>
             /// <remarks>

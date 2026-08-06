@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

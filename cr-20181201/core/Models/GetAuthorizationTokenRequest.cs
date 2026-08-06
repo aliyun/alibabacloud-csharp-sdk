@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the temporary credential, in hours. Valid values: 1 to 24.</para>
+        /// <para>The validity period of the temporary credential in hours. Valid values: 1 to 24. When you use STS to call this operation, the actual validity period is the minimum of the STS token validity period and this parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
         /// <summary>
         /// <para>The ID of the image repository.</para>
         /// <para>This parameter is required.</para>

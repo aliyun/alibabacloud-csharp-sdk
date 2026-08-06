@@ -226,6 +226,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
         /// <summary>
         /// <para>The synchronization progress. Valid values:</para>
         /// <list type="bullet">
@@ -336,7 +340,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <para>The policy that is used to trigger the synchronization task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PASSIVE</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("TaskTrigger")]
         [Validation(Required=false)]

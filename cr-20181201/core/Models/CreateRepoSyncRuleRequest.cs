@@ -26,7 +26,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         /// <summary>
         /// <para>The namespace name of the source instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>
@@ -34,6 +33,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]
         public string NamespaceName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>.*</para>
+        /// </summary>
+        [NameInMap("NamespaceNameFilter")]
+        [Validation(Required=false)]
+        public string NamespaceNameFilter { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
 
         /// <summary>
         /// <para>The name of the image repository in the source instance.</para>
@@ -122,7 +133,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         /// <summary>
         /// <para>The namespace name of the destination instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>

@@ -147,6 +147,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public long? ModifiedTime { get; set; }
 
+            [NameInMap("NamespaceNameFilter")]
+            [Validation(Required=false)]
+            public string NamespaceNameFilter { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
             /// <summary>
             /// <para>The regular expression that is used to filter repositories.</para>
             /// <remarks>
