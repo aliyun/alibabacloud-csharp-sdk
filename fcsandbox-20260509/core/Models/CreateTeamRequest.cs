@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateTeamRequest : TeaModel {
+        /// <summary>
+        /// <para>The request struct.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateTeamInput Body { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class UpdateApiKeyRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body parameters.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateApiKeyInput Body { get; set; }

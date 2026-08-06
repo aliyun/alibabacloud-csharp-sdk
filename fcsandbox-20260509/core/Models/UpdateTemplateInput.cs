@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class UpdateTemplateInput : TeaModel {
+        [NameInMap("containerConfiguration")]
+        [Validation(Required=false)]
+        public ContainerConfiguration ContainerConfiguration { get; set; }
+
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }

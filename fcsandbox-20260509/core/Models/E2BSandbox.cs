@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string TeamName { get; set; }
 
+        [NameInMap("teamPlan")]
+        [Validation(Required=false)]
+        public string TeamPlan { get; set; }
+
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }

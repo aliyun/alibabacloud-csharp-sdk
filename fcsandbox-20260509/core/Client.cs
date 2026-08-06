@@ -18,7 +18,16 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "fcsandbox.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "fcsandbox.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "fcsandbox.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "fcsandbox.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("fcsandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +48,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80,7 +89,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -121,7 +130,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -140,7 +149,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -159,7 +168,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a Team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -200,7 +209,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a Team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -241,7 +250,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a Team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -260,7 +269,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a Team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -279,7 +288,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,7 +328,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -359,7 +368,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -378,7 +387,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -397,7 +406,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes a Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -443,7 +452,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes a Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -489,7 +498,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes a Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -508,7 +517,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes a Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -527,7 +536,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,7 +576,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -607,7 +616,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -626,7 +635,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -645,7 +654,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -685,7 +694,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -725,7 +734,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -744,7 +753,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,7 +772,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Retrieves the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -809,7 +818,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Retrieves the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +864,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Retrieves the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -874,7 +883,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Retrieves the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -893,7 +902,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Retrieves the details of a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -933,7 +942,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Retrieves the details of a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -973,7 +982,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Retrieves the details of a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -992,7 +1001,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Retrieves the details of a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1011,7 +1020,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries API keys by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1081,7 +1090,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries API keys by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1151,7 +1160,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries API keys by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1170,7 +1179,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries API keys by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1189,7 +1198,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Queries the quota configurations of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1239,7 +1248,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Queries the quota configurations of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1289,7 +1298,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Queries the quota configurations of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1308,7 +1317,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Queries the quota configurations of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1336,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries a list of teams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1354,6 +1363,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plan))
+            {
+                query["plan"] = request.Plan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
             {
@@ -1385,7 +1398,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries a list of teams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1412,6 +1425,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plan))
+            {
+                query["plan"] = request.Plan;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
             {
@@ -1443,7 +1460,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries a list of teams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1462,7 +1479,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries a list of teams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1498,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1521,7 +1538,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1578,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1580,7 +1597,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1599,7 +1616,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1640,7 +1657,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1681,7 +1698,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1700,7 +1717,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1719,7 +1736,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1760,7 +1777,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1801,7 +1818,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1820,7 +1837,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the Quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1839,7 +1856,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1880,7 +1897,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1921,7 +1938,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1940,7 +1957,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">

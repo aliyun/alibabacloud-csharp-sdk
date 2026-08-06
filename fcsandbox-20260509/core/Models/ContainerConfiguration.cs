@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
-    public class CreateApiKeyRequest : TeaModel {
-        /// <summary>
-        /// <para>The template base structure.</para>
-        /// </summary>
-        [NameInMap("body")]
+    public class ContainerConfiguration : TeaModel {
+        [NameInMap("image")]
         [Validation(Required=false)]
-        public CreateApiKeyInput Body { get; set; }
+        public string Image { get; set; }
 
     }
 

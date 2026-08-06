@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("containerConfiguration")]
+        [Validation(Required=false)]
+        public ContainerConfiguration ContainerConfiguration { get; set; }
+
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("teamName")]
         [Validation(Required=false)]
         public string TeamName { get; set; }
+
+        [NameInMap("teamPlan")]
+        [Validation(Required=false)]
+        public string TeamPlan { get; set; }
 
         [NameInMap("templateID")]
         [Validation(Required=false)]
