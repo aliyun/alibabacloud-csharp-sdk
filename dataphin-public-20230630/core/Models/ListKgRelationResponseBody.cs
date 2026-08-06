@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListKgRelationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The backend exception details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -33,19 +39,30 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The paged query result.</para>
+        /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListKgRelationResponseBodyPageResult PageResult { get; set; }
         public class ListKgRelationResponseBodyPageResult : TeaModel {
+            /// <summary>
+            /// <para>The paged relationship record list.</para>
+            /// </summary>
             [NameInMap("RelationList")]
             [Validation(Required=false)]
             public List<ListKgRelationResponseBodyPageResultRelationList> RelationList { get; set; }
             public class ListKgRelationResponseBodyPageResultRelationList : TeaModel {
+                /// <summary>
+                /// <para>The relationship record property list.</para>
+                /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
                 public List<ListKgRelationResponseBodyPageResultRelationListPropertyList> PropertyList { get; set; }
                 public class ListKgRelationResponseBodyPageResultRelationListPropertyList : TeaModel {
                     /// <summary>
+                    /// <para>The property code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>company_name</para>
                     /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
+                    /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (boolean), DATE (date), LIST (list), and others.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>
                     /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DataType { get; set; }
 
                     /// <summary>
+                    /// <para>The property value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Alibaba</para>
                     /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
+                /// <para>The relationship record ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
                 /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationId { get; set; }
 
                 /// <summary>
+                /// <para>The relationship type code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BELONG_TO</para>
                 /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationType { get; set; }
 
                 /// <summary>
+                /// <para>The source entity ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
                 /// </summary>
@@ -96,6 +123,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceEntityId { get; set; }
 
                 /// <summary>
+                /// <para>The target entity ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abd-xxx</para>
                 /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>68</para>
             /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</para>
         /// </summary>
@@ -123,6 +156,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

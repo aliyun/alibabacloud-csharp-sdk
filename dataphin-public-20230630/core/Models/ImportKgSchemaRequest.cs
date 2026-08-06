@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ImportKgSchemaRequest : TeaModel {
         /// <summary>
+        /// <para>The instruction for importing the knowledge graph definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ImportKgSchemaRequestImportCommand ImportCommand { get; set; }
         public class ImportKgSchemaRequestImportCommand : TeaModel {
             /// <summary>
+            /// <para>The knowledge graph definition content converted based on the specified format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name:xxx</para>
             /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The format of the knowledge graph definition content. Valid values: json and yaml. Default value: yaml.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>yaml</para>
             /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputFormat { get; set; }
 
             /// <summary>
+            /// <para>The merge strategy for the knowledge graph definition content. Valid values: replace and merge. Default value: replace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>replace</para>
             /// </summary>
@@ -46,6 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

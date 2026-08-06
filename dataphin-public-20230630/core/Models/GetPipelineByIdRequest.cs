@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the integration pipeline task belongs.</para>
+            /// <para>The project ID to which the integration pipeline node belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID used to query the pipeline task.</para>
+        /// <para>The query ID used to query the pipeline node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QueryId")]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineByIdRequestQueryId QueryId { get; set; }
         public class GetPipelineByIdRequestQueryId : TeaModel {
             /// <summary>
-            /// <para>Supports querying by the integration task file ID (fileId).</para>
+            /// <para>The file ID of the integration node. You can use this parameter to query the pipeline node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>Supports querying by the integration task scheduling node ID (nodeId).</para>
+            /// <para>The scheduling node ID of the integration node. You can use this parameter to query the pipeline node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>Supports querying by the integration pipeline primary key (pipelineId).</para>
+            /// <para>The primary key ID of the integration pipeline. You can use this parameter to query the pipeline node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

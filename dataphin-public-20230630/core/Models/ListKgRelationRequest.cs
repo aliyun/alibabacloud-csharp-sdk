@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListKgRelationRequest : TeaModel {
+        /// <summary>
+        /// <para>The paged search filter conditions.</para>
+        /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListKgRelationRequestListQuery ListQuery { get; set; }
         public class ListKgRelationRequestListQuery : TeaModel {
             /// <summary>
+            /// <para>The page number. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNum { get; set; }
 
             /// <summary>
+            /// <para>The number of records per page. Default value: 20.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The source entity record ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e1d4559a4db044158305e2d89bccf81f</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SourceEntityId { get; set; }
 
             /// <summary>
+            /// <para>The target entity record ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e1d4559a4db044158305e2d89bccf82f</para>
             /// </summary>
@@ -48,6 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The relationship type code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RelationType { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

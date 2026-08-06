@@ -13839,7 +13839,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出知识图谱定义。</para>
+        /// <para>Exports knowledge graph metadata definitions. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13893,7 +13893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出知识图谱定义。</para>
+        /// <para>Exports knowledge graph metadata definitions. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13947,7 +13947,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出知识图谱定义。</para>
+        /// <para>Exports knowledge graph metadata definitions. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13965,7 +13965,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出知识图谱定义。</para>
+        /// <para>Exports knowledge graph metadata definitions. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20023,7 +20023,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱实体记录。</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20077,7 +20077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱实体记录。</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20131,7 +20131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱实体记录。</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20149,7 +20149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱实体记录。</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20167,7 +20167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型邻居节点。</para>
+        /// <para>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20233,7 +20233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型邻居节点。</para>
+        /// <para>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20299,7 +20299,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型邻居节点。</para>
+        /// <para>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20317,7 +20317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型邻居节点。</para>
+        /// <para>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20335,7 +20335,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱关系记录。</para>
+        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20389,7 +20389,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱关系记录。</para>
+        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20443,7 +20443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱关系记录。</para>
+        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20461,7 +20461,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识图谱关系记录。</para>
+        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20479,7 +20479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型发布结果。</para>
+        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20529,7 +20529,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型发布结果。</para>
+        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20579,7 +20579,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型发布结果。</para>
+        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20597,7 +20597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取图谱模型发布结果。</para>
+        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22751,7 +22751,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline task by pipeline task ID.</para>
+        /// <para>Queries a pipeline node by pipeline node ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22813,7 +22813,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline task by pipeline task ID.</para>
+        /// <para>Queries a pipeline node by pipeline node ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22875,7 +22875,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline task by pipeline task ID.</para>
+        /// <para>Queries a pipeline node by pipeline node ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22893,7 +22893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline task by pipeline task ID.</para>
+        /// <para>Queries a pipeline node by pipeline node ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29251,7 +29251,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入知识图谱定义。</para>
+        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29309,7 +29309,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入知识图谱定义。</para>
+        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29367,7 +29367,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入知识图谱定义。</para>
+        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29385,7 +29385,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入知识图谱定义。</para>
+        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30124,8 +30124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30184,8 +30183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30244,8 +30242,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -30268,8 +30265,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -33123,7 +33119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询知识图谱关系记录。</para>
+        /// <para>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33185,7 +33181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询知识图谱关系记录。</para>
+        /// <para>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33247,7 +33243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询知识图谱关系记录。</para>
+        /// <para>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33265,7 +33261,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询知识图谱关系记录。</para>
+        /// <para>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43279,20 +43275,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dataphin OpenAPI 模板。</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的数据集的详细信息。</description></item>
-        /// <item><description>必须提供 <c>ProjectId</c> 和 <c>UpdateCommand</c> 参数，其中 <c>UpdateCommand</c> 包含了需要更新的数据集的具体字段。</description></item>
-        /// <item><description><c>UpdateCommand</c> 中的 <c>Id</c> 字段是必需的，用来标识要更新的数据集。</description></item>
-        /// <item><description>其他字段如 <c>Name</c>, <c>Type</c>, <c>DataCellId</c> 等为可选项，根据实际需求选择性填写。</description></item>
-        /// <item><description>版本配置（<c>VersionConfig</c>）和实时元表配置（<c>RealtimeMetaTableConfig</c>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</description></item>
-        /// <item><description>注意确保所有提供的 ID 值（如 <c>ProjectId</c>, <c>Id</c>, <c>DataSourceId</c> 等）在系统中有效且正确关联。</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -43350,20 +43338,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dataphin OpenAPI 模板。</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的数据集的详细信息。</description></item>
-        /// <item><description>必须提供 <c>ProjectId</c> 和 <c>UpdateCommand</c> 参数，其中 <c>UpdateCommand</c> 包含了需要更新的数据集的具体字段。</description></item>
-        /// <item><description><c>UpdateCommand</c> 中的 <c>Id</c> 字段是必需的，用来标识要更新的数据集。</description></item>
-        /// <item><description>其他字段如 <c>Name</c>, <c>Type</c>, <c>DataCellId</c> 等为可选项，根据实际需求选择性填写。</description></item>
-        /// <item><description>版本配置（<c>VersionConfig</c>）和实时元表配置（<c>RealtimeMetaTableConfig</c>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</description></item>
-        /// <item><description>注意确保所有提供的 ID 值（如 <c>ProjectId</c>, <c>Id</c>, <c>DataSourceId</c> 等）在系统中有效且正确关联。</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -43421,20 +43401,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dataphin OpenAPI 模板。</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的数据集的详细信息。</description></item>
-        /// <item><description>必须提供 <c>ProjectId</c> 和 <c>UpdateCommand</c> 参数，其中 <c>UpdateCommand</c> 包含了需要更新的数据集的具体字段。</description></item>
-        /// <item><description><c>UpdateCommand</c> 中的 <c>Id</c> 字段是必需的，用来标识要更新的数据集。</description></item>
-        /// <item><description>其他字段如 <c>Name</c>, <c>Type</c>, <c>DataCellId</c> 等为可选项，根据实际需求选择性填写。</description></item>
-        /// <item><description>版本配置（<c>VersionConfig</c>）和实时元表配置（<c>RealtimeMetaTableConfig</c>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</description></item>
-        /// <item><description>注意确保所有提供的 ID 值（如 <c>ProjectId</c>, <c>Id</c>, <c>DataSourceId</c> 等）在系统中有效且正确关联。</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -43452,20 +43424,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dataphin OpenAPI 模板。</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该 API 用于更新特定项目下已存在的数据集的详细信息。</description></item>
-        /// <item><description>必须提供 <c>ProjectId</c> 和 <c>UpdateCommand</c> 参数，其中 <c>UpdateCommand</c> 包含了需要更新的数据集的具体字段。</description></item>
-        /// <item><description><c>UpdateCommand</c> 中的 <c>Id</c> 字段是必需的，用来标识要更新的数据集。</description></item>
-        /// <item><description>其他字段如 <c>Name</c>, <c>Type</c>, <c>DataCellId</c> 等为可选项，根据实际需求选择性填写。</description></item>
-        /// <item><description>版本配置（<c>VersionConfig</c>）和实时元表配置（<c>RealtimeMetaTableConfig</c>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</description></item>
-        /// <item><description>注意确保所有提供的 ID 值（如 <c>ProjectId</c>, <c>Id</c>, <c>DataSourceId</c> 等）在系统中有效且正确关联。</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">

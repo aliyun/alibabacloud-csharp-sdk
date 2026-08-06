@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID used to query the pipeline task.</para>
+        /// <para>The query ID used to query the pipeline node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QueryId")]

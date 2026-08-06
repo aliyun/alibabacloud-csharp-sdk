@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Invalid input parameter.</para>
+        /// <para>Invalid parameter.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// <para>The list of authorized fields for the API in the development environment.</para>
+                /// <para>The list of fields authorized for the API in the development environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedDevReturnParameters")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter data type.</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The list of authorized fields for the API in the production environment.</para>
+                /// <para>The list of fields authorized for the API in the production environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedProdReturnParameters")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter data type.</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
