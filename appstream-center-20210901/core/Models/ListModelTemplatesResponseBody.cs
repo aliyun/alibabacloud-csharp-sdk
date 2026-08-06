@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<ListModelTemplatesResponseBodyData> Data { get; set; }
         public class ListModelTemplatesResponseBodyData : TeaModel {
+            [NameInMap("AgentPlatform")]
+            [Validation(Required=false)]
+            public string AgentPlatform { get; set; }
+
             /// <summary>
             /// <para>The name of the Agent provider.</para>
             /// 
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether models have been configured in the group.</para>
+            /// <para>Specifies whether a model is configured in the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current query result.</para>
+        /// <para>The current page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the query result.</para>
+        /// <para>The number of query results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the query result.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

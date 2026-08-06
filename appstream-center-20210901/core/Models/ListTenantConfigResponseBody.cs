@@ -27,11 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ListTenantConfigResponseBodyTenantConfigModel TenantConfigModel { get; set; }
         public class ListTenantConfigResponseBodyTenantConfigModel : TeaModel {
             /// <summary>
-            /// <para>Indicates whether resource expiration reminders are enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Not enabled.</description></item>
-            /// </list>
+            /// <para>Indicates whether resource expiration reminders are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

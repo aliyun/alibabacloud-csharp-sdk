@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateAppInstanceGroupImageRequest : TeaModel {
         /// <summary>
-        /// <para>The application image ID. You can obtain this ID from the Image Management page in the WUYING Cloud Application console.</para>
+        /// <para>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

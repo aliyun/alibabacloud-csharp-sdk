@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SessionResolutionWidth { get; set; }
 
             /// <summary>
-            /// <para>The streaming mode. This parameter is used together with the Webrtc parameter to specify the protocol type.</para>
+            /// <para>The streaming mode. Used together with the Webrtc parameter to specify the protocol type.</para>
             /// <list type="bullet">
             /// <item><description>Webrtc=<c>true</c> and StreamingMode=<c>video</c>: WebRTC stream.</description></item>
             /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>video</c>: video stream.</description></item>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VisualQualityStrategy { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable WebRTC. This parameter is used together with the StreamingMode parameter to specify the protocol type.</para>
+            /// <para>Specifies whether to enable WebRTC. Used together with the StreamingMode parameter to specify the protocol type.</para>
             /// <list type="bullet">
             /// <item><description>Webrtc=<c>true</c> and StreamingMode=<c>video</c>: WebRTC stream.</description></item>
             /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>video</c>: video stream.</description></item>

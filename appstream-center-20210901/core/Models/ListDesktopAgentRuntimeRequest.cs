@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListDesktopAgentRuntimeRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Online</para>
+        /// </summary>
+        [NameInMap("AgentImOnlineStatus")]
+        [Validation(Required=false)]
+        public string AgentImOnlineStatus { get; set; }
+
+        /// <summary>
         /// <para>The list of agent instance statuses.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("AgentPlatformList")]
+        [Validation(Required=false)]
+        public List<string> AgentPlatformList { get; set; }
+
+        /// <summary>
         /// <para>The name of the agent provider.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +64,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("AgentProvider")]
         [Validation(Required=false)]
         public string AgentProvider { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OpenClaw</para>
+        /// </summary>
+        [NameInMap("AgentProviderList")]
+        [Validation(Required=false)]
+        public List<string> AgentProviderList { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>at-xxxxx</para>
+        /// </summary>
+        [NameInMap("AgentTemplateIds")]
+        [Validation(Required=false)]
+        public List<string> AgentTemplateIds { get; set; }
 
         /// <summary>
         /// <para>The list of authorized users.</para>
@@ -60,6 +92,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthUsers { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
+        /// <summary>
         /// <para>The business type.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +110,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the third-party channel is configured.</para>
+        /// <para>Specifies whether a third-party channel is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -110,7 +150,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopNames { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer statuses.</para>
+        /// <para>The list of Cloud Desktop statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -120,7 +160,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopStatuses { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether authorized users exist.</para>
+        /// <para>Specifies whether an authorized user exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasAuthUser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a risk exists. Used to filter cloud computers with or without risks. This parameter takes effect only when IncludeRiskInfo is set to true.</para>
+        /// <para>Specifies whether a risk exists. This parameter filters Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</para>
         /// <para>Set to true to return only records with risks. Set to false to return only records without risks. If not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
@@ -141,7 +181,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasRisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query and return risk information. Default value: false. When set to true, the response includes the RiskInfo field, and the HasRisk filter condition takes effect.</para>
+        /// <para>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -159,7 +199,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ManagementStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the model is configured.</para>
+        /// <para>Specifies whether a model is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -177,6 +217,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ModelTemplateId")]
         [Validation(Required=false)]
         public string ModelTemplateId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+dir-xxxx</para>
+        /// </summary>
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
 
         /// <summary>
         /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>

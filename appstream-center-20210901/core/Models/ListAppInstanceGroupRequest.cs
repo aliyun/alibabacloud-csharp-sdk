@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <c>Office App</c>, all delivery groups whose names contain <c>Office App</c> are returned, such as <c>My Office App</c> and <c>Office App A</c>.</para>
+        /// <para>The delivery group name. Fuzzy matching is used for the query. For example, if you set the delivery group name to <c>OfficeApp</c>, all delivery groups whose names contain <c>OfficeApp</c> are returned, such as <c>MyOfficeApp</c> and <c>OfficeAppA</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>办公应用</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> ExcludedUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The specification type ID of the purchased resources. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</para>
+        /// <para>The specification type ID of the purchased resource. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

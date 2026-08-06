@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPersistentAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the query results currently displayed.</para>
+        /// <para>The current page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

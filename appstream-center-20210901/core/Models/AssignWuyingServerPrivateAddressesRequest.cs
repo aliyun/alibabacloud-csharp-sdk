@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AssignWuyingServerPrivateAddressesRequest : TeaModel {
         /// <summary>
+        /// <para>The number of secondary private IP addresses to assign. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? SecondaryPrivateIpAddressCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the development host.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

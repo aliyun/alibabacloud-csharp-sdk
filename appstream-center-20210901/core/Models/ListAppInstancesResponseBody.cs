@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The billing method of the instance. Valid values:</para>
+            /// <para>The billing type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PrePaid</b>: subscription.</description></item>
-            /// <item><description><b>PostPaid</b>: pay-as-you-go.<remarks>
+            /// <item><description><b>PrePaid</b>: subscription (prepaid).</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go (postpaid).<remarks>
             /// <para>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// </description></item>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<c>StrategyType</c>) of the delivery group is set to the mixed pattern (<c>Mixed</c>). Otherwise, this value is empty.</para>
+            /// <para>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<c>StrategyType</c>) of the delivery group is set to mixed mode pattern (<c>Mixed</c>). Otherwise, this value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.13.13.211</para>

@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <list type="bullet">
         /// <item><description><para>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive periods or hyphens are not allowed.</para>
         /// </description></item>
-        /// <item><description><para>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
+        /// <item><description><para>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.). Consecutive hyphens are not allowed, and the hostname cannot be all digits. The hostname can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
         /// </description></item>
         /// <item><description><para>Linux workstations:</para>
         /// <list type="bullet">
@@ -125,17 +125,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// </description></item>
         /// <item><description><para>When you create multiple workstation instances at a time, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> format to assign sequential hostnames. For example, if you set HostName to <c>ecd-[1,4]-test</c>, the hostname of the first workstation is <c>ecd-0001-test</c>, the hostname of the second workstation is <c>ecd-0002-test</c>, and so on.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>name_prefix</c>: the prefix of the hostname.</para>
+        /// <item><description><para><c>name_prefix</c>: The prefix of the hostname.</para>
         /// </description></item>
-        /// <item><description><para><c>[begin_number,bits]</c>: the sequential number in the hostname.</para>
+        /// <item><description><para><c>[begin_number,bits]</c>: The sequential number in the hostname.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>begin_number</c>: the starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, 0 is used.</para>
+        /// <item><description><para><c>begin_number</c>: The starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, it is set to 0.</para>
         /// </description></item>
-        /// <item><description><para><c>bits</c>: the number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, 6 is used.</para>
+        /// <item><description><para><c>bits</c>: The number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, it is set to 6.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>name_suffix</c>: the suffix of the hostname.</para>
+        /// <item><description><para><c>name_suffix</c>: The suffix of the hostname.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The network policy type (in invitational preview).</para>
+        /// <para>The network policy type (invite-only preview).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DirectIp</para>
@@ -223,9 +223,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The discount ID.</para>
         /// <remarks>
-        /// <para>If PromotionId is specified, the corresponding discount is applied.</para>
+        /// <para>If PromotionId is specified, the system attempts to apply the corresponding discount.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

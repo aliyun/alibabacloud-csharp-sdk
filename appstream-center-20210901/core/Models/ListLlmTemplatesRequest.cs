@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

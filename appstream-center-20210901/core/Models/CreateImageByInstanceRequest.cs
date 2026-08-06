@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is applicable only when the instance type is cloud desktop. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</para>
+        /// <para>This parameter applies only to Cloud Desktop instances. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</para>
+        /// <para>The type of disk data included in the image. By default, both the system cloud disk and data cloud disk of the instance are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</para>
+        /// <para>The WUYING instance ID. The instance can be a Cloud Desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0buj1s9gm******</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
+        /// <para>The sub-instance ID. This parameter does not apply to Cloud Desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3n1l*****</para>

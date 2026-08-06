@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to set this model as the default model. Each model group can have at most one default model.</para>
+            /// <para>Specifies whether to set the model as the default model. A model group can have at most one default model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

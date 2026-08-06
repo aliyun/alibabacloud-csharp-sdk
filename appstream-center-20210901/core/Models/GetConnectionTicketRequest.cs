@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The access type. If you do not specify this parameter, both types are displayed. Valid values:</para>
+        /// <para>The access type. If you do not specify this parameter, both types are displayed.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>INTERNET: Internet access.</description></item>
         /// <item><description>VPC: Express Connect access.</description></item>
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation and startup parameters</a>.</para>
+        /// <para>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/q /n</para>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <remarks>
-        /// <para>This request parameter is required for non-initial invokes. Use this parameter to check the task status and connection credentials.</para>
+        /// <para>This parameter is required for non-initial calls. Use this parameter to query the task status and connection credentials.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

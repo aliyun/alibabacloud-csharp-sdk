@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code:</para>
+        /// <para>The status code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>200</c>: Success.</description></item>
         /// <item><description><c>400</c>: Error.</description></item>
@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful.</para>
+        /// <para>Indicates whether the deletion is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Deletion succeeded.</description></item>
+        /// <item><description>false: Deletion failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

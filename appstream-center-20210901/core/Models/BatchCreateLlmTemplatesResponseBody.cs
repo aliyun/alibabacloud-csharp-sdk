@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public BatchCreateLlmTemplatesResponseBodyData Data { get; set; }
         public class BatchCreateLlmTemplatesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of IDs of the model templates that are created.</para>
+            /// <para>The list of successfully created model template IDs.</para>
             /// </summary>
             [NameInMap("LlmTemplateIds")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<BatchCreateLlmTemplatesResponseBodyDataSkippedItems> SkippedItems { get; set; }
             public class BatchCreateLlmTemplatesResponseBodyDataSkippedItems : TeaModel {
                 /// <summary>
-                /// <para>The model code that is skipped.</para>
+                /// <para>The model code that was skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen3.5-plus</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string LlmCode { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the model is skipped.</para>
+                /// <para>The reason why the item was skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LLM template already exists with same providerTemplateId and llmCode.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The number of model templates that are created.</para>
+            /// <para>The number of successfully created items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

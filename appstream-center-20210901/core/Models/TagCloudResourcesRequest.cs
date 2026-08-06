@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
+        /// <para>The list of resource IDs. A maximum of 50 IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <item><description><para>System tag enumeration values:</para>
         /// <list type="bullet">
         /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag</description></item>
-        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents new user connections from being established for the delivery group</description></item>
+        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users in a delivery group from establishing connections</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Custom tags: A maximum of 20 custom tags can be created.</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<TagCloudResourcesRequestTags> Tags { get; set; }
         public class TagCloudResourcesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key. This parameter is case-sensitive. The tag key must be 1 to 128 characters in length.</para>
+            /// <para>The tag key. Tags are case-sensitive. The key must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. This parameter is case-sensitive. The tag value must be 1 to 128 characters in length.</para>
+            /// <para>The tag value. Tags are case-sensitive. The value must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

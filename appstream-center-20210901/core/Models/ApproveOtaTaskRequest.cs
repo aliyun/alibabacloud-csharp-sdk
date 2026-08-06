@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ApproveOtaTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
+        /// <para>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The over-the-air upgrade task type.</para>
+        /// <para>The OTA upgrade task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the over-the-air upgrade task. Specify the time in ISO 8601 format.</para>
+        /// <para>The start time of the OTA upgrade task. Specify the time in ISO 8601 format.</para>
         /// <para>This parameter is required.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The over-the-air upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
+        /// <para>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain this value.</para>
         /// <remarks>
-        /// <para>Each successful call of <c>ApproveOtaTask</c> causes the <c>TaskId</c> to change. Therefore, before calling this operation again, call <c>ListAppInstanceGroup</c> again to obtain the latest <c>TaskId</c>.</para>
+        /// <para>Each successful call to <c>ApproveOtaTask</c> causes the <c>TaskId</c> to change. Therefore, before calling this operation again, call <c>ListAppInstanceGroup</c> again to obtain the latest <c>TaskId</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

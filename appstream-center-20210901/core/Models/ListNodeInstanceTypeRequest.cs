@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// <para>The number of CPU cores.</para>
         /// 
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud desktops. Unit: MB.</para>
+        /// <para>The GPU memory size. This parameter is meaningful for GPU-accelerated cloud desktops. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>The resource specification type to query. If you leave this parameter empty, all specification types are returned.</para>
+        /// <para>The resource specification type to query. If this parameter is not specified, all specification types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodeInstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>CPU/Memory.</para>
+        /// <para>CPU/Memory</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>DESC/ASC.</para>
+        /// <para>DESC/ASC</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>

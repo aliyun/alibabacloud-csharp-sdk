@@ -17,18 +17,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<GetRuntimeChannelResponseBodyData> Data { get; set; }
         public class GetRuntimeChannelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the channel avatar.</para>
+            /// <para>The channel avatar URL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://test.com/test.jpg">https://test.com/test.jpg</a></para>
             /// </summary>
             [NameInMap("AvatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
             /// <summary>
-            /// <para>The channel type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>System: a channel supported by the system.</description></item>
-            /// <item><description>Custom: a custom channel.</description></item>
-            /// </list>
+            /// <para>The channel type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>System</para>
             /// </summary>
             [NameInMap("ChannelType")]
             [Validation(Required=false)]
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The channel configuration JSON string.</para>
-            /// <para>Currently, only the simple configuration mode is supported. You must pass the AppKey and AppSecret parameters.</para>
+            /// <para>Currently, only the simple configuration mode is supported. You must pass AppKey and AppSecret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -59,32 +61,37 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The configuration mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Simple: simple configuration mode.</description></item>
-            /// <item><description>Custom: custom configuration mode.</description></item>
-            /// </list>
+            /// <para>The configuration mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Simple</para>
             /// </summary>
             [NameInMap("ConfigMode")]
             [Validation(Required=false)]
             public string ConfigMode { get; set; }
 
             /// <summary>
-            /// <para>The URL of the QR code configuration notification page. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</para>
+            /// <para>The QR code configuration notification page URL (returned only for ENTERPRISE/ENTERPRISE_JVS platforms).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></para>
             /// </summary>
             [NameInMap("QrCodeNotifyUrl")]
             [Validation(Required=false)]
             public string QrCodeNotifyUrl { get; set; }
 
             /// <summary>
-            /// <para>The QR code configuration status. This parameter is returned only when the status is not in a final state.</para>
+            /// <para>The QR code configuration status (returned only when not in a desired state).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58">https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58</a></para>
             /// </summary>
             [NameInMap("QrCodeStatus")]
             [Validation(Required=false)]
             public string QrCodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The risk type. This parameter is returned only when <b>includeRiskInfo=true</b>.</para>
+            /// <para>The risk type (returned only when <b>includeRiskInfo=true</b>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -116,7 +123,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

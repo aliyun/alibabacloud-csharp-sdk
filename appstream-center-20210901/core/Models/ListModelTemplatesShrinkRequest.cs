@@ -20,8 +20,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("AgentPlatformList")]
+        [Validation(Required=false)]
+        public List<string> AgentPlatformList { get; set; }
+
+        /// <summary>
         /// <para>The name of the Agent provider.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenClaw</para>
@@ -29,6 +36,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("AgentProvider")]
         [Validation(Required=false)]
         public string AgentProvider { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OpenClaw</para>
+        /// </summary>
+        [NameInMap("AgentProviderList")]
+        [Validation(Required=false)]
+        public List<string> AgentProviderList { get; set; }
 
         /// <summary>
         /// <para>The business type.</para>
@@ -42,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether models have been configured in the group.</para>
+        /// <para>Specifies whether a model is configured in the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

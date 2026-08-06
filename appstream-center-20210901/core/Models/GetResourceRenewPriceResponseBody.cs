@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount amount. The actual price is calculated by subtracting the discount amount from the original price.</para>
+                /// <para>The discount amount. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price is calculated by subtracting the discount amount from the original price.</para>
+                /// <para>The actual price. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>

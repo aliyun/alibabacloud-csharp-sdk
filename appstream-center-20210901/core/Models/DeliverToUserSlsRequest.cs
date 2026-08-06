@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeliverToUserSlsRequest : TeaModel {
         /// <summary>
-        /// <para>List of delivery scopes</para>
+        /// <para>The list of delivery scopes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<DeliverToUserSlsRequestDeliveryScopes> DeliveryScopes { get; set; }
         public class DeliverToUserSlsRequestDeliveryScopes : TeaModel {
             /// <summary>
-            /// <para>product type</para>
+            /// <para>The product type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>Existing Simple Log Service project name; either this or ProjectName is required</para>
+        /// <para>The name of an existing SLS project. Either this parameter or ProjectName must be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic-desktop-xxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExistedProjectName { get; set; }
 
         /// <summary>
-        /// <para>LogStore name</para>
+        /// <para>The LogStore name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic_desktop_xxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>Simple Log Service project name; either this or ExistedProjectName is required</para>
+        /// <para>The SLS project name. Either this parameter or ExistedProjectName must be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic-desktop-xxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Region ID of Simple Log Service</para>
+        /// <para>The region ID of the SLS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SlsRegionId { get; set; }
 
         /// <summary>
-        /// <para>Data retention period (Day), default 30</para>
+        /// <para>The data retention period in days. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

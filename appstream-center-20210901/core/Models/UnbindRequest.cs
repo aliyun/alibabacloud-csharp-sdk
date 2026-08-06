@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UnbindRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</para>
+        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</para>
+        /// <para>The session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-d297eyf83g5ni****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The persistent session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</para>
+        /// <para>The persistent session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0bxls9m3cl7s****</para>

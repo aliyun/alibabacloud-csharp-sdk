@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default model in the associated model group.</para>
+            /// <para>Indicates whether this is the default model under the associated model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The page number of the current query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

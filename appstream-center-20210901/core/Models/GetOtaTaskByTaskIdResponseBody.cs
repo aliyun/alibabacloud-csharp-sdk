@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaVersion { get; set; }
 
         /// <summary>
-        /// <para>The version description that describes the content of the over-the-air update.</para>
+        /// <para>The release note that describes the content of the over-the-air update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试升级</para>

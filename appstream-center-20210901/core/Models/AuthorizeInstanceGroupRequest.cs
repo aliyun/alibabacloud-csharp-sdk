@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the value.</para>
+        /// <para>交付群組 ID。可呼叫 <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> 介面取得。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The persistent session ID.</para>
+        /// <para>持續性工作階段 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3mw2fg4j****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
-        /// <para>The list of user group IDs to be authorized.</para>
+        /// <para>授權使用者群組 ID 清單。</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -41,16 +41,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames to be authorized for the delivery group. You can specify 1 to 100 usernames.</para>
+        /// <para>要新增交付群組授權的使用者名稱清單。可設定 1\~100 個。</para>
         /// </summary>
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// <para>The user avatar ID.</para>
+        /// <para>使用者分身 ID。</para>
         /// <remarks>
-        /// <para>This parameter is not available for public use.</para>
+        /// <para>此參數未開放使用。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AvatarId { get; set; }
 
         /// <summary>
-        /// <para>The product type.</para>
+        /// <para>產品類型。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The list of user group IDs to be deauthorized.</para>
+        /// <para>取消授權使用者群組 ID 清單。</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -82,21 +82,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UnAuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames to be deauthorized from the delivery group. You can specify 1 to 100 usernames.</para>
+        /// <para>要移除交付群組授權的使用者名稱清單。可設定 1\~100 個。</para>
         /// </summary>
         [NameInMap("UnAuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> UnAuthorizeUserIds { get; set; }
 
         /// <summary>
-        /// <para>The user information.</para>
+        /// <para>使用者資訊。</para>
         /// </summary>
         [NameInMap("UserMeta")]
         [Validation(Required=false)]
         public AuthorizeInstanceGroupRequestUserMeta UserMeta { get; set; }
         public class AuthorizeInstanceGroupRequestUserMeta : TeaModel {
             /// <summary>
-            /// <para>The AD domain name.</para>
+            /// <para>AD 網域名稱。</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AdDomain { get; set; }
 
             /// <summary>
-            /// <para>The user type.</para>
+            /// <para>使用者類型。</para>
             /// 
             /// <b>Example:</b>
             /// <para>simple</para>

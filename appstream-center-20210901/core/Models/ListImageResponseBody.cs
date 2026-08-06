@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageIconUrl { get; set; }
 
             /// <summary>
-            /// <para>The image ID. System image IDs are meaningful, while custom image IDs are automatically generated.</para>
+            /// <para>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-xxxx</para>
@@ -244,14 +244,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The effective region information for overlay layers.</para>
+            /// <para>The overlay effective region information.</para>
             /// </summary>
             [NameInMap("ImageRegionDistributeList")]
             [Validation(Required=false)]
             public List<ListImageResponseBodyDataImageRegionDistributeList> ImageRegionDistributeList { get; set; }
             public class ListImageResponseBodyDataImageRegionDistributeList : TeaModel {
                 /// <summary>
-                /// <para>The image ID. System image IDs are meaningful, while custom image IDs are automatically generated.</para>
+                /// <para>The image ID. System image IDs are meaningful, while custom image IDs are auto-generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>imgc-xxx</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The image language. If the package type is VHD or Container, this property is inherited from the ECS-packaged image in the image combination.</para>
+            /// <para>The image language. If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? OnlineVersion { get; set; }
 
             /// <summary>
-            /// <para>The sub-version from which the current image reads the primary image information. An image consists of multiple sub-versions.</para>
+            /// <para>The sub-version from which the current image reads the main image information. An image consists of multiple sub-versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-xxxx</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The parent image ID. This parameter indicates only the inheritance relationship. System images do not have a parent image.</para>
+            /// <para>The parent image ID. This only indicates the inheritance relationship. System images have no parent image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-xxx</para>
@@ -400,9 +400,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ParentImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The operating system platform of the image.</para>
+            /// <para>The image operating system platform.</para>
             /// <remarks>
-            /// <para>If the package type is VHD or Container, this property is inherited from the ECS-packaged image in the image combination.</para>
+            /// <para>If the package type is VHD/Container, this property is inherited from the ECS package type image in the image combination.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -585,7 +585,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VersionName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cloud disk encryption is enabled.</para>
+            /// <para>Indicates whether disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -595,7 +595,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The KMS key ID used when cloud disk encryption is enabled.</para>
+            /// <para>The KMS key ID used when disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7b3c0c8-xxxx</para>

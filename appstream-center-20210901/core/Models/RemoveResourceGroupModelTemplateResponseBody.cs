@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<RemoveResourceGroupModelTemplateResponseBodyData> Data { get; set; }
         public class RemoveResourceGroupModelTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned if the operation fails.</para>
+            /// <para>The error code returned when the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidParameter.resourceGroupIds</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the operation fails.</para>
+            /// <para>The error message returned when the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The parameter resourceGroupIds is invalid.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the execution is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

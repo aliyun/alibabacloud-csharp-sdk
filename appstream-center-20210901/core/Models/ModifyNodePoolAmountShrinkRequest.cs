@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The node pool specification change parameters.</para>
+        /// <para>The parameters for node pool specification changes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodePool")]

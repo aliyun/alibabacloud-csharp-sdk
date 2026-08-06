@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodePoolShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow only one application per session.</para>
+        /// <para>Specifies whether only one application can be opened per session.</para>
         /// <list type="bullet">
-        /// <item><description>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, consuming more sessions.</description></item>
+        /// <item><description>If enabled, opening multiple applications within the delivery group allocates a separate session for each application, consuming more sessions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? PerSessionPerApp { get; set; }
 
         /// <summary>
-        /// <para>The AppId of the pre-open application. If the PreOpenMode parameter is set to <c>SINGLE_APP</c>, PreOpenAppId cannot be an empty string.</para>
+        /// <para>The AppId of the pre-open application. If the <c>PreOpenMode</c> parameter is set to <c>SINGLE_APP</c>, the <c>PreOpenAppId</c> parameter cannot be an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-b2ronxxd****</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
+        /// <para>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

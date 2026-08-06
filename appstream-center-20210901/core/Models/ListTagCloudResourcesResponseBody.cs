@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that determines whether the next query exists based on the NextToken value.</para>
+        /// <para>The pagination token that indicates whether more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags bound to the resources.</para>
+        /// <para>The list of tags bound to resources.</para>
         /// </summary>
         [NameInMap("ResourceTags")]
         [Validation(Required=false)]

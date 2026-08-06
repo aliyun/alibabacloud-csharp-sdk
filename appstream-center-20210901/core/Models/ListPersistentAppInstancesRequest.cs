@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstancePersistentIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query results to display. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the query results to display. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of query results per page. The maximum value is <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

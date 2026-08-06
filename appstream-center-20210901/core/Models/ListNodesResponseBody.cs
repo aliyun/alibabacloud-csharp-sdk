@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries that can be returned.</para>
+        /// <para>The total number of data entries that can be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The billing type of the resource node.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The resource node ID.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

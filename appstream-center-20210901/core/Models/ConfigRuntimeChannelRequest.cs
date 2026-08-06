@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ConfigRuntimeChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform (such as ENTERPRISE or JVS).</para>
+        /// <para>The Agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The Agent provider.</para>
+        /// <list type="bullet">
+        /// <item><description>JVS Computer: set to OpenClaw.</description></item>
+        /// <item><description>OpenClaw: set to OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: set to HermesAgent.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,6 +48,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The channel configuration JSON string.</para>
+        /// <list type="bullet">
+        /// <item><description>Simple configuration mode example:</description></item>
+        /// </list>
+        /// <pre><code class="language-json">{
+        ///     &quot;appKey&quot;: &quot;abc&quot;,
+        ///     &quot;appSecret&quot;: &quot;efg&quot;
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Custom configuration mode example:</description></item>
+        /// </list>
+        /// <pre><code class="language-json">{
+        ///   &quot;enabled&quot;: true,
+        ///   &quot;clientId&quot;: &quot;xxx&quot;,
+        ///   &quot;clientSecret&quot;: &quot;xxx&quot;
+        /// }
+        /// </c></pre>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

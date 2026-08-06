@@ -17,14 +17,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListDesktopAgentRuntimeResponseBodyData> Data { get; set; }
         public class ListDesktopAgentRuntimeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent IM information.</para>
+            /// <para>The Agent IM information.</para>
             /// </summary>
             [NameInMap("AgentImInfo")]
             [Validation(Required=false)]
             public ListDesktopAgentRuntimeResponseBodyDataAgentImInfo AgentImInfo { get; set; }
             public class ListDesktopAgentRuntimeResponseBodyDataAgentImInfo : TeaModel {
+                [NameInMap("AgentImOnlineStatus")]
+                [Validation(Required=false)]
+                public string AgentImOnlineStatus { get; set; }
+
                 /// <summary>
-                /// <para>The agent IM status.</para>
+                /// <para>The Agent IM status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AgentProvider { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent instance has a configured third-party channel.</para>
+                /// <para>Indicates whether the agent instance has a third-party channel configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -108,7 +112,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DeploymentSource { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent instance has a configured model.</para>
+                /// <para>Indicates whether the agent instance has a model configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<string> AuthUsers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the agent runtime has a configured third-party channel.</para>
+            /// <para>Indicates whether the agent runtime has a third-party channel configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -174,7 +178,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer status.</para>
+            /// <para>The Cloud Desktop status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -184,7 +188,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether authorized users exist.</para>
+            /// <para>Specifies whether an authorized user exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -198,7 +202,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<string> ManagementStatuses { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the agent runtime has a configured model.</para>
+            /// <para>Indicates whether the agent runtime has a model configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -208,7 +212,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? ModelConfigure { get; set; }
 
             /// <summary>
-            /// <para>The effective model template ID (returned only when modelConfigure=true).</para>
+            /// <para>The effective model template ID. Returned only when modelConfigure is true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt-xxxx</para>
@@ -218,7 +222,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The effective model template name (returned only when modelConfigure=true).</para>
+            /// <para>The effective model template name. Returned only when modelConfigure is true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-template-001</para>
@@ -238,7 +242,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The list of channels in QR code configuration.</para>
+            /// <para>The list of channel codes being configured through QR code scanning.</para>
             /// </summary>
             [NameInMap("QrCodeConfiguringList")]
             [Validation(Required=false)]
@@ -255,7 +259,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region location (domestic/overseas).</para>
+            /// <para>The region location (the Chinese mainland or outside China).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mainland</para>
@@ -294,7 +298,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The resource ID, which is the cloud computer ID.</para>
+            /// <para>The resource ID, which is the Cloud Desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-xxxx</para>
@@ -304,14 +308,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The risk information (returned only when the request parameter IncludeRiskInfo is set to true, otherwise null).</para>
+            /// <para>The risk information. Returned only when the request parameter IncludeRiskInfo is set to true. Otherwise, the value is null.</para>
             /// </summary>
             [NameInMap("RiskInfo")]
             [Validation(Required=false)]
             public ListDesktopAgentRuntimeResponseBodyDataRiskInfo RiskInfo { get; set; }
             public class ListDesktopAgentRuntimeResponseBodyDataRiskInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the agent is uninstalled.</para>
+                /// <para>Indicates whether the agent has been uninstalled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -321,7 +325,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? AgentUninstalled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the third-party channel configuration is modified (inconsistent with the admin-distributed configuration).</para>
+                /// <para>Indicates whether the third-party channel configuration has been modified (inconsistent with the administrator-distributed configuration).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -331,7 +335,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? ChannelModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model configuration is modified (inconsistent with the admin-distributed configuration).</para>
+                /// <para>Indicates whether the model configuration has been modified (inconsistent with the administrator-distributed configuration).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

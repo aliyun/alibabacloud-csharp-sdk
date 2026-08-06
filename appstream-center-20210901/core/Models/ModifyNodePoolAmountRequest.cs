@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The node pool specification change parameters.</para>
+        /// <para>The parameters for node pool specification changes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodePool")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The modification mode for subscription nodes.</para>
+            /// <para>The subscription node modification mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXPAND_FROM_POST_PAID_EXPLICIT</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PrePaidNodeAmountModifyMode { get; set; }
 
             /// <summary>
-            /// <para>The list of nodes whose billing type is to be changed.</para>
+            /// <para>The list of nodes whose billing type is to be modified.</para>
             /// </summary>
             [NameInMap("PrePaidNodeAmountModifyNodeIds")]
             [Validation(Required=false)]

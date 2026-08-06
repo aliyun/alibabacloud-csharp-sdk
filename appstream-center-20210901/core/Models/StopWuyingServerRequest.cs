@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>Specifies whether to forcibly restart the workstation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: forcibly restart</description></item>
-        /// <item><description>False: do not forcibly restart.</description></item>
+        /// <item><description>True: forcibly</description></item>
+        /// <item><description>False: not forcibly</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the model provider to filter by.</para>
+        /// <para>The model provider name to filter by.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bailian</para>

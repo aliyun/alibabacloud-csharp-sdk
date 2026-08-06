@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListWuyingServerResponseBodyWuyingServerList> WuyingServerList { get; set; }
         public class ListWuyingServerResponseBodyWuyingServerList : TeaModel {
             /// <summary>
-            /// <para>The status of joining a virtual node pool.</para>
+            /// <para>The status of joining the virtual node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Added</para>
@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AddVirtualNodePoolStatus { get; set; }
 
             /// <summary>
+            /// <para>The tenant UID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890123456</para>
             /// </summary>
@@ -75,6 +77,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? AliUid { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth size. Unit: Mbit/s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -130,6 +134,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskCategory { get; set; }
 
                 /// <summary>
+                /// <para>The data cloud disk ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>d-bp1234567890abcde</para>
                 /// </summary>
@@ -138,6 +144,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskId { get; set; }
 
                 /// <summary>
+                /// <para>The data cloud disk sequence number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -146,7 +154,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskNo { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the data cloud disk.</para>
+                /// <para>The data cloud disk performance level (PL).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -168,6 +176,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
+            /// <para>The maximum number of private IP addresses per ENI, including the primary IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -186,6 +196,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
+            /// <para>The FOTA version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
             /// </summary>
@@ -207,7 +219,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Linux 3.2104 LTS 64位</para>
+            /// <para>Alibaba Cloud Linux 3.2104 LTS 64-bit.</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
@@ -243,6 +255,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
+            /// <para>The maximum price for the spot instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -300,15 +314,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string OsType { get; set; }
 
+            /// <summary>
+            /// <para>The list of policy group IDs.</para>
+            /// </summary>
             [NameInMap("PolicyGroupIdList")]
             [Validation(Required=false)]
             public List<string> PolicyGroupIdList { get; set; }
 
+            /// <summary>
+            /// <para>The set of private IP addresses, including the primary and secondary IP addresses.</para>
+            /// </summary>
             [NameInMap("PrivateIpSets")]
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> PrivateIpSets { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether this is the primary private IP address. A value of true indicates the primary private IP address. A value of false indicates a secondary private IP address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -317,6 +339,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? Primary { get; set; }
 
                 /// <summary>
+                /// <para>The private IP address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.1</para>
                 /// </summary>
@@ -327,6 +351,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
+            /// <para>The resource session status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Connected</para>
             /// </summary>
@@ -379,6 +405,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? GpuMemory { get; set; }
 
                 /// <summary>
+                /// <para>The GPU specification description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NVIDIA T4</para>
                 /// </summary>
@@ -408,11 +436,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of sessions.</para>
+            /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListSessions> Sessions { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListSessions : TeaModel {
                 /// <summary>
+                /// <para>The session start time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T08:00:00Z</para>
                 /// </summary>
@@ -421,6 +454,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ResourceSessionStartTime { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user1</para>
                 /// </summary>
@@ -441,6 +476,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The sub-payment type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>spot</para>
             /// </summary>
@@ -459,6 +496,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
+            /// <para>The system cloud disk ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>d-bp1234567890abcde</para>
             /// </summary>
@@ -467,7 +506,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the system cloud disk.</para>
+            /// <para>The system cloud disk performance level (PL).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -487,6 +526,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
+            /// <para>The scheduled task group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tg-bp1234567890abcde</para>
             /// </summary>
@@ -494,11 +535,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The list of authorized users.</para>
+            /// </summary>
             [NameInMap("Users")]
             [Validation(Required=false)]
             public List<string> Users { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the Virtual Kubelet node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.0.0.100</para>
             /// </summary>
@@ -516,11 +562,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string VirtualNodePoolId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether a Virtual Kubelet upgrade is required.</para>
+            /// </summary>
             [NameInMap("VkUpgradeNeeded")]
             [Validation(Required=false)]
             public bool? VkUpgradeNeeded { get; set; }
 
             /// <summary>
+            /// <para>The Virtual Kubelet version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
             /// </summary>
@@ -547,6 +598,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("WuyingServerName")]
             [Validation(Required=false)]
             public string WuyingServerName { get; set; }
+
+            /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-h</para>
+            /// </summary>
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
 
         }
 

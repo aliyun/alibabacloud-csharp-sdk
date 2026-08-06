@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelTemplateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the model group.</para>
+        /// <para>The model group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Both 0 and 1 return the same result.</para>
+        /// <para>The page number. Pages start from page 1. The values 0 and 1 return the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

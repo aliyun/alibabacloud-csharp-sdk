@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListImageRequest : TeaModel {
         /// <summary>
-        /// <para>The list of supported regions.
-        /// WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</para>
+        /// <para>The list of supported regions. WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</para>
         /// </summary>
         [NameInMap("BizRegionIdList")]
         [Validation(Required=false)]
@@ -116,7 +115,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -207,7 +206,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListImageRequestTagList> TagList { get; set; }
         public class ListImageRequestTagList : TeaModel {
             /// <summary>
-            /// <para>The custom tag key.</para>
+            /// <para>The user-defined tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -217,7 +216,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The custom tag value.</para>
+            /// <para>The user-defined tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

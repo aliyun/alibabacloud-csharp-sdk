@@ -51,28 +51,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The list of model features, such as function-calling, web-search, and structured-outputs.</para>
+                    /// <para>The list of model features (such as function-calling, web-search, and structured-outputs).</para>
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]
                     public List<string> Features { get; set; }
 
                     /// <summary>
-                    /// <para>The inference metadata, including request and response modalities.</para>
+                    /// <para>The inference metadata (request and response modalities).</para>
                     /// </summary>
                     [NameInMap("InferenceMetadata")]
                     [Validation(Required=false)]
                     public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata InferenceMetadata { get; set; }
                     public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata : TeaModel {
                         /// <summary>
-                        /// <para>The list of request modalities, such as Text, Image, and Audio.</para>
+                        /// <para>The list of request modalities (such as Text, Image, and Audio).</para>
                         /// </summary>
                         [NameInMap("RequestModality")]
                         [Validation(Required=false)]
                         public List<string> RequestModality { get; set; }
 
                         /// <summary>
-                        /// <para>The list of response modalities, such as Text, Image, and Audio.</para>
+                        /// <para>The list of response modalities (such as Text, Image, and Audio).</para>
                         /// </summary>
                         [NameInMap("ResponseModality")]
                         [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The publish time in ISO 8601 format.</para>
+                    /// <para>The published time (ISO 8601 format).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-04T06:25:17.000+00:00</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string PublishedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The model risk type. This parameter is returned only when the request parameter IncludeRiskInfo is set to true.</para>
+                    /// <para>The model risk type (returned only when the request parameter IncludeRiskInfo is set to true).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateRefType { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID to which the runtime belongs. The value is null if the runtime is not associated with a resource group.</para>
+            /// <para>The resource group ID of the runtime (null if not assigned to a resource group).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxx</para>

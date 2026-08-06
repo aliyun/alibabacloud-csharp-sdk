@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为研发主机分配辅助私有IP</para>
+        /// <para>Assigns secondary private IP addresses to a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为研发主机分配辅助私有IP</para>
+        /// <para>Assigns secondary private IP addresses to a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为研发主机分配辅助私有IP</para>
+        /// <para>Assigns secondary private IP addresses to a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为研发主机分配辅助私有IP</para>
+        /// <para>Assigns secondary private IP addresses to a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -324,13 +324,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</para>
+        /// <para>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</para>
+        /// <para>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</para>
         /// </remarks>
         /// </description>
         /// 
@@ -417,13 +417,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</para>
+        /// <para>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</para>
+        /// <para>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</para>
         /// </remarks>
         /// </description>
         /// 
@@ -510,13 +510,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</para>
+        /// <para>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</para>
+        /// <para>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</para>
         /// </remarks>
         /// </description>
         /// 
@@ -535,13 +535,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</para>
+        /// <para>為交付群組新增或移除指派使用者。只有新增至指派使用者的使用者才可存取雲端應用程式。</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</para>
+        /// <para>變更指派使用者後，選取的使用者將收到相應的通知電子郵件。一般需要等待約 2 分鐘，變更才會在終端機生效。</para>
         /// </remarks>
         /// </description>
         /// 
@@ -565,8 +565,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can batch create model templates under a model provider template in the Wuying Agent Management Center. Multiple models can be added at a time, and one of them can be specified as the default model. Existing models are automatically skipped and not created again.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -621,8 +621,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can batch create model templates under a model provider template in the Wuying Agent Management Center. Multiple models can be added at a time, and one of them can be specified as the default model. Existing models are automatically skipped and not created again.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -677,8 +677,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can batch create model templates under a model provider template in the Wuying Agent Management Center. Multiple models can be added at a time, and one of them can be specified as the default model. Existing models are automatically skipped and not created again.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -701,8 +701,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can batch create model templates under a model provider template in the Wuying Agent Management Center. Multiple models can be added at a time, and one of them can be specified as the default model. Existing models are automatically skipped and not created again.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -725,9 +725,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+        /// <para>You can assign a model group to the resources that belong to agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for agents within the resource group to execute tasks.
         /// When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -778,9 +778,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+        /// <para>You can assign a model group to the resources that belong to agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for agents within the resource group to execute tasks.
         /// When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -831,9 +831,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+        /// <para>You can assign a model group to the resources that belong to agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for agents within the resource group to execute tasks.
         /// When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -856,9 +856,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+        /// <para>You can assign a model group to the resources that belong to agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for agents within the resource group to execute tasks.
         /// When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -882,7 +882,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
-        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -958,7 +958,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
-        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1034,7 +1034,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
-        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1058,7 +1058,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
-        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1082,7 +1082,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1138,7 +1138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1194,7 +1194,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1218,7 +1218,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1241,8 +1241,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
-        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
+        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
+        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1433,8 +1433,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
-        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
+        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
+        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1625,8 +1625,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
-        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
+        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
+        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1649,8 +1649,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
-        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
+        /// <para>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and pricing</a> of WUYING CloudApp before you call this operation.
+        /// A delivery group is a logical grouping for delivering cloud applications to end users. It includes underlying cloud application resources, images that contain cloud applications, resource management policies, and user allocation settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1668,7 +1668,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1748,7 +1748,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1828,7 +1828,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1846,7 +1846,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more instances with the same configuration, avoiding repetitive environment setup each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2000,13 +2000,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Model Provider Template</para>
+        /// <para>Creates a model provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
-        /// Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</para>
+        /// <para>You can create a model provider template under Model Templates in the WUYING Agent Management Center. This template is used to configure connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that an Agent can invoke. After model creation, the model provider template is automatically associated with the specified model template.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before you invoke this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2084,13 +2084,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Model Provider Template</para>
+        /// <para>Creates a model provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
-        /// Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</para>
+        /// <para>You can create a model provider template under Model Templates in the WUYING Agent Management Center. This template is used to configure connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that an Agent can invoke. After model creation, the model provider template is automatically associated with the specified model template.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before you invoke this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2168,13 +2168,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Model Provider Template</para>
+        /// <para>Creates a model provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
-        /// Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</para>
+        /// <para>You can create a model provider template under Model Templates in the WUYING Agent Management Center. This template is used to configure connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that an Agent can invoke. After model creation, the model provider template is automatically associated with the specified model template.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before you invoke this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2192,13 +2192,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Model Provider Template</para>
+        /// <para>Creates a model provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
-        /// Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</para>
+        /// <para>You can create a model provider template under Model Templates in the WUYING Agent Management Center. This template is used to configure connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that an Agent can invoke. After model creation, the model provider template is automatically associated with the specified model template.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before you invoke this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2221,8 +2221,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2285,8 +2285,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2349,8 +2349,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2373,8 +2373,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2399,8 +2399,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <ol>
         /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the content is in an available state.</description></item>
+        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2560,8 +2560,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <ol>
         /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the content is in an available state.</description></item>
+        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2721,8 +2721,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <ol>
         /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the content is in an available state.</description></item>
+        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2748,8 +2748,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <ol>
         /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the content is in an available state.</description></item>
+        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2768,7 +2768,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go resource-based delivery group.</para>
+        /// <para>Deletes a pay-as-you-go delivery group of the resource-based type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2821,7 +2821,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go resource-based delivery group.</para>
+        /// <para>Deletes a pay-as-you-go delivery group of the resource-based type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2874,7 +2874,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go resource-based delivery group.</para>
+        /// <para>Deletes a pay-as-you-go delivery group of the resource-based type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2899,7 +2899,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go resource-based delivery group.</para>
+        /// <para>Deletes a pay-as-you-go delivery group of the resource-based type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2929,7 +2929,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</para>
+        /// <para>Only instances in the initializing or idle state can be deleted. This operation is available only to specific customers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2984,7 +2984,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</para>
+        /// <para>Only instances in the initializing or idle state can be deleted. This operation is available only to specific customers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3039,7 +3039,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</para>
+        /// <para>Only instances in the initializing or idle state can be deleted. This operation is available only to specific customers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3062,7 +3062,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</para>
+        /// <para>Only instances in the initializing or idle state can be deleted. This operation is available only to specific customers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3080,16 +3080,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom AppStream image.</para>
+        /// <para>Deletes a custom WUYING image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can delete only custom images that belong to you.</description></item>
-        /// <item><description>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</description></item>
-        /// <item><description>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</description></item>
-        /// <item><description>If an image is available in multiple regions, deleting the image removes it from all regions.</description></item>
+        /// <item><description>You can delete only custom images that belong to your account.</description></item>
+        /// <item><description>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</description></item>
+        /// <item><description>For images that span multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3132,16 +3132,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom AppStream image.</para>
+        /// <para>Deletes a custom WUYING image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can delete only custom images that belong to you.</description></item>
-        /// <item><description>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</description></item>
-        /// <item><description>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</description></item>
-        /// <item><description>If an image is available in multiple regions, deleting the image removes it from all regions.</description></item>
+        /// <item><description>You can delete only custom images that belong to your account.</description></item>
+        /// <item><description>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</description></item>
+        /// <item><description>For images that span multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3184,16 +3184,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom AppStream image.</para>
+        /// <para>Deletes a custom WUYING image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can delete only custom images that belong to you.</description></item>
-        /// <item><description>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</description></item>
-        /// <item><description>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</description></item>
-        /// <item><description>If an image is available in multiple regions, deleting the image removes it from all regions.</description></item>
+        /// <item><description>You can delete only custom images that belong to your account.</description></item>
+        /// <item><description>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</description></item>
+        /// <item><description>For images that span multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3212,16 +3212,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom AppStream image.</para>
+        /// <para>Deletes a custom WUYING image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can delete only custom images that belong to you.</description></item>
-        /// <item><description>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</description></item>
-        /// <item><description>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</description></item>
-        /// <item><description>If an image is available in multiple regions, deleting the image removes it from all regions.</description></item>
+        /// <item><description>You can delete only custom images that belong to your account.</description></item>
+        /// <item><description>For images associated with WUYING Cloud Computer Pool, WUYING Cloud Application, or WUYING Workspace product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when the image is deleted.</description></item>
+        /// <item><description>For images that span multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3245,8 +3245,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model template that has been created under a model service provider template in the WUYING Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3293,8 +3293,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model template that has been created under a model service provider template in the WUYING Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3341,8 +3341,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model template that has been created under a model service provider template in the WUYING Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3365,8 +3365,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model template that has been created under a model service provider template in the WUYING Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3389,8 +3389,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3437,8 +3437,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3485,8 +3485,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3509,8 +3509,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3812,7 +3812,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure LogShipper for Simple Log Service</para>
+        /// <para>Configures SLS log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3880,7 +3880,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure LogShipper for Simple Log Service</para>
+        /// <para>Configures SLS log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3948,7 +3948,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure LogShipper for Simple Log Service</para>
+        /// <para>Configures SLS log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3966,7 +3966,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure LogShipper for Simple Log Service</para>
+        /// <para>Configures SLS log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3984,7 +3984,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机详情</para>
+        /// <para>Queries the details of a development workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4026,7 +4026,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机详情</para>
+        /// <para>Queries the details of a development workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4068,7 +4068,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机详情</para>
+        /// <para>Queries the details of a development workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4086,7 +4086,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机详情</para>
+        /// <para>Queries the details of a development workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4365,9 +4365,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires multiple invokes (at least two) to obtain the connection credentials.
-        /// On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
-        /// On subsequent invokes, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
+        /// <para>This operation requires multiple calls (at least two) to obtain the connection credentials.
+        /// On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
+        /// On subsequent calls, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4462,9 +4462,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires multiple invokes (at least two) to obtain the connection credentials.
-        /// On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
-        /// On subsequent invokes, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
+        /// <para>This operation requires multiple calls (at least two) to obtain the connection credentials.
+        /// On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
+        /// On subsequent calls, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4559,9 +4559,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires multiple invokes (at least two) to obtain the connection credentials.
-        /// On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
-        /// On subsequent invokes, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
+        /// <para>This operation requires multiple calls (at least two) to obtain the connection credentials.
+        /// On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
+        /// On subsequent calls, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4584,9 +4584,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires multiple invokes (at least two) to obtain the connection credentials.
-        /// On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
-        /// On subsequent invokes, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
+        /// <para>This operation requires multiple calls (at least two) to obtain the connection credentials.
+        /// On the first call, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<c>TaskID</c>) is returned.
+        /// On subsequent calls, pass the <c>TaskID</c> request parameter to query whether the task is complete. When the returned task status (<c>TaskStatus</c>) is completed (<c>Finished</c>), the connection credentials (<c>Ticket</c>) are also returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4738,7 +4738,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4786,7 +4786,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4834,7 +4834,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4858,7 +4858,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4876,7 +4876,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an over-the-air update task, including the available version and version description.</para>
+        /// <para>Queries the details of an over-the-air update task, including the available version and release notes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4918,7 +4918,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an over-the-air update task, including the available version and version description.</para>
+        /// <para>Queries the details of an over-the-air update task, including the available version and release notes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4960,7 +4960,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an over-the-air update task, including the available version and version description.</para>
+        /// <para>Queries the details of an over-the-air update task, including the available version and release notes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4978,7 +4978,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an over-the-air update task, including the available version and version description.</para>
+        /// <para>Queries the details of an over-the-air update task, including the available version and release notes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5321,7 +5321,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
         /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -5385,7 +5385,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
         /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -5449,7 +5449,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
         /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -5473,7 +5473,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
         /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -5497,7 +5497,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5560,7 +5560,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5623,7 +5623,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5646,7 +5646,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5664,7 +5664,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</para>
+        /// <para>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5760,7 +5760,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</para>
+        /// <para>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5856,7 +5856,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</para>
+        /// <para>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5874,7 +5874,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</para>
+        /// <para>Queries the details of multiple delivery groups that meet specified conditions, without specifying a particular delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6232,7 +6232,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding information between users and resources.</para>
+        /// <para>Queries the bindng information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6298,7 +6298,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding information between users and resources.</para>
+        /// <para>Queries the bindng information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6364,7 +6364,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding information between users and resources.</para>
+        /// <para>Queries the bindng information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6382,7 +6382,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding information between users and resources.</para>
+        /// <para>Queries the bindng information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6417,6 +6417,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentImOnlineStatus))
+            {
+                query["AgentImOnlineStatus"] = request.AgentImOnlineStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceStatuses))
             {
                 query["AgentInstanceStatuses"] = request.AgentInstanceStatuses;
@@ -6429,13 +6433,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["AgentPlatform"] = request.AgentPlatform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatformList))
+            {
+                query["AgentPlatformList"] = request.AgentPlatformList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
             {
                 query["AgentProvider"] = request.AgentProvider;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProviderList))
+            {
+                query["AgentProviderList"] = request.AgentProviderList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTemplateIds))
+            {
+                query["AgentTemplateIds"] = request.AgentTemplateIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthUsers))
             {
                 query["AuthUsers"] = request.AuthUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
@@ -6484,6 +6504,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTemplateId))
             {
                 query["ModelTemplateId"] = request.ModelTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -6539,6 +6563,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentImOnlineStatus))
+            {
+                query["AgentImOnlineStatus"] = request.AgentImOnlineStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceStatuses))
             {
                 query["AgentInstanceStatuses"] = request.AgentInstanceStatuses;
@@ -6551,13 +6579,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["AgentPlatform"] = request.AgentPlatform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatformList))
+            {
+                query["AgentPlatformList"] = request.AgentPlatformList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
             {
                 query["AgentProvider"] = request.AgentProvider;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProviderList))
+            {
+                query["AgentProviderList"] = request.AgentProviderList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTemplateIds))
+            {
+                query["AgentTemplateIds"] = request.AgentTemplateIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthUsers))
             {
                 query["AuthUsers"] = request.AuthUsers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
@@ -6606,6 +6650,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTemplateId))
             {
                 query["ModelTemplateId"] = request.ModelTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -6972,13 +7020,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of LLM templates.</para>
+        /// <para>Queries the list of LLM templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7046,13 +7094,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of LLM templates.</para>
+        /// <para>Queries the list of LLM templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7120,13 +7168,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of LLM templates.</para>
+        /// <para>Queries the list of LLM templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7144,13 +7192,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of LLM templates.</para>
+        /// <para>Queries the list of LLM templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7168,7 +7216,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// <para>Queries the list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7222,7 +7270,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// <para>Queries the list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7276,7 +7324,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// <para>Queries the list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7294,7 +7342,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// <para>Queries the list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7317,8 +7365,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Paging is controlled by the PageSize and PageNumber parameters.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7399,8 +7447,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Paging is controlled by the PageSize and PageNumber parameters.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7481,8 +7529,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Paging is controlled by the PageSize and PageNumber parameters.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7505,8 +7553,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. Filtering by provider name, model group ID, and provider template ID is supported. Paging is controlled by the PageSize and PageNumber parameters.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7529,8 +7577,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the WUYING Agent Management Center.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7589,8 +7637,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the WUYING Agent Management Center.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7649,8 +7697,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the WUYING Agent Management Center.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7673,8 +7721,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to query the list of resource groups authorized by a model group in the WUYING Agent Management Center.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7692,13 +7740,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model templates.</para>
+        /// <para>Queries the list of model templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7725,9 +7773,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["AgentPlatform"] = request.AgentPlatform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatformList))
+            {
+                query["AgentPlatformList"] = request.AgentPlatformList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
             {
                 query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProviderList))
+            {
+                query["AgentProviderList"] = request.AgentProviderList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
@@ -7770,13 +7826,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model templates.</para>
+        /// <para>Queries the list of model templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7803,9 +7859,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["AgentPlatform"] = request.AgentPlatform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatformList))
+            {
+                query["AgentPlatformList"] = request.AgentPlatformList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
             {
                 query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProviderList))
+            {
+                query["AgentProviderList"] = request.AgentProviderList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
@@ -7848,13 +7912,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model templates.</para>
+        /// <para>Queries the list of model templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7872,13 +7936,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model templates.</para>
+        /// <para>Queries the list of model templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7916,6 +7980,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
@@ -8018,6 +8086,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
@@ -8582,7 +8654,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
+        /// <para>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8635,7 +8707,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
+        /// <para>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8688,7 +8760,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
+        /// <para>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8713,7 +8785,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
+        /// <para>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8732,7 +8804,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag list of one or more specified cloud resources.</para>
+        /// <para>Queries the tags of one or more specified cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8790,7 +8862,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag list of one or more specified cloud resources.</para>
+        /// <para>Queries the tags of one or more specified cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8848,7 +8920,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag list of one or more specified cloud resources.</para>
+        /// <para>Queries the tags of one or more specified cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8866,7 +8938,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag list of one or more specified cloud resources.</para>
+        /// <para>Queries the tags of one or more specified cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8975,6 +9047,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of WUYING workstations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListWuyingServerRequest
         /// </param>
@@ -9006,9 +9083,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredTimeEnd))
+            {
+                body["ExpiredTimeEnd"] = request.ExpiredTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredTimeStart))
+            {
+                body["ExpiredTimeStart"] = request.ExpiredTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                body["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
@@ -9050,6 +9147,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["WuyingServerNameOrId"] = request.WuyingServerNameOrId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
             body = TeaConverter.merge<object>
             (
                 body,
@@ -9078,6 +9179,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <summary>
         /// <para>Queries the list of workstations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of WUYING workstations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWuyingServerRequest
@@ -9110,9 +9216,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredTimeEnd))
+            {
+                body["ExpiredTimeEnd"] = request.ExpiredTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpiredTimeStart))
+            {
+                body["ExpiredTimeStart"] = request.ExpiredTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                body["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
@@ -9154,6 +9280,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["WuyingServerNameOrId"] = request.WuyingServerNameOrId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
             body = TeaConverter.merge<object>
             (
                 body,
@@ -9183,6 +9313,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of WUYING workstations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListWuyingServerRequest
         /// </param>
@@ -9201,6 +9336,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of WUYING workstations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListWuyingServerRequest
         /// </param>
@@ -9216,13 +9356,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</para>
+        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</para>
+        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9269,13 +9409,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</para>
+        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</para>
+        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9322,13 +9462,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</para>
+        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</para>
+        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9347,13 +9487,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</para>
+        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</para>
+        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9372,7 +9512,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</para>
+        /// <para>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9474,7 +9614,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</para>
+        /// <para>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9576,7 +9716,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</para>
+        /// <para>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9594,7 +9734,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</para>
+        /// <para>Modifies the general policy of a delivery group, including the number of concurrent sessions and the session disconnection retention duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10152,15 +10292,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
+        /// <para>Modifies the elastic mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</para>
+        /// <para>You can configure the elastic pattern for WUYING Cloud Application resources in Settings:</para>
         /// <list type="bullet">
         /// <item><description>Fixed quantity: Elastic scaling is not used.</description></item>
-        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</description></item>
+        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the duration without session connections.</description></item>
         /// <item><description>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
         /// Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</description></item>
         /// </list>
@@ -10227,15 +10367,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
+        /// <para>Modifies the elastic mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</para>
+        /// <para>You can configure the elastic pattern for WUYING Cloud Application resources in Settings:</para>
         /// <list type="bullet">
         /// <item><description>Fixed quantity: Elastic scaling is not used.</description></item>
-        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</description></item>
+        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the duration without session connections.</description></item>
         /// <item><description>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
         /// Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</description></item>
         /// </list>
@@ -10302,15 +10442,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
+        /// <para>Modifies the elastic mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</para>
+        /// <para>You can configure the elastic pattern for WUYING Cloud Application resources in Settings:</para>
         /// <list type="bullet">
         /// <item><description>Fixed quantity: Elastic scaling is not used.</description></item>
-        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</description></item>
+        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the duration without session connections.</description></item>
         /// <item><description>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
         /// Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</description></item>
         /// </list>
@@ -10331,15 +10471,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
+        /// <para>Modifies the elastic mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</para>
+        /// <para>You can configure the elastic pattern for WUYING Cloud Application resources in Settings:</para>
         /// <list type="bullet">
         /// <item><description>Fixed quantity: Elastic scaling is not used.</description></item>
-        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</description></item>
+        /// <item><description>Automatic scaling: Automatically scales resources based on the number of connected sessions and the duration without session connections.</description></item>
         /// <item><description>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
         /// Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</description></item>
         /// </list>
@@ -10360,7 +10500,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</para>
+        /// <para>Modifies the administrator account configuration, such as whether to enable resource expiration reminders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10402,7 +10542,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</para>
+        /// <para>Modifies the administrator account configuration, such as whether to enable resource expiration reminders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10444,7 +10584,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</para>
+        /// <para>Modifies the administrator account configuration, such as whether to enable resource expiration reminders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10462,7 +10602,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</para>
+        /// <para>Modifies the administrator account configuration, such as whether to enable resource expiration reminders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10480,7 +10620,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a cloud graphics workstation.</para>
+        /// <para>Modifies the properties of a workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10534,7 +10674,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a cloud graphics workstation.</para>
+        /// <para>Modifies the properties of a workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10588,7 +10728,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a cloud graphics workstation.</para>
+        /// <para>Modifies the properties of a workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10606,7 +10746,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a cloud graphics workstation.</para>
+        /// <para>Modifies the properties of a workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10624,7 +10764,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on allocated users added to a delivery group.</para>
+        /// <para>Queries the allocated users added to a delivery group by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10678,7 +10818,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on allocated users added to a delivery group.</para>
+        /// <para>Queries the allocated users added to a delivery group by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10732,7 +10872,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on allocated users added to a delivery group.</para>
+        /// <para>Queries the allocated users added to a delivery group by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10750,7 +10890,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on allocated users added to a delivery group.</para>
+        /// <para>Queries the allocated users added to a delivery group by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10773,8 +10913,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
+        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
         /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
@@ -10827,8 +10967,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
+        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
         /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
@@ -10881,8 +11021,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
+        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
         /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
@@ -10907,8 +11047,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
+        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
         /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
@@ -10928,12 +11068,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from an agent runtime.</para>
+        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -10992,12 +11132,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from an agent runtime.</para>
+        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -11056,12 +11196,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from an agent runtime.</para>
+        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -11080,12 +11220,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from an agent runtime.</para>
+        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
         /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -11104,13 +11244,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from Agent runtime resources.</para>
+        /// <para>Removes a model group from an Agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
+        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11160,13 +11300,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from Agent runtime resources.</para>
+        /// <para>Removes a model group from an Agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
+        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11216,13 +11356,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from Agent runtime resources.</para>
+        /// <para>Removes a model group from an Agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
+        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11240,13 +11380,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from Agent runtime resources.</para>
+        /// <para>Removes a model group from an Agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</para>
+        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11269,7 +11409,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11354,7 +11494,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11439,7 +11579,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11462,7 +11602,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11632,7 +11772,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a workstation.</para>
+        /// <para>Restarts a cloud graphics workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11684,7 +11824,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a workstation.</para>
+        /// <para>Restarts a cloud graphics workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11736,7 +11876,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a workstation.</para>
+        /// <para>Restarts a cloud graphics workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11754,7 +11894,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a workstation.</para>
+        /// <para>Restarts a cloud graphics workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12220,7 +12360,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</para>
+        /// <para>Creates and attaches tags to cloud resources. For resources that already have the specified tags, updates the tag values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12270,7 +12410,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</para>
+        /// <para>Creates and attaches tags to cloud resources. For resources that already have the specified tags, updates the tag values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12320,7 +12460,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</para>
+        /// <para>Creates and attaches tags to cloud resources. For resources that already have the specified tags, updates the tag values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12338,7 +12478,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</para>
+        /// <para>Creates and attaches tags to cloud resources. For resources that already have the specified tags, updates the tag values.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12356,7 +12496,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑研发主机的辅助私有IP</para>
+        /// <para>Unbinds secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12402,7 +12542,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑研发主机的辅助私有IP</para>
+        /// <para>Unbinds secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12448,7 +12588,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑研发主机的辅助私有IP</para>
+        /// <para>Unbinds secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12466,7 +12606,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑研发主机的辅助私有IP</para>
+        /// <para>Unbinds secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12778,8 +12918,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-        /// After the update is published, changes typically take about 2 minutes to take effect on the end user side.</para>
+        /// <para>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+        /// After the update is published, changes typically take about 2 minutes to take effect on the client.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12840,8 +12980,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-        /// After the update is published, changes typically take about 2 minutes to take effect on the end user side.</para>
+        /// <para>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+        /// After the update is published, changes typically take about 2 minutes to take effect on the client.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12902,8 +13042,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-        /// After the update is published, changes typically take about 2 minutes to take effect on the end user side.</para>
+        /// <para>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+        /// After the update is published, changes typically take about 2 minutes to take effect on the client.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12928,8 +13068,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
-        /// After the update is published, changes typically take about 2 minutes to take effect on the end user side.</para>
+        /// <para>Warning: After the image update starts, sessions of end users accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+        /// After the update is published, changes typically take about 2 minutes to take effect on the client.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12953,8 +13093,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model provider template that has been created in the WUYING Agent Management Center, including the template name, description, model service connection configuration, and WUYING security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13025,8 +13165,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model provider template that has been created in the WUYING Agent Management Center, including the template name, description, model service connection configuration, and WUYING security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13097,8 +13237,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model provider template that has been created in the WUYING Agent Management Center, including the template name, description, model service connection configuration, and WUYING security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13121,8 +13261,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model provider template that has been created in the WUYING Agent Management Center, including the template name, description, model service connection configuration, and WUYING security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13145,8 +13285,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13205,8 +13345,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13265,8 +13405,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13289,8 +13429,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can update a model group that has been created in the WUYING Agent Management Center, including the group name, description, and model configuration information. You can modify the default model of a model group by updating the Config field. The updated configuration automatically takes effect on associated cloud desktops.
+        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">

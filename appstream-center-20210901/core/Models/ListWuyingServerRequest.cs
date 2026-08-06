@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The list of statuses for joining a virtual node pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Added</para>
+        /// <para>RUNNING</para>
         /// </summary>
         [NameInMap("AddVirtualNodePoolStatusList")]
         [Validation(Required=false)]
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The business type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +50,38 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-08-01T00:00:00Z</para>
+        /// </summary>
+        [NameInMap("CreateTimeEnd")]
+        [Validation(Required=false)]
+        public string CreateTimeEnd { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-07-01T00:00:00Z</para>
+        /// </summary>
+        [NameInMap("CreateTimeStart")]
+        [Validation(Required=false)]
+        public string CreateTimeStart { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-08-01T00:00:00Z</para>
+        /// </summary>
+        [NameInMap("ExpiredTimeEnd")]
+        [Validation(Required=false)]
+        public string ExpiredTimeEnd { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-07-01T00:00:00Z</para>
+        /// </summary>
+        [NameInMap("ExpiredTimeStart")]
+        [Validation(Required=false)]
+        public string ExpiredTimeStart { get; set; }
+
+        /// <summary>
         /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +90,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        /// <summary>
+        /// <para>The internal IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.31.1.1</para>
+        /// </summary>
+        [NameInMap("NetworkInterfaceIp")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceIp { get; set; }
 
         /// <summary>
         /// <para>The office network ID.</para>
@@ -78,7 +122,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -88,6 +132,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wuying_server</para>
         /// </summary>
@@ -116,6 +162,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The list of authorized users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user1</para>
         /// </summary>
@@ -137,14 +185,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The list of workstation IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aig-bp1234567890abcde</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("WuyingServerIdList")]
         [Validation(Required=false)]
         public List<string> WuyingServerIdList { get; set; }
 
         /// <summary>
-        /// <para>The workstation name or workstation ID.</para>
+        /// <para>The workstation name or workstation ID. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>
@@ -152,6 +200,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("WuyingServerNameOrId")]
         [Validation(Required=false)]
         public string WuyingServerNameOrId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

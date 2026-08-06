@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The Internet service operation provider (ISP). Valid values: </para>
+        /// <para>The Internet service operation provider. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>ChinaMobile: Shift.</description></item>
         /// <item><description>ChinaTelecom: China Telecom.</description></item>

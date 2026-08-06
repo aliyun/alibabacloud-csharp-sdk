@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
+        /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The value range varies depending on the resource specification. The value ranges for each resource specification are as follows:</para>
         /// <list type="bullet">
         /// <item><description>appstreaming.general.4c8g: 1 to 2.</description></item>
         /// <item><description>appstreaming.general.8c16g: 1 to 4.</description></item>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? NodeCapacity { get; set; }
 
         /// <summary>
-        /// <para>The automatic scaling policy of the delivery group.</para>
+        /// <para>The automatic scaling strategy of the delivery group.</para>
         /// </summary>
         [NameInMap("NodePoolStrategy")]
         [Validation(Required=false)]

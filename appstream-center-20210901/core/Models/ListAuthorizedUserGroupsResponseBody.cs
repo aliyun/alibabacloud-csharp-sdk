@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListAuthorizedUserGroupsResponseBodyUserGroups> UserGroups { get; set; }
         public class ListAuthorizedUserGroupsResponseBodyUserGroups : TeaModel {
             /// <summary>
-            /// <para>The delivery group ID.</para>
+            /// <para>The ID of the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthMode { get; set; }
 
             /// <summary>
-            /// <para>The user group ID.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ug-00001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The user group name.</para>
+            /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>用户组001</para>

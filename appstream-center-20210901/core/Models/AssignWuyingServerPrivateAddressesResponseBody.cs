@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AssignWuyingServerPrivateAddressesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of assigned secondary private IP addresses.</para>
+        /// </summary>
         [NameInMap("AssignedPrivateIpAddresses")]
         [Validation(Required=false)]
         public List<string> AssignedPrivateIpAddresses { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

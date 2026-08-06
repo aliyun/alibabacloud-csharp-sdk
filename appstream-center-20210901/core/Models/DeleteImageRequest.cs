@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteImageRequest : TeaModel {
         /// <summary>
-        /// <para>The AppStream image ID.</para>
+        /// <para>The WUYING image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>

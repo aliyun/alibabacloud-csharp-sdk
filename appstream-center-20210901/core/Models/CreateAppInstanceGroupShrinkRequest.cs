@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAppInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application image ID. You can obtain the ID from the <b>O&amp;M</b> &gt; <b>Custom Images</b> or <b>System Images</b> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING Cloud Application console</a>.</para>
+        /// <para>The application image ID. You can obtain the ID from the <b>O&amp;M</b> &gt; <b>Custom Images</b> or <b>System Images</b> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING CloudApp console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The authorization mode of the delivery group.</para>
+        /// <para>The delivery group authorization mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>App</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The unit of the subscription duration when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
         /// <remarks>
-        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is invalid.
+        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is not.
         /// If the request parameters do not match the valid combinations, such as <c>2 Week</c>, the API call succeeds but an error occurs during the order placement.</para>
         /// </remarks>
         /// <remarks>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The pre-opened application ID.</para>
+        /// <para>The pre-opened AppId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cag-b2ronxxd****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</para>
+        /// <para>The promotion ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The application recycling timeout period, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling timeout. Set this parameter to <c>-1</c> if you do not want the application to be recycled. Valid values: -1 and 3 to 300 (integer). Default value: <c>15</c>.</para>
+        /// <para>The application recycling time, in minutes. After an end user disconnects from the cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <c>-1</c> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <c>15</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The user information of the users to be added to the delivery group. This field is required if the <c>Users</c> parameter is specified.</para>
+        /// <para>The user information to be added to the delivery group as assigned users. This field is required if the <c>Users</c> parameter is specified.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]

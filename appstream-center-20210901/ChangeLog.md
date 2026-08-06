@@ -1,3 +1,24 @@
+2026-08-06 Version: 5.6.3
+- Update API ListDesktopAgentRuntime: add request parameters AgentImOnlineStatus.
+- Update API ListDesktopAgentRuntime: add request parameters AgentPlatformList.
+- Update API ListDesktopAgentRuntime: add request parameters AgentProviderList.
+- Update API ListDesktopAgentRuntime: add request parameters AgentTemplateIds.
+- Update API ListDesktopAgentRuntime: add request parameters BizRegionId.
+- Update API ListDesktopAgentRuntime: add request parameters OfficeSiteId.
+- Update API ListDesktopAgentRuntime: add response parameters Body.Data.$.AgentImInfo.AgentImOnlineStatus.
+- Update API ListModelTemplates: add request parameters AgentPlatformList.
+- Update API ListModelTemplates: add request parameters AgentProviderList.
+- Update API ListModelTemplates: add response parameters Body.Data.$.AgentPlatform.
+- Update API ListNodeInstanceType: add request parameters ChargeType.
+- Update API ListWuyingServer: add request parameters CreateTimeEnd.
+- Update API ListWuyingServer: add request parameters CreateTimeStart.
+- Update API ListWuyingServer: add request parameters ExpiredTimeEnd.
+- Update API ListWuyingServer: add request parameters ExpiredTimeStart.
+- Update API ListWuyingServer: add request parameters NetworkInterfaceIp.
+- Update API ListWuyingServer: add request parameters ZoneId.
+- Update API ListWuyingServer: add response parameters Body.WuyingServerList.$.ZoneId.
+
+
 2026-07-02 Version: 5.6.2
 - Update API ListTenantConfig: add response parameters Body.TenantConfigModel.MultiSessionSupportType.
 - Update API ListTenantConfig: add response parameters Body.TenantConfigModel.MultiSessionSupportedRegions.

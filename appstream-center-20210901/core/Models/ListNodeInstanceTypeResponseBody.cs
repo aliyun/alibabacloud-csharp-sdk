@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
+            /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary by resource specification. The valid values for each resource specification are as follows:</para>
             /// <list type="bullet">
             /// <item><description>appstreaming.general.2c4g: 1</description></item>
             /// <item><description>appstreaming.general.4c8g: 1 to 2</description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <item><description>appstreaming.vgpu.12c46g.11g28: 1 to 6</description></item>
             /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 7</description></item>
             /// <item><description>appstreaming.vgpu.16c32g.8g: 1 to 8</description></item>
-            /// <item><description>appstreaming.vgpu.16c62g.8ga10: 1 to 8.</description></item>
+            /// <item><description>appstreaming.vgpu.16c62g.8ga10: 1 to 8</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource specification type.</para>
+            /// <para>The resource specification type ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodeInstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource specification.</para>
+            /// <para>The resource specification name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无影-通用型_4核8G</para>
+            /// <para>WUYING-General-purpose_4vCPU8GB.</para>
             /// </summary>
             [NameInMap("NodeTypeName")]
             [Validation(Required=false)]

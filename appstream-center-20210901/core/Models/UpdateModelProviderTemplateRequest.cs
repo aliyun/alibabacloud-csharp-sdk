@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public UpdateModelProviderTemplateRequestConfig Config { get; set; }
         public class UpdateModelProviderTemplateRequestConfig : TeaModel {
             /// <summary>
-            /// <para>The API key of the model service, which is used for authentication. The key is encrypted after it is created.</para>
+            /// <para>The API key of the model service, used for authentication. The key is stored in encrypted form after creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-xxxxxxxxxxxxxxxxxxxx</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Wuying security gateway proxy.</para>
+        /// <para>Specifies whether to enable the WUYING security gateway proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

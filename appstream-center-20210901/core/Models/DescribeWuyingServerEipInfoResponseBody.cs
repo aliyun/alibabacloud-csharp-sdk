@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The EIP information.</para>
+        /// <para>The Elastic IP Address (EIP) information.</para>
         /// </summary>
         [NameInMap("EipInfoModel")]
         [Validation(Required=false)]

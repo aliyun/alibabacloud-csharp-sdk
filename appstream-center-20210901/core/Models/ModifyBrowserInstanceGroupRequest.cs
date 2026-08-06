@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyBrowserInstanceGroupRequestPolicy Policy { get; set; }
         public class ModifyBrowserInstanceGroupRequestPolicy : TeaModel {
             /// <summary>
-            /// <para>The clipboard policy settings.</para>
+            /// <para>The clipboard-related policy.</para>
             /// </summary>
             [NameInMap("ClipboardPolicy")]
             [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Clipboard { get; set; }
 
                 /// <summary>
-                /// <para>The maximum length for clipboard read operations.</para>
+                /// <para>The clipboard read length limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The maximum length for clipboard write operations.</para>
+                /// <para>The clipboard write length limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The data retention policy for sessions after disconnection.</para>
+            /// <para>The data retention policy for sessions upon disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customTime</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DisconnectKeepSession { get; set; }
 
             /// <summary>
-            /// <para>The session retention duration after disconnection.</para>
+            /// <para>The session retention duration upon disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>The policy for disconnecting sessions after no operation.</para>
+            /// <para>Specifies whether to disconnect the session when no operation is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout period before disconnection, in seconds.</para>
+            /// <para>The time in seconds before disconnection when no operation is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PolicyVersion { get; set; }
 
             /// <summary>
-            /// <para>The display policy.</para>
+            /// <para>The video policy.</para>
             /// </summary>
             [NameInMap("VideoPolicy")]
             [Validation(Required=false)]
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy WatermarkPolicy { get; set; }
             public class ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable the watermark.</para>
+                /// <para>The watermark switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>off</para>
