@@ -1916,12 +1916,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1975,12 +1975,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2034,12 +2034,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2057,12 +2057,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10228,7 +10228,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Cloud Connect Network (CCN) instances in a specified region.</para>
+        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10306,7 +10306,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Cloud Connect Network (CCN) instances in a specified region.</para>
+        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10384,7 +10384,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Cloud Connect Network (CCN) instances in a specified region.</para>
+        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10402,7 +10402,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Cloud Connect Network (CCN) instances in a specified region.</para>
+        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">

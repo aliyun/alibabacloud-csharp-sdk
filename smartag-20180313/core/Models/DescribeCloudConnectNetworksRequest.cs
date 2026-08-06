@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeCloudConnectNetworksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CCN.</para>
+        /// <para>The instance ID of the Cloud Connect Network (CCN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccn-l9340rlu5enst*****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CcnId { get; set; }
 
         /// <summary>
-        /// <para>The name of the CCN.</para>
-        /// <para>The name must be 2 to 100 characters long, start with a letter or a Chinese character, and can contain digits, underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the Cloud Connect Network (CCN) instance.</para>
+        /// <para>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccnname</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Maximum value: <b>50</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CCN is located.</para>
+        /// <para>The region ID of the Cloud Connect Network (CCN) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to filter CCN instances.</para>
+        /// <para>The labels used to filter Cloud Connect Network (CCN) instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DescribeCloudConnectNetworks</para>

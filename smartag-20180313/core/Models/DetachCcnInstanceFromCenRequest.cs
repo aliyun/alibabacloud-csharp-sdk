@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DetachCcnInstanceFromCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Connect Network (CCN) that is bound to the CEN instance.</para>
+        /// <para>The ID of the Cloud Connect Network (CCN) that is attached to the CEN instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccn-isdjvvkexkrpk*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CcnId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance from which you want to revoke the authorization.</para>
+        /// <para>The ID of the CEN instance from which you want to revoke the authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-9j8gkkj7z9vie9a8z9</para>

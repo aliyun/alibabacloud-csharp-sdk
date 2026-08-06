@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [Validation(Required=false)]
                 public string AssociatedCenOwnerId { get; set; }
 
+                [NameInMap("AssociatedCenStatus")]
+                [Validation(Required=false)]
+                public string AssociatedCenStatus { get; set; }
+
                 [NameInMap("AssociatedCloudBoxCount")]
                 [Validation(Required=false)]
                 public string AssociatedCloudBoxCount { get; set; }
@@ -36,6 +40,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [NameInMap("CcnId")]
                 [Validation(Required=false)]
                 public string CcnId { get; set; }
+
+                [NameInMap("CenStatusErrorCode")]
+                [Validation(Required=false)]
+                public string CenStatusErrorCode { get; set; }
+
+                [NameInMap("CenStatusErrorMessage")]
+                [Validation(Required=false)]
+                public string CenStatusErrorMessage { get; set; }
 
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
@@ -60,6 +72,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [NameInMap("NewAgw")]
                 [Validation(Required=false)]
                 public bool? NewAgw { get; set; }
+
+                [NameInMap("ProcessingCenId")]
+                [Validation(Required=false)]
+                public string ProcessingCenId { get; set; }
 
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -108,7 +124,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -128,7 +144,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the query.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

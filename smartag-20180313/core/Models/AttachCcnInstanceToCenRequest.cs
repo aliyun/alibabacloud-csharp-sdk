@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Internet CIDR block used when the Cloud Connect Network (CCN) instance is attached to the CEN instance.</para>
+        /// <para>The CIDR block used when the Cloud Connect Network (CCN) instance is attached to the CEN instance over the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.55.0/24</para>
