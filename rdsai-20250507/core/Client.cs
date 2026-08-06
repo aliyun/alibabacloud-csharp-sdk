@@ -4768,6 +4768,190 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOTokenUsageSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOTokenUsageSummaryResponse
+        /// </returns>
+        public DescribeMOTokenUsageSummaryResponse DescribeMOTokenUsageSummaryWithOptions(DescribeMOTokenUsageSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMOTokenUsageSummary",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMOTokenUsageSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOTokenUsageSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOTokenUsageSummaryResponse
+        /// </returns>
+        public async Task<DescribeMOTokenUsageSummaryResponse> DescribeMOTokenUsageSummaryWithOptionsAsync(DescribeMOTokenUsageSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMOTokenUsageSummary",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMOTokenUsageSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOTokenUsageSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOTokenUsageSummaryResponse
+        /// </returns>
+        public DescribeMOTokenUsageSummaryResponse DescribeMOTokenUsageSummary(DescribeMOTokenUsageSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMOTokenUsageSummaryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 model operator 实例具体 token 汇总情况</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOTokenUsageSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOTokenUsageSummaryResponse
+        /// </returns>
+        public async Task<DescribeMOTokenUsageSummaryResponse> DescribeMOTokenUsageSummaryAsync(DescribeMOTokenUsageSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMOTokenUsageSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
         /// </summary>
         /// 
