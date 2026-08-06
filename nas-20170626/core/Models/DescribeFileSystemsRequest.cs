@@ -11,6 +11,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DescribeFileSystemsRequest : TeaModel {
         /// <summary>
         /// <para>The file system ID.</para>
+        /// <list type="bullet">
+        /// <item><description>General-purpose NAS: 31a8e4****.</description></item>
+        /// <item><description>Extreme NAS: must start with extreme-, such as extreme-0015****.</description></item>
+        /// <item><description>CPFS (locally redundant): must start with cpfs-, such as cpfs-125487****.</description></item>
+        /// <item><description>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>31a8e4****</para>
@@ -20,7 +26,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The file system type.</para>
+        /// <para>The type of the file system.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all (default): queries all types.</description></item>
+        /// <item><description>standard: General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (locally redundant).</description></item>
+        /// <item><description>cpfsse: Cloud Parallel File Storage SE (zone-redundant).</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>To query multiple types, separate them with commas (,).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -51,6 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The resource group ID.</para>
+        /// <para>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwavnfef****</para>
@@ -61,6 +79,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The storage type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>General-purpose NAS: Capacity, Performance, and Premium.</description></item>
+        /// <item><description>Extreme NAS: standard and advance.</description></item>
+        /// <item><description>CPFS: advance_100 (100 MB/s/TiB baseline), advance_200 (200 MB/s/TiB baseline), and economic.</description></item>
+        /// <item><description>CPFS SE: advance_100 (100 MB/s/TiB baseline).</description></item>
+        /// <item><description>AgenticFS: Agentic (available only when FileSystemType is set to standard).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Capacity</para>
@@ -88,6 +114,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The tag value.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
@@ -99,7 +132,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1sevsgtqvk5gxbl****</para>
