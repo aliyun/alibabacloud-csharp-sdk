@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<RejectOperationTaskApprovalResponseBodyResults> Results { get; set; }
         public class RejectOperationTaskApprovalResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The error code. OK indicates success. Other values indicate errors.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OK</para>
             /// </summary>
