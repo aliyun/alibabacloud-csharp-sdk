@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string ResponseRulePriority { get; set; }
 
+        [NameInMap("ResponseRuleRemark")]
+        [Validation(Required=false)]
+        public string ResponseRuleRemark { get; set; }
+
         /// <summary>
         /// <para>The trigger type for the automatic response rule. Valid values:</para>
         /// <list type="bullet">

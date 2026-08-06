@@ -1,3 +1,11 @@
+2026-08-06 Version: 2.5.1
+- Update API CreateResponseRule: add request parameters ResponseRuleRemark.
+- Update API ListIncidents: add request parameters DetectionRuleIds.
+- Update API ListIncidents: add response parameters Body.Incidents.$.DetectionRuleName.
+- Update API ListResponseRules: add response parameters Body.ResponseRules.$.ResponseRuleRemark.
+- Update API UpdateResponseRule: add request parameters ResponseRuleRemark.
+
+
 2026-07-30 Version: 2.5.0
 - Support API DeleteNormalizationSchema.
 - Support API UpdateDataConnector.

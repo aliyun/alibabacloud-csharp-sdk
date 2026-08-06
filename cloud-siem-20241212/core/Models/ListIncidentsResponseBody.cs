@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListIncidentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of events.</para>
+        /// <para>The list of incidents.</para>
         /// </summary>
         [NameInMap("Incidents")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The detection rule ID.</para>
+            /// <para>The ID of the detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dr-qo5ww6ux0uc28*****</para>
@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [NameInMap("DetectionRuleId")]
             [Validation(Required=false)]
             public string DetectionRuleId { get; set; }
+
+            [NameInMap("DetectionRuleName")]
+            [Validation(Required=false)]
+            public string DetectionRuleName { get; set; }
 
             [NameInMap("EntityInfos")]
             [Validation(Required=false)]
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentName { get; set; }
 
             /// <summary>
-            /// <para>The event remark.</para>
+            /// <para>The remark of the incident.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark</para>
@@ -74,12 +78,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <para>The event status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: Unhandled.</description></item>
-            /// <item><description>1: Handling.</description></item>
-            /// <item><description>5: Handling failed.</description></item>
-            /// <item><description>10: Handled.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentTags { get; set; }
 
             /// <summary>
-            /// <para>The event UUID.</para>
+            /// <para>The UUID of the incident.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dbb1d7211c9285c862aa89385098****</para>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts associated with the event.</para>
+            /// <para>The number of alerts associated with the incident.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -129,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? RelateAlertCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets associated with the event.</para>
+            /// <para>The number of assets associated with the incident.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -150,13 +148,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <para>The threat level. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>5: Critical.</description></item>
-            /// <item><description>4: High.</description></item>
-            /// <item><description>3: Medium.</description></item>
-            /// <item><description>2: Low.</description></item>
-            /// <item><description>1: Informational.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -178,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

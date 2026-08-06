@@ -2646,6 +2646,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["ResponseRulePriority"] = request.ResponseRulePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleRemark))
+            {
+                body["ResponseRuleRemark"] = request.ResponseRuleRemark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseTriggerType))
             {
                 body["ResponseTriggerType"] = request.ResponseTriggerType;
@@ -2736,6 +2740,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRulePriority))
             {
                 body["ResponseRulePriority"] = request.ResponseRulePriority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleRemark))
+            {
+                body["ResponseRuleRemark"] = request.ResponseRuleRemark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseTriggerType))
             {
@@ -10322,7 +10330,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10357,6 +10365,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
             {
                 body["AlertUuid"] = request.AlertUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleIds))
+            {
+                body["DetectionRuleIds"] = request.DetectionRuleIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -10462,7 +10474,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10497,6 +10509,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
             {
                 body["AlertUuid"] = request.AlertUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleIds))
+            {
+                body["DetectionRuleIds"] = request.DetectionRuleIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -10602,7 +10618,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10626,7 +10642,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18522,6 +18538,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["ResponseRulePriority"] = request.ResponseRulePriority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleRemark))
+            {
+                body["ResponseRuleRemark"] = request.ResponseRuleRemark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleStatus))
             {
                 body["ResponseRuleStatus"] = request.ResponseRuleStatus;
@@ -18612,6 +18632,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRulePriority))
             {
                 body["ResponseRulePriority"] = request.ResponseRulePriority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleRemark))
+            {
+                body["ResponseRuleRemark"] = request.ResponseRuleRemark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleStatus))
             {
