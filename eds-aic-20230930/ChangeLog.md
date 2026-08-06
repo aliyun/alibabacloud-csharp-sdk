@@ -1,3 +1,13 @@
+2026-08-06 Version: 4.30.0
+- Support API ModifyInstanceGroupSpec.
+- Update API CreateScheduledTask: add request parameters RunConfig.Skills.
+- Update API DescribeCreditDetail: add response parameters Body.Data.Details.$.DurationMs.
+- Update API DescribeCreditDetail: add response parameters Body.Data.Details.$.TtftMs.
+- Update API DescribeScheduledTasks: add response parameters Body.Tasks.$.RunConfig.Skills.
+- Update API ModifyScheduledTask: add request parameters RunConfig.Skills.
+- Update API RunAgentTask: add request parameters RunConfig.
+
+
 2026-07-30 Version: 4.29.1
 - Update API DescribeJVSInstance: add response parameters Body.PendingUpgradeCount.
 - Update API DescribeJVSInstance: add response parameters Body.Data.$.AgentVersion.

@@ -60,6 +60,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? MaxSteps { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>[&quot;sk-abc&quot;]</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("Skills")]
+            [Validation(Required=false)]
+            public List<string> Skills { get; set; }
+
+            /// <summary>
             /// <para>The timeout in seconds.</para>
             /// 
             /// <b>Example:</b>

@@ -151,6 +151,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public int? MaxSteps { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;sk-abc&quot;]</para>
+                /// </summary>
+                [NameInMap("Skills")]
+                [Validation(Required=false)]
+                public List<string> Skills { get; set; }
+
+                /// <summary>
                 /// <para>The timeout period, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
@@ -196,7 +204,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Daily data synchronization task.</para>
+            /// <para>DailyDataSyncTask</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -226,7 +234,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The user prompt or task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Execute daily data synchronization task.</para>
+            /// <para>Execute daily data synchronization task</para>
             /// </summary>
             [NameInMap("UserPrompt")]
             [Validation(Required=false)]

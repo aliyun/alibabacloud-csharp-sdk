@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scheduled task IDs used to filter results.</para>
+        /// <para>The scheduled task IDs used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;scheduled-abcd1234&quot;]</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> ScheduledIds { get; set; }
 
         /// <summary>
-        /// <para>The status used to filter results. Valid values: ACTIVE and DISABLED.</para>
+        /// <para>The status used for filtering. Valid values: ACTIVE and DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Data synchronization.</para>
+        /// <para>DataSync</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

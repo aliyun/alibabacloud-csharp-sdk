@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class RunAgentTaskRequest : TeaModel {
+    public class RunAgentTaskShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The region ID of the Mobile node.</para>
         /// 
@@ -42,17 +42,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// </summary>
         [NameInMap("RunConfig")]
         [Validation(Required=false)]
-        public RunAgentTaskRequestRunConfig RunConfig { get; set; }
-        public class RunAgentTaskRequestRunConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>[&quot;sk-abc&quot;,&quot;sk-def&quot;]</para>
-            /// </summary>
-            [NameInMap("Skills")]
-            [Validation(Required=false)]
-            public List<string> Skills { get; set; }
-
-        }
+        public string RunConfigShrink { get; set; }
 
         /// <summary>
         /// <para>The scheduling plan ID. When specified, execution records are associated with the corresponding scheduled node, which facilitates aggregation query by scheduling dimension.</para>
@@ -69,8 +59,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
-        public List<RunAgentTaskRequestTargets> Targets { get; set; }
-        public class RunAgentTaskRequestTargets : TeaModel {
+        public List<RunAgentTaskShrinkRequestTargets> Targets { get; set; }
+        public class RunAgentTaskShrinkRequestTargets : TeaModel {
             /// <summary>
             /// <para>The Mobile node ID, such as acp-xxx.</para>
             /// 

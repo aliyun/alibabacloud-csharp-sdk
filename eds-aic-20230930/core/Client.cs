@@ -14340,6 +14340,150 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceGroupSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceGroupSpecResponse
+        /// </returns>
+        public ModifyInstanceGroupSpecResponse ModifyInstanceGroupSpecWithOptions(ModifyInstanceGroupSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIds))
+            {
+                query["InstanceGroupIds"] = request.InstanceGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupSpec))
+            {
+                query["InstanceGroupSpec"] = request.InstanceGroupSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceGroupSpec",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceGroupSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceGroupSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceGroupSpecResponse
+        /// </returns>
+        public async Task<ModifyInstanceGroupSpecResponse> ModifyInstanceGroupSpecWithOptionsAsync(ModifyInstanceGroupSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIds))
+            {
+                query["InstanceGroupIds"] = request.InstanceGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupSpec))
+            {
+                query["InstanceGroupSpec"] = request.InstanceGroupSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceGroupSpec",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceGroupSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceGroupSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceGroupSpecResponse
+        /// </returns>
+        public ModifyInstanceGroupSpecResponse ModifyInstanceGroupSpec(ModifyInstanceGroupSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceGroupSpecWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of instance groups. Currently, only specification upgrades are supported. Specification downgrades are not supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceGroupSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceGroupSpecResponse
+        /// </returns>
+        public async Task<ModifyInstanceGroupSpecResponse> ModifyInstanceGroupSpecAsync(ModifyInstanceGroupSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceGroupSpecWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configuration of a JVS instance.</para>
         /// </summary>
         /// 
@@ -17159,7 +17303,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunAgentTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -17169,9 +17313,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// RunAgentTaskResponse
         /// </returns>
-        public RunAgentTaskResponse RunAgentTaskWithOptions(RunAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RunAgentTaskResponse RunAgentTaskWithOptions(RunAgentTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunAgentTaskShrinkRequest request = new RunAgentTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RunConfig))
+            {
+                request.RunConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RunConfig, "RunConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
@@ -17184,6 +17334,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
             {
                 query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunConfigShrink))
+            {
+                query["RunConfig"] = request.RunConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {
@@ -17229,7 +17383,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunAgentTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -17239,9 +17393,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// RunAgentTaskResponse
         /// </returns>
-        public async Task<RunAgentTaskResponse> RunAgentTaskWithOptionsAsync(RunAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RunAgentTaskResponse> RunAgentTaskWithOptionsAsync(RunAgentTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunAgentTaskShrinkRequest request = new RunAgentTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RunConfig))
+            {
+                request.RunConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RunConfig, "RunConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
@@ -17254,6 +17414,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
             {
                 query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunConfigShrink))
+            {
+                query["RunConfig"] = request.RunConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {

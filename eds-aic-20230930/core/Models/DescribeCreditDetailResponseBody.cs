@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("DurationMs")]
+                [Validation(Required=false)]
+                public long? DurationMs { get; set; }
+
                 [NameInMap("InputTokens")]
                 [Validation(Required=false)]
                 public long? InputTokens { get; set; }
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [NameInMap("TotalTokens")]
                 [Validation(Required=false)]
                 public long? TotalTokens { get; set; }
+
+                [NameInMap("TtftMs")]
+                [Validation(Required=false)]
+                public long? TtftMs { get; set; }
 
             }
 
