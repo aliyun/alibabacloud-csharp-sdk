@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterApiKeysRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>pms-xxx</para>
+        /// </summary>
+        [NameInMap("ModelSpaceName")]
+        [Validation(Required=false)]
+        public string ModelSpaceName { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

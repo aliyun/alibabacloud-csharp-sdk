@@ -10,6 +10,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCostRulesRequest : TeaModel {
         /// <summary>
+        /// <para>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>global</para>
+        /// </summary>
+        [NameInMap("EffectiveTargetType")]
+        [Validation(Required=false)]
+        public string EffectiveTargetType { get; set; }
+
+        /// <summary>
+        /// <para>Filters by effective target value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user</para>
+        /// </summary>
+        [NameInMap("EffectiveTargetValue")]
+        [Validation(Required=false)]
+        public string EffectiveTargetValue { get; set; }
+
+        /// <summary>
         /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The model name, such as <c>gpt-4</c> or <c>qwen-turbo</c>.</para>
+        /// <para>The model name, such as gpt-4 or qwen-turbo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-max</para>
@@ -53,12 +73,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 

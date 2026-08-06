@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterTaskRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-bucket</para>
+        /// </summary>
+        [NameInMap("CustomOssBucketName")]
+        [Validation(Required=false)]
+        public string CustomOssBucketName { get; set; }
+
+        /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,6 +37,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cold_storage</para>
+        /// </summary>
+        [NameInMap("DataserviceMode")]
+        [Validation(Required=false)]
+        public string DataserviceMode { get; set; }
 
         /// <summary>
         /// <para>The training dataset ID. This parameter is required for fine-tuning.</para>

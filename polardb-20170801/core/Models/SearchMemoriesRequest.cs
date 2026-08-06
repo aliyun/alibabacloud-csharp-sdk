@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The start time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</para>
+        /// <para>The start time for memory creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-ddTHH:mm:ssZ</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</para>
+        /// <para>The end time for memory creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-ddTHH:mm:ssZ</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The agent ID associated with the memory.</para>
+        /// <para>The memory agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MemoryAgentId { get; set; }
 
         /// <summary>
-        /// <para>The user ID associated with the memory.</para>
+        /// <para>The memory user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,8 +62,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MemoryUserId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// </summary>
+        [NameInMap("Page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        /// <summary>
+        /// <para>The number of records per page.</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
         /// <para>The search query.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>who are you</para>
@@ -73,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return.</para>
+        /// <para>Specifies the number of top results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

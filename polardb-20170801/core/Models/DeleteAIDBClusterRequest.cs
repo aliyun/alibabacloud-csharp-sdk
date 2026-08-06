@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pms-xxx</para>
+        /// </summary>
+        [NameInMap("ModelSpace")]
+        [Validation(Required=false)]
+        public string ModelSpace { get; set; }
+
     }
 
 }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeApplicationPerformanceRequest : TeaModel {
+    public class DescribeApplicationPerformanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The application cluster ID.</para>
         /// <para>This parameter is required.</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         [NameInMap("filter")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Filter { get; set; }
+        public string FilterShrink { get; set; }
 
     }
 

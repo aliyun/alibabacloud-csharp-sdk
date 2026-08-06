@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vnode: ACK-managed</description></item>
+        /// <item><description>vnode: managed by ACK</description></item>
         /// <item><description>container: loginable container</description></item>
         /// <item><description>maas: model service</description></item>
         /// </list>
@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DBClusterStatus")]
         [Validation(Required=false)]
         public string DBClusterStatus { get; set; }
+
+        [NameInMap("DBInstanceStatusDesc")]
+        [Validation(Required=false)]
+        public string DBInstanceStatusDesc { get; set; }
 
         /// <summary>
         /// <para>The node details.</para>
@@ -210,7 +214,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <item><description><b>DBNodeDeleting</b>: deleting a node </description></item>
             /// <item><description><b>ClassChanging</b>: changing node specifications  </description></item>
             /// <item><description><b>MinorVersionUpgrading</b>: upgrading the minor version</description></item>
-            /// <item><description><b>Maintaining</b>: under maintenance  </description></item>
+            /// <item><description><b>Maintaining</b>: being maintained  </description></item>
             /// <item><description><b>Switching</b>: being switched</description></item>
             /// </list>
             /// 
@@ -251,6 +255,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string MemorySize { get; set; }
 
+            [NameInMap("ModelName")]
+            [Validation(Required=false)]
+            public string ModelName { get; set; }
+
             /// <summary>
             /// <para>The public IP address.</para>
             /// 
@@ -260,6 +268,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("PublicIp")]
             [Validation(Required=false)]
             public string PublicIp { get; set; }
+
+            [NameInMap("SupportedApis")]
+            [Validation(Required=false)]
+            public List<DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis> SupportedApis { get; set; }
+            public class DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis : TeaModel {
+                [NameInMap("ApiName")]
+                [Validation(Required=false)]
+                public string ApiName { get; set; }
+
+                [NameInMap("GenerationMode")]
+                [Validation(Required=false)]
+                public string GenerationMode { get; set; }
+
+                [NameInMap("Path")]
+                [Validation(Required=false)]
+                public string Path { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The Kubernetes virtual node ID.</para>
@@ -341,7 +371,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems> NetInfoItems { get; set; }
             public class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems : TeaModel {
                 /// <summary>
-                /// <para>The database connection address.</para>
+                /// <para>The database endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pc-**********.rwlb.rds.aliyuncs.com</para>
@@ -382,7 +412,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster expiration time.</para>
         /// <remarks>
-        /// <para>This parameter returns a value only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
+        /// <para>A specific value is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -462,6 +492,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string MaxQPM { get; set; }
 
+        [NameInMap("MaxTPM")]
+        [Validation(Required=false)]
+        public string MaxTPM { get; set; }
+
         /// <summary>
         /// <para>The model name.</para>
         /// 
@@ -471,6 +505,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
+
+        [NameInMap("ModelSpaceName")]
+        [Validation(Required=false)]
+        public string ModelSpaceName { get; set; }
 
         /// <summary>
         /// <para>The model type.</para>
@@ -541,12 +579,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunType { get; set; }
 
         /// <summary>
-        /// <para>Valid values for Enterprise Edition storage type:</para>
+        /// <para>The storage type for Enterprise Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PSL5</b></description></item>
         /// <item><description><b>PSL4</b></description></item>
         /// </list>
-        /// <para>Valid values for Standard Edition storage type:</para>
+        /// <para>The storage type for Standard Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ESSDPL0</b></description></item>
         /// <item><description><b>ESSDPL1</b></description></item>
@@ -587,7 +625,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TimeSlicesType { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID specified for the zone switchover.</para>
+        /// <para>The VPC ID that can be specified when switching zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
@@ -717,7 +755,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone IDs.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i,cn-hangzhou-g</para>

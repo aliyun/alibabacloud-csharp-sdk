@@ -39,6 +39,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("CustomBucketInfo")]
+        [Validation(Required=false)]
+        public DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo CustomBucketInfo { get; set; }
+        public class DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>my-bucket</para>
+            /// </summary>
+            [NameInMap("CustomOssBucketName")]
+            [Validation(Required=false)]
+            public string CustomOssBucketName { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The task name.</para>
         /// 

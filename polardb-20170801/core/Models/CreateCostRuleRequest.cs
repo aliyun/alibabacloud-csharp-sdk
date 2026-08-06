@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateCostRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The number of cost points per million cache tokens. The default value is 0.</para>
+        /// <para>The cost points per million cached tokens. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -18,6 +18,32 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("CacheCostPointsPerMillion")]
         [Validation(Required=false)]
         public string CacheCostPointsPerMillion { get; set; }
+
+        /// <summary>
+        /// <para>The effective target type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>global</description></item>
+        /// <item><description>consumerGroup</description></item>
+        /// <item><description>consumer</description></item>
+        /// </list>
+        /// <para>Default value: global.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>global</para>
+        /// </summary>
+        [NameInMap("EffectiveTargetType")]
+        [Validation(Required=false)]
+        public string EffectiveTargetType { get; set; }
+
+        /// <summary>
+        /// <para>The effective target value. This parameter is required when EffectiveTargetType is not set to global.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user</para>
+        /// </summary>
+        [NameInMap("EffectiveTargetValue")]
+        [Validation(Required=false)]
+        public string EffectiveTargetValue { get; set; }
 
         /// <summary>
         /// <para>The gateway instance ID.</para>
@@ -31,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of cost points per million input tokens. The default value is 0.</para>
+        /// <para>The cost points per million input tokens. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InputCostPointsPerMillion { get; set; }
 
         /// <summary>
-        /// <para>The name of the model, such as <c>gpt-4</c> or <c>qwen-turbo</c>.</para>
+        /// <para>The model name, such as gpt-4 or qwen-turbo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelServiceId { get; set; }
 
         /// <summary>
-        /// <para>The number of cost points per million output tokens. The default value is 0.</para>
+        /// <para>The cost points per million output tokens. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

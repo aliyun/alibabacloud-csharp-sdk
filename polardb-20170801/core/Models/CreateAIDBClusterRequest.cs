@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ON</para>
+        /// </summary>
+        [NameInMap("CreatePublicEndpoint")]
+        [Validation(Required=false)]
+        public string CreatePublicEndpoint { get; set; }
+
+        /// <summary>
         /// <para>The description of the cluster. You can use the description to perform a fuzzy search.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +86,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The node specification.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polar.pg.g4.6xlarge.gu4</para>
@@ -174,6 +181,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pms-xxx</para>
+        /// </summary>
+        [NameInMap("ModelSpace")]
+        [Validation(Required=false)]
+        public string ModelSpace { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

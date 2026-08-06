@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>pms-xxx</para>
+        /// </summary>
+        [NameInMap("ModelSpaceName")]
+        [Validation(Required=false)]
+        public string ModelSpaceName { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>

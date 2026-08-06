@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The acceleration space. Unit: GB.</para>
+        /// <para>The acceleration storage space, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthorizedUserIds { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth. Unit: MB/s.</para>
+        /// <para>The bandwidth, in MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth baseline. Unit: MB/s/TiB.</para>
+        /// <para>The bandwidth baseline, in MB/s/TiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -170,6 +170,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        /// <summary>
+        /// <para>The endpoint ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pe-zo1z5qw5nb39s699n</para>
+        /// </summary>
         [NameInMap("DBEndpointId")]
         [Validation(Required=false)]
         public string DBEndpointId { get; set; }
@@ -189,7 +195,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The list of endpoints, including endpoint information for types such as NAS and S3Gateway.</para>
+        /// <para>The list of endpoints, including endpoint information for NAS, S3Gateway, and other types.</para>
         /// </summary>
         [NameInMap("EndpointItems")]
         [Validation(Required=false)]
@@ -202,26 +208,67 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> AddressItems { get; set; }
             public class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems : TeaModel {
+                /// <summary>
+                /// <para>The endpoint of the protocol connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aclsh-prd-pdb12-rw.rwlb.rds.aliyuncs.com</para>
+                /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
+                /// <summary>
+                /// <para>The IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47.116.9.224</para>
+                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
+                /// <summary>
+                /// <para>The network type of the connection string. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Public</b>: public endpoint.</description></item>
+                /// <item><description><b>Private</b>: private endpoint.</description></item>
+                /// <item><description><b>Inner</b>: private endpoint (classic network).</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Public</para>
+                /// </summary>
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
                 public string NetType { get; set; }
 
+                /// <summary>
+                /// <para>The port number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
+                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// <para>The VPC ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-**********</para>
+                /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-**************</para>
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -239,7 +286,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint type, such as Nas or S3Gateway.</para>
+            /// <para>The endpoint type. Valid values: Nas, S3Gateway, and others.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S3Gateway</para>
@@ -301,10 +348,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string LockMode { get; set; }
 
+        /// <summary>
+        /// <para>The proxy endpoint ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pe-cz9inwqec7ifd98c3</para>
+        /// </summary>
         [NameInMap("MaxscaleEndpointId")]
         [Validation(Required=false)]
         public string MaxscaleEndpointId { get; set; }
 
+        /// <summary>
+        /// <para>The metadata service cluster endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-x67w12d2d5t13mt88.pg.polardb.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("MetaConnString")]
         [Validation(Required=false)]
         public string MetaConnString { get; set; }
@@ -319,12 +378,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string MetaInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The metadata proxy service cluster endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-y3610mp168p3bb740.rwlb.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("MetaMxsConnString")]
         [Validation(Required=false)]
         public string MetaMxsConnString { get; set; }
 
         /// <summary>
-        /// <para>The metadata URL for Fuse mounting (encrypted).</para>
+        /// <para>The metadata address for Fuse mount (encrypted).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e6cc1d2e2a6fa292038d999fda6501*****</para>
@@ -429,8 +494,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The instance version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PolarFS 2.0</b>: 2.0.</description></item>
-        /// <item><description><b>PolarFS 1.0</b>: 1.0.</description></item>
+        /// <item><description><b>PolarFS 2.0</b>: 2.0</description></item>
+        /// <item><description><b>PolarFS 1.0</b>: 1.0</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -501,7 +566,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The storage space. Unit: GB.</para>
+        /// <para>The storage space, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -518,7 +583,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// </list>
         /// <para>The storage type for the Basic Edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>city_redundancy</b>: zone-redundant storage.</description></item>
+        /// <item><description><b>city_redundancy</b>: cross-zone redundancy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -529,7 +594,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The used storage space. Unit: bytes.</para>
+        /// <para>The storage usage, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3012558848</para>

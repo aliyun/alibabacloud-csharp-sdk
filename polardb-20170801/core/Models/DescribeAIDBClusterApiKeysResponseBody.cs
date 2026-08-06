@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 
