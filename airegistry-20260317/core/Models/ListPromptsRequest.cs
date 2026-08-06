@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class ListPromptsRequest : TeaModel {
         /// <summary>
+        /// <para>The business tags used to filter prompts. Separate multiple tags with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cs,qa</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string BizTags { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The identifier of the prompt to search for. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>customer</para>
         /// </summary>
@@ -52,6 +61,12 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string PromptKey { get; set; }
 
         /// <summary>
+        /// <para>The search mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>accurate: exact match.</description></item>
+        /// <item><description>blur: fuzzy match.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>blur</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class OnlineSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The operation scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>skill: the entire Skill.</description></item>
+        /// <item><description>version: a specified version.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>version</para>
         /// </summary>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Scope { get; set; }
 
         /// <summary>
+        /// <para>The Skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string SkillName { get; set; }
 
         /// <summary>
+        /// <para>The version number. This parameter is required when scope is set to version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.2</para>
         /// </summary>

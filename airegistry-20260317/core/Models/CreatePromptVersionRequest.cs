@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class CreatePromptVersionRequest : TeaModel {
         /// <summary>
+        /// <para>Fork from this version. Either this parameter or Template must be specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string BasedOnVersion { get; set; }
 
         /// <summary>
+        /// <para>Commit message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>初始版本</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string CommitMsg { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string PromptKey { get; set; }
 
         /// <summary>
+        /// <para>Draft version number. If not specified, the version number is automatically incremented.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.2</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string TargetVersion { get; set; }
 
         /// <summary>
+        /// <para>Prompt template content. Either this parameter or BasedOnVersion must be specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>你是一个客服助手，请回答：{question}</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Template { get; set; }
 
         /// <summary>
+        /// <para>Variable definitions in a JSON array string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</para>
         /// </summary>

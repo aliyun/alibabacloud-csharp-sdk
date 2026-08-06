@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdatePromptVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The commit message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>优化回答语气</para>
+        /// <para>Optimize response tone.</para>
         /// </summary>
         [NameInMap("CommitMsg")]
         [Validation(Required=false)]
         public string CommitMsg { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,16 +42,19 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string PromptKey { get; set; }
 
         /// <summary>
+        /// <para>The updated template content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你是一个客服助手，请回答：{question}</para>
+        /// <para>You are a customer service assistant. Please answer: {question}</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public string Template { get; set; }
 
         /// <summary>
+        /// <para>The updated variable definition in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</para>
         /// </summary>

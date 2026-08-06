@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdateSkillLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The version label mapping JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Labels { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The Skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdatePromptShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The list of business tags. The value is a string array.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;cs&quot;,&quot;qa&quot;,&quot;support&quot;]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string BizTagsShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the prompt.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>客服问答 Prompt</para>
         /// </summary>
@@ -25,11 +29,18 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The mapping between prompt versions and labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;latest&quot;:&quot;0.0.1&quot;,&quot;stable&quot;:&quot;0.0.1&quot;}</para>
+        /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public string LabelsShrink { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

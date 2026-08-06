@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class GetSkillImportFileUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The Content-Type of the uploaded file. Default value: application/zip.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>application/zip</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

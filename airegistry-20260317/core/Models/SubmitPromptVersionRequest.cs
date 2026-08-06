@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class SubmitPromptVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string PromptKey { get; set; }
 
         /// <summary>
+        /// <para>The version number to publish. If not specified, the current draft version is published by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.1</para>
         /// </summary>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("airegistry", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI Registry 命名空间</para>
+        /// <para>Creates a namespace in AI Registry and returns the corresponding namespace ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI Registry 命名空间</para>
+        /// <para>Creates a namespace in AI Registry and returns the corresponding namespace ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI Registry 命名空间</para>
+        /// <para>Creates a namespace in AI Registry and returns the corresponding namespace ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI Registry 命名空间</para>
+        /// <para>Creates a namespace in AI Registry and returns the corresponding namespace ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt</para>
+        /// <para>Create a prompt and create the initial draft version content of that prompt</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt</para>
+        /// <para>Create a prompt and create the initial draft version content of that prompt</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt</para>
+        /// <para>Create a prompt and create the initial draft version content of that prompt</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt</para>
+        /// <para>Create a prompt and create the initial draft version content of that prompt</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</para>
+        /// <para>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</para>
+        /// <para>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</para>
+        /// <para>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</para>
+        /// <para>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -527,7 +527,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill 草稿版本</para>
+        /// <para>Creates a Skill draft and returns the Skill version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill 草稿版本</para>
+        /// <para>Creates a Skill draft and returns the Skill version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -651,7 +651,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill 草稿版本</para>
+        /// <para>Creates a Skill draft and returns the Skill version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -669,7 +669,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill 草稿版本</para>
+        /// <para>Creates a Skill draft and returns the Skill version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -687,7 +687,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -729,7 +729,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -771,7 +771,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -789,7 +789,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -807,7 +807,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prompt</para>
+        /// <para>Deletes a specified prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -853,7 +853,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prompt</para>
+        /// <para>Deletes a specified prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -899,7 +899,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prompt</para>
+        /// <para>Deletes a specified prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -917,7 +917,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prompt</para>
+        /// <para>Deletes a specified prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +935,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Skill</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -981,7 +981,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Skill</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1027,7 +1027,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Skill</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Skill</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1063,7 +1063,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</para>
+        /// <para>Downloads a skill version through OSS and returns the OSS download URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1113,7 +1113,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</para>
+        /// <para>Downloads a skill version through OSS and returns the OSS download URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1163,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</para>
+        /// <para>Downloads a skill version through OSS and returns the OSS download URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1181,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</para>
+        /// <para>Downloads a skill version through OSS and returns the OSS download URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1199,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>强制发布版本</para>
+        /// <para>Force-publishes a version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1253,7 +1253,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>强制发布版本</para>
+        /// <para>Force-publishes a version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1307,7 +1307,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>强制发布版本</para>
+        /// <para>Force-publishes a version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1325,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>强制发布版本</para>
+        /// <para>Force-publishes a version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1343,7 +1343,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间详细信息</para>
+        /// <para>Queries the details of an AI Governance Center namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1385,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间详细信息</para>
+        /// <para>Queries the details of an AI Governance Center namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1427,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间详细信息</para>
+        /// <para>Queries the details of an AI Governance Center namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1445,7 +1445,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间详细信息</para>
+        /// <para>Queries the details of an AI Governance Center namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1463,7 +1463,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 详情信息</para>
+        /// <para>Retrieves the details of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1509,7 +1509,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 详情信息</para>
+        /// <para>Retrieves the details of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1555,7 +1555,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 详情信息</para>
+        /// <para>Retrieves the details of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1573,7 +1573,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 详情信息</para>
+        /// <para>Retrieves the details of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1591,7 +1591,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 某个版本的信息</para>
+        /// <para>Query the detailed information of a specified version of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1641,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 某个版本的信息</para>
+        /// <para>Query the detailed information of a specified version of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1691,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 某个版本的信息</para>
+        /// <para>Query the detailed information of a specified version of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1709,7 +1709,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Prompt 某个版本的信息</para>
+        /// <para>Query the detailed information of a specified version of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1727,7 +1727,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 详情</para>
+        /// <para>Retrieves the metadata and version information of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1773,7 +1773,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 详情</para>
+        /// <para>Retrieves the metadata and version information of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1819,7 +1819,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 详情</para>
+        /// <para>Retrieves the metadata and version information of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1837,7 +1837,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 详情</para>
+        /// <para>Retrieves the metadata and version information of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1855,7 +1855,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</para>
+        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +1901,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</para>
+        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1947,7 +1947,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</para>
+        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +1965,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</para>
+        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +1983,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定版本详情</para>
+        /// <para>Retrieves the details of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2033,7 +2033,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定版本详情</para>
+        /// <para>Retrieves the details of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2083,7 +2083,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定版本详情</para>
+        /// <para>Retrieves the details of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2101,7 +2101,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定版本详情</para>
+        /// <para>Retrieves the details of a specified version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2119,7 +2119,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间列表</para>
+        /// <para>Lists the namespaces in the AI Governance Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2173,7 +2173,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间列表</para>
+        /// <para>Lists the namespaces in the AI Governance Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2227,7 +2227,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间列表</para>
+        /// <para>Lists the namespaces in the AI Governance Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2245,7 +2245,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取命名空间列表</para>
+        /// <para>Lists the namespaces in the AI Governance Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2263,7 +2263,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Prompt版本列表</para>
+        /// <para>Lists the versions of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,7 +2317,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Prompt版本列表</para>
+        /// <para>Lists the versions of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2371,7 +2371,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Prompt版本列表</para>
+        /// <para>Lists the versions of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2389,7 +2389,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Prompt版本列表</para>
+        /// <para>Lists the versions of a prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2407,7 +2407,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Prompt列表</para>
+        /// <para>Lists the prompts in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2469,7 +2469,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Prompt列表</para>
+        /// <para>Lists the prompts in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2531,7 +2531,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Prompt列表</para>
+        /// <para>Lists the prompts in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2549,7 +2549,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Prompt列表</para>
+        /// <para>Lists the prompts in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2567,7 +2567,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 Skills</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2637,7 +2637,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 Skills</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2707,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 Skills</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2725,7 +2725,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 Skills</para>
+        /// <para>Lists skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +2743,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线版本</para>
+        /// <para>Offlines a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2797,7 +2797,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线版本</para>
+        /// <para>Offlines a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2851,7 +2851,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线版本</para>
+        /// <para>Offlines a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2869,7 +2869,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线版本</para>
+        /// <para>Offlines a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +2887,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线 Skill</para>
+        /// <para>Brings online a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2941,7 +2941,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线 Skill</para>
+        /// <para>Brings online a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2995,7 +2995,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线 Skill</para>
+        /// <para>Brings online a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3013,7 +3013,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线 Skill</para>
+        /// <para>Brings online a Skill or a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3031,7 +3031,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3085,7 +3085,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3139,7 +3139,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3157,7 +3157,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a specific version of a Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3175,7 +3175,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</para>
+        /// <para>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3225,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</para>
+        /// <para>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3275,7 +3275,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</para>
+        /// <para>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3293,7 +3293,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</para>
+        /// <para>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3311,7 +3311,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Skill Draft 审核</para>
+        /// <para>Submits a specific version of a skill for review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3361,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Skill Draft 审核</para>
+        /// <para>Submits a specific version of a skill for review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3411,7 +3411,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Skill Draft 审核</para>
+        /// <para>Submits a specific version of a skill for review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3429,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交 Skill Draft 审核</para>
+        /// <para>Submits a specific version of a skill for review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3447,7 +3447,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间信息</para>
+        /// <para>Updates namespace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3505,7 +3505,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间信息</para>
+        /// <para>Updates namespace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,7 +3563,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间信息</para>
+        /// <para>Updates namespace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3581,7 +3581,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间信息</para>
+        /// <para>Updates namespace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3599,7 +3599,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</para>
+        /// <para>Modifies the metadata of a prompt, such as the description and business tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3667,7 +3667,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</para>
+        /// <para>Modifies the metadata of a prompt, such as the description and business tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3735,7 +3735,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</para>
+        /// <para>Modifies the metadata of a prompt, such as the description and business tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +3753,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</para>
+        /// <para>Modifies the metadata of a prompt, such as the description and business tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,7 +3771,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</para>
+        /// <para>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3829,7 +3829,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</para>
+        /// <para>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3887,7 +3887,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</para>
+        /// <para>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3905,7 +3905,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</para>
+        /// <para>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3923,7 +3923,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务标签</para>
+        /// <para>Updates business labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3973,7 +3973,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务标签</para>
+        /// <para>Updates business labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4023,7 +4023,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务标签</para>
+        /// <para>Updates business labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4041,7 +4041,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务标签</para>
+        /// <para>Updates business labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4059,7 +4059,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Draft</para>
+        /// <para>Updates a draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4113,7 +4113,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Draft</para>
+        /// <para>Updates a draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4167,7 +4167,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Draft</para>
+        /// <para>Updates a draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4185,7 +4185,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Draft</para>
+        /// <para>Updates a draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4203,7 +4203,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新版本标签</para>
+        /// <para>Updates version labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4253,7 +4253,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新版本标签</para>
+        /// <para>Updates version labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4303,7 +4303,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新版本标签</para>
+        /// <para>Updates version labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4321,7 +4321,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新版本标签</para>
+        /// <para>Updates version labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4339,7 +4339,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新可见性</para>
+        /// <para>Updates the visibility.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4389,7 +4389,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新可见性</para>
+        /// <para>Updates the visibility.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4439,7 +4439,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新可见性</para>
+        /// <para>Updates the visibility.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4457,7 +4457,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新可见性</para>
+        /// <para>Updates the visibility.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4475,7 +4475,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</para>
+        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4508,6 +4508,10 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
             {
                 query["Overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVersion))
+            {
+                query["TargetVersion"] = request.TargetVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4529,7 +4533,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</para>
+        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,6 +4566,10 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
             {
                 query["Overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVersion))
+            {
+                query["TargetVersion"] = request.TargetVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4583,7 +4591,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</para>
+        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4601,7 +4609,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</para>
+        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">

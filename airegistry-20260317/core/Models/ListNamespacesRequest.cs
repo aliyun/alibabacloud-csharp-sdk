@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class ListNamespacesRequest : TeaModel {
         /// <summary>
+        /// <para>Performs a fuzzy search by name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>客服</para>
+        /// <para>test-namespace</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filters by tags. Separate multiple tags with commas. Results are matched by intersection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>production,customer-service</para>
         /// </summary>

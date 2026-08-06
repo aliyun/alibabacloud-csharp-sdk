@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdateSkillDraftRequest : TeaModel {
         /// <summary>
+        /// <para>The commit message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>更新说明</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string CommitMsg { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The skill card JSON string that contains complete skill information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string SkillCard { get; set; }
 
         /// <summary>
+        /// <para>The skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string CommitMsg { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The OSS object name (path).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OssObjectName")]
@@ -31,12 +33,22 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string OssObjectName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to overwrite an existing skill. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("Overwrite")]
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.0.0</para>
+        /// </summary>
+        [NameInMap("TargetVersion")]
+        [Validation(Required=false)]
+        public string TargetVersion { get; set; }
 
     }
 

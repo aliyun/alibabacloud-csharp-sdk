@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class CreatePromptRequest : TeaModel {
         /// <summary>
+        /// <para>Business tags, comma-separated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cs,qa,support</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string BizTags { get; set; }
 
         /// <summary>
+        /// <para>Commit message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>初始版本</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string CommitMsg { get; set; }
 
         /// <summary>
+        /// <para>Prompt description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>客服问答 Prompt</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>Prompt unique identifier</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string PromptKey { get; set; }
 
         /// <summary>
+        /// <para>Version number for the initial draft version of the prompt. Defaults to 0.0.1 if not specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.1</para>
         /// </summary>
@@ -62,6 +72,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string TargetVersion { get; set; }
 
         /// <summary>
+        /// <para>Template content for the initial draft version of the prompt</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +83,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Template { get; set; }
 
         /// <summary>
+        /// <para>Variable definitions, JSON array string, supporting name, description, and defaultValue parameters</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</para>
         /// </summary>

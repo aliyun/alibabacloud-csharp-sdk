@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdateNamespaceRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用于管理客服场景的Prompt</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The workspace name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>我的Prompt空间</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,11 +40,29 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        /// <summary>
+        /// <para>The scan policy.</para>
+        /// <para>The policy contains two configuration items:</para>
+        /// <list type="bullet">
+        /// <item><description>minBlockRiskLevel: the risk level for blocking.<list type="bullet">
+        /// <item><description>high: blocks high-risk items.</description></item>
+        /// <item><description>medium: blocks medium-risk and high-risk items.</description></item>
+        /// <item><description>low: blocks all risk levels including high, medium, and low.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>maxSkipRatio: the max false positive rate. If the scan skip ratio exceeds this value, the scan is considered failed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;minBlockRiskLevel&quot;:&quot;medium&quot;,&quot;maxSkipRatio&quot;:0.2}</para>
+        /// </summary>
         [NameInMap("ScanPolicy")]
         [Validation(Required=false)]
         public string ScanPolicy { get; set; }
 
         /// <summary>
+        /// <para>The tags, separated by commas. Pass an empty string to clear all tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>customer-service,production</para>
         /// </summary>
