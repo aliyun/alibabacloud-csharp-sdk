@@ -1,3 +1,7 @@
+2026-08-06 Version: 3.5.4
+- Update API MultiModalAgent: add response parameters Body.Data.Usage.Credits.
+
+
 2026-08-03 Version: 3.5.3
 - Generated csharp 2022-03-02 for Green.
 

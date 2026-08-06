@@ -2017,12 +2017,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
+        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is the AI Guardrails agent.</para>
+        /// <para>The content moderation agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2068,12 +2068,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
+        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is the AI Guardrails agent.</para>
+        /// <para>The content moderation agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2119,12 +2119,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
+        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is the AI Guardrails agent.</para>
+        /// <para>The content moderation agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2142,12 +2142,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This is the synchronous detection API for the multi-modal agent.</para>
+        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is the AI Guardrails agent.</para>
+        /// <para>The content moderation agent.</para>
         /// </description>
         /// 
         /// <param name="request">

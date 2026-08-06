@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The structure of the label item.</para>
+            /// <para>The label item structure.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<MultiModalAgentResponseBodyDataResult> Result { get; set; }
             public class MultiModalAgentResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The description of the label.</para>
+                /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>未检测出风险</para>
+                /// <para>No risk detected</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -64,24 +64,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>A description of the result when the session is terminated.</para>
+                /// <para>The result description when the session is terminated.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>SESSION_KILLED</b>: The session was successfully terminated.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_EXPIRED</b>: The session has expired.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_NO_PERMISSION</b>: The account used to terminate the session does not have sufficient permissions.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_ACCOUNT_ERROR</b>: The account or password used to terminate the session is incorrect.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_IGNORED_USER</b>: The session of an account that does not need to be terminated.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session or command of an Alibaba Cloud operations account.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_KILL_TASK_TIMEOUT</b>: A timeout occurred when terminating the session.</para>
-                /// </description></item>
-                /// <item><description><para><b>SESSION_OTHER_ERROR</b>: Other errors.</para>
-                /// </description></item>
+                /// <item><description><b>SESSION_KILLED</b>: The session is terminated.</description></item>
+                /// <item><description><b>SESSION_EXPIRED</b>: The session has expired.</description></item>
+                /// <item><description><b>SESSION_NO_PERMISSION</b>: Operations account used to terminate the session has insufficient permissions.</description></item>
+                /// <item><description><b>SESSION_ACCOUNT_ERROR</b>: Operations account or password used to terminate the session is incorrect.</description></item>
+                /// <item><description><b>SESSION_IGNORED_USER</b>: The session of an account that does not need to be terminated.</description></item>
+                /// <item><description><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session or command of an Alibaba Cloud O&amp;M account.</description></item>
+                /// <item><description><b>SESSION_KILL_TASK_TIMEOUT</b>: The session termination timed out.</description></item>
+                /// <item><description><b>SESSION_OTHER_ERROR</b>: Other errors.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,15 +86,15 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</para>
+            /// <para>The risk level, which is returned based on the configured high and low risk scores. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>high: High risk</para>
+            /// <item><description><para>high: high risk.</para>
             /// </description></item>
-            /// <item><description><para>medium: Medium risk</para>
+            /// <item><description><para>medium: medium risk.</para>
             /// </description></item>
-            /// <item><description><para>low: Low risk</para>
+            /// <item><description><para>low: low risk.</para>
             /// </description></item>
-            /// <item><description><para>none: No risk detected</para>
+            /// <item><description><para>none: no risk detected.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -114,21 +106,21 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Token usage.</para>
+            /// <para>The token usage.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public MultiModalAgentResponseBodyDataUsage Usage { get; set; }
             public class MultiModalAgentResponseBodyDataUsage : TeaModel {
                 /// <summary>
-                /// <para>Agent details.</para>
+                /// <para>The agent details.</para>
                 /// </summary>
                 [NameInMap("AgentDetail")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> AgentDetail { get; set; }
 
                 /// <summary>
-                /// <para>The length of the content.</para>
+                /// <para>The content length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -137,8 +129,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public long? ContentLength { get; set; }
 
+                [NameInMap("Credits")]
+                [Validation(Required=false)]
+                public double? Credits { get; set; }
+
                 /// <summary>
-                /// <para>The length of the prompt.</para>
+                /// <para>The prompt length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
