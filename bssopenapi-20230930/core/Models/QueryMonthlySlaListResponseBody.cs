@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public double? AvailableRate { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the damage record, which is used for targeted compensation application.</para>
+            /// <para>The unique ID of the damage record, used for targeted claims.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9b7***9413</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Month { get; set; }
 
             /// <summary>
-            /// <para>The monthly service charge.</para>
+            /// <para>The monthly service fee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365.00</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The compensation description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SLA赔付</para>
+            /// <para>SLA compensation</para>
             /// </summary>
             [NameInMap("PayDescription")]
             [Validation(Required=false)]
             public string PayDescription { get; set; }
 
             /// <summary>
-            /// <para>The compensation ratio. Unit: %.</para>
+            /// <para>The compensation ratio, in percentage (%).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public double? PayRate { get; set; }
 
             /// <summary>
-            /// <para>The compensation status. Valid values: 0 (uncompensated) and 1 (compensated).</para>
+            /// <para>The compensation status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: not compensated.</description></item>
+            /// <item><description>1: compensated.</description></item>
+            /// <item><description>2: no compensation required.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +122,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The compensation amount.</para>
+            /// <para>The compensation amount that should be paid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36.5</para>
@@ -129,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The response metadata.</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

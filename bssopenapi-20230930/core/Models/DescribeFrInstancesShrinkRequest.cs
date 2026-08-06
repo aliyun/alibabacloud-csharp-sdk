@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The enterprise and account list. If this parameter is empty, the current account is queried.</para>
+        /// <para>The enterprise and account list. If empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The resource dimension to query.</para>
+        /// <para>The resource dimension for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cu</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance label value of the resource plan.</para>
+        /// <para>The instance tag label value of the resource plan instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FR-***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceTag { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684202000018</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sorting rule.</para>
+        /// <para>The collation for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>

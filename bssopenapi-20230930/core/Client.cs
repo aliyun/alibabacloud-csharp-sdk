@@ -3200,7 +3200,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query budget list</para>
+        /// <para>Queries a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3264,7 +3264,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query budget list</para>
+        /// <para>Queries a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3328,7 +3328,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query budget list</para>
+        /// <para>Queries a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3346,7 +3346,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query budget list</para>
+        /// <para>Queries a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8492,12 +8492,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SLA compensation list of a user.</para>
+        /// <para>Queries the SLA compensation list for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8569,12 +8569,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SLA compensation list of a user.</para>
+        /// <para>Queries the SLA compensation list for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8646,12 +8646,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SLA compensation list of a user.</para>
+        /// <para>Queries the SLA compensation list for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8669,12 +8669,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SLA compensation list of a user.</para>
+        /// <para>Queries the SLA compensation list for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// <para>Provides the SLA compensation details list for a user. Only data from the last two months is available.</para>
         /// </description>
         /// 
         /// <param name="request">

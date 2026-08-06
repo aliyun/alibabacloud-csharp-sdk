@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryMonthlySlaListRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number. Default value: 1, which indicates the first page.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</para>
+        /// <para>The enterprise and account list. If this parameter is empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<QueryMonthlySlaListRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryMonthlySlaListRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accounts to query. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Optional. Month list in yyyyMM format.</para>
+        /// <para>Optional. List of months in yyyyMM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[202602,202603]</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<int?> Months { get; set; }
 
         /// <summary>
-        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

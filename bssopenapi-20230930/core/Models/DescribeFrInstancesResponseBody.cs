@@ -46,11 +46,29 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
+            [NameInMap("AutoPurchase")]
+            [Validation(Required=false)]
+            public DescribeFrInstancesResponseBodyDataAutoPurchase AutoPurchase { get; set; }
+            public class DescribeFrInstancesResponseBodyDataAutoPurchase : TeaModel {
+                [NameInMap("AlreadyAutoPurchase")]
+                [Validation(Required=false)]
+                public bool? AlreadyAutoPurchase { get; set; }
+
+                [NameInMap("SettingAutoPurchase")]
+                [Validation(Required=false)]
+                public bool? SettingAutoPurchase { get; set; }
+
+                [NameInMap("SupportAutoPurchase")]
+                [Validation(Required=false)]
+                public bool? SupportAutoPurchase { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The capacity type name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>总量递减型</para>
+            /// <para>Total decrement</para>
             /// </summary>
             [NameInMap("CapacitiyTypeName")]
             [Validation(Required=false)]
@@ -77,7 +95,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>总量递减型</para>
+                /// <para>Total decrement</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -116,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ALB资源包</para>
+                /// <para>ALB Resource Plan</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -138,14 +156,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>性能测试</para>
+            /// <para>Performance Testing</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
             public string CommodityName { get; set; }
 
             /// <summary>
-            /// <para>The current capacity baseline unit.</para>
+            /// <para>The current capacity base unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CU</para>
@@ -155,7 +173,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CurrCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The current capacity baseline value.</para>
+            /// <para>The current capacity base value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000.000000</para>
@@ -205,7 +223,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The commitment cycle name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>小时</para>
+                /// <para>Hour</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -227,7 +245,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commitment cycle name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小时</para>
+            /// <para>Hour</para>
             /// </summary>
             [NameInMap("CycleTypeName")]
             [Validation(Required=false)]
@@ -254,7 +272,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The deductible region.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>北京</para>
+                /// <para>Beijing</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -262,8 +280,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
             }
 
+            [NameInMap("EnableDeductRule")]
+            [Validation(Required=false)]
+            public bool? EnableDeductRule { get; set; }
+
             /// <summary>
-            /// <para>Indicates whether the resource plan can be exchanged.</para>
+            /// <para>Indicates whether exchange is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -273,7 +295,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? EnableExchange { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the resource plan can be renewed.</para>
+            /// <para>Indicates whether renewal is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -283,7 +305,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? EnableRenew { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the resource plan can be upgraded.</para>
+            /// <para>Indicates whether upgrade is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -303,7 +325,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The commodity code for exchange.</para>
+            /// <para>The exchange commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -313,7 +335,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ExchangeCommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The initial capacity baseline unit.</para>
+            /// <para>The initial capacity base unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CU</para>
@@ -323,7 +345,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InitCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The initial capacity baseline value.</para>
+            /// <para>The initial capacity base value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000.000000</para>
@@ -413,7 +435,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>负载均衡</para>
+                /// <para>Server Load Balancer</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -435,7 +457,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>性能测试</para>
+            /// <para>Performance Testing</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
@@ -516,7 +538,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>有效</para>
+                /// <para>Valid</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -538,7 +560,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The resource status name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>有效</para>
+            /// <para>Valid</para>
             /// </summary>
             [NameInMap("StatusName")]
             [Validation(Required=false)]
@@ -565,7 +587,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>中国内地区域</para>
+                /// <para>Chinese mainland regions</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -594,7 +616,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The period capacity baseline unit.</para>
+            /// <para>The periodic capacity base unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CU</para>
@@ -604,7 +626,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string PeriodCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The period capacity baseline value.</para>
+            /// <para>The periodic capacity base value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000.000000</para>

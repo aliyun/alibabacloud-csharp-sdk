@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DescribeBudgetsRequest : TeaModel {
         /// <summary>
-        /// <para>The budget name. Fuzzy search is supported.</para>
+        /// <para>The budget name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>department1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ExpireStatus { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2688801000001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

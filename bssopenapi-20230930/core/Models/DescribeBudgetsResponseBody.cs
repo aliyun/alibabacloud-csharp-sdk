@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BudgetType { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>budget-1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The end period.</para>
+            /// <para>The end period of the budget cycle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-12</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CycleEndPeriod { get; set; }
 
             /// <summary>
-            /// <para>The specified quota per cycle.</para>
+            /// <para>The specified quota for each cycle.</para>
             /// </summary>
             [NameInMap("CycleQuota")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>The start period.</para>
+            /// <para>The start period of the budget cycle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeBudgetsResponseBodyDataEcIdAccountIdsFilter EcIdAccountIdsFilter { get; set; }
             public class DescribeBudgetsResponseBodyDataEcIdAccountIdsFilter : TeaModel {
                 /// <summary>
-                /// <para>The member account IDs.</para>
+                /// <para>The IDs of the member accounts.</para>
                 /// </summary>
                 [NameInMap("AccountIds")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string SelectType { get; set; }
 
                 /// <summary>
-                /// <para>The filter value list.</para>
+                /// <para>The list of filter values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public List<DescribeBudgetsResponseBodyDataWarnConfs> WarnConfs { get; set; }
             public class DescribeBudgetsResponseBodyDataWarnConfs : TeaModel {
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The comment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comment1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether EventBridge is enabled.</para>
+                /// <para>Specifies whether EventBridge is enabled.</para>
                 /// </summary>
                 [NameInMap("EventBridge")]
                 [Validation(Required=false)]
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The sort sequence number. This parameter is present only in responses. Alerts are numbered in ascending order by alert ID, starting from 1.</para>
+                /// <para>The sequence number. This field is present only in responses and is numbered starting from 1 in ascending order of alert ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
