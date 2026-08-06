@@ -237,6 +237,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("SecureBootOptions")]
+                [Validation(Required=false)]
+                public DescribeImagesResponseBodyImagesImageSecureBootOptions SecureBootOptions { get; set; }
+                public class DescribeImagesResponseBodyImagesImageSecureBootOptions : TeaModel {
+                    [NameInMap("SecureBootSupport")]
+                    [Validation(Required=false)]
+                    public string SecureBootSupport { get; set; }
+
+                }
+
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }

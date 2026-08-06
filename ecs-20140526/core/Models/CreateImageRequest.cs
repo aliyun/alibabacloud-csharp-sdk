@@ -294,6 +294,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SecureBootOptions")]
+        [Validation(Required=false)]
+        public CreateImageRequestSecureBootOptions SecureBootOptions { get; set; }
+        public class CreateImageRequestSecureBootOptions : TeaModel {
+            [NameInMap("SecureBootSupport")]
+            [Validation(Required=false)]
+            public string SecureBootSupport { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The snapshot ID used to create the custom image.</para>
         /// <remarks>

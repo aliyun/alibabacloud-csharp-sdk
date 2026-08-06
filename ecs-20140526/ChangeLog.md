@@ -1,3 +1,8 @@
+2026-08-06 Version: 7.9.5
+- Update API CreateImage: add request parameters SecureBootOptions.
+- Update API DescribeImages: add response parameters Body.Images.$.SecureBootOptions.
+
+
 2026-08-03 Version: 7.9.4
 - Update API CreateNetworkInterface: add request parameters EnhancedNetwork.EnableExpress.
 - Update API DescribeInstanceTypes: add response parameters Body.InstanceTypes.$.EnhancedNetwork.ExpressSupport.

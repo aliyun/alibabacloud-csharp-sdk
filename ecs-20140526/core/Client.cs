@@ -2213,17 +2213,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify available private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoints to automatically allocate private IP addresses.</para>
+        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only Elastic Network Interfaces (ENIs) in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary ENI, the instance to which the ENI is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an ENI is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2310,17 +2310,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify available private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoints to automatically allocate private IP addresses.</para>
+        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only Elastic Network Interfaces (ENIs) in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary ENI, the instance to which the ENI is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an ENI is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2407,17 +2407,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify available private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoints to automatically allocate private IP addresses.</para>
+        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only Elastic Network Interfaces (ENIs) in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary ENI, the instance to which the ENI is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an ENI is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2436,17 +2436,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify available private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoints to automatically allocate private IP addresses.</para>
+        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only Elastic Network Interfaces (ENIs) in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary ENI, the instance to which the ENI is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an ENI is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11545,6 +11545,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecureBootOptions))
+            {
+                query["SecureBootOptions"] = request.SecureBootOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
@@ -11697,6 +11701,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecureBootOptions))
+            {
+                query["SecureBootOptions"] = request.SecureBootOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
@@ -86218,11 +86226,98 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Creating an instance incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This is an asynchronous operation. After a request to create an instance is successfully sent, the instance ID is returned. The instance is not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instance is created and started.</para>
+        /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <h3>Before you begin.</h3>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
+        /// <item><description>When resource inventory is insufficient to complete the current instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure event</a>.</description></item>
+        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before you create a VPC-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding region.</description></item>
+        /// </list>
         /// <h3>Before you begin.</h3>
         /// <h3>Recommendations.</h3>
-        /// <h2>Request example.</h2>
+        /// <h2>Request examples</h2>
+        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, assign a public IP address, and set the instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;ap-southeast-1&quot;, //Set the China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID
+        /// SystemDisk:{
+        ///   Category:&quot;cloud_essd&quot;, //Set the system disk category to enterprise SSD
+        ///   Size:40, //Set the system disk size to 40 GiB
+        /// },
+        /// DataDisk:[
+        ///   {
+        ///     Category:&quot;cloud_essd&quot;, //Set the data disk category to enterprise SSD
+        ///     Size:100, //Set the data disk size to 100 GiB
+        ///   }
+        /// ],
+        /// HostName:&quot;ECS-test&quot;, //Set the instance hostname
+        /// Password:&quot;ECS@test1234&quot;, //Set the instance logon password
+        /// InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10 Mbit/s
+        /// </c></pre>
+        /// <para>Based on the preceding configurations, create instances of different types:</para>
+        /// <details>
+        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// ```
+        /// Amount:5, //Set the quantity to 5
+        /// InstanceChargeType:"PrePaid", //Specify subscription billing
+        /// PeriodUnit:"Month", //Set the period unit to month
+        /// Period:1, //Set the period to 1 month
+        /// AutoRenew:true, //Enable auto-renewal
+        /// AutoRenewPeriod:1 //Set the auto-renewal period to 1 month
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 10 pay-as-you-go instances</summary>
+        /// ```
+        /// Amount:10, //Set the quantity to 10
+        /// InstanceChargeType:"PostPaid", //Specify pay-as-you-go billing
+        /// SpotStrategy:"NoSpot" //Default value, indicating regular pay-as-you-go
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 20 spot instances with a bidding strategy and protection period</summary>
+        /// ```
+        /// Amount:20, //Set the quantity to 20
+        /// InstanceChargeType:"PostPaid",
+        /// SpotStrategy:"SpotAsPriceGo", //Set the bidding strategy to automatically bid based on market price
+        /// SpotDuration:1 //Set the spot instance protection period to 1 hour
+        /// ```
+        /// </details>
+        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html). You now want to use this template to create ECS instances in the China (Hangzhou) region. Example:
+        /// <details>
+        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// Amount:10, //Set the quantity to 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" //Set the launch template ID
+        /// ```
+        /// </details>
+        /// >Notice: If you specify both instance parameters and template parameters, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, pay-as-you-go instances are created.
+        /// <details>
+        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains a system disk and data disks)</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****，//Custom image ID
+        /// InstanceType = ecs.u1-c1m1.large，//Instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****，//Security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****，//vSwitch ID
+        /// SystemDisk.Size = 50，//Set the size of the system disk included in the full image
+        /// SystemDisk.Category = cloud_auto，//Set the category of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb，//Set the mount point of the data disk included in the full image
+        /// DataDisk.1.Size = 50，//Set the size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd，//Set the category of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc，//Mount point of the additional data disk. To replace the data disk included in the full image with an additional data disk, set DataDisk.1.Device = /dev/xvdb (the default mount point of the data disk in the full image).
+        /// DataDisk.2.Size = 70，//Size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto，//Category of the additional data disk
+        /// ```
+        /// </details>
         /// </description>
         /// 
         /// <param name="request">
@@ -86581,11 +86676,98 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Creating an instance incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This is an asynchronous operation. After a request to create an instance is successfully sent, the instance ID is returned. The instance is not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instance is created and started.</para>
+        /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <h3>Before you begin.</h3>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
+        /// <item><description>When resource inventory is insufficient to complete the current instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure event</a>.</description></item>
+        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before you create a VPC-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding region.</description></item>
+        /// </list>
         /// <h3>Before you begin.</h3>
         /// <h3>Recommendations.</h3>
-        /// <h2>Request example.</h2>
+        /// <h2>Request examples</h2>
+        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, assign a public IP address, and set the instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;ap-southeast-1&quot;, //Set the China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID
+        /// SystemDisk:{
+        ///   Category:&quot;cloud_essd&quot;, //Set the system disk category to enterprise SSD
+        ///   Size:40, //Set the system disk size to 40 GiB
+        /// },
+        /// DataDisk:[
+        ///   {
+        ///     Category:&quot;cloud_essd&quot;, //Set the data disk category to enterprise SSD
+        ///     Size:100, //Set the data disk size to 100 GiB
+        ///   }
+        /// ],
+        /// HostName:&quot;ECS-test&quot;, //Set the instance hostname
+        /// Password:&quot;ECS@test1234&quot;, //Set the instance logon password
+        /// InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10 Mbit/s
+        /// </c></pre>
+        /// <para>Based on the preceding configurations, create instances of different types:</para>
+        /// <details>
+        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// ```
+        /// Amount:5, //Set the quantity to 5
+        /// InstanceChargeType:"PrePaid", //Specify subscription billing
+        /// PeriodUnit:"Month", //Set the period unit to month
+        /// Period:1, //Set the period to 1 month
+        /// AutoRenew:true, //Enable auto-renewal
+        /// AutoRenewPeriod:1 //Set the auto-renewal period to 1 month
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 10 pay-as-you-go instances</summary>
+        /// ```
+        /// Amount:10, //Set the quantity to 10
+        /// InstanceChargeType:"PostPaid", //Specify pay-as-you-go billing
+        /// SpotStrategy:"NoSpot" //Default value, indicating regular pay-as-you-go
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 20 spot instances with a bidding strategy and protection period</summary>
+        /// ```
+        /// Amount:20, //Set the quantity to 20
+        /// InstanceChargeType:"PostPaid",
+        /// SpotStrategy:"SpotAsPriceGo", //Set the bidding strategy to automatically bid based on market price
+        /// SpotDuration:1 //Set the spot instance protection period to 1 hour
+        /// ```
+        /// </details>
+        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html). You now want to use this template to create ECS instances in the China (Hangzhou) region. Example:
+        /// <details>
+        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// Amount:10, //Set the quantity to 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" //Set the launch template ID
+        /// ```
+        /// </details>
+        /// >Notice: If you specify both instance parameters and template parameters, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, pay-as-you-go instances are created.
+        /// <details>
+        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains a system disk and data disks)</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****，//Custom image ID
+        /// InstanceType = ecs.u1-c1m1.large，//Instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****，//Security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****，//vSwitch ID
+        /// SystemDisk.Size = 50，//Set the size of the system disk included in the full image
+        /// SystemDisk.Category = cloud_auto，//Set the category of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb，//Set the mount point of the data disk included in the full image
+        /// DataDisk.1.Size = 50，//Set the size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd，//Set the category of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc，//Mount point of the additional data disk. To replace the data disk included in the full image with an additional data disk, set DataDisk.1.Device = /dev/xvdb (the default mount point of the data disk in the full image).
+        /// DataDisk.2.Size = 70，//Size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto，//Category of the additional data disk
+        /// ```
+        /// </details>
         /// </description>
         /// 
         /// <param name="request">
@@ -86944,11 +87126,98 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Creating an instance incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This is an asynchronous operation. After a request to create an instance is successfully sent, the instance ID is returned. The instance is not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instance is created and started.</para>
+        /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <h3>Before you begin.</h3>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
+        /// <item><description>When resource inventory is insufficient to complete the current instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure event</a>.</description></item>
+        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before you create a VPC-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding region.</description></item>
+        /// </list>
         /// <h3>Before you begin.</h3>
         /// <h3>Recommendations.</h3>
-        /// <h2>Request example.</h2>
+        /// <h2>Request examples</h2>
+        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, assign a public IP address, and set the instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;ap-southeast-1&quot;, //Set the China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID
+        /// SystemDisk:{
+        ///   Category:&quot;cloud_essd&quot;, //Set the system disk category to enterprise SSD
+        ///   Size:40, //Set the system disk size to 40 GiB
+        /// },
+        /// DataDisk:[
+        ///   {
+        ///     Category:&quot;cloud_essd&quot;, //Set the data disk category to enterprise SSD
+        ///     Size:100, //Set the data disk size to 100 GiB
+        ///   }
+        /// ],
+        /// HostName:&quot;ECS-test&quot;, //Set the instance hostname
+        /// Password:&quot;ECS@test1234&quot;, //Set the instance logon password
+        /// InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10 Mbit/s
+        /// </c></pre>
+        /// <para>Based on the preceding configurations, create instances of different types:</para>
+        /// <details>
+        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// ```
+        /// Amount:5, //Set the quantity to 5
+        /// InstanceChargeType:"PrePaid", //Specify subscription billing
+        /// PeriodUnit:"Month", //Set the period unit to month
+        /// Period:1, //Set the period to 1 month
+        /// AutoRenew:true, //Enable auto-renewal
+        /// AutoRenewPeriod:1 //Set the auto-renewal period to 1 month
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 10 pay-as-you-go instances</summary>
+        /// ```
+        /// Amount:10, //Set the quantity to 10
+        /// InstanceChargeType:"PostPaid", //Specify pay-as-you-go billing
+        /// SpotStrategy:"NoSpot" //Default value, indicating regular pay-as-you-go
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 20 spot instances with a bidding strategy and protection period</summary>
+        /// ```
+        /// Amount:20, //Set the quantity to 20
+        /// InstanceChargeType:"PostPaid",
+        /// SpotStrategy:"SpotAsPriceGo", //Set the bidding strategy to automatically bid based on market price
+        /// SpotDuration:1 //Set the spot instance protection period to 1 hour
+        /// ```
+        /// </details>
+        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html). You now want to use this template to create ECS instances in the China (Hangzhou) region. Example:
+        /// <details>
+        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// Amount:10, //Set the quantity to 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" //Set the launch template ID
+        /// ```
+        /// </details>
+        /// >Notice: If you specify both instance parameters and template parameters, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, pay-as-you-go instances are created.
+        /// <details>
+        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains a system disk and data disks)</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****，//Custom image ID
+        /// InstanceType = ecs.u1-c1m1.large，//Instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****，//Security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****，//vSwitch ID
+        /// SystemDisk.Size = 50，//Set the size of the system disk included in the full image
+        /// SystemDisk.Category = cloud_auto，//Set the category of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb，//Set the mount point of the data disk included in the full image
+        /// DataDisk.1.Size = 50，//Set the size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd，//Set the category of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc，//Mount point of the additional data disk. To replace the data disk included in the full image with an additional data disk, set DataDisk.1.Device = /dev/xvdb (the default mount point of the data disk in the full image).
+        /// DataDisk.2.Size = 70，//Size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto，//Category of the additional data disk
+        /// ```
+        /// </details>
         /// </description>
         /// 
         /// <param name="request">
@@ -86971,11 +87240,98 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Creating an instance incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This is an asynchronous operation. After a request to create an instance is successfully sent, the instance ID is returned. The instance is not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instance is created and started.</para>
+        /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <h3>Before you begin.</h3>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
+        /// <item><description>When resource inventory is insufficient to complete the current instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure event</a>.</description></item>
+        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before you create a VPC-type instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding region.</description></item>
+        /// </list>
         /// <h3>Before you begin.</h3>
         /// <h3>Recommendations.</h3>
-        /// <h2>Request example.</h2>
+        /// <h2>Request examples</h2>
+        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, assign a public IP address, and set the instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;ap-southeast-1&quot;, //Set the China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID
+        /// SystemDisk:{
+        ///   Category:&quot;cloud_essd&quot;, //Set the system disk category to enterprise SSD
+        ///   Size:40, //Set the system disk size to 40 GiB
+        /// },
+        /// DataDisk:[
+        ///   {
+        ///     Category:&quot;cloud_essd&quot;, //Set the data disk category to enterprise SSD
+        ///     Size:100, //Set the data disk size to 100 GiB
+        ///   }
+        /// ],
+        /// HostName:&quot;ECS-test&quot;, //Set the instance hostname
+        /// Password:&quot;ECS@test1234&quot;, //Set the instance logon password
+        /// InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10 Mbit/s
+        /// </c></pre>
+        /// <para>Based on the preceding configurations, create instances of different types:</para>
+        /// <details>
+        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// ```
+        /// Amount:5, //Set the quantity to 5
+        /// InstanceChargeType:"PrePaid", //Specify subscription billing
+        /// PeriodUnit:"Month", //Set the period unit to month
+        /// Period:1, //Set the period to 1 month
+        /// AutoRenew:true, //Enable auto-renewal
+        /// AutoRenewPeriod:1 //Set the auto-renewal period to 1 month
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 10 pay-as-you-go instances</summary>
+        /// ```
+        /// Amount:10, //Set the quantity to 10
+        /// InstanceChargeType:"PostPaid", //Specify pay-as-you-go billing
+        /// SpotStrategy:"NoSpot" //Default value, indicating regular pay-as-you-go
+        /// ```
+        /// </details>
+        /// <details>
+        /// <summary>Example: Create 20 spot instances with a bidding strategy and protection period</summary>
+        /// ```
+        /// Amount:20, //Set the quantity to 20
+        /// InstanceChargeType:"PostPaid",
+        /// SpotStrategy:"SpotAsPriceGo", //Set the bidding strategy to automatically bid based on market price
+        /// SpotDuration:1 //Set the spot instance protection period to 1 hour
+        /// ```
+        /// </details>
+        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html). You now want to use this template to create ECS instances in the China (Hangzhou) region. Example:
+        /// <details>
+        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// Amount:10, //Set the quantity to 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" //Set the launch template ID
+        /// ```
+        /// </details>
+        /// >Notice: If you specify both instance parameters and template parameters, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, pay-as-you-go instances are created.
+        /// <details>
+        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains a system disk and data disks)</summary>
+        /// ```
+        /// RegionId:"ap-southeast-1", //Set the China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****，//Custom image ID
+        /// InstanceType = ecs.u1-c1m1.large，//Instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****，//Security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****，//vSwitch ID
+        /// SystemDisk.Size = 50，//Set the size of the system disk included in the full image
+        /// SystemDisk.Category = cloud_auto，//Set the category of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb，//Set the mount point of the data disk included in the full image
+        /// DataDisk.1.Size = 50，//Set the size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd，//Set the category of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc，//Mount point of the additional data disk. To replace the data disk included in the full image with an additional data disk, set DataDisk.1.Device = /dev/xvdb (the default mount point of the data disk in the full image).
+        /// DataDisk.2.Size = 70，//Size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto，//Category of the additional data disk
+        /// ```
+        /// </details>
         /// </description>
         /// 
         /// <param name="request">
