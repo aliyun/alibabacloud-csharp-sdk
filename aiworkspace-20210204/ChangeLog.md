@@ -1,3 +1,11 @@
+2026-08-06 Version: 6.3.0
+- Support API CreatePrompt.
+- Support API DeletePrompt.
+- Support API GetPrompt.
+- Support API ListPrompts.
+- Support API UpdatePrompt.
+
+
 2026-07-30 Version: 6.2.1
 - Update API GetPermission: add request parameters CallerAccessKeyId.
 - Update API GetPermission: add request parameters CallerSecurityToken.

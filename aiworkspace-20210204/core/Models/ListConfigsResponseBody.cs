@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<ListConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>The configuration ID, which is globally unique.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wc-95******o36ylr</para>
             /// </summary>
@@ -27,11 +29,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The key of the configuration item. The following keys are supported:</para>
             /// <list type="bullet">
-            /// <item><description>tempStoragePath: temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</description></item>
-            /// <item><description>isAutoRecycle: automatic reclamation configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
-            /// <item><description>priorityConfig: priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-            /// <item><description>quotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
-            /// <item><description>predefinedTags: preset tags for the workspace. Resources that are created must include these tags.</description></item>
+            /// <item><description>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</description></item>
+            /// <item><description>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
+            /// <item><description>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
+            /// <item><description>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+            /// <item><description>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned configuration items.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

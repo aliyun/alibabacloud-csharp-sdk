@@ -3975,6 +3975,196 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePromptResponse
+        /// </returns>
+        public CreatePromptResponse CreatePromptWithOptions(CreatePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkContent))
+            {
+                body["FrameworkContent"] = request.FrameworkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                body["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                body["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePromptResponse
+        /// </returns>
+        public async Task<CreatePromptResponse> CreatePromptWithOptionsAsync(CreatePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkContent))
+            {
+                body["FrameworkContent"] = request.FrameworkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                body["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                body["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePromptResponse
+        /// </returns>
+        public CreatePromptResponse CreatePrompt(CreatePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePromptWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePromptResponse
+        /// </returns>
+        public async Task<CreatePromptResponse> CreatePromptAsync(CreatePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePromptWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</para>
         /// </summary>
         /// 
@@ -6713,6 +6903,172 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteModelVersionLabelsWithOptionsAsync(ModelId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When calling this operation, note the following:</para>
+        /// <list type="bullet">
+        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePromptResponse
+        /// </returns>
+        public DeletePromptResponse DeletePromptWithOptions(string PromptId, DeletePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When calling this operation, note the following:</para>
+        /// <list type="bullet">
+        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePromptResponse
+        /// </returns>
+        public async Task<DeletePromptResponse> DeletePromptWithOptionsAsync(string PromptId, DeletePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When calling this operation, note the following:</para>
+        /// <list type="bullet">
+        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePromptResponse
+        /// </returns>
+        public DeletePromptResponse DeletePrompt(string PromptId, DeletePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeletePromptWithOptions(PromptId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a prompt.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When calling this operation, note the following:</para>
+        /// <list type="bullet">
+        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePromptResponse
+        /// </returns>
+        public async Task<DeletePromptResponse> DeletePromptAsync(string PromptId, DeletePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeletePromptWithOptionsAsync(PromptId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9791,6 +10147,136 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetPermissionWithOptionsAsync(WorkspaceId, PermissionCode, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a prompt.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPromptResponse
+        /// </returns>
+        public GetPromptResponse GetPromptWithOptions(string PromptId, GetPromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a prompt.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPromptResponse
+        /// </returns>
+        public async Task<GetPromptResponse> GetPromptWithOptionsAsync(string PromptId, GetPromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a prompt.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPromptResponse
+        /// </returns>
+        public GetPromptResponse GetPrompt(string PromptId, GetPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetPromptWithOptions(PromptId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a prompt.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPromptResponse
+        /// </returns>
+        public async Task<GetPromptResponse> GetPromptAsync(string PromptId, GetPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetPromptWithOptionsAsync(PromptId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13607,6 +14093,176 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListProductsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of prompts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPromptsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPromptsResponse
+        /// </returns>
+        public ListPromptsResponse ListPromptsWithOptions(ListPromptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                query["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPrompts",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPromptsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of prompts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPromptsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPromptsResponse
+        /// </returns>
+        public async Task<ListPromptsResponse> ListPromptsWithOptionsAsync(ListPromptsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                query["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPrompts",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPromptsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of prompts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPromptsResponse
+        /// </returns>
+        public ListPromptsResponse ListPrompts(ListPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPromptsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of prompts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPromptsResponse
+        /// </returns>
+        public async Task<ListPromptsResponse> ListPromptsAsync(ListPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPromptsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18409,6 +19065,180 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelVersionWithOptionsAsync(ModelId, VersionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the prompt of a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePromptResponse
+        /// </returns>
+        public UpdatePromptResponse UpdatePromptWithOptions(string PromptId, UpdatePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkContent))
+            {
+                body["FrameworkContent"] = request.FrameworkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                body["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the prompt of a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePromptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePromptResponse
+        /// </returns>
+        public async Task<UpdatePromptResponse> UpdatePromptWithOptionsAsync(string PromptId, UpdatePromptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkContent))
+            {
+                body["FrameworkContent"] = request.FrameworkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameworkType))
+            {
+                body["FrameworkType"] = request.FrameworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePrompt",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/prompts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(PromptId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the prompt of a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePromptResponse
+        /// </returns>
+        public UpdatePromptResponse UpdatePrompt(string PromptId, UpdatePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdatePromptWithOptions(PromptId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the prompt of a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePromptResponse
+        /// </returns>
+        public async Task<UpdatePromptResponse> UpdatePromptAsync(string PromptId, UpdatePromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdatePromptWithOptionsAsync(PromptId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
