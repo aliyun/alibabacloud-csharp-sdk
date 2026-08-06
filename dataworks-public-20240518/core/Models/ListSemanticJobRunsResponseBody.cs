@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSemanticJobRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paginated run record results. Use the JobRunId to download the results of a specific run, and use the ExecutorJobId to query details, logs, or stop a run.</para>
+        /// <para>The paginated run record results. Use the JobRunId to download the results of a specific run, and use the ExecutorJobId to query details, retrieve logs, or stop a run.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListSemanticJobRunsResponseBodyDataJobRuns> JobRuns { get; set; }
             public class ListSemanticJobRunsResponseBodyDataJobRuns : TeaModel {
                 /// <summary>
-                /// <para>The executor job ID. Pass this value to the ExecutorJobId parameter of GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</para>
+                /// <para>The executor job ID. Pass this value as the ExecutorJobId parameter to GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exec-job-demo</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The name of the job to which this run belongs. This value can be used to re-run the job, query run records, or download results.</para>
+                /// <para>The name of the job to which this run belongs. You can use this value to rerun the job, query run records, or download results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>semantic-job-demo</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The semantic job run ID. Pass this value to the JobRunId parameter of DownloadSemanticResults to download the results of this run.</para>
+                /// <para>The semantic job run ID. Pass this value as the JobRunId parameter to DownloadSemanticResults to download the results of this run.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01H00000000000000000000000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number returned, starting from 1.</para>
+            /// <para>The page number of the returned page, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page returned.</para>
+            /// <para>The number of records per page in the current response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676271D6-53B4-57BE-89FA-72F7AE1418DF</para>

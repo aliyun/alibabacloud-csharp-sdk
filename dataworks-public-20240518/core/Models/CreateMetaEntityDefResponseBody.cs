@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaEntityDefResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the created entity type.</para>
+        /// <para>The entity type after creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_entity-biz_api</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTableBusinessMetadataRequest : TeaModel {
         /// <summary>
-        /// <para>The values of custom attributes. The key specifies the identifier of a custom attribute, and the value is an array that can contain at most one item. To delete the value for an attribute, pass an empty array. To update only custom attributes, omit the <c>Readme</c> parameter to prevent its existing value from being cleared. To leave the custom attributes unchanged, pass an empty object <c>{}</c>.</para>
+        /// <para>The custom attribute values. The key is the custom attribute identifier, and the value contains at most one element. An empty list indicates that the attribute value is deleted. Passing this parameter without Readme prevents the usage description from being cleared. An empty object indicates that custom attributes are not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Dictionary<string, List<string>> CustomAttributes { get; set; }
 
         /// <summary>
-        /// <para>The table ID. For the required format, see the response of the <c>ListTables</c> operation.</para>
+        /// <para>The ID of the table. For the format, refer to the response of the ListTables operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The Readme of the table, which supports rich text format.</para>
+        /// <para>The usage description. Rich text format is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <h2>introduction</h2>

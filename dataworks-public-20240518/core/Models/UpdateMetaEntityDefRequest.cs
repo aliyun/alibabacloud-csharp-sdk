@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new display name. The maximum length is 32 characters.</para>
+        /// <para>The new display name, up to 32 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business API</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<MetaEntityAttributeDef> NewAttributeDefs { get; set; }
 
         /// <summary>
-        /// <para>The updates to existing attribute definitions. You can modify only the display name and description. You can also add enumerated values for attributes of the ENUM type.</para>
+        /// <para>Updates to existing attribute definitions. Only modifying the display name, description, and appending enum values to ENUM types are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>

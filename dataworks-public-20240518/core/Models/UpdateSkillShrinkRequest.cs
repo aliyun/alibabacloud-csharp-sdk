@@ -33,9 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The expected version number for optimistic locking. If not specified, the update is based on the current highest version.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ExpectedVersion")]
         [Validation(Required=false)]

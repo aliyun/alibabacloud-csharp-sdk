@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public Dictionary<string, object> AdvanceSettings { get; set; }
 
             /// <summary>
-            /// <para>The code parameter information returned by the executor. Used for troubleshooting the runtime configuration of this run.</para>
+            /// <para>The code parameter information returned by the executor. Used to troubleshoot the runtime configuration of this run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--limit 100</para>

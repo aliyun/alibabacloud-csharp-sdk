@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineageRelationshipsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination entity. You can get the ID for a table or column from the response of the <c>ListTables</c> or <c>ListColumns</c> operation, or specify the ID of a custom entity.</para>
+        /// <para>The destination entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityId { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination entity. Supports fuzzy matching.</para>
+        /// <para>The destination entity name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dstName</para>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityName { get; set; }
 
         /// <summary>
-        /// <para>The sort order. The default value is <c>Asc</c>. Valid values:</para>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Asc</c>: ascending order</para>
-        /// </description></item>
-        /// <item><description><para><c>Desc</c>: descending order</para>
-        /// </description></item>
+        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description>Desc: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. The default value is 10. The maximum value is 100.</para>
+        /// <para>The page size. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. The default value is <c>Name</c>.</para>
+        /// <para>The sort field. Default value: Name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Name</para>
@@ -77,7 +75,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source entity. You can get the ID for a table or column from the response of the <c>ListTables</c> or <c>ListColumns</c> operation, or specify the ID of a custom entity.</para>
+        /// <para>The source entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</para>
+        /// <para>To obtain the table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain data catalog levels, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SrcEntityId { get; set; }
 
         /// <summary>
-        /// <para>The name of the source entity. Supports fuzzy matching.</para>
+        /// <para>The source entity name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>srcName</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteSemanticJobRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the task to delete. Use the Data.Name value from the CreateSemanticJob response or the Name value from a ListSemanticJobs list item.</para>
+        /// <para>The name of the job to delete. Use the Data.Name value from the CreateSemanticJob response or the Name value from a ListSemanticJobs list item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

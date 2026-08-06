@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateSemanticJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The saved semantic task definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
+        /// <para>The saved semantic job definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSemanticJobResponseBodyData Data { get; set; }
         public class CreateSemanticJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task creator identifier, equivalent to UserId, used to display creation ownership.</para>
+            /// <para>The job creator identifier, equivalent to UserId, used to display creation ownership.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-demo</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the task definition, as a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time of the job definition, expressed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700000000000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the task definition, as a UNIX timestamp in milliseconds.</para>
+            /// <para>The last modification time of the job definition, expressed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700000000000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The internal unique ID of the task definition, which identifies the task created by this call.</para>
+            /// <para>The internal unique ID of the job definition, which identifies the job created by this call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The saved task name. Use this value for subsequent run, delete, list runs, and download results operations.</para>
+            /// <para>The saved job name. Use this value for subsequent operations such as running, deleting, querying run records, and downloading results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>semantic-job-demo</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The DataWorks workspace ID to which the task belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
+            /// <para>The DataWorks workspace ID to which the job belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<string> ReferenceFileUris { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group that will be used when running this task.</para>
+            /// <para>The ID of the resource group that is used when running this job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-demo</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public Dictionary<string, object> Source { get; set; }
 
             /// <summary>
-            /// <para>The saved Source.type data source type, used to quickly identify the task input type.</para>
+            /// <para>The saved Source.type data source type, used to quickly identify the job input type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>maxcompute</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the user who created the task.</para>
+            /// <para>The identifier of the user who created the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-demo</para>

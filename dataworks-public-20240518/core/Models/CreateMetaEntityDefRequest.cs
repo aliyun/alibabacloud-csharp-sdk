@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaEntityDefRequest : TeaModel {
         /// <summary>
-        /// <para>A list of attribute definitions for the pure custom type. Do not specify this parameter if the <c>Extend</c> parameter is set to <c>TABLE</c>.</para>
+        /// <para>The attribute definition list for custom entities. This parameter cannot be specified when extend is set to TABLE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<MetaEntityAttributeDef> AttributeDefs { get; set; }
 
         /// <summary>
-        /// <para>A description of the entity definition.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name. The maximum length is 32 characters.</para>
+        /// <para>The display name, up to 32 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,21 +43,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The extension mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>NONE</c>: The default value. Specifies a pure custom type with user-defined attributes.</para>
-        /// </description></item>
-        /// <item><description><para><c>TABLE</c>: Specifies an extended table type that references an existing table type in Data Map. Attribute definitions are not required for this type. You can create corresponding <c>Database</c> and <c>Table</c> objects for it.</para>
-        /// </description></item>
+        /// <item><description>NONE: default value. Indicates a custom entity with freely defined attributes.</description></item>
+        /// <item><description>TABLE: indicates an extended table type. This type integrates in the same way as existing table types in DataWorks Data Map. You do not need to provide attribute definitions and can create corresponding Database/Table objects.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>NONE</para>
+        /// <para>TABLE</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The type definition name. For a pure custom type, the name must match <c>^[a-z0-9][a-z0-9_]*$</c>. For an extended table type, the name must match <c>^[a-z0-9][a-z0-9_]*-table$</c>.</para>
+        /// <para>The name of the type definition. Custom types must match <c>^[a-z0-9][a-z0-9_]*$</c>. Extended table types must match <c>^[a-z0-9][a-z0-9_]*-table$</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

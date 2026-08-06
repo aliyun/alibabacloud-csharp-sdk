@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaEntitiesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Conditions for filtering entities by entity attributes. The <c>AND</c> operator is used between different filters, and the <c>OR</c> operator is used for multiple values within a single filter.</para>
+        /// <para>The entity attribute filter conditions. Multiple filter conditions have an AND relationship. Multiple values within the same filter condition have an OR relationship.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AttributeFiltersShrink { get; set; }
 
         /// <summary>
-        /// <para>Filters entities by comment. This is a token-based match.</para>
+        /// <para>The comment filter. Performs token matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Conditions for filtering entities by custom attributes. The <c>AND</c> operator is used between different filters, and the <c>OR</c> operator is used for multiple values within a single filter. This parameter supports only <c>ENUM</c> custom attributes.</para>
+        /// <para>The custom attribute filter conditions. Multiple filter conditions have an AND relationship. Multiple values within the same filter condition have an OR relationship. Only ENUM custom attributes are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CustomAttributeFiltersShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the entity to list.</para>
+        /// <para>The entity type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The maximum number of results per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Filters entities by name. This is a containment match.</para>
+        /// <para>The entity name filter. Performs keyword-contains matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xm_create_test</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that specifies the next page of results. To retrieve the first page, do not specify this parameter. To retrieve subsequent pages, set this parameter to the <c>NextToken</c> value from the previous response.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAaUpAxoCTD/+sbOf3f+uxvnYyILMeAjoTFQSX64R12GN</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>Asc</c> and <c>Desc</c>.</para>
+        /// <para>The sort direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Name</para>

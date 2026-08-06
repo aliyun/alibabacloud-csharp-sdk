@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Pagination information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListMetaEntitiesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListMetaEntitiesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries per page.</para>
+            /// <para>The maximum number of results per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>A list of metadata entities.</para>
+            /// <para>The list of custom entities.</para>
             /// </summary>
             [NameInMap("MetaEntities")]
             [Validation(Required=false)]
             public List<MetaEntity> MetaEntities { get; set; }
 
             /// <summary>
-            /// <para>The token used to retrieve the next page of results. If this parameter is empty, no more results are available.</para>
+            /// <para>The pagination token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAAAAdEdsXbwG2ZlbWCzN4wTTg6NmTbhyvglcoMCJsiEdngaTov15YaMyduvjIHYeTOIcEeXqCevM1qffZkwCkUTUYc=</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

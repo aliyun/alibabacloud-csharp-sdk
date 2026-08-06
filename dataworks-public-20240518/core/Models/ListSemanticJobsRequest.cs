@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSemanticJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number, starting from 1. If this parameter is not specified or set to a value less than or equal to 0, the first page is returned.</para>
+        /// <para>The page number, starting from 1. If this parameter is not specified or is set to a value less than or equal to 0, page 1 is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of task definitions per page. If this parameter is not specified or set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</para>
+        /// <para>The number of job definitions per page. If this parameter is not specified or is set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

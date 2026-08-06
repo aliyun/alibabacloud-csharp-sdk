@@ -23,11 +23,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<ListDataAssetsResponseBodyPagingInfoDataAssets> DataAssets { get; set; }
             public class ListDataAssetsResponseBodyPagingInfoDataAssets : TeaModel {
+                /// <summary>
+                /// <para>The asset category information.</para>
+                /// </summary>
                 [NameInMap("AssetCategories")]
                 [Validation(Required=false)]
                 public List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> AssetCategories { get; set; }
                 public class ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories : TeaModel {
                     /// <summary>
+                    /// <para>The ID of the asset domain.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1001</para>
                     /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string AssetDomainId { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the asset category.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cate-xxxxxx</para>
                     /// </summary>
@@ -44,8 +51,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the asset category.</para>
+                    /// 
                     /// <b>Example:</b>
-                    /// <para>资产域名称</para>
+                    /// <para>AssetDomainName</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -81,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Creator { get; set; }
 
                     /// <summary>
-                    /// <para>The data asset ID.</para>
+                    /// <para>The ID of the data asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7259557313</para>
@@ -103,8 +112,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The source of the mapping between the data asset and the tag. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>System: The mapping is created by the data asset governance system.</description></item>
-                    /// <item><description>UserDefined: The mapping is manually created by a user.</description></item>
+                    /// <item><description>System: The mapping originates from data asset governance system operations.</description></item>
+                    /// <item><description>UserDefined: The mapping originates from manual user-defined operations.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// <para>The data asset ID.</para>
+                /// <para>The ID of the data asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7259557313</para>
@@ -161,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The DataWorks workspace ID.</para>
+                /// <para>The ID of the DataWorks workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>54275</para>
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The Asset Type of the data asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>ACS::DataWorks::Table: table.</para>
+                /// <item><description><para>ACS::DataWorks::Table: data table.</para>
                 /// </description></item>
                 /// <item><description><para>ACS::DataWorks::Task: scheduling node.</para>
                 /// </description></item>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataAssetsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the asset domain.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? AssetDomainId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the asset category.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cate-xxxxxxxx</para>
         /// </summary>
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The Asset Type of the data asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ACS::DataWorks::Table: table.</para>
+        /// <item><description><para>ACS::DataWorks::Table: data table.</para>
         /// </description></item>
         /// <item><description><para>ACS::DataWorks::Task: scheduling node.</para>
         /// </description></item>
@@ -63,15 +67,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
+        /// <para>The name of the asset. Fuzzy search by name is supported.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>资产域名称</para>
+        /// <para>AssetDomainName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The list of tags associated with data assets. Tags are used as query filters:</para>
         /// <list type="bullet">
-        /// <item><description>Multiple values have an OR relationship. For example, <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c> queries data assets that contain any of the specified tags.</description></item>
+        /// <item><description>Multiple values have an OR relationship. For example, <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c> queries data assets that contain any one of the specified tags.</description></item>
         /// <item><description>If this parameter is not specified or is left empty, no tag-based filtering is applied.</description></item>
         /// </list>
         /// </summary>

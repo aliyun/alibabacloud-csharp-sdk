@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return extended properties. Set this parameter to <c>true</c> to return extended properties or <c>false</c> to not return them.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeExtendedProperties")]
         [Validation(Required=false)]
         public bool? IncludeExtendedProperties { get; set; }
@@ -70,23 +76,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value can be the database to which the table belongs. The ParentMetaEntityId format is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
+        /// <item><description><para>The value can be the database to which the table belongs. The format of <c>ParentMetaEntityId</c> is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
         /// </description></item>
-        /// <item><description><para>The value can also be the database schema to which the table belongs. The ParentMetaEntityId format is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
+        /// <item><description><para>The value can also be the database schema to which the table belongs. The format of <c>ParentMetaEntityId</c> is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set ParentMetaEntityId to a database schema only when the database type supports schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</c>, and the three-level model must be enabled for the maxcompute type). Otherwise, you can set this parameter only to a database.</description></item>
+        /// <item><description>You can set <c>ParentMetaEntityId</c> to a database schema only when the database type supports schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</c>, where the three-layer model must be enabled for the maxcompute type). Otherwise, you can set it only to a database.</description></item>
         /// <item><description>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</description></item>
-        /// <item><description>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</description></item>
+        /// <item><description>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</description></item>
         /// </list>
         /// </remarks>
-        /// <para>The following examples show the ParentMetaEntityId formats for common types:</para>
+        /// <para>The following examples show the format of ParentMetaEntityId for common types:</para>
         /// <list type="bullet">
         /// <item><description><para><c>maxcompute-project:::project_name</c></para>
         /// </description></item>
-        /// <item><description><para><c>maxcompute-schema:::project_name:schema_name</c> (only when the three-level model is enabled for the project)</para>
+        /// <item><description><para><c>maxcompute-schema:::project_name:schema_name</c> (only when the three-layer model is enabled for the project)</para>
         /// </description></item>
         /// <item><description><para><c>dlf-database::catalog_id:database_name</c></para>
         /// </description></item>

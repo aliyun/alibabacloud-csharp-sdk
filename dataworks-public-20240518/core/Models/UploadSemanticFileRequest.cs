@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UploadSemanticFileRequest : TeaModel {
         /// <summary>
-        /// <para>The MIME type of the object to upload. Maximum length: 128 characters. This value is included in the signature of UploadUrl. Use the same Content-Type when you perform the PUT request.</para>
+        /// <para>The MIME type of the object to upload. Maximum length: 128 characters. This value is included in the UploadUrl signature. Use the same Content-Type when performing the PUT request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The original file name of the reference file to upload. Maximum length: 255 characters. When FileId is used for singleTableFile, only CSV or XLSX files are supported.</para>
+        /// <para>The original file name of the reference file to upload. Maximum length: 255 characters. When singleTableFile uses a FileId, only CSV or XLSX files are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

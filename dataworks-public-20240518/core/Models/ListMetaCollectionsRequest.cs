@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaCollectionsRequest : TeaModel {
         /// <summary>
-        /// <para>The administrator ID. Valid only for album types. Default: The current user ID.</para>
+        /// <para>The ID of the collection administrator. This parameter is valid only for the album type. Default value: the current user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Administrator { get; set; }
 
         /// <summary>
-        /// <para>The creator user ID. Valid only for album types. Default: The current user ID.</para>
+        /// <para>The user ID of the creator. This parameter is valid only for the album type. Default value: the current user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CreateUser { get; set; }
 
         /// <summary>
-        /// <para>The collection description. Supports fuzzy matching.</para>
+        /// <para>The collection description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test collection</para>
@@ -40,22 +40,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The collection name. Supports fuzzy matching.</para>
+        /// <para>The collection name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Data Asset Subject Domain</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sort direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Asc (default): Ascending order</para>
-        /// </description></item>
-        /// <item><description><para>Desc</para>
-        /// </description></item>
+        /// <item><description>Asc (default)</description></item>
+        /// <item><description>Desc</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// <para>The page size. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent collection.</para>
+        /// <para>The ID of the parent node collection object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>as78d756asd</para>
@@ -98,16 +96,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Id (default)</para>
-        /// </description></item>
-        /// <item><description><para>Name</para>
-        /// </description></item>
-        /// <item><description><para>CreateUser: Creator ID</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime: Creation time</para>
-        /// </description></item>
-        /// <item><description><para>ModifyTime: Modification time</para>
-        /// </description></item>
+        /// <item><description>Id (default)</description></item>
+        /// <item><description>Name: name.</description></item>
+        /// <item><description>CreateUser: creator ID.</description></item>
+        /// <item><description>CreateTime: creation time.</description></item>
+        /// <item><description>ModifyTime: modification time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,12 +113,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The collection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Category</para>
-        /// </description></item>
-        /// <item><description><para>Album</para>
-        /// </description></item>
-        /// <item><description><para>AlbumCategory: Album subcategory</para>
-        /// </description></item>
+        /// <item><description>Category: category.</description></item>
+        /// <item><description>Album: data album.</description></item>
+        /// <item><description>AlbumCategory: album subcategory.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

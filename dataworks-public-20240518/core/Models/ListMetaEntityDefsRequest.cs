@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaEntityDefsRequest : TeaModel {
         /// <summary>
-        /// <para>A keyword to search for in the description. The system performs a fuzzy match.</para>
+        /// <para>The description. Matched by fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the type definition. This parameter supports partial matching.</para>
+        /// <para>The display name of the type definition. Matched by plain text containment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CustomReport</para>
@@ -30,17 +30,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by extension mode. Valid values: <c>NONE</c> and <c>TABLE</c>.</para>
+        /// <para>The extension mode filter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NONE: custom entity only.</description></item>
+        /// <item><description>TABLE: extension table entity.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>NONE</para>
+        /// <para>TABLE</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>Asc</c> and <c>Desc</c>.</para>
+        /// <para>The sort direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description>Desc: descending order.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +78,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Valid values: <c>Name</c>, <c>CreateTime</c>, and <c>ModifyTime</c>.</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Name: sorted by name.</description></item>
+        /// <item><description>CreateTime: sorted by creation time.</description></item>
+        /// <item><description>ModifyTime: sorted by modification time.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>

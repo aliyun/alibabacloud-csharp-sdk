@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ExecutorJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace to which the job belongs. Use the ProjectId from the CreateSemanticJob response or a ListSemanticJobs list item.</para>
+        /// <para>The ID of the DataWorks workspace to which the task belongs. Use the ProjectId from the CreateSemanticJob response or a ListSemanticJobs list item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <c>true</c> to re-fetch the stream data from the point of failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true or false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsReload")]
                 [Validation(Required=false)]

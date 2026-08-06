@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of the data table.</para>
+        /// <para>The details of the table.</para>
         /// </summary>
         [NameInMap("Table")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateCustomAttributeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the custom attribute. The description must be less than 256 characters in length.</para>
+        /// <para>The description of the custom attribute. The value must be less than 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the attribute on the product page. The default value is true.</para>
+        /// <para>Specifies whether to display the attribute on the details page. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,27 +30,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? DisplayEnabled { get; set; }
 
         /// <summary>
-        /// <para>The display name of the custom attribute. The name must be less than 128 characters in length.</para>
+        /// <para>The display name of the custom attribute. The value must be less than 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务负责人</para>
+        /// <para>BusinessOwner</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The list of applicable entity types. You can specify precise entity types or use wildcards such as <c>*-table</c> and <c>*-column</c>. Examples:</para>
+        /// <para>The list of applicable entity types. Exact entity types and wildcard patterns such as <c>*-table</c> and <c>*-column</c> are supported. Examples:</para>
         /// <list type="bullet">
-        /// <item><description><para>dataworks-project: a DataWorks workspace.</para>
-        /// </description></item>
-        /// <item><description><para>dataworks-dataset: a DataWorks dataset.</para>
-        /// </description></item>
-        /// <item><description><para>maxcompute-table: a MaxCompute table.</para>
-        /// </description></item>
-        /// <item><description><para>\*-column: all field types.</para>
-        /// </description></item>
+        /// <item><description>dataworks-project: workspace</description></item>
+        /// <item><description>dataworks-dataset: DataWorks dataset</description></item>
+        /// <item><description>maxcompute-table: MaxCompute table</description></item>
+        /// <item><description>*-column: all column types</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EntityTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom attribute. The ID must match the regular expression <c>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</c>. The part after \<c>custom-attribute:\\</c> must be less than 100 characters in length.</para>
+        /// <para>The custom attribute ID. The value must match <c>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</c>. The part after custom-attribute: must be less than 100 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the attribute can be used as a filter on the Data Map search page. The default value is false. Currently, you can set this parameter to true only for attributes of the ENUM type.</para>
+        /// <para>Specifies whether the attribute can be used as a filter condition on the DataWorks Data Map search page. Default value: false. Currently, only the ENUM type supports setting this value to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? SearchFilterEnabled { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom attribute. Valid values are ENUM, TEXT, and HYPERLINK.</para>
+        /// <para>The type of the custom attribute. Valid values: ENUM, TEXT, and HYPERLINK.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The enumeration values. This parameter is required when \<c>Type\\</c> is set to \<c>ENUM\\</c>. It is not supported for the TEXT and HYPERLINK types.</para>
+        /// <para>The enumeration values. This parameter is required when type is set to ENUM. This parameter is not supported for TEXT or HYPERLINK types.</para>
         /// </summary>
         [NameInMap("ValueEnums")]
         [Validation(Required=false)]

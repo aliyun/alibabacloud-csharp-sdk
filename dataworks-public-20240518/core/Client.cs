@@ -3580,6 +3580,274 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 查询当前地域支持的采集器类型及其配置能力。</description></item>
+        /// <item><description>使用与 <c>Type</c> 匹配的数据源创建采集器。</description></item>
+        /// <item><description>创建成功后，调用 <c>RunCrawler</c> 手动运行，或通过周期调度自动运行。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCrawlerResponse
+        /// </returns>
+        public CreateCrawlerResponse CreateCrawlerWithOptions(CreateCrawlerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCrawlerShrinkRequest request = new CreateCrawlerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfig))
+            {
+                request.ScheduleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfig, "ScheduleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scope))
+            {
+                request.ScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scope, "Scope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAiComment))
+            {
+                body["EnableAiComment"] = request.EnableAiComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfigShrink))
+            {
+                body["ScheduleConfig"] = request.ScheduleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeShrink))
+            {
+                body["Scope"] = request.ScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 查询当前地域支持的采集器类型及其配置能力。</description></item>
+        /// <item><description>使用与 <c>Type</c> 匹配的数据源创建采集器。</description></item>
+        /// <item><description>创建成功后，调用 <c>RunCrawler</c> 手动运行，或通过周期调度自动运行。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCrawlerResponse
+        /// </returns>
+        public async Task<CreateCrawlerResponse> CreateCrawlerWithOptionsAsync(CreateCrawlerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCrawlerShrinkRequest request = new CreateCrawlerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfig))
+            {
+                request.ScheduleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfig, "ScheduleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scope))
+            {
+                request.ScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scope, "Scope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAiComment))
+            {
+                body["EnableAiComment"] = request.EnableAiComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfigShrink))
+            {
+                body["ScheduleConfig"] = request.ScheduleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeShrink))
+            {
+                body["Scope"] = request.ScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 查询当前地域支持的采集器类型及其配置能力。</description></item>
+        /// <item><description>使用与 <c>Type</c> 匹配的数据源创建采集器。</description></item>
+        /// <item><description>创建成功后，调用 <c>RunCrawler</c> 手动运行，或通过周期调度自动运行。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCrawlerResponse
+        /// </returns>
+        public CreateCrawlerResponse CreateCrawler(CreateCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 查询当前地域支持的采集器类型及其配置能力。</description></item>
+        /// <item><description>使用与 <c>Type</c> 匹配的数据源创建采集器。</description></item>
+        /// <item><description>创建成功后，调用 <c>RunCrawler</c> 手动运行，或通过周期调度自动运行。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCrawlerResponse
+        /// </returns>
+        public async Task<CreateCrawlerResponse> CreateCrawlerAsync(CreateCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCrawlerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a custom attribute definition.</para>
         /// </summary>
         /// 
@@ -8308,12 +8576,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</para>
+        /// <para>Creates a metadata entity definition, including custom types and extended table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a higher edition.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8377,12 +8645,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</para>
+        /// <para>Creates a metadata entity definition, including custom types and extended table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a higher edition.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8446,12 +8714,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</para>
+        /// <para>Creates a metadata entity definition, including custom types and extended table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a higher edition.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8469,12 +8737,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</para>
+        /// <para>Creates a metadata entity definition, including custom types and extended table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a higher edition.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11444,12 +11712,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a semantic task definition.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
+        /// <h2>Recommended workflow</h2>
+        /// <ol>
+        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
+        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11525,12 +11802,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a semantic task definition.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
+        /// <h2>Recommended workflow</h2>
+        /// <ol>
+        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
+        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11606,12 +11892,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a semantic task definition.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
+        /// <h2>Recommended workflow</h2>
+        /// <ol>
+        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
+        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11629,12 +11924,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a semantic task definition.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
+        /// <h2>Recommended workflow</h2>
+        /// <ol>
+        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
+        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13408,6 +13712,186 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteComputeResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>删除不再使用的元数据采集器。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>确认采集器不再需要后调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrawlerResponse
+        /// </returns>
+        public DeleteCrawlerResponse DeleteCrawlerWithOptions(DeleteCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>删除不再使用的元数据采集器。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>确认采集器不再需要后调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrawlerResponse
+        /// </returns>
+        public async Task<DeleteCrawlerResponse> DeleteCrawlerWithOptionsAsync(DeleteCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>删除不再使用的元数据采集器。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>确认采集器不再需要后调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrawlerResponse
+        /// </returns>
+        public DeleteCrawlerResponse DeleteCrawler(DeleteCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>删除不再使用的元数据采集器。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>确认采集器不再需要后调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrawlerResponse
+        /// </returns>
+        public async Task<DeleteCrawlerResponse> DeleteCrawlerAsync(DeleteCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCrawlerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15848,13 +16332,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lineage in Data Map.</para>
+        /// <para>Deletes a specified data lineage relationship from DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15897,13 +16381,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lineage in Data Map.</para>
+        /// <para>Deletes a specified data lineage relationship from DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15946,13 +16430,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lineage in Data Map.</para>
+        /// <para>Deletes a specified data lineage relationship from DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15971,13 +16455,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lineage in Data Map.</para>
+        /// <para>Deletes a specified data lineage relationship from DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18092,12 +18576,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// <para>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for deleting a semantic task.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</para>
+        /// <h2>Call flow</h2>
+        /// <ol>
+        /// <item><description>Obtain the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs.Data.SemanticJobs[].Name</c>.</description></item>
+        /// <item><description>To check whether any active runs exist, call <c>ListSemanticJobRuns</c> first. If necessary, stop the execution by calling <c>KillSemanticJob</c>.</description></item>
+        /// <item><description>Call this operation to delete the job definition.</description></item>
+        /// </ol>
+        /// <h2>Result description</h2>
+        /// <para>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <c>RunSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18139,12 +18632,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// <para>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for deleting a semantic task.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</para>
+        /// <h2>Call flow</h2>
+        /// <ol>
+        /// <item><description>Obtain the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs.Data.SemanticJobs[].Name</c>.</description></item>
+        /// <item><description>To check whether any active runs exist, call <c>ListSemanticJobRuns</c> first. If necessary, stop the execution by calling <c>KillSemanticJob</c>.</description></item>
+        /// <item><description>Call this operation to delete the job definition.</description></item>
+        /// </ol>
+        /// <h2>Result description</h2>
+        /// <para>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <c>RunSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18186,12 +18688,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// <para>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for deleting a semantic task.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</para>
+        /// <h2>Call flow</h2>
+        /// <ol>
+        /// <item><description>Obtain the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs.Data.SemanticJobs[].Name</c>.</description></item>
+        /// <item><description>To check whether any active runs exist, call <c>ListSemanticJobRuns</c> first. If necessary, stop the execution by calling <c>KillSemanticJob</c>.</description></item>
+        /// <item><description>Call this operation to delete the job definition.</description></item>
+        /// </ol>
+        /// <h2>Result description</h2>
+        /// <para>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <c>RunSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18209,12 +18720,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// <para>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for deleting a semantic task.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</para>
+        /// <h2>Call flow</h2>
+        /// <ol>
+        /// <item><description>Obtain the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs.Data.SemanticJobs[].Name</c>.</description></item>
+        /// <item><description>To check whether any active runs exist, call <c>ListSemanticJobRuns</c> first. If necessary, stop the execution by calling <c>KillSemanticJob</c>.</description></item>
+        /// <item><description>Call this operation to delete the job definition.</description></item>
+        /// </ol>
+        /// <h2>Result description</h2>
+        /// <para>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <c>RunSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19708,12 +20228,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// <para>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name <c>JobName</c> to locate the job.</description></item>
+        /// <item><description>To retrieve artifacts of a specific run, specify the <c>JobRunId</c> from the <c>RunSemanticJob.Data.JobRunId</c> or <c>ListSemanticJobRuns</c> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</description></item>
+        /// <item><description>Download the corresponding files from <c>Data.Results[].DownloadUrl</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19759,12 +20288,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// <para>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name <c>JobName</c> to locate the job.</description></item>
+        /// <item><description>To retrieve artifacts of a specific run, specify the <c>JobRunId</c> from the <c>RunSemanticJob.Data.JobRunId</c> or <c>ListSemanticJobRuns</c> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</description></item>
+        /// <item><description>Download the corresponding files from <c>Data.Results[].DownloadUrl</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19810,12 +20348,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// <para>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name <c>JobName</c> to locate the job.</description></item>
+        /// <item><description>To retrieve artifacts of a specific run, specify the <c>JobRunId</c> from the <c>RunSemanticJob.Data.JobRunId</c> or <c>ListSemanticJobRuns</c> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</description></item>
+        /// <item><description>Download the corresponding files from <c>Data.Results[].DownloadUrl</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19833,12 +20380,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// <para>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name <c>JobName</c> to locate the job.</description></item>
+        /// <item><description>To retrieve artifacts of a specific run, specify the <c>JobRunId</c> from the <c>RunSemanticJob.Data.JobRunId</c> or <c>ListSemanticJobRuns</c> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</description></item>
+        /// <item><description>Download the corresponding files from <c>Data.Results[].DownloadUrl</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22352,6 +22908,354 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetComputeResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据采集器详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口获取采集器详情。</description></item>
+        /// <item><description>如需查询完整运行历史，调用 <c>ListCrawlerRuns</c>。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerResponse
+        /// </returns>
+        public GetCrawlerResponse GetCrawlerWithOptions(GetCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据采集器详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口获取采集器详情。</description></item>
+        /// <item><description>如需查询完整运行历史，调用 <c>ListCrawlerRuns</c>。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerResponse
+        /// </returns>
+        public async Task<GetCrawlerResponse> GetCrawlerWithOptionsAsync(GetCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据采集器详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口获取采集器详情。</description></item>
+        /// <item><description>如需查询完整运行历史，调用 <c>ListCrawlerRuns</c>。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerResponse
+        /// </returns>
+        public GetCrawlerResponse GetCrawler(GetCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据采集器详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口获取采集器详情。</description></item>
+        /// <item><description>如需查询完整运行历史，调用 <c>ListCrawlerRuns</c>。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerResponse
+        /// </returns>
+        public async Task<GetCrawlerResponse> GetCrawlerAsync(GetCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCrawlerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前地域支持创建的元数据采集器类型及能力</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>在创建或更新采集器前调用本接口。</description></item>
+        /// <item><description>根据返回的能力信息构造 <c>CreateCrawler</c> 或 <c>UpdateCrawler</c> 请求。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerTypeCapabilitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerTypeCapabilitiesResponse
+        /// </returns>
+        public GetCrawlerTypeCapabilitiesResponse GetCrawlerTypeCapabilitiesWithOptions(GetCrawlerTypeCapabilitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrawlerTypeCapabilities",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCrawlerTypeCapabilitiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前地域支持创建的元数据采集器类型及能力</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>在创建或更新采集器前调用本接口。</description></item>
+        /// <item><description>根据返回的能力信息构造 <c>CreateCrawler</c> 或 <c>UpdateCrawler</c> 请求。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerTypeCapabilitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerTypeCapabilitiesResponse
+        /// </returns>
+        public async Task<GetCrawlerTypeCapabilitiesResponse> GetCrawlerTypeCapabilitiesWithOptionsAsync(GetCrawlerTypeCapabilitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrawlerTypeCapabilities",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCrawlerTypeCapabilitiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前地域支持创建的元数据采集器类型及能力</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>在创建或更新采集器前调用本接口。</description></item>
+        /// <item><description>根据返回的能力信息构造 <c>CreateCrawler</c> 或 <c>UpdateCrawler</c> 请求。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerTypeCapabilitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerTypeCapabilitiesResponse
+        /// </returns>
+        public GetCrawlerTypeCapabilitiesResponse GetCrawlerTypeCapabilities(GetCrawlerTypeCapabilitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCrawlerTypeCapabilitiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前地域支持创建的元数据采集器类型及能力</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>在创建或更新采集器前调用本接口。</description></item>
+        /// <item><description>根据返回的能力信息构造 <c>CreateCrawler</c> 或 <c>UpdateCrawler</c> 请求。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCrawlerTypeCapabilitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrawlerTypeCapabilitiesResponse
+        /// </returns>
+        public async Task<GetCrawlerTypeCapabilitiesResponse> GetCrawlerTypeCapabilitiesAsync(GetCrawlerTypeCapabilitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCrawlerTypeCapabilitiesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28721,7 +29625,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run details.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Call <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c> to obtain the <c>ExecutorJobId</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> returned by the job definition as the <c>ProjectId</c> for this operation.</description></item>
+        /// <item><description>Determine the current status based on the executor details in <c>Data</c>. If the job is still running, continue polling this operation.</description></item>
+        /// </ol>
+        /// <h2>Related operations</h2>
+        /// <para>To retrieve logs, call <c>GetSemanticJobLog</c>. To stop a run, call <c>KillSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28772,7 +29685,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run details.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Call <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c> to obtain the <c>ExecutorJobId</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> returned by the job definition as the <c>ProjectId</c> for this operation.</description></item>
+        /// <item><description>Determine the current status based on the executor details in <c>Data</c>. If the job is still running, continue polling this operation.</description></item>
+        /// </ol>
+        /// <h2>Related operations</h2>
+        /// <para>To retrieve logs, call <c>GetSemanticJobLog</c>. To stop a run, call <c>KillSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28823,7 +29745,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run details.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Call <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c> to obtain the <c>ExecutorJobId</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> returned by the job definition as the <c>ProjectId</c> for this operation.</description></item>
+        /// <item><description>Determine the current status based on the executor details in <c>Data</c>. If the job is still running, continue polling this operation.</description></item>
+        /// </ol>
+        /// <h2>Related operations</h2>
+        /// <para>To retrieve logs, call <c>GetSemanticJobLog</c>. To stop a run, call <c>KillSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28846,7 +29777,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run details.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Call <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c> to obtain the <c>ExecutorJobId</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> returned by the job definition as the <c>ProjectId</c> for this operation.</description></item>
+        /// <item><description>Determine the current status based on the executor details in <c>Data</c>. If the job is still running, continue polling this operation.</description></item>
+        /// </ol>
+        /// <h2>Related operations</h2>
+        /// <para>To retrieve logs, call <c>GetSemanticJobLog</c>. To stop a run, call <c>KillSemanticJob</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28869,7 +29809,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run logs.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the run by using <c>RunSemanticJob.Data.ExecutorJobId</c> or <c>ListSemanticJobRuns[].ExecutorJobId</c>.</description></item>
+        /// <item><description>Call this operation with the <c>ProjectId</c> of the corresponding task.</description></item>
+        /// <item><description>Analyze the log segments in <c>Data</c> together with the run status returned by <c>GetSemanticJobDetail</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <c>DownloadSemanticResults</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28920,7 +29869,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run logs.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the run by using <c>RunSemanticJob.Data.ExecutorJobId</c> or <c>ListSemanticJobRuns[].ExecutorJobId</c>.</description></item>
+        /// <item><description>Call this operation with the <c>ProjectId</c> of the corresponding task.</description></item>
+        /// <item><description>Analyze the log segments in <c>Data</c> together with the run status returned by <c>GetSemanticJobDetail</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <c>DownloadSemanticResults</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28971,7 +29929,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run logs.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the run by using <c>RunSemanticJob.Data.ExecutorJobId</c> or <c>ListSemanticJobRuns[].ExecutorJobId</c>.</description></item>
+        /// <item><description>Call this operation with the <c>ProjectId</c> of the corresponding task.</description></item>
+        /// <item><description>Analyze the log segments in <c>Data</c> together with the run status returned by <c>GetSemanticJobDetail</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <c>DownloadSemanticResults</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28994,7 +29961,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for querying semantic job run logs.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Specify the run by using <c>RunSemanticJob.Data.ExecutorJobId</c> or <c>ListSemanticJobRuns[].ExecutorJobId</c>.</description></item>
+        /// <item><description>Call this operation with the <c>ProjectId</c> of the corresponding task.</description></item>
+        /// <item><description>Analyze the log segments in <c>Data</c> together with the run status returned by <c>GetSemanticJobDetail</c>.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <c>DownloadSemanticResults</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29172,7 +30148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
+        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29217,7 +30193,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
+        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29262,7 +30238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
+        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29287,7 +30263,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</para>
+        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30780,12 +31756,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for stopping a semantic job run.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Obtain the <c>ExecutorJobId</c> from <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c>, and use the <c>ProjectId</c> of the job.</description></item>
+        /// <item><description>Optionally specify <c>RetryTimes</c> as needed.</description></item>
+        /// <item><description>After the call, poll the final status by using <c>GetSemanticJobDetail</c>. If necessary, call <c>GetSemanticJobLog</c> for diagnostics.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30835,12 +31820,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for stopping a semantic job run.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Obtain the <c>ExecutorJobId</c> from <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c>, and use the <c>ProjectId</c> of the job.</description></item>
+        /// <item><description>Optionally specify <c>RetryTimes</c> as needed.</description></item>
+        /// <item><description>After the call, poll the final status by using <c>GetSemanticJobDetail</c>. If necessary, call <c>GetSemanticJobLog</c> for diagnostics.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30890,12 +31884,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for stopping a semantic job run.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Obtain the <c>ExecutorJobId</c> from <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c>, and use the <c>ProjectId</c> of the job.</description></item>
+        /// <item><description>Optionally specify <c>RetryTimes</c> as needed.</description></item>
+        /// <item><description>After the call, poll the final status by using <c>GetSemanticJobDetail</c>. If necessary, call <c>GetSemanticJobLog</c> for diagnostics.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30913,12 +31916,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation description for stopping a semantic job run.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Obtain the <c>ExecutorJobId</c> from <c>RunSemanticJob</c> or <c>ListSemanticJobRuns</c>, and use the <c>ProjectId</c> of the job.</description></item>
+        /// <item><description>Optionally specify <c>RetryTimes</c> as needed.</description></item>
+        /// <item><description>After the call, poll the final status by using <c>GetSemanticJobDetail</c>. If necessary, call <c>GetSemanticJobLog</c> for diagnostics.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32140,7 +33152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
+        /// <para>Queries the column list of a specified table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32185,7 +33197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
+        /// <para>Queries the column list of a specified table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32230,7 +33242,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
+        /// <para>Queries the column list of a specified table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32255,7 +33267,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the column list of a specified data table in DataWorks Data Map.</para>
+        /// <para>Queries the column list of a specified table in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32668,6 +33680,230 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询元数据采集器运行记录</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>使用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口查询运行记录和任务实例 ID。</description></item>
+        /// <item><description>对运行、停止等异步操作，以本接口返回的最终状态为准。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>未指定时间范围时，默认查询当前时间向前 30 天。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlerRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlerRunsResponse
+        /// </returns>
+        public ListCrawlerRunsResponse ListCrawlerRunsWithOptions(ListCrawlerRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeFrom))
+            {
+                body["StartTimeFrom"] = request.StartTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeTo))
+            {
+                body["StartTimeTo"] = request.StartTimeTo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrawlerRuns",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrawlerRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器运行记录</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>使用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口查询运行记录和任务实例 ID。</description></item>
+        /// <item><description>对运行、停止等异步操作，以本接口返回的最终状态为准。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>未指定时间范围时，默认查询当前时间向前 30 天。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlerRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlerRunsResponse
+        /// </returns>
+        public async Task<ListCrawlerRunsResponse> ListCrawlerRunsWithOptionsAsync(ListCrawlerRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeFrom))
+            {
+                body["StartTimeFrom"] = request.StartTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeTo))
+            {
+                body["StartTimeTo"] = request.StartTimeTo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrawlerRuns",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrawlerRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器运行记录</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>使用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口查询运行记录和任务实例 ID。</description></item>
+        /// <item><description>对运行、停止等异步操作，以本接口返回的最终状态为准。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>未指定时间范围时，默认查询当前时间向前 30 天。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlerRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlerRunsResponse
+        /// </returns>
+        public ListCrawlerRunsResponse ListCrawlerRuns(ListCrawlerRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCrawlerRunsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器运行记录</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>使用 <c>ListCrawlers</c> 查询采集器 ID。</description></item>
+        /// <item><description>调用本接口查询运行记录和任务实例 ID。</description></item>
+        /// <item><description>对运行、停止等异步操作，以本接口返回的最终状态为准。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>未指定时间范围时，默认查询当前时间向前 30 天。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlerRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlerRunsResponse
+        /// </returns>
+        public async Task<ListCrawlerRunsResponse> ListCrawlerRunsAsync(ListCrawlerRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCrawlerRunsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of metadata crawler types supported in Data Map. The subtypes of the types and the hierarchical relationship between the subtypes are also returned.</para>
         /// </summary>
         /// 
@@ -32780,6 +34016,254 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCrawlerTypesWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>按需组合筛选条件查询采集器列表。</description></item>
+        /// <item><description>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCrawlersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlersResponse
+        /// </returns>
+        public ListCrawlersResponse ListCrawlersWithOptions(ListCrawlersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCrawlersShrinkRequest request = new ListCrawlersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrawlers",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrawlersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>按需组合筛选条件查询采集器列表。</description></item>
+        /// <item><description>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCrawlersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlersResponse
+        /// </returns>
+        public async Task<ListCrawlersResponse> ListCrawlersWithOptionsAsync(ListCrawlersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCrawlersShrinkRequest request = new ListCrawlersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSourceIds))
+            {
+                request.DataSourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSourceIds, "DataSourceIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceIdsShrink))
+            {
+                body["DataSourceIds"] = request.DataSourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrawlers",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrawlersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>按需组合筛选条件查询采集器列表。</description></item>
+        /// <item><description>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlersResponse
+        /// </returns>
+        public ListCrawlersResponse ListCrawlers(ListCrawlersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCrawlersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据采集器列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>按需组合筛选条件查询采集器列表。</description></item>
+        /// <item><description>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCrawlersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrawlersResponse
+        /// </returns>
+        public async Task<ListCrawlersResponse> ListCrawlersAsync(ListCrawlersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCrawlersWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32984,7 +34468,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom attribute definitions.</para>
+        /// <para>Queries the list of custom attribute definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33050,7 +34534,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom attribute definitions.</para>
+        /// <para>Queries the list of custom attribute definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33116,7 +34600,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom attribute definitions.</para>
+        /// <para>Queries the list of custom attribute definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33134,7 +34618,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom attribute definitions.</para>
+        /// <para>Queries the list of custom attribute definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38520,13 +40004,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</para>
+        /// <para>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This operation is available in DataWorks Standard Edition and later versions.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -38565,13 +40049,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</para>
+        /// <para>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This operation is available in DataWorks Standard Edition and later versions.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -38610,13 +40094,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</para>
+        /// <para>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This operation is available in DataWorks Standard Edition and later versions.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -38635,13 +40119,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</para>
+        /// <para>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This operation is available in DataWorks Standard Edition and later versions.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -39012,13 +40496,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
+        /// <para>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -39057,13 +40541,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
+        /// <para>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -39102,13 +40586,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
+        /// <para>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -39127,13 +40611,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
+        /// <para>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Professional Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -39152,7 +40636,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists metadata entities. Support is currently limited to custom types.</para>
+        /// <para>Queries a list of metadata entities. Currently, only custom entity types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39236,7 +40720,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists metadata entities. Support is currently limited to custom types.</para>
+        /// <para>Queries a list of metadata entities. Currently, only custom entity types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39320,7 +40804,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists metadata entities. Support is currently limited to custom types.</para>
+        /// <para>Queries a list of metadata entities. Currently, only custom entity types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39338,7 +40822,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists metadata entities. Support is currently limited to custom types.</para>
+        /// <para>Queries a list of metadata entities. Currently, only custom entity types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39356,7 +40840,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</para>
+        /// <para>Queries the list of custom entity definitions, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39422,7 +40906,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</para>
+        /// <para>Queries the list of custom entity definitions, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39488,7 +40972,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</para>
+        /// <para>Queries the list of custom entity definitions, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39506,7 +40990,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</para>
+        /// <para>Queries the list of custom entity definitions, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40808,14 +42292,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</para>
+        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
-        /// <item><description>Only maxcompute and hms (EMR cluster) table types are supported.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
+        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -40854,14 +42339,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</para>
+        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
-        /// <item><description>Only maxcompute and hms (EMR cluster) table types are supported.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
+        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -40900,14 +42386,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</para>
+        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
-        /// <item><description>Only maxcompute and hms (EMR cluster) table types are supported.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
+        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -40926,14 +42413,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</para>
+        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
-        /// <item><description>Only maxcompute and hms (EMR cluster) table types are supported.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
+        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -43428,12 +44916,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// <para>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the run records of a semantic job.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs</c> as the <c>JobName</c>.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read records page by page.</description></item>
+        /// <item><description>Use the <c>JobRunId</c> from a record to call <c>DownloadSemanticResults</c>, and use the <c>ExecutorJobId</c> to call the detail, log, or stop operations.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43483,12 +44980,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// <para>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the run records of a semantic job.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs</c> as the <c>JobName</c>.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read records page by page.</description></item>
+        /// <item><description>Use the <c>JobRunId</c> from a record to call <c>DownloadSemanticResults</c>, and use the <c>ExecutorJobId</c> to call the detail, log, or stop operations.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43538,12 +45044,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// <para>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the run records of a semantic job.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs</c> as the <c>JobName</c>.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read records page by page.</description></item>
+        /// <item><description>Use the <c>JobRunId</c> from a record to call <c>DownloadSemanticResults</c>, and use the <c>ExecutorJobId</c> to call the detail, log, or stop operations.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43561,12 +45076,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// <para>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the run records of a semantic job.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Use the job name from <c>CreateSemanticJob.Data.Name</c> or <c>ListSemanticJobs</c> as the <c>JobName</c>.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read records page by page.</description></item>
+        /// <item><description>Use the <c>JobRunId</c> from a record to call <c>DownloadSemanticResults</c>, and use the <c>ExecutorJobId</c> to call the detail, log, or stop operations.</description></item>
+        /// </ol>
+        /// <h2>Before you begin</h2>
+        /// <para>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43584,12 +45108,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of semantic task definitions.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
+        /// <h2>Invoke flow</h2>
+        /// <ol>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
+        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// </ol>
+        /// <h2>Notes</h2>
+        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43635,12 +45168,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of semantic task definitions.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
+        /// <h2>Invoke flow</h2>
+        /// <ol>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
+        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// </ol>
+        /// <h2>Notes</h2>
+        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43686,12 +45228,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of semantic task definitions.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
+        /// <h2>Invoke flow</h2>
+        /// <ol>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
+        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// </ol>
+        /// <h2>Notes</h2>
+        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43709,12 +45260,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of semantic task definitions.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
+        /// <h2>Invoke flow</h2>
+        /// <ol>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
+        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// </ol>
+        /// <h2>Notes</h2>
+        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43946,7 +45506,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -43997,7 +45557,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -44048,7 +45608,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -44073,7 +45633,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -48600,12 +50160,215 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// <para>运行元数据采集器</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// <h2>使用场景</h2>
+        /// <para>提交指定元数据采集器的运行请求。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询可运行的采集器 ID。</description></item>
+        /// <item><description>调用本接口提交运行请求。</description></item>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 查询最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>费用说明</h2>
+        /// <para>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+        /// 当采集器已开启 AI 元数据描述能力（<c>EnableAiComment=true</c>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</para>
+        /// <h2>注意事项</h2>
+        /// <para>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCrawlerResponse
+        /// </returns>
+        public RunCrawlerResponse RunCrawlerWithOptions(RunCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>提交指定元数据采集器的运行请求。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询可运行的采集器 ID。</description></item>
+        /// <item><description>调用本接口提交运行请求。</description></item>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 查询最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>费用说明</h2>
+        /// <para>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+        /// 当采集器已开启 AI 元数据描述能力（<c>EnableAiComment=true</c>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</para>
+        /// <h2>注意事项</h2>
+        /// <para>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCrawlerResponse
+        /// </returns>
+        public async Task<RunCrawlerResponse> RunCrawlerWithOptionsAsync(RunCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>提交指定元数据采集器的运行请求。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询可运行的采集器 ID。</description></item>
+        /// <item><description>调用本接口提交运行请求。</description></item>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 查询最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>费用说明</h2>
+        /// <para>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+        /// 当采集器已开启 AI 元数据描述能力（<c>EnableAiComment=true</c>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</para>
+        /// <h2>注意事项</h2>
+        /// <para>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCrawlerResponse
+        /// </returns>
+        public RunCrawlerResponse RunCrawler(RunCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>提交指定元数据采集器的运行请求。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlers</c> 查询可运行的采集器 ID。</description></item>
+        /// <item><description>调用本接口提交运行请求。</description></item>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 查询最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>费用说明</h2>
+        /// <para>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+        /// 当采集器已开启 AI 元数据描述能力（<c>EnableAiComment=true</c>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</para>
+        /// <h2>注意事项</h2>
+        /// <para>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCrawlerResponse
+        /// </returns>
+        public async Task<RunCrawlerResponse> RunCrawlerAsync(RunCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunCrawlerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>Loads a saved semantic job definition by <c>Name</c> and submits a new analysis run to the executor. This operation does not accept runtime <c>Source</c>, resource group, or reference file overrides. The execution always uses the configuration saved by <c>CreateSemanticJob</c>.</para>
+        /// <h2>Pre-execution validation</h2>
+        /// <para>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <c>ReferenceFileIds</c>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</para>
+        /// <h2>Response and What to do next</h2>
+        /// <para><c>Data.JobRunId</c> is the identity of the current semantics node run and is used by <c>DownloadSemanticResults</c> to download the exact output of this run. <c>Data.ExecutorJobId</c> is the identity of the executor node and is used by <c>GetSemanticJobDetail</c>, <c>GetSemanticJobLog</c>, and <c>KillSemanticJob</c>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</para>
+        /// <h2>Billing</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48647,12 +50410,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// <para>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// <h2>Description</h2>
+        /// <para>Loads a saved semantic job definition by <c>Name</c> and submits a new analysis run to the executor. This operation does not accept runtime <c>Source</c>, resource group, or reference file overrides. The execution always uses the configuration saved by <c>CreateSemanticJob</c>.</para>
+        /// <h2>Pre-execution validation</h2>
+        /// <para>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <c>ReferenceFileIds</c>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</para>
+        /// <h2>Response and What to do next</h2>
+        /// <para><c>Data.JobRunId</c> is the identity of the current semantics node run and is used by <c>DownloadSemanticResults</c> to download the exact output of this run. <c>Data.ExecutorJobId</c> is the identity of the executor node and is used by <c>GetSemanticJobDetail</c>, <c>GetSemanticJobLog</c>, and <c>KillSemanticJob</c>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</para>
+        /// <h2>Billing</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48694,12 +50464,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// <para>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// <h2>Description</h2>
+        /// <para>Loads a saved semantic job definition by <c>Name</c> and submits a new analysis run to the executor. This operation does not accept runtime <c>Source</c>, resource group, or reference file overrides. The execution always uses the configuration saved by <c>CreateSemanticJob</c>.</para>
+        /// <h2>Pre-execution validation</h2>
+        /// <para>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <c>ReferenceFileIds</c>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</para>
+        /// <h2>Response and What to do next</h2>
+        /// <para><c>Data.JobRunId</c> is the identity of the current semantics node run and is used by <c>DownloadSemanticResults</c> to download the exact output of this run. <c>Data.ExecutorJobId</c> is the identity of the executor node and is used by <c>GetSemanticJobDetail</c>, <c>GetSemanticJobLog</c>, and <c>KillSemanticJob</c>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</para>
+        /// <h2>Billing</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48717,12 +50494,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// <para>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// <h2>Description</h2>
+        /// <para>Loads a saved semantic job definition by <c>Name</c> and submits a new analysis run to the executor. This operation does not accept runtime <c>Source</c>, resource group, or reference file overrides. The execution always uses the configuration saved by <c>CreateSemanticJob</c>.</para>
+        /// <h2>Pre-execution validation</h2>
+        /// <para>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <c>ReferenceFileIds</c>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</para>
+        /// <h2>Response and What to do next</h2>
+        /// <para><c>Data.JobRunId</c> is the identity of the current semantics node run and is used by <c>DownloadSemanticResults</c> to download the exact output of this run. <c>Data.ExecutorJobId</c> is the identity of the executor node and is used by <c>GetSemanticJobDetail</c>, <c>GetSemanticJobLog</c>, and <c>KillSemanticJob</c>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</para>
+        /// <h2>Billing</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49200,6 +50984,190 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartWorkflowInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止元数据采集器运行</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>停止指定元数据采集器当前正在执行的运行任务。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 确认采集器存在正在执行的运行任务。</description></item>
+        /// <item><description>调用本接口提交停止请求。</description></item>
+        /// <item><description>再次调用 <c>ListCrawlerRuns</c> 确认最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCrawlerResponse
+        /// </returns>
+        public StopCrawlerResponse StopCrawlerWithOptions(StopCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止元数据采集器运行</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>停止指定元数据采集器当前正在执行的运行任务。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 确认采集器存在正在执行的运行任务。</description></item>
+        /// <item><description>调用本接口提交停止请求。</description></item>
+        /// <item><description>再次调用 <c>ListCrawlerRuns</c> 确认最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCrawlerResponse
+        /// </returns>
+        public async Task<StopCrawlerResponse> StopCrawlerWithOptionsAsync(StopCrawlerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止元数据采集器运行</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>停止指定元数据采集器当前正在执行的运行任务。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 确认采集器存在正在执行的运行任务。</description></item>
+        /// <item><description>调用本接口提交停止请求。</description></item>
+        /// <item><description>再次调用 <c>ListCrawlerRuns</c> 确认最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCrawlerResponse
+        /// </returns>
+        public StopCrawlerResponse StopCrawler(StopCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止元数据采集器运行</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>停止指定元数据采集器当前正在执行的运行任务。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>ListCrawlerRuns</c> 确认采集器存在正在执行的运行任务。</description></item>
+        /// <item><description>调用本接口提交停止请求。</description></item>
+        /// <item><description>再次调用 <c>ListCrawlerRuns</c> 确认最终运行状态。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCrawlerResponse
+        /// </returns>
+        public async Task<StopCrawlerResponse> StopCrawlerAsync(StopCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopCrawlerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -51724,6 +53692,258 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateComputeResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawler</c> 查询当前配置。</description></item>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 确认该采集器类型支持的配置能力。</description></item>
+        /// <item><description>仅传入需要更新的字段调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>至少需要提供一个可更新字段；未提供的字段保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrawlerResponse
+        /// </returns>
+        public UpdateCrawlerResponse UpdateCrawlerWithOptions(UpdateCrawlerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCrawlerShrinkRequest request = new UpdateCrawlerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfig))
+            {
+                request.ScheduleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfig, "ScheduleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scope))
+            {
+                request.ScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scope, "Scope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAiComment))
+            {
+                body["EnableAiComment"] = request.EnableAiComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfigShrink))
+            {
+                body["ScheduleConfig"] = request.ScheduleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeShrink))
+            {
+                body["Scope"] = request.ScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCrawlerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawler</c> 查询当前配置。</description></item>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 确认该采集器类型支持的配置能力。</description></item>
+        /// <item><description>仅传入需要更新的字段调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>至少需要提供一个可更新字段；未提供的字段保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCrawlerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrawlerResponse
+        /// </returns>
+        public async Task<UpdateCrawlerResponse> UpdateCrawlerWithOptionsAsync(UpdateCrawlerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCrawlerShrinkRequest request = new UpdateCrawlerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfig))
+            {
+                request.ScheduleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfig, "ScheduleConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scope))
+            {
+                request.ScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scope, "Scope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAiComment))
+            {
+                body["EnableAiComment"] = request.EnableAiComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfigShrink))
+            {
+                body["ScheduleConfig"] = request.ScheduleConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeShrink))
+            {
+                body["Scope"] = request.ScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrawler",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCrawlerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawler</c> 查询当前配置。</description></item>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 确认该采集器类型支持的配置能力。</description></item>
+        /// <item><description>仅传入需要更新的字段调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>至少需要提供一个可更新字段；未提供的字段保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrawlerResponse
+        /// </returns>
+        public UpdateCrawlerResponse UpdateCrawler(UpdateCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCrawlerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新元数据采集器</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用场景</h2>
+        /// <para>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</para>
+        /// <h2>推荐流程</h2>
+        /// <ol>
+        /// <item><description>调用 <c>GetCrawler</c> 查询当前配置。</description></item>
+        /// <item><description>调用 <c>GetCrawlerTypeCapabilities</c> 确认该采集器类型支持的配置能力。</description></item>
+        /// <item><description>仅传入需要更新的字段调用本接口。</description></item>
+        /// </ol>
+        /// <h2>版本要求</h2>
+        /// <para>需要购买DataWorks基础版及以上版本才能使用。</para>
+        /// <h2>注意事项</h2>
+        /// <para>至少需要提供一个可更新字段；未提供的字段保持不变。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCrawlerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrawlerResponse
+        /// </returns>
+        public async Task<UpdateCrawlerResponse> UpdateCrawlerAsync(UpdateCrawlerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCrawlerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -55696,12 +57916,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a meta entity definition. This operation supports both custom and extended table entity types.</para>
+        /// <para>Updates a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a later version.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -55769,12 +57989,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a meta entity definition. This operation supports both custom and extended table entity types.</para>
+        /// <para>Updates a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a later version.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -55842,12 +58062,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a meta entity definition. This operation supports both custom and extended table entity types.</para>
+        /// <para>Updates a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a later version.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -55865,12 +58085,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a meta entity definition. This operation supports both custom and extended table entity types.</para>
+        /// <para>Updates a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Professional Edition or a later version.</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57884,13 +60104,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a later version to use this operation.</description></item>
+        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -57947,13 +60167,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a later version to use this operation.</description></item>
+        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58010,13 +60230,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a later version to use this operation.</description></item>
+        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58035,13 +60255,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a later version to use this operation.</description></item>
+        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -59208,12 +61428,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Requests an upload slot for a reference file to prepare a file for the <c>singleTableFile</c> source of <c>CreateSemanticJob</c>.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Pass the file name, MIME type, and actual size to this operation to obtain <c>Data.UploadUrl</c> and <c>Data.FileId</c>.</description></item>
+        /// <item><description>Perform an HTTP PUT upload with the same <c>Content-Type</c> before the <c>UploadUrl</c> expires.</description></item>
+        /// <item><description>After the upload is complete, use <c>FileId</c> as the only element of <c>CreateSemanticJob.ReferenceFileIds</c>.</description></item>
+        /// </ol>
+        /// <h2>Security considerations</h2>
+        /// <para><c>UploadUrl</c> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59263,12 +61492,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Requests an upload slot for a reference file to prepare a file for the <c>singleTableFile</c> source of <c>CreateSemanticJob</c>.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Pass the file name, MIME type, and actual size to this operation to obtain <c>Data.UploadUrl</c> and <c>Data.FileId</c>.</description></item>
+        /// <item><description>Perform an HTTP PUT upload with the same <c>Content-Type</c> before the <c>UploadUrl</c> expires.</description></item>
+        /// <item><description>After the upload is complete, use <c>FileId</c> as the only element of <c>CreateSemanticJob.ReferenceFileIds</c>.</description></item>
+        /// </ol>
+        /// <h2>Security considerations</h2>
+        /// <para><c>UploadUrl</c> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59318,12 +61556,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Requests an upload slot for a reference file to prepare a file for the <c>singleTableFile</c> source of <c>CreateSemanticJob</c>.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Pass the file name, MIME type, and actual size to this operation to obtain <c>Data.UploadUrl</c> and <c>Data.FileId</c>.</description></item>
+        /// <item><description>Perform an HTTP PUT upload with the same <c>Content-Type</c> before the <c>UploadUrl</c> expires.</description></item>
+        /// <item><description>After the upload is complete, use <c>FileId</c> as the only element of <c>CreateSemanticJob.ReferenceFileIds</c>.</description></item>
+        /// </ol>
+        /// <h2>Security considerations</h2>
+        /// <para><c>UploadUrl</c> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59341,12 +61588,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// <h2>Scenarios</h2>
+        /// <para>Requests an upload slot for a reference file to prepare a file for the <c>singleTableFile</c> source of <c>CreateSemanticJob</c>.</para>
+        /// <h2>Procedure</h2>
+        /// <ol>
+        /// <item><description>Pass the file name, MIME type, and actual size to this operation to obtain <c>Data.UploadUrl</c> and <c>Data.FileId</c>.</description></item>
+        /// <item><description>Perform an HTTP PUT upload with the same <c>Content-Type</c> before the <c>UploadUrl</c> expires.</description></item>
+        /// <item><description>After the upload is complete, use <c>FileId</c> as the only element of <c>CreateSemanticJob.ReferenceFileIds</c>.</description></item>
+        /// </ol>
+        /// <h2>Security considerations</h2>
+        /// <para><c>UploadUrl</c> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</para>
         /// </description>
         /// 
         /// <param name="request">

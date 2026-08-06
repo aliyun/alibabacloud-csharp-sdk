@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineageRelationshipsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination result.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListLineageRelationshipsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListLineageRelationshipsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>An array of data lineage relationships.</para>
+            /// <para>The list of data tables.</para>
             /// </summary>
             [NameInMap("LineageRelationships")]
             [Validation(Required=false)]
             public List<LineageRelationship> LineageRelationships { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</para>
