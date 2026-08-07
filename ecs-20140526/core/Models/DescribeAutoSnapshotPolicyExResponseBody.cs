@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy> AutoSnapshotPolicy { get; set; }
             public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>AssociatedWithDisk</para>
+                /// </summary>
+                [NameInMap("AssociationType")]
+                [Validation(Required=false)]
+                public string AssociationType { get; set; }
+
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
@@ -99,6 +107,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string TargetCopyRegions { get; set; }
 
+                [NameInMap("TargetTags")]
+                [Validation(Required=false)]
+                public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTargetTags TargetTags { get; set; }
+                public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTargetTags : TeaModel {
+                    [NameInMap("TargetTag")]
+                    [Validation(Required=false)]
+                    public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTargetTagsTargetTag> TargetTag { get; set; }
+                    public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTargetTagsTargetTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("TimePoints")]
                 [Validation(Required=false)]
                 public string TimePoints { get; set; }
@@ -126,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when automatic snapshot policies are returned with pagination.</para>
+        /// <para>The number of entries per page when the automatic snapshot policies are displayed by page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: Snapshot replicas are permanently retained.</description></item>
-        /// <item><description>1 to 65535: the number of days for which snapshot replicas are retained.</description></item>
+        /// <item><description>-1: permanently retained.</description></item>
+        /// <item><description>1 to 65535: retained for the specified number of days.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The encryption parameter for cross-region snapshot replication.</para>
+        /// <para>The encryption parameter object for cross-region snapshot replication.</para>
         /// </summary>
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled. </description></item>
-            /// <item><description>false: Disabled.</description></item>
+            /// <item><description>true: enabled. </description></item>
+            /// <item><description>false: disabled.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to allow automatic cross-region replication. Valid values:</para>
+        /// <para>Specifies whether to allow automatic cross-region replication.</para>
         /// <list type="bullet">
-        /// <item><description>true: Allowed.</description></item>
-        /// <item><description>false: Not allowed.</description></item>
+        /// <item><description>true: allowed.</description></item>
+        /// <item><description>false: not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination region for cross-region snapshot replication. You can set one destination region.</para>
+        /// <para>The destination region to which snapshots are replicated. Currently, you can set only one destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;]</para>
@@ -132,6 +132,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("TargetCopyRegions")]
         [Validation(Required=false)]
         public string TargetCopyRegions { get; set; }
+
+        /// <summary>
+        /// <para>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
+        /// This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</para>
+        /// </summary>
+        [NameInMap("TargetTags")]
+        [Validation(Required=false)]
+        public List<ModifyAutoSnapshotPolicyExRequestTargetTags> TargetTags { get; set; }
+        public class ModifyAutoSnapshotPolicyExRequestTargetTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.
+            /// Valid values of N: 1 to 10.
+            /// The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.
+            /// Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+            /// Note: If you pass in an empty value or an empty string, it indicates any value.</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> to query available automatic snapshot policies.</para>
@@ -145,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. If this parameter is empty, the name is not modified.</para>
+        /// <para>The name of the automatic snapshot policy. If this parameter is left empty, the name is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SPTestName</para>
@@ -183,8 +211,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of automatic snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: Automatic snapshots are permanently retained.</description></item>
-        /// <item><description>1 to 65536: the number of days for which automatic snapshots are retained.</description></item>
+        /// <item><description>-1: permanently retained.</description></item>
+        /// <item><description>1 to 65536: retained for the specified number of days.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 

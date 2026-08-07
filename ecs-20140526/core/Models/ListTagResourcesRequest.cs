@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token to retrieve the next page of results.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of an ECS resource. The value of N ranges from 1 to 50.</para>
+        /// <para>The ECS resource ID. Valid values of N: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1j6qtvdm8w0z1o****</para>
@@ -59,44 +59,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>instance: ECS instance</para>
-        /// </description></item>
-        /// <item><description><para>disk: disk</para>
-        /// </description></item>
-        /// <item><description><para>snapshot: snapshot</para>
-        /// </description></item>
-        /// <item><description><para>image: image</para>
-        /// </description></item>
-        /// <item><description><para>securitygroup: security group</para>
-        /// </description></item>
-        /// <item><description><para>volume: volume</para>
-        /// </description></item>
-        /// <item><description><para>eni: elastic network interface</para>
-        /// </description></item>
-        /// <item><description><para>ddh: dedicated host</para>
-        /// </description></item>
-        /// <item><description><para>ddhcluster: dedicated host cluster</para>
-        /// </description></item>
-        /// <item><description><para>keypair: SSH key pair</para>
-        /// </description></item>
-        /// <item><description><para>launchtemplate: launch template</para>
-        /// </description></item>
-        /// <item><description><para>reservedinstance: reserved instance</para>
-        /// </description></item>
-        /// <item><description><para>snapshotpolicy: snapshot policy</para>
-        /// </description></item>
-        /// <item><description><para>elasticityassurance: Elasticity Assurance</para>
-        /// </description></item>
-        /// <item><description><para>capacityreservation: capacity reservation</para>
-        /// </description></item>
-        /// <item><description><para>command: Cloud Assistant command</para>
-        /// </description></item>
-        /// <item><description><para>invocation: The result of a command execution or file delivery in Cloud Assistant</para>
-        /// </description></item>
-        /// <item><description><para>activation: Cloud Assistant managed instance activation code</para>
-        /// </description></item>
-        /// <item><description><para>managedinstance: Cloud Assistant managed instance</para>
-        /// </description></item>
+        /// <item><description>instance: ECS instance.</description></item>
+        /// <item><description>disk: cloud disk.</description></item>
+        /// <item><description>snapshot: snapshot.</description></item>
+        /// <item><description>image: image.</description></item>
+        /// <item><description>securitygroup: security group.</description></item>
+        /// <item><description>volume: storage volume.</description></item>
+        /// <item><description>eni: Elastic Network Interface (ENI).</description></item>
+        /// <item><description>ddh: dedicated host.</description></item>
+        /// <item><description>ddhcluster: dedicated host cluster.</description></item>
+        /// <item><description>keypair: SSH key pair.</description></item>
+        /// <item><description>launchtemplate: launch template.</description></item>
+        /// <item><description>reservedinstance: reserved instance.</description></item>
+        /// <item><description>snapshotpolicy: automatic snapshot policy.</description></item>
+        /// <item><description>elasticityassurance: elasticity assurance.</description></item>
+        /// <item><description>capacityreservation: capacity reservation.</description></item>
+        /// <item><description>command: Cloud Assistant command.</description></item>
+        /// <item><description>invocation: Cloud Assistant command execution or file sending result.</description></item>
+        /// <item><description>activation: Cloud Assistant managed instance activation code.</description></item>
+        /// <item><description>managedinstance: Cloud Assistant managed instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,31 +89,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key to use for an exact match. The tag key must be 1 to 128 characters in length. The value of N ranges from 1 to 20.</para>
-            /// <para>Usage notes for the <c>Tag.N</c> parameter:</para>
+            /// <para>The tag key used to perform an exact search for ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</para>
+            /// <para>Usage notes of the <c>Tag.N</c> parameter:</para>
             /// <list type="bullet">
-            /// <item><description><para>Method 1: To find ECS resources that have specific tags.</para>
+            /// <item><description><para>Method 1: Used to perform an exact search for ECS resources that have the specified tags bound. Each tag is a key-value pair.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you specify only <c>Tag.N.Key</c>, the operation returns all resources that have the specified tag key.</para>
+            /// <item><description><para>If you specify only <c>Tag.N.Key</c>, all resources associated with the tag key are returned.</para>
             /// </description></item>
-            /// <item><description><para>If you specify only <c>Tag.N.Value</c>, the operation returns an <c>InvalidParameter.TagValue</c> error.</para>
+            /// <item><description><para>If you specify only <c>Tag.N.Value</c>, the <c>InvalidParameter.TagValue</c> error is returned.</para>
             /// </description></item>
-            /// <item><description><para>If you specify multiple tag key-value pairs, the operation returns only the ECS resources that match all specified pairs.</para>
+            /// <item><description><para>If you specify multiple tag key-value pairs at the same time, only ECS resources that match all the specified tag key-value pairs are returned.</para>
             /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Method 2: To query resources in a non-default resource group.</para>
+            /// <item><description><para>Method 2: Used to query resource information in non-default resource groups. Set <c>Key</c> to <c>acs:rm:rgId</c> and set the corresponding <c>Value</c> to the resource group ID.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set <c>Key</c> to <c>acs:rm:rgId</c>, you must set <c>Value</c> to the ID of a non-default resource group. If you specify the ID of the default resource group, the operation returns an error.</para>
+            /// <item><description><para>If <c>Key</c> is set to <c>acs:rm:rgId</c>, <c>Value</c> can only be set to a non-default resource group ID. If the specified resource group ID is the default resource group, an error message is returned.</para>
             /// </description></item>
-            /// <item><description><para>If you set <c>Key</c> to <c>acs:rm:rgId</c>, you cannot specify other tag key-value pairs. If you use multiple <c>Tag.N</c> parameters to query for resources by both resource group and tag, the operation returns an error.</para>
+            /// <item><description><para>If <c>Key</c> is set to <c>acs:rm:rgId</c>, you cannot specify other tag key-value pairs. If you use multiple <c>Tag.N</c> parameters to query resources by resource group and tags at the same time, an error message is returned.</para>
             /// </description></item>
             /// </list>
             /// </description></item>
@@ -146,9 +127,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value to use for an exact match. The tag value must be 1 to 128 characters in length. The value of N ranges from 1 to 20.</para>
+            /// <para>The tag value used to perform an exact search for ECS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</para>
             /// <remarks>
-            /// <para>When <c>Key</c> is <c>acs:rm:rgId</c>, you must set this parameter to the ID of a non-default resource group.</para>
+            /// <para>If <c>Key=acs:rm:rgId</c>, this parameter can only be set to a resource group ID, and the resource group ID cannot be the default resource group.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -161,9 +142,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A list of tag filters.</para>
+        /// <para>The tag filter rules.</para>
         /// <remarks>
-        /// <para>This parameter is in invitation-only preview and is not yet available.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TagFilter")]
@@ -171,20 +152,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ListTagResourcesRequestTagFilter> TagFilter { get; set; }
         public class ListTagResourcesRequestTagFilter : TeaModel {
             /// <summary>
-            /// <para>The tag key to use for a fuzzy match. The tag key must be 1 to 128 characters in length. The value of N ranges from 1 to 5.</para>
-            /// <para>Use the <c>TagFilter.N</c> parameter to perform a fuzzy match on tags to find matching ECS resources. Each filter consists of one key and one or more values. A fuzzy match may have a 2-second latency and is supported only for queries that return 5,000 or fewer resources after filtering.</para>
+            /// <para>The tag key used to perform a fuzzy search for ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 5.</para>
+            /// <para><c>TagFilter.N</c> is used to perform a fuzzy search for ECS resources that have the specified tags bound. It consists of a key and one or more values. A fuzzy search may have a latency of up to 2 seconds and supports only scenarios where the number of resources after fuzzy filtering is less than or equal to 5,000.</para>
             /// <list type="bullet">
-            /// <item><description><para>To perform a fuzzy match by tag key (<c>TagFilter.N.TagKey</c>), you must leave the tag values (<c>TagFilter.N.TagValues.N</c>) empty. For example, to search for ECS resources that have the tag key <c>environment</c>, you can set <c>TagFilter.1.TagKey</c> to <c>env*</c> (prefix match), <c>*env*</c> (substring match), or <c>env</c> (exact match), but you must leave <c>TagFilter.1.TagValues</c> empty.</para>
+            /// <item><description><para>When you perform a fuzzy search for ECS resources by tag key (<c>TagFilter.N.TagKey</c>), the tag value (<c>TagFilter.N.TagValues.N</c>) must be empty. For example, to perform a fuzzy search for ECS resources whose tag key is <c>environment</c>, you can set <c>TagFilter.1.TagKey</c> to <c>env*</c> (prefix match), <c>*env*</c> (infix match), or <c>env</c> (exact match), and <c>TagFilter.1.TagValues</c> must be empty.</para>
             /// </description></item>
-            /// <item><description><para>To perform a fuzzy match by tag value (<c>TagFilter.N.TagValues.N</c>), you must set the tag key (<c>TagFilter.N.TagKey</c>) to an exact value. For example, to search for ECS resources with the tag key <c>env</c> and the tag value <c>product</c>, you must set <c>TagFilter.1.TagKey</c> to <c>env</c>. You can then set <c>TagFilter.1.TagValues.1</c> to <c>proc*</c> (prefix match), <c>*proc*</c> (substring match), or <c>proc</c> (exact match). For the same <c>TagKey</c>, you can use only one search pattern. If you specify multiple patterns, the system uses only the first pattern.</para>
+            /// <item><description><para>When you perform a fuzzy search for ECS resources by tag value (<c>TagFilter.N.TagValues.N</c>), the tag key (<c>TagFilter.N.TagKey</c>) must be set to an exact value. For example, to perform a fuzzy search for ECS resources whose tag key is <c>env</c> and tag value is <c>product</c>, <c>TagFilter.1.TagKey</c> must be set to the exact value <c>env</c>, and <c>TagFilter.1.TagValues.1</c> can be set to <c>proc*</c> (prefix match), <c>*proc*</c> (infix match), or <c>proc</c> (exact match). Only one search method can be used for the same <c>TagKey</c>. If multiple search methods are specified, the first method takes precedence.</para>
             /// </description></item>
-            /// <item><description><para>Tag keys are combined by using a logical AND. The operation returns only the ECS resources that match all specified tag keys.</para>
+            /// <item><description><para>Tag keys have an AND relationship. Only ECS resources that match all specified tag keys are returned.</para>
             /// </description></item>
-            /// <item><description><para>Tag values for the same tag key are combined by using a logical OR. The operation returns the ECS resources that match any of the specified tag values for that tag key.</para>
+            /// <item><description><para>Tag values under the same tag key have an OR relationship. ECS resources that match any of the tag values specified for a tag key are returned.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>You cannot specify both the <c>TagFilter.N</c> and <c>Tag.N</c> parameters in the same request.</para>
+            /// <para>The <c>TagFilter.N</c> and <c>Tag.N</c> parameters cannot be used at the same time. Otherwise, an error message is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -195,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag values to use for a fuzzy match. The tag value must be 1 to 128 characters in length. The value of N ranges from 1 to 5. For more information, see the description of the <c>TagFilter.N.TagKey</c> parameter.</para>
+            /// <para>The tag value used to perform a fuzzy search for ECS resources. The tag value must be 1 to 128 characters in length. Valid values of N: 1 to 5. For the metric description, see the <c>TagFilter.N.TagKey</c> parameter description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestTagFilter</para>

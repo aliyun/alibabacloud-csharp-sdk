@@ -1740,7 +1740,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>Each cloud disk supports up to 10 automatic snapshot policies.</description></item>
-        /// <item><description>If the target cloud disk already has automatic snapshot policies applied, invoking this operation adds new policies without replacing existing ones.<remarks>
+        /// <item><description>If the target cloud disk already has an automatic snapshot policy applied, invoking this operation adds new policies without replacing existing ones.<remarks>
         /// <para>Cancel any unnecessary automatic snapshot policies to avoid unexpected costs.</para>
         /// </remarks>
         /// </description></item>
@@ -1813,7 +1813,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>Each cloud disk supports up to 10 automatic snapshot policies.</description></item>
-        /// <item><description>If the target cloud disk already has automatic snapshot policies applied, invoking this operation adds new policies without replacing existing ones.<remarks>
+        /// <item><description>If the target cloud disk already has an automatic snapshot policy applied, invoking this operation adds new policies without replacing existing ones.<remarks>
         /// <para>Cancel any unnecessary automatic snapshot policies to avoid unexpected costs.</para>
         /// </remarks>
         /// </description></item>
@@ -1886,7 +1886,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>Each cloud disk supports up to 10 automatic snapshot policies.</description></item>
-        /// <item><description>If the target cloud disk already has automatic snapshot policies applied, invoking this operation adds new policies without replacing existing ones.<remarks>
+        /// <item><description>If the target cloud disk already has an automatic snapshot policy applied, invoking this operation adds new policies without replacing existing ones.<remarks>
         /// <para>Cancel any unnecessary automatic snapshot policies to avoid unexpected costs.</para>
         /// </remarks>
         /// </description></item>
@@ -1915,7 +1915,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description>Each cloud disk supports up to 10 automatic snapshot policies.</description></item>
-        /// <item><description>If the target cloud disk already has automatic snapshot policies applied, invoking this operation adds new policies without replacing existing ones.<remarks>
+        /// <item><description>If the target cloud disk already has an automatic snapshot policy applied, invoking this operation adds new policies without replacing existing ones.<remarks>
         /// <para>Cancel any unnecessary automatic snapshot policies to avoid unexpected costs.</para>
         /// </remarks>
         /// </description></item>
@@ -8399,12 +8399,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
-        /// Take note of the following items:</para>
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in a region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8422,6 +8422,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationType))
+            {
+                query["AssociationType"] = request.AssociationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopiedSnapshotsRetentionDays))
             {
                 query["CopiedSnapshotsRetentionDays"] = request.CopiedSnapshotsRetentionDays;
@@ -8461,6 +8465,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCopyRegions))
             {
                 query["TargetCopyRegions"] = request.TargetCopyRegions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTags))
+            {
+                query["TargetTags"] = request.TargetTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSnapshotPolicyName))
             {
@@ -8509,12 +8517,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
-        /// Take note of the following items:</para>
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in a region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8532,6 +8540,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationType))
+            {
+                query["AssociationType"] = request.AssociationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopiedSnapshotsRetentionDays))
             {
                 query["CopiedSnapshotsRetentionDays"] = request.CopiedSnapshotsRetentionDays;
@@ -8571,6 +8583,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCopyRegions))
             {
                 query["TargetCopyRegions"] = request.TargetCopyRegions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTags))
+            {
+                query["TargetTags"] = request.TargetTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSnapshotPolicyName))
             {
@@ -8619,12 +8635,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
-        /// Take note of the following items:</para>
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in a region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8649,12 +8665,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
-        /// Take note of the following items:</para>
+        /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies in a region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is initiated.</description></item>
         /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
-        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
+        /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10119,9 +10135,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>You can enable the multi-attach feature (<c>MultiAttach</c>) when you create a disk. We recommend that you learn about this feature and its usage limits. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">NVMe-enabled ESSDs</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs, ESSD Entry disks, regional ESSDs, ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Advanced Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you can create a disk. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> page in the Account Center.</description></item>
+        /// <item><description>Creating a disk incurs fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. The <c>DeleteAutoSnapshot</c> parameter is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the parameter.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10276,9 +10295,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>You can enable the multi-attach feature (<c>MultiAttach</c>) when you create a disk. We recommend that you learn about this feature and its usage limits. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">NVMe-enabled ESSDs</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs, ESSD Entry disks, regional ESSDs, ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Advanced Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you can create a disk. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> page in the Account Center.</description></item>
+        /// <item><description>Creating a disk incurs fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. The <c>DeleteAutoSnapshot</c> parameter is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the parameter.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10433,9 +10455,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>You can enable the multi-attach feature (<c>MultiAttach</c>) when you create a disk. We recommend that you learn about this feature and its usage limits. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">NVMe-enabled ESSDs</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs, ESSD Entry disks, regional ESSDs, ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Advanced Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you can create a disk. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> page in the Account Center.</description></item>
+        /// <item><description>Creating a disk incurs fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. The <c>DeleteAutoSnapshot</c> parameter is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the parameter.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10462,9 +10487,12 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>You can enable the multi-attach feature (<c>MultiAttach</c>) when you create a disk. We recommend that you learn about this feature and its usage limits. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">NVMe-enabled ESSDs</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs, ESSD Entry disks, regional ESSDs, ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Advanced Edition.</description></item>
+        /// <item><description>You must complete real-name registration before you can create a disk. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> page in the Account Center.</description></item>
+        /// <item><description>Creating a disk incurs fees. Learn about the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
+        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. The <c>DeleteAutoSnapshot</c> parameter is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the parameter.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -11426,32 +11454,32 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Before you begin</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create custom images.</description></item>
-        /// <item><description>Configure the image check parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
+        /// <item><description>We recommend that you configure the image detection parameter <c>DetectionStrategy</c> when creating an image. This helps the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
         /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
-        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. Stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before you create an image.</para>
+        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. We recommend that you stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before creating an image.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Create a custom image from snapshots (the specified snapshots cannot be created on or before July 15, 2013.)</b><list type="bullet">
-        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the system disk (<c>SnapshotId</c>).</description></item>
-        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: Establish data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
+        /// <item><description><b>Create a custom image from a snapshot (the specified snapshot cannot be one created on or before July 15, 2013.)</b><list type="bullet">
+        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the instance system disk (<c>SnapshotId</c>).</description></item>
+        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: This requires establishing data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
         /// <item><description>Only one system disk snapshot can be specified. </description></item>
-        /// <item><description>You can specify multiple data disk snapshots, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
+        /// <item><description>Multiple data disk snapshots can be specified, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support custom image creation. Create a custom image before the instance is released as needed.</para>
+        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support creating custom images. Create a custom image before releasing the instance as needed.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11583,32 +11611,32 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Before you begin</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create custom images.</description></item>
-        /// <item><description>Configure the image check parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
+        /// <item><description>We recommend that you configure the image detection parameter <c>DetectionStrategy</c> when creating an image. This helps the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
         /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
-        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. Stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before you create an image.</para>
+        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. We recommend that you stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before creating an image.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Create a custom image from snapshots (the specified snapshots cannot be created on or before July 15, 2013.)</b><list type="bullet">
-        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the system disk (<c>SnapshotId</c>).</description></item>
-        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: Establish data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
+        /// <item><description><b>Create a custom image from a snapshot (the specified snapshot cannot be one created on or before July 15, 2013.)</b><list type="bullet">
+        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the instance system disk (<c>SnapshotId</c>).</description></item>
+        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: This requires establishing data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
         /// <item><description>Only one system disk snapshot can be specified. </description></item>
-        /// <item><description>You can specify multiple data disk snapshots, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
+        /// <item><description>Multiple data disk snapshots can be specified, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support custom image creation. Create a custom image before the instance is released as needed.</para>
+        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support creating custom images. Create a custom image before releasing the instance as needed.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11740,32 +11768,32 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Before you begin</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create custom images.</description></item>
-        /// <item><description>Configure the image check parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
+        /// <item><description>We recommend that you configure the image detection parameter <c>DetectionStrategy</c> when creating an image. This helps the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
         /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
-        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. Stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before you create an image.</para>
+        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. We recommend that you stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before creating an image.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Create a custom image from snapshots (the specified snapshots cannot be created on or before July 15, 2013.)</b><list type="bullet">
-        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the system disk (<c>SnapshotId</c>).</description></item>
-        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: Establish data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
+        /// <item><description><b>Create a custom image from a snapshot (the specified snapshot cannot be one created on or before July 15, 2013.)</b><list type="bullet">
+        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the instance system disk (<c>SnapshotId</c>).</description></item>
+        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: This requires establishing data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
         /// <item><description>Only one system disk snapshot can be specified. </description></item>
-        /// <item><description>You can specify multiple data disk snapshots, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
+        /// <item><description>Multiple data disk snapshots can be specified, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support custom image creation. Create a custom image before the instance is released as needed.</para>
+        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support creating custom images. Create a custom image before releasing the instance as needed.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11789,32 +11817,32 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Before you begin</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately complete. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create custom images.</description></item>
-        /// <item><description>Configure the image check parameter <c>DetectionStrategy</c> when creating an image to allow the system to optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.
+        /// <item><description>This is an asynchronous operation. After a request to create a custom image is sent, the image ID is returned. However, the image creation is not immediately completed. Call <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImage</a> to query the image information. When the status in the response is <c>Available</c>, the image is created and ready for use. For more information, see <a href="https://help.aliyun.com/document_detail/172789.html">Custom image overview</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the response contains {&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}, you cannot create a custom image.</description></item>
+        /// <item><description>We recommend that you configure the image detection parameter <c>DetectionStrategy</c> when creating an image. This helps the system optimize your image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a>.
         /// The following section describes three methods to create a custom image by calling this operation. The priority of request parameters is: InstanceId &gt; DiskDeviceMapping &gt; SnapshotId. If your request contains two or more of these parameters, the image is created based on the parameter with the highest priority.</description></item>
         /// <item><description><b>Create a custom image from an instance</b>: Specify the instance ID (<c>InstanceId</c>).<list type="bullet">
         /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
         /// <item><description>After the operation is called, a new snapshot is created for each disk of the instance.<remarks>
-        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. Stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before you create an image.</para>
+        /// <para>Notice: Because a running instance may have cached data that has not been written to disks, the data of the created custom image may be inconsistent with the instance data. We recommend that you stop the instance (<a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a>) before creating an image.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Create a custom image from snapshots (the specified snapshots cannot be created on or before July 15, 2013.)</b><list type="bullet">
-        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the system disk (<c>SnapshotId</c>).</description></item>
-        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: Establish data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
+        /// <item><description><b>Create a custom image from a snapshot (the specified snapshot cannot be one created on or before July 15, 2013.)</b><list type="bullet">
+        /// <item><description><b>Create a custom image from a system disk snapshot</b>: Specify only the snapshot ID of the instance system disk (<c>SnapshotId</c>).</description></item>
+        /// <item><description><b>Create a custom image from system disk and data disk snapshots</b>: This requires establishing data associations among multiple disks (<c>DiskDeviceMapping</c>).<list type="bullet">
         /// <item><description>Only one system disk snapshot can be specified. </description></item>
-        /// <item><description>You can specify multiple data disk snapshots, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
+        /// <item><description>Multiple data disk snapshots can be specified, up to a maximum of 16. If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, an empty data disk with the default capacity is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support custom image creation. Create a custom image before the instance is released as needed.</para>
+        /// <para>When an instance is released, the system disk is retained as a pay-as-you-go data disk. Snapshots created from this disk do not support creating custom images. Create a custom image before releasing the instance as needed.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -37285,16 +37313,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage scenarios, and Filter conditions.</para>
+        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage Scenarios, and Filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
-        /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
-        /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the request can bypass RAM authentication rules. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37445,16 +37470,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage scenarios, and Filter conditions.</para>
+        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage Scenarios, and Filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
-        /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
-        /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the request can bypass RAM authentication rules. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37605,16 +37627,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage scenarios, and Filter conditions.</para>
+        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage Scenarios, and Filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
-        /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
-        /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the request can bypass RAM authentication rules. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37633,16 +37652,13 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage scenarios, and Filter conditions.</para>
+        /// <para>Queries the list of available image resources based on specified parameters such as ImageId, image usage Scenarios, and Filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Image resources that you can query include your custom images, public images provided by Alibaba Cloud, Alibaba Cloud Marketplace images, and shared images that other Alibaba Cloud users have shared with you.</description></item>
-        /// <item><description>Paging is supported. The query results include the total number of available image resources and the image resources on the current page. The default number of entries per page is 10.</description></item>
-        /// <item><description>When you invoke an API operation by using Cloud Assistant CLI, request parameters of different data types must comply with format requirements. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</description></item>
-        /// <item><description>When you query images provided by Alibaba Cloud or shared images (ImageOwnerAlias is set to system or others), the request can bypass RAM authentication rules. For more information, see <a href="https://help.aliyun.com/document_detail/25497.html">Authentication rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50398,7 +50414,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
+        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. The parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50497,7 +50513,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
+        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. The parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50596,7 +50612,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
+        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. The parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50619,7 +50635,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
+        /// <para>InstanceId, SnapshotGroupId.N, and Status.N are not required request parameters, but you can use them to build filter logic. The parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -61629,18 +61645,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags on one or more ECS resources.</para>
+        /// <para>Queries the tags that are bound to one or more ECS resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>API</h2>
-        /// <para>To find specific resources, include at least one of the following parameters in your request.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Specify at least one of the following parameters in the request to determine the query object.</para>
         /// <list type="bullet">
         /// <item><description><c>ResourceId.N</c></description></item>
         /// <item><description><c>Tag.N</c> (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>)</description></item>
         /// <item><description><c>TagFilter.N</c>
-        /// If you specify the following parameter combinations, the API returns only the ECS resources that match all conditions.</description></item>
+        /// If you specify the following parameters at the same time, the response contains only ECS resources that meet both conditions.</description></item>
         /// <item><description><c>Tag.N</c> and <c>ResourceId.N</c></description></item>
         /// <item><description><c>TagFilter.N</c> and <c>ResourceId.N</c></description></item>
         /// </list>
@@ -61725,18 +61741,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags on one or more ECS resources.</para>
+        /// <para>Queries the tags that are bound to one or more ECS resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>API</h2>
-        /// <para>To find specific resources, include at least one of the following parameters in your request.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Specify at least one of the following parameters in the request to determine the query object.</para>
         /// <list type="bullet">
         /// <item><description><c>ResourceId.N</c></description></item>
         /// <item><description><c>Tag.N</c> (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>)</description></item>
         /// <item><description><c>TagFilter.N</c>
-        /// If you specify the following parameter combinations, the API returns only the ECS resources that match all conditions.</description></item>
+        /// If you specify the following parameters at the same time, the response contains only ECS resources that meet both conditions.</description></item>
         /// <item><description><c>Tag.N</c> and <c>ResourceId.N</c></description></item>
         /// <item><description><c>TagFilter.N</c> and <c>ResourceId.N</c></description></item>
         /// </list>
@@ -61821,18 +61837,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags on one or more ECS resources.</para>
+        /// <para>Queries the tags that are bound to one or more ECS resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>API</h2>
-        /// <para>To find specific resources, include at least one of the following parameters in your request.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Specify at least one of the following parameters in the request to determine the query object.</para>
         /// <list type="bullet">
         /// <item><description><c>ResourceId.N</c></description></item>
         /// <item><description><c>Tag.N</c> (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>)</description></item>
         /// <item><description><c>TagFilter.N</c>
-        /// If you specify the following parameter combinations, the API returns only the ECS resources that match all conditions.</description></item>
+        /// If you specify the following parameters at the same time, the response contains only ECS resources that meet both conditions.</description></item>
         /// <item><description><c>Tag.N</c> and <c>ResourceId.N</c></description></item>
         /// <item><description><c>TagFilter.N</c> and <c>ResourceId.N</c></description></item>
         /// </list>
@@ -61853,18 +61869,18 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags on one or more ECS resources.</para>
+        /// <para>Queries the tags that are bound to one or more ECS resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>API</h2>
-        /// <para>To find specific resources, include at least one of the following parameters in your request.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Specify at least one of the following parameters in the request to determine the query object.</para>
         /// <list type="bullet">
         /// <item><description><c>ResourceId.N</c></description></item>
         /// <item><description><c>Tag.N</c> (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>)</description></item>
         /// <item><description><c>TagFilter.N</c>
-        /// If you specify the following parameter combinations, the API returns only the ECS resources that match all conditions.</description></item>
+        /// If you specify the following parameters at the same time, the response contains only ECS resources that meet both conditions.</description></item>
         /// <item><description><c>Tag.N</c> and <c>ResourceId.N</c></description></item>
         /// <item><description><c>TagFilter.N</c> and <c>ResourceId.N</c></description></item>
         /// </list>
@@ -62401,7 +62417,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat days, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62409,7 +62425,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified policy.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
@@ -62456,6 +62472,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["TargetCopyRegions"] = request.TargetCopyRegions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTags))
+            {
+                query["TargetTags"] = request.TargetTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSnapshotPolicyId))
             {
                 query["autoSnapshotPolicyId"] = request.AutoSnapshotPolicyId;
@@ -62501,7 +62521,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat days, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62509,7 +62529,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified policy.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
@@ -62556,6 +62576,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["TargetCopyRegions"] = request.TargetCopyRegions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTags))
+            {
+                query["TargetTags"] = request.TargetTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSnapshotPolicyId))
             {
                 query["autoSnapshotPolicyId"] = request.AutoSnapshotPolicyId;
@@ -62601,7 +62625,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat days, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62609,7 +62633,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified policy.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
@@ -62629,7 +62653,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat days, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62637,7 +62661,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified policy.</description></item>
         /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>

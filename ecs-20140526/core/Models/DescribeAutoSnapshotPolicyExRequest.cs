@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must support characters in the Unicode letter category, which includes characters from various languages such as English and Chinese.</para>
+        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestName</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the automatic snapshot policy list.</para>
+        /// <para>The page number of the automatic snapshot policy list. The results are displayed on multiple pages.</para>
         /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when automatic snapshot policies are returned with pagination.</para>
+        /// <para>The number of entries per page when the automatic snapshot policies are displayed by page.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The ID of the resource group. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

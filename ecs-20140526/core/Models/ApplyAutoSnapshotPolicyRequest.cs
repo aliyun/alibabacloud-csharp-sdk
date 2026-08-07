@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy.</para>
+        /// <para>The ID of the target automatic snapshot policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

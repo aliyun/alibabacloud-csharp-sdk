@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The scenario in which the image is to be used. Valid values:</para>
+        /// <para>The scenario in which the image is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateEcs (default): instance creation.</description></item>
-        /// <item><description>ChangeOS: system disk replacement or operating system change.</description></item>
+        /// <item><description>CreateEcs (default): creates an instance.</description></item>
+        /// <item><description>ChangeOS: replaces the system disk or changes the operating system.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The architecture of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>i386.</description></item>
-        /// <item><description>x86_64.</description></item>
-        /// <item><description>arm64.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>i386</para>
@@ -39,12 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run.</para>
-        /// <list type="bullet">
-        /// <item><description>true: Sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.  </description></item>
-        /// <item><description>false: Sends a normal request. After the check succeeds, an HTTP status code of 2XX is returned and the resource status is queried directly.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -61,12 +51,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeImagesRequestFilter> Filter { get; set; }
         public class DescribeImagesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key for querying resources. Valid values:</para>
+            /// <para>The filter key used to query resources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When set to <c>CreationStartTime</c>, queries resources created after the specified time point (<c>Filter.N.Value</c>).</description></item>
-            /// <item><description>When set to <c>CreationEndTime</c>, queries resources created before the specified time point (<c>Filter.N.Value</c>).</description></item>
-            /// <item><description>When set to <c>NetworkType</c>, queries resources of the specified network type.</description></item>
-            /// <item><description>When set to <c>CpuOnlineUpgrade</c>, <c>CpuOnlineDowngrade</c>, <c>MemoryOnlineUpgrade</c>, or <c>MemoryOnlineDowngrade</c>, queries the CPU or memory hot-plugging support of the specified image.</description></item>
+            /// <item><description>CreationStartTime: queries information about resources that are created after the point in time specified by Filter.N.Value.</description></item>
+            /// <item><description>CreationEndTime: queries information about resources that are created before the point in time specified by Filter.N.Value.</description></item>
+            /// <item><description>NetworkType: queries information about resources of the specified network type.</description></item>
+            /// <item><description>CpuOnlineUpgrade, CpuOnlineDowngrade, MemoryOnlineUpgrade, or MemoryOnlineDowngrade: queries the CPU or memory hot-plugging support of the specified image.</description></item>
             /// </list>
             /// <para>Default value: null.</para>
             /// 
@@ -78,13 +68,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value for querying resources.</para>
+            /// <para>The filter value used when querying resources.</para>
             /// <list type="bullet">
-            /// <item><description><para>When <c>Filter.N.Key</c> is <c>CreationStartTime</c> or <c>CreationEndTime</c>, the format is <c>yyyy-MM-ddTHH:mmZ</c> in UTC+0.</para>
+            /// <item><description><para>When Filter.N.Key is <c>CreationStartTime</c> or <c>CreationEndTime</c>, the format is <c>yyyy-MM-ddTHH:mmZ</c> in the UTC+0 time zone.</para>
             /// </description></item>
-            /// <item><description><para>When <c>Filter.N.Key</c> is <c>NetworkType</c>, valid network type values include <c>vpc</c> and <c>classic</c>.</para>
+            /// <item><description><para>When Filter.N.Key is <c>NetworkType</c>, you can specify network type values such as <c>vpc</c> and <c>classic</c>.</para>
             /// </description></item>
-            /// <item><description><para>When <c>Filter.N.Key</c> is <c>CpuOnlineUpgrade</c>, <c>CpuOnlineDowngrade</c>, <c>MemoryOnlineUpgrade</c>, or <c>MemoryOnlineDowngrade</c>, valid values are <c>supported</c> and <c>unsupported</c>.</para>
+            /// <item><description><para>When Filter.N.Key is set to <c>CpuOnlineUpgrade</c>, <c>CpuOnlineDowngrade</c>, <c>MemoryOnlineUpgrade</c>, or <c>MemoryOnlineDowngrade</c>, the value can be <c>supported</c> or <c>unsupported</c>.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: null.</para>
@@ -99,10 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the image family. You can set this parameter to filter images that belong to the specified image family.</para>
-        /// <para>Default value: empty.</para>
+        /// <para>The image family name. You can set this parameter to filter images that belong to the specified image family.</para>
+        /// <para>Default value: null.</para>
         /// <remarks>
-        /// <para>For information about image families associated with Alibaba Cloud public images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</para>
+        /// <para>For information about image families associated with Alibaba Cloud official images, see <a href="https://help.aliyun.com/document_detail/108393.html">Public image overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,9 +108,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>Naming conventions for image IDs</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><para>Public images: Named by operating system version, architecture, language, and release date. For example, the image ID for Windows Server 2008 R2 Enterprise Edition, 64-bit English is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</para>
+        /// <item><description><para>Public image: Named based on the operating system version, architecture, language, and release date. For example, the image ID of a Windows Server 2008 R2 Enterprise Edition 64-bit English image is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</para>
         /// </description></item>
-        /// <item><description><para>Custom images, shared images, Alibaba Cloud Marketplace images, and community images: Start with m.</para>
+        /// <item><description><para>Custom image, shared image, Alibaba Cloud Marketplace image, and community image: Starts with m.</para>
         /// </description></item>
         /// </list>
         /// </details>
@@ -133,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The image name. Fuzzy search is supported.</para>
+        /// <para>The name of the image. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -144,20 +134,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The source of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>system: Public images provided by Alibaba Cloud that are not published through Alibaba Cloud Marketplace. This is different from the &quot;Public Image&quot; concept in the console.</description></item>
-        /// <item><description>self: Custom images that you created.</description></item>
-        /// <item><description>others: Includes shared images (images directly shared by other Alibaba Cloud users) and community images (custom images that other Alibaba Cloud users have made fully public). Note the following:<list type="bullet">
-        /// <item><description>To query community images, IsPublic must be set to true.</description></item>
-        /// <item><description>To query shared images, IsPublic must be set to false or left empty.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>marketplace: Images published by Alibaba Cloud or third-party independent software vendors (ISVs) in Alibaba Cloud Marketplace. These images must be purchased together with ECS instances. Check the billing details of Alibaba Cloud Marketplace images.</description></item>
-        /// </list>
-        /// <para>Default value: empty.</para>
-        /// <remarks>
-        /// <para>An empty value returns results with values of system, self, and others.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>self</para>
@@ -167,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageOwnerAlias { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the image owner. This parameter takes effect only when you query shared images or community images.</para>
+        /// <para>The Alibaba Cloud account ID to which the image belongs. This parameter takes effect only when you query shared images or community images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20169351435666****</para>
@@ -189,8 +165,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query published community images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Queries published community images. When you set this parameter to true, ImageOwnerAlias must be set to others.</description></item>
-        /// <item><description>false: Queries image types other than community images. The specific types depend on the ImageOwnerAlias parameter value.</description></item>
+        /// <item><description>true: Queries published community images. If you set this parameter to true, you must set ImageOwnerAlias to others.</description></item>
+        /// <item><description>false: Queries image types other than community images. The specific image type depends on the value of ImageOwnerAlias.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -223,10 +199,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The operating system type of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>windows.</description></item>
-        /// <item><description>linux.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>linux</para>
@@ -244,9 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the resources list.</para>
-        /// <para>Minimum value: 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number of the image resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -256,9 +226,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paging query. Settings for the number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging determine how many rows are returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -279,9 +247,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the custom image belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The ID of the enterprise resource group to which the custom image belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.</para>
         /// <remarks>
-        /// <para>Filtering by the default resource group is not supported.</para>
+        /// <para>Default resource group-based filtering is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,19 +289,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The status of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Creating: The image is being created.</description></item>
-        /// <item><description>Waiting: The image is waiting in a multi-task queue.</description></item>
-        /// <item><description>Available: The image is available for use.</description></item>
-        /// <item><description>UnAvailable: The image is unavailable.</description></item>
-        /// <item><description>CreateFailed: The image failed to be created.</description></item>
-        /// <item><description>Deprecated: The image is deprecated.</description></item>
-        /// <item><description>ALL: All image statuses.</description></item>
-        /// </list>
-        /// <para>Default value: Available. Status is required only when Usable is specified, and has no default value in that case.</para>
-        /// <remarks>
-        /// <para>This parameter supports multiple values separated by commas (,). When set to ALL, all image statuses are queried. ALL cannot be used together with other status values.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -351,7 +306,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeImagesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the image. Valid values of N: 1 to 20.</para>
-            /// <para>When you use a single tag to filter resources, the resource count with this tag cannot exceed 1000. When you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -373,9 +327,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the image is available for use.</para>
+        /// <para>Indicates whether the image is available.</para>
         /// <remarks>
-        /// <para>An available image can be immediately used to create instances. For more information about availability scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Image instant availability</a>.</para>
+        /// <para>An available image can be used immediately to create instances. For more available scenarios, see <a href="https://help.aliyun.com/document_detail/3044728.html">Snapshot instant access</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -386,10 +340,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Usable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the image is running on ECS instances. Valid values:</para>
+        /// <para>Specifies whether the image is running on an ECS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: The image is in use. ECS instances are using this image.</description></item>
-        /// <item><description>none: The image is idle. No ECS instances are using this image.</description></item>
+        /// <item><description>instance: The image is in use by an ECS instance.</description></item>
+        /// <item><description>none: The image is idle and not in use by any ECS instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

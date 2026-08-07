@@ -1,3 +1,11 @@
+2026-08-07 Version: 7.9.6
+- Update API CreateAutoSnapshotPolicy: add request parameters AssociationType.
+- Update API CreateAutoSnapshotPolicy: add request parameters TargetTags.
+- Update API DescribeAutoSnapshotPolicyEx: add response parameters Body.AutoSnapshotPolicies.$.AssociationType.
+- Update API DescribeAutoSnapshotPolicyEx: add response parameters Body.AutoSnapshotPolicies.$.TargetTags.
+- Update API ModifyAutoSnapshotPolicyEx: add request parameters TargetTags.
+
+
 2026-08-06 Version: 7.9.5
 - Update API CreateImage: add request parameters SecureBootOptions.
 - Update API DescribeImages: add response parameters Body.Images.$.SecureBootOptions.
