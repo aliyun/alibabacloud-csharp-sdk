@@ -1,3 +1,8 @@
+2026-08-07 Version: 1.12.0
+- Support API GetGuardLogStats.
+- Support API GetUploadContent.
+
+
 2026-08-05 Version: 1.11.0
 - Support API AddAppAgent.
 - Support API CopyAppConfig.

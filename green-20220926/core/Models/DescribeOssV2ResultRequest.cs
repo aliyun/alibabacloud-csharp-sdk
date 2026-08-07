@@ -9,30 +9,72 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DescribeOssV2ResultRequest : TeaModel {
+        /// <summary>
+        /// <para>The OSS bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>buckect_test</para>
+        /// </summary>
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
 
+        /// <summary>
+        /// <para>The current page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The end time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-09-14 16:08:38</para>
+        /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <para>The page size.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The risk level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>high</para>
+        /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public string RiskLevel { get; set; }
 
+        /// <summary>
+        /// <para>The start time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-09-14 16:08:38</para>
+        /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// <para>The task name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Image stock task 20240914100517757</para>
+        /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
