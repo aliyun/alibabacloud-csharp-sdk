@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RecentDays")]
+        [Validation(Required=false)]
+        public int? RecentDays { get; set; }
+
         /// <summary>
         /// <para>The field to sort the results by. The default is <c>Name</c>, which sorts by entity name.</para>
         /// 
