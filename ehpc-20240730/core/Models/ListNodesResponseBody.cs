@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
             /// <summary>
             /// <para>The bidding policy of the node. Valid values:</para>
             /// <list type="bullet">
