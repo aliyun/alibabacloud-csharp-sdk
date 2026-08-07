@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Message level.</para>
+        /// <para>The message level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WARNING</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string MessageLevel { get; set; }
 
         /// <summary>
-        /// <para>Messages with time earlier than this value.</para>
+        /// <para>Filters messages with a time earlier than the specified value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1740019610</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public long? MessageTimeEarlierThan { get; set; }
 
         /// <summary>
-        /// <para>Messages with time later than this value.</para>
+        /// <para>Filters messages with a time later than the specified value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1740019609</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public long? MessageTimeLaterThan { get; set; }
 
         /// <summary>
-        /// <para>Message type.</para>
+        /// <para>The message type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUB_PROTECTION_POLICY_MODIFIED</para>
@@ -60,10 +60,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string MessageType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If more entries are to be returned on the next page, a pagination token is returned.</para>
-        /// <remarks>
-        /// <para>If this parameter returns data, it indicates that there are more pages. You can use the returned NextToken as a request parameter to obtain the next page of data until it returns Null, indicating that all data has been obtained.</para>
-        /// </remarks>
+        /// <para>The pagination token. If there is a next page, this field has a return value. This parameter indicates that there is a next page as long as data is returned. You can use the returned NextToken as a request parameter to obtain the next page of data until Null is returned, which indicates that all data has been retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae***********99</para>

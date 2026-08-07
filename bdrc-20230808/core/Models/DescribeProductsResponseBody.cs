@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public DescribeProductsResponseBodyData Data { get; set; }
         public class DescribeProductsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of cloud products and their data protection status.</para>
+            /// <para>The collection of records returned in this request.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<DescribeProductsResponseBodyDataContent> Content { get; set; }
             public class DescribeProductsResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The count of failed check items.</para>
+                /// <para>The number of failed check items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? CheckFailedCount { get; set; }
 
                 /// <summary>
-                /// <para>The count of resources that failed the check.</para>
+                /// <para>The number of resources that failed the check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? CheckFailedResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The count of resources for which the check is disabled.</para>
+                /// <para>The number of resources for which the check is disabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? DisableCheckResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the data protection score is enabled for the cloud product.</para>
+                /// <para>Indicates whether data protection score assessment is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public bool? EnableCheck { get; set; }
 
                 /// <summary>
-                /// <para>The cloud product type, such as <c>ECS</c> and <c>OSS</c>.</para>
+                /// <para>The cloud service type, such as ecs or oss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The data protection score, ranging from 0 to 100.</para>
+                /// <para>The data protection score (0 to 100).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public List<DescribeProductsResponseBodyDataContentProtectionScoreDistribution> ProtectionScoreDistribution { get; set; }
                 public class DescribeProductsResponseBodyDataContentProtectionScoreDistribution : TeaModel {
                     /// <summary>
-                    /// <para>The count of resources within this score range.</para>
+                    /// <para>The number of resources within the range.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                     public DescribeProductsResponseBodyDataContentProtectionScoreDistributionRange Range { get; set; }
                     public class DescribeProductsResponseBodyDataContentProtectionScoreDistributionRange : TeaModel {
                         /// <summary>
-                        /// <para>The lower bound of the score range, inclusive.</para>
+                        /// <para>The lower bound of the range (inclusive).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                         public int? From { get; set; }
 
                         /// <summary>
-                        /// <para>The upper bound of the score range, inclusive.</para>
+                        /// <para>The upper bound of the range (inclusive).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>60</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 }
 
                 /// <summary>
-                /// <para>The UNIX timestamp of the last data protection score update.</para>
+                /// <para>The time when the data protection score was last updated (UNIX timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1726036498</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? ProtectionScoreUpdatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The count of risky check items.</para>
+                /// <para>The number of check items with risks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? RiskCount { get; set; }
 
                 /// <summary>
-                /// <para>The count of risky resources.</para>
+                /// <para>The number of resources with risks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? RiskyResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The total count of resources for the cloud product.</para>
+                /// <para>The total number of resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? TotalResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The count of resources pending a check.</para>
+                /// <para>The number of resources pending check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of records returned in this request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page of results. If this parameter is absent from the response, all results have been retrieved.</para>
+            /// <para>The position from which the current call starts reading. An empty value indicates that all data has been read.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b4fd3cffcacafd65e3818a0b9b2ff9a2</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that match the query. This parameter is not returned by default.</para>
+            /// <para>The total number of records that match the request conditions. This is an optional parameter and may not be returned by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30FB202A-1D22-5394-AB02-4477CDFCF51F</para>

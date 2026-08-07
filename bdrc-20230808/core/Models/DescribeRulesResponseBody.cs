@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public DescribeRulesResponseBodyData Data { get; set; }
         public class DescribeRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of returned records.</para>
+            /// <para>The collection of records returned in this request.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -34,7 +34,14 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? CheckFailedResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The check status. Valid values: NOT_CHECKED (Not checked), PASSED (Passed), FAILED (Failed), CHECKING (Checking), and CHECK_FAILED (Check failed).</para>
+                /// <para>The check status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NOT_CHECKED: not checked.</description></item>
+                /// <item><description>PASSED: check passed.</description></item>
+                /// <item><description>FAILED: check failed.</description></item>
+                /// <item><description>CHECKING: checking in progress.</description></item>
+                /// <item><description>CHECK_FAILED: check execution failed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PASSED</para>
@@ -44,7 +51,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string CheckStatus { get; set; }
 
                 /// <summary>
-                /// <para>The UNIX timestamp that indicates when the check was performed.</para>
+                /// <para>The check time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704157635</para>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? CheckTime { get; set; }
 
                 /// <summary>
-                /// <para>The product type to which the rule applies.</para>
+                /// <para>The applicable product type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
@@ -64,7 +71,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The resource type to which the rule applies.</para>
+                /// <para>The applicable resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::ECS::Instance</para>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The number of at-risk resources.</para>
+                /// <para>The number of resources with risks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? RiskyResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the rule.</para>
+                /// <para>The unique identifier of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rule-bp11ggd8wr762</para>
@@ -104,7 +111,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string RuleTemplate { get; set; }
 
                 /// <summary>
-                /// <para>The total number of resources that were checked.</para>
+                /// <para>The total number of checked resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -116,7 +123,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned on the current page.</para>
+            /// <para>The maximum number of records returned in this request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -126,7 +133,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+            /// <para>The position from which the current call starts reading. An empty value indicates that all data has been read.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0975951c75d7b41464c8d08ae17043ca</para>
@@ -136,7 +143,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the filter criteria. This parameter is optional and is not returned by default.</para>
+            /// <para>The total number of records that match the request conditions. This parameter is optional and may not be returned by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -148,7 +155,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86DEBAC9-AB6A-59AB-9E5C-A540E579ECC9</para>

@@ -1173,7 +1173,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data protection score status for cloud products.</para>
+        /// <para>Queries the data protection score status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1237,7 +1237,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data protection score status for cloud products.</para>
+        /// <para>Queries the data protection score status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1301,7 +1301,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data protection score status for cloud products.</para>
+        /// <para>Queries the data protection score status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1320,7 +1320,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data protection score status for cloud products.</para>
+        /// <para>Queries the data protection score status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1335,6 +1335,144 @@ namespace AlibabaCloud.SDK.BDRC20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeProductsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeRegionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1577,7 +1715,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all data protection rules.</para>
+        /// <para>Queries a list of data protection rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1649,7 +1787,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all data protection rules.</para>
+        /// <para>Queries a list of data protection rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1721,7 +1859,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all data protection rules.</para>
+        /// <para>Queries a list of data protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1740,7 +1878,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all data protection rules.</para>
+        /// <para>Queries a list of data protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2173,7 +2311,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the data protection score for a cloud product.</para>
+        /// <para>Disables the data protection score for a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,7 +2357,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the data protection score for a cloud product.</para>
+        /// <para>Disables the data protection score for a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2265,7 +2403,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the data protection score for a cloud product.</para>
+        /// <para>Disables the data protection score for a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2284,7 +2422,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the data protection score for a cloud product.</para>
+        /// <para>Disables the data protection score for a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2433,7 +2571,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data protection scoring for a cloud product.</para>
+        /// <para>Enables data protection scoring for an Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2479,7 +2617,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data protection scoring for a cloud product.</para>
+        /// <para>Enables data protection scoring for an Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2525,7 +2663,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data protection scoring for a cloud product.</para>
+        /// <para>Enables data protection scoring for an Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2544,7 +2682,7 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data protection scoring for a cloud product.</para>
+        /// <para>Enables data protection scoring for an Alibaba Cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class CreateResourceCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>Resource category name.</para>
+        /// <para>The resource category name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string ResourceCategoryName { get; set; }
 
         /// <summary>
-        /// <para>Resource matcher.</para>
+        /// <para>The resource matcher.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string ResourceMatcher { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>

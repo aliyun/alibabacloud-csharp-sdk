@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class ListMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMessagesResponseBodyData Data { get; set; }
         public class ListMessagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Response parameters.</para>
+            /// <para>The response content.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<ListMessagesResponseBodyDataContent> Content { get; set; }
             public class ListMessagesResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>Message ID.</para>
+                /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zgrjap8j-us04-owef-fpmo-kdpr80pbss0k</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>Message level.</para>
+                /// <para>The message level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WARNING</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageLevel { get; set; }
 
                 /// <summary>
-                /// <para>Message name.</para>
+                /// <para>The message name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MyMessage</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageName { get; set; }
 
                 /// <summary>
-                /// <para>Message source ID.</para>
+                /// <para>The message source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>p-123***7890</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageSourceId { get; set; }
 
                 /// <summary>
-                /// <para>Message source region ID.</para>
+                /// <para>The region ID of the message source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageSourceRegionId { get; set; }
 
                 /// <summary>
-                /// <para>Message source type.</para>
+                /// <para>The message source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PROTECTION_POLICY</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string MessageSourceType { get; set; }
 
                 /// <summary>
-                /// <para>Message time.</para>
+                /// <para>The message time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1740019609</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? MessageTime { get; set; }
 
                 /// <summary>
-                /// <para>Message type.</para>
+                /// <para>The message type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUB_PROTECTION_POLICY_MODIFIED</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5748C531-80B1-5C31-8421-63A1830B9E48</para>

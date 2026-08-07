@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DescribeProductsRequest : TeaModel {
         /// <summary>
-        /// <para>The product type of the resource. If you omit this parameter, the API returns resources of all product types. For example, specify <c>oss</c> to query resources from Object Storage Service.</para>
+        /// <para>Filters by the product type of the resource. If this parameter is not specified, all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string ResourceCategoryId { get; set; }
 
         /// <summary>
-        /// <para>A list of resource owner IDs for cross-account resource queries. If you omit this parameter, the API returns resources from the current account.</para>
+        /// <para>The list of resource owner IDs. This parameter is used in cross-account scenarios. If this parameter is left empty, data of the current account is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[123***7890]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public List<long?> ResourceOwnerIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource\&quot;s region. If you omit this parameter, the API returns resources from all regions.</para>
+        /// <para>Filters by the region where the resource resides. If this parameter is not specified, all regions are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

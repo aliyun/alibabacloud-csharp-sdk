@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class CreateResourceCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateResourceCategoryResponseBodyData Data { get; set; }
         public class CreateResourceCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Resource category ID.</para>
+            /// <para>The resource category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rc-123****7890</para>
