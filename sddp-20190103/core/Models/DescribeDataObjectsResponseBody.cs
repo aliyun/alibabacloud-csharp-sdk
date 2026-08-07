@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DbName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>TABLE</para>
+            /// </summary>
+            [NameInMap("EngineType")]
+            [Validation(Required=false)]
+            public string EngineType { get; set; }
+
+            /// <summary>
             /// <para>The code for the file category.</para>
             /// 
             /// <b>Example:</b>

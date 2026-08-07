@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>Specifies whether to enable auditing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Disable auditing.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Enable auditing.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Disable auditing.</description></item>
+        /// <item><description><b>1</b>: Enable auditing.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,15 +24,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AuditStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically trigger a rescan when a rule is changed. Valid values:</para>
+        /// <para>Specifies whether to automatically trigger a rescan when rules change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Do not automatically trigger a rescan.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Automatically trigger a rescan.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Do not trigger an automatic scan.</description></item>
+        /// <item><description><b>1</b>: Trigger an automatic scan.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If a rescan is automatically triggered, a full scan is performed on the data asset.</para>
+        /// <para>When a rule change triggers an automatic scan, a full scan is performed on all data in the data source.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,12 +41,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AutoScan { get; set; }
 
         /// <summary>
-        /// <para>The type of the database. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SQLServer</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,9 +65,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the data asset.</para>
+        /// <para>The unique ID of the data asset that belongs to the product associated with the DSC connection authorization configuration item.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</para>
+        /// <para>To modify a DSC connection authorization configuration item, you must provide the unique ID of the data asset that belongs to the associated product. You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,12 +79,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Chinese (default)</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,14 +95,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The retention period of raw logs after auditing is enabled. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>90</b></para>
-        /// </description></item>
-        /// <item><description><para><b>180</b></para>
-        /// </description></item>
-        /// <item><description><para><b>365</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>90</b></description></item>
+        /// <item><description><b>180</b></description></item>
+        /// <item><description><b>365</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,12 +109,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? LogStoreDay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to modify the username and password that are used to connect to the database. Valid values:</para>
+        /// <para>Specifies whether to modify the username and password for connecting to the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Modify the username and password.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not modify the username and password.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Modify.</description></item>
+        /// <item><description><b>false</b>: Do not modify.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +123,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public bool? ModifyPassword { get; set; }
 
         /// <summary>
-        /// <para>The password for the ApsaraDB RDS database.</para>
+        /// <para>The password used for the DSC connection authorization to the RDS database.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -157,18 +143,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The service to which the data asset belongs. Valid values:</para>
+        /// <para>The name of the product to which the data of the DSC connection authorization configuration item belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: OSS</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: ADS</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: OTS</para>
-        /// </description></item>
-        /// <item><description><para><b>5</b>: RDS</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: MaxCompute</description></item>
+        /// <item><description><b>2</b>: OSS</description></item>
+        /// <item><description><b>3</b>: ADS</description></item>
+        /// <item><description><b>4</b>: OTS</description></item>
+        /// <item><description><b>5</b>: RDS</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -180,14 +161,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The number of sensitive data samples to return. This parameter takes effect only after data detection is enabled. Valid values:</para>
+        /// <para>The number of sample entries for sensitive data detection after data detection is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5</b></para>
-        /// </description></item>
-        /// <item><description><para><b>10</b></para>
-        /// </description></item>
+        /// <item><description><b>0</b></description></item>
+        /// <item><description><b>5</b></description></item>
+        /// <item><description><b>10</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -198,29 +176,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? SamplingSize { get; set; }
 
         /// <summary>
-        /// <para>The security groups for agent-based auditing that uses PrivateLink.</para>
+        /// <para>The security groups used by PrivateLink in agent-based auditing.</para>
         /// </summary>
         [NameInMap("SecurityGroupIdList")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the data asset is located. Valid values:</para>
+        /// <para>The region where the asset resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-beijing</b>: China (Beijing)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-zhangjiakou</b>: China (Zhangjiakou)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-huhehaote</b>: China (Hohhot)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
-        /// </description></item>
+        /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
+        /// <item><description><b>cn-zhangjiakou</b>: China (Zhangjiakou)</description></item>
+        /// <item><description><b>cn-huhehaote</b>: China (Hohhot)</description></item>
+        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
+        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
+        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,7 +202,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The username for the ApsaraDB RDS database.</para>
+        /// <para>The username used for the DSC connection authorization to the RDS database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User01</para>
@@ -241,14 +212,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The vSwitches for agent-based auditing that uses PrivateLink.</para>
+        /// <para>The vSwitches used by PrivateLink in agent-based auditing.</para>
         /// </summary>
         [NameInMap("VSwitchIdList")]
         [Validation(Required=false)]
         public List<string> VSwitchIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the data asset belongs.</para>
+        /// <para>The VPC ID to which the data asset belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zevcqke6hh09c41****</para>

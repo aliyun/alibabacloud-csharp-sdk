@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the rules whose status failed to be changed. Multiple IDs are separated by commas.</para>
+        /// <para>The IDs of the rules whose status failed to be updated. Multiple IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3,4</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string FailedIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C3AC882-E5A8-4855-BE77-B6837B695EF1</para>

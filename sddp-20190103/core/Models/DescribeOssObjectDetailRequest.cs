@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeOssObjectDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the OSS object.</para>
+        /// <para>The unique ID of the OSS storage object.</para>
         /// <remarks>
         /// <para>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID.</para>
         /// </remarks>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. The default value is <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

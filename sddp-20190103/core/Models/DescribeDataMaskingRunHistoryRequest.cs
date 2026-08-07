@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataMaskingRunHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of service to which the masked data is destined. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
+        /// <para>The type of the destination product where the masked data is stored. Valid values: <b>1</b>: MaxCompute, <b>2</b>: OSS, <b>3</b>: ADS, <b>4</b>: OTS, <b>5</b>: RDS, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? DstType { get; set; }
 
         /// <summary>
-        /// <para>The end time to query for task executions. This is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the task execution to query. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1583856000000</para>
@@ -42,10 +42,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The ID of the main task.</para>
         /// <remarks>
-        /// <para>If a task has subtasks, this parameter specifies the ID of the main task. Otherwise, this parameter is empty.</para>
+        /// <para>If the task contains subtasks, this parameter is set to the current task ID. Otherwise, this parameter is empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? MainProcessId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SrcTableName { get; set; }
 
         /// <summary>
-        /// <para>The type of service to which the source data belongs. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
+        /// <para>The type of the source product to which the data to be masked belongs. Valid values: <b>1</b>: MaxCompute, <b>2</b>: OSS, <b>3</b>: ADS, <b>4</b>: OTS, <b>5</b>: RDS, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? SrcType { get; set; }
 
         /// <summary>
-        /// <para>The start time to query for task executions. This is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the task execution to query. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582992000000</para>
@@ -109,20 +107,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The execution status of the task. Valid values:</para>
+        /// <para>The task execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>-1</b>: pending.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: running.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: stopped by user.</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: partially failed.</para>
-        /// </description></item>
+        /// <item><description><b>-1</b>: Waiting for execution.</description></item>
+        /// <item><description><b>0</b>: Running.</description></item>
+        /// <item><description><b>1</b>: Executed successfully.</description></item>
+        /// <item><description><b>2</b>: Execution failed.</description></item>
+        /// <item><description><b>3</b>: Terminated by user.</description></item>
+        /// <item><description><b>4</b>: Partially failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

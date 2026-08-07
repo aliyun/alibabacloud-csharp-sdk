@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the data asset. Valid values: -<b>zh</b>: Chinese -<b>en</b>: English</para>
+        /// <para>The language of the data asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeOssObjectDetailV2Request : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sddp-api-scan-demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the OSS object.</para>
+        /// <para>The unique ID of the OSS storage object.</para>
         /// <remarks>
         /// <para>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID.</para>
         /// </remarks>
@@ -33,12 +33,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>en_us</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>en_us</b>: Simplified Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English (US)</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Simplified Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English (US).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The full name of the object stored in OSS.</para>
+        /// <para>The full name of the file stored in OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir1/test.png</para>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ObjectKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the service is enabled. This is also the region where the bucket is located.</para>
+        /// <para>The service region ID, which is the region ID of the bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,9 +67,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific template.</para>
+        /// <para>The industry template ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry-specific template.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the industry template ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

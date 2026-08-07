@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataMaskingTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of data masking tasks.</para>
+        /// <para>The list of static data masking tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataMaskingTasksResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The member account that the data masking destination belongs to.</para>
+            /// <para>The member accounts to which the destination data belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192479427903xxxx</para>
@@ -44,20 +44,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DstPath { get; set; }
 
             /// <summary>
-            /// <para>The product that the destination data source belongs to. Valid values:</para>
+            /// <para>The service to which the destination data source belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: MaxCompute.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: OSS.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: ADS.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: OTS.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: RDS.</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: SELF_DB.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: MaxCompute.</description></item>
+            /// <item><description><b>2</b>: OSS.</description></item>
+            /// <item><description><b>3</b>: ADS.</description></item>
+            /// <item><description><b>4</b>: OTS.</description></item>
+            /// <item><description><b>5</b>: RDS.</description></item>
+            /// <item><description><b>6</b>: SELF_DB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,20 +62,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DstType { get; set; }
 
             /// <summary>
-            /// <para>The type of the destination product. Valid values:</para>
+            /// <para>The destination service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MaxCompute</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>OSS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>ADS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>OTS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>RDS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>SELF_DB</b>.</para>
-            /// </description></item>
+            /// <item><description><b>MaxCompute</b>.</description></item>
+            /// <item><description><b>OSS</b>.</description></item>
+            /// <item><description><b>ADS</b>.</description></item>
+            /// <item><description><b>OTS</b>.</description></item>
+            /// <item><description><b>RDS</b>.</description></item>
+            /// <item><description><b>SELF_DB</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +80,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DstTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The creation time. Format: timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582992000000</para>
@@ -102,7 +90,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is running.</para>
+            /// <para>Indicates whether the task is being executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -112,7 +100,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? HasUnfinishProcess { get; set; }
 
             /// <summary>
-            /// <para>The numerical ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -122,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the source table is masked.</para>
+            /// <para>Indicates whether the task masks data in the original table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -132,7 +120,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? OriginalTable { get; set; }
 
             /// <summary>
-            /// <para>The creator of the task.</para>
+            /// <para>The task creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>
@@ -152,7 +140,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RunCount { get; set; }
 
             /// <summary>
-            /// <para>The member account that the data masking source belongs to.</para>
+            /// <para>The member accounts to which the source data belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192479427903xxxx</para>
@@ -169,20 +157,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcPath { get; set; }
 
             /// <summary>
-            /// <para>The type of the source product. Valid values:</para>
+            /// <para>The source service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: MaxCompute.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: OSS.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: ADS.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: OTS.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: RDS.</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: SELF_DB.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: MaxCompute.</description></item>
+            /// <item><description><b>2</b>: OSS.</description></item>
+            /// <item><description><b>3</b>: ADS.</description></item>
+            /// <item><description><b>4</b>: OTS.</description></item>
+            /// <item><description><b>5</b>: RDS.</description></item>
+            /// <item><description><b>6</b>: SELF_DB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,20 +175,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SrcType { get; set; }
 
             /// <summary>
-            /// <para>The type of the source product. Valid values:</para>
+            /// <para>The source service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MaxCompute</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>OSS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>ADS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>OTS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>RDS</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>SELF_DB</b>.</para>
-            /// </description></item>
+            /// <item><description><b>MaxCompute</b>.</description></item>
+            /// <item><description><b>OSS</b>.</description></item>
+            /// <item><description><b>ADS</b>.</description></item>
+            /// <item><description><b>OTS</b>.</description></item>
+            /// <item><description><b>RDS</b>.</description></item>
+            /// <item><description><b>SELF_DB</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,12 +193,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -233,7 +207,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The string ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt4HBgtw1B******</para>
@@ -243,7 +217,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task name</para>
@@ -253,14 +227,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The execution method of the task. Valid values:</para>
+            /// <para>The execution mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Manual.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Scheduled.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: Manual and scheduled.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Manual.</description></item>
+            /// <item><description><b>2</b>: Scheduled.</description></item>
+            /// <item><description><b>3</b>: Manual and scheduled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,7 +244,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -283,7 +254,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>769FB3C1-F4C9-4******</para>
@@ -293,7 +264,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

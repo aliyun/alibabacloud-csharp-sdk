@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: The default value. Simplified Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: American English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese (Simplified). This is the default value.</description></item>
+        /// <item><description><b>en_us</b>: English (US).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

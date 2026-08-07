@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeCategoryTemplateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of industry-specific templates.</para>
+        /// <para>The list of industry templates.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? CurrentRiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The description of the industry-specific template.</para>
+            /// <para>The description of the industry template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the industry-specific template was created.</para>
+            /// <para>The time when the industry template was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582992000000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the industry-specific template was last modified.</para>
+            /// <para>The time when the industry template was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1545277010000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the industry-specific template.</para>
+            /// <para>The unique ID of the industry template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The maximum categorization level.</para>
+            /// <para>The maximum category level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? MaxRiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the industry-specific template.</para>
+            /// <para>The name of the industry template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>built-in template</para>
@@ -107,19 +107,15 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the industry-specific template. Valid values:</para>
+            /// <para>The status of the industry template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled. This is the current primary template of the user.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Active. Both enabled and active templates can be used in detection tasks.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: The status of the template for the general-purpose detection model.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
+            /// <item><description><b>1</b>: Enabled. The template is the current primary template of the user.</description></item>
+            /// <item><description><b>2</b>: Active. Both enabled and active templates can be applied to detection tasks.</description></item>
+            /// <item><description><b>3</b>: General detection model template.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The IDs of enabled and active templates can be used as the industry-specific template ID for the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation.</para>
+            /// <para>Templates in the enabled or active state can be used as the industry template ID parameter for <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -130,12 +126,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the industry-specific template can be edited. Valid values:</para>
+            /// <para>Indicates whether the industry template supports editing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: No.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Yes.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Not supported.</description></item>
+            /// <item><description><b>1</b>: Supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +140,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SupportEdit { get; set; }
 
             /// <summary>
-            /// <para>The type of the industry-specific template.</para>
+            /// <para>The type of the industry template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -158,7 +152,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 10.</para>
+        /// <para>The number of entries per page in a paging query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -168,7 +162,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8491DBFD-48C0-4E11-B6FC-6F38921244A9</para>

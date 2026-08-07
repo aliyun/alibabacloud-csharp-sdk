@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class RestoreOssImageRequest : TeaModel {
         /// <summary>
-        /// <para>The OSS bucket.</para>
+        /// <para>The name of the OSS bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The full path of the file stored in OSS.</para>
+        /// <para>The full name of the file stored in OSS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ObjectKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the bucket is located.</para>
+        /// <para>The region ID of the bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage path for the restored image.</para>
+        /// <para>The storage path of the restored image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_dsc_original /dir1/test.png</para>

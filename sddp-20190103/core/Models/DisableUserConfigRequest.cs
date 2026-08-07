@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DisableUserConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the configuration item in the general anomaly alert configuration module. Call the <a href="~~DescribeConfigs~~">DescribeConfigs</a> operation to obtain the code.</para>
+        /// <para>The code of the configuration item in the anomaly alert general configuration module. You can call <a href="~~DescribeConfigs~~">DescribeConfigs</a> to obtain the Code of the configuration item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>access_failed_cnt</para>
@@ -32,10 +32,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese. This is the default value.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

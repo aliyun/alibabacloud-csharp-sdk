@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public DescribeEventDetailResponseBodyEvent Event { get; set; }
         public class DescribeEventDetailResponseBodyEvent : TeaModel {
             /// <summary>
-            /// <para>The time when the alert for the anomalous activity was triggered. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the alert was triggered for the anomalous activity. Format: UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1545829129000</para>
@@ -27,15 +27,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? AlertTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the detection of the anomalous activity is enhanced. Valid values:</para>
+            /// <para>Indicates whether detection enhancement is enabled for the anomalous activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Disabled.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Enhancing the detection of anomalous activities improves detection accuracy and the alert reporting rate.</para>
+            /// <para>Enhancing the detection capability for anomalous activities can improve detection accuracy and increase the event alerting rate for anomalous activities.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Backed { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset instance in which the anomalous activity occurred.</para>
+            /// <para>The name of the asset instance of the product to which the anomalous activity belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>in-222***</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DealReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the anomalous activity was handled. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the anomalous activity was handled. Format: UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1611139155000</para>
@@ -106,29 +104,27 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? DealUserId { get; set; }
 
             /// <summary>
-            /// <para>The specific content of the anomalous activity details.</para>
+            /// <para>The specific content in the anomalous activity details.</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public DescribeEventDetailResponseBodyEventDetail Detail { get; set; }
             public class DescribeEventDetailResponseBodyEventDetail : TeaModel {
                 /// <summary>
-                /// <para>The baseline behavior profile for the anomalous activity.</para>
+                /// <para>The baseline behavior profile of the anomalous activity.</para>
                 /// </summary>
                 [NameInMap("Chart")]
                 [Validation(Required=false)]
                 public List<DescribeEventDetailResponseBodyEventDetailChart> Chart { get; set; }
                 public class DescribeEventDetailResponseBodyEventDetailChart : TeaModel {
                     /// <summary>
-                    /// <para>The type of the chart. Valid values:</para>
+                    /// <para>The chart display type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>1</b>: column chart.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>2</b>: line chart.</para>
-                    /// </description></item>
+                    /// <item><description><b>1</b>: bar chart.</description></item>
+                    /// <item><description><b>2</b>: line chart.</description></item>
                     /// </list>
                     /// <remarks>
-                    /// <para>This parameter is returned only when NewAlarm is set to true.</para>
+                    /// <para>This field is returned only when NewAlarm is set to true.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -139,14 +135,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public int? ChatType { get; set; }
 
                     /// <summary>
-                    /// <para>The data items of the baseline behavior profile for the anomalous activity.</para>
+                    /// <para>The data items of the baseline behavior profile of the anomalous activity.</para>
                     /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public DescribeEventDetailResponseBodyEventDetailChartData Data { get; set; }
                     public class DescribeEventDetailResponseBodyEventDetailChartData : TeaModel {
                         /// <summary>
-                        /// <para>The values of the data items on the x-axis.</para>
+                        /// <para>The value of the X-axis data item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[test1,test2,...]</para>
@@ -156,7 +152,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                         public List<string> X { get; set; }
 
                         /// <summary>
-                        /// <para>The values of the data items on the y-axis.</para>
+                        /// <para>The value of the Y-axis data item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[1,2,3,...]</para>
@@ -166,7 +162,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                         public List<string> Y { get; set; }
 
                         /// <summary>
-                        /// <para>The values of the data items on the z-axis.</para>
+                        /// <para>The value of the Z-axis data item.</para>
                         /// </summary>
                         [NameInMap("Z")]
                         [Validation(Required=false)]
@@ -175,7 +171,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the baseline behavior profile for the anomalous activity.</para>
+                    /// <para>The name of the baseline behavior profile of the anomalous activity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Baseline behavior chart</para>
@@ -185,9 +181,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The title of the chart.</para>
+                    /// <para>The chart title.</para>
                     /// <remarks>
-                    /// <para>This parameter is returned only when NewAlarm is set to true.</para>
+                    /// <para>This field is returned only when NewAlarm is set to true.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -198,12 +194,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the chart. Valid values:</para>
+                    /// <para>The chart display type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>1</b>: column chart.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>2</b>: line chart.</para>
-                    /// </description></item>
+                    /// <item><description><b>1</b>: bar chart.</description></item>
+                    /// <item><description><b>2</b>: line chart.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -214,7 +208,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The label of the x-axis.</para>
+                    /// <para>The label description of the X-axis data items.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Number of days</para>
@@ -224,7 +218,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string XLabel { get; set; }
 
                     /// <summary>
-                    /// <para>The label of the y-axis.</para>
+                    /// <para>The label description of the Y-axis data items.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Value</para>
@@ -234,9 +228,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string YLabel { get; set; }
 
                     /// <summary>
-                    /// <para>The label of the z-axis.</para>
+                    /// <para>The label description of the Z-axis data items.</para>
                     /// <remarks>
-                    /// <para>This parameter is returned only when NewAlarm is set to true.</para>
+                    /// <para>This field is returned only when NewAlarm is set to true.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -288,14 +282,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 }
 
                 /// <summary>
-                /// <para>The information about the source of the anomalous activity.</para>
+                /// <para>The source information of the anomalous activity.</para>
                 /// </summary>
                 [NameInMap("ResourceInfo")]
                 [Validation(Required=false)]
                 public List<DescribeEventDetailResponseBodyEventDetailResourceInfo> ResourceInfo { get; set; }
                 public class DescribeEventDetailResponseBodyEventDetailResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The title of the source of the anomalous activity.</para>
+                    /// <para>The title of the anomalous activity source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Risk</para>
@@ -305,7 +299,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the source of the anomalous activity.</para>
+                    /// <para>The description of the anomalous activity source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Based on the record of authentication by using an unusual terminal, an attacker may have obtained the access permission of the account, or an employee accessed data from a personal terminal.</para>
@@ -319,7 +313,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The display name of the account that performed the operation.</para>
+            /// <para>The display name of the account that triggered the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yundunsr</para>
@@ -329,7 +323,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the anomalous activity occurred. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the anomalous activity occurred. Format: UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1545829129000</para>
@@ -346,7 +340,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public List<DescribeEventDetailResponseBodyEventHandleInfoList> HandleInfoList { get; set; }
             public class DescribeEventDetailResponseBodyEventHandleInfoList : TeaModel {
                 /// <summary>
-                /// <para>Specifies the account that handled the event.</para>
+                /// <para>The account used for handling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sddp-test2</para>
@@ -356,7 +350,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string CurrentValue { get; set; }
 
                 /// <summary>
-                /// <para>The time when the handling action was disabled. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The time when the blocking was performed. Format: UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611139155000</para>
@@ -366,7 +360,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? DisableTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the handling action was enabled. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The time when the unblocking was performed. Format: UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1611139155000</para>
@@ -396,7 +390,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string HandlerType { get; set; }
 
                 /// <summary>
-                /// <para>The duration of the handling action. Unit: minutes. If this parameter is empty, the handling action is permanent.</para>
+                /// <para>The handling duration. If this parameter is empty, the handling is permanent. Unit: minutes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -416,16 +410,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The status of the handling action. Valid values:</para>
+                /// <para>The unblocking status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: disabled.</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: enabled.</para>
-                /// </description></item>
-                /// <item><description><para><b>-1</b>: disabling failed.</para>
-                /// </description></item>
-                /// <item><description><para><b>-2</b>: enabling failed.</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: blocked.</description></item>
+                /// <item><description><b>1</b>: unblocked.</description></item>
+                /// <item><description><b>-1</b>: blocking failed.</description></item>
+                /// <item><description><b>-2</b>: unblocking failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -438,7 +428,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The unique ID of the anomalous activity that is recorded in Data Security Center.</para>
+            /// <para>The unique ID of the anomalous activity recorded by Data Security Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52234</para>
@@ -448,7 +438,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The details of the alert log.</para>
+            /// <para>The alert log information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;client_ip&quot;: [&quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;], &quot;start_time&quot;: &quot;2020-05-10 00:00:01&quot;, &quot;instance&quot;: [&quot;omniscience-data&quot;, &quot;punish-beaver-data&quot;], &quot;end_time&quot;: &quot;2020-05-10 00:21:22&quot;, &quot;client_ua&quot;: [&quot;Java/1.8.0_152&quot;, &quot;Java/1.8.0_92&quot;, &quot;aliyun-sdk-java/2.0.0&quot;, &quot;aliyun-sdk-java/2.8.0(Linux/4.9.151-015.ali3000.alios7.x86_64/amd64;1.8.0_152)&quot;], &quot;user_name&quot;: 1512222261295262}</para>
@@ -458,7 +448,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string LogDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the account that performed the operation.</para>
+            /// <para>The logon name of the account that triggered the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>det1111</para>
@@ -470,10 +460,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Indicates whether the alert is of the new version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes. </description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -484,7 +472,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? NewAlarm { get; set; }
 
             /// <summary>
-            /// <para>The name of the product in which the anomalous activity is detected. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The name of the product to which the anomalous activity belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, RDS</b>, and others.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -494,14 +482,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The processing status of the anomalous activity. Valid values:</para>
+            /// <para>The handling status of the anomalous activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: unhandled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: confirmed.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: dismissed.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: unhandled. </description></item>
+            /// <item><description><b>1</b>: confirmed as a violation. </description></item>
+            /// <item><description><b>2</b>: marked as a false positive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -512,7 +497,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the processing status of the anomalous activity.</para>
+            /// <para>The name of the handling status of the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending</para>
@@ -522,7 +507,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string StatusName { get; set; }
 
             /// <summary>
-            /// <para>The code of the anomalous activity subtype.</para>
+            /// <para>The code of the subtype of the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>020008</para>
@@ -532,7 +517,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SubTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the anomalous activity subtype.</para>
+            /// <para>The name of the subtype of the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Anomalous volume of downloaded data</para>
@@ -542,7 +527,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SubTypeName { get; set; }
 
             /// <summary>
-            /// <para>The code of the anomalous activity type.</para>
+            /// <para>The code of the parent type of the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02</para>
@@ -552,14 +537,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TypeCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the anomalous activity type. Valid values:</para>
+            /// <para>The name of the parent type of the anomalous activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>01</b>: anomalous permission access.</para>
-            /// </description></item>
-            /// <item><description><para><b>02</b>: anomalous data flow.</para>
-            /// </description></item>
-            /// <item><description><para><b>03</b>: anomalous data operation.</para>
-            /// </description></item>
+            /// <item><description><b>01</b>: anomalous permission access.</description></item>
+            /// <item><description><b>02</b>: anomalous data flow.</description></item>
+            /// <item><description><b>03</b>: anomalous data operation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -570,7 +552,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TypeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that performed the operation.</para>
+            /// <para>The ID of the account that triggered the anomalous activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>229157443385014***</para>
@@ -582,7 +564,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69FB3C1-F4C9-42DF-9B72-7077A8989C13</para>

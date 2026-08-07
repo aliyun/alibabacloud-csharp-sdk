@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values are <b>zh</b> for Chinese and <b>en</b> for English.</para>
+        /// <para>The language of the request and response. Valid values:- <b>zh</b>: Chinese- <b>en</b>: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The unique IDs of the anomalous activity subtypes. Separate multiple IDs with commas.</para>
+        /// <para>The unique IDs of the anomalous activity child classes, separated by commas (,).</para>
         /// <remarks>
-        /// <para>To enable SDDP to detect anomalous activities for subtypes, provide the unique IDs of the anomalous activity subtypes. Call the <b>DescribeEventTypes</b> operation to obtain the IDs.</para>
+        /// <para>To enable the detection of anomalous activities of specified child classes, provide the unique IDs of the child classes. You can call the <b>DescribeEventTypes</b> operation to obtain the IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

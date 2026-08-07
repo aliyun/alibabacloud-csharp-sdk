@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataMaskingTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,20 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The product that the destination data source belongs to. Valid values:</para>
+        /// <para>The service to which the destination data source belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: MaxCompute.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: OSS.</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: ADS.</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: OTS.</para>
-        /// </description></item>
-        /// <item><description><para><b>5</b>: RDS.</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: SELF_DB.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: MaxCompute.</description></item>
+        /// <item><description><b>2</b>: OSS.</description></item>
+        /// <item><description><b>3</b>: ADS.</description></item>
+        /// <item><description><b>4</b>: OTS.</description></item>
+        /// <item><description><b>5</b>: RDS.</description></item>
+        /// <item><description><b>6</b>: SELF_DB.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +38,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? DstType { get; set; }
 
         /// <summary>
-        /// <para>The end time for creating the data masking task. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time of the task creation period. Format: timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1583856000000</para>
@@ -56,10 +50,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +62,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +72,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A keyword to search for tasks. You can search by task name or task ID.</para>
+        /// <para>The keyword used to search for tasks. You can search by task name or task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -90,7 +82,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The start time for creating the task. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time of the task creation period. Format: timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582992000000</para>

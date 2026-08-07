@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeOssObjectDetailV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the OSS object.</para>
+        /// <para>The details of the OSS storage object.</para>
         /// </summary>
         [NameInMap("OssObjectDetail")]
         [Validation(Required=false)]
         public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail OssObjectDetail { get; set; }
         public class DescribeOssObjectDetailV2ResponseBodyOssObjectDetail : TeaModel {
             /// <summary>
-            /// <para>The name of the bucket that stores the OSS object.</para>
+            /// <para>The name of the bucket to which the OSS storage object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sddp-api-scan-demo</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string FileCategoryName { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the object.</para>
+            /// <para>The unique ID of the column object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757262735738932224</para>
@@ -57,14 +57,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The data tags, separated by commas. Example: 101,102. Valid values:</para>
+            /// <para>The data tags, separated by commas, such as 101,102. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>101</b>: Personal sensitive information.</para>
-            /// </description></item>
-            /// <item><description><para><b>102</b>: Personal information.</para>
-            /// </description></item>
-            /// <item><description><para><b>107</b>: General information.</para>
-            /// </description></item>
+            /// <item><description><b>101</b>: personal sensitive information.</description></item>
+            /// <item><description><b>102</b>: personal information.</description></item>
+            /// <item><description><b>107</b>: general information.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ModelTagIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS object.</para>
+            /// <para>The name of the OSS storage object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dir1/test.png</para>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The access control list (ACL) of the object.</para>
+            /// <para>The ACL of the file object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -95,7 +92,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ObjectAcl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the OSS object is stored.</para>
+            /// <para>The region ID of the OSS storage object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -105,21 +102,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the risk level of the data asset. Valid values:</para>
+            /// <para>The risk level ID of the column data in the data asset table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: N/A.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: S1.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: S2.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: S3.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: S4.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: N/A.</description></item>
+            /// <item><description><b>2</b>: S1.</description></item>
+            /// <item><description><b>3</b>: S2.</description></item>
+            /// <item><description><b>4</b>: S3.</description></item>
+            /// <item><description><b>5</b>: S4.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>A return value of 1 or less indicates N/A.</para>
+            /// <para>A return value less than or equal to 1 indicates N/A.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -130,7 +122,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the risk level of the OSS object.</para>
+            /// <para>The risk level name of the OSS storage object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S2</para>
@@ -140,7 +132,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The list of sensitive data detection rules that the OSS object matches.</para>
+            /// <para>The list of sensitive data detection rules that the OSS storage object hits.</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -157,7 +149,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string CategoryName { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the sensitive data detection rule was matched.</para>
+                /// <para>The number of times the sensitive data detection rule is hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -167,21 +159,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>A list of tags for the detection model.</para>
+                /// <para>The list of data tags.</para>
                 /// </summary>
                 [NameInMap("ModelTags")]
                 [Validation(Required=false)]
                 public List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags> ModelTags { get; set; }
                 public class DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the data tag for the detection model.</para>
+                    /// <para>The data tag ID of the detection model. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>101</b>: Personal sensitive information.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>102</b>: Personal information.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>103</b>: Important data.</para>
-                    /// </description></item>
+                    /// <item><description><b>101</b>: personal sensitive information.</description></item>
+                    /// <item><description><b>102</b>: personal information.</description></item>
+                    /// <item><description><b>103</b>: important data.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -192,14 +181,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the data tag for the detection model.</para>
+                    /// <para>The data tag name of the detection model. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Personal sensitive information.</para>
-                    /// </description></item>
-                    /// <item><description><para>Personal information.</para>
-                    /// </description></item>
-                    /// <item><description><para>Important data.</para>
-                    /// </description></item>
+                    /// <item><description>Personal sensitive information.</description></item>
+                    /// <item><description>Personal information.</description></item>
+                    /// <item><description>Important data.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -212,18 +198,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the risk level that is specified in the rule.</para>
+                /// <para>The risk level ID of the OSS storage object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: N/A</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: S1</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: S2</para>
-                /// </description></item>
-                /// <item><description><para><b>4</b>: S3</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: S4</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: No sensitive data is detected.</description></item>
+                /// <item><description><b>2</b>: Level 1 sensitive data.</description></item>
+                /// <item><description><b>3</b>: Level 2 sensitive data.</description></item>
+                /// <item><description><b>4</b>: Level 3 sensitive data.</description></item>
+                /// <item><description><b>5</b>: Level 4 sensitive data.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -234,7 +215,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? RiskLevelId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the risk level that is specified in the rule.</para>
+                /// <para>The risk level name of the OSS storage object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S2</para>
@@ -244,7 +225,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RiskLevelName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the matched sensitive data detection rule.</para>
+                /// <para>The name of the sensitive data detection rule that is hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID card number</para>
@@ -256,7 +237,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The size of the file in bytes.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -268,7 +249,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>769FB3C1-F4C9-42DF-9B72-7077A8989C13</para>

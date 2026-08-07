@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The unique ID of the anomalous activity.</para>
         /// <remarks>
-        /// <para>To query the details of a single anomalous activity, you must provide its unique ID. You can call the <b>DescribeEvents</b> operation to obtain the ID.</para>
+        /// <para>To query the details of a single anomalous activity, provide the unique ID of the anomalous activity. You can call the <b>DescribeEvents</b> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

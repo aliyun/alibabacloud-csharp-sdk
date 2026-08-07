@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectColumnDetailV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number in the paging query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of detection results for the columns in the data table.</para>
+        /// <para>The list of column detection results for the data table.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataObjectColumnDetailV2ResponseBodyItems> Items { get; set; }
         public class DescribeDataObjectColumnDetailV2ResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The list of industry-specific categories for the sensitive data.</para>
+            /// <para>The list of industry categories to which the sensitive data belongs.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The comments on the column.</para>
+            /// <para>The comment of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>column comment</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ColumnComment { get; set; }
 
             /// <summary>
-            /// <para>The name of the column.</para>
+            /// <para>The column name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hide14</para>
@@ -66,16 +66,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MySQL</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>MariaDB</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>Oracle</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>PostgreSQL</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>SQLServer</b>.</para>
-            /// </description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>MariaDB</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance for the data asset table.</para>
+            /// <para>The instance name of the data asset table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp17t1htja573l5i8****</para>
@@ -108,11 +103,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The encryption status of the column. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>-1</b>: Not encrypted</para>
+            /// <item><description><para><b>-1</b>: Not encrypted.</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>: Encrypted</para>
+            /// <item><description><para><b>1</b>: Encrypted.</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>: Encryption failed</para>
+            /// <item><description><para><b>2</b>: Encryption failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -133,12 +128,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>The ID of the data tag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>101</b>: Personal sensitive information</para>
-                /// </description></item>
-                /// <item><description><para><b>102</b>: Personal information</para>
-                /// </description></item>
-                /// <item><description><para><b>107</b>: General information</para>
-                /// </description></item>
+                /// <item><description><b>101</b>: personal sensitive information</description></item>
+                /// <item><description><b>102</b>: personal information</description></item>
+                /// <item><description><b>107</b>: general information</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -151,12 +143,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>The name of the data tag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Personal sensitive information</para>
-                /// </description></item>
-                /// <item><description><para>Personal information</para>
-                /// </description></item>
-                /// <item><description><para>General information</para>
-                /// </description></item>
+                /// <item><description>Personal sensitive information</description></item>
+                /// <item><description>Personal information</description></item>
+                /// <item><description>General information</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -171,10 +160,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Indicates whether the column is a primary key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The column is a primary key.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The column is not a primary key.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The column is a primary key.</description></item>
+            /// <item><description><b>false</b>: The column is not a primary key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,30 +174,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The ID of the product to which the data object belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: MaxCompute</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: OSS</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: ADB-MYSQL</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: Tablestore</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: RDS</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: SELF_DB</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: PolarDB-X</para>
-            /// </description></item>
-            /// <item><description><para><b>8</b>: PolarDB</para>
-            /// </description></item>
-            /// <item><description><para><b>9</b>: ADB-PG</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: OceanBase</para>
-            /// </description></item>
-            /// <item><description><para><b>11</b>: MongoDB</para>
-            /// </description></item>
-            /// <item><description><para><b>25</b>: Redis</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: OSS</description></item>
+            /// <item><description><b>3</b>: ADB-MYSQL</description></item>
+            /// <item><description><b>4</b>: TableStore</description></item>
+            /// <item><description><b>5</b>: RDS</description></item>
+            /// <item><description><b>6</b>: SELF_DB</description></item>
+            /// <item><description><b>7</b>: PolarDB-X</description></item>
+            /// <item><description><b>8</b>: PolarDB</description></item>
+            /// <item><description><b>9</b>: ADB-PG</description></item>
+            /// <item><description><b>10</b>: OceanBase</description></item>
+            /// <item><description><b>11</b>: MongoDB</description></item>
+            /// <item><description><b>25</b>: Redis</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -231,18 +206,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitivity level. Valid values:</para>
+            /// <para>The risk level ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: N/A: No sensitive data is detected.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: S1: level-1 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: S2: level-2 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: S3: level-3 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: S4: level-4 sensitive data.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: N/A. No sensitive data is detected.</description></item>
+            /// <item><description><b>2</b>: S1. Level 1 sensitive data.</description></item>
+            /// <item><description><b>3</b>: S2. Level 2 sensitive data.</description></item>
+            /// <item><description><b>4</b>: S3. Level 3 sensitive data.</description></item>
+            /// <item><description><b>5</b>: S4. Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -253,18 +223,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level. Valid values:</para>
+            /// <para>The risk level name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>N/A</b>: No sensitive data is detected.</para>
-            /// </description></item>
-            /// <item><description><para><b>S1</b>: level-1 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>S2</b>: level-2 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>S3</b>: level-3 sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>S4</b>: level-4 sensitive data.</para>
-            /// </description></item>
+            /// <item><description><b>N/A</b>: No sensitive data is detected.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,7 +240,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the hit detection model.</para>
+            /// <para>The ID of the sensitive data detection rule that is hit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>51</para>
@@ -285,7 +250,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the hit detection model.</para>
+            /// <para>The name of the sensitive data detection rule that is hit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -295,7 +260,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>it_table</para>
@@ -307,7 +272,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+        /// <para>Settings for paging query. The maximum number of data asset instances to display on each page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -317,7 +282,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>769FB3C1-F4C9-42DF-9B72-7077A8989C13</para>
@@ -327,7 +292,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>231</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The details of the data asset instances.</para>
+        /// <para>The details of the data asset instances returned.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DepartName { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the data asset instance that is recorded in Data Security Center.</para>
+            /// <para>The unique ID of the data asset instance recorded in Data Security Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111</para>
@@ -69,10 +69,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The security status of the data asset instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: secure</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: insecure</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Secure.</description></item>
+            /// <item><description><b>false</b>: Not secure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Labelsec { get; set; }
 
             /// <summary>
-            /// <para>The time when the last scan of the data asset instance was completed. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the most recent scan of the data asset instance was completed. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637622793000</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? LastFinishTime { get; set; }
 
             /// <summary>
-            /// <para>If multi-account management is enabled and the asset belongs to a member account, this parameter indicates the UID of the member account.</para>
+            /// <para>If the management account has enabled multi-account management and the asset belongs to another member account, this field displays the UID of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12567890126</para>
@@ -103,21 +101,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string MemberAliUid { get; set; }
 
             /// <summary>
-            /// <para>The list of data labels.</para>
+            /// <para>The list of data tags.</para>
             /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyItemsModelTags> ModelTags { get; set; }
             public class DescribeInstancesResponseBodyItemsModelTags : TeaModel {
                 /// <summary>
-                /// <para>The ID of the data label. Valid values:</para>
+                /// <para>The data tag ID. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>101</b>: Personal sensitive information</para>
-                /// </description></item>
-                /// <item><description><para><b>102</b>: Personal information</para>
-                /// </description></item>
-                /// <item><description><para><b>107</b>: General information</para>
-                /// </description></item>
+                /// <item><description><b>101</b>: personal sensitive information</description></item>
+                /// <item><description><b>102</b>: personal information</description></item>
+                /// <item><description><b>107</b>: general information</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,14 +123,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data label. Valid values:</para>
+                /// <para>The data tag name. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Personal sensitive information</para>
-                /// </description></item>
-                /// <item><description><para>Personal information</para>
-                /// </description></item>
-                /// <item><description><para>General information</para>
-                /// </description></item>
+                /// <item><description>个人敏感信息</description></item>
+                /// <item><description>个人信息</description></item>
+                /// <item><description>通用信息</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -178,7 +170,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The name of the product to which the data asset instance belongs, such as MaxCompute, OSS, or RDS. For more information about the supported products, see <a href="https://help.aliyun.com/document_detail/212906.html">Data assets that can be scanned for sensitive data</a>.</para>
+            /// <para>The name of the product to which the data asset instance belongs, such as MaxCompute, OSS, or RDS. For supported product names, see <a href="https://help.aliyun.com/document_detail/212906.html">Data types from which sensitive data can be detected</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -200,10 +192,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The protection status of the data asset instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The instance is protected.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The instance is not protected.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Protected.</description></item>
+            /// <item><description><b>false</b>: Not protected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,30 +204,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Protection { get; set; }
 
             /// <summary>
-            /// <para>The ID of the threat level for the data asset instance. The higher the threat level ID, the more sensitive the data.</para>
+            /// <para>The risk level ID of the data asset instance. A higher risk level ID indicates more sensitive data is detected.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: No sensitive data is detected. No threat.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Threat level 1.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: Threat level 2.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: Threat level 3.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: Threat level 4.</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: Threat level 5.</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: Threat level 6.</para>
-            /// </description></item>
-            /// <item><description><para><b>8</b>: Threat level 7.</para>
-            /// </description></item>
-            /// <item><description><para><b>9</b>: Threat level 8.</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: Threat level 9.</para>
-            /// </description></item>
-            /// <item><description><para><b>11</b>: Threat level 10.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: No sensitive data is detected. No risk.</description></item>
+            /// <item><description><b>2</b>: Sensitive data risk at level 1.</description></item>
+            /// <item><description><b>3</b>: Sensitive data risk at level 2.</description></item>
+            /// <item><description><b>4</b>: Sensitive data risk at level 3.</description></item>
+            /// <item><description><b>5</b>: Sensitive data risk at level 4.</description></item>
+            /// <item><description><b>6</b>: Sensitive data risk at level 5.</description></item>
+            /// <item><description><b>7</b>: Sensitive data risk at level 6.</description></item>
+            /// <item><description><b>8</b>: Sensitive data risk at level 7.</description></item>
+            /// <item><description><b>9</b>: Sensitive data risk at level 8.</description></item>
+            /// <item><description><b>10</b>: Sensitive data risk at level 9.</description></item>
+            /// <item><description><b>11</b>: Sensitive data risk at level 10.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -248,7 +227,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the threat level for the data asset instance.</para>
+            /// <para>The risk level name of the data asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S1</para>
@@ -270,10 +249,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Indicates whether the data asset instance contains sensitive data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Contains sensitive data.</description></item>
+            /// <item><description><b>false</b>: Does not contain sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,7 +261,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// <para>The total amount of sensitive data in the data asset instance. For example, if the data asset is an RDS instance, this parameter indicates the total number of sensitive tables in the instance.</para>
+            /// <para>The total number of sensitive data items in the data asset instance. For example, if the data asset is ApsaraDB RDS, this value indicates the total number of sensitive tables in the databases of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -304,7 +281,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TenantName { get; set; }
 
             /// <summary>
-            /// <para>The total amount of data in the data asset instance. For example, if the data asset is an RDS instance, this parameter indicates the total number of tables in the instance.</para>
+            /// <para>The total number of data items in the data asset instance. For example, if the data asset is ApsaraDB RDS, this value indicates the total number of tables in the databases of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>231</para>
@@ -316,7 +293,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of data asset instances returned on each page.</para>
+        /// <para>The number of data asset instances on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -326,7 +303,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>71064826-726F-4ADA-B879-05D8055476FB</para>
@@ -336,7 +313,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of data asset instances.</para>
+        /// <para>The total number of data asset instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>231</para>

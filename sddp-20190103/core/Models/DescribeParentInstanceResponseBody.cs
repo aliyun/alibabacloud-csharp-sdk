@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeParentInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page when paging is used. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of queried data assets.</para>
+        /// <para>The list of data assets returned.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -29,10 +29,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The audit authorization status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Authorized.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: Unauthorized.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Authorized.</description></item>
+            /// <item><description><b>0</b>: Unauthorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? AuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The authorization status of the data asset instance.</para>
+            /// <para>The authorization status of the data asset instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Unauthorized.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Authorized.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Unauthorized.</description></item>
+            /// <item><description><b>1</b>: Authorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ClusterStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the connection node. This parameter is valid only for MongoDB assets.</para>
+            /// <para>The connection node type. This parameter is valid only for the MongoDB Asset Type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Primary</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ConnectNode { get; set; }
 
             /// <summary>
-            /// <para>The number of databases in the instance.</para>
+            /// <para>The number of databases under the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -99,18 +95,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DbNum { get; set; }
 
             /// <summary>
-            /// <para>The type of the database engine. Valid values:</para>
+            /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MySQL</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>MariaDB</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>Oracle</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>PostgreSQL</b>.</para>
-            /// </description></item>
-            /// <item><description><para><b>SQLServer</b>.</para>
-            /// </description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>MariaDB</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +132,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The storage space of the instance. This parameter is valid only for OSS assets. Unit: bytes.</para>
+            /// <para>The storage size of the instance. This parameter is valid only for the OSS Asset Type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>409600</para>
@@ -151,26 +142,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? InstanceSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the region. The following list describes the valid values:</para>
+            /// <para>The region name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>China (Hangzhou)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Shanghai)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Beijing)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Zhangjiakou)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Shenzhen)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Guangzhou)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>China (Hong Kong)</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Singapore</b></para>
-            /// </description></item>
-            /// <item><description><para><b>US (Silicon Valley)</b></para>
-            /// </description></item>
+            /// <item><description><b>China (Hangzhou)</b></description></item>
+            /// <item><description><b>China (Shanghai)</b></description></item>
+            /// <item><description><b>China (Beijing)</b></description></item>
+            /// <item><description><b>China (Zhangjiakou)</b></description></item>
+            /// <item><description><b>China (Shenzhen)</b></description></item>
+            /// <item><description><b>China (Guangzhou)</b></description></item>
+            /// <item><description><b>Hong Kong (China)</b></description></item>
+            /// <item><description><b>Singapore</b></description></item>
+            /// <item><description><b>US (Silicon Valley)</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +163,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member account.</para>
+            /// <para>The ID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**********8103</para>
@@ -191,7 +173,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? MemberAccount { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the authorized asset. If the asset is structured data, the identifier is in the format of \<c>Instance ID.Database name\\</c>.</para>
+            /// <para>The identifier of the authorized asset. For structured data, the identifier is in the format of instance ID.database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-******xxx.**st</para>
@@ -211,32 +193,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset type. Valid values:</para>
+            /// <para>The asset type name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MaxCompute</b></para>
-            /// </description></item>
-            /// <item><description><para><b>OSS</b></para>
-            /// </description></item>
-            /// <item><description><para><b>ADB-MYSQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>TableStore</b></para>
-            /// </description></item>
-            /// <item><description><para><b>RDS</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SelfDB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB-X</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>ADB-PG</b></para>
-            /// </description></item>
-            /// <item><description><para><b>OceanBase</b></para>
-            /// </description></item>
-            /// <item><description><para><b>MongoDB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Redis</b></para>
-            /// </description></item>
+            /// <item><description><b>MaxCompute</b></description></item>
+            /// <item><description><b>OSS</b></description></item>
+            /// <item><description><b>ADB-MYSQL</b></description></item>
+            /// <item><description><b>TableStore</b></description></item>
+            /// <item><description><b>RDS</b></description></item>
+            /// <item><description><b>SelfDB</b></description></item>
+            /// <item><description><b>PolarDB-X</b></description></item>
+            /// <item><description><b>PolarDB</b></description></item>
+            /// <item><description><b>ADB-PG</b></description></item>
+            /// <item><description><b>OceanBase</b></description></item>
+            /// <item><description><b>MongoDB</b></description></item>
+            /// <item><description><b>Redis</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -247,7 +217,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The supported connection nodes. Multiple nodes are separated by commas.</para>
+            /// <para>The supported connection nodes. Multiple nodes are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Primary,Secondary</para>
@@ -277,7 +247,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TenantName { get; set; }
 
             /// <summary>
-            /// <para>The number of unconnected databases in the instance.</para>
+            /// <para>The number of unconnected databases under the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -299,7 +269,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of data asset instances returned on each page. Default value: <b>10</b>.</para>
+        /// <para>The maximum number of data asset instances displayed per page when paging is used. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -309,7 +279,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACEF9334-BB50-525D-8CF3-6CF504E4D1B3</para>

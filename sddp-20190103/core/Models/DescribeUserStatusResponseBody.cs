@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeUserStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>769FB3C1-F4C9-42DF-9B72-7077A8989C13</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the current account.</para>
+        /// <para>The details of the current logon account.</para>
         /// </summary>
         [NameInMap("UserStatus")]
         [Validation(Required=false)]
         public DescribeUserStatusResponseBodyUserStatus UserStatus { get; set; }
         public class DescribeUserStatusResponseBodyUserStatus : TeaModel {
             /// <summary>
-            /// <para>The authorized AccessKey ID of the user.</para>
+            /// <para>The AccessKey ID authorized by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourAccessKeyID</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the currently logged-in account has been granted the service role permissions for DSC asset synchronization. Valid values:</para>
+            /// <para>Indicates whether the current logon account has authorized the service-linked role for DSC asset synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: authorized.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: unauthorized.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: authorized.</description></item>
+            /// <item><description><b>false</b>: not authorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? AssetRoleAuthed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SQL Insights can be disabled. Valid values:</para>
+            /// <para>Indicates whether SQL Explorer can be disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: can be disabled.</description></item>
+            /// <item><description><b>false</b>: cannot be disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,12 +65,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? AuditClosable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SQL Insights can be released.</para>
+            /// <para>Indicates whether SQL Explorer can be released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: can be released.</description></item>
+            /// <item><description><b>false</b>: cannot be released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,12 +79,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? AuditReleasable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current account is granted Resource Access Management (RAM) permissions on DSC. Valid values:</para>
+            /// <para>Indicates whether the current logon account has authorized DSC to access RAM. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The account is granted the permissions.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The account is not granted the permissions.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: authorized.</description></item>
+            /// <item><description><b>false</b>: not authorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,12 +93,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Authed { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the DSC service for the current account. Valid values:</para>
+            /// <para>The billing method of the DSC service purchased by the current logon account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PREPAY</b>: subscription.</para>
-            /// </description></item>
-            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
-            /// </description></item>
+            /// <item><description><b>PREPAY</b>: subscription.</description></item>
+            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,12 +107,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The permissions that the current account has. Valid values:</para>
+            /// <para>The permissions of the current account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: The account has the management or read-only permissions on Data Security Center.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: The account has the management permissions on data domains.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: has management or read-only permissions for Data Security Center.</description></item>
+            /// <item><description><b>1</b>: has data domain management permissions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +121,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DataManagerRole { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Data Security Center instance purchased by the Alibaba Cloud account.</para>
+            /// <para>The instance ID of the Data Security Center product purchased by the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sddp-cn-****</para>
@@ -143,7 +131,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The number of instances in the current account.</para>
+            /// <para>The number of instances in the current logon account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -163,12 +151,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? InstanceTotalCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Asset Lab feature is enabled. Valid values:</para>
+            /// <para>Indicates whether the asset lab feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: disabled.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><b>0</b>: not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,7 +165,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? LabStatus { get; set; }
 
             /// <summary>
-            /// <para>The total OSS storage. Unit: bytes.</para>
+            /// <para>The total OSS storage capacity. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -189,7 +175,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? OssTotalSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of days that assets have been protected.</para>
+            /// <para>The total number of days that user assets have been protected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -201,10 +187,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Indicates whether the DSC service is purchased. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: purchased.</description></item>
+            /// <item><description><b>false</b>: not purchased.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,7 +199,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Purchased { get; set; }
 
             /// <summary>
-            /// <para>The number of days from service expiration to service release. Unit: days.</para>
+            /// <para>The number of days from expiration to release. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -235,7 +219,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The number of remaining days in the protection period for the assets of the current account.</para>
+            /// <para>The remaining days of the protection period for assets in the current logon account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131</para>
@@ -245,12 +229,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RemainDays { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current account uses the trial version of the DSC service. Valid values:</para>
+            /// <para>Indicates whether the current logon account is using a trial version of DSC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: trial.</description></item>
+            /// <item><description><b>false</b>: non-trial.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,12 +243,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Trail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the agent-based audit feature has been used. Valid values:</para>
+            /// <para>Indicates whether the Agent audit feature has been used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: yes.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: no.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: has been used.</description></item>
+            /// <item><description><b>0</b>: has not been used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -277,7 +257,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? UseAgentAudit { get; set; }
 
             /// <summary>
-            /// <para>The number of used instances.</para>
+            /// <para>The number of instances that are used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125</para>
@@ -287,7 +267,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? UseInstanceNum { get; set; }
 
             /// <summary>
-            /// <para>The used Object Storage Service (OSS) storage. Unit: bytes.</para>
+            /// <para>The used OSS storage capacity. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234</para>
