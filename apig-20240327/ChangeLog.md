@@ -1,3 +1,7 @@
+2026-08-07 Version: 10.1.4
+- Update API QueryConsumerAuthorizationRules: add request parameters consumerGroupNameLike.
+
+
 2026-08-05 Version: 10.1.3
 - Generated csharp 2024-03-27 for APIG.
 

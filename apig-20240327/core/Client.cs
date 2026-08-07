@@ -16505,6 +16505,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["consumerGroupId"] = request.ConsumerGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupNameLike))
+            {
+                query["consumerGroupNameLike"] = request.ConsumerGroupNameLike;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
             {
                 query["consumerId"] = request.ConsumerId;
@@ -16598,6 +16602,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupId))
             {
                 query["consumerGroupId"] = request.ConsumerGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupNameLike))
+            {
+                query["consumerGroupNameLike"] = request.ConsumerGroupNameLike;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
             {

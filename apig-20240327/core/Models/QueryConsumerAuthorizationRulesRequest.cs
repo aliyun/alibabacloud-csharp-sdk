@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConsumerGroupId { get; set; }
 
+        [NameInMap("consumerGroupNameLike")]
+        [Validation(Required=false)]
+        public string ConsumerGroupNameLike { get; set; }
+
         /// <summary>
         /// <para>The consumer ID.</para>
         /// 
