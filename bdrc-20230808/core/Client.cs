@@ -2831,6 +2831,124 @@ namespace AlibabaCloud.SDK.BDRC20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>开启跨账号管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCrossAccountManagementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCrossAccountManagementResponse
+        /// </returns>
+        public EnableCrossAccountManagementResponse EnableCrossAccountManagementWithOptions(EnableCrossAccountManagementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCrossAccountManagement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts/enable-management",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCrossAccountManagementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启跨账号管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCrossAccountManagementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCrossAccountManagementResponse
+        /// </returns>
+        public async Task<EnableCrossAccountManagementResponse> EnableCrossAccountManagementWithOptionsAsync(EnableCrossAccountManagementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCrossAccountManagement",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts/enable-management",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCrossAccountManagementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启跨账号管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCrossAccountManagementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCrossAccountManagementResponse
+        /// </returns>
+        public EnableCrossAccountManagementResponse EnableCrossAccountManagement(EnableCrossAccountManagementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableCrossAccountManagementWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启跨账号管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCrossAccountManagementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCrossAccountManagementResponse
+        /// </returns>
+        public async Task<EnableCrossAccountManagementResponse> EnableCrossAccountManagementAsync(EnableCrossAccountManagementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableCrossAccountManagementWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of the Backup and Disaster Recovery Center.</para>
         /// </summary>
         /// 
@@ -3295,6 +3413,176 @@ namespace AlibabaCloud.SDK.BDRC20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetResourceCategoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCrossAccountsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrossAccountsResponse
+        /// </returns>
+        public ListCrossAccountsResponse ListCrossAccountsWithOptions(ListCrossAccountsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountOwnerId))
+            {
+                query["CrossAccountOwnerId"] = request.CrossAccountOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagementMode))
+            {
+                query["ManagementMode"] = request.ManagementMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrossAccounts",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrossAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCrossAccountsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrossAccountsResponse
+        /// </returns>
+        public async Task<ListCrossAccountsResponse> ListCrossAccountsWithOptionsAsync(ListCrossAccountsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountOwnerId))
+            {
+                query["CrossAccountOwnerId"] = request.CrossAccountOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagementMode))
+            {
+                query["ManagementMode"] = request.ManagementMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCrossAccounts",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCrossAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCrossAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrossAccountsResponse
+        /// </returns>
+        public ListCrossAccountsResponse ListCrossAccounts(ListCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListCrossAccountsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCrossAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCrossAccountsResponse
+        /// </returns>
+        public async Task<ListCrossAccountsResponse> ListCrossAccountsAsync(ListCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListCrossAccountsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4037,6 +4325,314 @@ namespace AlibabaCloud.SDK.BDRC20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await OpenBdrcServiceWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PrecheckResourceCountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckResourceCountResponse
+        /// </returns>
+        public PrecheckResourceCountResponse PrecheckResourceCountWithOptions(PrecheckResourceCountRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PrecheckResourceCountShrinkRequest request = new PrecheckResourceCountShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagResourceMatchers))
+            {
+                request.TagResourceMatchersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagResourceMatchers, "TagResourceMatchers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagResourceMatchersShrink))
+            {
+                body["TagResourceMatchers"] = request.TagResourceMatchersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckResourceCount",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resources/precheck-count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckResourceCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PrecheckResourceCountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckResourceCountResponse
+        /// </returns>
+        public async Task<PrecheckResourceCountResponse> PrecheckResourceCountWithOptionsAsync(PrecheckResourceCountRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PrecheckResourceCountShrinkRequest request = new PrecheckResourceCountShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagResourceMatchers))
+            {
+                request.TagResourceMatchersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagResourceMatchers, "TagResourceMatchers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagResourceMatchersShrink))
+            {
+                body["TagResourceMatchers"] = request.TagResourceMatchersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckResourceCount",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/resources/precheck-count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckResourceCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckResourceCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckResourceCountResponse
+        /// </returns>
+        public PrecheckResourceCountResponse PrecheckResourceCount(PrecheckResourceCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PrecheckResourceCountWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckResourceCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckResourceCountResponse
+        /// </returns>
+        public async Task<PrecheckResourceCountResponse> PrecheckResourceCountAsync(PrecheckResourceCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PrecheckResourceCountWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCrossAccountsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossAccountsResponse
+        /// </returns>
+        public UpdateCrossAccountsResponse UpdateCrossAccountsWithOptions(UpdateCrossAccountsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCrossAccountsShrinkRequest request = new UpdateCrossAccountsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateTargets))
+            {
+                request.CreateTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateTargets, "CreateTargets", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeleteTargets))
+            {
+                request.DeleteTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeleteTargets, "DeleteTargets", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTargetsShrink))
+            {
+                body["CreateTargets"] = request.CreateTargetsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteTargetsShrink))
+            {
+                body["DeleteTargets"] = request.DeleteTargetsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrossAccounts",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCrossAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCrossAccountsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossAccountsResponse
+        /// </returns>
+        public async Task<UpdateCrossAccountsResponse> UpdateCrossAccountsWithOptionsAsync(UpdateCrossAccountsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCrossAccountsShrinkRequest request = new UpdateCrossAccountsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateTargets))
+            {
+                request.CreateTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateTargets, "CreateTargets", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeleteTargets))
+            {
+                request.DeleteTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeleteTargets, "DeleteTargets", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTargetsShrink))
+            {
+                body["CreateTargets"] = request.CreateTargetsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteTargetsShrink))
+            {
+                body["DeleteTargets"] = request.DeleteTargetsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrossAccounts",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cross-accounts",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCrossAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossAccountsResponse
+        /// </returns>
+        public UpdateCrossAccountsResponse UpdateCrossAccounts(UpdateCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateCrossAccountsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新跨账号纳管关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossAccountsResponse
+        /// </returns>
+        public async Task<UpdateCrossAccountsResponse> UpdateCrossAccountsAsync(UpdateCrossAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateCrossAccountsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
