@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetContactWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to return the total count</para>
+        /// <para>Specifies whether to return the total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? CountTotalRow { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SearchPattern")]
+        [Validation(Required=false)]
+        public string SearchPattern { get; set; }
 
     }
 

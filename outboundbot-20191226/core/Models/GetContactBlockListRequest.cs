@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetContactBlockListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the total number of entries.</para>
+        /// <para>Specifies whether to display the total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries (required)</para>
+        /// <para>The number of entries per page. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SearchPattern")]
+        [Validation(Required=false)]
+        public string SearchPattern { get; set; }
 
     }
 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of blocked contacts.</para>
+        /// <para>The contact blocklist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public GetContactBlockListResponseBodyContactBlocklistList ContactBlocklistList { get; set; }
         public class GetContactBlockListResponseBodyContactBlocklistList : TeaModel {
             /// <summary>
-            /// <para>The data array.</para>
+            /// <para>The array data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public List<GetContactBlockListResponseBodyContactBlocklistListList> List { get; set; }
             public class GetContactBlockListResponseBodyContactBlocklistListList : TeaModel {
                 /// <summary>
-                /// <para>The unique key of the entry in the do-not-call list.</para>
+                /// <para>The unique business key of the outbound call blocklist entry.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ContactBlockListId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the entry was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640077685465</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The user who created the entry.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the contact.</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The mobile phone number.</para>
+                /// <para>The phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1388888888</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

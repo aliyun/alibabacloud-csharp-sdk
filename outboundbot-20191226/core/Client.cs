@@ -10731,7 +10731,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
+        /// <para>Retrieves the outbound call blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10764,6 +10764,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10785,7 +10789,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
+        /// <para>Retrieves the outbound call blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10818,6 +10822,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10839,7 +10847,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
+        /// <para>Retrieves the outbound call blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10857,7 +10865,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
+        /// <para>Retrieves the outbound call blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10907,6 +10915,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10961,6 +10973,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16223,7 +16239,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the script list.</para>
+        /// <para>Queries the list of scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16281,7 +16297,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the script list.</para>
+        /// <para>Queries the list of scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16339,7 +16355,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the script list.</para>
+        /// <para>Queries the list of scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16357,7 +16373,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the script list.</para>
+        /// <para>Queries the list of scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">

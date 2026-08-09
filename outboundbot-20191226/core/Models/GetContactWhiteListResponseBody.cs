@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetContactWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status code</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Contact list</para>
+        /// <para>The contact list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public GetContactWhiteListResponseBodyContactWhitelistList ContactWhitelistList { get; set; }
         public class GetContactWhiteListResponseBodyContactWhitelistList : TeaModel {
             /// <summary>
-            /// <para>Contact list</para>
+            /// <para>The contact list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public List<GetContactWhiteListResponseBodyContactWhitelistListList> List { get; set; }
             public class GetContactWhiteListResponseBodyContactWhitelistListList : TeaModel {
                 /// <summary>
-                /// <para>Whitelist ID</para>
+                /// <para>The whitelist ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ContactWhiteListId { get; set; }
 
                 /// <summary>
-                /// <para>Creation time</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640174411848</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>Creator</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试123</para>
+                /// <para>Test123</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Name</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John Smith</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Operator</para>
+                /// <para>The operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>Mobile phone number</para>
+                /// <para>The phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13959999999</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>Remarks</para>
+                /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Number of entries per page</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of entries</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API message</para>
+        /// <para>The API response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

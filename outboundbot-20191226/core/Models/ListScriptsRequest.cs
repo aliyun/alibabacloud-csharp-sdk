@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListScriptsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The NLU engine.</para>
+        /// <para>The NLU robot engine.</para>
         /// <list type="bullet">
-        /// <item><description><para>Leave this parameter empty to query scripts that use small models.</para>
+        /// <item><description><para>If this parameter is left empty, small model scenarios are queried.</para>
         /// </description></item>
-        /// <item><description><para>Set this parameter to <c>Prompts</c> to query scripts that use the text completion mode of a large model.</para>
+        /// <item><description><para>If this parameter is set to Prompts, the text input mode under large model scenarios is queried.</para>
         /// </description></item>
-        /// <item><description><para>Set this parameter to <c>SSE_FUNCTION</c> to query scripts that use the function calling mode of a large model.</para>
+        /// <item><description><para>If this parameter is set to SSE_FUNCTION, the function computing mode under large model scenarios is queried.</para>
         /// </description></item>
-        /// <item><description><para>Set this parameter to <c>BeeBot</c> to query scripts that use the workflow configuration mode of a large model.</para>
+        /// <item><description><para>If this parameter is set to BeeBot, the workflow configuration mode under large model scenarios is queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -63,10 +63,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the script.</para>
+        /// <para>The script name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>课程满意度回访</para>
+        /// <para>Course satisfaction follow-up</para>
         /// </summary>
         [NameInMap("ScriptName")]
         [Validation(Required=false)]
