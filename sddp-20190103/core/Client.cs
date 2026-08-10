@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Sddp20190103
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-hongkong", "sddp-api.cn-hongkong.aliyuncs.com"},
-                {"cn-zhangjiakou", "sddp.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-shanghai", "sddp.cn-shanghai.aliyuncs.com"},
-                {"cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-5", "sddp.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "sddp.cn-zhangjiakou.aliyuncs.com"},
+                {"ap-southeast-5", "sddp.ap-southeast-5.aliyuncs.com"},
+                {"cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "sddp.cn-shanghai.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sddp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -4456,14 +4456,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data detection results for tables and files.</para>
+        /// <para>Queries the data detection results of data tables and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4491,6 +4491,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["Cursor"] = request.Cursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CursorDirection))
+            {
+                query["CursorDirection"] = request.CursorDirection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
@@ -4625,14 +4633,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data detection results for tables and files.</para>
+        /// <para>Queries the data detection results of data tables and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4660,6 +4668,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["Cursor"] = request.Cursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CursorDirection))
+            {
+                query["CursorDirection"] = request.CursorDirection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
@@ -4794,14 +4810,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data detection results for tables and files.</para>
+        /// <para>Queries the data detection results of data tables and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4819,14 +4835,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data detection results for tables and files.</para>
+        /// <para>Queries the data detection results of data tables and files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">

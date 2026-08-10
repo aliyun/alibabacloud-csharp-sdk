@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the API.</para>
+        /// <para>The parameter used for canary release evaluation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? APIVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket.</para>
+        /// <para>The OSS bucket filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bucketName</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,8 +39,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("Cursor")]
+        [Validation(Required=false)]
+        public string Cursor { get; set; }
+
+        [NameInMap("CursorDirection")]
+        [Validation(Required=false)]
+        public string CursorDirection { get; set; }
+
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataBaseName</para>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data domain to which the data asset belongs.</para>
+        /// <para>The data domain ID to which the data asset belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -64,7 +72,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -74,7 +82,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The code of the file category.</para>
+        /// <para>The file category code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,10 +92,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? FileCategoryCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the OSS file.</para>
-        /// <remarks>
-        /// <para>This parameter is valid only for querying data assets of the OSS type. You can call the <a href="https://help.aliyun.com/document_detail/2536492.html">DescribeDocTypes</a> operation to obtain the supported OSS file types. Use the value of the <c>Code</c> parameter in the response.</para>
-        /// </remarks>
+        /// <para>The OSS file type that can be detected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001</para>
@@ -97,7 +102,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? FileType { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the instance ID.</para>
+        /// <para>The keyword of the asset instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8vb54hn2g9j191ddz</para>
@@ -107,12 +112,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en_us</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
+        /// <item><description><b>en_us</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The SLS Logstore filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logstore</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string LogStore { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query data at the Logstore level. The Simple Log Service data catalog has two layers. Set this parameter to 1 to query data at the Logstore level.</para>
+        /// <para>Specifies whether to query data at the Logstore dimension. The SLS page in the data catalog has two layers, and this parameter determines whether the query targets Logstore-level data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? LogStoreFlag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member.</para>
+        /// <para>The member accounts ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>**********8103</para>
@@ -153,9 +156,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? MemberAccount { get; set; }
 
         /// <summary>
-        /// <para>The model ID of the industry-specific rule template. You can specify multiple IDs. Separate them with commas (,).</para>
+        /// <para>The model IDs of the industry template. Separate multiple IDs with commas.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a> operation to obtain the model ID of the industry-specific rule template.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a> to obtain the model IDs of the industry template.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -166,15 +169,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ModelIds { get; set; }
 
         /// <summary>
-        /// <para>The data labels to be queried. You can specify multiple data labels. Separate them with commas (,). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>101</b>: personal sensitive information</para>
-        /// </description></item>
-        /// <item><description><para><b>102</b>: personal information</para>
-        /// </description></item>
-        /// <item><description><para><b>107</b>: general information</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The data tags to query, separated by commas. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>101,102</para>
@@ -184,7 +179,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ModelTagIds { get; set; }
 
         /// <summary>
-        /// <para>The number of data assets to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The maximum number of data asset instances to return per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -194,7 +189,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the parent asset categories to be queried. You can specify multiple IDs. Separate them with commas (,).</para>
+        /// <para>The parent category IDs of the templates to query, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234,236,238</para>
@@ -204,7 +199,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ParentCategoryIds { get; set; }
 
         /// <summary>
-        /// <para>The path of the file.</para>
+        /// <para>The file path filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>road</para>
@@ -214,7 +209,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>The product of the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -224,35 +219,23 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the products to which the data assets to be queried belong. You can specify multiple product IDs. Separate them with commas (,). We recommend that you specify this parameter. Valid values:</para>
+        /// <para>We recommend that you specify this parameter. The IDs of the products to query. Separate multiple IDs with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: OSS</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: ADB-MYSQL</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: TableStore</para>
-        /// </description></item>
-        /// <item><description><para><b>5</b>: RDS</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: SELF_DB</para>
-        /// </description></item>
-        /// <item><description><para><b>7</b>: PolarDB-X</para>
-        /// </description></item>
-        /// <item><description><para><b>8</b>: PolarDB</para>
-        /// </description></item>
-        /// <item><description><para><b>9</b>: ADB-PG</para>
-        /// </description></item>
-        /// <item><description><para><b>10</b>: OceanBase</para>
-        /// </description></item>
-        /// <item><description><para><b>11</b>: MongoDB</para>
-        /// </description></item>
-        /// <item><description><para><b>25</b>: Redis</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: MaxCompute</description></item>
+        /// <item><description><b>2</b>: OSS</description></item>
+        /// <item><description><b>3</b>: ADB-MYSQL</description></item>
+        /// <item><description><b>4</b>: TableStore</description></item>
+        /// <item><description><b>5</b>: RDS</description></item>
+        /// <item><description><b>6</b>: SELF_DB</description></item>
+        /// <item><description><b>7</b>: PolarDB-X</description></item>
+        /// <item><description><b>8</b>: PolarDB</description></item>
+        /// <item><description><b>9</b>: ADB-PG</description></item>
+        /// <item><description><b>10</b>: OceanBase</description></item>
+        /// <item><description><b>11</b>: MongoDB</description></item>
+        /// <item><description><b>25</b>: Redis</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you want to query data assets that belong to OSS, you cannot query data assets of other products. By default, data assets of products other than OSS are queried.</para>
+        /// <para>OSS is mutually exclusive with other products. If OSS is included in the query, no other products can be specified. By default, non-OSS products are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -263,7 +246,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>The SLS project filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project</para>
@@ -273,7 +256,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the data asset to be queried.</para>
+        /// <para>The keyword of the data object to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t_sddp_selfmysql_pers0</para>
@@ -283,7 +266,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string QueryName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data asset catalog resides.</para>
+        /// <para>The region of the data catalog display page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>
@@ -293,7 +276,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the sensitivity levels. You can specify multiple sensitivity level IDs. Separate them with commas (,).</para>
+        /// <para>The risk level filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -303,16 +286,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RiskLevelIdList { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the data asset. You can specify multiple sensitivity levels. Separate them with commas (,).</para>
+        /// <para>The risk levels of the data assets that you want to query. Separate multiple risk levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>2</b>: S1, low sensitivity level</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: S2, medium sensitivity level</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: S3, high sensitivity level</para>
-        /// </description></item>
-        /// <item><description><para><b>5</b>: S4, highest sensitivity level</para>
-        /// </description></item>
+        /// <item><description><b>2</b>: S1, low risk level.</description></item>
+        /// <item><description><b>3</b>: S2, medium risk level.</description></item>
+        /// <item><description><b>4</b>: S3, high risk level.</description></item>
+        /// <item><description><b>5</b>: S4, highest risk level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -323,7 +302,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RiskLevels { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the rules. You can specify multiple rule IDs. Separate them with commas (,).</para>
+        /// <para>The rule filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -333,23 +312,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// <para>The region where the data asset resides. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-beijing</b>: China (Beijing)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-zhangjiakou</b>: China (Zhangjiakou)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-huhehaote</b>: China (Hohhot)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen)</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The region where the asset resides. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -359,7 +322,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The node name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TableName</para>
@@ -369,7 +332,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -379,10 +342,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific rule template.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry-specific rule template.</para>
-        /// </remarks>
+        /// <para>The industry template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

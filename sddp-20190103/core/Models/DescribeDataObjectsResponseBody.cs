@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paged query. Settings the current page number for paging. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,15 +19,31 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HasNext")]
+        [Validation(Required=false)]
+        public bool? HasNext { get; set; }
+
+        [NameInMap("HasPrevious")]
+        [Validation(Required=false)]
+        public bool? HasPrevious { get; set; }
+
         /// <summary>
-        /// <para>A list of data objects.</para>
+        /// <para>The list of data objects.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataObjectsResponseBodyItems> Items { get; set; }
         public class DescribeDataObjectsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>An array of industry categories to which the sensitive data belongs.</para>
+            /// <para>The list of industry categories to which the sensitive data belongs.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
@@ -38,7 +54,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The comment on the column.</para>
+            /// <para>The column comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -48,7 +64,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The data type of the database column.</para>
+            /// <para>The database column type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -58,7 +74,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataBaseName</para>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DbName { get; set; }
 
             /// <summary>
+            /// <para>The engine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TABLE</para>
             /// </summary>
@@ -76,7 +94,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The code for the file category.</para>
+            /// <para>The file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +114,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The description of the data asset instance.</para>
+            /// <para>The instance description of the data object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance description</para>
@@ -106,7 +124,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data asset instance.</para>
+            /// <para>The data asset instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-12*****</para>
@@ -146,7 +164,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the Logstore in SLS.</para>
+            /// <para>The SLS Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logStore</para>
@@ -166,7 +184,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? MaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member account.</para>
+            /// <para>The member accounts ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**********8103</para>
@@ -176,21 +194,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? MemberAccount { get; set; }
 
             /// <summary>
-            /// <para>A list of data tags.</para>
+            /// <para>The list of data tags.</para>
             /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeDataObjectsResponseBodyItemsModelTags> ModelTags { get; set; }
             public class DescribeDataObjectsResponseBodyItemsModelTags : TeaModel {
                 /// <summary>
-                /// <para>The ID of the data tag. Valid values:</para>
+                /// <para>The data label ID. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>101</b>: Personal sensitive information</para>
-                /// </description></item>
-                /// <item><description><para><b>102</b>: Personal information</para>
-                /// </description></item>
-                /// <item><description><para><b>107</b>: General information</para>
-                /// </description></item>
+                /// <item><description><b>101</b>: Personal sensitive information.</description></item>
+                /// <item><description><b>102</b>: Personal information.</description></item>
+                /// <item><description><b>107</b>: General information.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -201,15 +216,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data tag. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><b>Personal sensitive information</b></para>
-                /// </description></item>
-                /// <item><description><para><b>Personal information</b></para>
-                /// </description></item>
-                /// <item><description><para><b>General information</b></para>
-                /// </description></item>
-                /// </list>
+                /// <para>The data tag name. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Personal sensitive information</para>
@@ -231,7 +238,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the file category.</para>
+            /// <para>The file category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text file</para>
@@ -241,7 +248,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ObjectFileCategory { get; set; }
 
             /// <summary>
-            /// <para>The type of the data object.</para>
+            /// <para>The data object type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text type</para>
@@ -261,33 +268,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The name of the product to which the data object belongs. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>MaxCompute</b></para>
-            /// </description></item>
-            /// <item><description><para><b>OSS</b></para>
-            /// </description></item>
-            /// <item><description><para><b>ADB-MYSQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Table Store</b></para>
-            /// </description></item>
-            /// <item><description><para><b>RDS</b></para>
-            /// </description></item>
-            /// <item><description><para><b>SELF_DB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB-X</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PolarDB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>ADB-PG</b></para>
-            /// </description></item>
-            /// <item><description><para><b>OceanBase</b></para>
-            /// </description></item>
-            /// <item><description><para><b>MongoDB</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Redis</b></para>
-            /// </description></item>
-            /// </list>
+            /// <para>The product name to which the data object belongs. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -297,32 +278,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the product to which the data object belongs. Valid values:</para>
+            /// <para>The ID that corresponds to the product name to which the data object belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: MaxCompute</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: OSS</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: ADB-MYSQL</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: Table Store</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: RDS</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: SELF_DB</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: PolarDB-X</para>
-            /// </description></item>
-            /// <item><description><para><b>8</b>: PolarDB</para>
-            /// </description></item>
-            /// <item><description><para><b>9</b>: ADB-PG</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: OceanBase</para>
-            /// </description></item>
-            /// <item><description><para><b>11</b>: MongoDB</para>
-            /// </description></item>
-            /// <item><description><para><b>25</b>: Redis</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: OSS</description></item>
+            /// <item><description><b>3</b>: ADB-MYSQL</description></item>
+            /// <item><description><b>4</b>: TableStore</description></item>
+            /// <item><description><b>5</b>: RDS</description></item>
+            /// <item><description><b>6</b>: SELF_DB</description></item>
+            /// <item><description><b>7</b>: PolarDB-X</description></item>
+            /// <item><description><b>8</b>: PolarDB</description></item>
+            /// <item><description><b>9</b>: ADB-PG</description></item>
+            /// <item><description><b>10</b>: OceanBase</description></item>
+            /// <item><description><b>11</b>: MongoDB</description></item>
+            /// <item><description><b>25</b>: Redis</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -333,7 +302,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ProductId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service (SLS) project.</para>
+            /// <para>The Simple Log Service (SLS) project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project</para>
@@ -343,7 +312,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the data object is located.</para>
+            /// <para>The region ID to which the data object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -353,7 +322,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -363,7 +332,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The risk level.</para>
+            /// <para>The sensitivity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -373,7 +342,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The number of matched rules.</para>
+            /// <para>The number of rules that are hit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -383,26 +352,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>A list of matched detection models.</para>
+            /// <para>The list of detection models that are hit.</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
             public List<DescribeDataObjectsResponseBodyItemsRuleList> RuleList { get; set; }
             public class DescribeDataObjectsResponseBodyItemsRuleList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the risk level. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><b>1</b>: N/A - No sensitive data is detected</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: S1 - Level-1 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: S2 - Level-2 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>4</b>: S3 - Level-3 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: S4 - Level-4 sensitive data</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The risk level ID of the sensitive data detection rule. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -412,18 +369,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? RiskLevelId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the risk level. Valid values:</para>
+                /// <para>The risk level name of the data asset table. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>N/A</b>: No sensitive data is detected</para>
-                /// </description></item>
-                /// <item><description><para><b>S1</b>: Level-1 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>S2</b>: Level-2 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>S3</b>: Level-3 sensitive data</para>
-                /// </description></item>
-                /// <item><description><para><b>S4</b>: Level-4 sensitive data</para>
-                /// </description></item>
+                /// <item><description><b>N/A</b>: No sensitive data is detected.</description></item>
+                /// <item><description><b>S1</b>: Level-1 sensitive data.</description></item>
+                /// <item><description><b>S2</b>: Level-2 sensitive data.</description></item>
+                /// <item><description><b>S3</b>: Level-3 sensitive data.</description></item>
+                /// <item><description><b>S4</b>: Level-4 sensitive data.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -434,7 +386,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RiskLevelName { get; set; }
 
                 /// <summary>
-                /// <para>The hierarchical category of the rule, from the top-level to the leaf-level category in the template.</para>
+                /// <para>The rule information described from the top to the bottom of the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Personal sensitive information-ID card</para>
@@ -444,7 +396,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RuleCategoryNameList { get; set; }
 
                 /// <summary>
-                /// <para>The number of matched detection models.</para>
+                /// <para>The number of detection models that are hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>590</para>
@@ -486,7 +438,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The number of sensitive data fields.</para>
+            /// <para>The number of sensitive data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -496,7 +448,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SensitiveCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the file in bytes.</para>
+            /// <para>The file size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -506,7 +458,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>A comma-separated string that specifies the count of matched rules for each risk level. The string follows the format <c>S1,S2...S10</c>, where the value at each position represents the count for the corresponding risk level.</para>
+            /// <para>An array that consists of the number of rules hit for each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules hit at sensitivity level S1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2,3,0,0,0,0,5,0,0</para>
@@ -516,7 +468,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Sx { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tableName</para>
@@ -526,7 +478,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -536,7 +488,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-task</para>
@@ -546,7 +498,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The task number.</para>
+            /// <para>The user task number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -556,7 +508,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? TaskNumber { get; set; }
 
             /// <summary>
-            /// <para>The ID of the industry template.</para>
+            /// <para>The industry template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -566,7 +518,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -577,8 +529,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         }
 
+        [NameInMap("NextCursor")]
+        [Validation(Required=false)]
+        public string NextCursor { get; set; }
+
         /// <summary>
-        /// <para>The number of data asset instances to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The maximum number of data asset instances to return per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -587,8 +543,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PreviousCursor")]
+        [Validation(Required=false)]
+        public string PreviousCursor { get; set; }
+
         /// <summary>
-        /// <para>The unique ID of the request. Alibaba Cloud generates this ID to help you troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F6460E-4330-549A-BD89-C183FB17571E</para>
@@ -597,8 +557,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SyncStatus")]
+        [Validation(Required=false)]
+        public string SyncStatus { get; set; }
+
         /// <summary>
-        /// <para>The total number of entries that match the query.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
