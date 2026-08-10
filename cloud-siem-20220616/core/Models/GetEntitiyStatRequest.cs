@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string EntityUuid { get; set; }
 
+        [NameInMap("EntityUuids")]
+        [Validation(Required=false)]
+        public string EntityUuids { get; set; }
+
         /// <summary>
         /// <para>The incident ID.</para>
         /// <para>This parameter is required.</para>
@@ -97,8 +101,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The region where the threat detection and response data management center resides. Select the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the asset belongs to the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: the asset belongs to a region outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: The assets belong to the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: The assets belong to regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

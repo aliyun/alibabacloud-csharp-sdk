@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class ListDisposeStrategyRequest : TeaModel {
+    public class ListDisposeStrategyShrinkRequest : TeaModel {
         [NameInMap("AlertUuid")]
         [Validation(Required=false)]
         public string AlertUuid { get; set; }
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         [NameInMap("EntityUuidList")]
         [Validation(Required=false)]
-        public List<string> EntityUuidList { get; set; }
+        public string EntityUuidListShrink { get; set; }
 
         [NameInMap("GroupBy")]
         [Validation(Required=false)]

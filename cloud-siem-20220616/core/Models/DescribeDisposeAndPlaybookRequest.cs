@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. The value must be greater than or equal to 1.</para>
+        /// <para>The current page number. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// <para>The entity type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ip: IP address</description></item>
-        /// <item><description>process: process</description></item>
-        /// <item><description>file: file</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -45,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityUuid { get; set; }
 
         /// <summary>
-        /// <para>The event UUID.</para>
+        /// <para>The incident UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -65,10 +60,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Select the data management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the threat analysis data management center is located. Specify the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Your assets are located in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Your assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,11 +84,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
-        /// </list>
+        /// <para>The view type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

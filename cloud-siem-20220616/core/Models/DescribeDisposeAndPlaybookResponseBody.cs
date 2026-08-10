@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -157,18 +157,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <para>The list of playbooks that can dispose of the entity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;name&quot;:&quot;云安全中心-云服务器安全&quot;,&quot;code&quot;:&quot;1&quot;}]</para>
+                /// <para>[{&quot;name&quot;:&quot;Security Center - Cloud Server Security&quot;,&quot;code&quot;:&quot;1&quot;}]</para>
                 /// </summary>
                 [NameInMap("PlaybookList")]
                 [Validation(Required=false)]
                 public List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> PlaybookList { get; set; }
                 public class DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the playbook is available. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>1: Available.</description></item>
-                    /// <item><description>0: Unavailable.</description></item>
-                    /// </list>
+                    /// <para>Indicates whether the playbook is available.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -226,11 +222,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string OpCode { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the playbook is selected by default for one-click event disposition. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>2: Selected. </description></item>
-                    /// <item><description>1: Displayed but not selected.</description></item>
-                    /// </list>
+                    /// <para>Specifies whether the playbook is selected by default for one-click incident disposition. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -240,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string OpLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter list and corresponding parameter properties of the playbook.</para>
+                    /// <para>The parameter list of the playbook and the corresponding parameter properties.</para>
                     /// </summary>
                     [NameInMap("ParamConfig")]
                     [Validation(Required=false)]
@@ -257,9 +249,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string TaskConfig { get; set; }
 
                     /// <summary>
-                    /// <para>The code that indicates why the playbook is unavailable. Valid values:</para>
+                    /// <para>The code that indicates why the playbook is unavailable.</para>
+                    /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>PARAM_INVALID: The input parameters are invalid. </description></item>
+                    /// <item><description>PARAM_INVALID: The input parameters are invalid.</description></item>
                     /// <item><description>NO_INGESTION: The corresponding product is not connected.</description></item>
                     /// </list>
                     /// 
@@ -281,11 +274,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string Uuid { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is a WAF playbook. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: Yes.</description></item>
-                    /// <item><description>false: No.</description></item>
-                    /// </list>
+                    /// <para>Indicates whether the playbook is a WAF playbook. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -297,7 +286,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>The disposition scope. The list of user IDs that can perform the disposition.</para>
+                /// <para>The disposition scope, which is the list of user IDs that can perform the disposition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176618589410****</para>
@@ -332,10 +321,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetEntitiyStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public List<GetEntitiyStatResponseBodyData> Data { get; set; }
         public class GetEntitiyStatResponseBodyData : TeaModel {
+            [NameInMap("AlertNum")]
+            [Validation(Required=false)]
+            public long? AlertNum { get; set; }
+
             /// <summary>
             /// <para>The number of entities.</para>
             /// 
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string EntityUuid { get; set; }
 
+            [NameInMap("IncidentNum")]
+            [Validation(Required=false)]
+            public long? IncidentNum { get; set; }
+
         }
 
         /// <summary>
@@ -84,8 +92,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

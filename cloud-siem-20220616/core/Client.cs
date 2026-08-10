@@ -5508,7 +5508,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of playbooks used in a disposal policy.</para>
+        /// <para>Retrieves the list of playbooks used by a disposal policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5566,7 +5566,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of playbooks used in a disposal policy.</para>
+        /// <para>Retrieves the list of playbooks used by a disposal policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5624,7 +5624,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of playbooks used in a disposal policy.</para>
+        /// <para>Retrieves the list of playbooks used by a disposal policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5642,7 +5642,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of playbooks used in a disposal policy.</para>
+        /// <para>Retrieves the list of playbooks used by a disposal policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8389,7 +8389,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8425,6 +8425,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuid))
             {
                 body["EntityUuid"] = request.EntityUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuids))
+            {
+                body["EntityUuids"] = request.EntityUuids;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -8480,7 +8484,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8516,6 +8520,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuid))
             {
                 body["EntityUuid"] = request.EntityUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuids))
+            {
+                body["EntityUuids"] = request.EntityUuids;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -8571,7 +8579,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8594,7 +8602,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10772,10 +10780,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of system-recommended disposal strategies.</para>
+        /// <para>Retrieves the list of system-recommended disposal policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDisposeStrategyRequest
         /// </param>
         /// <param name="runtime">
@@ -10785,10 +10793,29 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <returns>
         /// ListDisposeStrategyResponse
         /// </returns>
-        public ListDisposeStrategyResponse ListDisposeStrategyWithOptions(ListDisposeStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDisposeStrategyResponse ListDisposeStrategyWithOptions(ListDisposeStrategyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDisposeStrategyShrinkRequest request = new ListDisposeStrategyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EntityUuidList))
+            {
+                request.EntityUuidListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EntityUuidList, "EntityUuidList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
+            {
+                body["AlertUuid"] = request.AlertUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 body["CurrentPage"] = request.CurrentPage;
@@ -10808,6 +10835,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
             {
                 body["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuidListShrink))
+            {
+                body["EntityUuidList"] = request.EntityUuidListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["GroupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupKey))
+            {
+                body["GroupKey"] = request.GroupKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -10837,9 +10876,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["PlaybookUuid"] = request.PlaybookUuid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryMode))
+            {
+                body["QueryMode"] = request.QueryMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleId))
+            {
+                body["ResponseRuleId"] = request.ResponseRuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
@@ -10861,8 +10908,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10882,10 +10934,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of system-recommended disposal strategies.</para>
+        /// <para>Retrieves the list of system-recommended disposal policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDisposeStrategyRequest
         /// </param>
         /// <param name="runtime">
@@ -10895,10 +10947,29 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <returns>
         /// ListDisposeStrategyResponse
         /// </returns>
-        public async Task<ListDisposeStrategyResponse> ListDisposeStrategyWithOptionsAsync(ListDisposeStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDisposeStrategyResponse> ListDisposeStrategyWithOptionsAsync(ListDisposeStrategyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDisposeStrategyShrinkRequest request = new ListDisposeStrategyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EntityUuidList))
+            {
+                request.EntityUuidListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EntityUuidList, "EntityUuidList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertUuid))
+            {
+                body["AlertUuid"] = request.AlertUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 body["CurrentPage"] = request.CurrentPage;
@@ -10918,6 +10989,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
             {
                 body["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuidListShrink))
+            {
+                body["EntityUuidList"] = request.EntityUuidListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["GroupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupKey))
+            {
+                body["GroupKey"] = request.GroupKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -10947,9 +11030,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["PlaybookUuid"] = request.PlaybookUuid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryMode))
+            {
+                body["QueryMode"] = request.QueryMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleId))
+            {
+                body["ResponseRuleId"] = request.ResponseRuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
@@ -10971,8 +11062,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10992,7 +11088,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of system-recommended disposal strategies.</para>
+        /// <para>Retrieves the list of system-recommended disposal policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11010,7 +11106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of system-recommended disposal strategies.</para>
+        /// <para>Retrieves the list of system-recommended disposal policies.</para>
         /// </summary>
         /// 
         /// <param name="request">

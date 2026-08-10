@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code of the request.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The request return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public ListEntitiesResponseBodyDataPageInfo PageInfo { get; set; }
             public class ListEntitiesResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number of the current page.</para>
+                /// <para>The current page number of the list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of records returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of entries.</para>
+                /// <para>The total number of records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AgentConfidence { get; set; }
 
                 /// <summary>
-                /// <para>The disposal method recommended by the agent.</para>
+                /// <para>The recommended disposal method from the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>delete_file</para>
@@ -187,10 +187,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Aliuid { get; set; }
 
                 /// <summary>
-                /// <para>The code of the cloud service provider from which the entity originates. Valid values:</para>
+                /// <para>The cloud code of the entity source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>aliyun: Alibaba Cloud</description></item>
-                /// <item><description>qcloud: Tencent Cloud</description></item>
+                /// <item><description>aliyun: Alibaba Cloud.</description></item>
+                /// <item><description>qcloud: Tencent Cloud.</description></item>
                 /// <item><description>hcloud: Huawei Cloud.</description></item>
                 /// </list>
                 /// 
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The display information of the entity in JSON format.</para>
+                /// <para>The entity display information in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c****&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246b****&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-2023****&quot;}</para>
@@ -233,17 +233,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
                 /// <summary>
                 /// <para>The entity type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ip: IP address</description></item>
-                /// <item><description>domain: domain name</description></item>
-                /// <item><description>url: URL</description></item>
-                /// <item><description>process: process</description></item>
-                /// <item><description>file: file</description></item>
-                /// <item><description>host: host</description></item>
-                /// <item><description>cloud_account: cloud account</description></item>
-                /// <item><description>container: container</description></item>
-                /// <item><description>bucket: Object Storage Service (OSS) bucket.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -314,10 +303,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
                 /// <summary>
                 /// <para>Indicates whether the entity is an asset. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: No.</description></item>
-                /// <item><description>1: Yes.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -327,11 +312,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IsAsset { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the entity is malicious. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: No.</description></item>
-                /// <item><description>1: Yes.</description></item>
-                /// </list>
+                /// <para>Specifies whether the entity is malicious. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -361,8 +342,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? SubUserId { get; set; }
 
                 /// <summary>
-                /// <para>The entity tags. The value is a JSON array string:</para>
-                /// <para><c>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</c>.</para>
+                /// <para>The entity tags. The value is a JSON array string in the following format:</para>
+                /// <para><c>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</c></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]</para>
@@ -376,7 +357,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The request return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -397,10 +378,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
