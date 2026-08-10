@@ -5239,20 +5239,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live package channel.</para>
+        /// <para>Generates a real-time video stream processing channel that supports the HLS protocol and automatically assigns endpoints and keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This operation creates a live video packaging service channel. Currently, only the HLS protocol is supported. The system automatically generates ingest endpoint addresses and the username and password required for authentication.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>Only <c>HLS</c> is supported.</description></item>
-        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
-        /// <item><description>The number of M3U8 segments must be from 2 to 100.
-        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// <item><description>Channel group names and channel names can contain only uppercase and lowercase letters, digits, underscores, and hyphens.</description></item>
+        /// <item><description>Currently, only <c>HLS</c> is supported as the protocol.</description></item>
+        /// <item><description>The segment duration must be between 1 and 30 seconds.</description></item>
+        /// <item><description>The number of m3u8 segments must be between 2 and 100.
+        /// A successful response returns the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5321,20 +5321,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live package channel.</para>
+        /// <para>Generates a real-time video stream processing channel that supports the HLS protocol and automatically assigns endpoints and keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This operation creates a live video packaging service channel. Currently, only the HLS protocol is supported. The system automatically generates ingest endpoint addresses and the username and password required for authentication.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>Only <c>HLS</c> is supported.</description></item>
-        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
-        /// <item><description>The number of M3U8 segments must be from 2 to 100.
-        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// <item><description>Channel group names and channel names can contain only uppercase and lowercase letters, digits, underscores, and hyphens.</description></item>
+        /// <item><description>Currently, only <c>HLS</c> is supported as the protocol.</description></item>
+        /// <item><description>The segment duration must be between 1 and 30 seconds.</description></item>
+        /// <item><description>The number of m3u8 segments must be between 2 and 100.
+        /// A successful response returns the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5403,20 +5403,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live package channel.</para>
+        /// <para>Generates a real-time video stream processing channel that supports the HLS protocol and automatically assigns endpoints and keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This operation creates a live video packaging service channel. Currently, only the HLS protocol is supported. The system automatically generates ingest endpoint addresses and the username and password required for authentication.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>Only <c>HLS</c> is supported.</description></item>
-        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
-        /// <item><description>The number of M3U8 segments must be from 2 to 100.
-        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// <item><description>Channel group names and channel names can contain only uppercase and lowercase letters, digits, underscores, and hyphens.</description></item>
+        /// <item><description>Currently, only <c>HLS</c> is supported as the protocol.</description></item>
+        /// <item><description>The segment duration must be between 1 and 30 seconds.</description></item>
+        /// <item><description>The number of m3u8 segments must be between 2 and 100.
+        /// A successful response returns the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5435,20 +5435,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live package channel.</para>
+        /// <para>Generates a real-time video stream processing channel that supports the HLS protocol and automatically assigns endpoints and keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This operation creates a live video packaging service channel. Currently, only the HLS protocol is supported. The system automatically generates ingest endpoint addresses and the username and password required for authentication.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>Only <c>HLS</c> is supported.</description></item>
-        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
-        /// <item><description>The number of M3U8 segments must be from 2 to 100.
-        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// <item><description>Channel group names and channel names can contain only uppercase and lowercase letters, digits, underscores, and hyphens.</description></item>
+        /// <item><description>Currently, only <c>HLS</c> is supported as the protocol.</description></item>
+        /// <item><description>The segment duration must be between 1 and 30 seconds.</description></item>
+        /// <item><description>The number of m3u8 segments must be between 2 and 100.
+        /// A successful response returns the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5627,12 +5627,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_description]Endpoint playback URL</para>
+        /// <para>Adds an origin endpoint configuration for a live streaming channel. This operation supports HLS, HLS_CMAF, and DASH protocols and DRM encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_title]Endpoint URL</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation allows you to create an origin endpoint for the live packaging service. The endpoint is used to configure back-to-origin settings, security policies (such as IP blacklists and whitelists and authorization codes), and time-shifting for a channel. Currently, only the HLS protocol is supported for playback. Before creating an origin endpoint, create a live packaging channel group and channel first. After the endpoint is created, the endpoint playback URL and other configuration details are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5726,12 +5727,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_description]Endpoint playback URL</para>
+        /// <para>Adds an origin endpoint configuration for a live streaming channel. This operation supports HLS, HLS_CMAF, and DASH protocols and DRM encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_title]Endpoint URL</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation allows you to create an origin endpoint for the live packaging service. The endpoint is used to configure back-to-origin settings, security policies (such as IP blacklists and whitelists and authorization codes), and time-shifting for a channel. Currently, only the HLS protocol is supported for playback. Before creating an origin endpoint, create a live packaging channel group and channel first. After the endpoint is created, the endpoint playback URL and other configuration details are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5825,12 +5827,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_description]Endpoint playback URL</para>
+        /// <para>Adds an origin endpoint configuration for a live streaming channel. This operation supports HLS, HLS_CMAF, and DASH protocols and DRM encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_title]Endpoint URL</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation allows you to create an origin endpoint for the live packaging service. The endpoint is used to configure back-to-origin settings, security policies (such as IP blacklists and whitelists and authorization codes), and time-shifting for a channel. Currently, only the HLS protocol is supported for playback. Before creating an origin endpoint, create a live packaging channel group and channel first. After the endpoint is created, the endpoint playback URL and other configuration details are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5848,12 +5851,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_description]Endpoint playback URL</para>
+        /// <para>Adds an origin endpoint configuration for a live streaming channel. This operation supports HLS, HLS_CMAF, and DASH protocols and DRM encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>[responses_200_schema_properties_LivePackageOriginEndpoint_properties_EndpointUrl_title]Endpoint URL</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation allows you to create an origin endpoint for the live packaging service. The endpoint is used to configure back-to-origin settings, security policies (such as IP blacklists and whitelists and authorization codes), and time-shifting for a channel. Currently, only the HLS protocol is supported for playback. Before creating an origin endpoint, create a live packaging channel group and channel first. After the endpoint is created, the endpoint playback URL and other configuration details are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11023,7 +11027,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
+        /// <para>Deletes a voice cloning task that is not in the &quot;Training&quot; or &quot;Training Succeeded&quot; state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11065,7 +11069,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
+        /// <para>Deletes a voice cloning task that is not in the &quot;Training&quot; or &quot;Training Succeeded&quot; state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11107,7 +11111,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
+        /// <para>Deletes a voice cloning task that is not in the &quot;Training&quot; or &quot;Training Succeeded&quot; state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11125,7 +11129,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
+        /// <para>Deletes a voice cloning task that is not in the &quot;Training&quot; or &quot;Training Succeeded&quot; state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12963,7 +12967,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a live stream transcoding template.</para>
+        /// <para>Deletes a real-time transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13005,7 +13009,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a live stream transcoding template.</para>
+        /// <para>Deletes a real-time transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13047,7 +13051,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a live stream transcoding template.</para>
+        /// <para>Deletes a real-time transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13065,7 +13069,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a live stream transcoding template.</para>
+        /// <para>Deletes a real-time transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14311,7 +14315,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the marks of a media asset.</para>
+        /// <para>Deletes the mark information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14357,7 +14361,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the marks of a media asset.</para>
+        /// <para>Deletes the mark information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14403,7 +14407,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the marks of a media asset.</para>
+        /// <para>Deletes the mark information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14421,7 +14425,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the marks of a media asset.</para>
+        /// <para>Deletes the mark information of a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22483,12 +22487,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the real-time stream packaging origin configuration details of a specified channel.</para>
+        /// <para>Queries the details of the real-time stream packaging origin server configuration for a specified channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -22538,12 +22542,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the real-time stream packaging origin configuration details of a specified channel.</para>
+        /// <para>Queries the details of the real-time stream packaging origin server configuration for a specified channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -22593,12 +22597,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the real-time stream packaging origin configuration details of a specified channel.</para>
+        /// <para>Queries the details of the real-time stream packaging origin server configuration for a specified channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -22616,12 +22620,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the real-time stream packaging origin configuration details of a specified channel.</para>
+        /// <para>Queries the details of the real-time stream packaging origin server configuration for a specified channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -43667,12 +43671,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search media assets by face image (coarse search). Input a face image to retrieve information about media assets containing the person in the image.</para>
+        /// <para>Searches for media assets by face image (coarse search). Accepts a face image as input and returns information about media assets that contain the person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Asset Search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>To use the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43750,12 +43754,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search media assets by face image (coarse search). Input a face image to retrieve information about media assets containing the person in the image.</para>
+        /// <para>Searches for media assets by face image (coarse search). Accepts a face image as input and returns information about media assets that contain the person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Asset Search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>To use the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43833,12 +43837,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search media assets by face image (coarse search). Input a face image to retrieve information about media assets containing the person in the image.</para>
+        /// <para>Searches for media assets by face image (coarse search). Accepts a face image as input and returns information about media assets that contain the person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Asset Search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>To use the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43856,12 +43860,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search media assets by face image (coarse search). Input a face image to retrieve information about media assets containing the person in the image.</para>
+        /// <para>Searches for media assets by face image (coarse search). Accepts a face image as input and returns information about media assets that contain the person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For questions about using or troubleshooting the Intelligent Media Asset Search feature of Alibaba Cloud Intelligent Media Services, search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</para>
+        /// <para>To use the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group and contact us.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48795,12 +48799,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
+        /// <para>Extracts time start and end points along with corresponding text information from video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48866,12 +48870,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
+        /// <para>Extracts time start and end points along with corresponding text information from video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48937,12 +48941,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
+        /// <para>Extracts time start and end points along with corresponding text information from video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48960,12 +48964,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts time start and end points along with corresponding text information based on video speech.</para>
+        /// <para>Extracts time start and end points along with corresponding text information from video speech.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
+        /// <para>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58883,7 +58887,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title, timeline, cover, and other properties of a cloud editing project.</para>
+        /// <para>Modifies a cloud editing project. You can modify the title, timeline, and cover image of the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58955,7 +58959,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title, timeline, cover, and other properties of a cloud editing project.</para>
+        /// <para>Modifies a cloud editing project. You can modify the title, timeline, and cover image of the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59027,7 +59031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title, timeline, cover, and other properties of a cloud editing project.</para>
+        /// <para>Modifies a cloud editing project. You can modify the title, timeline, and cover image of the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59045,7 +59049,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title, timeline, cover, and other properties of a cloud editing project.</para>
+        /// <para>Modifies a cloud editing project. You can modify the title, timeline, and cover image of the project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59267,13 +59271,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
+        /// <para>Updates the channel configuration in the live packaging service, including the protocol, duration, and segment count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to modify the configuration of a specified channel in the live packaging service. You must provide the channel group name, channel name, and the protocol type, segment duration, and segment count to update. You can also optionally add or modify the channel description. Ensure that the channel group name and channel name comply with the naming conventions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59335,13 +59339,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
+        /// <para>Updates the channel configuration in the live packaging service, including the protocol, duration, and segment count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to modify the configuration of a specified channel in the live packaging service. You must provide the channel group name, channel name, and the protocol type, segment duration, and segment count to update. You can also optionally add or modify the channel description. Ensure that the channel group name and channel name comply with the naming conventions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59403,13 +59407,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
+        /// <para>Updates the channel configuration in the live packaging service, including the protocol, duration, and segment count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to modify the configuration of a specified channel in the live packaging service. You must provide the channel group name, channel name, and the protocol type, segment duration, and segment count to update. You can also optionally add or modify the channel description. Ensure that the channel group name and channel name comply with the naming conventions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59427,13 +59431,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
+        /// <para>Updates the channel configuration in the live packaging service, including the protocol, duration, and segment count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to modify the configuration of a specified channel in the live packaging service. You must provide the channel group name, channel name, and the protocol type, segment duration, and segment count to update. You can also optionally add or modify the channel description. Ensure that the channel group name and channel name comply with the naming conventions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59763,13 +59767,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the real-time packaging origin endpoint configuration of a channel group, supporting protocol, time-shift settings, and access control.</para>
+        /// <para>Updates the origin endpoint configuration of a channel group for live packaging, including protocol, time-shifting settings, and access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>Modify the origin endpoint configuration for the real-time packaging service under a specified channel group. You can use this API to adjust the origin protocol policy, set the time-shift duration in days, define the playlist name, and configure IP blacklists and whitelists to achieve fine-grained management of real-time streaming media delivery. Note that some parameters are required, and you must provide either an IP whitelist or an origin request header (at least one of them).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation modifies the origin endpoint configuration of the live packaging service under a specified channel group. You can use this operation to adjust the back-to-origin protocol, set the number of time-shifting days, define playlist names, and configure IP blacklists and whitelists to achieve fine-grained management of live streaming distribution. Some parameters are required. You must specify at least one of the IP whitelist and the back-to-origin request header.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59857,13 +59861,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the real-time packaging origin endpoint configuration of a channel group, supporting protocol, time-shift settings, and access control.</para>
+        /// <para>Updates the origin endpoint configuration of a channel group for live packaging, including protocol, time-shifting settings, and access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>Modify the origin endpoint configuration for the real-time packaging service under a specified channel group. You can use this API to adjust the origin protocol policy, set the time-shift duration in days, define the playlist name, and configure IP blacklists and whitelists to achieve fine-grained management of real-time streaming media delivery. Note that some parameters are required, and you must provide either an IP whitelist or an origin request header (at least one of them).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation modifies the origin endpoint configuration of the live packaging service under a specified channel group. You can use this operation to adjust the back-to-origin protocol, set the number of time-shifting days, define playlist names, and configure IP blacklists and whitelists to achieve fine-grained management of live streaming distribution. Some parameters are required. You must specify at least one of the IP whitelist and the back-to-origin request header.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59951,13 +59955,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the real-time packaging origin endpoint configuration of a channel group, supporting protocol, time-shift settings, and access control.</para>
+        /// <para>Updates the origin endpoint configuration of a channel group for live packaging, including protocol, time-shifting settings, and access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>Modify the origin endpoint configuration for the real-time packaging service under a specified channel group. You can use this API to adjust the origin protocol policy, set the time-shift duration in days, define the playlist name, and configure IP blacklists and whitelists to achieve fine-grained management of real-time streaming media delivery. Note that some parameters are required, and you must provide either an IP whitelist or an origin request header (at least one of them).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation modifies the origin endpoint configuration of the live packaging service under a specified channel group. You can use this operation to adjust the back-to-origin protocol, set the number of time-shifting days, define playlist names, and configure IP blacklists and whitelists to achieve fine-grained management of live streaming distribution. Some parameters are required. You must specify at least one of the IP whitelist and the back-to-origin request header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59975,13 +59979,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the real-time packaging origin endpoint configuration of a channel group, supporting protocol, time-shift settings, and access control.</para>
+        /// <para>Updates the origin endpoint configuration of a channel group for live packaging, including protocol, time-shifting settings, and access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>Modify the origin endpoint configuration for the real-time packaging service under a specified channel group. You can use this API to adjust the origin protocol policy, set the time-shift duration in days, define the playlist name, and configure IP blacklists and whitelists to achieve fine-grained management of real-time streaming media delivery. Note that some parameters are required, and you must provide either an IP whitelist or an origin request header (at least one of them).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation modifies the origin endpoint configuration of the live packaging service under a specified channel group. You can use this operation to adjust the back-to-origin protocol, set the number of time-shifting days, define playlist names, and configure IP blacklists and whitelists to achieve fine-grained management of live streaming distribution. Some parameters are required. You must specify at least one of the IP whitelist and the back-to-origin request header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -63307,21 +63311,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UploadMediaByURL API uploads audio or video files from source URLs. It supports batch uploads and is ideal for uploading files from a public URL instead of a local server or device.</para>
+        /// <para>Invokes the UploadMediaByURL operation to pull audio and video media files from source file URLs for upload. Batch uploads are supported. This operation is mainly applicable to scenarios where files are not stored on a local service or terminal and need to be uploaded through a URL that supports public network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>If a callback is configured, the service sends an event notification when the URL upload is complete. You can query the upload status by calling the API to retrieve URL upload information.</description></item>
-        /// <item><description>After you successfully submit an upload job, the system creates an asynchronous task in the cloud and queues it for execution. After the upload is complete, you can use the URL and media ID from the event notification (message callback) to update your records.</description></item>
+        /// <item><description>If a callback is configured, you receive an event notification about the completion of URL-based video upload after the upload is complete. You can invoke the operation for obtaining URL upload information to query the upload status.</description></item>
+        /// <item><description>After an upload task is submitted successfully, an asynchronous task is generated in the cloud and queued for execution. After the upload is complete, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This API supports uploading files to VOD storage only and does not support uploading to your own Object Storage Service (OSS) buckets. To use your own OSS storage, you must first pull the files to a local device, upload them to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> API to register the OSS object with the media asset library.</description></item>
-        /// <item><description>This API is currently available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
-        /// <item><description>This API supports uploading audio and video files only.</description></item>
+        /// <item><description>This operation supports uploading only to VOD storage, not to user-owned Object Storage Service (OSS) storage. If you use your own OSS storage, pull the file to a local device first, upload the file to OSS by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media asset library.</description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploading only audio and video files.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63388,21 +63392,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UploadMediaByURL API uploads audio or video files from source URLs. It supports batch uploads and is ideal for uploading files from a public URL instead of a local server or device.</para>
+        /// <para>Invokes the UploadMediaByURL operation to pull audio and video media files from source file URLs for upload. Batch uploads are supported. This operation is mainly applicable to scenarios where files are not stored on a local service or terminal and need to be uploaded through a URL that supports public network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>If a callback is configured, the service sends an event notification when the URL upload is complete. You can query the upload status by calling the API to retrieve URL upload information.</description></item>
-        /// <item><description>After you successfully submit an upload job, the system creates an asynchronous task in the cloud and queues it for execution. After the upload is complete, you can use the URL and media ID from the event notification (message callback) to update your records.</description></item>
+        /// <item><description>If a callback is configured, you receive an event notification about the completion of URL-based video upload after the upload is complete. You can invoke the operation for obtaining URL upload information to query the upload status.</description></item>
+        /// <item><description>After an upload task is submitted successfully, an asynchronous task is generated in the cloud and queued for execution. After the upload is complete, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This API supports uploading files to VOD storage only and does not support uploading to your own Object Storage Service (OSS) buckets. To use your own OSS storage, you must first pull the files to a local device, upload them to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> API to register the OSS object with the media asset library.</description></item>
-        /// <item><description>This API is currently available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
-        /// <item><description>This API supports uploading audio and video files only.</description></item>
+        /// <item><description>This operation supports uploading only to VOD storage, not to user-owned Object Storage Service (OSS) storage. If you use your own OSS storage, pull the file to a local device first, upload the file to OSS by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media asset library.</description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploading only audio and video files.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63469,21 +63473,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UploadMediaByURL API uploads audio or video files from source URLs. It supports batch uploads and is ideal for uploading files from a public URL instead of a local server or device.</para>
+        /// <para>Invokes the UploadMediaByURL operation to pull audio and video media files from source file URLs for upload. Batch uploads are supported. This operation is mainly applicable to scenarios where files are not stored on a local service or terminal and need to be uploaded through a URL that supports public network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>If a callback is configured, the service sends an event notification when the URL upload is complete. You can query the upload status by calling the API to retrieve URL upload information.</description></item>
-        /// <item><description>After you successfully submit an upload job, the system creates an asynchronous task in the cloud and queues it for execution. After the upload is complete, you can use the URL and media ID from the event notification (message callback) to update your records.</description></item>
+        /// <item><description>If a callback is configured, you receive an event notification about the completion of URL-based video upload after the upload is complete. You can invoke the operation for obtaining URL upload information to query the upload status.</description></item>
+        /// <item><description>After an upload task is submitted successfully, an asynchronous task is generated in the cloud and queued for execution. After the upload is complete, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This API supports uploading files to VOD storage only and does not support uploading to your own Object Storage Service (OSS) buckets. To use your own OSS storage, you must first pull the files to a local device, upload them to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> API to register the OSS object with the media asset library.</description></item>
-        /// <item><description>This API is currently available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
-        /// <item><description>This API supports uploading audio and video files only.</description></item>
+        /// <item><description>This operation supports uploading only to VOD storage, not to user-owned Object Storage Service (OSS) storage. If you use your own OSS storage, pull the file to a local device first, upload the file to OSS by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media asset library.</description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploading only audio and video files.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -63502,21 +63506,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UploadMediaByURL API uploads audio or video files from source URLs. It supports batch uploads and is ideal for uploading files from a public URL instead of a local server or device.</para>
+        /// <para>Invokes the UploadMediaByURL operation to pull audio and video media files from source file URLs for upload. Batch uploads are supported. This operation is mainly applicable to scenarios where files are not stored on a local service or terminal and need to be uploaded through a URL that supports public network access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>If a callback is configured, the service sends an event notification when the URL upload is complete. You can query the upload status by calling the API to retrieve URL upload information.</description></item>
-        /// <item><description>After you successfully submit an upload job, the system creates an asynchronous task in the cloud and queues it for execution. After the upload is complete, you can use the URL and media ID from the event notification (message callback) to update your records.</description></item>
+        /// <item><description>If a callback is configured, you receive an event notification about the completion of URL-based video upload after the upload is complete. You can invoke the operation for obtaining URL upload information to query the upload status.</description></item>
+        /// <item><description>After an upload task is submitted successfully, an asynchronous task is generated in the cloud and queued for execution. After the upload is complete, you can associate the URL with the video ID based on the information returned in the event notification (message callback).</description></item>
         /// </list>
-        /// <h3>Limitations</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>This API supports uploading files to VOD storage only and does not support uploading to your own Object Storage Service (OSS) buckets. To use your own OSS storage, you must first pull the files to a local device, upload them to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> API to register the OSS object with the media asset library.</description></item>
-        /// <item><description>This API is currently available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
-        /// <item><description>This API supports uploading audio and video files only.</description></item>
+        /// <item><description>This operation supports uploading only to VOD storage, not to user-owned Object Storage Service (OSS) storage. If you use your own OSS storage, pull the file to a local device first, upload the file to OSS by using <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media asset library.</description></item>
+        /// <item><description>This operation is currently supported only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</description></item>
+        /// <item><description>This operation supports uploading only audio and video files.</description></item>
         /// </list>
         /// </description>
         /// 

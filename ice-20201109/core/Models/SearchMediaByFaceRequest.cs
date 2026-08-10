@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByFaceRequest : TeaModel {
         /// <summary>
-        /// <para>Custom filters. A JSON string. The following backing fields are supported: intField1 (integer type), strField1 and strField2 (string type). For the same field, only one matching mode can be specified. Filters across different fields are combined with a logical AND relationship.</para>
+        /// <para>The custom filter. JSON string. Supported fields include integer field intField1 and string fields strField1 and strField2. Each field supports only one matching mode. Filters on different fields are combined with an AND relationship.</para>
         /// <list type="bullet">
-        /// <item><description><para>Exact match, for example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</para>
-        /// </description></item>
-        /// <item><description><para>Multi-value match, for example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</para>
-        /// </description></item>
-        /// <item><description><para>Range match, for example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</para>
-        /// </description></item>
+        /// <item><description>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</description></item>
+        /// <item><description>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</description></item>
+        /// <item><description>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CustomFilters { get; set; }
 
         /// <summary>
-        /// <para>The ID of the entity.</para>
+        /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2d3bf1e35a1e42b5ab338d701efa****</para>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to identify the query. You can use this parameter in the SearchMediaClipByFace operation to specify the same query conditions.</para>
+        /// <para>The token used to identify paginated results under the same search condition. Use this parameter together with the FaceSearchToken parameter in the <a href="https://help.aliyun.com/document_detail/612891.html">refined search operation</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,12 +46,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FaceSearchToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the media asset. Valid values:</para>
+        /// <para>The media asset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>image</para>
-        /// </description></item>
-        /// <item><description><para>video</para>
-        /// </description></item>
+        /// <item><description>image: image</description></item>
+        /// <item><description>video: video</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>Namespace.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name-1</para>
@@ -116,9 +111,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SearchLibName { get; set; }
 
         /// <summary>
-        /// <para>Creation time, in milliseconds UNIX timestamp. Use gte for greater than or equal to, and lte for less than or equal to.</para>
+        /// <para>The creation time, in millisecond-precision timestamp. gte specifies greater than or equal to, and lte specifies less than or equal to.</para>
         /// <list type="bullet">
-        /// <item><description>Example range: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</description></item>
+        /// <item><description>Range, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

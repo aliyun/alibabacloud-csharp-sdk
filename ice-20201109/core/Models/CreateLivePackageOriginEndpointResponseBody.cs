@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLivePackageOriginEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the origin endpoint.</para>
+        /// <para>The LivePackageOriginEndpoint object.</para>
         /// </summary>
         [NameInMap("LivePackageOriginEndpoint")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AuthorizationCode { get; set; }
 
             /// <summary>
-            /// <para>The channel name.</para>
+            /// <para>The name of the channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>channel-1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The endpoint description.</para>
+            /// <para>The description of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is an origin endpoint.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The endpoint name.</para>
+            /// <para>The name of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>endpoint-1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EndpointName { get; set; }
 
             /// <summary>
-            /// <para>The endpoint URL.</para>
+            /// <para>The playback URL of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EndpointUrl { get; set; }
 
             /// <summary>
-            /// <para>The channel group name.</para>
+            /// <para>The name of the channel group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>channel-group-1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The IP address blacklist.</para>
+            /// <para>The IP blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103.21.222.1/32,192.168.100.0/24</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpBlacklist { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist.</para>
+            /// <para>The IP whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.0/24,10.0.0.1/24</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>Live packaging configuration</para>
+            /// <para>The live packaging configuration.</para>
             /// </summary>
             [NameInMap("LivePackagingConfig")]
             [Validation(Required=false)]
             public LivePackagingConfig LivePackagingConfig { get; set; }
 
             /// <summary>
-            /// <para>The playlist name.</para>
+            /// <para>The manifest name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manifest</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ManifestName { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Only HLS is supported.</para>
+            /// <para>The protocol. Currently, only HLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HLS</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of days that time-shifted content is available. Maximum value: 30.</para>
+            /// <para>The number of days for time-shifting. Maximum value: 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

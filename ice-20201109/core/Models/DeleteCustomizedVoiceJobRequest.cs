@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteCustomizedVoiceJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the human voice cloning job.</para>
+        /// <para>The ID of the voice cloning task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

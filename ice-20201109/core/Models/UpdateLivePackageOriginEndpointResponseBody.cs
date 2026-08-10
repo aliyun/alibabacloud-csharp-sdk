@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLivePackageOriginEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the origin endpoint.</para>
+        /// <para>The origin endpoint information.</para>
         /// </summary>
         [NameInMap("LivePackageOriginEndpoint")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The endpoint description.</para>
+            /// <para>The description of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is an origin endpoint.</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The IP address blacklist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>The IP blacklist. Subnet masks are supported. Separate multiple IP addresses with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.21.222.1/32,192.168.100.0/24</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpBlacklist { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>The IP whitelist. Subnet masks are supported. Multiple IP addresses are separated with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.0/24,10.0.0.1/24</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>Live packaging configuration</para>
+            /// <para>The live packaging configuration.</para>
             /// </summary>
             [NameInMap("LivePackagingConfig")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ManifestName { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Only HLS is supported.</para>
+            /// <para>The protocol. Currently, only HLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HLS</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of days that time-shifted content is available. Maximum value: 30.</para>
+            /// <para>The number of time-shifting days. Maximum value: 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

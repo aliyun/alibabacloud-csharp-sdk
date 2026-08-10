@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class LiveManifestConfig : TeaModel {
         /// <summary>
-        /// <para>The type of ad markers to include in the manifest.</para>
+        /// <para>The ad markers supported in the playlist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NONE: Removes all ad markers.</description></item>
-        /// <item><description>DATE_RANGE: Inserts EXT-X-DATERANGE tags (HLS spec). Valid for HLS/HLS-CMAF endpoints.</description></item>
-        /// <item><description>XML: Inserts XML-based ad markers (DASH spec). Valid for DASH endpoints.</description></item>
+        /// <item><description>NONE: removes ad markers.</description></item>
+        /// <item><description>DATE_RANGE: uses the EXT-X-DATERANGE tag defined in the HLS specification. This value is available when the endpoint protocol is HLS/HLS_CMAF.</description></item>
+        /// <item><description>XML: uses the XML ad markers defined in the DASH specification. This value is available when the endpoint protocol is DASH.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AdMarkers { get; set; }
 
         /// <summary>
-        /// <para>The interval, in seconds, at which to insert the EXT-X-PROGRAM-DATE-TIME tag into the playlist. By default, no tags are inserted. Valid values: 1 to 3600. Applies only to HLS and HLS-CMAF endpoints.</para>
+        /// <para>The interval (in seconds) for inserting the EXT-X-PROGRAM-DATE-TIME time tag. By default, the tag is not inserted. Valid values: 1 to 3600. This parameter applies to the HLS/HLS_CMAF protocol.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? DateTimeInterval { get; set; }
 
         /// <summary>
-        /// <para>The duration of the startover window, in seconds. It defines the maximum time a viewer can seek backward in the live stream. Valid values: 1 to 3600. Default value: 60. Applies only to DASH endpoints.</para>
+        /// <para>The maximum time-shift duration during live streaming. Unit: seconds. Valid values: 1 to 3600. Default value: 60. This parameter applies to DASH.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? ManifestDuration { get; set; }
 
         /// <summary>
-        /// <para>The maximum bitrate threshold (in bits per second) that video tracks must be at or below to be available for playback from this endpoint. It must be a positive integer. If not set, no maximum bitrate is enforced.</para>
+        /// <para>The maximum input bitrate threshold (unit: bit/s). A video track must have a bitrate less than or equal to this threshold to be played from this endpoint. Valid values: integers greater than 0. By default, this parameter is empty and no maximum bitrate limit is set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8000000</para>
@@ -55,8 +55,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxVideoBitrate { get; set; }
 
         /// <summary>
-        /// <para>The minimum buffer time, in seconds. Valid values: 1 to 30. Default value: the duration of two segments. Applies only to DASH endpoints.</para>
-        /// <para>Note: Setting this value too low may cause playback to stutter. We recommend a value no less than two segment durations.</para>
+        /// <para>The minimum buffer time. Unit: seconds. Valid values: 1 to 30. Default value: 2 segment durations. This parameter applies only to DASH.</para>
+        /// <remarks>
+        /// <para> An excessively small minimum buffer time may cause playback stuttering. Set this parameter to a value no less than 2 segment durations.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -66,8 +68,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MinBufferTime { get; set; }
 
         /// <summary>
-        /// <para>The minimum update period for the manifest, in seconds. Valid values: 1 to 3600. Default value: the duration of two segments. Applies only to DASH endpoints.</para>
-        /// <para>Note: For smooth playback, set this value to be less than MinBufferTime.</para>
+        /// <para>The minimum update interval. Unit: seconds. Valid values: 1 to 3600. Default value: 2 segment durations. This parameter applies to DASH.</para>
+        /// <remarks>
+        /// <para> Set this parameter to a value less than the minimum buffer time. An excessively large value may cause DASH playback stuttering.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MinUpdatePeriod { get; set; }
 
         /// <summary>
-        /// <para>The minimum bitrate threshold (in bits per second) that video tracks must be at or above to be available for playback from this endpoint. It must be a positive integer. If not set, no minimum bitrate is enforced.</para>
+        /// <para>The minimum input bitrate threshold (unit: bit/s). A video track must have a bitrate greater than or equal to this threshold to be played from this endpoint. Valid values: integers greater than 0. By default, this parameter is empty and no minimum bitrate is set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -86,8 +90,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? MinVideoBitrate { get; set; }
 
+        [NameInMap("PartHoldBackMs")]
+        [Validation(Required=false)]
+        public int? PartHoldBackMs { get; set; }
+
         /// <summary>
-        /// <para>The suggested presentation delay, in seconds. Valid values: 1 to 60. Default value: the duration of three segments.</para>
+        /// <para>The suggested presentation delay. Unit: seconds. Valid values: 1 to 60. Default value: 3 segment durations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PresentationDelay { get; set; }
 
         /// <summary>
-        /// <para>The number of segments to include in the playlist. Applies to HLS and HLS-CMAF protocols. If not set, the channel\&quot;s default configuration is used. Valid values: 2 to 100.</para>
+        /// <para>The number of segments. This parameter applies to the HLS/HLS_CMAF protocol. By default, the channel configuration is used. Valid values: 2 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -107,7 +115,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SegmentCount { get; set; }
 
         /// <summary>
-        /// <para>The format of the segment template. Only NUMBER_TIMELINE is supported (default). Applies only to DASH endpoints.</para>
+        /// <para>The segment template. Currently, only NUMBER_TIMELINE (default) is supported. This parameter applies to DASH.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NUMBER_TIMELINE</para>
@@ -117,11 +125,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SegmentTemplateFormat { get; set; }
 
         /// <summary>
-        /// <para>The order of streams in the master playlist. Valid values:</para>
+        /// <para>The stream sorting rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ORIGINAL: Preserves the original order of the input streams.</description></item>
-        /// <item><description>VIDEO_BITRATE_ASCENDING: sorts the streams in ascending order of bitrates, from lowest to highest.</description></item>
-        /// <item><description>VIDEO_BITRATE_DESCENDING: sorts the streams in descending order of bitrates, from highest to lowest.</description></item>
+        /// <item><description>ORIGINAL: retains the original order of the input sub-manifest.</description></item>
+        /// <item><description>VIDEO_BITRATE_ASCENDING: sorts by video stream bitrate in ascending order.</description></item>
+        /// <item><description>VIDEO_BITRATE_DESCENDING: sorts by video stream bitrate in descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

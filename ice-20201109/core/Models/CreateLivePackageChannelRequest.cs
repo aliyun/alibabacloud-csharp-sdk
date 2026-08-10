@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLivePackageChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The channel name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</para>
+        /// <para>The channel name. The name can contain only uppercase and lowercase letters, digits, hyphens, and underscores. The name must be 1 to 200 characters in length. Format: [A-Za-z0-9_-]+</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The channel description. It can be up to 1,000 characters in length.</para>
+        /// <para>The description. The description can be up to 1000 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test channel.</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</para>
+        /// <para>The channel group name. The name can contain only uppercase and lowercase letters, digits, hyphens, and underscores. The name must be 1 to 200 characters in length. Format: [A-Za-z0-9_-]+</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The ingest protocol. Only HLS is supported.</para>
+        /// <para>The input protocol. Currently, only HLS is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,8 +63,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The number of M3U8 segments. Valid values: 2 to 100.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The number of m3u8 segments for the input stream. Valid values: 2 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -74,8 +73,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SegmentCount { get; set; }
 
         /// <summary>
-        /// <para>The segment duration. Valid values: 1 to 30.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The segment duration of the input stream, in seconds. Valid values: 1 to 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

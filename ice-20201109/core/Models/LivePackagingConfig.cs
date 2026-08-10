@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class LivePackagingConfig : TeaModel {
         /// <summary>
-        /// <para>Configuration for the DRM provider. To disable DRM, leave all fields in this object empty.</para>
+        /// <para>The DRM encryption provider configuration. If encryption is not required, leave all fields empty.</para>
         /// </summary>
         [NameInMap("DrmConfig")]
         [Validation(Required=false)]
         public LivePackagingConfigDrmConfig DrmConfig { get; set; }
         public class LivePackagingConfigDrmConfig : TeaModel {
             /// <summary>
-            /// <para>The content ID in the DRM system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported. You must ensure this ID is unique to prevent playback failures.</para>
+            /// <para>The content ID in the DRM system. Format: [A-Za-z0-9_-]+. Maximum length: 256 characters. Ensure that the content ID is unique. Otherwise, DRM playback may fail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>live-axb1-9dd2fa123</para>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ContentId { get; set; }
 
             /// <summary>
-            /// <para>The encryption method. Valid value:</para>
+            /// <para>The encryption algorithm. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SAMPLE_AES</description></item>
             /// </list>
-            /// <para>If not specified, encryption is disabled.</para>
+            /// <para>Default value: empty, which indicates no encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAMPLE_AES</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EncryptionMethod { get; set; }
 
             /// <summary>
-            /// <para>A 128-bit, 16-byte hex value represented by a 32-character string that is used with the key for encrypting data blocks. If you leave this parameter empty, MediaPackage creates a constant initialization vector (IV). If it is specified, the value is passed to the DRM service.</para>
+            /// <para>An optional 128-bit (16-byte) hexadecimal value represented by a 32-character string. This value is used together with the key to encrypt data blocks. If you do not specify this value, MediaPackage creates a constant initialization vector (IV). Default value: empty. If specified, the value is passed through to the provider as a constant initialization vector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00000000000000000000000000000000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IV { get; set; }
 
             /// <summary>
-            /// <para>The key rotation interval for DRM, in seconds. The default value of 0 disables key rotation.</para>
+            /// <para>The DRM key rotation interval. Unit: seconds. Default value: 0, which indicates that key rotation is disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -61,17 +61,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? RotatePeriod { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DRM system. The supported systems depend on the protocol.</para>
+            /// <para>The DRM system IDs, determined by the protocol type.</para>
             /// <list type="bullet">
-            /// <item><description>DASH: Supports Google Widevine and Microsoft PlayReady.</description></item>
-            /// <item><description>HLS: DRM is not supported.</description></item>
-            /// <item><description>HLS-CMAF: Supports Apple FairPlay, Google Widevine, and Microsoft PlayReady.</description></item>
+            /// <item><description>DASH: supports Google Widevine and Microsoft PlayReady.</description></item>
+            /// <item><description>HLS: not supported.</description></item>
+            /// <item><description>HLS_CMAF: supports Apple FairPlay, Google Widevine, and Microsoft PlayReady.</description></item>
             /// </list>
-            /// <para>The corresponding System IDs are:</para>
+            /// <para>Three DRM systems are supported: Apple FairPlay, Google Widevine, and Microsoft PlayReady. The corresponding system IDs are:</para>
             /// <list type="bullet">
-            /// <item><description>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</description></item>
-            /// <item><description>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21ed</description></item>
-            /// <item><description>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</description></item>
+            /// <item><description>Apple FairPlay:
+            /// 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</description></item>
+            /// <item><description>Google Widevine:
+            /// edef8ba9-79d6-4ace-a3c8-27dcd51d21ed</description></item>
+            /// <item><description>Microsoft PlayReady:
+            /// 9a04f079-9840-4286-ab92-e65be0885f95.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("SystemIds")]
@@ -91,14 +94,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Live stream manifest configuration. Only one configuration is supported.</para>
+        /// <para>The live manifest configurations. A maximum of one configuration is supported.</para>
         /// </summary>
         [NameInMap("LiveManifestConfigs")]
         [Validation(Required=false)]
         public List<LiveManifestConfig> LiveManifestConfigs { get; set; }
 
+        [NameInMap("PartDurationMs")]
+        [Validation(Required=false)]
+        public int? PartDurationMs { get; set; }
+
         /// <summary>
-        /// <para>The duration of each output segment, in seconds. If not set, this defaults to the channel\&quot;s configured segment duration. The final segment duration is a multiple of the source segment duration that is closest to and not less than this value. Valid values: 1 to 30.</para>
+        /// <para>The duration of each segment, in seconds. Default value: the channel segment duration. The actual segment duration is the nearest multiple of the source segment duration that is greater than or equal to the configured value. Valid values: 1 to 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -108,7 +115,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SegmentDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create separate audio rendition groups for TS segments.</para>
+        /// <para>Specifies whether to separate audio tracks in TS segments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

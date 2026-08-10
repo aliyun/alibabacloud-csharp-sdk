@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// <para>The material ID. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.</para>
+        /// <para>The IDs of the materials. Separate multiple material IDs with commas (,). You can specify up to 10 material IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MaterialIds { get; set; }
 
         /// <summary>
-        /// <para>The material type. Valid values:</para>
-        /// <para>\- video</para>
-        /// <para>\- image</para>
-        /// <para>\- audio</para>
-        /// <para>\- subtitle</para>
-        /// <para>\- text</para>
+        /// <para>The type of the material. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>video</description></item>
+        /// <item><description>image</description></item>
+        /// <item><description>audio</description></item>
+        /// <item><description>subtitle</description></item>
+        /// <item><description>text</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLivePackageChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the live package channel.</para>
+        /// <para>The details of the live packaging channel.</para>
         /// </summary>
         [NameInMap("LivePackageChannel")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>The time when the channel was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</para>
+            /// <para>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The channel description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a test channel.</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>The time when the channel was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</para>
+            /// <para>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>The ingest protocol. Only HLS is supported.</para>
+            /// <para>The input protocol. Valid value: HLS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HLS</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of M3U8 segments.</para>
+            /// <para>The number of m3u8 segments for the input stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? SegmentCount { get; set; }
 
             /// <summary>
-            /// <para>The segment duration.</para>
+            /// <para>The segment duration of the input stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

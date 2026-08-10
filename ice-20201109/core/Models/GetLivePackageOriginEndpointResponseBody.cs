@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLivePackageOriginEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the origin endpoints.</para>
+        /// <para>The origin endpoint type.</para>
         /// </summary>
         [NameInMap("LivePackageOriginEndpoint")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The IP address blacklist.</para>
+            /// <para>The IP blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.21.222.1/32</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpBlacklist { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist.</para>
+            /// <para>The IP whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.0/24,10.0.0.1/24</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint was last modified.</para>
+            /// <para>The last modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>Live packaging configuration</para>
+            /// <para>The live packaging configuration.</para>
             /// </summary>
             [NameInMap("LivePackagingConfig")]
             [Validation(Required=false)]
             public LivePackagingConfig LivePackagingConfig { get; set; }
 
             /// <summary>
-            /// <para>The playlist name.</para>
+            /// <para>The manifest name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manifest</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of days that time-shifted content is available.</para>
+            /// <para>The number of time-shift days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

@@ -1,3 +1,6 @@
+2026-08-10 Version: 6.19.1
+- Generated csharp 2020-11-09 for ICE.
+
 2026-08-05 Version: 6.19.0
 - Support API SubmitCosyVoiceCustomizedVoiceJob.
 
