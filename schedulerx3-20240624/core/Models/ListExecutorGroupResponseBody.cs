@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("EnableJobs")]
+                [Validation(Required=false)]
+                public int? EnableJobs { get; set; }
+
                 [NameInMap("IntegrationType")]
                 [Validation(Required=false)]
                 public string IntegrationType { get; set; }

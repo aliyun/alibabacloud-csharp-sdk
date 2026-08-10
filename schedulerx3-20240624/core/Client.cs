@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"},
+                {"cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"},
+                {"cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"},
+                {"cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"},
+                {"ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"},
+                {"eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1409,6 +1409,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["JobType"] = request.JobType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                body["Label"] = request.Label;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAttempt))
             {
                 body["MaxAttempt"] = request.MaxAttempt;
@@ -1572,6 +1576,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 body["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                body["Label"] = request.Label;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAttempt))
             {
@@ -7871,6 +7879,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 query["JobName"] = request.JobName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                query["Label"] = request.Label;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
                 query["PageNum"] = request.PageNum;
@@ -7948,6 +7960,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
             {
                 query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                query["Label"] = request.Label;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
@@ -14025,6 +14041,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                body["Label"] = request.Label;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAttempt))
             {
                 body["MaxAttempt"] = request.MaxAttempt;
@@ -14180,6 +14200,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                body["Label"] = request.Label;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAttempt))
             {

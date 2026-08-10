@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The job description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job01单机任务</para>
+        /// <para>job01 standalone job</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The jobhandler name.</para>
+        /// <para>The <c>jobhandler</c> name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jobDemoHandler</para>
@@ -71,6 +71,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The job label filter condition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{key:value}</para>
+        /// </summary>
+        [NameInMap("Label")]
+        [Validation(Required=false)]
+        public string Label { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +101,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The job status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

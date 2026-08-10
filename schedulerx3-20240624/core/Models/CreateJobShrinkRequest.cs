@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The retry interval. Unit: seconds. Default value: 30.</para>
+        /// <para>The retry interval upon failure. Unit: seconds. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -123,6 +123,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
+
+        /// <summary>
+        /// <para>The node label information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{key:value}</para>
+        /// </summary>
+        [NameInMap("Label")]
+        [Validation(Required=false)]
+        public string Label { get; set; }
 
         /// <summary>
         /// <para>The maximum number of retry attempts upon failure. Set this parameter based on your business requirements.</para>
@@ -249,7 +259,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? StartTimeType { get; set; }
 
         /// <summary>
-        /// <para>The node status. Default value: 1 (enabled). Valid values:</para>
+        /// <para>The node status. Default value: enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: disabled</description></item>
         /// <item><description>1: enabled</description></item>
@@ -318,7 +328,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Weight { get; set; }
 
         /// <summary>
-        /// <para>The configuration for K8s node types. Set this parameter if the node type is K8s.
+        /// <para>The configuration for K8s node types. This parameter is required for K8s node types.
         /// Job node: {&quot;resource&quot;:&quot;job&quot;}
         /// Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</para>
         /// 

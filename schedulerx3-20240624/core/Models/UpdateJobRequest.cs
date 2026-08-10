@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateJobRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? ExecutorBlockStrategy { get; set; }
 
         /// <summary>
-        /// <para>The JobHandler name.</para>
+        /// <para>The jobhandler name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testJobVoidHandler</para>
@@ -122,6 +125,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// <para>The node label information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{key:value}</para>
+        /// </summary>
+        [NameInMap("Label")]
+        [Validation(Required=false)]
+        public string Label { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of retry attempts upon node failure.</para>
         /// 
         /// <b>Example:</b>
@@ -132,7 +145,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxAttempt { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrent instances for the node.</para>
+        /// <para>The maximum concurrency of the node.</para>
         /// <remarks>
         /// <para>The maximum number of instances that can run simultaneously for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</para>
         /// </remarks>
@@ -162,7 +175,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public UpdateJobRequestNoticeConfig NoticeConfig { get; set; }
         public class UpdateJobRequestNoticeConfig : TeaModel {
             /// <summary>
-            /// <para>The early termination threshold, in seconds.</para>
+            /// <para>The early completion threshold, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -172,7 +185,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? EndEarly { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the early termination alert.</para>
+            /// <para>Specifies whether to enable the early completion alert.</para>
             /// </summary>
             [NameInMap("EndEarlyEnable")]
             [Validation(Required=false)]
@@ -181,8 +194,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>Specifies whether to enable the failure alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled.</description></item>
-            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// <item><description><b>true</b>: Enables the failure alert.</description></item>
+            /// <item><description><b>false</b>: Disables the failure alert.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,8 +221,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>Specifies whether to enable the no-available-machine alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled.</description></item>
-            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// <item><description><b>true</b>: Enables the no-available-machine alert.</description></item>
+            /// <item><description><b>false</b>: Disables the no-available-machine alert.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,7 +235,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>The notification channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>sms: text message</description></item>
+            /// <item><description>sms: SMS</description></item>
             /// <item><description>phone: phone call</description></item>
             /// <item><description>mail: email</description></item>
             /// <item><description>webhook: webhook<remarks>
@@ -281,8 +294,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>Specifies whether to enable the timeout termination for the current trigger. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled.</description></item>
-            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// <item><description><b>true</b>: Enables the timeout termination.</description></item>
+            /// <item><description><b>false</b>: Disables the timeout termination.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -337,7 +350,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The node execution priority. Valid values:</para>
+        /// <para>The execution priority of the node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: low</description></item>
         /// <item><description>5: medium</description></item>
@@ -373,7 +386,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? RouteStrategy { get; set; }
 
         /// <summary>
-        /// <para>The script content for non-BEAN nodes. Use this field to configure the script.</para>
+        /// <para>The script configured for non-BEAN nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>echo &quot;hello world&quot;</para>
@@ -406,10 +419,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The time expression. Set the time expression based on the selected time type.</para>
         /// <list type="bullet">
         /// <item><description>none: No value is required.</description></item>
-        /// <item><description>cron: Specify a standard cron expression. Online verification is supported.</description></item>
+        /// <item><description>cron: Enter a standard cron expression. Online verification is supported.</description></item>
         /// <item><description>api: No value is required.</description></item>
-        /// <item><description>fixed_rate: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
-        /// <item><description>one_time: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
+        /// <item><description>fixed_rate: Enter a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
+        /// <item><description>one_time: Enter a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -439,7 +452,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>The time zone.</para>
         /// <remarks>
-        /// <para>The default value is the time zone of the SchedulerX server.</para>
+        /// <para>Default value: the time zone of the SchedulerX server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -460,6 +473,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Weight { get; set; }
 
         /// <summary>
+        /// <para>The extended properties of the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;reponseMode&quot;:&quot;streaming&quot;}</para>
         /// </summary>
