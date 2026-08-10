@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DocFormat")]
+        [Validation(Required=false)]
+        public string DocFormat { get; set; }
+
         [NameInMap("DomainTopic")]
         [Validation(Required=false)]
         public string DomainTopic { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("KnowledgeUuid")]
         [Validation(Required=false)]
         public string KnowledgeUuid { get; set; }
+
+        [NameInMap("RawDoc")]
+        [Validation(Required=false)]
+        public string RawDoc { get; set; }
 
         [NameInMap("SemanticType")]
         [Validation(Required=false)]

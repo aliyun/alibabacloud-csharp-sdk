@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Dms20250414
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "dms.us-west-1.aliyuncs.com"},
-                {"us-east-1", "dms.us-east-1.aliyuncs.com"},
                 {"cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"},
+                {"cn-beijing", "dms.cn-beijing.aliyuncs.com"},
                 {"cn-shanghai", "dms.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "dms.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"},
-                {"cn-beijing", "dms.cn-beijing.aliyuncs.com"},
                 {"ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"},
+                {"us-west-1", "dms.us-west-1.aliyuncs.com"},
+                {"us-east-1", "dms.us-east-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -7298,6 +7298,334 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDataAgentSubAccountInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageResponse
+        /// </returns>
+        public GetDataAgentTaskModelUsageResponse GetDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentTaskModelUsage",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentTaskModelUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageResponse
+        /// </returns>
+        public async Task<GetDataAgentTaskModelUsageResponse> GetDataAgentTaskModelUsageWithOptionsAsync(GetDataAgentTaskModelUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentTaskModelUsage",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentTaskModelUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageResponse
+        /// </returns>
+        public GetDataAgentTaskModelUsageResponse GetDataAgentTaskModelUsage(GetDataAgentTaskModelUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataAgentTaskModelUsageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total call count, total tokens consumed, and peak TPM.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageResponse
+        /// </returns>
+        public async Task<GetDataAgentTaskModelUsageResponse> GetDataAgentTaskModelUsageAsync(GetDataAgentTaskModelUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataAgentTaskModelUsageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageMetricsResponse
+        /// </returns>
+        public GetDataAgentTaskModelUsageMetricsResponse GetDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentTaskModelUsageMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentTaskModelUsageMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageMetricsResponse
+        /// </returns>
+        public async Task<GetDataAgentTaskModelUsageMetricsResponse> GetDataAgentTaskModelUsageMetricsWithOptionsAsync(GetDataAgentTaskModelUsageMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentTaskModelUsageMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentTaskModelUsageMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageMetricsResponse
+        /// </returns>
+        public GetDataAgentTaskModelUsageMetricsResponse GetDataAgentTaskModelUsageMetrics(GetDataAgentTaskModelUsageMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataAgentTaskModelUsageMetricsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range, returning token consumption at each time point with minute-level granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentTaskModelUsageMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentTaskModelUsageMetricsResponse
+        /// </returns>
+        public async Task<GetDataAgentTaskModelUsageMetricsResponse> GetDataAgentTaskModelUsageMetricsAsync(GetDataAgentTaskModelUsageMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataAgentTaskModelUsageMetricsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
