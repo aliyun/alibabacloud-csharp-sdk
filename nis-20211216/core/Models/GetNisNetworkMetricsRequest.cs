@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class GetNisNetworkMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>Explicitly passes sub-account IDs.</para>
+        /// <para>Explicitly passes member account IDs.</para>
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// <para>The start time, in <b>ms</b>, in <b>UNIX</b> timestamp format. If not specified, the most recent 1 hour is queried by default. The earliest start time is 7 days ago.</para>
+        /// <para>The start time, in <b>ms</b>, in <b>UNIX</b> timestamp format. If not specified, the most recent 1 hour is queried by default. The earliest start time can be 7 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1638239092000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <item><description>rtt: round-trip time when establishing a TCP connection.</description></item>
         /// <item><description>RetransmitRate: retransmission rate.</description></item>
         /// <item><description>RatelimitDropPps: rate of packets dropped due to throttling.</description></item>
-        /// <item><description>ActiveSessionCount: concurrent sessions.</description></item>
+        /// <item><description>ActiveSessionCount: concurrent session count.</description></item>
         /// <item><description>NewSessionPerSecond: new sessions per second.</description></item>
         /// <item><description>BandwidthUtilization: bandwidth utilization.</description></item>
         /// <item><description>passRate: inspection pass rate.<remarks>
@@ -113,12 +113,11 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <item><description>ElasticIP: Elastic IP Address (EIP) (IPv4).</description></item>
         /// <item><description>PublicIpEcs: static public IP address bound to an ECS instance (IPv4).</description></item>
         /// <item><description>PublicIpClb: static public IP address bound to a CLB instance (IPv4).</description></item>
-        /// <item><description>NAT: public traffic through SNAT.</description></item>
+        /// <item><description>NAT: public network traffic through SNAT.</description></item>
         /// <item><description>TR: traffic through Cloud Enterprise Network (CEN) transit routers.</description></item>
         /// <item><description>TRAttachment: traffic through CEN connection instances, including intra-region and inter-region connections. Intra-region connections have inbound and outbound directions. Inter-region connections have only the outbound direction.</description></item>
         /// <item><description>VBR: traffic through virtual border routers.</description></item>
         /// <item><description>GA: traffic through Global Accelerator.</description></item>
-        /// <item><description>InternetProbing: Internet quality probing data.</description></item>
         /// <item><description>IntranetProbing: internal network quality probing data.</description></item>
         /// <item><description>NisInspectionHistoryReportScore: inspection history scores.</description></item>
         /// </list>
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public int? StepMinutes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use cross-account access mode. This is a reserved parameter and is not currently supported.</para>
+        /// <para>Specifies whether to use multi-account access mode. This is a reserved parameter and is not currently supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

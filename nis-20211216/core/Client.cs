@@ -9505,113 +9505,17 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <list type="bullet">
         /// <item><description>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
         /// Supported analysis scenarios: </description></item>
-        /// <item><description>Internet performance observation dashboard scenario</description></item>
         /// <item><description>Cross-zone internal network performance observation dashboard scenario</description></item>
         /// <item><description>Cross-region internal network performance observation dashboard scenario</description></item>
         /// </list>
-        /// <h2>Internet performance observation dashboard scenario</h2>
-        /// <para><b>Note</b>
-        /// The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</para>
-        /// <h3><b>Request parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Required</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RegionNo</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The Alibaba Cloud region where the probing source is located.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ResourceType</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>Set to <b>InternetProbing</b> to query Internet performance monitoring trends.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>MetricName</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Dimensions</td>
-        /// <td>object[\]</td>
-        /// <td>Yes</td>
-        /// <td>The filter information.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Name</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The filter condition. Valid values:</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <list type="bullet">
-        /// <item><description><b>Country</b>: the probing country.</description></item>
-        /// <item><description><b>Province</b>: the probing province.</description></item>
-        /// <item><description><b>Isp</b>: the probing ISP.
-        ///  <b>Note:</b> Specify at least one of the preceding parameters. |
-        /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
-        /// <item><description>Country: China</description></item>
-        /// <item><description>Province: Zhejiang </description></item>
-        /// <item><description>Isp: Alibaba 
-        /// <b>Note:</b> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</description></item>
-        /// </list>
-        /// <h3><b>Response parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RequestId</td>
-        /// <td>string</td>
-        /// <td>The request ID.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Data</td>
-        /// <td>object</td>
-        /// <td>The cloud network metric trends data object.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Metrics</td>
-        /// <td>array</td>
-        /// <td>The collection of metric trends data.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-TimeStamp</td>
-        /// <td>long</td>
-        /// <td>The UNIX timestamp in milliseconds.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Value</td>
-        /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Unit</td>
-        /// <td>String</td>
-        /// <td>The unit of <b>Value</b>.</td>
-        /// </tr>
-        /// </tbody></table>
         /// <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -9656,8 +9560,8 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <list type="bullet">
-        /// <item><description><b>SourceZone</b>: the source zone for probing. This parameter is required.</description></item>
-        /// <item><description><b>DestinationZone</b>: the destination zone for probing. This parameter is required. |
+        /// <item><description><b>SourceZone</b>: the source zone of probing. This parameter is required.</description></item>
+        /// <item><description><b>DestinationZone</b>: the destination zone of probing. This parameter is required. |
         /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
         /// <item><description>SourceZone: cn-hangzhou-j</description></item>
         /// <item><description>DestinationZone: cn-hangzhou-k |</description></item>
@@ -9694,7 +9598,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -9703,13 +9607,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <h2><b>Cross-region internal network performance observation dashboard scenario</b></h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -9746,7 +9650,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <item><description><b>out</b>: probing with RegionNo as the source. |
         /// | MetricName | string | Yes | The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing. |
         /// | Dimensions | object[\] | No | The filter information. |
-        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region for probing. This parameter is required. |
+        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region of probing. This parameter is required. |
         /// | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</description></item>
         /// </list>
         /// <h3><b>Response parameters</b></h3>
@@ -9781,7 +9685,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -9881,113 +9785,17 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <list type="bullet">
         /// <item><description>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
         /// Supported analysis scenarios: </description></item>
-        /// <item><description>Internet performance observation dashboard scenario</description></item>
         /// <item><description>Cross-zone internal network performance observation dashboard scenario</description></item>
         /// <item><description>Cross-region internal network performance observation dashboard scenario</description></item>
         /// </list>
-        /// <h2>Internet performance observation dashboard scenario</h2>
-        /// <para><b>Note</b>
-        /// The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</para>
-        /// <h3><b>Request parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Required</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RegionNo</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The Alibaba Cloud region where the probing source is located.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ResourceType</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>Set to <b>InternetProbing</b> to query Internet performance monitoring trends.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>MetricName</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Dimensions</td>
-        /// <td>object[\]</td>
-        /// <td>Yes</td>
-        /// <td>The filter information.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Name</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The filter condition. Valid values:</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <list type="bullet">
-        /// <item><description><b>Country</b>: the probing country.</description></item>
-        /// <item><description><b>Province</b>: the probing province.</description></item>
-        /// <item><description><b>Isp</b>: the probing ISP.
-        ///  <b>Note:</b> Specify at least one of the preceding parameters. |
-        /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
-        /// <item><description>Country: China</description></item>
-        /// <item><description>Province: Zhejiang </description></item>
-        /// <item><description>Isp: Alibaba 
-        /// <b>Note:</b> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</description></item>
-        /// </list>
-        /// <h3><b>Response parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RequestId</td>
-        /// <td>string</td>
-        /// <td>The request ID.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Data</td>
-        /// <td>object</td>
-        /// <td>The cloud network metric trends data object.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Metrics</td>
-        /// <td>array</td>
-        /// <td>The collection of metric trends data.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-TimeStamp</td>
-        /// <td>long</td>
-        /// <td>The UNIX timestamp in milliseconds.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Value</td>
-        /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Unit</td>
-        /// <td>String</td>
-        /// <td>The unit of <b>Value</b>.</td>
-        /// </tr>
-        /// </tbody></table>
         /// <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10032,8 +9840,8 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <list type="bullet">
-        /// <item><description><b>SourceZone</b>: the source zone for probing. This parameter is required.</description></item>
-        /// <item><description><b>DestinationZone</b>: the destination zone for probing. This parameter is required. |
+        /// <item><description><b>SourceZone</b>: the source zone of probing. This parameter is required.</description></item>
+        /// <item><description><b>DestinationZone</b>: the destination zone of probing. This parameter is required. |
         /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
         /// <item><description>SourceZone: cn-hangzhou-j</description></item>
         /// <item><description>DestinationZone: cn-hangzhou-k |</description></item>
@@ -10070,7 +9878,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -10079,13 +9887,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <h2><b>Cross-region internal network performance observation dashboard scenario</b></h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10122,7 +9930,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <item><description><b>out</b>: probing with RegionNo as the source. |
         /// | MetricName | string | Yes | The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing. |
         /// | Dimensions | object[\] | No | The filter information. |
-        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region for probing. This parameter is required. |
+        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region of probing. This parameter is required. |
         /// | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</description></item>
         /// </list>
         /// <h3><b>Response parameters</b></h3>
@@ -10157,7 +9965,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -10257,113 +10065,17 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <list type="bullet">
         /// <item><description>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
         /// Supported analysis scenarios: </description></item>
-        /// <item><description>Internet performance observation dashboard scenario</description></item>
         /// <item><description>Cross-zone internal network performance observation dashboard scenario</description></item>
         /// <item><description>Cross-region internal network performance observation dashboard scenario</description></item>
         /// </list>
-        /// <h2>Internet performance observation dashboard scenario</h2>
-        /// <para><b>Note</b>
-        /// The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</para>
-        /// <h3><b>Request parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Required</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RegionNo</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The Alibaba Cloud region where the probing source is located.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ResourceType</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>Set to <b>InternetProbing</b> to query Internet performance monitoring trends.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>MetricName</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Dimensions</td>
-        /// <td>object[\]</td>
-        /// <td>Yes</td>
-        /// <td>The filter information.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Name</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The filter condition. Valid values:</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <list type="bullet">
-        /// <item><description><b>Country</b>: the probing country.</description></item>
-        /// <item><description><b>Province</b>: the probing province.</description></item>
-        /// <item><description><b>Isp</b>: the probing ISP.
-        ///  <b>Note:</b> Specify at least one of the preceding parameters. |
-        /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
-        /// <item><description>Country: China</description></item>
-        /// <item><description>Province: Zhejiang </description></item>
-        /// <item><description>Isp: Alibaba 
-        /// <b>Note:</b> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</description></item>
-        /// </list>
-        /// <h3><b>Response parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RequestId</td>
-        /// <td>string</td>
-        /// <td>The request ID.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Data</td>
-        /// <td>object</td>
-        /// <td>The cloud network metric trends data object.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Metrics</td>
-        /// <td>array</td>
-        /// <td>The collection of metric trends data.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-TimeStamp</td>
-        /// <td>long</td>
-        /// <td>The UNIX timestamp in milliseconds.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Value</td>
-        /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Unit</td>
-        /// <td>String</td>
-        /// <td>The unit of <b>Value</b>.</td>
-        /// </tr>
-        /// </tbody></table>
         /// <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10408,8 +10120,8 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <list type="bullet">
-        /// <item><description><b>SourceZone</b>: the source zone for probing. This parameter is required.</description></item>
-        /// <item><description><b>DestinationZone</b>: the destination zone for probing. This parameter is required. |
+        /// <item><description><b>SourceZone</b>: the source zone of probing. This parameter is required.</description></item>
+        /// <item><description><b>DestinationZone</b>: the destination zone of probing. This parameter is required. |
         /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
         /// <item><description>SourceZone: cn-hangzhou-j</description></item>
         /// <item><description>DestinationZone: cn-hangzhou-k |</description></item>
@@ -10446,7 +10158,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -10455,13 +10167,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <h2><b>Cross-region internal network performance observation dashboard scenario</b></h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10498,7 +10210,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <item><description><b>out</b>: probing with RegionNo as the source. |
         /// | MetricName | string | Yes | The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing. |
         /// | Dimensions | object[\] | No | The filter information. |
-        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region for probing. This parameter is required. |
+        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region of probing. This parameter is required. |
         /// | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</description></item>
         /// </list>
         /// <h3><b>Response parameters</b></h3>
@@ -10533,7 +10245,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -10567,113 +10279,17 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <list type="bullet">
         /// <item><description>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
         /// Supported analysis scenarios: </description></item>
-        /// <item><description>Internet performance observation dashboard scenario</description></item>
         /// <item><description>Cross-zone internal network performance observation dashboard scenario</description></item>
         /// <item><description>Cross-region internal network performance observation dashboard scenario</description></item>
         /// </list>
-        /// <h2>Internet performance observation dashboard scenario</h2>
-        /// <para><b>Note</b>
-        /// The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</para>
-        /// <h3><b>Request parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Required</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RegionNo</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The Alibaba Cloud region where the probing source is located.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>ResourceType</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>Set to <b>InternetProbing</b> to query Internet performance monitoring trends.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>MetricName</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Dimensions</td>
-        /// <td>object[\]</td>
-        /// <td>Yes</td>
-        /// <td>The filter information.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Name</td>
-        /// <td>string</td>
-        /// <td>Yes</td>
-        /// <td>The filter condition. Valid values:</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <list type="bullet">
-        /// <item><description><b>Country</b>: the probing country.</description></item>
-        /// <item><description><b>Province</b>: the probing province.</description></item>
-        /// <item><description><b>Isp</b>: the probing ISP.
-        ///  <b>Note:</b> Specify at least one of the preceding parameters. |
-        /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
-        /// <item><description>Country: China</description></item>
-        /// <item><description>Province: Zhejiang </description></item>
-        /// <item><description>Isp: Alibaba 
-        /// <b>Note:</b> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</description></item>
-        /// </list>
-        /// <h3><b>Response parameters</b></h3>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Name</b></th>
-        /// <th><b>Type</b></th>
-        /// <th><b>Description</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>RequestId</td>
-        /// <td>string</td>
-        /// <td>The request ID.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Data</td>
-        /// <td>object</td>
-        /// <td>The cloud network metric trends data object.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Metrics</td>
-        /// <td>array</td>
-        /// <td>The collection of metric trends data.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-TimeStamp</td>
-        /// <td>long</td>
-        /// <td>The UNIX timestamp in milliseconds.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>\-Value</td>
-        /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Unit</td>
-        /// <td>String</td>
-        /// <td>The unit of <b>Value</b>.</td>
-        /// </tr>
-        /// </tbody></table>
         /// <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10718,8 +10334,8 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <list type="bullet">
-        /// <item><description><b>SourceZone</b>: the source zone for probing. This parameter is required.</description></item>
-        /// <item><description><b>DestinationZone</b>: the destination zone for probing. This parameter is required. |
+        /// <item><description><b>SourceZone</b>: the source zone of probing. This parameter is required.</description></item>
+        /// <item><description><b>DestinationZone</b>: the destination zone of probing. This parameter is required. |
         /// | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</description></item>
         /// <item><description>SourceZone: cn-hangzhou-j</description></item>
         /// <item><description>DestinationZone: cn-hangzhou-k |</description></item>
@@ -10756,7 +10372,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -10765,13 +10381,13 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// </tr>
         /// </tbody></table>
         /// <h2><b>Cross-region internal network performance observation dashboard scenario</b></h2>
-        /// <para><b>Note</b></para>
+        /// <para><b>Description</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data point per day.</para>
+        /// <item><description><para>If the query time span exceeds 5 days, the query result contains one data entry per day.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data point per hour.</para>
+        /// <item><description><para>If the query time span exceeds 1 day, the query result contains one data entry per hour.</para>
         /// </description></item>
-        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</para>
+        /// <item><description><para>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</para>
         /// </description></item>
         /// </list>
         /// <h3><b>Request parameters</b></h3>
@@ -10808,7 +10424,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <item><description><b>out</b>: probing with RegionNo as the source. |
         /// | MetricName | string | Yes | The metric for which to query trends. Valid value: <b>rtt</b>, the round-trip time of probing. |
         /// | Dimensions | object[\] | No | The filter information. |
-        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region for probing. This parameter is required. |
+        /// | \-Name | string | No | The filter condition. Valid value: <b>DestinationRegionNo</b>, the destination region of probing. This parameter is required. |
         /// | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</description></item>
         /// </list>
         /// <h3><b>Response parameters</b></h3>
@@ -10843,7 +10459,7 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <tr>
         /// <td>\-Value</td>
         /// <td>double</td>
-        /// <td>The metric value corresponding to the <b>MetricName</b> input parameter.</td>
+        /// <td>The metric value corresponding to the input parameter <b>MetricName</b>.</td>
         /// </tr>
         /// <tr>
         /// <td>Unit</td>
@@ -12344,6 +11960,170 @@ namespace AlibabaCloud.SDK.Nis20211216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNisInspectionTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends an A2A streaming message.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SendNapalStreamMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNapalStreamMessageResponse
+        /// </returns>
+        public SendNapalStreamMessageResponse SendNapalStreamMessageWithOptions(SendNapalStreamMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendNapalStreamMessageShrinkRequest request = new SendNapalStreamMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
+            {
+                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Message))
+            {
+                request.MessageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Message, "Message", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
+            {
+                body["Configuration"] = request.ConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageShrink))
+            {
+                body["Message"] = request.MessageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendNapalStreamMessage",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendNapalStreamMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends an A2A streaming message.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SendNapalStreamMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNapalStreamMessageResponse
+        /// </returns>
+        public async Task<SendNapalStreamMessageResponse> SendNapalStreamMessageWithOptionsAsync(SendNapalStreamMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SendNapalStreamMessageShrinkRequest request = new SendNapalStreamMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Configuration))
+            {
+                request.ConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Configuration, "Configuration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Message))
+            {
+                request.MessageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Message, "Message", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationShrink))
+            {
+                body["Configuration"] = request.ConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageShrink))
+            {
+                body["Message"] = request.MessageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendNapalStreamMessage",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendNapalStreamMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends an A2A streaming message.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNapalStreamMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNapalStreamMessageResponse
+        /// </returns>
+        public SendNapalStreamMessageResponse SendNapalStreamMessage(SendNapalStreamMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendNapalStreamMessageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends an A2A streaming message.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNapalStreamMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNapalStreamMessageResponse
+        /// </returns>
+        public async Task<SendNapalStreamMessageResponse> SendNapalStreamMessageAsync(SendNapalStreamMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendNapalStreamMessageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
