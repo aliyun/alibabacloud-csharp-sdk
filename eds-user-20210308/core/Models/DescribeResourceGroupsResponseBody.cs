@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource groups.</para>
+        /// <para>The list of resource group information.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <remarks>
             /// <para>The policies associated with the resource group.</para>
             /// <list type="bullet">
-            /// <item><description>Associated policies take effect on cloud desktops in the resource group. If multiple policies are associated, they take effect based on policy priority.</description></item>
-            /// <item><description>If a cloud desktop in the resource group already has other policies specified, the policies associated with the resource group take precedence.</description></item>
+            /// <item><description>Associated policies take effect on cloud computers in the resource group. If multiple policies are associated, they take effect based on policy priority.</description></item>
+            /// <item><description>If a cloud computer in the resource group already has other policies specified, the policies associated with the resource group take effect first.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 /// <para>The policy name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试策略123</para>
+                /// <para>TestPolicy123</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -144,10 +144,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group.</para>
+            /// <para>The resource group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试资源组</para>
+            /// <para>TestResourceGroup</para>
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <remarks>
             /// <para>The associated scheduled tasks.</para>
             /// <list type="bullet">
-            /// <item><description>Associated scheduled tasks take effect on cloud desktops in the resource group. If a cloud desktop in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take precedence.</description></item>
+            /// <item><description>Associated scheduled tasks take effect on cloud computers in the resource group. If a cloud computer in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take effect first.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 /// <para>The scheduled task name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试任务123</para>
+                /// <para>TestTask123</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -192,6 +192,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 [NameInMap("TimerStatus")]
                 [Validation(Required=false)]
                 public string TimerStatus { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
             }
 

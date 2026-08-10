@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AgentType { get; set; }
 
         /// <summary>
-        /// <para>The cloud platform resource group ID.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupIds")]
         [Validation(Required=false)]
@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        /// <summary>
+        /// <para>The resource classification within the resource group.</para>
+        /// </summary>
         [NameInMap("ResourceClassification")]
         [Validation(Required=false)]
         public string ResourceClassification { get; set; }
@@ -89,10 +92,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource group.</para>
+        /// <para>The resource group name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>部门A资源组</para>
+        /// <para>DepartmentAResourceGroup</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
