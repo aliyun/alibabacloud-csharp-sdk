@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The answer content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for an instance, please let me know your specific requirements!</para>
+        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations on an instance, please let me know your specific requirements!</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Will be deprecated in the future. No need to pay attention</para>
+        /// <para>Will be deprecated in the future. No need to pay attention to this field</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]

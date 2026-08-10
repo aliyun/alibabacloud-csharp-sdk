@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string EventMode { get; set; }
 
+        [NameInMap("Files")]
+        [Validation(Required=false)]
+        public string FilesShrink { get; set; }
+
         /// <summary>
         /// <para>The task input.</para>
         /// </summary>

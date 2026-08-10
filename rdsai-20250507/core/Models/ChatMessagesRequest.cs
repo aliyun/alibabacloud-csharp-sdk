@@ -26,6 +26,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string EventMode { get; set; }
 
+        [NameInMap("Files")]
+        [Validation(Required=false)]
+        public List<ChatMessagesRequestFiles> Files { get; set; }
+        public class ChatMessagesRequestFiles : TeaModel {
+            [NameInMap("TransferMethod")]
+            [Validation(Required=false)]
+            public string TransferMethod { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("UploadFileId")]
+            [Validation(Required=false)]
+            public string UploadFileId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The task input.</para>
         /// </summary>

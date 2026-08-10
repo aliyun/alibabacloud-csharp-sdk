@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of message objects.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetMessagesResponseBodyData> Data { get; set; }
         public class GetMessagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AI-generated response to the query.</para>
+            /// <para>The answer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>您询问的实例rm-bp14as9914vd3**** 磁盘使用率为23%，暂时不需要进行扩容。如果您需要进一步查看某个实例的详细配置、性能监控或进行其他操作，请告诉我具体需求！</para>
+            /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and scaling is not required for now. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier for the conversation.</para>
+            /// <para>The conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9cbbe885-b240-4803-9d15-6781a3fd****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The Unix timestamp (in seconds) when the message was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763986004</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The user\&quot;s feedback on the answer, such as &quot;like&quot; or &quot;dislike&quot;.</para>
+            /// <para>The feedback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>like</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string GenerationStatus { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier for the message.</para>
+            /// <para>The message ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>84dc9f9b-424a-404d-9c36-35e9d000****</para>
@@ -96,18 +96,36 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string LastSentEntryId { get; set; }
 
+            [NameInMap("MessageFiles")]
+            [Validation(Required=false)]
+            public List<GetMessagesResponseBodyDataMessageFiles> MessageFiles { get; set; }
+            public class GetMessagesResponseBodyDataMessageFiles : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("PreviewUrl")]
+                [Validation(Required=false)]
+                public string PreviewUrl { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The user\&quot;s query.</para>
+            /// <para>The query statement.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要扩容</para>
+            /// <para>What is the disk usage of instance rm-bp14as9914vd3****, and is scaling required?</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The resources that were retrieved to generate the answer.</para>
+            /// <para>The retrieval resources.</para>
             /// </summary>
             [NameInMap("RetrieverResources")]
             [Validation(Required=false)]
@@ -120,7 +138,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether there are more messages to retrieve.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +148,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The value of the Limit parameter used for this request.</para>
+        /// <para>The maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -140,7 +158,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>

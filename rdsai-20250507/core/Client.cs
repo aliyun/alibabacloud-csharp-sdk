@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "rdsai.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "rdsai.eu-central-1.aliyuncs.com"},
                 {"cn-wulanchabu", "rdsai.aliyuncs.com"},
                 {"cn-shenzhen", "rdsai.aliyuncs.com"},
                 {"cn-shanghai", "rdsai.aliyuncs.com"},
@@ -35,6 +33,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 {"ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"},
+                {"eu-central-1", "rdsai.eu-central-1.aliyuncs.com"},
+                {"us-west-1", "rdsai.us-west-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("rdsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ChatMessagesShrinkRequest request = new ChatMessagesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
+            {
+                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Inputs))
             {
                 request.InputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Inputs, "Inputs", "json");
@@ -86,6 +90,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
             {
                 query["EventMode"] = request.EventMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
+            {
+                query["Files"] = request.FilesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputsShrink))
             {
@@ -138,6 +146,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ChatMessagesShrinkRequest request = new ChatMessagesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
+            {
+                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Inputs))
             {
                 request.InputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Inputs, "Inputs", "json");
@@ -150,6 +162,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
             {
                 query["EventMode"] = request.EventMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
+            {
+                query["Files"] = request.FilesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputsShrink))
             {
@@ -836,6 +852,482 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAppInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseApiKeyResponse
+        /// </returns>
+        public CreateContextDatabaseApiKeyResponse CreateContextDatabaseApiKeyWithOptions(CreateContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseApiKeyResponse> CreateContextDatabaseApiKeyWithOptionsAsync(CreateContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseApiKeyResponse
+        /// </returns>
+        public CreateContextDatabaseApiKeyResponse CreateContextDatabaseApiKey(CreateContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseApiKeyResponse> CreateContextDatabaseApiKeyAsync(CreateContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseMemberResponse
+        /// </returns>
+        public CreateContextDatabaseMemberResponse CreateContextDatabaseMemberWithOptions(CreateContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateInitialKey))
+            {
+                query["GenerateInitialKey"] = request.GenerateInitialKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialKeyName))
+            {
+                query["InitialKeyName"] = request.InitialKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberName))
+            {
+                query["MemberName"] = request.MemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseMemberResponse> CreateContextDatabaseMemberWithOptionsAsync(CreateContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateInitialKey))
+            {
+                query["GenerateInitialKey"] = request.GenerateInitialKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialKeyName))
+            {
+                query["InitialKeyName"] = request.InitialKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberName))
+            {
+                query["MemberName"] = request.MemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseMemberResponse
+        /// </returns>
+        public CreateContextDatabaseMemberResponse CreateContextDatabaseMember(CreateContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseMemberResponse> CreateContextDatabaseMemberAsync(CreateContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public CreateContextDatabaseWorkspaceResponse CreateContextDatabaseWorkspaceWithOptions(CreateContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberName))
+            {
+                query["MemberName"] = request.MemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseWorkspaceResponse> CreateContextDatabaseWorkspaceWithOptionsAsync(CreateContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberName))
+            {
+                query["MemberName"] = request.MemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextDatabaseWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public CreateContextDatabaseWorkspaceResponse CreateContextDatabaseWorkspace(CreateContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContextDatabaseWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<CreateContextDatabaseWorkspaceResponse> CreateContextDatabaseWorkspaceAsync(CreateContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContextDatabaseWorkspaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2336,6 +2828,294 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAppInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseMemberResponse
+        /// </returns>
+        public DeleteContextDatabaseMemberResponse DeleteContextDatabaseMemberWithOptions(DeleteContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseMemberResponse> DeleteContextDatabaseMemberWithOptionsAsync(DeleteContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseMemberResponse
+        /// </returns>
+        public DeleteContextDatabaseMemberResponse DeleteContextDatabaseMember(DeleteContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContextDatabaseMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseMemberResponse> DeleteContextDatabaseMemberAsync(DeleteContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContextDatabaseMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseWorkspaceResponse
+        /// </returns>
+        public DeleteContextDatabaseWorkspaceResponse DeleteContextDatabaseWorkspaceWithOptions(DeleteContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseWorkspaceResponse> DeleteContextDatabaseWorkspaceWithOptionsAsync(DeleteContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextDatabaseWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseWorkspaceResponse
+        /// </returns>
+        public DeleteContextDatabaseWorkspaceResponse DeleteContextDatabaseWorkspace(DeleteContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContextDatabaseWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<DeleteContextDatabaseWorkspaceResponse> DeleteContextDatabaseWorkspaceAsync(DeleteContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContextDatabaseWorkspaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6712,7 +7492,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of messages in a specific conversation.</para>
+        /// <para>Queries the details of specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6766,7 +7546,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of messages in a specific conversation.</para>
+        /// <para>Queries the details of specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6820,7 +7600,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of messages in a specific conversation.</para>
+        /// <para>Queries the details of specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6838,7 +7618,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of messages in a specific conversation.</para>
+        /// <para>Queries the details of specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7704,6 +8484,514 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListApiKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出成员名下 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseApiKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseApiKeysResponse
+        /// </returns>
+        public ListContextDatabaseApiKeysResponse ListContextDatabaseApiKeysWithOptions(ListContextDatabaseApiKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseApiKeys",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseApiKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出成员名下 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseApiKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseApiKeysResponse
+        /// </returns>
+        public async Task<ListContextDatabaseApiKeysResponse> ListContextDatabaseApiKeysWithOptionsAsync(ListContextDatabaseApiKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseApiKeys",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseApiKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出成员名下 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseApiKeysResponse
+        /// </returns>
+        public ListContextDatabaseApiKeysResponse ListContextDatabaseApiKeys(ListContextDatabaseApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseApiKeysWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出成员名下 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseApiKeysResponse
+        /// </returns>
+        public async Task<ListContextDatabaseApiKeysResponse> ListContextDatabaseApiKeysAsync(ListContextDatabaseApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseApiKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作区成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseMembersResponse
+        /// </returns>
+        public ListContextDatabaseMembersResponse ListContextDatabaseMembersWithOptions(ListContextDatabaseMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseMembers",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作区成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseMembersResponse
+        /// </returns>
+        public async Task<ListContextDatabaseMembersResponse> ListContextDatabaseMembersWithOptionsAsync(ListContextDatabaseMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseMembers",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作区成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseMembersResponse
+        /// </returns>
+        public ListContextDatabaseMembersResponse ListContextDatabaseMembers(ListContextDatabaseMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseMembersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作区成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseMembersResponse
+        /// </returns>
+        public async Task<ListContextDatabaseMembersResponse> ListContextDatabaseMembersAsync(ListContextDatabaseMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
+        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
+        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
+        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseWorkspacesResponse
+        /// </returns>
+        public ListContextDatabaseWorkspacesResponse ListContextDatabaseWorkspacesWithOptions(ListContextDatabaseWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseWorkspaces",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseWorkspacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
+        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
+        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
+        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseWorkspacesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseWorkspacesResponse> ListContextDatabaseWorkspacesWithOptionsAsync(ListContextDatabaseWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseWorkspaces",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseWorkspacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
+        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
+        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
+        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseWorkspacesResponse
+        /// </returns>
+        public ListContextDatabaseWorkspacesResponse ListContextDatabaseWorkspaces(ListContextDatabaseWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseWorkspacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
+        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
+        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
+        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseWorkspacesResponse
+        /// </returns>
+        public async Task<ListContextDatabaseWorkspacesResponse> ListContextDatabaseWorkspacesAsync(ListContextDatabaseWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseWorkspacesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11424,6 +12712,162 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>吊销上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>吊销 API Key。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeContextDatabaseApiKeyResponse
+        /// </returns>
+        public RevokeContextDatabaseApiKeyResponse RevokeContextDatabaseApiKeyWithOptions(RevokeContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeContextDatabaseApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>吊销 API Key。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<RevokeContextDatabaseApiKeyResponse> RevokeContextDatabaseApiKeyWithOptionsAsync(RevokeContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeContextDatabaseApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>吊销 API Key。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeContextDatabaseApiKeyResponse
+        /// </returns>
+        public RevokeContextDatabaseApiKeyResponse RevokeContextDatabaseApiKey(RevokeContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RevokeContextDatabaseApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销上下文数据库 API Key</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>吊销 API Key。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<RevokeContextDatabaseApiKeyResponse> RevokeContextDatabaseApiKeyAsync(RevokeContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RevokeContextDatabaseApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts an RDS AI application instance that is in the Stopped state.</para>
         /// </summary>
         /// 
@@ -11928,6 +13372,490 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateApiKeyQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseApiKeyResponse
+        /// </returns>
+        public UpdateContextDatabaseApiKeyResponse UpdateContextDatabaseApiKeyWithOptions(UpdateContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseApiKeyResponse> UpdateContextDatabaseApiKeyWithOptionsAsync(UpdateContextDatabaseApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyId))
+            {
+                query["KeyId"] = request.KeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseApiKey",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseApiKeyResponse
+        /// </returns>
+        public UpdateContextDatabaseApiKeyResponse UpdateContextDatabaseApiKey(UpdateContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseApiKeyResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseApiKeyResponse> UpdateContextDatabaseApiKeyAsync(UpdateContextDatabaseApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新成员的角色 / 状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseMemberResponse
+        /// </returns>
+        public UpdateContextDatabaseMemberResponse UpdateContextDatabaseMemberWithOptions(UpdateContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新成员的角色 / 状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseMemberResponse> UpdateContextDatabaseMemberWithOptionsAsync(UpdateContextDatabaseMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新成员的角色 / 状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseMemberResponse
+        /// </returns>
+        public UpdateContextDatabaseMemberResponse UpdateContextDatabaseMember(UpdateContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新上下文数据库成员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新成员的角色 / 状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseMemberResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseMemberResponse> UpdateContextDatabaseMemberAsync(UpdateContextDatabaseMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 workspace 名称。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public UpdateContextDatabaseWorkspaceResponse UpdateContextDatabaseWorkspaceWithOptions(UpdateContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 workspace 名称。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseWorkspaceResponse> UpdateContextDatabaseWorkspaceWithOptionsAsync(UpdateContextDatabaseWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextDatabaseWorkspace",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextDatabaseWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 workspace 名称。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public UpdateContextDatabaseWorkspaceResponse UpdateContextDatabaseWorkspace(UpdateContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContextDatabaseWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文数据库工作区</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 workspace 名称。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateContextDatabaseWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextDatabaseWorkspaceResponse
+        /// </returns>
+        public async Task<UpdateContextDatabaseWorkspaceResponse> UpdateContextDatabaseWorkspaceAsync(UpdateContextDatabaseWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContextDatabaseWorkspaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
