@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public DescribeBranchResponseBodyBranch Branch { get; set; }
         public class DescribeBranchResponseBodyBranch : TeaModel {
             /// <summary>
-            /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
+            /// <para>The branch ID that uniquely identifies a Supabase branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-xxxx</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The parent branch ID, which specifies the parent branch for a new branch or a query condition.</para>
+            /// <para>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-main</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The LSN of the parent branch at the time this branch was created.</para>
+            /// <para>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0/3522648</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <para>The data synchronization point in time selected from the parent branch when this branch was created, in ISO 8601 UTC format.</para>
-            /// <para>Note:</para>
+            /// <para>Description:</para>
             /// <list type="bullet">
             /// <item><description>For child branches, this value indicates the point in time of the parent branch selected during creation.</description></item>
             /// <item><description>If no parent branch exists, the value 1970-01-01T00:00:00.000Z is returned.</description></item>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The Supabase project ID associated with the primary branch.</para>
+            /// <para>The Supabase project ID that corresponds to the primary branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spb-xxxx</para>
@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
+            [NameInMap("SpbProjectId")]
+            [Validation(Required=false)]
+            public string SpbProjectId { get; set; }
+
             /// <summary>
             /// <para>The branch status.</para>
             /// 
@@ -192,7 +196,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The branch tag list.</para>
+            /// <para>The list of branch tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

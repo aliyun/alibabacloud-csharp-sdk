@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListBranchesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in this request.</para>
+        /// <para>The maximum number of records to return in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</para>
+        /// <para>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent branch ID. This parameter specifies the parent branch for a new branch or a query filter.</para>
+        /// <para>The parent branch ID. This parameter specifies the parent branch for a new branch or as a query filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-main</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>BranchName: sorts by branch name.</description></item>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sort direction.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Asc: ascending order.</description></item>
