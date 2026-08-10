@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xxTest</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MobilePhone { get; set; }
 
                 /// <summary>
-                /// <para>The original ID of the user.</para>
+                /// <para>The source user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2323131</para>
@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [NameInMap("SourceId")]
                 [Validation(Required=false)]
                 public string SourceId { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
 
             }
 

@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class AddTenantMembersBySourceUserResponseBody : TeaModel {
+    public class ExecuteDDLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,17 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the add operation.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
-
-        /// <summary>
-        /// <para>The HTTP status code returned by the backend.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,20 +30,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>successful</para>
+        /// <para>internal error</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
+        /// <para>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -63,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

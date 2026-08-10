@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paging query result.</para>
+        /// <para>The paged query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListResourcePermissionOperationLogResponseBodyPageResult PageResult { get; set; }
         public class ListResourcePermissionOperationLogResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The paginated records.</para>
+            /// <para>The paged records.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -61,12 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public ListResourcePermissionOperationLogResponseBodyPageResultDataAccount Account { get; set; }
                 public class ListResourcePermissionOperationLogResponseBodyPageResultDataAccount : TeaModel {
                     /// <summary>
-                    /// <para>The account ID.</para>
-                    /// <list type="bullet">
-                    /// <item><description>Individual account: the userId on the Dataphin side.</description></item>
-                    /// <item><description>Production account: the UserId obtained by calling the GetProjectProduceUser operation.</description></item>
-                    /// <item><description>User group: the user group ID obtained by calling the ListUserGroup operation.</description></item>
-                    /// </list>
+                    /// <para>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1212131</para>
@@ -86,10 +81,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The authorization account type. Valid values:</para>
+                    /// <para>The authorized account type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>PERSONAL: individual account</description></item>
-                    /// <item><description>PRODUCE: production account</description></item>
+                    /// <item><description>PERSONAL: personal account.</description></item>
+                    /// <item><description>PRODUCE: production account.</description></item>
                     /// <item><description>USER_GROUP: user group.</description></item>
                     /// </list>
                     /// 
@@ -107,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <list type="bullet">
                 /// <item><description>selectTable: specified table</description></item>
                 /// <item><description>projectAllTable: all tables in the project</description></item>
-                /// <item><description>bizUnitAllLogicTable: all logical tables in the business unit.</description></item>
+                /// <item><description>bizUnitAllLogicTable: all logical tables in the business unit</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,8 +135,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The operation type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>APPLY: Apply for permissions.</description></item>
-                /// <item><description>GRANT: Grant permissions.</description></item>
+                /// <item><description>APPLY: apply.</description></item>
+                /// <item><description>GRANT: grant.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,10 +167,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The validity period type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>CUSTOM: custom</description></item>
-                    /// <item><description>LONG_TERM: permanently valid</description></item>
+                    /// <item><description>LONG_TERM: long-term validity</description></item>
                     /// <item><description>DAYS_30: valid for 30 days</description></item>
                     /// <item><description>DAYS_90: valid for 90 days</description></item>
-                    /// <item><description>DAYS_180: valid for 180 days.</description></item>
+                    /// <item><description>DAYS_180: valid for 180 days</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -191,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xxTest</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -205,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public ListResourcePermissionOperationLogResponseBodyPageResultDataResourceInfo ResourceInfo { get; set; }
                 public class ListResourcePermissionOperationLogResponseBodyPageResultDataResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The business unit information.</para>
+                    /// <para>The business unit.</para>
                     /// </summary>
                     [NameInMap("BizUnitInfo")]
                     [Validation(Required=false)]
@@ -222,10 +217,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DisplayName { get; set; }
 
                         /// <summary>
-                        /// <para>The environment identifier. Valid values: </para>
+                        /// <para>The environment identifier. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>DEV</description></item>
-                        /// <item><description>PROD.</description></item>
+                        /// <item><description>DEV: development.</description></item>
+                        /// <item><description>PROD: production.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -270,8 +265,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>The resource environment. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>DEV</description></item>
-                    /// <item><description>PROD.</description></item>
+                    /// <item><description>DEV: development.</description></item>
+                    /// <item><description>PROD: production.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -302,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The project information.</para>
+                    /// <para>The project.</para>
                     /// </summary>
                     [NameInMap("ProjectInfo")]
                     [Validation(Required=false)]
@@ -319,10 +314,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DisplayName { get; set; }
 
                         /// <summary>
-                        /// <para>The environment identifier. Valid values: </para>
+                        /// <para>The environment identifier. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>DEV</description></item>
-                        /// <item><description>PROD.</description></item>
+                        /// <item><description>DEV: development.</description></item>
+                        /// <item><description>PROD: production.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -357,13 +352,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>The resource type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>PHYSICAL_TABLE: physical table</description></item>
-                    /// <item><description>PHYSICAL_VIEW: physical view</description></item>
-                    /// <item><description>LOGICAL_TABLE: fact logical table</description></item>
-                    /// <item><description>LOGICAL_VIEW: fact logical view</description></item>
-                    /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table</description></item>
-                    /// <item><description>REALTIME_MIRROR_TABLE: real-time meta table</description></item>
-                    /// <item><description>DATASOURCE: datasource.</description></item>
+                    /// <item><description>PHYSICAL_TABLE: physical table.</description></item>
+                    /// <item><description>PHYSICAL_VIEW: physical view.</description></item>
+                    /// <item><description>LOGICAL_TABLE: fact logical table.</description></item>
+                    /// <item><description>LOGICAL_VIEW: fact logical view.</description></item>
+                    /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
+                    /// <item><description>REALTIME_MIRROR_TABLE: real-time meta table.</description></item>
+                    /// <item><description>DATASOURCE: data source.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -383,7 +378,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public ListResourcePermissionOperationLogResponseBodyPageResultDataTargetAccount TargetAccount { get; set; }
                 public class ListResourcePermissionOperationLogResponseBodyPageResultDataTargetAccount : TeaModel {
                     /// <summary>
-                    /// <para>The account ID.</para>
+                    /// <para>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1212131</para>
@@ -403,7 +398,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The authorized account type.</para>
+                    /// <para>The authorized account type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PERSONAL: personal account.</description></item>
+                    /// <item><description>PRODUCE: production account.</description></item>
+                    /// <item><description>USER_GROUP: user group.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PERSONAL</para>

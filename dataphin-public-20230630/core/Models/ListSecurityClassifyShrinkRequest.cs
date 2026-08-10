@@ -8,10 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class ListResourcePermissionOperationLogShrinkRequest : TeaModel {
+    public class ListSecurityClassifyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination request.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]

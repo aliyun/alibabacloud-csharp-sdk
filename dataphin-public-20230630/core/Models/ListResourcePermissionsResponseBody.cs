@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListResourcePermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. OK indicates a normal request.</para>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code returned by the backend.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,21 +40,26 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Paginated query result.</para>
+        /// <para>The paged query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListResourcePermissionsResponseBodyPageResult PageResult { get; set; }
         public class ListResourcePermissionsResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>Paginated list.</para>
+            /// <para>The paged list.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListResourcePermissionsResponseBodyPageResultData> Data { get; set; }
             public class ListResourcePermissionsResponseBodyPageResultData : TeaModel {
                 /// <summary>
-                /// <para>Authorization scope of the table. Specified table: selectTable. All tables in the project: projectAllTable. All logical tables in the business unit: bizUnitAllLogicTable.</para>
+                /// <para>The authorization scope of the table. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>selectTable: a specified table.</description></item>
+                /// <item><description>projectAllTable: all tables in the project.</description></item>
+                /// <item><description>bizUnitAllLogicTable: all logical tables in the business unit.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>selectTable</para>
@@ -64,14 +69,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AuthScope { get; set; }
 
                 /// <summary>
-                /// <para>Validity period settings.</para>
+                /// <para>The validity period settings.</para>
                 /// </summary>
                 [NameInMap("Period")]
                 [Validation(Required=false)]
                 public ListResourcePermissionsResponseBodyPageResultDataPeriod Period { get; set; }
                 public class ListResourcePermissionsResponseBodyPageResultDataPeriod : TeaModel {
                     /// <summary>
-                    /// <para>Expiration time.</para>
+                    /// <para>The expiration time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1712000000000</para>
@@ -81,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>Validity period type. Custom: CUSTOM. Long-term: LONG_TERM.</para>
+                    /// <para>The validity period type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CUSTOM</para>
@@ -93,21 +98,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>List of validity periods for different permission types.</para>
+                /// <para>The list of validity periods for different permission types.</para>
                 /// </summary>
                 [NameInMap("PermissionPeriodList")]
                 [Validation(Required=false)]
                 public List<ListResourcePermissionsResponseBodyPageResultDataPermissionPeriodList> PermissionPeriodList { get; set; }
                 public class ListResourcePermissionsResponseBodyPageResultDataPermissionPeriodList : TeaModel {
                     /// <summary>
-                    /// <para>Validity period settings.</para>
+                    /// <para>The validity period settings.</para>
                     /// </summary>
                     [NameInMap("Period")]
                     [Validation(Required=false)]
                     public ListResourcePermissionsResponseBodyPageResultDataPermissionPeriodListPeriod Period { get; set; }
                     public class ListResourcePermissionsResponseBodyPageResultDataPermissionPeriodListPeriod : TeaModel {
                         /// <summary>
-                        /// <para>Expiration time.</para>
+                        /// <para>The expiration time.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1712000000000</para>
@@ -117,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>Validity period type. Custom: CUSTOM. Long-term: LONG_TERM.</para>
+                        /// <para>The validity period type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CUSTOM</para>
@@ -129,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Permission type.</para>
+                    /// <para>The permission type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELECT</para>
@@ -141,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Record ID.</para>
+                /// <para>The record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12123111</para>
@@ -151,21 +156,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// <para>Permission resource.</para>
+                /// <para>The permission resource.</para>
                 /// </summary>
                 [NameInMap("ResourceInfo")]
                 [Validation(Required=false)]
                 public ListResourcePermissionsResponseBodyPageResultDataResourceInfo ResourceInfo { get; set; }
                 public class ListResourcePermissionsResponseBodyPageResultDataResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>Business unit.</para>
+                    /// <para>The business unit.</para>
                     /// </summary>
                     [NameInMap("BizUnitInfo")]
                     [Validation(Required=false)]
                     public ListResourcePermissionsResponseBodyPageResultDataResourceInfoBizUnitInfo BizUnitInfo { get; set; }
                     public class ListResourcePermissionsResponseBodyPageResultDataResourceInfoBizUnitInfo : TeaModel {
                         /// <summary>
-                        /// <para>Display name.</para>
+                        /// <para>The display name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xx</para>
@@ -175,7 +180,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DisplayName { get; set; }
 
                         /// <summary>
-                        /// <para>Environment identifier. Development: DEV. Production: PROD.</para>
+                        /// <para>The environment identifier. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>DEV: development.</description></item>
+                        /// <item><description>PROD: production.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>DEV</para>
@@ -185,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Env { get; set; }
 
                         /// <summary>
-                        /// <para>ID.</para>
+                        /// <para>Id</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>121323</para>
@@ -195,7 +204,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>Name.</para>
+                        /// <para>The name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xx</para>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Resource display name.</para>
+                    /// <para>The display name of the resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tb1</para>
@@ -217,7 +226,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>Resource environment type. Development: DEV. Production: PROD.</para>
+                    /// <para>The resource environment type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>DEV: development.</description></item>
+                    /// <item><description>PROD: production.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DEV</para>
@@ -227,7 +240,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Env { get; set; }
 
                     /// <summary>
-                    /// <para>Permission resource ID.</para>
+                    /// <para>The ID of the permission resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>a.tb1</para>
@@ -237,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>Permission resource name.</para>
+                    /// <para>The name of the permission resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tb1</para>
@@ -247,14 +260,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Project.</para>
+                    /// <para>The project.</para>
                     /// </summary>
                     [NameInMap("ProjectInfo")]
                     [Validation(Required=false)]
                     public ListResourcePermissionsResponseBodyPageResultDataResourceInfoProjectInfo ProjectInfo { get; set; }
                     public class ListResourcePermissionsResponseBodyPageResultDataResourceInfoProjectInfo : TeaModel {
                         /// <summary>
-                        /// <para>Display name.</para>
+                        /// <para>The display name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xx</para>
@@ -264,7 +277,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DisplayName { get; set; }
 
                         /// <summary>
-                        /// <para>Environment identifier. Development: DEV. Production: PROD.</para>
+                        /// <para>The environment identifier. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>DEV: development.</description></item>
+                        /// <item><description>PROD: production.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>DEV</para>
@@ -274,7 +291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Env { get; set; }
 
                         /// <summary>
-                        /// <para>Project ID.</para>
+                        /// <para>The project ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1123131</para>
@@ -284,7 +301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public long? Id { get; set; }
 
                         /// <summary>
-                        /// <para>Name.</para>
+                        /// <para>The name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xx</para>
@@ -296,7 +313,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Resource type. Valid values: PHYSICAL_TABLE, PHYSICAL_VIEW, LOGICAL_TABLE, LOGICAL_VIEW, REALTIME_LOGICAL_TABLE, REALTIME_MIRROR_TABLE, and DATASOURCE.</para>
+                    /// <para>The resource type. Valid values: PHYSICAL_TABLE, PHYSICAL_VIEW, LOGICAL_TABLE, LOGICAL_VIEW, REALTIME_LOGICAL_TABLE, REALTIME_MIRROR_TABLE, DATASOURCE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PHYSICAL_TABLE</para>
@@ -308,14 +325,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Authorized object.</para>
+                /// <para>The authorized object.</para>
                 /// </summary>
                 [NameInMap("TargetAccount")]
                 [Validation(Required=false)]
                 public ListResourcePermissionsResponseBodyPageResultDataTargetAccount TargetAccount { get; set; }
                 public class ListResourcePermissionsResponseBodyPageResultDataTargetAccount : TeaModel {
                     /// <summary>
-                    /// <para>Personal account: the userId on the Dataphin side. Production account: the UserId obtained by calling the GetProjectProduceUser operation. User group: the user group ID obtained by calling the ListUserGroup operation.</para>
+                    /// <para>The account ID. For an individual account, this is the Dataphin-side userId. For a production account, this is the UserId obtained by calling the GetProjectProduceUser operation. For a user group, this is the user group ID obtained by calling the ListUserGroup operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1212131</para>
@@ -325,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>Personal account: the userId on the Dataphin side. Production account: the UserId obtained by calling the GetProjectProduceUser operation. User group: the user group ID obtained by calling the ListUserGroup operation.</para>
+                    /// <para>The account ID. For an individual account, this is the Dataphin-side userId. For a production account, this is the UserId obtained by calling the GetProjectProduceUser operation. For a user group, this is the user group ID obtained by calling the ListUserGroup operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx</para>
@@ -335,7 +352,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Authorization account type. Valid values: PERSONAL (personal account), PRODUCE (production account), and USER_GROUP (user group).</para>
+                    /// <para>The type of the authorized account. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PERSONAL: individual account.</description></item>
+                    /// <item><description>PRODUCE: production account.</description></item>
+                    /// <item><description>USER_GROUP: user group.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PERSONAL</para>
@@ -349,7 +371,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121</para>
@@ -361,7 +383,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -371,7 +393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

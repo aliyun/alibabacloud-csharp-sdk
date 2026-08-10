@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListResourcePermissionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Paginated request.</para>
+        /// <para>The paged query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ListQueryShrink { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

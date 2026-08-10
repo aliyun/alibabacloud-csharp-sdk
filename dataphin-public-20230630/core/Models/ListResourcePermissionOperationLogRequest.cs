@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListResourcePermissionOperationLogRequest : TeaModel {
         /// <summary>
-        /// <para>The paged request parameters.</para>
+        /// <para>The pagination request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,17 +43,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The search keyword.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("SearchText")]
             [Validation(Required=false)]
             public string SearchText { get; set; }
 
             /// <summary>
-            /// <para>The tab name. Valid values:</para>
+            /// <para>The tab type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TABLE: table</description></item>
-            /// <item><description>DATASOURCE: datasource.</description></item>
+            /// <item><description>TABLE: table.</description></item>
+            /// <item><description>DATASOURCE: data source.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

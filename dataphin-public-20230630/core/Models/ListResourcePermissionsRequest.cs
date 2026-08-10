@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListResourcePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>Paginated request.</para>
+        /// <para>The paged query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListResourcePermissionsRequestListQuery ListQuery { get; set; }
         public class ListResourcePermissionsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page.</para>
+            /// <para>The number of records per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,17 +40,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Search keyword.</para>
+            /// <para>The search keyword.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("SearchText")]
             [Validation(Required=false)]
             public string SearchText { get; set; }
 
             /// <summary>
-            /// <para>Tab name. Table: TABLE. Data source: DATASOURCE.</para>
+            /// <para>The tab type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TABLE: table.</description></item>
+            /// <item><description>DATASOURCE: datasource.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

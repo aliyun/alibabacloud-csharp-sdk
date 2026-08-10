@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class ListResourcePermissionOperationLogShrinkRequest : TeaModel {
+    public class ExecuteDDLShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination request.</para>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("ListQuery")]
+        [NameInMap("Context")]
         [Validation(Required=false)]
-        public string ListQueryShrink { get; set; }
+        public string ContextShrink { get; set; }
+
+        /// <summary>
+        /// <para>The one-click table creation parameters.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("DDLCommand")]
+        [Validation(Required=false)]
+        public string DDLCommandShrink { get; set; }
 
         /// <summary>
         /// <para>The tenant ID.</para>
