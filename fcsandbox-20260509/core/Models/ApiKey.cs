@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-13T08:27:20Z</para>
@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("expireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
+
+        [NameInMap("ipBlacklist")]
+        [Validation(Required=false)]
+        public List<IPConfig> IpBlacklist { get; set; }
+
+        [NameInMap("ipWhitelist")]
+        [Validation(Required=false)]
+        public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
         /// <para>The time when the API key was last used.</para>
@@ -89,8 +97,12 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
 
+        [NameInMap("source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         /// <summary>
-        /// <para>The status of the API key. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>active</description></item>
         /// <item><description>inactive</description></item>
@@ -117,7 +129,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开发团队</para>
+        /// <para>Development Team</para>
         /// </summary>
         [NameInMap("teamName")]
         [Validation(Required=false)]
@@ -138,7 +150,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string UserID { get; set; }
 
         /// <summary>
-        /// <para>The username of the creator.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>

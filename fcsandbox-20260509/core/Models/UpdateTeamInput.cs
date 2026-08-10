@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开发团队</para>
+        /// <para>Development team</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

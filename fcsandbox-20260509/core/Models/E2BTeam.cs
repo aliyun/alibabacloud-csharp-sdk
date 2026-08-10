@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public bool? AllowUpdateTeamName { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the team was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-23T11:26:25Z</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开放团队</para>
+        /// <para>Open team</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>The status.</para>
+        /// <para>The status of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The team name.</para>
+        /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-shenzhen", "fcsandbox.cn-shenzhen.aliyuncs.com"},
+                {"cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"},
                 {"cn-shanghai", "fcsandbox.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "fcsandbox.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com"},
-                {"cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"},
                 {"ap-southeast-1", "fcsandbox.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("fcsandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);

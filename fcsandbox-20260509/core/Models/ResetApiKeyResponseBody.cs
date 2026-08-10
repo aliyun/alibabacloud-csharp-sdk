@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("ipBlacklist")]
+        [Validation(Required=false)]
+        public List<IPConfig> IpBlacklist { get; set; }
+
+        [NameInMap("ipWhitelist")]
+        [Validation(Required=false)]
+        public List<IPConfig> IpWhitelist { get; set; }
+
         /// <summary>
         /// <para>The response message.</para>
         /// 
