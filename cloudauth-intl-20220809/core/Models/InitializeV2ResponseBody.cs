@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -57,10 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ClientCfg { get; set; }
 
             /// <summary>
-            /// <para>The standard authentication encryption protocol.</para>
-            /// <remarks>
-            /// <para>This field is required for H5 web integration using iframe embedding.</para>
-            /// </remarks>
+            /// <para>The standard encryption protocol for authentication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hksb7ba1b28130d24e015d*********</para>

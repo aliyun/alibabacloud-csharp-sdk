@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceDuplicationCheckIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically register the face in the specified face library when no duplicate face is found during the search. Valid values:</para>
+        /// <para>Specifies whether to automatically register the face to the specified face library when no duplicate face is found during the search. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: automatic registration</description></item>
         /// <item><description>1: no registration (default)</description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceAttributeCheck { get; set; }
 
         /// <summary>
-        /// <para>The face library codes created through the console. A maximum of 10 face libraries can be queried at the same time. Separate multiple face library codes with commas (,).</para>
+        /// <para>The face library codes created by the customer through the console. A maximum of 10 face libraries can be queried simultaneously. Separate multiple face library codes with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1232344，23444</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceRegisterGroupCode { get; set; }
 
         /// <summary>
-        /// <para>The face matching threshold. &gt;Warning: This is a reserved field and is not currently enabled.</warning></para>
+        /// <para>The face matching threshold.&gt;Warning: This is a reserved field and is not currently enabled.</warning></para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Liveness { get; set; }
 
         /// <summary>
-        /// <para>The custom unique business identifier used for subsequent troubleshooting. The value is a combination of letters and digits up to 32 characters in length. Ensure that the value is unique.</para>
+        /// <para>The custom unique business identifier used for subsequent troubleshooting. The value supports a combination of letters and numbers with a length of 32 characters. Ensure that the value is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize this field value in advance, for example, by hashing the value.</para>
+        /// <para>The custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, such as by hashing the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The number of faces to return when multiple faces above the matching threshold are found. You can use this parameter to customize the number of returned faces.</para>
+        /// <para>Specifies the number of faces to return when multiple faces above the matching threshold exist. You can customize the return quantity through this parameter.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 1.</description></item>
-        /// <item><description>Maximum value: 5.</description></item>
+        /// <item><description>Default value: 1</description></item>
+        /// <item><description>Maximum value: 5</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ReturnFaces { get; set; }
 
         /// <summary>
-        /// <para>The type of face data to save. Valid values:</para>
+        /// <para>Specifies the type of face data to save. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: face image (default)</description></item>
         /// <item><description>1: feature<remarks>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face image.</para>
+        /// <para>The Base64-encoded face photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded face image.</para>
+        /// <para>The Base64-encoded face photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -196,6 +196,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string TargetFacePictureUrl { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Valid values: Y: overwrite. N: do not overwrite and return that the UserId already exists.</para>
+        /// </summary>
+        [NameInMap("UpdateFaceIfUserExists")]
+        [Validation(Required=false)]
+        public string UpdateFaceIfUserExists { get; set; }
+
+        /// <summary>
         /// <para>The verification type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>0: retrieve pattern</para>
@@ -209,16 +216,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <item><description><para>1 (default): authenticate pattern</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Feature: Submits a specified face image (sourceFacePicture) and a stored face image (TargetFacePicture). The system automatically authenticates whether the two faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</description></item>
-        /// <item><description>Recommended scenario: Authenticating the identity of the operator when modifying logon credentials or account information.</description></item>
+        /// <item><description>Feature: Submits a specified face image (sourceFacePicture) and a retained face image (TargetFacePicture). The system automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</description></item>
+        /// <item><description>Recommended scenario: Authenticating whether the operation is performed by the account owner when modifying logon credentials or account information.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// <item><description><para>2: comprehensive pattern</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Feature: Submits a face library, a specified face image (sourceFacePicture), and a stored face image (TargetFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the stored face, and supports passive liveness detection for the specified face image (sourceFacePicture).</description></item>
-        /// <item><description>Recommended scenario: Verifying that the user is new and the operation is performed by the user in person.</description></item>
+        /// <item><description>Feature: Submits a face library, a specified face image (sourceFacePicture), and a retained face image (TargetFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the retained face, and supports enabling passive liveness detection for the specified face image (sourceFacePicture).</description></item>
+        /// <item><description>Recommended scenario: Authenticating that the user is new and the operation is performed by the user.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>

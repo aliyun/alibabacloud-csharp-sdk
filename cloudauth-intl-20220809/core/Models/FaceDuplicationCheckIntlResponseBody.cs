@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>The estimated age of the face. This value may not be returned if the prediction fails.</para>
+            /// <para>The predicted reference age of the face. The prediction may fail and the value may not be returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -156,12 +156,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAge { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the captured face involves a liveness attack. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Y: Attack detected.</description></item>
-            /// <item><description>N: No attack detected.</description></item>
-            /// </list>
-            /// <para>This field is returned only when passive liveness detection is enabled.</para>
+            /// <para>Indicates whether the captured face involves a liveness attack. Valid values: Y (attack detected) and N (no attack detected). This field is returned only when passive liveness detection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>N</para>
@@ -171,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAttack { get; set; }
 
             /// <summary>
-            /// <para>The probability of a passive liveness detection attack on the face. The value ranges from 0 to 100. This field is returned only when passive liveness detection is enabled.</para>
+            /// <para>The probability of a liveness attack on the face. The value ranges from 0 to 100. This field is returned only when passive liveness detection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -181,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceAttackScore { get; set; }
 
             /// <summary>
-            /// <para>The 1:1 face comparison score returned when the verification mode is 1 or 2. The value ranges from 0 to 100.</para>
+            /// <para>The 1:1 comparison score returned when the verification mode is 1 or 2. The score ranges from 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -191,10 +186,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>The predicted gender of the face. This value may not be returned if the prediction fails. Valid values:</para>
+            /// <para>The predicted gender of the face image. The prediction may fail and the value may not be returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>M: male</description></item>
-            /// <item><description>F: female</description></item>
+            /// <item><description>M: male.</description></item>
+            /// <item><description>F: female.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,8 +202,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The final verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: Passed.</description></item>
-            /// <item><description>N: Not passed.</description></item>
+            /// <item><description>Y: passed.</description></item>
+            /// <item><description>N: not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FacePassed { get; set; }
 
             /// <summary>
-            /// <para>The FACEID returned only when automatic registration is enabled and the face is successfully registered.</para>
+            /// <para>The corresponding FACEID returned only when the customer has enabled automatic registration and the face is successfully registered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9e792ec84c8f0ca592a</para>
@@ -231,8 +226,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The face registration result. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>0: Failed. </description></item>
-            /// <item><description>1: Succeeded.</description></item>
+            /// <item><description>0: failed. </description></item>
+            /// <item><description>1: succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public int? FaceRegistrationResult { get; set; }
 
             /// <summary>
-            /// <para>The verification result description. For more information, see the ResultObject.SubCode error code description.</para>
+            /// <para>The verification result description. For more information, refer to the ResultObject.SubCode error code description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

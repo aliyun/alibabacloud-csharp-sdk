@@ -6777,7 +6777,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
+        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6863,6 +6863,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 body["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                body["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
             {
                 body["VerifyModel"] = request.VerifyModel;
@@ -6889,7 +6893,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
+        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6975,6 +6979,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 body["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                body["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
             {
                 body["VerifyModel"] = request.VerifyModel;
@@ -7001,7 +7009,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
+        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7019,7 +7027,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</para>
+        /// <para>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7777,7 +7785,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7851,6 +7859,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
             {
                 query["VerifyModel"] = request.VerifyModel;
@@ -7886,7 +7898,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7960,6 +7972,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
             {
                 query["VerifyModel"] = request.VerifyModel;
@@ -7995,7 +8011,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8018,7 +8034,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
+        /// <para>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9193,7 +9209,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Initializes an authentication process.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9436,6 +9452,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["TemplateType"] = request.TemplateType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
                 query["UseNFC"] = request.UseNFC;
@@ -9471,7 +9491,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Initializes an authentication process.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9714,6 +9734,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["TemplateType"] = request.TemplateType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
                 query["UseNFC"] = request.UseNFC;
@@ -9749,7 +9773,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Initializes an authentication process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9767,7 +9791,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes an authentication session.</para>
+        /// <para>Initializes an authentication process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10031,6 +10055,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
@@ -10317,6 +10345,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFaceIfUserExists))
+            {
+                query["UpdateFaceIfUserExists"] = request.UpdateFaceIfUserExists;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
