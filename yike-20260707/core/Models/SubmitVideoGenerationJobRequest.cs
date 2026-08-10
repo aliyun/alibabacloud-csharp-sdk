@@ -43,26 +43,26 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The task input in JSON string format. Fields include:</para>
         /// <list type="bullet">
         /// <item><description>Prompt: String. Required. The prompt.</description></item>
-        /// <item><description>Medias: The list of media items.<list type="bullet">
-        /// <item><description>When JobType is image_to_video, this field is required and only 1 Media item is needed.</description></item>
-        /// <item><description>When JobType is first_last_frame, this field is required and exactly 2 Media items are needed.</description></item>
-        /// <item><description>When JobType is reference_to_video, this field is required and up to 9 Media items are allowed.</description></item>
+        /// <item><description>Medias: The media list.<list type="bullet">
+        /// <item><description>When JobType is image_to_video, this field is required. Only 1 Media item is needed.</description></item>
+        /// <item><description>When JobType is first_last_frame, this field is required. Only 2 Media items are needed.</description></item>
+        /// <item><description>When JobType is reference_to_video, this field is required. A maximum of 9 Media items are supported.<remarks>
+        /// <para>The Media struct contains: Type, the media type, String, valid values are <c>image</c>/<c>video</c>/<c>audio</c>; URL, the media download URL, String; MediaId, the media asset ID, String.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>The Media structure contains: Type, the media type (String, valid values: <c>image</c>/<c>video</c>/<c>audio</c>); URL, the media download URL (String); MediaId, the media asset ID (String).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Prompt&quot;:&quot;Person in image 1 dunks a basketball on the court using image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
+        /// <para>{&quot;Prompt&quot;:&quot;Person 1 is on the basketball court, and Person 2 makes a slam dunk&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The task feature parameters. No configuration is required at this time.</para>
+        /// <para>The task function parameters. No configuration is required at this time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("N")]
         [Validation(Required=false)]
         public int? N { get; set; }
+
+        [NameInMap("Output")]
+        [Validation(Required=false)]
+        public string Output { get; set; }
 
         /// <summary>
         /// <para>The resolution. Valid values: 720P (default) and 1080P.</para>

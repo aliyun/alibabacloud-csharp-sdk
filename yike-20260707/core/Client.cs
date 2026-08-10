@@ -340,6 +340,174 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInfiniteCanvasResponse
+        /// </returns>
+        public CreateInfiniteCanvasResponse CreateInfiniteCanvasWithOptions(CreateInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                query["CoverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInfiniteCanvasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInfiniteCanvasResponse
+        /// </returns>
+        public async Task<CreateInfiniteCanvasResponse> CreateInfiniteCanvasWithOptionsAsync(CreateInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                query["CoverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInfiniteCanvasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInfiniteCanvasResponse
+        /// </returns>
+        public CreateInfiniteCanvasResponse CreateInfiniteCanvas(CreateInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInfiniteCanvasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInfiniteCanvasResponse
+        /// </returns>
+        public async Task<CreateInfiniteCanvasResponse> CreateInfiniteCanvasAsync(CreateInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInfiniteCanvasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
@@ -480,6 +648,150 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInfiniteCanvasResponse
+        /// </returns>
+        public DeleteInfiniteCanvasResponse DeleteInfiniteCanvasWithOptions(DeleteInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInfiniteCanvasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInfiniteCanvasResponse
+        /// </returns>
+        public async Task<DeleteInfiniteCanvasResponse> DeleteInfiniteCanvasWithOptionsAsync(DeleteInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInfiniteCanvasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInfiniteCanvasResponse
+        /// </returns>
+        public DeleteInfiniteCanvasResponse DeleteInfiniteCanvas(DeleteInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteInfiniteCanvasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInfiniteCanvasResponse
+        /// </returns>
+        public async Task<DeleteInfiniteCanvasResponse> DeleteInfiniteCanvasAsync(DeleteInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteInfiniteCanvasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
@@ -612,6 +924,210 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMediasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateYikeLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateYikeLoginTokenResponse
+        /// </returns>
+        public GenerateYikeLoginTokenResponse GenerateYikeLoginTokenWithOptions(GenerateYikeLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProduction))
+            {
+                query["AutoCreateProduction"] = request.AutoCreateProduction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expires))
+            {
+                query["Expires"] = request.Expires;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NickName))
+            {
+                query["NickName"] = request.NickName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionAuth))
+            {
+                query["ProductionAuth"] = request.ProductionAuth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUserCredit))
+            {
+                query["SubUserCredit"] = request.SubUserCredit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tenant))
+            {
+                query["Tenant"] = request.Tenant;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateYikeLoginToken",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateYikeLoginTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateYikeLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateYikeLoginTokenResponse
+        /// </returns>
+        public async Task<GenerateYikeLoginTokenResponse> GenerateYikeLoginTokenWithOptionsAsync(GenerateYikeLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateProduction))
+            {
+                query["AutoCreateProduction"] = request.AutoCreateProduction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expires))
+            {
+                query["Expires"] = request.Expires;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NickName))
+            {
+                query["NickName"] = request.NickName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionAuth))
+            {
+                query["ProductionAuth"] = request.ProductionAuth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUserCredit))
+            {
+                query["SubUserCredit"] = request.SubUserCredit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tenant))
+            {
+                query["Tenant"] = request.Tenant;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateYikeLoginToken",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateYikeLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateYikeLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateYikeLoginTokenResponse
+        /// </returns>
+        public GenerateYikeLoginTokenResponse GenerateYikeLoginToken(GenerateYikeLoginTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateYikeLoginTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateYikeLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateYikeLoginTokenResponse
+        /// </returns>
+        public async Task<GenerateYikeLoginTokenResponse> GenerateYikeLoginTokenAsync(GenerateYikeLoginTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateYikeLoginTokenWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -852,6 +1368,150 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageGenerationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInfiniteCanvasResponse
+        /// </returns>
+        public GetInfiniteCanvasResponse GetInfiniteCanvasWithOptions(GetInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInfiniteCanvasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInfiniteCanvasResponse
+        /// </returns>
+        public async Task<GetInfiniteCanvasResponse> GetInfiniteCanvasWithOptionsAsync(GetInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInfiniteCanvasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInfiniteCanvasResponse
+        /// </returns>
+        public GetInfiniteCanvasResponse GetInfiniteCanvas(GetInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInfiniteCanvasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInfiniteCanvasResponse
+        /// </returns>
+        public async Task<GetInfiniteCanvasResponse> GetInfiniteCanvasAsync(GetInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInfiniteCanvasWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2288,6 +2948,182 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of infinite canvases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInfiniteCanvasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInfiniteCanvasesResponse
+        /// </returns>
+        public ListInfiniteCanvasesResponse ListInfiniteCanvasesWithOptions(ListInfiniteCanvasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInfiniteCanvases",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInfiniteCanvasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of infinite canvases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInfiniteCanvasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInfiniteCanvasesResponse
+        /// </returns>
+        public async Task<ListInfiniteCanvasesResponse> ListInfiniteCanvasesWithOptionsAsync(ListInfiniteCanvasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInfiniteCanvases",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInfiniteCanvasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of infinite canvases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInfiniteCanvasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInfiniteCanvasesResponse
+        /// </returns>
+        public ListInfiniteCanvasesResponse ListInfiniteCanvases(ListInfiniteCanvasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInfiniteCanvasesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of infinite canvases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInfiniteCanvasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInfiniteCanvasesResponse
+        /// </returns>
+        public async Task<ListInfiniteCanvasesResponse> ListInfiniteCanvasesAsync(ListInfiniteCanvasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInfiniteCanvasesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
@@ -3013,6 +3849,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["N"] = request.N;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
             {
                 query["Resolution"] = request.Resolution;
@@ -3094,6 +3934,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.N))
             {
                 query["N"] = request.N;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["Output"] = request.Output;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
             {
@@ -3676,6 +4520,166 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAssetCategoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInfiniteCanvasResponse
+        /// </returns>
+        public UpdateInfiniteCanvasResponse UpdateInfiniteCanvasWithOptions(UpdateInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                query["CoverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInfiniteCanvasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInfiniteCanvasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInfiniteCanvasResponse
+        /// </returns>
+        public async Task<UpdateInfiniteCanvasResponse> UpdateInfiniteCanvasWithOptionsAsync(UpdateInfiniteCanvasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanvasId))
+            {
+                query["CanvasId"] = request.CanvasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                query["CoverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInfiniteCanvas",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInfiniteCanvasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInfiniteCanvasResponse
+        /// </returns>
+        public UpdateInfiniteCanvasResponse UpdateInfiniteCanvas(UpdateInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateInfiniteCanvasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of an infinite canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInfiniteCanvasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInfiniteCanvasResponse
+        /// </returns>
+        public async Task<UpdateInfiniteCanvasResponse> UpdateInfiniteCanvasAsync(UpdateInfiniteCanvasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateInfiniteCanvasWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

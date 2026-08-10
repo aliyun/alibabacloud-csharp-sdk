@@ -73,8 +73,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The output configuration JSON string.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The output configuration JSON string. The OssUri value must be a folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;OssUri&quot;:&quot;oss://bucket/output/&quot;}</para>
