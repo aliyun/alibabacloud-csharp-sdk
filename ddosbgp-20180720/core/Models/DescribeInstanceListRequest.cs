@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The IDs of the Anti-DDoS Origin instances to query. Specify the value in the <c>[&quot;&lt;Instance ID 1&gt;&quot;,&quot;&lt;Instance ID 2&gt;&quot;,……]</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ddosbgp-cn-oew1pjrk****&quot;]</para>
@@ -20,8 +20,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort the Anti-DDoS Origin instances. Set the value to <b>expireTime</b>, which indicates that the instances are sorted based on the expiration time.</para>
-        /// <para>You can set the <b>Orderdire</b> parameter to specify the sorting method.</para>
+        /// <para>The mitigation plan type of the Anti-DDoS Origin instance to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Professional.</description></item>
+        /// <item><description><b>1</b>: Enterprise.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -31,20 +34,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The total number of Anti-DDoS Origin instances.</para>
+        /// <para>The mitigation plan types of the Anti-DDoS Origin instances to query.</para>
         /// </summary>
         [NameInMap("InstanceTypeList")]
         [Validation(Required=false)]
         public List<string> InstanceTypeList { get; set; }
 
         /// <summary>
-        /// <para>The sorting method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>desc</b>: the descending order. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>asc</b>: the ascending order.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The IP address of the protected object for the Anti-DDoS Origin instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.89.XX.XX</para>
@@ -54,7 +51,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the object that is protected by the Anti-DDoS Origin instance to query.</para>
+        /// <para>The protocol type of the IP assets protected by the Anti-DDoS Origin instance to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b>: IPv4 protocol.</description></item>
+        /// <item><description><b>IPv6</b>: IPv6 protocol.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -64,10 +65,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance to query resides.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// </remarks>
+        /// <para>The field used to sort the Anti-DDoS Origin instance list. The value is fixed as <b>expireTime</b>, which indicates that instances are sorted by expiration time.</para>
+        /// <para>You can use the <b>Orderdire</b> parameter to specify the sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>expireTime</para>
@@ -77,7 +76,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Orderby { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the Anti-DDoS Origin instance.</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>desc</b> (default): descending order by expiration time.</description></item>
+        /// <item><description><b>asc</b>: ascending order by expiration time.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -87,13 +90,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Orderdire { get; set; }
 
         /// <summary>
-        /// <para>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>Ipv4</b>: IPv4</para>
-        /// </description></item>
-        /// <item><description><para><b>Ipv6</b>: IPv6</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of the page to return when paging is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,13 +101,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>0</b>: the Professional mitigation plan</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: the Enterprise mitigation plan</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of instances on each page when paging is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +112,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the Anti-DDoS Origin instance.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance to query.</para>
+        /// <remarks>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -131,7 +125,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The remark of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -141,7 +135,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</para>
+        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
+        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>
@@ -151,14 +146,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The key of the tag that is added to the Anti-DDoS Origin instance.</para>
+        /// <para>The tags bound to the Anti-DDoS Origin instance to query.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstanceListRequestTag> Tag { get; set; }
         public class DescribeInstanceListRequestTag : TeaModel {
             /// <summary>
-            /// <para>The mitigation plan of the Anti-DDoS Origin instance.</para>
+            /// <para>The key of the tag bound to the Anti-DDoS Origin instance to query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -168,13 +163,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The mitigation plan of the Anti-DDoS Origin instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0: the Professional mitigation plan.</para>
-            /// </description></item>
-            /// <item><description><para>1: the Enterprise mitigation plan.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The value of the tag bound to the Anti-DDoS Origin instance to query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>

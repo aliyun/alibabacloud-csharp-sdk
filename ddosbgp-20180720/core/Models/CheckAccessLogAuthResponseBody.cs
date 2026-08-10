@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CheckAccessLogAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether Anti-DDoS Origin was authorized to access Simple Log Service. Valid values:</para>
+        /// <para>Indicates whether Anti-DDoS Origin is authorized to access Simple Log Service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Authorized.</description></item>
+        /// <item><description><b>false</b>: Not authorized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public bool? AccessLogAuth { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>864FE2F4-CB2E-4024-B9EF-D59FD08ABD41</para>

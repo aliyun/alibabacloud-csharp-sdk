@@ -1,3 +1,7 @@
+2026-08-10 Version: 3.1.1
+- Update API DescribeInstanceList: add response parameters Body.InstanceList.$.LogExt.
+
+
 2026-07-29 Version: 3.1.0
 - Support API DescribeNetworkLayerIntercepts.
 - Update API ListPolicy: add response parameters Body.PolicyList.$.Content.SipDefense.

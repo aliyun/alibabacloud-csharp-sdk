@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class GetSlsOpenStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D01666F5-541B-4C78-98A6-D29E02DAAC7C</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Simple Log Service was activated. Valid values:</para>
+        /// <para>Indicates whether Simple Log Service is activated for the current Alibaba Cloud account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Simple Log Service is activated.</description></item>
+        /// <item><description><b>false</b>: Simple Log Service is not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

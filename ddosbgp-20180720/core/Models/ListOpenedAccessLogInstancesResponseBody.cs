@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListOpenedAccessLogInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4DB64811-70A1-41C9-A0CE-CD8B260ED551</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of log analysis for the Anti-DDoS Origin instances.</para>
+        /// <para>The log analysis configurations of Anti-DDoS Origin instances.</para>
         /// </summary>
         [NameInMap("SlsConfigStatus")]
         [Validation(Required=false)]
         public List<ListOpenedAccessLogInstancesResponseBodySlsConfigStatus> SlsConfigStatus { get; set; }
         public class ListOpenedAccessLogInstancesResponseBodySlsConfigStatus : TeaModel {
             /// <summary>
-            /// <para>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</para>
+            /// <para>Indicates whether log analysis is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Anti-DDoS Origin instance.</para>
+            /// <para>The instance ID of Anti-DDoS Origin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ddosbgp-cn-m7r1zce2****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</para>
+        /// <para>The number of results returned, which is the number of Anti-DDoS Origin instances that have log analysis enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

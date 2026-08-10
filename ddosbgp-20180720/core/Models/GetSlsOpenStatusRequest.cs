@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class GetSlsOpenStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <para>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/188196.html">Regions and zones</a>.</para>
         /// 
         /// <b>Example:</b>

@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
                 {"cn-shenzhen-finance-1", "ddosbgp.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "ddosbgp.aliyuncs.com"},
                 {"cn-north-2-gov-1", "ddosbgp.aliyuncs.com"},
-                {"us-west-1", "ddosbgp.us-west-1.aliyuncs.com"},
-                {"us-east-1", "ddosbgp.us-east-1.aliyuncs.com"},
                 {"cn-hongkong", "ddosbgp.cn-hongkong.aliyuncs.com"},
                 {"ap-southeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com"},
+                {"us-west-1", "ddosbgp.us-west-1.aliyuncs.com"},
+                {"us-east-1", "ddosbgp.us-east-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ddosbgp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2538,12 +2538,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>Queries the details of Anti-DDoS Origin instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2633,12 +2635,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>Queries the details of Anti-DDoS Origin instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2728,12 +2732,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>Queries the details of Anti-DDoS Origin instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2751,12 +2757,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>Queries the details of Anti-DDoS Origin instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of all Anti-DDoS Origin instances.</para>
+        /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4434,7 +4442,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Simple Log Service is activated.</para>
+        /// <para>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4480,7 +4488,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Simple Log Service is activated.</para>
+        /// <para>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4526,7 +4534,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Simple Log Service is activated.</para>
+        /// <para>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4544,7 +4552,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether Simple Log Service is activated.</para>
+        /// <para>Queries the activation status of Simple Log Service for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,7 +4570,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</para>
+        /// <para>Queries Anti-DDoS Origin instances that have log analysis enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4612,7 +4620,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</para>
+        /// <para>Queries Anti-DDoS Origin instances that have log analysis enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4662,7 +4670,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</para>
+        /// <para>Queries Anti-DDoS Origin instances that have log analysis enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4680,7 +4688,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Anti-DDoS Origin instances for which log analysis is enabled.</para>
+        /// <para>Queries Anti-DDoS Origin instances that have log analysis enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
