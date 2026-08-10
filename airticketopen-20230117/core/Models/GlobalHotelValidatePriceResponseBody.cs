@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     [Validation(Required=false)]
                     public long? Start { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>TracerId</para>
+                    /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
                     public string TracerId { get; set; }
@@ -75,6 +79,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string PolicyType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TracerId</para>
+                /// </summary>
                 [NameInMap("TracerId")]
                 [Validation(Required=false)]
                 public string TracerId { get; set; }
@@ -121,6 +129,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     [Validation(Required=false)]
                     public string Date { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>TracerId</para>
+                    /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
                     public string TracerId { get; set; }
@@ -135,12 +147,20 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string TotalAmount { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TracerId</para>
+                /// </summary>
                 [NameInMap("TracerId")]
                 [Validation(Required=false)]
                 public string TracerId { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TracerId</para>
+            /// </summary>
             [NameInMap("TracerId")]
             [Validation(Required=false)]
             public string TracerId { get; set; }
@@ -179,6 +199,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TracerId</para>
+        /// </summary>
         [NameInMap("TracerId")]
         [Validation(Required=false)]
         public string TracerId { get; set; }

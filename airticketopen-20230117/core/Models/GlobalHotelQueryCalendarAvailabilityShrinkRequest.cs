@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelQueryCalendarAvailabilityShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The account ID of the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
+        /// <para>The number of adults.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? AdultCount { get; set; }
 
         /// <summary>
+        /// <para>The end date of the check-in date range in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CheckInDateEnd { get; set; }
 
         /// <summary>
+        /// <para>The start date of the check-in date range in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CheckInDateStart { get; set; }
 
         /// <summary>
+        /// <para>The number of children.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? ChildCount { get; set; }
 
         /// <summary>
+        /// <para>The list of children\&quot;s ages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ChildrenAgesShrink { get; set; }
 
         /// <summary>
+        /// <para>The number of rooms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +85,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? RoomCount { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the hotels.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +96,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string StandardHotelIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>TraceId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>traceId</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelBatchGetHotelDetailShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the distributor account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
+        /// <para>The language. For example, en or zh.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The list of standard hotel IDs. A maximum of 100 IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string StandardHotelIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>string</para>
+        /// 
         /// <b>Example:</b>
         /// <para>traceId</para>
         /// </summary>

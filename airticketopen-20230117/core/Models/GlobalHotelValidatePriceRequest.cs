@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public int? RoomCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TracerId</para>
+        /// </summary>
         [NameInMap("TracerId")]
         [Validation(Required=false)]
         public string TracerId { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelCreateOrderShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
+        /// <para>The contact information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Contact")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ContactShrink { get; set; }
 
         /// <summary>
+        /// <para>The external order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ExternalOrderNo { get; set; }
 
         /// <summary>
+        /// <para>The guests grouped by room.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Guests")]
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string GuestsShrink { get; set; }
 
         /// <summary>
+        /// <para>The offer ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +59,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ItemOfferId { get; set; }
 
         /// <summary>
+        /// <para>The number of rooms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? RoomCount { get; set; }
 
         /// <summary>
+        /// <para>TraceId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TraceId</para>
         /// </summary>

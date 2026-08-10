@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelSearchCityPageRequest : TeaModel {
         /// <summary>
+        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The country code in ISO 3166-1 alpha-2 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CN</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CountryCode { get; set; }
 
         /// <summary>
+        /// <para>The pagination offset, starting from 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Start { get; set; }
 
         /// <summary>
+        /// <para>TraceId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TraceId</para>
         /// </summary>
