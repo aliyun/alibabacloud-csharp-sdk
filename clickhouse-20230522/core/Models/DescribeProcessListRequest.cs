@@ -91,13 +91,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string QueryDurationMs { get; set; }
 
         /// <summary>
-        /// <para>Sorts the results in descending order by the specified columns.</para>
+        /// <para>Sorts results in descending order by the specified columns.</para>
         /// <list type="bullet">
-        /// <item><description><para>0: sorts by query_duration_ms only.</para>
+        /// <item><description><para>0: Sorts only by query_duration_ms.</para>
         /// </description></item>
-        /// <item><description><para>1: sorts by query_duration_ms and query_start_time.</para>
+        /// <item><description><para>1: Sorts by query_duration_ms and query_start_time.</para>
         /// </description></item>
-        /// <item><description><para>2: sorts by query_duration_ms, query_start_time, and user.</para>
+        /// <item><description><para>2: Sorts by query_duration_ms, query_start_time, and user.</para>
         /// </description></item>
         /// </list>
         /// 

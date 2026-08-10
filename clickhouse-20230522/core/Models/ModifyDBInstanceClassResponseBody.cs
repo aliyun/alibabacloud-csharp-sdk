@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maximum capacity for serverless autoscaling.</para>
+            /// <para>The maximum value for serverless elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public long? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum capacity for serverless autoscaling.</para>
+            /// <para>The minimum value for serverless elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

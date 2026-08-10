@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The specified upgrade time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <remarks>
-        /// <para> If you set SwitchTimeMode to SpecifyTime, you must configure this parameter to specify the update time.</para>
+        /// <para>This parameter is required when SwitchTimeMode is set to SpecifyTime.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update the minor engine version of the cluster immediately. Valid values:</para>
+        /// <para>Specifies when to upgrade. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: The system immediately performs the update.</description></item>
-        /// <item><description><b>MaintainTime</b>: The system performs the update during the specified maintenance window.</description></item>
-        /// <item><description><b>SpecifyTime</b>: The system performs the update at a specified time.</description></item>
+        /// <item><description><b>Immediate</b>: upgrades immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: upgrades during the O&amp;M window.</description></item>
+        /// <item><description><b>SpecifyTime</b>: upgrades at a specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SwitchTimeMode { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version to which you want to update.</para>
+        /// <para>The target minor engine version.</para>
         /// <remarks>
-        /// <para> By default, TargetMinorVersion is not set and the minor engine version of the cluster is updated to the latest version.</para>
+        /// <para>By default, leave this parameter empty to upgrade to the latest minor engine version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

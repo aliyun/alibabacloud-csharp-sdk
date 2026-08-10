@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The autoscaling configuration for the compute group.</para>
+        /// <para>The automatic horizontal scaling configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum capacity per node for serverless autoscaling. Valid values: 4 to 32. This value must be greater than the minimum value.</para>
+        /// <para>The maximum value for serverless node elastic scaling. Valid values: 4 to 32. The value must be greater than the minimum value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum capacity per node for serverless autoscaling. Valid values: 4 to 32.</para>
+        /// <para>The minimum value for serverless node elastic scaling. Valid values: 4 to 32.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum capacity for serverless autoscaling.</para>
+        /// <para>The maximum value for serverless elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum capacity for serverless autoscaling.</para>
+        /// <para>The minimum value for serverless elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The pre-purchased storage capacity in GB.</para>
+        /// <para>The pre-purchased storage quota, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>A comma-separated list of instance IDs.</para>
+        /// <para>The list of cluster IDs. Separate multiple cluster IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-xxxxx,cx-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance status.</para>
+        /// <para>The cluster status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance description.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags for filtering instances.</para>
+        /// <para>The tag information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DescribeDBInstances</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>A comma-separated list of VPC IDs.</para>
+        /// <para>The list of VPC IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</para>

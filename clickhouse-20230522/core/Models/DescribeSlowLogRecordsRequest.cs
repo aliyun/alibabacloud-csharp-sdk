@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The computing group ID.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-wz9v6y29y3******-clickhouse</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time must be in UTC and in <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
+        /// <para>The end of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-15 16:00:00</para>
@@ -53,12 +53,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>30 (default)</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>30 (default)</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +66,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum duration, in milliseconds, for a slow SQL query to be returned. The minimum value is <b>1000</b>.</para>
+        /// <para>The execution duration of the slow SQL statement. The minimum value is <b>1000</b>. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -90,7 +87,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time must be in UTC and in <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
+        /// <para>The beginning of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-11 16:00:00</para>

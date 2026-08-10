@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the computing group.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-2ze34****-clickhouse</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ComputingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The connection string of the public endpoint to delete.</para>
+        /// <para>The prefix of the endpoint to be released, which is the prefix part of the ConnectionString parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the endpoint. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>VPC: a virtual private cloud (VPC) network.</para>
-        /// </description></item>
-        /// <item><description><para>Public: a public network.</para>
-        /// </description></item>
+        /// <item><description>Vpc: VPC network.</description></item>
+        /// <item><description>Public: public network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

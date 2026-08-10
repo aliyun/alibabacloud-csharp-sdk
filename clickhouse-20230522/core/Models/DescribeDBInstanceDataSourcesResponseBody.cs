@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public DescribeDBInstanceDataSourcesResponseBodyData Data { get; set; }
         public class DescribeDBInstanceDataSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The columns.</para>
+            /// <para>The column types.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
@@ -54,12 +54,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the column is the primary key of the table. Valid values:</para>
+                /// <para>Indicates whether the column is a primary key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b></para>
-                /// </description></item>
-                /// <item><description><para><b>false</b></para>
-                /// </description></item>
+                /// <item><description><b>true</b>: The column is a primary key.</description></item>
+                /// <item><description><b>false</b>: The column is not a primary key.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the stored data.</para>
+                /// <para>The data type of the stored data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UInt64</para>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The account.</para>
+            /// <para>The accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Schemas { get; set; }
 
             /// <summary>
-            /// <para>The tables.</para>
+            /// <para>The list of tables.</para>
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]

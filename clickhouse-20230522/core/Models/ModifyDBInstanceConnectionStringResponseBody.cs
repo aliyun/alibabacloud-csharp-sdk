@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public ModifyDBInstanceConnectionStringResponseBodyData Data { get; set; }
         public class ModifyDBInstanceConnectionStringResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The connection string.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The disabled database ports.</para>
+            /// <para>The database ports that are disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9001,8123</para>

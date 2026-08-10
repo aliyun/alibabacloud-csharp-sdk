@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The computing group ID.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-07 10:03:00</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Product { get; set; }
 
         /// <summary>
-        /// <para>The minimum execution duration of a slow SQL query, in milliseconds. The minimum value is <b>1000</b>.</para>
+        /// <para>The execution duration of slow SQL statements. The minimum value is <b>1000</b>. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-13 17:48:00</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The list of slow log records.</para>
+            /// <para>The result set.</para>
             /// </summary>
             [NameInMap("ResultSet")]
             [Validation(Required=false)]
             public List<DescribeSlowLogRecordsResponseBodyDataResultSet> ResultSet { get; set; }
             public class DescribeSlowLogRecordsResponseBodyDataResultSet : TeaModel {
                 /// <summary>
-                /// <para>The IP address from which the query was initiated.</para>
+                /// <para>The query address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0:0:0:0:0:ffff:1edd65ea</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialQueryId { get; set; }
 
                 /// <summary>
-                /// <para>The user who initiated the query.</para>
+                /// <para>The query user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bany</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialUser { get; set; }
 
                 /// <summary>
-                /// <para>The peak memory usage for the query. Unit: bytes.</para>
+                /// <para>The peak memory usage of the query. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4941696</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? MemoryUsage { get; set; }
 
                 /// <summary>
-                /// <para>The statement that was being executed.</para>
+                /// <para>The query statement being executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from test</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of the slow query. The minimum value is <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The execution duration of the slow SQL statement. The minimum value is <b>1000</b>. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? QueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-09-11 16:00:00</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string QueryStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The size of the scanned data. Unit: bytes.</para>
+                /// <para>The size of scanned data. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4507128020832</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? ResultBytes { get; set; }
 
                 /// <summary>
-                /// <para>The type of the slow query log.</para>
+                /// <para>The slow log type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ExceptionWhileProcessing</para>

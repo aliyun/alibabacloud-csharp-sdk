@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeDBInstancesResponseBodyDataDBInstances> DBInstances { get; set; }
             public class DescribeDBInstancesResponseBodyDataDBInstances : TeaModel {
                 /// <summary>
-                /// <para>The account ID.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1294****</para>
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Bid { get; set; }
 
                 /// <summary>
-                /// <para>The billing method for the instance. Valid values:</para>
+                /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>PrePaid</c>: subscription.</para>
-                /// </description></item>
-                /// <item><description><para><c>PostPaid</c>: pay-as-you-go.</para>
-                /// </description></item>
+                /// <item><description>PrePaid: subscription.</description></item>
+                /// <item><description>PostPaid: pay-as-you-go.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The instance creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-12-04 21:16:15</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc-xxxxxxx</para>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DeletionProtection { get; set; }
 
                 /// <summary>
-                /// <para>The instance description.</para>
+                /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_desc</para>
@@ -100,7 +98,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The engine.</para>
+                /// <para>The engine type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>clickhouse</para>
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The engine version.</para>
+                /// <para>The DPI engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22.8</para>
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the lock.</para>
+                /// <para>The lock reason.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// <para>The maintenance window end time.</para>
+                /// <para>The end time of the maintenance window.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>04:00:00Z</para>
@@ -160,7 +158,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string MaintainEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The maintenance window start time.</para>
+                /// <para>The start time of the maintenance window.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00Z</para>
@@ -190,7 +188,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The maximum compute capacity for serverless elastic scaling.</para>
+                /// <para>The maximum value for serverless elastic scaling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
@@ -200,7 +198,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public int? ScaleMax { get; set; }
 
                 /// <summary>
-                /// <para>The minimum compute capacity for serverless elastic scaling.</para>
+                /// <para>The minimum value for serverless elastic scaling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -230,7 +228,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// <para>The tags attached to the instance.</para>
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -269,7 +267,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
+                /// <para>VPC ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6kg****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class KillProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The computing group ID.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-gs5j3sua77******-clickhouse</para>
