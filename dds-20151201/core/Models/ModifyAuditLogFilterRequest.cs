@@ -21,22 +21,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</para>
+        /// <para>The collection types of audit logs. Separate multiple collection types with commas (,).</para>
         /// <list type="bullet">
-        /// <item><description><para><b>admin</b>: O\&amp;M and management operations</para>
-        /// </description></item>
-        /// <item><description><para><b>slow</b>: slow query logs</para>
-        /// </description></item>
-        /// <item><description><para><b>query</b>: query operations</para>
-        /// </description></item>
-        /// <item><description><para><b>insert</b>: insert operations</para>
-        /// </description></item>
-        /// <item><description><para><b>update</b>: update operations</para>
-        /// </description></item>
-        /// <item><description><para><b>delete</b>: delete operations</para>
-        /// </description></item>
-        /// <item><description><para><b>command</b>: protocol commands such as the aggregate method</para>
-        /// </description></item>
+        /// <item><description><b>admin</b>: O&amp;M and management operations.</description></item>
+        /// <item><description><b>slow</b>: Slow queries.</description></item>
+        /// <item><description><b>query</b>: Query operations.</description></item>
+        /// <item><description><b>insert</b>: Insert operations.  </description></item>
+        /// <item><description><b>update</b>: Update operations.  </description></item>
+        /// <item><description><b>delete</b>: Delete operations. </description></item>
+        /// <item><description><b>command</b>: Protocol commands, such as the aggregate method.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,14 +59,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role of the node in the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>primary</b></para>
-        /// </description></item>
-        /// <item><description><para><b>secondary</b></para>
-        /// </description></item>
+        /// <item><description><b>db</b>: shard node</description></item>
+        /// <item><description><b>mongos</b>: mongos node</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Metric description</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter applies only to sharded cluster instances. If this parameter is left empty, the default value db is used. You do not need to specify this parameter for replica set instances.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>primary</para>
+        /// <para>db</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
