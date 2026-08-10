@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class MarkOssV2ResultResponseBody : TeaModel {
+    public class QueryLabelConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of request IDs for failed operations.</para>
+        /// <para>The content moderation configuration.</para>
         /// </summary>
-        [NameInMap("FailureRequestIds")]
+        [NameInMap("ContentModeration")]
         [Validation(Required=false)]
-        public List<string> FailureRequestIds { get; set; }
+        public List<object> ContentModeration { get; set; }
 
         /// <summary>
         /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
@@ -25,13 +25,6 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <para>The list of request IDs for successful operations.</para>
-        /// </summary>
-        [NameInMap("SuccessRequestIds")]
-        [Validation(Required=false)]
-        public List<string> SuccessRequestIds { get; set; }
 
     }
 

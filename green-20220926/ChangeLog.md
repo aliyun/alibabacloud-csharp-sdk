@@ -1,3 +1,26 @@
+2026-08-10 Version: 1.13.0
+- Support API AddAppConfig.
+- Support API GetAiAppDetail.
+- Support API GetAiAppDetailStat.
+- Support API GetAiAppDetailTopo.
+- Support API GetAiAppNodeDetail.
+- Support API GetAiAppOverview.
+- Support API GetAiAppStats.
+- Support API GetAiAppTraceDetail.
+- Support API GetGuardStatus.
+- Support API GetQpsStats.
+- Support API GetRiskStats.
+- Support API InitAiAppScan.
+- Support API ListAiAppByPage.
+- Support API ListAiAppRiskEvent.
+- Support API ListAiAppRiskEventByPage.
+- Support API ListAiAppWarningByPage.
+- Support API QueryLabelConfig.
+- Support API UpdateAiAppScanStatus.
+- Support API UpdateEventStatus.
+- Support API UpdateMetaLog.
+
+
 2026-08-07 Version: 1.12.0
 - Support API GetGuardLogStats.
 - Support API GetUploadContent.
