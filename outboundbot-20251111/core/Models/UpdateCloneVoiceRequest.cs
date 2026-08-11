@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateCloneVoiceRequest : TeaModel {
         /// <summary>
-        /// <para>克隆音色ID</para>
+        /// <para>The UUID of the cloned voice.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string CloneVoiceId { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
+        /// <para>The name of the cloned voice.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试克隆音</para>
+        /// <para>TestClonedVoice</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

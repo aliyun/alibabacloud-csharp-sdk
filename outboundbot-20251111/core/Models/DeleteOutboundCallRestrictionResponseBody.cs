@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Not in use.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Not in use</para>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

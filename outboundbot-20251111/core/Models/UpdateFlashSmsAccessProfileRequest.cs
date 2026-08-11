@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateFlashSmsAccessProfileRequest : TeaModel {
         /// <summary>
-        /// <para>接入配置</para>
+        /// <para>The access configuration.</para>
         /// </summary>
         [NameInMap("AccessProfile")]
         [Validation(Required=false)]
         public UpdateFlashSmsAccessProfileRequestAccessProfile AccessProfile { get; set; }
         public class UpdateFlashSmsAccessProfileRequestAccessProfile : TeaModel {
             /// <summary>
+            /// <para>Required when ProviderId is set to ShangHaiTianNan or Uincall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6004200267</para>
             /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Account { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChinaMobile.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TQChVEAabhaNp2AB</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AesKey { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChuangLan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>N92685567</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiAccount { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChinaMobile.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100235</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiId { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChinaMobile.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3aRsPrTsDG3OPNq5</para>
             /// </summary>
@@ -57,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiKey { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChuangLan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Rp7hyUbtXMef23</para>
             /// </summary>
@@ -65,6 +77,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiPassword { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChinaMobile.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300012117547</para>
             /// </summary>
@@ -72,35 +86,46 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             [Validation(Required=false)]
             public string CapAppId { get; set; }
 
+            /// <summary>
+            /// <para>The list of Alibaba Communication configurations. Required when ProviderId is set to DySms.</para>
+            /// </summary>
             [NameInMap("DySmsAccessProfiles")]
             [Validation(Required=false)]
             public List<UpdateFlashSmsAccessProfileRequestAccessProfileDySmsAccessProfiles> DySmsAccessProfiles { get; set; }
             public class UpdateFlashSmsAccessProfileRequestAccessProfileDySmsAccessProfiles : TeaModel {
                 /// <summary>
+                /// <para>The template content.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>我们联系您，您不在，稍后工作人员会继续联系您，如有打扰，请见谅</para>
+                /// <para>We tried to reach you but you were unavailable. Our staff will contact you again shortly. We apologize for any inconvenience</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The template name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The signature name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>云呼叫中心</para>
+                /// <para>Cloud Call Center</para>
                 /// </summary>
                 [NameInMap("SignName")]
                 [Validation(Required=false)]
                 public string SignName { get; set; }
 
                 /// <summary>
+                /// <para>The template code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SMS_469075249</para>
                 /// </summary>
@@ -111,6 +136,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ShangHaiTianNan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10690101220</para>
             /// </summary>
@@ -119,6 +146,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Extno { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChuangLan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Rp7hyUbtXMef23</para>
             /// </summary>
@@ -127,6 +156,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ManagementPassword { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChuangLan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>chuanglanrobot2</para>
             /// </summary>
@@ -135,6 +166,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ManagementSubUserId { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ChuangLan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>chuanglanrobot</para>
             /// </summary>
@@ -143,6 +176,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ManagementUsername { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to ShangHaiTianNan or HeDao.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>nu2DxxfZtY46</para>
             /// </summary>
@@ -151,6 +186,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to Uincall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>828ee92ebc8241d3b37d0238dde6345e</para>
             /// </summary>
@@ -159,6 +196,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Pwd { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to Uincall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6004200267_dev</para>
             /// </summary>
@@ -167,6 +206,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string User { get; set; }
 
             /// <summary>
+            /// <para>Required when ProviderId is set to HeDao.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TEST10</para>
             /// </summary>
@@ -177,7 +218,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>接入配置ID</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -187,7 +228,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string AccessProfileId { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -197,7 +238,15 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>供应商ID</para>
+        /// <para>The provider ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Uincall: Beijing Youyin Communication Co., Ltd.</description></item>
+        /// <item><description>ChuangLan: Beijing Chuanglan Cloud Intelligence Information Co., Ltd.</description></item>
+        /// <item><description>ChinaMobile: China Mobile.</description></item>
+        /// <item><description>ShangHaiTianNan: Shanghai Tiannan.</description></item>
+        /// <item><description>HeDao: Galaxis.</description></item>
+        /// <item><description>DySms: Alibaba Communication.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Uincall</para>

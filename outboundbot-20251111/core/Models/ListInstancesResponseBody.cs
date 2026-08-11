@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of instances.</para>
+            /// <para>The instance list.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataInstances> Instances { get; set; }
             public class ListInstancesResponseBodyDataInstances : TeaModel {
                 /// <summary>
-                /// <para>The number of concurrent connections.</para>
+                /// <para>The concurrency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListSystemConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListSystemConfigsResponseBodyData> Data { get; set; }
         public class ListSystemConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>创建时间，毫秒级时间戳</para>
+            /// <para>The creation time, in millisecond-level timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786085104904</para>
@@ -37,7 +37,9 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>名称</para>
+            /// <para>The system configuration name.\
+            /// callableTime: the outbound job window.\
+            /// calleeDailyAttemptLimit: the maximum number of daily calls to a single callee number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>callableTime</para>
@@ -47,7 +49,9 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>对象ID</para>
+            /// <para>The configuration type ID.\
+            /// If ObjectType is set to INSTANCE, this parameter specifies the instance ID.\
+            /// If ObjectType is set to TENANT, this parameter specifies the tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -57,7 +61,9 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>外呼开发时补充参数限制</para>
+            /// <para>The configuration type.\
+            /// INSTANCE: instance-level.\
+            /// TENANT: tenant-level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INSTANCE</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>更新时间，毫秒级时间戳</para>
+            /// <para>The update time, in millisecond-level timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786085104904</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>值</para>
+            /// <para>The system configuration content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=outb001</para>
@@ -109,14 +115,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -126,7 +132,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

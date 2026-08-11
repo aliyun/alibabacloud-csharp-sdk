@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class CreateVoiceAccessProfileRequest : TeaModel {
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>目前支持IFLYTEK、VOLC</para>
+        /// <para>The voice service provider.
+        /// BAILIAN: Bailian.
+        /// VOLC: Doubao.
+        /// IFLYTEK: iFLYTEK.
+        /// TENCENT: Tencent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BAILIAN</para>
@@ -30,13 +34,15 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string NlsEngine { get; set; }
 
         /// <summary>
-        /// <para>配置</para>
+        /// <para>The provider configuration information.</para>
         /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public CreateVoiceAccessProfileRequestProfile Profile { get; set; }
         public class CreateVoiceAccessProfileRequestProfile : TeaModel {
             /// <summary>
+            /// <para>Required when NlsEngine=VOLC.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AccessKey { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=IFLYTEK or NlsEngine=BAILIAN.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>a9872e2342952e248727798f642936c7</para>
             /// </summary>
@@ -53,6 +61,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiKey { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=IFLYTEK.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>c0358c6e51c1013b446fdeb21a3a5d2e</para>
             /// </summary>
@@ -61,6 +71,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ApiSecret { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=IFLYTEK or NlsEngine=TENCENT.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9479688350</para>
             /// </summary>
@@ -69,6 +81,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=VOLC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DW0yKRHQEe1nAd8c</para>
             /// </summary>
@@ -77,14 +91,18 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AppKey { get; set; }
 
             /// <summary>
+            /// <para>Not currently in use.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>暂无使用</para>
+            /// <para>Not currently in use</para>
             /// </summary>
             [NameInMap("AsrAppKey")]
             [Validation(Required=false)]
             public string AsrAppKey { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=TENCENT.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sci_r3b3e62udqcujnkerrorqztnpu</para>
             /// </summary>
@@ -93,6 +111,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string SecretId { get; set; }
 
             /// <summary>
+            /// <para>Required when NlsEngine=TENCENT.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>y5MZfFdW6yBZgJdKonHZBA</para>
             /// </summary>
@@ -101,8 +121,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string SecretKey { get; set; }
 
             /// <summary>
+            /// <para>Not currently in use.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>暂无使用</para>
+            /// <para>Not currently in use</para>
             /// </summary>
             [NameInMap("TtsApiKey")]
             [Validation(Required=false)]

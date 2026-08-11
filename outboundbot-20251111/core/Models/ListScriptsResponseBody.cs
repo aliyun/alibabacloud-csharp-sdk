@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListScriptsResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListScriptsResponseBodyData Data { get; set; }
         public class ListScriptsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>页码，从1开始</para>
+            /// <para>The page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>每页记录数</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>数据列表</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("Scripts")]
             [Validation(Required=false)]
             public List<ListScriptsResponseBodyDataScripts> Scripts { get; set; }
             public class ListScriptsResponseBodyDataScripts : TeaModel {
                 /// <summary>
-                /// <para>并发数</para>
+                /// <para>The concurrency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? Concurrency { get; set; }
 
                 /// <summary>
-                /// <para>创建时间，毫秒级时间戳</para>
+                /// <para>The creation time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>描述</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>询问用户对本次服务是否满意</para>
+                /// <para>Ask the user whether they are satisfied with the service</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>草稿版本ID</para>
+                /// <para>The draft version ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b60</para>
@@ -94,17 +94,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string DraftVersionId { get; set; }
 
                 /// <summary>
-                /// <para>名称</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>满意度调研</para>
+                /// <para>Satisfaction Survey</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>NLU接入类型</para>
+                /// <para>The NLU access type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MANAGED</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string NluAccessType { get; set; }
 
                 /// <summary>
-                /// <para>NLU引擎类型</para>
+                /// <para>The NLU engine type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BEEBOT</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string NluEngine { get; set; }
 
                 /// <summary>
-                /// <para>电话号码</para>
+                /// <para>The phone number bound to the scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>01057316547</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Number { get; set; }
 
                 /// <summary>
-                /// <para>已发布版本ID</para>
+                /// <para>The published version ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b41</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string PublishedVersionId { get; set; }
 
                 /// <summary>
-                /// <para>场景ID</para>
+                /// <para>The scenario ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
-                /// <para>状态</para>
+                /// <para>The scenario status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PUBLISHED</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>更新时间，毫秒级时间戳</para>
+                /// <para>The update time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>符合条件的记录总数</para>
+            /// <para>The total number of records that match the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=ob-0987654321</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

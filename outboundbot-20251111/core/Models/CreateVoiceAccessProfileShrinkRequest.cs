@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class CreateVoiceAccessProfileShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>目前支持IFLYTEK、VOLC</para>
+        /// <para>The voice service provider.
+        /// BAILIAN: Bailian.
+        /// VOLC: Doubao.
+        /// IFLYTEK: iFLYTEK.
+        /// TENCENT: Tencent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BAILIAN</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string NlsEngine { get; set; }
 
         /// <summary>
-        /// <para>配置</para>
+        /// <para>The provider configuration information.</para>
         /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]

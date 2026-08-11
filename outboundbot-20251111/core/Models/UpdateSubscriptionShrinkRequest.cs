@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateSubscriptionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>接入点</para>
+        /// <para>The endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-h964u01wh12.cn-hangzhou.rmq.aliyuncs.com:8080</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>事件订阅列表</para>
+        /// <para>The list of subscription items.</para>
         /// </summary>
         [NameInMap("EventSubscriptions")]
         [Validation(Required=false)]
         public string EventSubscriptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>MQ的实例ID</para>
+        /// <para>The instance ID of the message queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-3g84vpf3712</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string MqInstanceId { get; set; }
 
         /// <summary>
-        /// <para>消息队列类型</para>
+        /// <para>The MSMQ type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ROCKET_MQ_4</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string MqType { get; set; }
 
         /// <summary>
-        /// <para>田南+伽雷可斯</para>
+        /// <para>The password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa44w0rd</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>生产者ID</para>
+        /// <para>The producer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GID_123456</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ProducerId { get; set; }
 
         /// <summary>
-        /// <para>主题</para>
+        /// <para>The topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OUTBOUND_BOT_TOPIC</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Topic { get; set; }
 
         /// <summary>
-        /// <para>伽雷可斯</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>

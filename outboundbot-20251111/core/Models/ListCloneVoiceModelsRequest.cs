@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListCloneVoiceModelsRequest : TeaModel {
         /// <summary>
-        /// <para>页码，从1开始</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

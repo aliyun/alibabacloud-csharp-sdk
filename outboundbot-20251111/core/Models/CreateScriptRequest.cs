@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class CreateScriptRequest : TeaModel {
         /// <summary>
-        /// <para>描述</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于测试</para>
+        /// <para>For testing</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -30,17 +30,22 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试场景</para>
+        /// <para>Test scenario</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>NLU引擎类型</para>
+        /// <para>The NLU engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BEEBOT: integrates with Chatbot.</description></item>
+        /// <item><description>PROMPTS: prompt mode.</description></item>
+        /// <item><description>FUNCTION: integrates with Function Compute.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BEEBOT</para>

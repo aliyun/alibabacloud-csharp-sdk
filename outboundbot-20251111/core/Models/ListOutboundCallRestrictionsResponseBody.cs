@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值</para>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The phone number.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值</para>
+                /// <para>134*****</para>
                 /// </summary>
                 [NameInMap("Number")]
                 [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The remark.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例值</para>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

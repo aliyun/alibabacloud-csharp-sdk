@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class PublishScriptResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b89</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=df408e55-63dc-4c52-9161-74265381b6a4</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

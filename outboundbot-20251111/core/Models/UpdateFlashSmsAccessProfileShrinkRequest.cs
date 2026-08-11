@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateFlashSmsAccessProfileShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>接入配置</para>
+        /// <para>The access configuration.</para>
         /// </summary>
         [NameInMap("AccessProfile")]
         [Validation(Required=false)]
         public string AccessProfileShrink { get; set; }
 
         /// <summary>
-        /// <para>接入配置ID</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string AccessProfileId { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -37,7 +37,15 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>供应商ID</para>
+        /// <para>The provider ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Uincall: Beijing Youyin Communication Co., Ltd.</description></item>
+        /// <item><description>ChuangLan: Beijing Chuanglan Cloud Intelligence Information Co., Ltd.</description></item>
+        /// <item><description>ChinaMobile: China Mobile.</description></item>
+        /// <item><description>ShangHaiTianNan: Shanghai Tiannan.</description></item>
+        /// <item><description>HeDao: Galaxis.</description></item>
+        /// <item><description>DySms: Alibaba Communication.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Uincall</para>

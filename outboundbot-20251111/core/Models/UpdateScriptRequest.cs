@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateScriptRequest : TeaModel {
         /// <summary>
-        /// <para>描述</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>询问客户对本次服务的意见和建议</para>
+        /// <para>Ask customers for their opinions and suggestions about the service</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>满意度调研</para>
+        /// <para>Satisfaction survey</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>场景ID</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>

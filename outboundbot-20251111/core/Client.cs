@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音色</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音色</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音色</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音色</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -673,7 +673,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,7 +727,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,7 +745,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,7 +763,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -855,7 +855,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -965,7 +965,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建场景配置</para>
+        /// <para>Creates a scenario configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -983,7 +983,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语音接入配置</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1039,7 +1039,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语音接入配置</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1095,7 +1095,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语音接入配置</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1113,7 +1113,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建语音接入配置</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1131,7 +1131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除克隆音色</para>
+        /// <para>Deletes a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1177,7 +1177,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除克隆音色</para>
+        /// <para>Deletes a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1223,7 +1223,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除克隆音色</para>
+        /// <para>Deletes a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1241,7 +1241,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除克隆音色</para>
+        /// <para>Deletes a scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1259,7 +1259,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除闪信配置</para>
+        /// <para>Deletes a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1305,7 +1305,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除闪信配置</para>
+        /// <para>Deletes a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1351,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除闪信配置</para>
+        /// <para>Deletes a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1369,7 +1369,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除闪信配置</para>
+        /// <para>Deletes a flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1387,7 +1387,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an instance.</para>
+        /// <para>Retrieves instance details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1429,7 +1429,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an instance.</para>
+        /// <para>Retrieves instance details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1471,7 +1471,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an instance.</para>
+        /// <para>Retrieves instance details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1489,7 +1489,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an instance.</para>
+        /// <para>Retrieves instance details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1647,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1693,7 +1693,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1739,7 +1739,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1757,7 +1757,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1775,7 +1775,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1821,7 +1821,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1867,7 +1867,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,7 +1885,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +1903,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1945,7 +1945,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1987,7 +1987,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2005,7 +2005,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2143,7 +2143,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取prompt场景模版</para>
+        /// <para>Retrieves a prompt scenario template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2189,7 +2189,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取prompt场景模版</para>
+        /// <para>Retrieves a prompt scenario template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2235,7 +2235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取prompt场景模版</para>
+        /// <para>Retrieves a prompt scenario template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,7 +2253,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取prompt场景模版</para>
+        /// <para>Retrieves a prompt scenario template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2271,7 +2271,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2313,7 +2313,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2355,7 +2355,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2373,7 +2373,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2391,7 +2391,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2437,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2483,7 +2483,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2501,7 +2501,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2519,7 +2519,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色列表</para>
+        /// <para>Retrieves the list of cloned voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2573,7 +2573,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色列表</para>
+        /// <para>Retrieves the list of cloned voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2627,7 +2627,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色列表</para>
+        /// <para>Retrieves the list of cloned voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2645,7 +2645,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色列表</para>
+        /// <para>Retrieves the list of cloned voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2663,7 +2663,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信配置列表</para>
+        /// <para>Retrieves the list of flash SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2713,7 +2713,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信配置列表</para>
+        /// <para>Retrieves the list of flash SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2763,7 +2763,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信配置列表</para>
+        /// <para>Retrieves the list of flash SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2781,7 +2781,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信配置列表</para>
+        /// <para>Retrieves the list of flash SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2799,7 +2799,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信厂商列表</para>
+        /// <para>Retrieves the list of flash message providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2841,7 +2841,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信厂商列表</para>
+        /// <para>Retrieves the list of flash message providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2883,7 +2883,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信厂商列表</para>
+        /// <para>Retrieves the list of flash message providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2901,7 +2901,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信厂商列表</para>
+        /// <para>Retrieves the list of flash message providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2919,7 +2919,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模版列表</para>
+        /// <para>Retrieves flash SMS templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,7 +2973,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模版列表</para>
+        /// <para>Retrieves flash SMS templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3027,7 +3027,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模版列表</para>
+        /// <para>Retrieves flash SMS templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3045,7 +3045,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模版列表</para>
+        /// <para>Retrieves flash SMS templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3199,7 +3199,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the blacklists and whitelists of an outbound robot.</para>
+        /// <para>Retrieves the blacklists and whitelists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3253,7 +3253,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the blacklists and whitelists of an outbound robot.</para>
+        /// <para>Retrieves the blacklists and whitelists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3307,7 +3307,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the blacklists and whitelists of an outbound robot.</para>
+        /// <para>Retrieves the blacklists and whitelists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3325,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the blacklists and whitelists of an outbound robot.</para>
+        /// <para>Retrieves the blacklists and whitelists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3343,7 +3343,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves the list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3389,7 +3389,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves the list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3435,7 +3435,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves the list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3453,7 +3453,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景配置模板列表</para>
+        /// <para>Retrieves the list of scenario configuration templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3471,7 +3471,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景列表</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3539,7 +3539,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景列表</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3607,7 +3607,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景列表</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3625,7 +3625,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景列表</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3643,7 +3643,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据流程ID获取场景列表</para>
+        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3689,7 +3689,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据流程ID获取场景列表</para>
+        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,7 +3735,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据流程ID获取场景列表</para>
+        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +3753,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据流程ID获取场景列表</para>
+        /// <para>Retrieves the list of scenarios associated with a flow by flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,7 +3771,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统配置列表</para>
+        /// <para>Retrieves the list of system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +3821,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统配置列表</para>
+        /// <para>Retrieves the list of system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3871,7 +3871,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统配置列表</para>
+        /// <para>Retrieves the list of system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3889,7 +3889,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统配置列表</para>
+        /// <para>Retrieves the list of system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3907,7 +3907,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音接入配置列表</para>
+        /// <para>Retrieves the list of voice access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3957,7 +3957,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音接入配置列表</para>
+        /// <para>Retrieves the list of voice access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4007,7 +4007,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音接入配置列表</para>
+        /// <para>Retrieves the list of voice access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4025,7 +4025,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音接入配置列表</para>
+        /// <para>Retrieves the list of voice access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4043,7 +4043,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4093,7 +4093,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4143,7 +4143,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,7 +4179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新克隆音色</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4229,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新克隆音色</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,7 +4279,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新克隆音色</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4297,7 +4297,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新克隆音色</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4315,7 +4315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闪信配置</para>
+        /// <para>Updates the flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4375,7 +4375,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闪信配置</para>
+        /// <para>Updates the flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4435,7 +4435,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闪信配置</para>
+        /// <para>Updates the flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4453,7 +4453,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闪信配置</para>
+        /// <para>Updates the flash message configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4615,7 +4615,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4669,7 +4669,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4723,7 +4723,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4741,7 +4741,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新场景</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4759,7 +4759,247 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>更新场景配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateScriptVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptVersionResponse
+        /// </returns>
+        public UpdateScriptVersionResponse UpdateScriptVersionWithOptions(UpdateScriptVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateScriptVersionShrinkRequest request = new UpdateScriptVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InteractionConfig))
+            {
+                request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfigs))
+            {
+                request.LabelConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfigs, "LabelConfigs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScriptProfile))
+            {
+                request.ScriptProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScriptProfile, "ScriptProfile", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SynthesizerConfig))
+            {
+                request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
+            {
+                request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
+            {
+                body["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigsShrink))
+            {
+                body["LabelConfigs"] = request.LabelConfigsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                body["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptProfileShrink))
+            {
+                body["ScriptProfile"] = request.ScriptProfileShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
+            {
+                body["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
+            {
+                body["TranscriberConfig"] = request.TranscriberConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScriptVersion",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScriptVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新场景配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateScriptVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptVersionResponse
+        /// </returns>
+        public async Task<UpdateScriptVersionResponse> UpdateScriptVersionWithOptionsAsync(UpdateScriptVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateScriptVersionShrinkRequest request = new UpdateScriptVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InteractionConfig))
+            {
+                request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfigs))
+            {
+                request.LabelConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfigs, "LabelConfigs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScriptProfile))
+            {
+                request.ScriptProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScriptProfile, "ScriptProfile", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SynthesizerConfig))
+            {
+                request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
+            {
+                request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
+            {
+                body["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigsShrink))
+            {
+                body["LabelConfigs"] = request.LabelConfigsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
+            {
+                body["ScriptId"] = request.ScriptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptProfileShrink))
+            {
+                body["ScriptProfile"] = request.ScriptProfileShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
+            {
+                body["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
+            {
+                body["TranscriberConfig"] = request.TranscriberConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScriptVersion",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScriptVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新场景配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptVersionResponse
+        /// </returns>
+        public UpdateScriptVersionResponse UpdateScriptVersion(UpdateScriptVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateScriptVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新场景配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptVersionResponse
+        /// </returns>
+        public async Task<UpdateScriptVersionResponse> UpdateScriptVersionAsync(UpdateScriptVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateScriptVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a message queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4839,7 +5079,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4919,7 +5159,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4937,7 +5177,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4955,7 +5195,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Updates system configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5011,7 +5251,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Updates system configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5067,7 +5307,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Updates system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5085,7 +5325,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Updates system configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5103,7 +5343,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语音接入配置</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5163,7 +5403,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语音接入配置</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5223,7 +5463,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语音接入配置</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5241,7 +5481,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新语音接入配置</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

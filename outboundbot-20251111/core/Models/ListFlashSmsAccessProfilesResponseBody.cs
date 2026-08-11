@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListFlashSmsAccessProfilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFlashSmsAccessProfilesResponseBodyData Data { get; set; }
         public class ListFlashSmsAccessProfilesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>数据列表</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("FlashSmsAccessProfiles")]
             [Validation(Required=false)]
             public List<ListFlashSmsAccessProfilesResponseBodyDataFlashSmsAccessProfiles> FlashSmsAccessProfiles { get; set; }
             public class ListFlashSmsAccessProfilesResponseBodyDataFlashSmsAccessProfiles : TeaModel {
                 /// <summary>
-                /// <para>接入配置</para>
+                /// <para>The provider configuration information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;apiId&quot;:&quot;100235&quot;,&quot;apiKey&quot;:&quot;3aRsPrTsDG3OPNq5&quot;,&quot;aesKey&quot;:&quot;TQChVEAabhaNp2AB&quot;,&quot;capAppId&quot;:&quot;300012117547&quot;}</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string AccessProfile { get; set; }
 
                 /// <summary>
-                /// <para>接入配置ID</para>
+                /// <para>The flash SMS configuration ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string AccessProfileId { get; set; }
 
                 /// <summary>
-                /// <para>创建时间，毫秒级时间戳</para>
+                /// <para>The creation time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -64,7 +64,13 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>供应商ID</para>
+                /// <para>The provider ID. Valid values:\
+                /// Uincall: Beijing Youyin Communication Co., Ltd.\
+                /// ChuangLan: Beijing ChuangLan Cloud Intelligence Information Co., Ltd.\
+                /// ChinaMobile: China Mobile.\
+                /// ShangHaiTianNan: Shanghai Tiannan.\
+                /// HeDao: Galexis.\
+                /// DySms: Alibaba Communication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Uincall</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ProviderId { get; set; }
 
                 /// <summary>
-                /// <para>供应商名称</para>
+                /// <para>The provider name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>北京优音通信有限公司</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ProviderName { get; set; }
 
                 /// <summary>
-                /// <para>更新时间，毫秒级时间戳</para>
+                /// <para>The update time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>页码，从1开始</para>
+            /// <para>The page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>每页记录数</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>符合条件的记录总数</para>
+            /// <para>The total number of records that match the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=outb001</para>
@@ -148,14 +154,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

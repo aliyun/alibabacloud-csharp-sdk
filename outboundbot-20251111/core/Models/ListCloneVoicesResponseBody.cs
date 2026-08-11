@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListCloneVoicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCloneVoicesResponseBodyData Data { get; set; }
         public class ListCloneVoicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>数据列表</para>
+            /// <para>The list of cloned voices.</para>
             /// </summary>
             [NameInMap("CloneVoices")]
             [Validation(Required=false)]
             public List<ListCloneVoicesResponseBodyDataCloneVoices> CloneVoices { get; set; }
             public class ListCloneVoicesResponseBodyDataCloneVoices : TeaModel {
                 /// <summary>
-                /// <para>克隆音色ID</para>
+                /// <para>The UUID of the cloned voice.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b15</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string CloneVoiceId { get; set; }
 
                 /// <summary>
-                /// <para>创建时间，毫秒级时间戳</para>
+                /// <para>The creation time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>实例ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>模型名称</para>
+                /// <para>The model name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CosyVoice</para>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Model { get; set; }
 
                 /// <summary>
-                /// <para>名称</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试克隆音</para>
+                /// <para>TestClonedVoice</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>目前支持IFLYTEK、VOLC</para>
+                /// <para>The speech vendor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BAILIAN</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string NlsEngine { get; set; }
 
                 /// <summary>
-                /// <para>状态</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Published</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>租户ID</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1308144684576765</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
-                /// <para>更新时间，毫秒级时间戳</para>
+                /// <para>The update time, in millisecond-level timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? UpdatedTime { get; set; }
 
                 /// <summary>
-                /// <para>音色</para>
+                /// <para>The voice ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cosyvoice-v3-flash-voicebot2-8aa485413eba42089c873eec1f901d64</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>页码，从1开始</para>
+            /// <para>The page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>每页记录数</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>符合条件的记录总数</para>
+            /// <para>The total number of records that match the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=anchashi.</para>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

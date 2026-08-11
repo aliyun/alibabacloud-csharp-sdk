@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <item><description>ChuangLan: Beijing Chuanglan Yunzhi Information Co., Ltd.</description></item>
         /// <item><description>ChinaMobile: China Mobile.</description></item>
         /// <item><description>ShangHaiTianNan: Shanghai Tiannan.</description></item>
-        /// <item><description>HeDao: Galexes.</description></item>
+        /// <item><description>HeDao: Galaxis.</description></item>
         /// <item><description>DySms: Alibaba Communication.</description></item>
         /// </list>
         /// 

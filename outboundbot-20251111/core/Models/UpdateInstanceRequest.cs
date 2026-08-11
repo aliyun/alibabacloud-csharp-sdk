@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of concurrent calls.</para>
+        /// <para>The number of concurrent connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

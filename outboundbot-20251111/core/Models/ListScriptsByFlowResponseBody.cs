@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListScriptsByFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListScriptsByFlowResponseBodyData> Data { get; set; }
         public class ListScriptsByFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>晓蜜机器人ID</para>
+            /// <para>The chatbot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbot-cn-MQuyjjb666</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ChatbotId { get; set; }
 
             /// <summary>
-            /// <para>名称</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>满意度调研</para>
+            /// <para>Satisfaction Survey</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>场景ID</para>
+            /// <para>The scenario ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b54</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=ob-1234567890</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

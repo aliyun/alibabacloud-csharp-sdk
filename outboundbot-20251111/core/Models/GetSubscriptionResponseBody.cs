@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class GetSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>返回码</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>返回数据</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSubscriptionResponseBodyData Data { get; set; }
         public class GetSubscriptionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>true 表示禁用，false 表示启用</para>
+            /// <para>Indicates whether the event push is disabled. A value of true indicates disabled, and a value of false indicates enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>接入点</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-h964u01wh12.cn-hangzhou.rmq.aliyuncs.com:8080</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>事件列表</para>
+            /// <para>The list of push content.</para>
             /// </summary>
             [NameInMap("EventList")]
             [Validation(Required=false)]
             public List<GetSubscriptionResponseBodyDataEventList> EventList { get; set; }
             public class GetSubscriptionResponseBodyDataEventList : TeaModel {
                 /// <summary>
-                /// <para>true 表示禁用，false 表示启用</para>
+                /// <para>Indicates whether the event push is disabled. A value of true indicates disabled, and a value of false indicates enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public bool? Disabled { get; set; }
 
                 /// <summary>
-                /// <para>显示名称</para>
+                /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>振铃</para>
+                /// <para>Ringing</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>名称</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ringing</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>MQ的实例ID</para>
+            /// <para>The MQ instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-3g84vpf3712</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string MqInstanceId { get; set; }
 
             /// <summary>
-            /// <para>消息队列类型</para>
+            /// <para>The MSMQ type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ROCKET_MQ_4</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string MqType { get; set; }
 
             /// <summary>
-            /// <para>田南+伽雷可斯</para>
+            /// <para>The password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa44w0rd</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>生产者ID</para>
+            /// <para>The producer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GID_123456</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ProducerId { get; set; }
 
             /// <summary>
-            /// <para>主题</para>
+            /// <para>The topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OUTBOUND_BOT_TOPIC</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Topic { get; set; }
 
             /// <summary>
-            /// <para>伽雷可斯</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         }
 
         /// <summary>
-        /// <para>HTTP状态码</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance does not exist. Instance=ob-1234567890</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>错误信息中的变量值列表</para>
+        /// <para>The list of variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否调用成功</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

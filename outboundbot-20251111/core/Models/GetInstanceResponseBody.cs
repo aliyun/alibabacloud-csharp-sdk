@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a large model robot</para>
+            /// <para>This is a large language model chatbot</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

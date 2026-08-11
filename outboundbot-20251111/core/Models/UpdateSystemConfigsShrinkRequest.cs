@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class UpdateSystemConfigsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>配置列表</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public string ConfigsShrink { get; set; }
 
         /// <summary>
-        /// <para>对象ID</para>
+        /// <para>The configuration type ID. If ObjectType is set to INSTANCE, this parameter specifies the instance ID. If ObjectType is set to TENANT, this parameter specifies the tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>外呼开发时补充参数限制</para>
+        /// <para>The configuration type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTANCE: instance level.</description></item>
+        /// <item><description>TENANT: tenant level.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>

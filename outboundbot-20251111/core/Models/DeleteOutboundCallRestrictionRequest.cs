@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of outbound restriction IDs.</para>
+        /// <para>The list of outbound call restriction IDs.</para>
         /// </summary>
         [NameInMap("RestrictionIdList")]
         [Validation(Required=false)]

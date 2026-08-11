@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
     public class ListScriptsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b04</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>搜索关键词</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>满意度调研</para>
+        /// <para>Satisfaction Survey</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>页码，从1开始</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>是否仅返回已发布的场景</para>
+        /// <para>Specifies whether to return only published scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public bool? PublishOnly { get; set; }
 
         /// <summary>
-        /// <para>场景ID列表</para>
+        /// <para>The list of scenario IDs.</para>
         /// </summary>
         [NameInMap("ScriptIds")]
         [Validation(Required=false)]

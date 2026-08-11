@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>xxxx</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
