@@ -2184,19 +2184,19 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频翻译任务</para>
+        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
-        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
-        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
-        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
-        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
-        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
+        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
+        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
+        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
+        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
+        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2239,19 +2239,19 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频翻译任务</para>
+        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
-        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
-        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
-        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
-        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
-        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
+        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
+        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
+        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
+        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
+        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2294,19 +2294,19 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频翻译任务</para>
+        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
-        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
-        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
-        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
-        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
-        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
+        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
+        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
+        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
+        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
+        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2325,19 +2325,19 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频翻译任务</para>
+        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
-        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
-        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
-        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
-        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
-        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
+        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
+        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
+        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
+        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
+        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2983,6 +2983,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -2990,6 +2994,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3047,6 +3055,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -3054,6 +3066,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

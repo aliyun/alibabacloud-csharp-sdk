@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProductionId")]
+        [Validation(Required=false)]
+        public string ProductionId { get; set; }
+
         /// <summary>
         /// <para>The sort field and sort order. Separate multiple values with commas (,).</para>
         /// 
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 
