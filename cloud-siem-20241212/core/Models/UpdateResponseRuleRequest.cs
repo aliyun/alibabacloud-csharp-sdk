@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateResponseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return for a single request.</para>
+        /// <para>The maximum number of data records to read in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. If you do not specify this parameter, the query starts from the first page.</para>
+        /// <para>The pagination token that marks the position from which to start reading. If this parameter is left empty, data is read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Cloud SIEM is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of the threat analysis feature is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cn-hangzhou</c>: China (Hangzhou). For assets in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><c>ap-southeast-1</c>: Asia Pacific SE 1 (Singapore). For assets in overseas regions.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The action configuration for the automatic response rule.</para>
+        /// <para>The action configuration of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</para>
@@ -72,20 +68,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseActionConfig { get; set; }
 
         /// <summary>
-        /// <para>The action for the automatic response rule. Valid values:</para>
+        /// <para>The action type of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>doPlaybook</c>: Executes a playbook.</para>
-        /// </description></item>
-        /// <item><description><para><c>changeEventStatus</c>: Updates the event status.</para>
-        /// </description></item>
-        /// <item><description><para><c>changeThreatLevel</c>: Updates the event threat level.</para>
-        /// </description></item>
-        /// <item><description><para><c>addEventTag</c>: Adds an event tag.</para>
-        /// </description></item>
-        /// <item><description><para><c>deleteEventTag</c>: Deletes an event tag.</para>
-        /// </description></item>
-        /// <item><description><para><c>alertWhitelist</c>: Adds the alert to a whitelist.</para>
-        /// </description></item>
+        /// <item><description>doPlaybook: execute a playbook.</description></item>
+        /// <item><description>changeEventStatus: update the event status.</description></item>
+        /// <item><description>changeThreatLevel: update the event threat level.</description></item>
+        /// <item><description>addEventTag: add an event label.</description></item>
+        /// <item><description>deleteEventTag: delete an event label.</description></item>
+        /// <item><description>alertWhitelist: add the alert to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseActionType { get; set; }
 
         /// <summary>
-        /// <para>The trigger conditions for the rule.</para>
+        /// <para>The trigger condition configuration of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</para>
@@ -106,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseExecutionCondition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic response rule.</para>
+        /// <para>The ID of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440918</para>
@@ -116,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseRuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic response rule.</para>
+        /// <para>The name of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Send Notification When Generating Urgent Incident</para>
@@ -126,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseRuleName { get; set; }
 
         /// <summary>
-        /// <para>The execution priority of the automatic response rule.</para>
+        /// <para>The execution priority of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,12 +130,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseRuleRemark { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
+        /// <para>The status of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: disabled</para>
-        /// </description></item>
-        /// <item><description><para><c>100</c>: enabled</para>
-        /// </description></item>
+        /// <item><description>0: disabled.</description></item>
+        /// <item><description>100: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,14 +144,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? ResponseRuleStatus { get; set; }
 
         /// <summary>
-        /// <para>The trigger for the automatic response rule. Valid values:</para>
+        /// <para>The trigger type of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>event</c>: The rule is triggered when an event occurs.</para>
-        /// </description></item>
-        /// <item><description><para><c>event_update</c>: The rule is triggered when an event is updated.</para>
-        /// </description></item>
-        /// <item><description><para><c>alert</c>: The rule is triggered when an alert is generated.</para>
-        /// </description></item>
+        /// <item><description>event: event occurred.</description></item>
+        /// <item><description>event_update: event updated.</description></item>
+        /// <item><description>alert: alert occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

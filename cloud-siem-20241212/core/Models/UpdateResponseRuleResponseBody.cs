@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic response rule.</para>
+        /// <para>The ID of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440918</para>
