@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateConfigFileRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the directory.</para>
+        /// <para>The directory name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/schemas/device_event_xt_schema.json</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) URL of the file.</para>
+        /// <para>The OSS storage address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://xxx/xxxx/xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string OssPath { get; set; }
 
         /// <summary>
-        /// <para>The path of the parent directory.</para>
+        /// <para>The parent file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>

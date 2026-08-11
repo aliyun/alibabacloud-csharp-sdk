@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>PrePaid</para>
+            /// <para>POSTPAY</para>
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The commodity code of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha3-code</para>
+            /// <para>opensearch_ha3post_public_cn</para>
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-0ju2s170b03</para>
+            /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aeky6hthboewpuy</para>
+            /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Running</para>
+            /// <para>READY</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

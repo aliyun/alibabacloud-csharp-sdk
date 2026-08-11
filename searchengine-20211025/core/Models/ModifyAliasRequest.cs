@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyAliasRequest : TeaModel {
         /// <summary>
-        /// <para>alias name</para>
+        /// <para>The alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>index name</para>
+        /// <para>The index to associate with the alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>index</para>

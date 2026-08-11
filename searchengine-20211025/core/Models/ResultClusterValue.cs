@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ResultClusterValue : TeaModel {
         /// <summary>
-        /// <para>The maximum number of full indexes that can be concurrently built.</para>
+        /// <para>The concurrency for full indexing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? BuildParallelNum { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of full indexes that can be concurrently merged.</para>
+        /// <para>The concurrency for full merging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The files.</para>
+        /// <para>The file information.</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<PublishAdvanceConfigRequestFiles> Files { get; set; }
         public class PublishAdvanceConfigRequestFiles : TeaModel {
             /// <summary>
-            /// <para>The information about the advanced configuration.</para>
+            /// <para>The advanced configuration information.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The variables.</para>
+                /// <para>The variable list.</para>
                 /// </summary>
                 [NameInMap("variables")]
                 [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The directory name.</para>
+            /// <para>The folder name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/clusters</para>
@@ -73,7 +73,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</para>
+            /// <para>The operation type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>UPDATE: updates the file.</description></item>
+            /// <item><description>DELETE: deletes the file.</description></item>
+            /// </list>
+            /// <para>Default value: UPDATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATE</para>
@@ -83,7 +88,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string OperateType { get; set; }
 
             /// <summary>
-            /// <para>The path of the Object Storage Service (OSS) object.</para>
+            /// <para>The OSS file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://opensearch/test.json</para>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The path of the parent directory.</para>
+            /// <para>The parent file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>

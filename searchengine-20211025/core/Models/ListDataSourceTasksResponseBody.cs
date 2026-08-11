@@ -30,7 +30,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The additional attributes of the card.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>{
+            ///     &quot;consoleVersion&quot;: &quot;&quot;,
+            ///     &quot;domain&quot;: &quot;hz_pre_vpc_domain_1&quot;,
+            ///     &quot;configType&quot;: &quot;offline&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("extraAttribute")]
             [Validation(Required=false)]
@@ -40,7 +44,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The field3 field that was passed when the FSM was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>{
+            ///     &quot;ha-cn-pl32rf0****_offline_adv&quot;: 1,
+            ///     &quot;ha-cn-pl32rf0****_offline_plugin&quot;: 1,
+            ///     &quot;ha-cn-pl32rf0****_table_ha-cn-35t3r02iq03_test_api&quot;: 1,
+            ///     &quot;ha-cn-pl32rf0****@ha-cn-pl32rf0****_test_api@hz_pre_vpc_domain_1@test_api@index_config&quot;: 1,
+            ///     &quot;ha-cn-pl32rf0****_offline_dict&quot;: 1
+            /// }</para>
             /// </summary>
             [NameInMap("field3")]
             [Validation(Required=false)]
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The ID of the finite state machine (FSM).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>tisplus_opensearch@datasource_flow_fsm@1062017779051424-ha-cn-2r42ostoc01_ecom_table@vpc_hz_domain_1@null@MANUAL-ha-cn-2r42ostoc01_ecom_table@1655974525756@006754</para>
+            /// <para>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-pl32rf0****_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-pl32rf0****_api2@1649729867698@028315</para>
             /// </summary>
             [NameInMap("fsmId")]
             [Validation(Required=false)]
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The change group type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>Table_Update</para>
             /// </summary>
             [NameInMap("groupType")]
             [Validation(Required=false)]
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The card name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>general</para>
+            /// <para>ha-cn-pl32rf0****_qrs</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The FSM status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>onlyPublished</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The tag content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>succeed in handling request</para>
+                /// <para>test-tag</para>
                 /// </summary>
                 [NameInMap("msg")]
                 [Validation(Required=false)]
@@ -107,7 +117,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The tag level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("tagLevel")]
                 [Validation(Required=false)]
@@ -126,7 +136,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The time when the task was complete.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>2024-06-17 18:40:48</para>
                 /// </summary>
                 [NameInMap("finishDate")]
                 [Validation(Required=false)]
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The ordinal number of the task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>100</para>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("index")]
                 [Validation(Required=false)]
@@ -146,7 +156,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ha-cn-7pp2ngv4s02_qrs</para>
+                /// <para>publish config version</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -156,7 +166,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The task status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>onlyPublished</para>
+                /// <para>SUCCESS</para>
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
@@ -178,7 +188,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>search</para>
+            /// <para>mra_table_config_trace_fsm</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -188,7 +198,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The user who triggered the generation of the FSM process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>admin</para>
             /// </summary>
             [NameInMap("user")]
             [Validation(Required=false)]

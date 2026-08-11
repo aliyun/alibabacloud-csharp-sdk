@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifySearcherReplicaRequest : TeaModel {
         /// <summary>
+        /// <para>The number of shards for a data node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? Partition { get; set; }
 
         /// <summary>
+        /// <para>The number of replicas for a data node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

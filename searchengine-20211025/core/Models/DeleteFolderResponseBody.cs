@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>id of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>022F36C7-9FB4-5D67-BEBC-3D14B0984463</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Response&lt;Map&lt;String, String&gt;&gt;</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The result</para>
+            /// <para>The returned result.</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]

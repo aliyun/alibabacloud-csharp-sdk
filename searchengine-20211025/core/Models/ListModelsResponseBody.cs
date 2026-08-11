@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListModelsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>38b079f1-7846-4226-8c90-3e2644b5c52b</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The model list. For more information, see Model.</para>
+        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListModelsResponseBodyResult> Result { get; set; }
         public class ListModelsResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The content information of the model.</para>
+            /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public ListModelsResponseBodyResultContent Content { get; set; }
             public class ListModelsResponseBodyResultContent : TeaModel {
                 /// <summary>
+                /// <para>The HTTP method for accessing the model service. PUT and POST are supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>POST</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Method { get; set; }
 
                 /// <summary>
+                /// <para>The model name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -42,6 +54,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
+                /// <para>The model type.</para>
+                /// <list type="bullet">
+                /// <item><description>a. Text embedding: text_embedding</description></item>
+                /// <item><description>b. Text sparse embedding: text_sparse_embedding</description></item>
+                /// <item><description>c. Image embedding: image_embedding</description></item>
+                /// <item><description>d. Image content analysis: image_analyze.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>text_embedding</para>
                 /// </summary>
@@ -49,15 +69,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string ModelType { get; set; }
 
+                /// <summary>
+                /// <para>The request configuration information.</para>
+                /// </summary>
                 [NameInMap("request")]
                 [Validation(Required=false)]
                 public ListModelsResponseBodyResultContentRequest Request { get; set; }
                 public class ListModelsResponseBodyResultContentRequest : TeaModel {
+                    /// <summary>
+                    /// <para>The HTTP header for accessing the model service.</para>
+                    /// </summary>
                     [NameInMap("header")]
                     [Validation(Required=false)]
                     public ListModelsResponseBodyResultContentRequestHeader Header { get; set; }
                     public class ListModelsResponseBodyResultContentRequestHeader : TeaModel {
                         /// <summary>
+                        /// <para>The authentication information. Format: Bearer access_token.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Bearer OS-v0********6vvs</para>
                         /// </summary>
@@ -66,6 +94,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                         public string Authorization { get; set; }
 
                         /// <summary>
+                        /// <para>The HTTP request content type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>application/json</para>
                         /// </summary>
@@ -75,15 +105,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The parameters that need to be differentiated between the build and search phases in the body. Define them in this parameter.</para>
+                    /// </summary>
                     [NameInMap("parameters")]
                     [Validation(Required=false)]
                     public ListModelsResponseBodyResultContentRequestParameters Parameters { get; set; }
                     public class ListModelsResponseBodyResultContentRequestParameters : TeaModel {
+                        /// <summary>
+                        /// <para>The parameters for the index building phase.</para>
+                        /// </summary>
                         [NameInMap("build")]
                         [Validation(Required=false)]
                         public ListModelsResponseBodyResultContentRequestParametersBuild Build { get; set; }
                         public class ListModelsResponseBodyResultContentRequestParametersBuild : TeaModel {
                             /// <summary>
+                            /// <para>The input type.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>query</para>
                             /// </summary>
@@ -93,11 +131,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The parameters for the query phase.</para>
+                        /// </summary>
                         [NameInMap("search")]
                         [Validation(Required=false)]
                         public ListModelsResponseBodyResultContentRequestParametersSearch Search { get; set; }
                         public class ListModelsResponseBodyResultContentRequestParametersSearch : TeaModel {
                             /// <summary>
+                            /// <para>The input type.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>document</para>
                             /// </summary>
@@ -110,6 +153,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     }
 
                     /// <summary>
+                    /// <para>The template string of the request body.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;input\&quot;: [\&quot;%{input}\&quot;], \&quot;input_type\&quot;: \&quot;%{input_type}\&quot;}</para>
                     /// </summary>
@@ -117,11 +162,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     [Validation(Required=false)]
                     public string RequestBody { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameters in the URL. Some model services require parameters to be passed through the URL.</para>
+                    /// </summary>
                     [NameInMap("urlParams")]
                     [Validation(Required=false)]
                     public ListModelsResponseBodyResultContentRequestUrlParams UrlParams { get; set; }
                     public class ListModelsResponseBodyResultContentRequestUrlParams : TeaModel {
                         /// <summary>
+                        /// <para>The parameters passed during index building.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>key: value</para>
                         /// </summary>
@@ -130,6 +180,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                         public Dictionary<string, object> Build { get; set; }
 
                         /// <summary>
+                        /// <para>The parameters passed during queries.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>key: value</para>
                         /// </summary>
@@ -141,11 +193,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
                 }
 
+                /// <summary>
+                /// <para>Specifies how to parse the result information, described in JSON path format.</para>
+                /// </summary>
                 [NameInMap("response")]
                 [Validation(Required=false)]
                 public ListModelsResponseBodyResultContentResponse Response { get; set; }
                 public class ListModelsResponseBodyResultContentResponse : TeaModel {
                     /// <summary>
+                    /// <para>Specifies how to parse the result information, described in JSON path format.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$.result.embeddings[*].embedding</para>
                     /// </summary>
@@ -156,6 +213,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
+                /// <para>The access URL of the model service.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</para>
                 /// </summary>
@@ -166,6 +225,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-21 16:05:26</para>
             /// </summary>
@@ -174,6 +235,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The dimension of the model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>128</para>
             /// </summary>
@@ -182,6 +245,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? Dimension { get; set; }
 
             /// <summary>
+            /// <para>The model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -190,6 +255,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The model status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ok: The model is available.</description></item>
+            /// <item><description>forbidden: The model is unavailable.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -198,6 +269,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The model type.</para>
+            /// <list type="bullet">
+            /// <item><description>a. Text embedding: text_embedding</description></item>
+            /// <item><description>b. Text sparse embedding: text_sparse_embedding</description></item>
+            /// <item><description>c. Image embedding: image_embedding</description></item>
+            /// <item><description>d. Image content analysis: image_analyze.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>text_embedding</para>
             /// </summary>
@@ -206,6 +285,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The last modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-21 16:05:26</para>
             /// </summary>
@@ -214,6 +295,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The access URL of the model service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>http://***.platform-cn-shanghai.opensearch.aliyuncs.com/v3/openapi/workspaces/default/text-embedding/ops-text-embedding-001</para>
             /// </summary>
@@ -224,6 +307,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14</para>
         /// </summary>

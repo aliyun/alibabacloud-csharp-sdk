@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The password.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>testPassword</para>
         /// </summary>
         [NameInMap("password")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;username&quot;</para>
+        /// <para>testUserName</para>
         /// </summary>
         [NameInMap("username")]
         [Validation(Required=false)]

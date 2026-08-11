@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class RenameFolderRequest : TeaModel {
         /// <summary>
+        /// <para>The folder name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

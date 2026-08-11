@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89B968E6-1E41-58DF-BB25-5F98ECC759CE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>PrePaid</para>
+            /// <para>POSTPAY</para>
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The commodity code of the instance.</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>opensearch_ha3post_public_cn</para>
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
@@ -128,18 +128,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Emergency test</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The edition of the instance.vector: Vector Search Editionengine: Retrieval Engine Edition</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vector</para>
+            /// </summary>
             [NameInMap("edition")]
             [Validation(Required=false)]
             public string Edition { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1634885083</para>
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an overdue payment is involved.</para>
+            /// <para>Indicates whether the instance has an overdue payment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -159,17 +165,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? InDebt { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-2r42n8oh001</para>
+            /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The lock state of the instance.</para>
+            /// <para>The lock status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unlock</para>
@@ -179,45 +185,57 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The network information of the instance.</para>
+            /// <para>The network information of the search engine instance.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
             public ListInstancesResponseBodyResultNetwork Network { get; set; }
             public class ListInstancesResponseBodyResultNetwork : TeaModel {
+                /// <summary>
+                /// <para>The whitelist for the public domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>127.0.0.1</para>
+                /// </summary>
                 [NameInMap("allow")]
                 [Validation(Required=false)]
                 public string Allow { get; set; }
 
                 /// <summary>
-                /// <para>The instance endpoint.</para>
+                /// <para>The gateway endpoint.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>ha-cn-35t3r****.ha.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <para>The public domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ha-cn-35t3ni****.public.ha.aliyuncs.com</para>
+                /// </summary>
                 [NameInMap("publicEndpoint")]
                 [Validation(Required=false)]
                 public string PublicEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch ID.</para>
+                /// <para>The ID of the virtual switch.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vsw-bp11ldcf59q2nbwkqgj6z</para>
+                /// <para>vsw-bp11ldcf59q2n****</para>
                 /// </summary>
                 [NameInMap("vSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC) in which the instance is deployed.</para>
+                /// <para>The ID of the virtual private cloud (VPC).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vpc-wz9axk41d9vffoc79x0oe</para>
+                /// <para>vpc-wz9axk41d9vff****</para>
                 /// </summary>
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
@@ -225,6 +243,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the instance is a standalone instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("noQrs")]
             [Validation(Required=false)]
             public bool? NoQrs { get; set; }
@@ -233,62 +257,131 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aekzgpiswzbksdi</para>
+            /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The specifications of the nodes.</para>
+            /// </summary>
             [NameInMap("spec")]
             [Validation(Required=false)]
             public ListInstancesResponseBodyResultSpec Spec { get; set; }
             public class ListInstancesResponseBodyResultSpec : TeaModel {
+                /// <summary>
+                /// <para>The specifications of the query nodes.</para>
+                /// </summary>
                 [NameInMap("qrsResource")]
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyResultSpecQrsResource QrsResource { get; set; }
                 public class ListInstancesResponseBodyResultSpecQrsResource : TeaModel {
+                    /// <summary>
+                    /// <para>The instance type. Valid values:local_ssd: local solid-state drive (SSD)cloud: disk</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>local_ssd</para>
+                    /// </summary>
                     [NameInMap("category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of CPU cores.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("cpu")]
                     [Validation(Required=false)]
                     public int? Cpu { get; set; }
 
+                    /// <summary>
+                    /// <para>The storage space of the node in GB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("disk")]
                     [Validation(Required=false)]
                     public int? Disk { get; set; }
 
+                    /// <summary>
+                    /// <para>The memory size in GB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("mem")]
                     [Validation(Required=false)]
                     public int? Mem { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("nodeCount")]
                     [Validation(Required=false)]
                     public int? NodeCount { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The specifications of the data nodes.</para>
+                /// </summary>
                 [NameInMap("searchResource")]
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyResultSpecSearchResource SearchResource { get; set; }
                 public class ListInstancesResponseBodyResultSpecSearchResource : TeaModel {
+                    /// <summary>
+                    /// <para>The instance type. Valid values:local_ssd: local SSDcloud: disk</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>local_ssd</para>
+                    /// </summary>
                     [NameInMap("category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of CPU cores.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("cpu")]
                     [Validation(Required=false)]
                     public int? Cpu { get; set; }
 
+                    /// <summary>
+                    /// <para>The storage space of the node in GB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("disk")]
                     [Validation(Required=false)]
                     public int? Disk { get; set; }
 
+                    /// <summary>
+                    /// <para>The memory size in GB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("mem")]
                     [Validation(Required=false)]
                     public int? Mem { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("nodeCount")]
                     [Validation(Required=false)]
                     public int? NodeCount { get; set; }
@@ -298,17 +391,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The instance status.</para>
+            /// <para>The status of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>READY</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the instance.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -318,7 +411,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>env</para>
+                /// <para>opensearch</para>
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
@@ -328,7 +421,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>oboms-disk</para>
+                /// <para>opensearch</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -337,7 +430,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The time when the instance was updated.</para>
+            /// <para>The time when the instance was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-06T11:17:49.0</para>
@@ -346,10 +439,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>admin</para>
+            /// </summary>
             [NameInMap("userName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            /// <summary>
+            /// <para>The version of the engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ha3_3.10.0</para>
+            /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
@@ -357,7 +462,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

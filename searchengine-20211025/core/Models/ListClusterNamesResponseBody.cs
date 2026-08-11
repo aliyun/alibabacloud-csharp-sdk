@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The description of the cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha3_test</para>
+            /// <para>Custom description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>my_index</para>
+            /// <para>hz_pre_vpc_domain_1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListDateSourceGenerationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>id of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>022F36C7-9FB4-5D67-BEBC-3D14B0984463</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListDateSourceGenerationsResponseBodyResult> Result { get; set; }
         public class ListDateSourceGenerationsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the offline deployment.</para>
+            /// <para>The offline deployment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>122</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? BuildDeployId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that was generated when the index building was started.</para>
+            /// <para>The start time of the build index operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1626143673</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The path of the dumped index in the Apsara File Storage for HDFS file system.</para>
+            /// <para>The storage path of the dump table index file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>hdfs://opensearch/dump.json</para>
             /// </summary>
             [NameInMap("dataDumpRoot")]
             [Validation(Required=false)]
             public string DataDumpRoot { get; set; }
 
             /// <summary>
-            /// <para>The ID of the full index version.</para>
+            /// <para>The full index version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1626143930</para>
@@ -67,14 +67,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Generation { get; set; }
 
             /// <summary>
-            /// <para>The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.</para>
+            /// <para>The export type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>api (default): restores to HDFS.</description></item>
+            /// <item><description>oss: exports to OSS.</description></item>
+            /// <item><description>odps: exports to ODPS.</description></item>
+            /// </list>
+            /// <para>This parameter has a value only when the dump table is restored from an index. The value is empty for common tables.</para>
+            /// </summary>
+            [NameInMap("outPutType")]
+            [Validation(Required=false)]
+            public string OutPutType { get; set; }
+
+            /// <summary>
+            /// <para>Key: the index name. Value: the number of shards.</para>
             /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public Dictionary<string, int?> Partition { get; set; }
 
             /// <summary>
-            /// <para>The status of the index version.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STOPPED</para>
@@ -84,7 +97,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp from which incremental data is retrieved.</para>
+            /// <para>The incremental timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1626143673</para>

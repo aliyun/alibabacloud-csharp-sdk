@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>new resource group id</para>
+        /// <para>The ID of the new resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxr3gs*****</para>

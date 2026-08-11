@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetSqlInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>id of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10D5E615-69F7-5F49-B850-00169ADE513C</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>InstanceVersionVO</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetSqlInstanceResponseBodyResult Result { get; set; }
         public class GetSqlInstanceResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The combined parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string CombineParams { get; set; }
 
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>init version</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The SQL content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>select * from test</para>
             /// </summary>
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The dynamic extension parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
             /// </summary>
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string DynamicParams { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719220182844</para>
             /// </summary>
@@ -67,6 +77,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719221186114</para>
             /// </summary>
@@ -75,6 +87,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
@@ -83,6 +97,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The key-value pair parsing result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
             /// </summary>
@@ -91,6 +107,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Kvpairs { get; set; }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -99,6 +117,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? RelatedTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The static parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
             /// </summary>
@@ -107,6 +127,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string StaticParams { get; set; }
 
             /// <summary>
+            /// <para>The template parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
             /// </summary>
@@ -115,6 +137,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string TemplateParams { get; set; }
 
             /// <summary>
+            /// <para>The version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

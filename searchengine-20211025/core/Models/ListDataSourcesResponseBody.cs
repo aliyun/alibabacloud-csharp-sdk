@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The data center in which the data source is deployed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>vpc_hz_domain_1</para>
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The name of the data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>data_source_name</para>
+            /// <para>ha-cn-pl32rf0****_test_api</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

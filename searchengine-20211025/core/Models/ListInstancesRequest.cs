@@ -22,17 +22,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</para>
+        /// <para>Filters instances by description. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Havenask instance</para>
+        /// <para>searchengine instance</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.</para>
+        /// <para>The edition of the instance. Valid values: vector (Vector Search Edition) and engine (Retrieval Engine Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vector</para>
@@ -42,17 +42,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-83570439y0n</para>
+        /// <para>ha-cn-pl32rf0****</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. The default value is 10. The value must be in the range of 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzgpiswzbksdi</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Table { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>backup</para>
+            /// <para>opensearch</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oboms-disk</para>
+            /// <para>opensearch</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

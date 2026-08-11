@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ResultDatabasesFunctionsValue : TeaModel {
         /// <summary>
+        /// <para>The name of the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The signature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gfasdds2****2wfrkv</para>
         /// </summary>

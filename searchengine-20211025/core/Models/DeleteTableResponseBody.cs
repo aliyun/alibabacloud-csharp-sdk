@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>requestId</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Map</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

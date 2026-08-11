@@ -11,15 +11,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
     public class GetAdvanceConfigRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The type of the advanced configuration. Valid values: -ONLINE: online configuration</description></item>
-        /// <item><description>\-ONLINE_CAVA: online Cava configuration</description></item>
-        /// <item><description>\-ONLINE_PLUGIN: online plug-in configuration</description></item>
-        /// <item><description>\-ONLINE_QUERY: query configuration</description></item>
-        /// <item><description>\-OFFLINE_DICT: offline dictionary configuration</description></item>
-        /// <item><description>\-OFFLINE_TABLE: offline table configuration</description></item>
-        /// <item><description>\-OFFLINE_COMMON: offline configuration</description></item>
-        /// <item><description>\-OFFLINE_PLUGIN: offline plug-in configuration</description></item>
-        /// <item><description>\-OFFLINE_INDEX: index configuration</description></item>
+        /// <item><description><para>The type of the advanced configuration. Valid values: -ONLINE: online configuration</para>
+        /// </description></item>
+        /// <item><description><para>-ONLINE_CAVA: online Cava configuration</para>
+        /// </description></item>
+        /// <item><description><para>-ONLINE_PLUGIN: online plug-in configuration</para>
+        /// </description></item>
+        /// <item><description><para>-ONLINE_QUERY: query configuration</para>
+        /// </description></item>
+        /// <item><description><para>-OFFLINE_DICT: offline dictionary configuration</para>
+        /// </description></item>
+        /// <item><description><para>-OFFLINE_TABLE: offline table configuration</para>
+        /// </description></item>
+        /// <item><description><para>-OFFLINE_COMMON: offline configuration</para>
+        /// </description></item>
+        /// <item><description><para>-OFFLINE_PLUGIN: offline plug-in configuration</para>
+        /// </description></item>
+        /// <item><description><para>-OFFLINE_INDEX: index configuration</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

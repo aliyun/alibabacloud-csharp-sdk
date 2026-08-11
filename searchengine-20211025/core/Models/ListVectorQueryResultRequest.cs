@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The request body.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;tableName&quot;:&quot;api&quot;,&quot;ids&quot;:[&quot;1&quot;]}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

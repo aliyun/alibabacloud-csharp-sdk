@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class VariablesValue : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the variable is not allowed to be modified.</para>
+        /// <para>Specifies whether modification is not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? DisableModify { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the variable is modified.</para>
+        /// <para>Indicates whether the variable has been modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -33,36 +33,36 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The variable value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>qrs_connection_timeout</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// <para>The description of the variable.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>超时时间</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The template value of the variable.</para>
+        /// <para>The template value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>800</para>
         /// </summary>
         [NameInMap("templateValue")]
         [Validation(Required=false)]
         public string TemplateValue { get; set; }
 
         /// <summary>
-        /// <para>The variable type. Valid values:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: common variable</description></item>
+        /// <item><description>NORMAL: normal variable</description></item>
         /// <item><description>FUNCTION: function variable</description></item>
         /// </list>
         /// 
@@ -74,27 +74,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The function variables.</para>
+        /// <para>The function variable.</para>
         /// </summary>
         [NameInMap("funcValue")]
         [Validation(Required=false)]
         public VariablesValueFuncValue FuncValue { get; set; }
         public class VariablesValueFuncValue : TeaModel {
             /// <summary>
-            /// <para>The class name of the function variable.</para>
+            /// <para>The method class name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>ModifyFile</para>
             /// </summary>
             [NameInMap("funcClassName")]
             [Validation(Required=false)]
             public string FuncClassName { get; set; }
 
             /// <summary>
-            /// <para>The template of the function variable.</para>
+            /// <para>The template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>test-template</para>
             /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]

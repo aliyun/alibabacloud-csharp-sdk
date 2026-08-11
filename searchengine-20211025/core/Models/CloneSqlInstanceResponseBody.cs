@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CloneSqlInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>id of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10D5E615-69F7-5F49-B850-00169ADE513C</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>NodeVO</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public CloneSqlInstanceResponseBodyResult Result { get; set; }
         public class CloneSqlInstanceResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719221186114</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719221186114</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The primary key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-cn-pl32rf0****</para>
             /// </summary>
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether this is a directory. Valid values: - true: yes. - false: no.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -67,6 +77,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? IsDir { get; set; }
 
             /// <summary>
+            /// <para>The name of the SQL instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>general</para>
             /// </summary>
@@ -75,6 +87,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The parent task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -83,6 +97,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Parent { get; set; }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

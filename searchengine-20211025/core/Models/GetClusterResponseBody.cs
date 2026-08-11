@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The effective advanced configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_yyds_data1</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("currentAdvanceConfigVersion")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The effective online configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_yyds_data1</para>
+            /// <para>ha-cn-pl32rf0****_online_adv_v1</para>
             /// </summary>
             [NameInMap("currentOnlineConfigVersion")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The name of the Searcher worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>general</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The description of the cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fzz_test</para>
+            /// <para>Custom description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The latest advanced configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_yyds_data1</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("latestAdvanceConfigVersion")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The latest online configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_yyds_data1</para>
+            /// <para>ha-cn-pl32rf0****_online_adv_v1</para>
             /// </summary>
             [NameInMap("latestOnlineConfigVersion")]
             [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>general</para>
+            /// <para>bj_vpc_domain_2</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The name of the QRS worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>ha-cn-pl32rf0****_qrs</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]

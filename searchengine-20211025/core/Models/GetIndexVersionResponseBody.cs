@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ayoss-cn-zhangjiakou-b</para>
+            /// <para>hz_pre_vpc_domain_1</para>
             /// </summary>
             [NameInMap("cluster")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The ID of the offline deployment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot; &quot;</para>
+                /// <para>2648</para>
                 /// </summary>
                 [NameInMap("buildDeployId")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The name of the index table.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>table4</para>
+                /// <para>test_api</para>
                 /// </summary>
                 [NameInMap("indexName")]
                 [Validation(Required=false)]

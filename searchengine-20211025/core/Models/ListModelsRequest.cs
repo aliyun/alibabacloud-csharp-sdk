@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListModelsRequest : TeaModel {
         /// <summary>
+        /// <para>The model name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The model type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text_embedding</para>
         /// </summary>

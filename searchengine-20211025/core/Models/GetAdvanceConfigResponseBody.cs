@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The description of the advanced configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>close alarm, chiji id 37080</para>
+            /// <para>Custom remarks</para>
             /// </summary>
             [NameInMap("desc")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The file path.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>/cluster</para>
                 /// </summary>
                 [NameInMap("fullPathName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>Indicates whether the file is a directory.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>True</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("isDir")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>Indicates whether the file is a container.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>True</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("isTemplate")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ha-cn-2r42ostoc01_qrs</para>
+                /// <para>ha-cn-pl32rf0****_qrs</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The name of the advanced configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-0ju2s170b03_qrs</para>
+            /// <para>my_index</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0,1,3,6,8</para>
+            /// <para>used</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The time when the advanced configuration was updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>2024-05-21 16:05:26</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The end tim. The value is a timestamp in seconds.</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710432000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per num. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query statement</para>
+        /// <para>The search statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status: 200 AND totalTime &gt; 0.01</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a timestamp in seconds.</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1706340600</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>-push   -select</para>
+        /// <para>The log type. Valid values: \<c>select\\</c> (query logs) and \<c>push\\</c> (write logs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>push</para>

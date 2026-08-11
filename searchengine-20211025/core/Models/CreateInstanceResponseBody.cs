@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D39EE0F1-D7EF-5F46-B781-6BF4185308B0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-2r42ppr7901</para>
+            /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]

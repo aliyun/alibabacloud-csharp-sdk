@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListAdvanceConfigDirResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration files.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListAdvanceConfigDirResponseBodyResult> Result { get; set; }
         public class ListAdvanceConfigDirResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The absolute path in which the file is stored.</para>
+            /// <para>The full path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;/path/wpd/nae&quot;</para>
+            /// <para>/path/wpd/nae</para>
             /// </summary>
             [NameInMap("fullPathName")]
             [Validation(Required=false)]
             public string FullPathName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the file is a directory. Valid values: true and false.</para>
+            /// <para>Indicates whether the entry is a directory. Valid values: - true: The entry is a directory. - false: The entry is not a directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? IsDir { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the file is a template. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>Indicates whether the entry is a template. Valid values: - <b>true</b>: The entry is a template. - <b>false</b>: The entry is not a template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>file_name_1</para>
+            /// <para>hz_pre_vpc_domain_1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

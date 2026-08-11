@@ -18,7 +18,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "searchengine.ap-southeast-1.aliyuncs.com"},
+                {"cn-beijing", "searchengine.cn-beijing.aliyuncs.com"},
+                {"cn-hangzhou", "searchengine.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "searchengine.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "searchengine.cn-shenzhen.aliyuncs.com"},
+                {"cn-hongkong", "searchengine.cn-hongkong.aliyuncs.com"},
+                {"cn-zhangjiakou", "searchengine.cn-zhangjiakou.aliyuncs.com"},
+                {"eu-central-1", "searchengine.eu-central-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("searchengine", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers reindexing.</para>
+        /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -127,7 +138,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers reindexing.</para>
+        /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -215,7 +226,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers reindexing.</para>
+        /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -244,7 +255,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers reindexing.</para>
+        /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -273,8 +284,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换实例资源组</para>
+        /// <para>Changes the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -323,8 +344,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换实例资源组</para>
+        /// <para>Changes the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -373,8 +404,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换实例资源组</para>
+        /// <para>Changes the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -392,8 +433,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换实例资源组</para>
+        /// <para>Changes the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/actions/change-resource-group
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -409,6 +460,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ChangeResourceGroupWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clones an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloneSqlInstanceRequest
         /// </param>
@@ -454,6 +520,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CloneSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clones an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloneSqlInstanceRequest
         /// </param>
@@ -499,6 +580,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CloneSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clones an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloneSqlInstanceRequest
         /// </param>
@@ -513,6 +609,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CloneSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clones an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/clone
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloneSqlInstanceRequest
         /// </param>
@@ -527,6 +638,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CloneSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAliasRequest
         /// </param>
@@ -578,6 +705,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAliasRequest
         /// </param>
@@ -629,6 +772,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAliasRequest
         /// </param>
@@ -643,6 +802,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateAliasWithOptions(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAliasRequest
         /// </param>
@@ -659,15 +834,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster.</para>
+        /// <para>Add a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#method"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -729,15 +906,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster.</para>
+        /// <para>Add a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#method"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -799,15 +978,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster.</para>
+        /// <para>Add a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#method"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -826,15 +1007,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster.</para>
+        /// <para>Add a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#method"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -851,6 +1034,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateClusterWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file directory in an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigDirRequest
         /// </param>
@@ -896,6 +1095,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigDirResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file directory in an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigDirRequest
         /// </param>
@@ -941,6 +1156,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file directory in an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigDirRequest
         /// </param>
@@ -955,6 +1186,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateConfigDirWithOptions(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file directory in an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigDirRequest
         /// </param>
@@ -969,6 +1216,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateConfigDirWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file with advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigFileRequest
         /// </param>
@@ -1018,6 +1281,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file with advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigFileRequest
         /// </param>
@@ -1067,6 +1346,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file with advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigFileRequest
         /// </param>
@@ -1081,6 +1376,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file with advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConfigFileRequest
         /// </param>
@@ -1097,8 +1408,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates data sources.</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -1169,8 +1491,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates data sources.</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -1241,8 +1574,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates data sources.</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -1260,8 +1604,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates data sources.</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -1277,6 +1632,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateDataSourceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateFolderRequest
         /// </param>
@@ -1326,6 +1697,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateFolderRequest
         /// </param>
@@ -1375,6 +1762,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateFolderRequest
         /// </param>
@@ -1389,6 +1792,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateFolderWithOptions(instanceId, database, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateFolderRequest
         /// </param>
@@ -1651,15 +2070,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Havenask instance.</para>
+        /// <para>Creates a Wentian engine instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1721,15 +2143,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Havenask instance.</para>
+        /// <para>Creates a Wentian engine instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1791,15 +2216,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Havenask instance.</para>
+        /// <para>Creates a Wentian engine instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1818,15 +2246,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Havenask instance.</para>
+        /// <para>Creates a Wentian engine instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>POST</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1845,7 +2276,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型信息</para>
+        /// <para>Creates a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +2332,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型信息</para>
+        /// <para>Creates a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,7 +2388,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型信息</para>
+        /// <para>Creates a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1976,7 +2407,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型信息</para>
+        /// <para>Creates a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1995,8 +2426,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public endpoint.</para>
+        /// <para>Enables the public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -2031,8 +2473,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public endpoint.</para>
+        /// <para>Enables the public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -2067,8 +2520,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public endpoint.</para>
+        /// <para>Enables the public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// CreatePublicUrlResponse
@@ -2082,8 +2546,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public endpoint.</para>
+        /// <para>Enables the public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// CreatePublicUrlResponse
@@ -2095,6 +2570,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreatePublicUrlWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSqlInstanceRequest
         /// </param>
@@ -2140,6 +2631,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSqlInstanceRequest
         /// </param>
@@ -2185,6 +2692,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSqlInstanceRequest
         /// </param>
@@ -2199,6 +2722,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateSqlInstanceWithOptions(instanceId, database, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSqlInstanceRequest
         /// </param>
@@ -2217,6 +2756,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Creates an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTableRequest
@@ -2306,6 +2856,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Creates an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTableRequest
         /// </param>
@@ -2394,6 +2955,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Creates an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTableRequest
         /// </param>
@@ -2413,6 +2985,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Creates an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTableRequest
         /// </param>
@@ -2429,7 +3012,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Debugs a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2481,7 +3064,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Debugs a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2533,7 +3116,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Debugs a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2552,7 +3135,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Debugs a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2711,6 +3294,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteAdvanceConfigWithOptionsAsync(instanceId, configName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2742,6 +3341,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2773,6 +3388,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteAliasResponse
         /// </returns>
@@ -2783,6 +3414,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteAliasWithOptions(instanceId, alias, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteAliasResponse
         /// </returns>
@@ -2793,6 +3440,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteAliasWithOptionsAsync(instanceId, alias, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigDirRequest
         /// </param>
@@ -2838,6 +3501,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigDirResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigDirRequest
         /// </param>
@@ -2883,6 +3562,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigDirRequest
         /// </param>
@@ -2897,6 +3592,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteConfigDirWithOptions(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigDirRequest
         /// </param>
@@ -2911,6 +3622,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteConfigDirWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigFileRequest
         /// </param>
@@ -2956,6 +3683,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigFileRequest
         /// </param>
@@ -3001,6 +3744,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigFileRequest
         /// </param>
@@ -3015,6 +3774,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteConfigFileRequest
         /// </param>
@@ -3163,6 +3938,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteDataSourceWithOptionsAsync(instanceId, dataSourceName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3194,6 +3984,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3225,6 +4030,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteFolderResponse
         /// </returns>
@@ -3235,6 +4055,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteFolderWithOptions(instanceId, database, folderId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteFolderResponse
         /// </returns>
@@ -3701,7 +4536,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3737,7 +4572,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3773,7 +4608,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3788,7 +4623,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3803,8 +4638,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公网域名</para>
+        /// <para>Deletes a public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3839,8 +4685,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公网域名</para>
+        /// <para>Deletes a public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3875,8 +4732,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公网域名</para>
+        /// <para>Deletes a public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// DeletePublicUrlResponse
@@ -3890,8 +4758,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公网域名</para>
+        /// <para>Deletes a public domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// DeletePublicUrlResponse
@@ -3903,6 +4782,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeletePublicUrlWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3934,6 +4828,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3965,6 +4874,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteSqlInstanceResponse
         /// </returns>
@@ -3975,6 +4899,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteSqlInstanceResponse
         /// </returns>
@@ -3987,8 +4926,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an index table.</para>
+        /// <para>Delete an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4023,8 +4972,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an index table.</para>
+        /// <para>Delete an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4059,8 +5018,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an index table.</para>
+        /// <para>Delete an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteTableResponse
@@ -4074,8 +5043,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an index table.</para>
+        /// <para>Delete an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteTableResponse
@@ -4091,6 +5070,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries available regions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/regions
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRegionsRequest
@@ -4138,6 +5127,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/regions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -4184,6 +5183,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/regions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -4203,6 +5212,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/regions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -4217,6 +5236,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSqlInstanceRequest
         /// </param>
@@ -4282,6 +5316,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ExecuteSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSqlInstanceRequest
         /// </param>
@@ -4347,6 +5396,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ExecuteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSqlInstanceRequest
         /// </param>
@@ -4361,6 +5425,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ExecuteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/actions/execution
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSqlInstanceRequest
         /// </param>
@@ -4859,7 +5938,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Query a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4903,7 +5982,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Query a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4947,7 +6026,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Query a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4970,7 +6049,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Query a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5261,8 +6340,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源部署信息</para>
+        /// <para>Retrieves the deployment information for a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5297,8 +6386,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源部署信息</para>
+        /// <para>Retrieves the deployment information for a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5333,8 +6432,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源部署信息</para>
+        /// <para>Retrieves the deployment information for a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// GetDataSourceDeployResponse
@@ -5348,8 +6457,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源部署信息</para>
+        /// <para>Retrieves the deployment information for a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// GetDataSourceDeployResponse
@@ -5361,6 +6480,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetDataSourceDeployWithOptionsAsync(instanceId, deployName, dataSourceName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema of a database.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5392,6 +6526,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDatabaseSchemaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema of a database.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5423,6 +6572,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDatabaseSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema of a database.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// GetDatabaseSchemaResponse
         /// </returns>
@@ -5433,6 +6597,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetDatabaseSchemaWithOptions(instanceId, database, tableName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the schema of a database.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/tables/{tableName}/schema
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// GetDatabaseSchemaResponse
         /// </returns>
@@ -5583,15 +6762,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an index table version.</para>
+        /// <para>Retrieves the details of an index version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
         /// </c></pre>
         /// </description>
@@ -5639,15 +6818,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an index table version.</para>
+        /// <para>Retrieves the details of an index version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
         /// </c></pre>
         /// </description>
@@ -5695,15 +6874,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an index table version.</para>
+        /// <para>Retrieves the details of an index version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
         /// </c></pre>
         /// </description>
@@ -5724,15 +6903,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an index table version.</para>
+        /// <para>Retrieves the details of an index version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
         /// </c></pre>
         /// </description>
@@ -5753,15 +6932,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index version.</para>
+        /// <para>Retrieves the details of an index table version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
         /// </c></pre>
         /// </description>
@@ -5799,15 +6978,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index version.</para>
+        /// <para>Retrieves the details of an index table version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
         /// </c></pre>
         /// </description>
@@ -5845,15 +7024,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index version.</para>
+        /// <para>Retrieves the details of an index table version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
         /// </c></pre>
         /// </description>
@@ -5870,15 +7049,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index version.</para>
+        /// <para>Retrieves the details of an index table version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Method</h2>
+        /// <h2>Method</h2>
         /// <pre><c>GET
         /// </c></pre>
-        /// <h2><a href="#uri"></a>URI</h2>
+        /// <h2>URI</h2>
         /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
         /// </c></pre>
         /// </description>
@@ -5897,6 +7076,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries the online effective policy of an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5934,6 +7123,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries the online effective policy of an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5970,6 +7169,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries the online effective policy of an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// GetIndexOnlineStrategyResponse
         /// </returns>
@@ -5984,6 +7193,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries the online effective policy of an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// GetIndexOnlineStrategyResponse
@@ -6139,15 +7358,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// <para>Retrieves the details of an instance by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
+        /// <h3>Method</h3>
         /// <pre><code class="language-java">GET
         /// </c></pre>
-        /// <h3><a href="#uri"></a>URI</h3>
+        /// <h3>URI</h3>
         /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
         /// </c></pre>
         /// </description>
@@ -6185,15 +7404,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// <para>Retrieves the details of an instance by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
+        /// <h3>Method</h3>
         /// <pre><code class="language-java">GET
         /// </c></pre>
-        /// <h3><a href="#uri"></a>URI</h3>
+        /// <h3>URI</h3>
         /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
         /// </c></pre>
         /// </description>
@@ -6231,15 +7450,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// <para>Retrieves the details of an instance by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
+        /// <h3>Method</h3>
         /// <pre><code class="language-java">GET
         /// </c></pre>
-        /// <h3><a href="#uri"></a>URI</h3>
+        /// <h3>URI</h3>
         /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
         /// </c></pre>
         /// </description>
@@ -6256,15 +7475,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// <para>Retrieves the details of an instance by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
+        /// <h3>Method</h3>
         /// <pre><code class="language-java">GET
         /// </c></pre>
-        /// <h3><a href="#uri"></a>URI</h3>
+        /// <h3>URI</h3>
         /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
         /// </c></pre>
         /// </description>
@@ -6281,16 +7500,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID和模型名称查询特定模型的详细配置信息。</para>
+        /// <para>Queries the detailed configuration of a specific model by instance ID and model name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</description></item>
-        /// <item><description>确保提供的<c>instanceId</c>和<c>modelName</c>是有效的，否则可能返回错误或找不到资源。</description></item>
-        /// <item><description>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</description></item>
+        /// <item><description>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</description></item>
+        /// <item><description>Ensure that the provided <c>instanceId</c> and <c>modelName</c> are valid. Otherwise, an error is returned or the resource cannot be found.</description></item>
+        /// <item><description>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6327,16 +7546,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID和模型名称查询特定模型的详细配置信息。</para>
+        /// <para>Queries the detailed configuration of a specific model by instance ID and model name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</description></item>
-        /// <item><description>确保提供的<c>instanceId</c>和<c>modelName</c>是有效的，否则可能返回错误或找不到资源。</description></item>
-        /// <item><description>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</description></item>
+        /// <item><description>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</description></item>
+        /// <item><description>Ensure that the provided <c>instanceId</c> and <c>modelName</c> are valid. Otherwise, an error is returned or the resource cannot be found.</description></item>
+        /// <item><description>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6373,16 +7592,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID和模型名称查询特定模型的详细配置信息。</para>
+        /// <para>Queries the detailed configuration of a specific model by instance ID and model name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</description></item>
-        /// <item><description>确保提供的<c>instanceId</c>和<c>modelName</c>是有效的，否则可能返回错误或找不到资源。</description></item>
-        /// <item><description>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</description></item>
+        /// <item><description>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</description></item>
+        /// <item><description>Ensure that the provided <c>instanceId</c> and <c>modelName</c> are valid. Otherwise, an error is returned or the resource cannot be found.</description></item>
+        /// <item><description>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6398,16 +7617,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID和模型名称查询特定模型的详细配置信息。</para>
+        /// <para>Queries the detailed configuration of a specific model by instance ID and model name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</description></item>
-        /// <item><description>确保提供的<c>instanceId</c>和<c>modelName</c>是有效的，否则可能返回错误或找不到资源。</description></item>
-        /// <item><description>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</description></item>
+        /// <item><description>This API retrieves the details of a specific model in an instance, such as its model type, URL, and status.</description></item>
+        /// <item><description>Ensure that the provided <c>instanceId</c> and <c>modelName</c> are valid. Otherwise, an error is returned or the resource cannot be found.</description></item>
+        /// <item><description>The response includes the model content, such as request headers and parameters. It also contains the creation and update times. This information helps you understand the model\&quot;s configuration and its current status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6423,8 +7642,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the configuration information of a node.</para>
+        /// <para>Retrieves the configuration information of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetNodeConfigRequest
@@ -6477,8 +7707,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the configuration information of a node.</para>
+        /// <para>Retrieves the configuration information of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetNodeConfigRequest
@@ -6531,8 +7772,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the configuration information of a node.</para>
+        /// <para>Retrieves the configuration information of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetNodeConfigRequest
@@ -6550,8 +7802,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the configuration information of a node.</para>
+        /// <para>Retrieves the configuration information of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetNodeConfigRequest
@@ -6567,6 +7830,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetNodeConfigWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves SQL instance information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlInstanceRequest
         /// </param>
@@ -6608,6 +7887,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves SQL instance information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlInstanceRequest
         /// </param>
@@ -6649,6 +7944,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves SQL instance information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlInstanceRequest
         /// </param>
@@ -6663,6 +7974,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves SQL instance information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlInstanceRequest
         /// </param>
@@ -6679,8 +8006,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index table.</para>
+        /// <para>Get index table information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6715,8 +8052,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index table.</para>
+        /// <para>Get index table information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6751,8 +8098,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index table.</para>
+        /// <para>Get index table information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// GetTableResponse
@@ -6766,8 +8123,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an index table.</para>
+        /// <para>Get index table information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <returns>
         /// GetTableResponse
@@ -6783,6 +8150,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries the status of an index version based on the ID of the full index version.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6820,6 +8197,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries the status of an index version based on the ID of the full index version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -6856,6 +8243,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries the status of an index version based on the ID of the full index version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// GetTableGenerationResponse
         /// </returns>
@@ -6871,6 +8268,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries the status of an index version based on the ID of the full index version.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions/{generationId}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// GetTableGenerationResponse
         /// </returns>
@@ -6883,15 +8290,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// <para>Retrieves the list of files in an advanced configuration directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <para><c>GET</c></para>
-        /// <h2>URI</h2>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -6937,15 +8347,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// <para>Retrieves the list of files in an advanced configuration directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <para><c>GET</c></para>
-        /// <h2>URI</h2>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -6991,15 +8404,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// <para>Retrieves the list of files in an advanced configuration directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <para><c>GET</c></para>
-        /// <h2>URI</h2>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7018,15 +8434,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// <para>Retrieves the list of files in an advanced configuration directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <para><c>GET</c></para>
-        /// <h2>URI</h2>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7045,13 +8464,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of advanced configurations.</para>
+        /// <para>Retrieves a list of advanced configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Sample requests</h2>
-        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7117,13 +8540,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of advanced configurations.</para>
+        /// <para>Retrieves a list of advanced configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Sample requests</h2>
-        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7189,13 +8616,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of advanced configurations.</para>
+        /// <para>Retrieves a list of advanced configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Sample requests</h2>
-        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7214,13 +8645,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of advanced configurations.</para>
+        /// <para>Retrieves a list of advanced configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Sample requests</h2>
-        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs?type=online
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -7237,6 +8672,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListAdvanceConfigsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists table aliases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -7268,6 +8718,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAliasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists table aliases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -7299,6 +8764,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAliasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists table aliases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListAliasesResponse
         /// </returns>
@@ -7309,6 +8789,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListAliasesWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists table aliases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListAliasesResponse
         /// </returns>
@@ -8147,6 +9642,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDataSourcesWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the existing databases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -8178,6 +9688,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the existing databases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -8209,6 +9734,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the existing databases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListDatabasesResponse
         /// </returns>
@@ -8219,6 +9759,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDatabasesWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the existing databases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListDatabasesResponse
         /// </returns>
@@ -8231,15 +9786,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical index versions of a data source.</para>
+        /// <para>Retrieves the historical data backflow information of a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>GET</c></para>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -8289,15 +9846,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical index versions of a data source.</para>
+        /// <para>Retrieves the historical data backflow information of a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>GET</c></para>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -8347,15 +9906,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical index versions of a data source.</para>
+        /// <para>Retrieves the historical data backflow information of a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>GET</c></para>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -8374,15 +9935,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical index versions of a data source.</para>
+        /// <para>Retrieves the historical data backflow information of a data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>GET</c></para>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -8399,6 +9962,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDateSourceGenerationsWithOptionsAsync(instanceId, dataSourceName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists data recovery records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -8430,6 +10008,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexRecoverRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists data recovery records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -8461,6 +10054,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexRecoverRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists data recovery records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListIndexRecoverRecordsResponse
         /// </returns>
@@ -8471,6 +10079,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListIndexRecoverRecordsWithOptions(indexName, instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists data recovery records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/list-recover-records
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListIndexRecoverRecordsResponse
         /// </returns>
@@ -8483,7 +10106,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the index list.</para>
+        /// <para>Retrieves a list of indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8551,7 +10174,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the index list.</para>
+        /// <para>Retrieves a list of indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8619,7 +10242,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the index list.</para>
+        /// <para>Retrieves a list of indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8648,7 +10271,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the index list.</para>
+        /// <para>Retrieves a list of indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8839,15 +10462,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>GET</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8939,15 +10564,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>GET</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9039,15 +10666,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>GET</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -9066,15 +10695,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Method</h3>
-        /// <para><c>GET</c></para>
-        /// <h3><a href="#uri"></a>URI</h3>
-        /// <para><c>/openapi/ha3/instances</c></para>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -9091,6 +10722,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListLogsRequest
         /// </param>
@@ -9152,6 +10798,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListLogsRequest
         /// </param>
@@ -9213,6 +10874,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListLogsRequest
         /// </param>
@@ -9227,6 +10903,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListLogsWithOptions(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/logs
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListLogsRequest
         /// </param>
@@ -9243,13 +10934,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定条件下的模型列表。</para>
+        /// <para>Queries a list of models that meet specified conditions by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9307,13 +10998,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定条件下的模型列表。</para>
+        /// <para>Queries a list of models that meet specified conditions by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9371,13 +11062,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定条件下的模型列表。</para>
+        /// <para>Queries a list of models that meet specified conditions by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9396,13 +11087,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定条件下的模型列表。</para>
+        /// <para>Queries a list of models that meet specified conditions by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation retrieves a list of models from a specified instance. You can filter results by model name, type, and pagination parameters. Provide the instance ID as a path parameter. Other filter conditions are optional query parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9421,7 +11112,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an online configuration.</para>
+        /// <para>Query an online configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9477,7 +11168,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an online configuration.</para>
+        /// <para>Query an online configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9533,7 +11224,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an online configuration.</para>
+        /// <para>Query an online configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9562,7 +11253,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an online configuration.</para>
+        /// <para>Query an online configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9589,6 +11280,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListOnlineConfigsWithOptionsAsync(instanceId, nodeName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pause policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9620,6 +11326,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPausePolicysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pause policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9651,6 +11372,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPausePolicysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pause policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListPausePolicysResponse
         /// </returns>
@@ -9661,6 +11397,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListPausePolicysWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pause policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListPausePolicysResponse
         /// </returns>
@@ -9673,8 +11424,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版使用POST请求获取搜索测试结果</para>
+        /// <para>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPostQueryResultRequest
@@ -9725,8 +11486,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版使用POST请求获取搜索测试结果</para>
+        /// <para>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPostQueryResultRequest
@@ -9777,8 +11548,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版使用POST请求获取搜索测试结果</para>
+        /// <para>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPostQueryResultRequest
@@ -9796,8 +11577,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版使用POST请求获取搜索测试结果</para>
+        /// <para>Retrieves the results of a search test for a Retrieval-Augmented Generation Edition instance by sending a POST request.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPostQueryResultRequest
@@ -9985,8 +11776,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版获取rest查询搜索测试结果</para>
+        /// <para>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRestQueryResultRequest
@@ -10035,8 +11836,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版获取rest查询搜索测试结果</para>
+        /// <para>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRestQueryResultRequest
@@ -10085,8 +11896,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版获取rest查询搜索测试结果</para>
+        /// <para>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRestQueryResultRequest
@@ -10104,8 +11925,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>召回引擎版获取rest查询搜索测试结果</para>
+        /// <para>Retrieves the test results of a REST search query for a Retrieval Engine Edition instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/rest-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRestQueryResultRequest
@@ -10123,8 +11954,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据源配置获取schema信息</para>
+        /// <para>Retrieves a list of schemas based on a data synchronization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -10197,8 +12038,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据源配置获取schema信息</para>
+        /// <para>Retrieves a list of schemas based on a data synchronization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -10271,8 +12122,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据源配置获取schema信息</para>
+        /// <para>Retrieves a list of schemas based on a data synchronization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -10290,8 +12151,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据源配置获取schema信息</para>
+        /// <para>Retrieves a list of schemas based on a data synchronization configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/schemas
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -10311,6 +12182,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries a list of index versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -10348,6 +12229,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index versions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -10384,6 +12275,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index versions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListTableGenerationsResponse
         /// </returns>
@@ -10399,6 +12300,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index versions.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/index_versions
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// ListTableGenerationsResponse
         /// </returns>
@@ -10413,6 +12324,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Queries a list of index tables.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTablesRequest
@@ -10460,6 +12381,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index tables.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTablesRequest
         /// </param>
@@ -10506,6 +12437,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index tables.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTablesRequest
         /// </param>
@@ -10525,6 +12466,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Queries a list of index tables.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTablesRequest
         /// </param>
@@ -10541,8 +12492,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to one or more resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListTagResourcesRequest
@@ -10609,8 +12570,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to one or more resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListTagResourcesRequest
@@ -10677,8 +12648,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to one or more resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -10696,8 +12677,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to one or more resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -10715,8 +12706,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// <para>Retrieves the change history for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTasksRequest
@@ -10765,8 +12766,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// <para>Retrieves the change history for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTasksRequest
@@ -10815,8 +12826,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// <para>Retrieves the change history for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTasksRequest
@@ -10834,8 +12855,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// <para>Retrieves the change history for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tasks
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTasksRequest
@@ -10853,8 +12884,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向量检索版获取向量查询搜索测试结果</para>
+        /// <para>Retrieves the results of a vector query test in Vector Search Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListVectorQueryResultRequest
@@ -10913,8 +12954,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向量检索版获取向量查询搜索测试结果</para>
+        /// <para>Retrieves the results of a vector query test in Vector Search Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListVectorQueryResultRequest
@@ -10973,8 +13024,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向量检索版获取向量查询搜索测试结果</para>
+        /// <para>Retrieves the results of a vector query test in Vector Search Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListVectorQueryResultRequest
@@ -10992,8 +13053,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向量检索版获取向量查询搜索测试结果</para>
+        /// <para>Retrieves the results of a vector query test in Vector Search Edition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/vector-query
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListVectorQueryResultRequest
@@ -11009,6 +13080,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListVectorQueryResultWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the content of HTTP or Git files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAdvanceConfigRequest
         /// </param>
@@ -11074,6 +13160,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the content of HTTP or Git files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAdvanceConfigRequest
         /// </param>
@@ -11139,6 +13240,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the content of HTTP or Git files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAdvanceConfigRequest
         /// </param>
@@ -11153,6 +13269,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyAdvanceConfigWithOptions(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the content of HTTP or Git files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAdvanceConfigRequest
         /// </param>
@@ -11169,16 +13300,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configurations.</para>
+        /// <para>Modifies a dictionary.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Method</h2>
-        /// <pre><c>put
+        /// <pre><c>PUT
         /// </c></pre>
         /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
         /// </c></pre>
         /// </description>
         /// 
@@ -11235,16 +13366,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configurations.</para>
+        /// <para>Modifies a dictionary.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Method</h2>
-        /// <pre><c>put
+        /// <pre><c>PUT
         /// </c></pre>
         /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
         /// </c></pre>
         /// </description>
         /// 
@@ -11301,16 +13432,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configurations.</para>
+        /// <para>Modifies a dictionary.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Method</h2>
-        /// <pre><c>put
+        /// <pre><c>PUT
         /// </c></pre>
         /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
         /// </c></pre>
         /// </description>
         /// 
@@ -11330,16 +13461,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configurations.</para>
+        /// <para>Modifies a dictionary.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Method</h2>
-        /// <pre><c>put
+        /// <pre><c>PUT
         /// </c></pre>
         /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file
         /// </c></pre>
         /// </description>
         /// 
@@ -11357,6 +13488,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyAdvanceConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a table alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAliasRequest
         /// </param>
@@ -11402,6 +13548,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a table alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAliasRequest
         /// </param>
@@ -11447,6 +13608,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a table alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAliasRequest
         /// </param>
@@ -11461,6 +13637,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyAliasWithOptions(instanceId, alias, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a table alias.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/aliases/{alias}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyAliasRequest
         /// </param>
@@ -12031,8 +14222,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源部署信息</para>
+        /// <para>Modifies the deployment information of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDataSourceDeployRequest
@@ -12103,8 +14305,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源部署信息</para>
+        /// <para>Modifies the deployment information of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDataSourceDeployRequest
@@ -12175,8 +14388,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源部署信息</para>
+        /// <para>Modifies the deployment information of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDataSourceDeployRequest
@@ -12194,8 +14418,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源部署信息</para>
+        /// <para>Modifies the deployment information of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDataSourceDeployRequest
@@ -12403,8 +14638,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑索引表</para>
+        /// <para>Modifies an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexRequest
@@ -12503,8 +14749,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑索引表</para>
+        /// <para>Modifies an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexRequest
@@ -12603,8 +14860,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑索引表</para>
+        /// <para>Modifies an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexRequest
@@ -12622,8 +14890,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑索引表</para>
+        /// <para>Modifies an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexRequest
@@ -12643,6 +14922,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Modifies the online policy of an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexOnlineStrategyRequest
@@ -12690,6 +14979,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Modifies the online policy of an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyIndexOnlineStrategyRequest
         /// </param>
@@ -12736,6 +15035,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Modifies the online policy of an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyIndexOnlineStrategyRequest
         /// </param>
@@ -12754,6 +15063,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Modifies the online policy of an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/deploys/{deployName}/indexes/{indexName}/online-strategy
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyIndexOnlineStrategyRequest
@@ -13117,7 +15436,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型详情，修改模型状态</para>
+        /// <para>Modifies the details and status of a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13173,7 +15492,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型详情，修改模型状态</para>
+        /// <para>Modifies the details and status of a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13229,7 +15548,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型详情，修改模型状态</para>
+        /// <para>Modifies the details and status of a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13248,7 +15567,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型详情，修改模型状态</para>
+        /// <para>Modifies the details and status of a model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13267,7 +15586,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a node.</para>
+        /// <para>Modify a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13361,7 +15680,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a node.</para>
+        /// <para>Modify a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13455,7 +15774,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a node.</para>
+        /// <para>Modify a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13484,7 +15803,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a node.</para>
+        /// <para>Modify a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13683,15 +16002,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的密码</para>
+        /// <para>Modifies the password of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>PUT</c></para>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -13741,15 +16063,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的密码</para>
+        /// <para>Modifies the password of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>PUT</c></para>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -13799,15 +16124,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的密码</para>
+        /// <para>Modifies the password of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>PUT</c></para>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -13826,15 +16154,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的密码</para>
+        /// <para>Modifies the password of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>PUT</c></para>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/password
+        /// ```.
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -13851,6 +16182,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyPasswordWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the pause policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyPausePolicyRequest
         /// </param>
@@ -13892,6 +16238,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPausePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the pause policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyPausePolicyRequest
         /// </param>
@@ -13933,6 +16294,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPausePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the pause policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyPausePolicyRequest
         /// </param>
@@ -13947,6 +16323,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyPausePolicyWithOptions(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the pause policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/pause-policies
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyPausePolicyRequest
         /// </param>
@@ -13963,8 +16354,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改公网域名访问白名单</para>
+        /// <para>Modifies the public domain name whitelist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPublicUrlIpListRequest
@@ -14009,8 +16410,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改公网域名访问白名单</para>
+        /// <para>Modifies the public domain name whitelist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPublicUrlIpListRequest
@@ -14055,8 +16466,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改公网域名访问白名单</para>
+        /// <para>Modifies the public domain name whitelist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPublicUrlIpListRequest
@@ -14074,8 +16495,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改公网域名访问白名单</para>
+        /// <para>Modifies the public domain name whitelist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/public-url-ip-list
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPublicUrlIpListRequest
@@ -14093,13 +16524,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定实例ID来修改数据节点的副本或分片数量。</para>
+        /// <para>Modifies the number of replicas or shards for data nodes in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<c>replica</c>（副本数）或<c>partition</c>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<c>replica</c>) or shards (<c>partition</c>). These parameters are optional, but you must specify at least one of them to update the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14149,13 +16580,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定实例ID来修改数据节点的副本或分片数量。</para>
+        /// <para>Modifies the number of replicas or shards for data nodes in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<c>replica</c>（副本数）或<c>partition</c>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<c>replica</c>) or shards (<c>partition</c>). These parameters are optional, but you must specify at least one of them to update the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14205,13 +16636,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定实例ID来修改数据节点的副本或分片数量。</para>
+        /// <para>Modifies the number of replicas or shards for data nodes in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<c>replica</c>（副本数）或<c>partition</c>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<c>replica</c>) or shards (<c>partition</c>). These parameters are optional, but you must specify at least one of them to update the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14230,13 +16661,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定实例ID来修改数据节点的副本或分片数量。</para>
+        /// <para>Modifies the number of replicas or shards for data nodes in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定实例下的数据节点副本数或分片数。请求时，需提供实例ID，并在请求体中指定要修改的<c>replica</c>（副本数）或<c>partition</c>（分片数）。请注意，这两个参数都是可选的，但至少需要提供其中一个以执行更新操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API lets you modify the number of replicas or shards for data nodes in a specific instance. When you make a request, provide the instance ID. In the request body, specify the number of replicas (<c>replica</c>) or shards (<c>partition</c>). These parameters are optional, but you must specify at least one of them to update the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14257,6 +16688,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Modifies an index table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyTableRequest
@@ -14334,6 +16775,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Modifies an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyTableRequest
         /// </param>
@@ -14410,6 +16861,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Modifies an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyTableRequest
         /// </param>
@@ -14429,6 +16890,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Modifies an index table.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyTableRequest
         /// </param>
@@ -14445,16 +16916,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a version of advanced configurations.</para>
+        /// <para>Publishes an advanced version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <pre><c>POST
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
         /// </c></pre>
-        /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// ```.
         /// </c></pre>
         /// </description>
         /// 
@@ -14505,16 +16977,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a version of advanced configurations.</para>
+        /// <para>Publishes an advanced version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <pre><c>POST
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
         /// </c></pre>
-        /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// ```.
         /// </c></pre>
         /// </description>
         /// 
@@ -14565,16 +17038,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a version of advanced configurations.</para>
+        /// <para>Publishes an advanced version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <pre><c>POST
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
         /// </c></pre>
-        /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// ```.
         /// </c></pre>
         /// </description>
         /// 
@@ -14594,16 +17068,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a version of advanced configurations.</para>
+        /// <para>Publishes an advanced version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Method</h2>
-        /// <pre><c>POST
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
         /// </c></pre>
-        /// <h2>URI</h2>
-        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// ```.
         /// </c></pre>
         /// </description>
         /// 
@@ -14791,6 +17266,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await PublishIndexVersionWithOptionsAsync(instanceId, indexName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pushes documents.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PushDocumentsRequest
         /// </param>
@@ -14833,6 +17323,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PushDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pushes documents.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PushDocumentsRequest
         /// </param>
@@ -14875,6 +17380,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PushDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pushes documents.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PushDocumentsRequest
         /// </param>
@@ -14889,6 +17409,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return PushDocumentsWithOptions(instanceId, dataSourceName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pushes documents.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/actions/bulk
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PushDocumentsRequest
         /// </param>
@@ -14905,15 +17440,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data from an index.</para>
+        /// <para>Recovers data from an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>POST</c></para>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -14933,6 +17470,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                body["bucket"] = request.Bucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildDeployId))
             {
                 body["buildDeployId"] = request.BuildDeployId;
@@ -14948,6 +17489,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexName))
             {
                 body["indexName"] = request.IndexName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsAccessId))
+            {
+                body["odpsAccessId"] = request.OdpsAccessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsAccessKey))
+            {
+                body["odpsAccessKey"] = request.OdpsAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsPartition))
+            {
+                body["odpsPartition"] = request.OdpsPartition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsProject))
+            {
+                body["odpsProject"] = request.OdpsProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsTable))
+            {
+                body["odpsTable"] = request.OdpsTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutPutType))
+            {
+                body["outPutType"] = request.OutPutType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["path"] = request.Path;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14971,15 +17540,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data from an index.</para>
+        /// <para>Recovers data from an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>POST</c></para>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -14999,6 +17570,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                body["bucket"] = request.Bucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildDeployId))
             {
                 body["buildDeployId"] = request.BuildDeployId;
@@ -15014,6 +17589,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexName))
             {
                 body["indexName"] = request.IndexName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsAccessId))
+            {
+                body["odpsAccessId"] = request.OdpsAccessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsAccessKey))
+            {
+                body["odpsAccessKey"] = request.OdpsAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsPartition))
+            {
+                body["odpsPartition"] = request.OdpsPartition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsProject))
+            {
+                body["odpsProject"] = request.OdpsProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OdpsTable))
+            {
+                body["odpsTable"] = request.OdpsTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutPutType))
+            {
+                body["outPutType"] = request.OutPutType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["path"] = request.Path;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15037,15 +17640,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data from an index.</para>
+        /// <para>Recovers data from an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>POST</c></para>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -15064,15 +17669,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data from an index.</para>
+        /// <para>Recovers data from an index.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Method</h3>
-        /// <para><c>POST</c></para>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
         /// <h3>URI</h3>
-        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/recover-index
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -15093,6 +17700,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Rebuilds an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReindexRequest
@@ -15148,6 +17766,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReindexRequest
         /// </param>
@@ -15202,6 +17831,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <para>Rebuilds an index.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+        /// ```.
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReindexRequest
         /// </param>
@@ -15220,6 +17860,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025
         /// <summary>
         /// <para>Rebuilds an index.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/tables/{tableName}/reindex
+        /// ```.
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReindexRequest
@@ -15377,6 +18028,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await RemoveClusterWithOptionsAsync(instanceId, clusterName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenameFolderRequest
         /// </param>
@@ -15418,6 +18084,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RenameFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenameFolderRequest
         /// </param>
@@ -15459,6 +18140,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RenameFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenameFolderRequest
         /// </param>
@@ -15473,6 +18169,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return RenameFolderWithOptions(instanceId, database, folderId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/folders/{folderId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenameFolderRequest
         /// </param>
@@ -15487,6 +18198,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await RenameFolderWithOptionsAsync(instanceId, database, folderId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -15518,6 +18244,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StartIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -15549,6 +18290,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StartIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// StartIndexResponse
         /// </returns>
@@ -15559,6 +18315,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return StartIndexWithOptions(instanceId, indexName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/startIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// StartIndexResponse
         /// </returns>
@@ -15569,6 +18340,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await StartIndexWithOptionsAsync(instanceId, indexName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -15600,6 +18386,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -15631,6 +18432,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// StopIndexResponse
         /// </returns>
@@ -15641,6 +18457,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return StopIndexWithOptions(instanceId, indexName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes/{indexName}/stopIndex
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <returns>
         /// StopIndexResponse
         /// </returns>
@@ -15795,8 +18626,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds or updates tags for multiple resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -15849,8 +18690,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds or updates tags for multiple resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -15903,8 +18754,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds or updates tags for multiple resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -15922,8 +18783,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds or updates tags for multiple resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -15941,8 +18812,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a batch of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UntagResourcesRequest
@@ -16009,8 +18890,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a batch of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UntagResourcesRequest
@@ -16077,8 +18968,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a batch of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -16096,8 +18997,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a batch of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/resource-tags
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -16291,6 +19202,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceContentRequest
         /// </param>
@@ -16332,6 +19258,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceContentRequest
         /// </param>
@@ -16373,6 +19314,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceContentRequest
         /// </param>
@@ -16387,6 +19343,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceContentWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/content
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceContentRequest
         /// </param>
@@ -16401,6 +19372,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateSqlInstanceContentWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceNameRequest
         /// </param>
@@ -16442,6 +19428,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceNameRequest
         /// </param>
@@ -16483,6 +19484,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceNameRequest
         /// </param>
@@ -16497,6 +19513,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceNameWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/name
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceNameRequest
         /// </param>
@@ -16511,6 +19542,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateSqlInstanceNameWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the parameters of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceParamsRequest
         /// </param>
@@ -16568,6 +19614,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the parameters of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceParamsRequest
         /// </param>
@@ -16625,6 +19686,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the parameters of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceParamsRequest
         /// </param>
@@ -16639,6 +19715,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceParamsWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the parameters of an SQL instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/sql-studio/databases/{database}/sql-instances/{sqlInstanceId}/params
+        /// </c></pre>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSqlInstanceParamsRequest
         /// </param>

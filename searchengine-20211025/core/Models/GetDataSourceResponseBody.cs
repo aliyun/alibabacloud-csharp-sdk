@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The name of the data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>my_index</para>
+            /// <para>ha-cn-pl32rf0****_test_api</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>NEW</para>
+            /// <para>new</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

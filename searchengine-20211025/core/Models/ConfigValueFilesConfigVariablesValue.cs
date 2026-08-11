@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ConfigValueFilesConfigVariablesValue : TeaModel {
         /// <summary>
-        /// <para>The description of the variable.</para>
+        /// <para>Description</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the variable is not allowed to be modified.</para>
+        /// <para>Whether the user can modify this</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? DisableModify { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the variable is modified.</para>
+        /// <para>Whether this has been modified</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? IsModify { get; set; }
 
         /// <summary>
-        /// <para>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</para>
+        /// <para>Normal variable: NORMAL, function variable: FUNCTION</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The variable value.</para>
+        /// <para>Variable</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1</para>
+        /// <para>ha-cn-pl32rf0****_test_api</para>
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The data center.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pre_domain_1</para>
+        /// <para>sz_vpc_domain_1</para>
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The index name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>atest2</para>
+            /// <para>test_api</para>
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]

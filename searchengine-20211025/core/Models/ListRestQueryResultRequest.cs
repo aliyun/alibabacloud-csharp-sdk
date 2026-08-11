@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string IndexName { get; set; }
 
         /// <summary>
-        /// <para>The rest query statement.</para>
+        /// <para>The REST query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>query%3Drelation_id%3A%221151274675_2%22%26%26cluster%3Dgeneral%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson</para>

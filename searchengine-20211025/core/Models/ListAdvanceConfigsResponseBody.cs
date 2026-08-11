@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListAdvanceConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FB0325E-8C37-5525-96AC-0333523170A3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The advanced configurations.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
@@ -28,15 +28,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public class ListAdvanceConfigsResponseBodyResult : TeaModel {
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>The type of the advanced configuration. Valid values: -ONLINE: online configuration</description></item>
-            /// <item><description>\-ONLINE_CAVA: online Cava configuration</description></item>
-            /// <item><description>\-ONLINE_PLUGIN: online plug-in configuration</description></item>
-            /// <item><description>\-ONLINE_QUERY: query configuration</description></item>
-            /// <item><description>\-OFFLINE_DICT: offline dictionary configuration</description></item>
-            /// <item><description>\-OFFLINE_TABLE: offline table configuration</description></item>
-            /// <item><description>\-OFFLINE_COMMON: offline configuration</description></item>
-            /// <item><description>\-OFFLINE_PLUGIN: offline plug-in configuration</description></item>
-            /// <item><description>\-OFFLINE_INDEX: index configuration</description></item>
+            /// <item><description><para>ONLINE: online configuration</para>
+            /// </description></item>
+            /// <item><description><para>ONLINE_CAVA: online Cava configuration</para>
+            /// </description></item>
+            /// <item><description><para>ONLINE_PLUGIN: online plugin</para>
+            /// </description></item>
+            /// <item><description><para>ONLINE_QUERY: query configuration</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE_DICT: offline dictionary configuration</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE_TABLE: offline table configuration</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE_COMMON: common offline configuration</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE_PLUGIN: offline plugin</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE_INDEX: index configuration</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string AdvanceConfigType { get; set; }
 
             /// <summary>
-            /// <para>The content of the advanced configuration that is returned.</para>
+            /// <para>The configuration content. This parameter is returned for HTTP and Git requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></para>
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the user who created the advanced configuration.</para>
+            /// <para>The ID of the user who created the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -77,24 +86,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description of the advanced configuration.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Custom Description</para>
             /// </summary>
             [NameInMap("desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The files.</para>
+            /// <para>A list of files.</para>
             /// </summary>
             [NameInMap("files")]
             [Validation(Required=false)]
             public List<ListAdvanceConfigsResponseBodyResultFiles> Files { get; set; }
             public class ListAdvanceConfigsResponseBodyResultFiles : TeaModel {
                 /// <summary>
-                /// <para>The absolute path in which the file is stored.</para>
+                /// <para>The absolute path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/path/wpd/nae</para>
@@ -104,7 +113,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string FullPathName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the file is a directory. Valid values: true and false.</para>
+                /// <para>Specifies whether the file is a directory. Valid values:
+                /// \- \<c>true\\</c>
+                /// \- \<c>false\\</c></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -114,7 +125,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public bool? IsDir { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the file is a template. Valid values: true and false.</para>
+                /// <para>Specifies whether the file is a template. Valid values:
+                /// \- \<c>true\\</c>
+                /// \- \<c>false\\</c></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -146,7 +159,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</para>
+            /// <para>The status of the advanced configuration. Valid values:
+            /// \- \<c>drafting\\</c>: The configuration is a draft.
+            /// \- \<c>used\\</c>: The configuration is in use.
+            /// \- \<c>unused\\</c>: The configuration is not in use.
+            /// \- \<c>trash\\</c>: The configuration is being deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>drafting</para>
@@ -156,7 +173,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the advanced configuration was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631070464000</para>

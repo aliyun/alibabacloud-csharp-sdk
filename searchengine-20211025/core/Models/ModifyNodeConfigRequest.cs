@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The traffic percentage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>-100</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("flowRatio")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-2r42ostoc01_0704</para>
+        /// <para>search</para>
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-zvp2iv9a401_qrs</para>
+        /// <para>ha-cn-pl32rf0****_qrs</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -103,16 +103,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <summary>
         /// <para>The type of the algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pop: a popularity model.</description></item>
-        /// <item><description>cp: a category prediction model.</description></item>
-        /// <item><description>hot: a top search model.</description></item>
-        /// <item><description>hint: a hint model.</description></item>
-        /// <item><description>suggest: a drop-down suggestions model.</description></item>
+        /// <item><description><para>pop: a popularity model.</para>
+        /// </description></item>
+        /// <item><description><para>cp: a category prediction model.</para>
+        /// </description></item>
+        /// <item><description><para>hot: a top search model.</para>
+        /// </description></item>
+        /// <item><description><para>hint: a hint model.</para>
+        /// </description></item>
+        /// <item><description><para>suggest: a drop-down suggestions model.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot; &quot;</para>
+        /// <para>hot</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

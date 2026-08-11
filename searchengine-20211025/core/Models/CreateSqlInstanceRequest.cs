@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateSqlInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The SQL instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the parent work item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

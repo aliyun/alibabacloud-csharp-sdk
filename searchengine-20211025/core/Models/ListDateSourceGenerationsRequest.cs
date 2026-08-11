@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the index versions to be returned. Valid values:</para>
+        /// <para>The valid status. Default value: true.</para>
         /// <ol>
-        /// <item><description>true (default): returns the index versions that are complete and not expired.</description></item>
-        /// <item><description>false: returns all index versions.</description></item>
+        /// <item><description>true: Returns generations for which the task is completed and not expired.</description></item>
+        /// <item><description>false: Returns all generations.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>

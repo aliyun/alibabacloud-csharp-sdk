@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ReindexRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</para>
+        /// <para>The timestamp in seconds. This parameter is of the INT type. This parameter is required when the data source uses API push.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640867288</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// <para>oss data path</para>
+        /// <para>The OSS file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://opensearch</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string OssDataPath { get; set; }
 
         /// <summary>
-        /// <para>The partition in the MaxCompute table. This parameter is required if type is set to odps.</para>
+        /// <para>The partition. This parameter is required when the data source is MaxCompute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds=20220713</para>

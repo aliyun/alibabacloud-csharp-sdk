@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyPublicUrlIpListRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The request body. Key: publicUrlAllow.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

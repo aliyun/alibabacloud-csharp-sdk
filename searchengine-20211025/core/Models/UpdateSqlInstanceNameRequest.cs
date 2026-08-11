@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UpdateSqlInstanceNameRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the SQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

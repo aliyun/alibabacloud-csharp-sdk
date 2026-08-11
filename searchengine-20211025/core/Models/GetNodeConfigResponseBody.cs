@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetNodeConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result set.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetNodeConfigResponseBodyResult Result { get; set; }
         public class GetNodeConfigResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the index is effective online.</para>
+            /// <para>Indicates whether the index is active online.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("active")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The number of data replicas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("dataDuplicateNumber")]
             [Validation(Required=false)]
@@ -50,27 +50,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The number of data shards.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("dataFragmentNumber")]
             [Validation(Required=false)]
             public int? DataFragmentNumber { get; set; }
 
             /// <summary>
-            /// <para>The traffic percentage.</para>
+            /// <para>The traffic ratio.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("flowRatio")]
             [Validation(Required=false)]
             public int? FlowRatio { get; set; }
 
             /// <summary>
-            /// <para>The minimum service ratio.</para>
+            /// <para>The minimum service percentage.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>100</para>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("minServicePercent")]
             [Validation(Required=false)]

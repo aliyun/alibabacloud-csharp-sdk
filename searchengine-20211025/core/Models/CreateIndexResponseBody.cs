@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results returned.</para>
+        /// <para>The result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

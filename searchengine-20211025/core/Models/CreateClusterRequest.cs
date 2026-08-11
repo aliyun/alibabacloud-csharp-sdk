@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic connection.</para>
+        /// <para>Specifies whether to automatically mount the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? AutoLoad { get; set; }
 
         /// <summary>
-        /// <para>The details of the Searcher workers.</para>
+        /// <para>The details of the data node.</para>
         /// </summary>
         [NameInMap("dataNode")]
         [Validation(Required=false)]
         public CreateClusterRequestDataNode DataNode { get; set; }
         public class CreateClusterRequestDataNode : TeaModel {
             /// <summary>
-            /// <para>The number of Searcher workers.</para>
+            /// <para>The number of data nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? Number { get; set; }
 
             /// <summary>
-            /// <para>The number of shards.</para>
+            /// <para>The number of partitions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;ha-tets&quot;</para>
+        /// <para>Custom description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -62,21 +62,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-zvp2qr1sk01_qrs</para>
+        /// <para>hz_pre_vpc_domain_1</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The details of the Query Result Searcher (QRS) workers.</para>
+        /// <para>The details of the query node.</para>
         /// </summary>
         [NameInMap("queryNode")]
         [Validation(Required=false)]
         public CreateClusterRequestQueryNode QueryNode { get; set; }
         public class CreateClusterRequestQueryNode : TeaModel {
             /// <summary>
-            /// <para>The number of QRS workers.</para>
+            /// <para>The number of query nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

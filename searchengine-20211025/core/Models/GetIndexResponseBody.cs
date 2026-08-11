@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public Dictionary<string, Dictionary<string, object>> Config { get; set; }
 
             /// <summary>
-            /// <para>The configuration that takes effect next time.</para>
+            /// <para>The configuration that will take effect for the next indexing.</para>
             /// </summary>
             [NameInMap("configWhenBuild")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> ConfigWhenBuild { get; set; }
 
             /// <summary>
-            /// <para>The file content.</para>
+            /// <para>The content of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</para>
@@ -57,15 +57,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <para>The time when the index was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-05-21 16:05:26</para>
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-tl32nd2nq01_00</para>
+            /// <para>ha-cn-pl32rf0****_test_api</para>
             /// </summary>
             [NameInMap("dataSource")]
             [Validation(Required=false)]
@@ -79,7 +85,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public GetIndexResponseBodyResultDataSourceInfo DataSourceInfo { get; set; }
             public class GetIndexResponseBodyResultDataSourceInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the automatic full indexing feature is enabled.</para>
+                /// <para>Indicates whether automatic full indexing is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -89,14 +95,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public bool? AutoBuildIndex { get; set; }
 
                 /// <summary>
-                /// <para>The configuration of MaxCompute data sources.</para>
+                /// <para>The configurations of the ODPS data source.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public GetIndexResponseBodyResultDataSourceInfoConfig Config { get; set; }
                 public class GetIndexResponseBodyResultDataSourceInfoConfig : TeaModel {
                     /// <summary>
-                    /// <para>The AccessKey ID of the MaxCompute data source.</para>
+                    /// <para>The AccessKey ID for the ODPS data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>L***p</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string AccessKey { get; set; }
 
                     /// <summary>
-                    /// <para>The AccessKey secret of the MaxCompute data source.</para>
+                    /// <para>The AccessKey secret for the ODPS data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5**9a6</para>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string AccessSecret { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the OSS bucket.</para>
+                    /// <para>The name of the bucket.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ha3test-oss</para>
@@ -125,16 +131,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
 
+                    /// <summary>
+                    /// <para>The data catalog ID of the DLF data source.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>clg-paimon-21cc136237a6457f8618f5f82d116d7e</para>
+                    /// </summary>
                     [NameInMap("catalog")]
                     [Validation(Required=false)]
                     public string Catalog { get; set; }
 
+                    /// <summary>
+                    /// <para>The database of the DLF data source.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dlf_test</para>
+                    /// </summary>
                     [NameInMap("database")]
                     [Validation(Required=false)]
                     public string Database { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint of the MaxCompute data source.</para>
+                    /// <para>Information related to ODPS.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
@@ -143,12 +161,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
+                    /// <summary>
+                    /// <para>The file format of the data in OSS.</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>ha3</para>
+                    /// </description></item>
+                    /// <item><description><para>json</para>
+                    /// </description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ha3</para>
+                    /// </summary>
                     [NameInMap("format")]
                     [Validation(Required=false)]
                     public string Format { get; set; }
 
                     /// <summary>
-                    /// <para>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</para>
+                    /// <para>Information related to saro.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TEST_dump_demo_sj_na61hunbu2_share_holo</para>
@@ -158,7 +188,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The Object Storage Service (OSS) path.</para>
+                    /// <para>Information related to the OSS data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/test_opensearch/sift_oss_test.data</para>
@@ -168,7 +198,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string OssPath { get; set; }
 
                     /// <summary>
-                    /// <para>The partition in the MaxCompute table. Example: ds=20180102.</para>
+                    /// <para>The ODPS partition. Example: ds=20180102</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ds=20220713</para>
@@ -178,7 +208,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Partition { get; set; }
 
                     /// <summary>
-                    /// <para>The file path in the Apsara File Storage for HDFS file system.</para>
+                    /// <para>Information related to HDFS.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://test_opensearch/sift_oss_test.data">http://test_opensearch/sift_oss_test.data</a></para>
@@ -188,7 +218,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the MaxCompute project that is used as the data source.</para>
+                    /// <para>The name of the ODPS project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tisplus_dev</para>
@@ -198,7 +228,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Project { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the MaxCompute table that is used as the data source.</para>
+                    /// <para>Information related to saro and ODPS.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dump_odps_demo</para>
@@ -207,6 +237,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     [Validation(Required=false)]
                     public string Table { get; set; }
 
+                    /// <summary>
+                    /// <para>The tag of the DLF data source.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test_tag</para>
+                    /// </summary>
                     [NameInMap("tag")]
                     [Validation(Required=false)]
                     public string Tag { get; set; }
@@ -214,7 +250,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// <para>The data center in which the data source is deployed.</para>
+                /// <para>The offline deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc_hz_domain_1</para>
@@ -234,7 +270,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of full indexes that can be concurrently processed.</para>
+                /// <para>The concurrency for full processing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -244,7 +280,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public int? ProcessParallelNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of resources used for data update.</para>
+                /// <para>The number of resources for data updates.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -254,14 +290,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public int? ProcessPartitionCount { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of the SARO data source.</para>
+                /// <para>The configurations of the saro data source.</para>
                 /// </summary>
                 [NameInMap("saroConfig")]
                 [Validation(Required=false)]
                 public GetIndexResponseBodyResultDataSourceInfoSaroConfig SaroConfig { get; set; }
                 public class GetIndexResponseBodyResultDataSourceInfoSaroConfig : TeaModel {
                     /// <summary>
-                    /// <para>The namespace of the SARO data source.</para>
+                    /// <para>The namespace of the saro data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TEST_dump_demo_sj_na61hunbu2_share_holo</para>
@@ -271,7 +307,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the SARO table.</para>
+                    /// <para>The name of the saro data table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>llm</para>
@@ -295,17 +331,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The description of the index version.</para>
+            /// <para>The note.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test index</para>
+            /// <para>note</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The deployment name of the index.</para>
+            /// <para>The deployment name of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sz_vpc_domain_1</para>
@@ -315,14 +351,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Extended information</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("extend")]
             [Validation(Required=false)]
             public Dictionary<string, List<string>> Extend { get; set; }
 
             /// <summary>
-            /// <para>The time when full data in the index was last updated.</para>
+            /// <para>The time of the last full switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-20 08:52:54</para>
@@ -342,7 +378,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? FullVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when incremental data in the index was last updated.</para>
+            /// <para>The time of the last incremental update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-20 08:52:54</para>
@@ -362,15 +398,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? IndexSize { get; set; }
 
             /// <summary>
-            /// <para>The status of the index version. Valid values:</para>
+            /// <para>The status.</para>
             /// <list type="bullet">
-            /// <item><description>NEW: The index version is created.</description></item>
-            /// <item><description>PUBLISH: The index version is normal.</description></item>
-            /// <item><description>IN_USE: The index version is in use.</description></item>
-            /// <item><description>NOT_USE: The index version is not used.</description></item>
-            /// <item><description>STOP_USE: The index version is being stopped.</description></item>
-            /// <item><description>RESTORE_USE: The index version is being restored.</description></item>
-            /// <item><description>FAIL: The index version failed to be created.</description></item>
+            /// <item><description><para>NEW: Created.</para>
+            /// </description></item>
+            /// <item><description><para>PUBLISH: Normal.</para>
+            /// </description></item>
+            /// <item><description><para>IN_USE: In use.</para>
+            /// </description></item>
+            /// <item><description><para>NOT_USE: Not in use.</para>
+            /// </description></item>
+            /// <item><description><para>STOP_USE: Stopping.</para>
+            /// </description></item>
+            /// <item><description><para>RESTORE_USE: Resuming.</para>
+            /// </description></item>
+            /// <item><description><para>FAIL: Failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -384,14 +427,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The index name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>general</para>
+            /// <para>test_api</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of shards.</para>
+            /// <para>The data shard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -400,59 +443,65 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? Partition { get; set; }
 
+            /// <summary>
+            /// <para>The time when the index was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-05-21 16:05:26</para>
+            /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the versions.</para>
+            /// <para>The version information.</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<GetIndexResponseBodyResultVersions> Versions { get; set; }
             public class GetIndexResponseBodyResultVersions : TeaModel {
                 /// <summary>
-                /// <para>The description of the version.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>close alarm, by 3.9.2 hotfix workflow</para>
+                /// <para>Index Note</para>
                 /// </summary>
                 [NameInMap("desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// <para>The information about the files.</para>
+                /// <para>The location.</para>
                 /// </summary>
                 [NameInMap("files")]
                 [Validation(Required=false)]
                 public List<GetIndexResponseBodyResultVersionsFiles> Files { get; set; }
                 public class GetIndexResponseBodyResultVersionsFiles : TeaModel {
                     /// <summary>
-                    /// <para>The full path of the file.</para>
+                    /// <para>The full path.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot; &quot;</para>
+                    /// <para>/qrs.json</para>
                     /// </summary>
                     [NameInMap("fullPathName")]
                     [Validation(Required=false)]
                     public string FullPathName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the file is a directory.</para>
+                    /// <para>Indicates whether the path points to a directory.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>True</para>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("isDir")]
                     [Validation(Required=false)]
                     public bool? IsDir { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the file is a template.</para>
+                    /// <para>Indicates whether the path is a template.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>True</para>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("isTemplate")]
                     [Validation(Required=false)]
@@ -474,36 +523,43 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The version name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ha-cn-7pp2ngv4s02_qrs</para>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The status of the index version. Valid values:</para>
+                /// <para>The status.</para>
                 /// <list type="bullet">
-                /// <item><description>NEW: The index version is created.</description></item>
-                /// <item><description>PUBLISH: The index version is normal.</description></item>
-                /// <item><description>IN_USE: The index version is in use.</description></item>
-                /// <item><description>NOT_USE: The index version is not used.</description></item>
-                /// <item><description>STOP_USE: The index version is being stopped.</description></item>
-                /// <item><description>RESTORE_USE: The index version is being restored.</description></item>
-                /// <item><description>FAIL: The index version failed to be created.</description></item>
+                /// <item><description><para>NEW: Created.</para>
+                /// </description></item>
+                /// <item><description><para>PUBLISH: Normal.</para>
+                /// </description></item>
+                /// <item><description><para>IN_USE: In use.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_USE: Not in use.</para>
+                /// </description></item>
+                /// <item><description><para>STOP_USE: Stopping.</para>
+                /// </description></item>
+                /// <item><description><para>RESTORE_USE: Resuming.</para>
+                /// </description></item>
+                /// <item><description><para>FAIL: Failed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2</para>
+                /// <para>PUBLISH</para>
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the index version was updated.</para>
+                /// <para>The time when the version was updated.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot; &quot;</para>
+                /// <para>1718846192</para>
                 /// </summary>
                 [NameInMap("updateTime")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetFileRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the file in full path</para>
+        /// <para>The full path of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

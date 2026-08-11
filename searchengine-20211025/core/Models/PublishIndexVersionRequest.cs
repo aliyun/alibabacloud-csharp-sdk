@@ -13,7 +13,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The request body.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{
+        /// &quot;dataSource&quot;: &quot;ha-cn-pl32rf0****_test_api&quot;,
+        /// &quot;desc&quot;: &quot;Remarks&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The code of the specification, which must be consistent with the value that you specify on the buy page.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>200</para>
+            /// <para>searcherdocsizesum</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The value of the specification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>Instance description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>UPGRAGE</para>
         /// </summary>
         [NameInMap("orderType")]
         [Validation(Required=false)]

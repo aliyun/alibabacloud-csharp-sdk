@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The field name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>id</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

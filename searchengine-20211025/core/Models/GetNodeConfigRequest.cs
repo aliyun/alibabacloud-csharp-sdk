@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetNodeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cluster</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc_sh_domain_2</para>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>qrs: Query Result Searcher (QRS) worker</description></item>
-        /// <item><description>search: Search worker</description></item>
-        /// <item><description>index: index</description></item>
-        /// <item><description>cluster: cluster</description></item>
+        /// <item><description>qrs: query node</description></item>
+        /// <item><description>search: data node</description></item>
+        /// <item><description>index: index node</description></item>
+        /// <item><description>cluster: cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

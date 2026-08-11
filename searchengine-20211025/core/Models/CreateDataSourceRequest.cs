@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically rebuild the index.</para>
+        /// <para>Specifies whether to automatically rebuild indexes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public CreateDataSourceRequestConfig Config { get; set; }
         public class CreateDataSourceRequestConfig : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID of the MaxCompute data source.</para>
+            /// <para>The AccessKey ID of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L***p</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret of the MaxCompute data source.</para>
+            /// <para>The AccessKey secret of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5**9a6</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string AccessSecret { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket.</para>
+            /// <para>oss bucket</para>
             /// 
             /// <b>Example:</b>
             /// <para>opensearch</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</para>
+            /// <para>The endpoint of the ODPS data source or the OSS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The path of the OSS object.</para>
+            /// <para>The OSS file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/opensearch/search</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The partition in the MaxCompute table.</para>
+            /// <para>The ODPS partition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=20220713</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Partition { get; set; }
 
             /// <summary>
-            /// <para>The file path in the Apsara File Storage for HDFS file system.</para>
+            /// <para>The HDFS file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-hdfs-path</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute project that is used as the data source.</para>
+            /// <para>The project name of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kubenest</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute table that is used as the data source.</para>
+            /// <para>The ODPS table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>item</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The data center in which the data source is deployed.</para>
+        /// <para>The data center where the data source resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc_hz_domain_1</para>
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the SARO data source.</para>
+        /// <para>The Saro datasource config.</para>
         /// </summary>
         [NameInMap("saroConfig")]
         [Validation(Required=false)]
         public CreateDataSourceRequestSaroConfig SaroConfig { get; set; }
         public class CreateDataSourceRequestSaroConfig : TeaModel {
             /// <summary>
-            /// <para>The namespace of the SARO data source.</para>
+            /// <para>The namespace of the Saro data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>igraph-cn-x0r3e3abe02</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the SARO table.</para>
+            /// <para>The Saro data table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>index_hdfs</para>
@@ -200,7 +200,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</para>
+        /// <para>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run.</description></item>
+        /// <item><description>false: does not perform a dry run.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

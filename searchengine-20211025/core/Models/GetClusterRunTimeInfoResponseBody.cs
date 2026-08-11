@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when the configuration was last updated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot;&quot;</para>
+                    /// <para>2024-05-21 16:05:26</para>
                     /// </summary>
                     [NameInMap("configUpdateTime")]
                     [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when full data in the index was last updated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot; &quot;</para>
+                    /// <para>2024-05-21 16:05:26</para>
                     /// </summary>
                     [NameInMap("fullUpdateTime")]
                     [Validation(Required=false)]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when the full index version was generated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>123423</para>
+                    /// <para>1718846192</para>
                     /// </summary>
                     [NameInMap("fullVersion")]
                     [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when incremental data in the index was last updated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot;&quot;</para>
+                    /// <para>2024-05-21 16:05:26</para>
                     /// </summary>
                     [NameInMap("incUpdateTime")]
                     [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when the incremental index version was generated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>123423</para>
+                    /// <para>1718846192</para>
                     /// </summary>
                     [NameInMap("incVersion")]
                     [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The name of the QRS worker.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ha-cn-c4d2rq7nt04_qrs</para>
+                    /// <para>ha-cn-pl32rf0****_qrs</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The name of the QRS worker.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ha-cn-0ju2s170b03_qrs</para>
+                    /// <para>ha-cn-pl32rf0****_qrs</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The time when the configuration was last updated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot; &quot;</para>
+                    /// <para>2024-05-21 16:05:26</para>
                     /// </summary>
                     [NameInMap("configUpdateTime")]
                     [Validation(Required=false)]
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The cluster name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ha-cn-zvp2qr1sk01_qrs</para>
+                    /// <para>vpc_hz_domain_1</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     /// <para>The cluster name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ha-cn-c4d2rq7nt04_qrs</para>
+                    /// <para>vpc_hz_domain_1</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]

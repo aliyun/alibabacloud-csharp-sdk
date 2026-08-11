@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class BodyValue : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to suspend all pushes.</para>
+        /// <para>Pauses all deployments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? PauseAll { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to suspend the push for the new full index version.</para>
+        /// <para>Pauses the deployment of new full index versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? PauseIndex { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to suspend the push for the incremental indexes.</para>
+        /// <para>Pauses the deployment of incremental batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? PauseIndexBatch { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to suspend the push for the configuration.</para>
+        /// <para>Pauses configuration deployments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? PauseBiz { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to suspend the push for the real-time incremental indexes.</para>
+        /// <para>Pauses real-time incremental updates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

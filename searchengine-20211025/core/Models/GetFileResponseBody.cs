@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public GetFileResponseBodyResult Result { get; set; }
         public class GetFileResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The file content.</para>
+            /// <para>The content of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>None</para>
+            /// <para>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-2r42p5oi202_xijie_test</para>
+            /// <para>ha-cn-pl32rf0****_test_api</para>
             /// </summary>
             [NameInMap("dataSource")]
             [Validation(Required=false)]
             public string DataSource { get; set; }
 
             /// <summary>
-            /// <para>Extended information</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("extend")]
             [Validation(Required=false)]
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The full path of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>/schema.json</para>
             /// </summary>
             [NameInMap("fullPathName")]
             [Validation(Required=false)]
             public string FullPathName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the file is a directory.</para>
+            /// <para>Indicates whether the path points to a directory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("isDir")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-2r42ostoc01_qrs</para>
+            /// <para>testFile</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The number of shards.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ds=20210828</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]

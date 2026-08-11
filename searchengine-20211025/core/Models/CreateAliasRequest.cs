@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateAliasRequest : TeaModel {
         /// <summary>
-        /// <para>alias name</para>
+        /// <para>The alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>index name</para>
+        /// <para>The associated index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>index</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Index { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</para>
+        /// <para>Specifies whether the new version of the console page is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

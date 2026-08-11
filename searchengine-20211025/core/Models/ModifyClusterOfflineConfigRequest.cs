@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1</para>
+        /// <para>ha-cn-pl32rf0****_test_api</para>
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxComputer</para>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("dataSourceType")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>This parameter is required when index building for full data in a MaxCompute data source is triggered.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20211202</para>
+        /// <para>ds=20211202</para>
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

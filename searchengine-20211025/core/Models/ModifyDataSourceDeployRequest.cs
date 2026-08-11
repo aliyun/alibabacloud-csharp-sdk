@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyDataSourceDeployRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic full indexing feature.</para>
+        /// <para>Specifies whether to enable automatic full indexing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public ModifyDataSourceDeployRequestExtend Extend { get; set; }
         public class ModifyDataSourceDeployRequestExtend : TeaModel {
             /// <summary>
-            /// <para>The information about the Apsara File Storage for HDFS data source.</para>
+            /// <para>The HDFS information.</para>
             /// </summary>
             [NameInMap("hdfs")]
             [Validation(Required=false)]
             public ModifyDataSourceDeployRequestExtendHdfs Hdfs { get; set; }
             public class ModifyDataSourceDeployRequestExtendHdfs : TeaModel {
                 /// <summary>
-                /// <para>The path of the Apsara File Storage for HDFS data source.</para>
+                /// <para>The HDFS data source path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ymsh-service/src/main/java/cn/ymsh/util/jd</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The information about the MaxCompute data source.</para>
+            /// <para>The ODPS data source information.</para>
             /// </summary>
             [NameInMap("odps")]
             [Validation(Required=false)]
             public ModifyDataSourceDeployRequestExtendOdps Odps { get; set; }
             public class ModifyDataSourceDeployRequestExtendOdps : TeaModel {
                 /// <summary>
-                /// <para>The partitions in the MaxCompute table.</para>
+                /// <para>The partition information of the data source.</para>
                 /// </summary>
                 [NameInMap("partitions")]
                 [Validation(Required=false)]
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The information about the OSS data source.</para>
+            /// <para>The OSS information.</para>
             /// </summary>
             [NameInMap("oss")]
             [Validation(Required=false)]
             public ModifyDataSourceDeployRequestExtendOss Oss { get; set; }
             public class ModifyDataSourceDeployRequestExtendOss : TeaModel {
                 /// <summary>
-                /// <para>The path of the OSS data source.</para>
+                /// <para>The OSS data source path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://test</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The information about the SARO data source. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</para>
+            /// <para>The Saro data source information.</para>
             /// </summary>
             [NameInMap("saro")]
             [Validation(Required=false)]
             public ModifyDataSourceDeployRequestExtendSaro Saro { get; set; }
             public class ModifyDataSourceDeployRequestExtendSaro : TeaModel {
                 /// <summary>
-                /// <para>The path of the SARO data source.</para>
+                /// <para>The path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The version number of the SARO data source.</para>
+                /// <para>The version number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -112,17 +112,25 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The parameters of the process.</para>
+        /// <para>The process parameters.</para>
         /// </summary>
         [NameInMap("processor")]
         [Validation(Required=false)]
         public ModifyDataSourceDeployRequestProcessor Processor { get; set; }
         public class ModifyDataSourceDeployRequestProcessor : TeaModel {
             /// <summary>
-            /// <para>The startup parameters of the process.</para>
+            /// <para>The process startup parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{}</para>
+            /// <para>{
+            ///     &quot;processInfos&quot;: [],
+            ///     &quot;groupId&quot;: &quot;opensearch&quot;,
+            ///     &quot;containerConfigs&quot;: [],
+            ///     &quot;priority&quot;: {
+            ///         &quot;minor_priority&quot;: 0,
+            ///         &quot;major_priority&quot;: 64
+            ///     }
+            /// }</para>
             /// </summary>
             [NameInMap("args")]
             [Validation(Required=false)]
@@ -132,7 +140,33 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The resource information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{}</para>
+            /// <para>[{
+            ///     &quot;_bs_role&quot;: &quot;processor.*.inc&quot;,
+            ///     &quot;priority&quot;: {
+            ///         &quot;major_priority&quot;: 32,
+            ///         &quot;minor_priority&quot;: 0
+            ///     },
+            ///     &quot;slotResources&quot;: [{
+            ///         &quot;slotResources&quot;: [{
+            ///             &quot;amount&quot;: 200,
+            ///             &quot;name&quot;: &quot;cpu&quot;
+            ///         }, {
+            ///             &quot;amount&quot;: 8192,
+            ///             &quot;name&quot;: &quot;mem&quot;
+            ///         }, {
+            ///             &quot;amount&quot;: 0,
+            ///             &quot;name&quot;: &quot;T4&quot;
+            ///         }, {
+            ///             &quot;amount&quot;: 10,
+            ///             &quot;type&quot;: &quot;SCALAR&quot;,
+            ///             &quot;name&quot;: &quot;disk_ratio_9999&quot;
+            ///         }, {
+            ///             &quot;amount&quot;: 20480,
+            ///             &quot;type&quot;: &quot;SCALAR&quot;,
+            ///             &quot;name&quot;: &quot;disk_size_9999&quot;
+            ///         }]
+            ///     }]
+            /// }]</para>
             /// </summary>
             [NameInMap("resource")]
             [Validation(Required=false)]
@@ -141,34 +175,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The information about the data source.</para>
+        /// <para>The data source information.</para>
         /// </summary>
         [NameInMap("storage")]
         [Validation(Required=false)]
         public ModifyDataSourceDeployRequestStorage Storage { get; set; }
         public class ModifyDataSourceDeployRequestStorage : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID of the MaxCompute data source.</para>
+            /// <para>The AccessKey ID of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ak</para>
+            /// <para>L***p</para>
             /// </summary>
             [NameInMap("accessKey")]
             [Validation(Required=false)]
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret of the MaxCompute data source.</para>
+            /// <para>The AccessKey secret of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>as</para>
+            /// <para>5**9a6</para>
             /// </summary>
             [NameInMap("accessSecret")]
             [Validation(Required=false)]
             public string AccessSecret { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-bucket</para>
@@ -177,16 +211,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
+            /// <summary>
+            /// <para>The data catalog name of the DLF data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-catalog</para>
+            /// </summary>
             [NameInMap("catalog")]
             [Validation(Required=false)]
             public string Catalog { get; set; }
 
+            /// <summary>
+            /// <para>The database of the DLF data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-database</para>
+            /// </summary>
             [NameInMap("database")]
             [Validation(Required=false)]
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the MaxCompute data source.</para>
+            /// <para>odps endpoint</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
@@ -196,7 +242,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</para>
+            /// <para>The namespace. This parameter is related to Saro.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dp-dev</para>
@@ -206,7 +252,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) path.</para>
+            /// <para>The path. This parameter is related to the OSS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/opensearch</para>
@@ -216,7 +262,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The partition in the MaxCompute table.</para>
+            /// <para>The partition information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=20220713</para>
@@ -226,7 +272,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Partition { get; set; }
 
             /// <summary>
-            /// <para>The file path in the Apsara File Storage for HDFS file system.</para>
+            /// <para>The path. This parameter is related to HDFS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/ude_jobs/iflow_offline_data_access</para>
@@ -236,7 +282,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute project that is used as the data source.</para>
+            /// <para>The project name of the ODPS data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kubenest</para>
@@ -246,7 +292,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute table that is used as the data source.</para>
+            /// <para>The table name. This parameter is related to Saro or ODPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>item</para>
@@ -255,10 +301,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Table { get; set; }
 
+            /// <summary>
+            /// <para>The table format of the DLF data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>paimon
+            /// lance
+            /// object</para>
+            /// </summary>
             [NameInMap("tableFormat")]
             [Validation(Required=false)]
             public string TableFormat { get; set; }
 
+            /// <summary>
+            /// <para>The tag of the DLF data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
@@ -266,17 +326,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The information about the incremental data source Swift.</para>
+        /// <para>The incremental Swift information.</para>
         /// </summary>
         [NameInMap("swift")]
         [Validation(Required=false)]
         public ModifyDataSourceDeployRequestSwift Swift { get; set; }
         public class ModifyDataSourceDeployRequestSwift : TeaModel {
             /// <summary>
-            /// <para>The topic.</para>
+            /// <para>topic</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-0ju2rps6c08_api</para>
+            /// <para>ha-cn-pl32rf0****_test_api</para>
             /// </summary>
             [NameInMap("topic")]
             [Validation(Required=false)]
@@ -295,7 +355,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values: true and false.</para>
+        /// <para>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run.</description></item>
+        /// <item><description>false: does not perform a dry run.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -305,7 +369,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the full index version.</para>
+        /// <para>The full index version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1708674867</para>

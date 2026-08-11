@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string DirName { get; set; }
 
         /// <summary>
-        /// <para>The path of the parent directory.</para>
+        /// <para>The parent file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>

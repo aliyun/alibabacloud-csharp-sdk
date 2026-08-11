@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateTableRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations about field processing.</para>
+        /// <para>The field processing configuration.</para>
         /// </summary>
         [NameInMap("dataProcessConfig")]
         [Validation(Required=false)]
@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string DstField { get; set; }
 
             /// <summary>
-            /// <para>The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</para>
+            /// <para>The field processing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>copy: copies the source field to the destination field.</description></item>
+            /// <item><description>vectorize: vectorizes the source field by using a model and stores the vector in the destination field.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>vectorize</para>
@@ -37,31 +41,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The information about the model.</para>
+            /// <para>The model configuration.</para>
             /// </summary>
             [NameInMap("params")]
             [Validation(Required=false)]
             public CreateTableRequestDataProcessConfigParams Params { get; set; }
             public class CreateTableRequestDataProcessConfigParams : TeaModel {
                 /// <summary>
-                /// <para>The source of the data to be vectorized.</para>
+                /// <para>The vectorization information source.</para>
                 /// </summary>
                 [NameInMap("srcFieldConfig")]
                 [Validation(Required=false)]
                 public CreateTableRequestDataProcessConfigParamsSrcFieldConfig SrcFieldConfig { get; set; }
                 public class CreateTableRequestDataProcessConfigParamsSrcFieldConfig : TeaModel {
                     /// <summary>
-                    /// <para>The OSS bucket.</para>
+                    /// <para>OSSBucket</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>test-bucket</para>
                     /// </summary>
                     [NameInMap("ossBucket")]
                     [Validation(Required=false)]
                     public string OssBucket { get; set; }
 
                     /// <summary>
-                    /// <para>The OSS endpoint.</para>
+                    /// <para>The OSS region endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>
@@ -71,10 +75,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string OssEndpoint { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Alibaba Cloud account.</para>
+                    /// <para>The Alibaba Cloud account ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>uid</para>
+                    /// <para>1062017779051424</para>
                     /// </summary>
                     [NameInMap("uid")]
                     [Validation(Required=false)]
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The number of resources used for data update.</para>
+        /// <para>The number of data update resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,14 +131,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? DataProcessorCount { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the data source.</para>
+        /// <para>The datasource config.</para>
         /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]
         public CreateTableRequestDataSource DataSource { get; set; }
         public class CreateTableRequestDataSource : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically rebuild the index.</para>
+            /// <para>Specifies whether auto index rebuilding is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -144,52 +148,64 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? AutoBuildIndex { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the data source.</para>
+            /// <para>The datasource config.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateTableRequestDataSourceConfig Config { get; set; }
             public class CreateTableRequestDataSourceConfig : TeaModel {
                 /// <summary>
-                /// <para>The AccessKey ID of the MaxCompute data source.</para>
+                /// <para>The AccessKey ID of the ODPS data source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ak</para>
+                /// <para>L***p</para>
                 /// </summary>
                 [NameInMap("accessKey")]
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The AccessKey secret of the MaxCompute data source.</para>
+                /// <para>The AccessKey secret of the ODPS data source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>as</para>
+                /// <para>5**9a6</para>
                 /// </summary>
                 [NameInMap("accessSecret")]
                 [Validation(Required=false)]
                 public string AccessSecret { get; set; }
 
                 /// <summary>
-                /// <para>The OSS bucket.</para>
+                /// <para>oss bucket</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>antsys-flytest-ci</para>
+                /// <para>test-bucket</para>
                 /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                /// <summary>
+                /// <para>The catalog name of the DLF data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_catalog</para>
+                /// </summary>
                 [NameInMap("catalog")]
                 [Validation(Required=false)]
                 public string Catalog { get; set; }
 
+                /// <summary>
+                /// <para>The database of the DLF data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>opensearch_db</para>
+                /// </summary>
                 [NameInMap("database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the MaxCompute data source.</para>
+                /// <para>The access endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
@@ -198,22 +214,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <para>The file format type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ha3
+                /// json</para>
+                /// </summary>
                 [NameInMap("format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The Object Storage Service (OSS) path.</para>
+                /// <para>The OSS data source path.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>oss://opensearch</para>
+                /// <para>/opensearch/test.txt</para>
                 /// </summary>
                 [NameInMap("ossPath")]
                 [Validation(Required=false)]
                 public string OssPath { get; set; }
 
                 /// <summary>
-                /// <para>The partition in the MaxCompute table. This parameter is required if type is set to odps.</para>
+                /// <para>The partition. This parameter is required when the data source is ODPS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds=20220713</para>
@@ -222,22 +245,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Partition { get; set; }
 
+                /// <summary>
+                /// <para>The relative path.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/test</para>
+                /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The name of the MaxCompute project that is used as the data source.</para>
+                /// <para>The project name of the ODPS data source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>project_20210220122847_3218</para>
+                /// <para>test_project</para>
                 /// </summary>
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The name of the MaxCompute table that is used as the data source.</para>
+                /// <para>The table name of the ODPS or DLF data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test56</para>
@@ -246,10 +275,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Table { get; set; }
 
+                /// <summary>
+                /// <para>The table format of the DLF data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>paimon
+                /// lance
+                /// object</para>
+                /// </summary>
                 [NameInMap("tableFormat")]
                 [Validation(Required=false)]
                 public string TableFormat { get; set; }
 
+                /// <summary>
+                /// <para>The tag of the DLF data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
@@ -257,7 +300,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The start timestamp from which incremental data is retrieved.</para>
+            /// <para>The timestamp for incremental data tracking.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715160176</para>
@@ -267,7 +310,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? DataTimeSec { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values: odps, swift, and oss.</para>
+            /// <para>The data source type. Only odps, swift, and oss are supported. Valid values: odps, swift, saro, oss, and unKnow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps</para>
@@ -279,7 +322,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The fields.</para>
+        /// <para>The field schema. The key is the field name.</para>
         /// </summary>
         [NameInMap("fieldSchema")]
         [Validation(Required=false)]
@@ -289,7 +332,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The index name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>index_1</para>
+        /// <para>api_index_1</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -316,7 +359,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string PrimaryKey { get; set; }
 
         /// <summary>
-        /// <para>The instance schema. If this parameter is specified, the parameters about the index are not required.</para>
+        /// <para>The raw schema. If you specify this parameter, the value is used directly as the HA3 schema structure without manual assembly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -325,19 +368,25 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string RawSchema { get; set; }
 
+        /// <summary>
+        /// <para>The template type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>videoSearcher</para>
+        /// </summary>
         [NameInMap("scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The index schema.</para>
+        /// <para>The index structure.</para>
         /// </summary>
         [NameInMap("vectorIndex")]
         [Validation(Required=false)]
         public List<CreateTableRequestVectorIndex> VectorIndex { get; set; }
         public class CreateTableRequestVectorIndex : TeaModel {
             /// <summary>
-            /// <para>The configurations of the index schema.</para>
+            /// <para>The index structure configuration.</para>
             /// </summary>
             [NameInMap("advanceParams")]
             [Validation(Required=false)]
@@ -364,7 +413,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string LinearBuildThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of retrieved candidate sets.</para>
+                /// <para>The minimum number of candidate documents for recall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20000</para>
@@ -374,7 +423,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string MinScanDocCnt { get; set; }
 
                 /// <summary>
-                /// <para>The index retrieval parameters.</para>
+                /// <para>The index search parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -386,7 +435,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The dimension of the vector.</para>
+            /// <para>The vector dimensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -406,10 +455,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string DistanceType { get; set; }
 
             /// <summary>
-            /// <para>The name of the index schema.</para>
+            /// <para>The index structure name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>case_index</para>
+            /// <para>test_index</para>
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
@@ -426,7 +475,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The field that stores the indexes of the elements in sparse vectors.</para>
+            /// <para>The sparse vector index field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sparse_indices</para>
@@ -436,7 +485,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string SparseIndexField { get; set; }
 
             /// <summary>
-            /// <para>The field that stores the elements in sparse vectors.</para>
+            /// <para>The sparse vector value field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sparse_values</para>
@@ -456,7 +505,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string VectorField { get; set; }
 
             /// <summary>
-            /// <para>The vector retrieval algorithm.</para>
+            /// <para>The vector index algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qc</para>
@@ -468,10 +517,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run (only validates whether the data source is valid). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: performs a dry run.</description></item>
+        /// <item><description>false: does not perform a dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

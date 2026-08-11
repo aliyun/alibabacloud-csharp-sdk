@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateFolderRequest : TeaModel {
         /// <summary>
+        /// <para>The folder name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The parent category ID (required). If left empty, the default value is 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

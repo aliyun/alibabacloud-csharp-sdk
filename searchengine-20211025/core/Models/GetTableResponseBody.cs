@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>requestId</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results returned.</para>
+        /// <para>Response result</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetTableResponseBodyResult Result { get; set; }
         public class GetTableResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The configurations about field processing.</para>
+            /// <para>Field processing configuration</para>
             /// </summary>
             [NameInMap("dataProcessConfig")]
             [Validation(Required=false)]
             public List<GetTableResponseBodyResultDataProcessConfig> DataProcessConfig { get; set; }
             public class GetTableResponseBodyResultDataProcessConfig : TeaModel {
                 /// <summary>
-                /// <para>The destination field.</para>
+                /// <para>Target field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>source_image_vector</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string DstField { get; set; }
 
                 /// <summary>
-                /// <para>The method used to process the field. Valid values: copy and vectorize. A value of copy indicates that the value of the source field is copied to the destination field. A value of vectorize indicates that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.</para>
+                /// <para>Field processing method (copy: copies the source field to the target field, vectorize: vectorizes the source field using a model and stores the vector in the target field)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vectorize</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The information about the model.</para>
+                /// <para>Model configuration information</para>
                 /// </summary>
                 [NameInMap("params")]
                 [Validation(Required=false)]
                 public GetTableResponseBodyResultDataProcessConfigParams Params { get; set; }
                 public class GetTableResponseBodyResultDataProcessConfigParams : TeaModel {
                     /// <summary>
-                    /// <para>The source of the data to be vectorized.</para>
+                    /// <para>Vectorization information source</para>
                     /// </summary>
                     [NameInMap("srcFieldConfig")]
                     [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                         public string OssBucket { get; set; }
 
                         /// <summary>
-                        /// <para>The Object Storage Service (OSS) endpoint.</para>
+                        /// <para>OSS region endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                         public string OssEndpoint { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the Alibaba Cloud account.</para>
+                        /// <para>Cloud account ID</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>uid</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     }
 
                     /// <summary>
-                    /// <para>The data type.</para>
+                    /// <para>Data type</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>image</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string VectorModal { get; set; }
 
                     /// <summary>
-                    /// <para>The vectorization model.</para>
+                    /// <para>Vectorization model</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>clip</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// <para>The source field.</para>
+                /// <para>Source field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>source_image</para>
@@ -134,6 +134,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
+            /// <para>Number of data update resources</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -141,11 +143,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public int? DataProcessorCount { get; set; }
 
+            /// <summary>
+            /// <para>Data source configuration</para>
+            /// </summary>
             [NameInMap("dataSource")]
             [Validation(Required=false)]
             public GetTableResponseBodyResultDataSource DataSource { get; set; }
             public class GetTableResponseBodyResultDataSource : TeaModel {
                 /// <summary>
+                /// <para>Whether to automatically rebuild the index</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -153,6 +160,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public bool? AutoBuildIndex { get; set; }
 
+                /// <summary>
+                /// <para>Data source configuration</para>
+                /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public GetTableResponseBodyResultDataSourceConfig Config { get; set; }
@@ -178,6 +188,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string AccessSecret { get; set; }
 
                     /// <summary>
+                    /// <para>OSS namespace</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>heytea-ops-oss</para>
                     /// </summary>
@@ -186,6 +198,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Bucket { get; set; }
 
                     /// <summary>
+                    /// <para>ODPS-related</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
                     /// </summary>
@@ -194,6 +208,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Endpoint { get; set; }
 
                     /// <summary>
+                    /// <para>saro-related</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>namespace</para>
                     /// </summary>
@@ -202,6 +218,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
+                    /// <para>OSS file path</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>/opensearch_index_data/sift_oss_test.data</para>
                     /// </summary>
@@ -210,6 +228,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string OssPath { get; set; }
 
                     /// <summary>
+                    /// <para>Partition information</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ds=20220808</para>
                     /// </summary>
@@ -218,6 +238,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Partition { get; set; }
 
                     /// <summary>
+                    /// <para>HDFS-related</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>vendor/sebastian/comparator/src/exceptions</para>
                     /// </summary>
@@ -226,6 +248,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Path { get; set; }
 
                     /// <summary>
+                    /// <para>ODPS data source project name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>dp_pdm_marketing_prod</para>
                     /// </summary>
@@ -234,6 +258,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string Project { get; set; }
 
                     /// <summary>
+                    /// <para>saro/ODPS data source table name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test_add</para>
                     /// </summary>
@@ -244,6 +270,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
+                /// <para>Incremental data timestamp</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1715160176</para>
                 /// </summary>
@@ -252,6 +280,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public int? DataTimeSec { get; set; }
 
                 /// <summary>
+                /// <para>Data source type: only supports three types: odps, swift, and oss (odps, swift, saro, oss, unKnow)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>odps</para>
                 /// </summary>
@@ -262,13 +292,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.</para>
+            /// <para>Field map collection, key: field name, value: field type</para>
             /// </summary>
             [NameInMap("fieldSchema")]
             [Validation(Required=false)]
             public Dictionary<string, string> FieldSchema { get; set; }
 
             /// <summary>
+            /// <para>Index name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_oss</para>
             /// </summary>
@@ -277,6 +309,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Number of data shards</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -285,6 +319,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? PartitionCount { get; set; }
 
             /// <summary>
+            /// <para>Primary key field</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -293,6 +329,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string PrimaryKey { get; set; }
 
             /// <summary>
+            /// <para>If the user provides rawSchema, it is used directly as the HA3 schema structure without manual assembly</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -301,7 +339,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string RawSchema { get; set; }
 
             /// <summary>
-            /// <para>The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.</para>
+            /// <para>Index table status (NEW, PUBLISH, IN_USE: normal status after the recall engine version is created successfully, NOT_USE, STOP_USE, RESTORE_USE, FAIL: status when a new version of the vector retrieval version fails to create an index for the first time)</para>
             /// 
             /// <b>Example:</b>
             /// <para>IN_USE</para>
@@ -311,31 +349,42 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The index schema.</para>
+            /// <para>Index structure</para>
             /// </summary>
             [NameInMap("vectorIndex")]
             [Validation(Required=false)]
             public List<GetTableResponseBodyResultVectorIndex> VectorIndex { get; set; }
             public class GetTableResponseBodyResultVectorIndex : TeaModel {
                 /// <summary>
-                /// <para>The configurations of the index schema.</para>
+                /// <para>Index structure configuration</para>
                 /// </summary>
                 [NameInMap("advanceParams")]
                 [Validation(Required=false)]
                 public GetTableResponseBodyResultVectorIndexAdvanceParams AdvanceParams { get; set; }
                 public class GetTableResponseBodyResultVectorIndexAdvanceParams : TeaModel {
                     /// <summary>
-                    /// <para>The index building parameters.</para>
+                    /// <para>Index building parameters</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{}</para>
+                    /// <para>{
+                    ///   &quot;proxima.qc.builder.quantizer_class&quot;: &quot;Int8QuantizerConverter&quot;,
+                    ///   &quot;proxima.qc.builder.quantize_by_centroid&quot;: true,
+                    ///   &quot;proxima.qc.builder.optimizer_class&quot;: &quot;BruteForceBuilder&quot;,
+                    ///   &quot;proxima.qc.builder.thread_count&quot;: 10,
+                    ///   &quot;proxima.qc.builder.optimizer_params&quot;: {
+                    ///     &quot;proxima.linear.builder.column_major_order&quot;: true
+                    ///   },
+                    ///   &quot;proxima.qc.builder.store_original_features&quot;: false,
+                    ///   &quot;proxima.qc.builder.train_sample_count&quot;: 3000000,
+                    ///   &quot;proxima.qc.builder.train_sample_ratio&quot;: 0.5
+                    /// }</para>
                     /// </summary>
                     [NameInMap("buildIndexParams")]
                     [Validation(Required=false)]
                     public string BuildIndexParams { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for linear building.</para>
+                    /// <para>Linear build threshold</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5000</para>
@@ -345,7 +394,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string LinearBuildThreshold { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of retrieved candidate sets.</para>
+                    /// <para>Minimum number of recall candidates</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20000</para>
@@ -355,10 +404,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                     public string MinScanDocCnt { get; set; }
 
                     /// <summary>
-                    /// <para>The index retrieval parameters.</para>
+                    /// <para>Index search parameters</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{}</para>
+                    /// <para>{&quot;proxima.qc.searcher.scan_ratio&quot;:0.01}</para>
                     /// </summary>
                     [NameInMap("searchIndexParams")]
                     [Validation(Required=false)]
@@ -367,7 +416,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 }
 
                 /// <summary>
-                /// <para>The dimension of the vector.</para>
+                /// <para>Vector dimension</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
@@ -377,7 +426,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Dimension { get; set; }
 
                 /// <summary>
-                /// <para>The distance type.</para>
+                /// <para>Distance type</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SquaredEuclidean</para>
@@ -387,7 +436,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string DistanceType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the index schema.</para>
+                /// <para>Index structure name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_odps</para>
@@ -397,7 +446,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string IndexName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace field.</para>
+                /// <para>Namespace field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>namespace</para>
@@ -407,7 +456,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The field that stores the indexes of the elements in sparse vectors.</para>
+                /// <para>Sparse vector index field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sparse_indices</para>
@@ -417,7 +466,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string SparseIndexField { get; set; }
 
                 /// <summary>
-                /// <para>The field that stores the elements in sparse vectors.</para>
+                /// <para>Sparse vector value field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sparse_values</para>
@@ -427,7 +476,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string SparseValueField { get; set; }
 
                 /// <summary>
-                /// <para>The vector field.</para>
+                /// <para>Vector field</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>source_image_vector</para>
@@ -437,7 +486,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string VectorField { get; set; }
 
                 /// <summary>
-                /// <para>The vector retrieval algorithm.</para>
+                /// <para>Vector index algorithm</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Qc</para>

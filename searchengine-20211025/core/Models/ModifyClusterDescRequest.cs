@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The request body.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{
+        ///     &quot;description&quot;: &quot;Custom description&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

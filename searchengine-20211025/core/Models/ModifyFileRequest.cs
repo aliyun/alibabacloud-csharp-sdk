@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The file content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>{\&quot;partition\&quot;:1}</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The number of shards.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ds=20220713</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]

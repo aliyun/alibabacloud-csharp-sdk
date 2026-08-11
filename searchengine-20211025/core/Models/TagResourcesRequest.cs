@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the resources. You can specify up to 50 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resourceId")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The tags to add. You can specify a maximum of 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tag")]
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>opensearch</para>
             /// </summary>
@@ -42,6 +47,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>opensearch</para>
             /// </summary>

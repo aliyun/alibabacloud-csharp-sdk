@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListPostQueryResultRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The request structure.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;assemblyQuery&quot;:&quot;query=id:1&amp;&amp;cluster=general&amp;&amp;config=start:0,hit:10,format:json&quot;}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, object> Body { get; set; }
 
         /// <summary>
-        /// <para>The query type. Valid values: sql: SQL query. ha3: Havenask query.</para>
+        /// <para>sql: SQL query. ha3: HA3 query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha3</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetSqlInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

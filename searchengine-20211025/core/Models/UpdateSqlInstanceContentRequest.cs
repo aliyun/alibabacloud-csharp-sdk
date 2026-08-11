@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UpdateSqlInstanceContentRequest : TeaModel {
         /// <summary>
+        /// <para>The SQL content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

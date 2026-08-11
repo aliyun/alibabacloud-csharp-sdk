@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>id of request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>NodeVO</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public CreateFolderResponseBodyResult Result { get; set; }
         public class CreateFolderResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719221186114</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719221186114</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The folder ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>25030</para>
             /// </summary>
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ha-cn-pl32rf0****</para>
             /// </summary>
@@ -59,6 +67,12 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the entry is a folder. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The entry is a folder.</description></item>
+            /// <item><description>false: The entry is not a folder.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -67,6 +81,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public int? IsDir { get; set; }
 
             /// <summary>
+            /// <para>The name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -75,6 +91,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The parent level ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-1</para>
             /// </summary>
@@ -83,6 +101,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Parent { get; set; }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

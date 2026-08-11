@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyAdvanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the advanced configuration that is returned.</para>
+        /// <para>The content of the configuration. This parameter is not empty for HTTP and Git requests.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The description of the advanced configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Custom Configuration</para>
         /// </summary>
         [NameInMap("desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The files.</para>
+        /// <para>The list of files.</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string FullPathName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the file is a directory.</para>
+            /// <para>Indicates whether the path specifies a directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? IsDir { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the file is a template.</para>
+            /// <para>Indicates whether the file is a template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -89,17 +89,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The name of the advanced configuration.</para>
+        /// <para>The name of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-zvp2qr1sk01_qrs</para>
+        /// <para>ha-cn-pl32rf0****_offline_adv_edit</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</para>
+        /// <para>The status of the configuration. Valid values: drafting, used, unused, and trash.</para>
         /// 
         /// <b>Example:</b>
         /// <para>used</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the advanced configuration was updated.</para>
+        /// <para>The time when the configuration was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-02-27T07:50:55Z</para>

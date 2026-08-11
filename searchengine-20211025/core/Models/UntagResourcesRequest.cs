@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to remove all tags. This parameter is valid only when the \<c>tagKey\\</c> parameter is empty. Valid values: \<c>true\\</c> and \<c>false\\</c>. The default value is \<c>false\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the resources. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resourceId")]
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +38,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The list of tag keys. You can include up to 20 tag keys.</para>
+        /// </summary>
         [NameInMap("tagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

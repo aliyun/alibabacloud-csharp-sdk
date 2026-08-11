@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListAdvanceConfigDirRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the directory</para>
+        /// <para>The directory name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

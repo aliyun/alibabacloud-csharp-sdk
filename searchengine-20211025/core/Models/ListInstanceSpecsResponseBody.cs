@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The memory of the instance. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4</para>
+            /// <para>16</para>
             /// </summary>
             [NameInMap("mem")]
             [Validation(Required=false)]

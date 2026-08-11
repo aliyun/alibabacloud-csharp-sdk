@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ha-cn-pl32rf0js04_test</para>
+        /// <para>ha-cn-pl32rf0****_ test_api</para>
         /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]

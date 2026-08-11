@@ -10,37 +10,37 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. Valid values: PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify paymentInfo. POSTPAY: pay-as-you-go. This billing method is not supported.</para>
+        /// <para>The billing method of the instance. Valid values: PREPAY: subscription. If you select this billing method, make sure that your account supports balance payment or credit payment. Otherwise, the InvalidPayMethod error is returned. You must also specify the paymentInfo parameter. POSTPAY: pay-as-you-go (currently not supported).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>PREPAY</para>
         /// </summary>
         [NameInMap("chargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The information about the instance specification.</para>
+        /// <para>The list of specification information related to the instance.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestComponents> Components { get; set; }
         public class CreateInstanceRequestComponents : TeaModel {
             /// <summary>
-            /// <para>The code of the specification, which must be consistent with the value that you specify on the buy page.</para>
+            /// <para>The specification code, which is consistent with the sales parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>searcherdocsize</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The value of the specification.</para>
+            /// <para>The data entered in the control.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// <para>The billing information.</para>
+        /// <para>The payment information.</para>
         /// </summary>
         [NameInMap("order")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</para>
+            /// <para>The billing cycle. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The unit of the billing duration. Valid values: Month and Year.</para>
+            /// <para>The unit of the billing cycle. Valid values: Month and Year.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>Month</para>
             /// </summary>
             [NameInMap("pricingCycle")]
             [Validation(Required=false)]

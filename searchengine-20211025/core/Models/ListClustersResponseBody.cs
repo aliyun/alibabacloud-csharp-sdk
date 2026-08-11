@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The time when the configuration was updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>2024-05-21 16:05:26</para>
             /// </summary>
             [NameInMap("configUpdateTime")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The effective advanced configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("currentAdvanceConfigVersion")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The effective online configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("currentOnlineConfigVersion")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The name of the Searcher worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ha-cn-8ed2k7brm05_qrs</para>
+                /// <para>general</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The ID of the partition that is stored on the Searcher worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dt=20220216</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The description of the cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fzz_test</para>
+            /// <para>Custom description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The latest advanced configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("latestAdvanceConfigVersion")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The latest online configuration version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot; &quot;</para>
+            /// <para>ha-cn-pl32rf0****_offline_adv_v1</para>
             /// </summary>
             [NameInMap("latestOnlineConfigVersion")]
             [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ha-cn-7pp2pcna701_qrs</para>
+            /// <para>hz_pre_vpc_domain_1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The name of the QRS worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test_0704</para>
+                /// <para>ha-cn-pl32rf0****_qrs</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 /// <para>The ID of the partition that is stored on the QRS worker.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dt=20211216</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The cluster status. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;starting&quot;</para>
+            /// <para>running</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

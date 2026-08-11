@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ConfigValue : TeaModel {
         /// <summary>
-        /// <para>The description of the offline configuration.</para>
+        /// <para>Remarks</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The files to be modified.</para>
+        /// <para>List of modified files</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<ConfigValueFiles> Files { get; set; }
         public class ConfigValueFiles : TeaModel {
             /// <summary>
-            /// <para>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</para>
+            /// <para>Operation type. Valid values: UPDATE (update) and DELETE (delete). Default value: UPDATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATE</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string OperateType { get; set; }
 
             /// <summary>
-            /// <para>The path of the parent directory.</para>
+            /// <para>The path of the parent directory</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -47,24 +47,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string ParentFullPath { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>File name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>/intervene_dict/example.dict</para>
+            /// <para>/intervene_dict/analyzer.dict</para>
             /// </summary>
             [NameInMap("fileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The configuration to be modified.</para>
+            /// <para>The configuration for this update</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public ConfigValueFilesConfig Config { get; set; }
             public class ConfigValueFilesConfig : TeaModel {
                 /// <summary>
-                /// <para>The file content.</para>
+                /// <para>File content for dictionary configuration</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>$dictContent</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The variables.</para>
+                /// <para>Variable</para>
                 /// </summary>
                 [NameInMap("variables")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// <para>The directory name.</para>
+            /// <para>Directory name</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test</para>

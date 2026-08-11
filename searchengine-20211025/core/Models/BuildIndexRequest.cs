@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class BuildIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</para>
+        /// <para>The method to rebuild the index. Valid values: api and indexRecover.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>indexRecover</para>
+        /// <para>api</para>
         /// </summary>
         [NameInMap("buildMode")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>my_data_source</para>
+        /// <para>ha-cn-pl32rf0****_test_api</para>
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         /// <para>The type of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>swift</para>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("dataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</para>
+        /// <para>The UNIX timestamp in seconds. This parameter is an integer. This parameter is required if data is pushed to the data source using an API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640867288</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public int? DataTimeSec { get; set; }
 
         /// <summary>
-        /// <para>The data center in which the data source is deployed.</para>
+        /// <para>The data center of the data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>sz_vpc_domain_1</para>
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The data restoration version.</para>
+        /// <para>The backfill ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>160131146</para>
@@ -70,19 +70,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public long? Generation { get; set; }
 
         /// <summary>
-        /// <para>The partition in the MaxCompute table. This parameter is required if type is set to odps.</para>
+        /// <para>Required if dataSourceType is set to odps.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20201010</para>
+        /// <para>ds=20201010</para>
         /// </summary>
         [NameInMap("partition")]
         [Validation(Required=false)]
         public string Partition { get; set; }
 
+        /// <summary>
+        /// <para>The relative path.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/test/dir</para>
+        /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
+        /// <summary>
+        /// <para>The tag of the Data Lake Formation (DLF) data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
