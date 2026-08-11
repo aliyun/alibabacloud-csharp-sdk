@@ -21,24 +21,24 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"me-east-1", "eflo-controller.me-east-1.aliyuncs.com"},
-                {"eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"},
                 {"cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"},
-                {"cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"},
                 {"cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"},
                 {"cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"},
-                {"cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"},
-                {"ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"},
                 {"ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"},
+                {"cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"},
+                {"cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"},
+                {"eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"},
+                {"me-east-1", "eflo-controller.me-east-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3508,6 +3508,202 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results include the following:</para>
+        /// <list type="bullet">
+        /// <item><description>The processing status of each node with configuration drift</description></item>
+        /// <item><description>The processing result, status, and reason for each node</description></item>
+        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeNodeGroupRefreshTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodeGroupRefreshTaskResponse
+        /// </returns>
+        public DescribeNodeGroupRefreshTaskResponse DescribeNodeGroupRefreshTaskWithOptions(DescribeNodeGroupRefreshTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNodeGroupRefreshTaskShrinkRequest request = new DescribeNodeGroupRefreshTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeStatuses))
+            {
+                request.NodeStatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeStatuses, "NodeStatuses", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupRefreshTaskId))
+            {
+                body["NodeGroupRefreshTaskId"] = request.NodeGroupRefreshTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeStatusesShrink))
+            {
+                body["NodeStatuses"] = request.NodeStatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNodeGroupRefreshTask",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNodeGroupRefreshTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results include the following:</para>
+        /// <list type="bullet">
+        /// <item><description>The processing status of each node with configuration drift</description></item>
+        /// <item><description>The processing result, status, and reason for each node</description></item>
+        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeNodeGroupRefreshTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodeGroupRefreshTaskResponse
+        /// </returns>
+        public async Task<DescribeNodeGroupRefreshTaskResponse> DescribeNodeGroupRefreshTaskWithOptionsAsync(DescribeNodeGroupRefreshTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeNodeGroupRefreshTaskShrinkRequest request = new DescribeNodeGroupRefreshTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeStatuses))
+            {
+                request.NodeStatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeStatuses, "NodeStatuses", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupRefreshTaskId))
+            {
+                body["NodeGroupRefreshTaskId"] = request.NodeGroupRefreshTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeStatusesShrink))
+            {
+                body["NodeStatuses"] = request.NodeStatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNodeGroupRefreshTask",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNodeGroupRefreshTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results include the following:</para>
+        /// <list type="bullet">
+        /// <item><description>The processing status of each node with configuration drift</description></item>
+        /// <item><description>The processing result, status, and reason for each node</description></item>
+        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNodeGroupRefreshTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodeGroupRefreshTaskResponse
+        /// </returns>
+        public DescribeNodeGroupRefreshTaskResponse DescribeNodeGroupRefreshTask(DescribeNodeGroupRefreshTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNodeGroupRefreshTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed progress of a node group configuration refresh task. Returns the actual execution result for each node, including refreshed properties, properties skipped because they exceeded the MaxDisruptiveAction constraint, and failure reasons.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results include the following:</para>
+        /// <list type="bullet">
+        /// <item><description>The processing status of each node with configuration drift</description></item>
+        /// <item><description>The processing result, status, and reason for each node</description></item>
+        /// <item><description>The refreshed and skipped properties for each node</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeNodeGroupRefreshTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodeGroupRefreshTaskResponse
+        /// </returns>
+        public async Task<DescribeNodeGroupRefreshTaskResponse> DescribeNodeGroupRefreshTaskAsync(DescribeNodeGroupRefreshTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNodeGroupRefreshTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Describes the constraints for a node type.</para>
         /// </summary>
         /// 
@@ -6224,6 +6420,366 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries nodes with configuration drift within a node group and the drift details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodeGroupDriftedNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupDriftedNodesResponse
+        /// </returns>
+        public ListNodeGroupDriftedNodesResponse ListNodeGroupDriftedNodesWithOptions(ListNodeGroupDriftedNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodeGroupDriftedNodesShrinkRequest request = new ListNodeGroupDriftedNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroupDriftedNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupDriftedNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries nodes with configuration drift within a node group and the drift details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodeGroupDriftedNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupDriftedNodesResponse
+        /// </returns>
+        public async Task<ListNodeGroupDriftedNodesResponse> ListNodeGroupDriftedNodesWithOptionsAsync(ListNodeGroupDriftedNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodeGroupDriftedNodesShrinkRequest request = new ListNodeGroupDriftedNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroupDriftedNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupDriftedNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries nodes with configuration drift within a node group and the drift details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupDriftedNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupDriftedNodesResponse
+        /// </returns>
+        public ListNodeGroupDriftedNodesResponse ListNodeGroupDriftedNodes(ListNodeGroupDriftedNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNodeGroupDriftedNodesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries nodes with configuration drift within a node group and the drift details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the node group configuration template with the actual configuration of each node, and returns all nodes with configuration inconsistencies, along with the difference type, before-and-after values, and the action level required for refresh for each inconsistent property. This is a read-only operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupDriftedNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupDriftedNodesResponse
+        /// </returns>
+        public async Task<ListNodeGroupDriftedNodesResponse> ListNodeGroupDriftedNodesAsync(ListNodeGroupDriftedNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNodeGroupDriftedNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodeGroupRefreshTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupRefreshTasksResponse
+        /// </returns>
+        public ListNodeGroupRefreshTasksResponse ListNodeGroupRefreshTasksWithOptions(ListNodeGroupRefreshTasksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodeGroupRefreshTasksShrinkRequest request = new ListNodeGroupRefreshTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                body["Statuses"] = request.StatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroupRefreshTasks",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupRefreshTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodeGroupRefreshTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupRefreshTasksResponse
+        /// </returns>
+        public async Task<ListNodeGroupRefreshTasksResponse> ListNodeGroupRefreshTasksWithOptionsAsync(ListNodeGroupRefreshTasksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodeGroupRefreshTasksShrinkRequest request = new ListNodeGroupRefreshTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                body["Statuses"] = request.StatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroupRefreshTasks",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupRefreshTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupRefreshTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupRefreshTasksResponse
+        /// </returns>
+        public ListNodeGroupRefreshTasksResponse ListNodeGroupRefreshTasks(ListNodeGroupRefreshTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNodeGroupRefreshTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupRefreshTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupRefreshTasksResponse
+        /// </returns>
+        public async Task<ListNodeGroupRefreshTasksResponse> ListNodeGroupRefreshTasksAsync(ListNodeGroupRefreshTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNodeGroupRefreshTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query Node Group Information Under the Cluster</para>
         /// </summary>
         /// 
@@ -7108,6 +7664,198 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+        /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshNodeGroupNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshNodeGroupNodesResponse
+        /// </returns>
+        public RefreshNodeGroupNodesResponse RefreshNodeGroupNodesWithOptions(RefreshNodeGroupNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RefreshNodeGroupNodesShrinkRequest request = new RefreshNodeGroupNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDisruptiveAction))
+            {
+                body["MaxDisruptiveAction"] = request.MaxDisruptiveAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshNodeGroupNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshNodeGroupNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+        /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshNodeGroupNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshNodeGroupNodesResponse
+        /// </returns>
+        public async Task<RefreshNodeGroupNodesResponse> RefreshNodeGroupNodesWithOptionsAsync(RefreshNodeGroupNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RefreshNodeGroupNodesShrinkRequest request = new RefreshNodeGroupNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDisruptiveAction))
+            {
+                body["MaxDisruptiveAction"] = request.MaxDisruptiveAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshNodeGroupNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshNodeGroupNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+        /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefreshNodeGroupNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshNodeGroupNodesResponse
+        /// </returns>
+        public RefreshNodeGroupNodesResponse RefreshNodeGroupNodes(RefreshNodeGroupNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RefreshNodeGroupNodesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
+        /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefreshNodeGroupNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshNodeGroupNodesResponse
+        /// </returns>
+        public async Task<RefreshNodeGroupNodesResponse> RefreshNodeGroupNodesAsync(RefreshNodeGroupNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RefreshNodeGroupNodesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
