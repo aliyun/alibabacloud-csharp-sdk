@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class PartitionError : TeaModel {
         /// <summary>
-        /// <para>The details of the error.</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auth failed</para>

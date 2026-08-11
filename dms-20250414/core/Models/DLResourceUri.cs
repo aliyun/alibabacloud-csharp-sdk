@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLResourceUri : TeaModel {
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ARCHIVE</para>
-        /// </description></item>
-        /// <item><description><para>JAR</para>
-        /// </description></item>
-        /// <item><description><para>FILE</para>
-        /// </description></item>
+        /// <item><description>ARCHIVE</description></item>
+        /// <item><description>JAR</description></item>
+        /// <item><description>FILE</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

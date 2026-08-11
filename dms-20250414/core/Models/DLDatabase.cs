@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database.</para>
+        /// <para>The database ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>

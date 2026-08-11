@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The data type of the column. Valid values include array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, and varchar.</para>
+        /// <para>The data type of the column. Valid values: array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, and varchar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string</para>
