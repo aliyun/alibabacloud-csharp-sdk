@@ -145,6 +145,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ResourceListPageUrl { get; set; }
 
+            /// <summary>
+            /// <para>The Alibaba Cloud resource type, in the format of ALIYUN::<cloud service>::<resource type>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALIYUN::VPC::VPC</para>
+            /// </summary>
             [NameInMap("resourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }

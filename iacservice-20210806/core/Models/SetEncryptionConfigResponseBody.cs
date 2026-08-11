@@ -8,26 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
-    public class TriggerStackExecutionResponseBody : TeaModel {
+    public class SetEncryptionConfigResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F2D40488-3F74-568B-87EC-1C04D098DF8B</para>
+        /// <para>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <para>The unique ID of the trigger.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>event-xxxx</para>
-        /// </summary>
-        [NameInMap("triggerId")]
-        [Validation(Required=false)]
-        public string TriggerId { get; set; }
 
     }
 

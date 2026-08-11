@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of registry modules.</para>
+        /// <para>The list of Registry modules.</para>
         /// </summary>
         [NameInMap("registryModules")]
         [Validation(Required=false)]
         public List<ListRegistryModulesResponseBodyRegistryModules> RegistryModules { get; set; }
         public class ListRegistryModulesResponseBodyRegistryModules : TeaModel {
             /// <summary>
-            /// <para>The permission. A value of private indicates that the module is private.</para>
+            /// <para>The permission. private: private.</para>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 16:16:04</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the registry module.</para>
+            /// <para>The description of the Registry module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public int? Downloads { get; set; }
 
             /// <summary>
-            /// <para>The name of the registry module.</para>
+            /// <para>The name of the Registry module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ModuleName</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The provider type. A value of alicloud indicates Alibaba Cloud.</para>
+            /// <para>The provider type. alicloud: Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alicloud</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The list of accounts with which the registry module is shared.</para>
+            /// <para>The list of accounts with which the Registry module is shared.</para>
             /// </summary>
             [NameInMap("sharedAccounts")]
             [Validation(Required=false)]

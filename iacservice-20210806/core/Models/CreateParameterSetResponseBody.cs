@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateParameterSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the parameter set.</para>
+        /// <para>The parameter set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pts-3b6cb9fa4751afff89a4b73779e0d</para>

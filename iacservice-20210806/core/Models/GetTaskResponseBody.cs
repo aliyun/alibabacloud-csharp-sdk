@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? AutoDestroy { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-06-15T02:44:37Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? DeletionProtection { get; set; }
 
             /// <summary>
-            /// <para>The description of the task.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is description</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to use a state file. Default value: false. This parameter is applicable to templates that originate from resource export. Only one task can use this parameter at a time.</para>
+            /// <para>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -232,6 +232,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public bool? SkipPropertyValidation { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to skip region validation. Valid values: true and false.</para>
+            /// </summary>
             [NameInMap("skipRegionValidation")]
             [Validation(Required=false)]
             public bool? SkipRegionValidation { get; set; }
@@ -240,7 +243,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Available: the task is available and no job is running.</description></item>
-            /// <item><description>Running: a job is currently running.</description></item>
+            /// <item><description>Running: the task is running and a job is in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

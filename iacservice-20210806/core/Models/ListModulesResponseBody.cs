@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListModulesResponseBodyModules> Modules { get; set; }
         public class ListModulesResponseBodyModules : TeaModel {
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-30T02:14:16Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when the template is associated with a node, which prevents the template from being deleted.</para>
+            /// <para>Indicates whether deletion protection is enabled. When the template is associated with a task, deletion protection is enabled and the template cannot be deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? DeletionProtection { get; set; }
 
             /// <summary>
-            /// <para>The description of the template.</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is description</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <item><description>ExportTask: exported from a resource export task.</description></item>
             /// <item><description>Upload: uploaded as a file.</description></item>
             /// <item><description>Shared: cloned from a shared template.</description></item>
-            /// <item><description>Editor: created by using the online editor.</description></item>
+            /// <item><description>Editor: created using the online editor.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The template status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Creating: the template is being created.</description></item>
-            /// <item><description>Created: the template has been created. You can publish a version after the template is created.</description></item>
+            /// <item><description>Created: the template has been created. A version can be published after the template is created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

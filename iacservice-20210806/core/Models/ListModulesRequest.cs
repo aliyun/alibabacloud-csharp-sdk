@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported for template names.</para>
+        /// <para>The search keyword. Supports fuzzy match on template names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ModuleName</para>
+        /// </summary>
         [NameInMap("moduleName")]
         [Validation(Required=false)]
         public string ModuleName { get; set; }

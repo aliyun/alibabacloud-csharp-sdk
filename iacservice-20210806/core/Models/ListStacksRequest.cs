@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</para>
         /// </summary>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -78,43 +80,43 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </thead>
         /// <tbody><tr>
         /// <td>Creating</td>
-        /// <td>Being created</td>
+        /// <td>Being created.</td>
         /// </tr>
         /// <tr>
         /// <td>Created</td>
-        /// <td>Creation complete</td>
+        /// <td>Created.</td>
         /// </tr>
         /// <tr>
         /// <td>Waiting</td>
-        /// <td>Waiting for deployment</td>
+        /// <td>Waiting for deployment.</td>
         /// </tr>
         /// <tr>
         /// <td>Deploying</td>
-        /// <td>Being deployed</td>
+        /// <td>Being deployed.</td>
         /// </tr>
         /// <tr>
         /// <td>Deployed</td>
-        /// <td>Deployment complete</td>
+        /// <td>Deployed.</td>
         /// </tr>
         /// <tr>
         /// <td>Errored</td>
-        /// <td>Deployment failed</td>
+        /// <td>Deployment failed.</td>
         /// </tr>
         /// <tr>
         /// <td>Deleting</td>
-        /// <td>Being deleted</td>
+        /// <td>Being deleted.</td>
         /// </tr>
         /// <tr>
         /// <td>Deleted</td>
-        /// <td>Deleted</td>
+        /// <td>Deleted.</td>
         /// </tr>
         /// <tr>
         /// <td>DeleteFailed</td>
-        /// <td>Deletion failed</td>
+        /// <td>Deletion failed.</td>
         /// </tr>
         /// <tr>
         /// <td>DetectTriggered</td>
-        /// <td>Drift detection triggered</td>
+        /// <td>Drift detection triggered.</td>
         /// </tr>
         /// </tbody></table>
         /// 

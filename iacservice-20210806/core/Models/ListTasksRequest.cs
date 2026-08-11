@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy search by task ID or task name.</para>
+        /// <para>The keyword used to perform a fuzzy search by task ID or task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The module ID.</para>
+        /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mod-1525e992f1b62139d1c437d64ae</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -82,10 +84,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <list type="bullet">
         /// <item><description>Planning: The job is in the Plan execution phase.</description></item>
         /// <item><description>Planned: The job has completed the Plan execution.</description></item>
-        /// <item><description>PlannedAndFinished: After the Plan execution is completed, no diff is found, and the job enters the final state.</description></item>
+        /// <item><description>PlannedAndFinished: After the Plan execution is complete, no diff is found. The job is in a final state.</description></item>
         /// <item><description>Applying: The job is in the Apply execution phase.</description></item>
         /// <item><description>Applied: The job has completed the Apply execution.</description></item>
-        /// <item><description>Errored: The job execution encountered errors and entered the final state.</description></item>
+        /// <item><description>Errored: The job execution encountered an error and entered a final state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

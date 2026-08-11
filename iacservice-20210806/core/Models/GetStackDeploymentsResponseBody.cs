@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public bool? AutoApply { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether this is a destroy job.</para>
+                /// <para>Indicates whether this is a destroy job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ConfigVersion { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in UTC, in the format of YYYY-MM-DDTHH:mm:ssZ (ISO 8601).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-01T12:10:18Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string DeploymentName { get; set; }
 
             /// <summary>
-            /// <para>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is triggered.</para>
+            /// <para>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
             /// <summary>
             /// <para>The execution type.</para>
-            /// <para>Manual: manual execution (default).</para>
-            /// <para>Auto: automatic execution.</para>
+            /// <para>Manual: Manual execution (default).</para>
+            /// <para>Auto: Automatic execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The expression, which can reference component outputs. Format: component.{component name}.{component output name}.</para>
+                /// <para>The expression that can reference component outputs, in the format: component.{component name}.{component output name}.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>component.sls.project_name</para>
@@ -237,6 +237,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API.</para>
+                /// <list type="bullet">
+                /// <item><description>true: Sensitive.</description></item>
+                /// <item><description>false: Not sensitive.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("sensitive")]
                 [Validation(Required=false)]
                 public bool? Sensitive { get; set; }
@@ -273,10 +280,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The change type of the component. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>create: all resource changes in the component are additions.</description></item>
-                /// <item><description>delete: all resource changes in the component are deletions.</description></item>
-                /// <item><description>read: all resource changes in the component are read operations.</description></item>
-                /// <item><description>update: resource changes in the component include two or more types among additions, deletions, and read operations.</description></item>
+                /// <item><description>create: All resource changes in the component are creations.</description></item>
+                /// <item><description>delete: All resource changes in the component are deletions.</description></item>
+                /// <item><description>read: All resource changes in the component are reads.</description></item>
+                /// <item><description>update: Resource changes in the component include two or more types among creation, deletion, and read.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -287,7 +294,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ModuleAction { get; set; }
 
                 /// <summary>
-                /// <para>The number of resources to be added, updated, and destroyed in this deployment.</para>
+                /// <para>The number of resources to be created, updated, and destroyed in this deployment.</para>
                 /// </summary>
                 [NameInMap("moduleActionDetail")]
                 [Validation(Required=false)]
@@ -384,7 +391,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </thead>
             /// <tbody><tr>
             /// <td>Pending</td>
-            /// <td>The initial status after a deployment is created.</td>
+            /// <td>The initial status after the deployment is created.</td>
             /// </tr>
             /// <tr>
             /// <td>PriorityQueued</td>
@@ -392,7 +399,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>PlanQueued</td>
-            /// <td>The deployment is queued because no workflow is available after the deployment is created.</td>
+            /// <td>The deployment is queued because no workflow is available after creation.</td>
             /// </tr>
             /// <tr>
             /// <td>ApplyQueued</td>
@@ -408,11 +415,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>ConfigProactiveInProgress</td>
-            /// <td>A compliance pre-check is in progress.</td>
+            /// <td>Compliance pre-check is in progress.</td>
             /// </tr>
             /// <tr>
             /// <td>ConfigProactiveSuccess</td>
-            /// <td>The compliance pre-check succeeded.</td>
+            /// <td>Compliance pre-check succeeded.</td>
             /// </tr>
             /// <tr>
             /// <td>DetectInProgress</td>
@@ -464,15 +471,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>Errored</td>
-            /// <td>The deployment encountered an error and is in a final status.</td>
+            /// <td>The deployment execution encountered an error and is in a final status.</td>
             /// </tr>
             /// <tr>
             /// <td>ConfigProactiveFailure</td>
-            /// <td>The compliance pre-check failed.</td>
+            /// <td>Compliance pre-check failed.</td>
             /// </tr>
             /// <tr>
             /// <td>Canceled</td>
-            /// <td>The deployment has been canceled and is in a final status.</td>
+            /// <td>The deployment execution has been canceled and is in a final status.</td>
             /// </tr>
             /// </tbody></table>
             /// 

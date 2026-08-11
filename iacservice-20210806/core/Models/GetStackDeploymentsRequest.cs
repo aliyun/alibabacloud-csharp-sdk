@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string DeploymentName { get; set; }
 
         /// <summary>
-        /// <para>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is triggered.</para>
+        /// <para>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </thead>
         /// <tbody><tr>
         /// <td>Pending</td>
-        /// <td>The initial status after a deployment is created.</td>
+        /// <td>The initial status after the deployment is created.</td>
         /// </tr>
         /// <tr>
         /// <td>PriorityQueued</td>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </tr>
         /// <tr>
         /// <td>PlanQueued</td>
-        /// <td>The deployment is queued because no workflow is available after the deployment is created.</td>
+        /// <td>The deployment is queued because no workflow is available after creation.</td>
         /// </tr>
         /// <tr>
         /// <td>ApplyQueued</td>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </tr>
         /// <tr>
         /// <td>ConfigProactiveInProgress</td>
-        /// <td>A compliance pre-check is in progress.</td>
+        /// <td>Compliance pre-check is in progress.</td>
         /// </tr>
         /// <tr>
         /// <td>ConfigProactiveSuccess</td>
-        /// <td>The compliance pre-check succeeded.</td>
+        /// <td>Compliance pre-check succeeded.</td>
         /// </tr>
         /// <tr>
         /// <td>DetectInProgress</td>
@@ -150,15 +150,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </tr>
         /// <tr>
         /// <td>Errored</td>
-        /// <td>The deployment encountered an error and is in a final status.</td>
+        /// <td>The deployment execution encountered an error and is in a final status.</td>
         /// </tr>
         /// <tr>
         /// <td>ConfigProactiveFailure</td>
-        /// <td>The compliance pre-check failed.</td>
+        /// <td>Compliance pre-check failed.</td>
         /// </tr>
         /// <tr>
         /// <td>Canceled</td>
-        /// <td>The deployment has been canceled and is in a final status.</td>
+        /// <td>The deployment execution has been canceled and is in a final status.</td>
         /// </tr>
         /// </tbody></table>
         /// 

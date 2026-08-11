@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListRegistryModulesRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword. Fuzzy search by module name is supported.</para>
+        /// <para>The search keyword. Fuzzy match on module names is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NFzbQCa7/yd7rAuSo5xZb54dD+2BRJj42DLT6GrZysw=</para>
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The filter condition for Registry module status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Available</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }

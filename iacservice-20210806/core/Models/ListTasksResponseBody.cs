@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? AutoApply { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-11T15:09:53Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CurrentJobId { get; set; }
 
             /// <summary>
-            /// <para>The current job status.</para>
+            /// <para>The status of the current job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CurrentJobStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources are included.</para>
+            /// <para>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The latest version of the module.</para>
+            /// <para>The latest version number of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v3</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string LatestModuleVersion { get; set; }
 
             /// <summary>
-            /// <para>The module ID.</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mod-518855d9a058c331e9c60bc0ce</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleId { get; set; }
 
             /// <summary>
-            /// <para>The module name.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mod-name</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The module version.</para>
+            /// <para>The template version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -198,8 +198,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Available: The task is available, and no job is running.</description></item>
-            /// <item><description>Running: The task is running, and the current job is in progress.</description></item>
+            /// <item><description>Available: The task is in an available state with no job running.</description></item>
+            /// <item><description>Running: The task is in a running state with a current job in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<ListTasksResponseBodyTasksTags> Tags { get; set; }
             public class ListTasksResponseBodyTasksTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the task.</para>
+                /// <para>The task tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag key of the module.</para>
+                /// <para>The tag key of the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string TagValue { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the task.</para>
+                /// <para>The task tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>iac-demo</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>55</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class JobsStatusDetailValue : TeaModel {
         /// <summary>
-        /// <para>备注</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>作业执行结果</para>
+        /// <para>The job execution result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string JobResult { get; set; }
 
         /// <summary>
-        /// <para>到达状态时间</para>
+        /// <para>The time when the status was reached, in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-13 17:11:34</para>

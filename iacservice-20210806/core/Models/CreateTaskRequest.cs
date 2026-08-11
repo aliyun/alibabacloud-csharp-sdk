@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically execute the node. Default value: false.</para>
+        /// <para>Specifies whether to automatically execute the task. Default value: false.</para>
         /// <list type="bullet">
         /// <item><description>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</description></item>
         /// <item><description>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the node.</para>
+        /// <para>The task description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is description</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to use a state file. Default value: false. This parameter is applicable when the template originates from resource export. Only one node can use this parameter.</para>
+        /// <para>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -120,11 +120,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleVersion { get; set; }
 
         /// <summary>
-        /// <para>The node name. The name must meet the following requirements:</para>
+        /// <para>The task name. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 2 to 128 characters in length.</description></item>
         /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</description></item>
-        /// <item><description>The name must be unique among all node resources within the current account.</description></item>
+        /// <item><description>The name must be unique among all tasks under the current account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -169,19 +169,22 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public bool? SkipPropertyValidation { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to skip region validation. Valid values: true (skip) and false (do not skip).</para>
+        /// </summary>
         [NameInMap("skipRegionValidation")]
         [Validation(Required=false)]
         public bool? SkipRegionValidation { get; set; }
 
         /// <summary>
-        /// <para>The list of tags for the node.</para>
+        /// <para>The list of tags for the task.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateTaskRequestTags> Tags { get; set; }
         public class CreateTaskRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the node.</para>
+            /// <para>The tag key of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -191,7 +194,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the node.</para>
+            /// <para>The tag value of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The node backend configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</para>
+        /// <para>The task configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</para>
         /// </summary>
         [NameInMap("taskBackend")]
         [Validation(Required=false)]
@@ -242,6 +245,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The Terraform Provider version. You can call the <b>ListTerraformProviderVersions</b> operation to obtain the list of supported versions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.248.0</para>
         /// </summary>
@@ -250,7 +255,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformProviderVersion { get; set; }
 
         /// <summary>
-        /// <para>The Terraform version. Call the <b>ListAvailableTerraformVersions</b> operation to obtain the list of supported versions. Default value: 1.5.7.</para>
+        /// <para>The Terraform version. You can call the <b>ListAvailableTerraformVersions</b> operation to obtain the list of supported versions. Default value: 1.5.7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5.7</para>
@@ -262,10 +267,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The job trigger method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Manual: manual trigger (default).</description></item>
-        /// <item><description>NewVersion: triggered when a new template version is published.</description></item>
-        /// <item><description>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</description></item>
-        /// <item><description>Auto: automatically triggered when the node properties change, such as node creation, execution version change, or job trigger policy change (when changed from another value to Auto).</description></item>
+        /// <item><description>Manual: Manual trigger (default).</description></item>
+        /// <item><description>NewVersion: Triggered when a new template version is published.</description></item>
+        /// <item><description>ParameterSetUpdated: Triggered when the parameter set content changes or the parameter set binding relationship changes.</description></item>
+        /// <item><description>Auto: Automatically triggered when the task\&quot;s own properties change, such as task creation, execution version change, or job trigger strategy change (when changed from another value to Auto).</description></item>
         /// </list>
         /// <para>The <b>ramRole</b> parameter is required when the trigger method is not manual.</para>
         /// 

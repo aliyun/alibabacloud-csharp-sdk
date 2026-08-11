@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetParameterSetResponseBodyParameterSet ParameterSet { get; set; }
         public class GetParameterSetResponseBodyParameterSet : TeaModel {
             /// <summary>
-            /// <para>The time when the parameter set was created.</para>
+            /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-30T02:14:16Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parameter set.</para>
+            /// <para>The parameter set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pts-3b6cb9fa4751afff9c5e4e01624b9</para>
@@ -73,15 +73,18 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether the parameter is secret. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</para>
+                /// </summary>
                 [NameInMap("secret")]
                 [Validation(Required=false)]
                 public bool? Secret { get; set; }
 
                 /// <summary>
-                /// <para>The status of the parameter. Valid values:</para>
+                /// <para>The parameter set status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>HAS_VALUE (default): A specific value is defined.</description></item>
-                /// <item><description>EXPLICIT_NULL: The value is explicitly set to null.</description></item>
+                /// <item><description>EXPLICIT_NULL: Explicitly set to null.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the parameter. Valid values: string, number, bool, map(string), and list(string).</para>
+                /// <para>The type of the parameter (string/number/bool/map(string)/list(string)).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<GetParameterSetResponseBodyParameterSetRelationList> RelationList { get; set; }
             public class GetParameterSetResponseBodyParameterSetRelationList : TeaModel {
                 /// <summary>
-                /// <para>The time when the parameter set was created.</para>
+                /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-04-24T22:58:50Z</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The resource ID. When the resource type is ModuleVersion, the ID is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
+                /// <para>The resource ID. When the resource type is ModuleVersion, the ID is composed of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mod-433aead756057101546eb5d50c1</para>
@@ -143,8 +146,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The resource type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Module: template</description></item>
-                /// <item><description>ModuleVersion: template version</description></item>
+                /// <item><description>Module: template.</description></item>
+                /// <item><description>ModuleVersion: template version.</description></item>
                 /// <item><description>Task: task.</description></item>
                 /// </list>
                 /// 

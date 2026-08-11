@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListParameterSetsResponseBodyParameterSets> ParameterSets { get; set; }
         public class ListParameterSetsResponseBodyParameterSets : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-14T10:05:19Z</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<ListParameterSetsResponseBodyParameterSetsParameters> Parameters { get; set; }
             public class ListParameterSetsResponseBodyParameterSetsParameters : TeaModel {
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>region</para>
@@ -103,14 +103,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</para>
+                /// </summary>
                 [NameInMap("secret")]
                 [Validation(Required=false)]
                 public bool? Secret { get; set; }
 
                 /// <summary>
                 /// <para>The parameter set status. Valid values:</para>
-                /// <para>HAS_VALUE (default): A specific value is defined.</para>
-                /// <para>EXPLICIT_NULL: The value is explicitly set to null.</para>
+                /// <list type="bullet">
+                /// <item><description><para>HAS_VALUE (default): A specific value is defined.</para>
+                /// </description></item>
+                /// <item><description><para>EXPLICIT_NULL: Explicitly set to null.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HAS_VALUE</para>
@@ -130,7 +137,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The parameter value.</para>
+                /// <para>The value of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -142,14 +149,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The relationships associated with the parameter set.</para>
+            /// <para>The associated resources.</para>
             /// </summary>
             [NameInMap("relationList")]
             [Validation(Required=false)]
             public List<ListParameterSetsResponseBodyParameterSetsRelationList> RelationList { get; set; }
             public class ListParameterSetsResponseBodyParameterSetsRelationList : TeaModel {
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-06-09T03:46:18Z</para>
@@ -159,7 +166,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The resource ID. When the resource type is ModuleVersion, the value is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
+                /// <para>The resource ID. When the resource type is ModuleVersion, the ID is composed of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>task-433aead756057ffdf5326bf1e12ed</para>
@@ -171,8 +178,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The resource type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Module: template</description></item>
-                /// <item><description>ModuleVersion: template version</description></item>
+                /// <item><description>Module: template.</description></item>
+                /// <item><description>ModuleVersion: template version.</description></item>
                 /// <item><description>Task: task.</description></item>
                 /// </list>
                 /// 

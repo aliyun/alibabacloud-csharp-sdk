@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The name of the module.</para>
         /// <para>Note: The module name is not necessarily the same as the product name or resource name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc</para>
         /// </summary>
         [NameInMap("moduleName")]
         [Validation(Required=false)]

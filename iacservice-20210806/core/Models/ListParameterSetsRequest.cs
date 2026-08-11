@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

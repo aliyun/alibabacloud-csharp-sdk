@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searching resource codes or names. Fuzzy match is supported.</para>
+        /// <para>The keyword for searching resource code or name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <para>The order in which resource types are returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal (default): returned in normal order.</description></item>
-        /// <item><description>Top: returned in order of popularity.</description></item>
+        /// <item><description>Top: returned in order of popular access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The status filter list. Valid values:</para>
+        /// <para>The status list for filtering. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Available</description></item>
-        /// <item><description>Deprecated.</description></item>
+        /// <item><description>Deprecated</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? SupportTerraformer { get; set; }
 
         /// <summary>
-        /// <para>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</para>
+        /// <para>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.227.0</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformProviderVersion { get; set; }
 
         /// <summary>
-        /// <para>The Terraform resources.</para>
+        /// <para>The list of Terraform resources.</para>
         /// </summary>
         [NameInMap("terraformResourceTypes")]
         [Validation(Required=false)]

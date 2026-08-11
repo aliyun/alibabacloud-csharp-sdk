@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out read-only properties.</para>
+        /// <para>Specifies whether to filter read-only properties.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? FilterReadOnly { get; set; }
 
         /// <summary>
-        /// <para>The Terraform provider version. If left empty, the latest version is used by default.</para>
+        /// <para>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.227.0</para>

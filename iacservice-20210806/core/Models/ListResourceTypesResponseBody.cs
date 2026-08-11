@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("resourceTypes")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>路由表</para>
+            /// <para>Route Table</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -96,6 +96,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ResourceListPageUrl { get; set; }
 
+            /// <summary>
+            /// <para>The Alibaba Cloud resource type in the format of ALIYUN::\<cloud service>::\<resource type>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALIYUN::VPC::VPC</para>
+            /// </summary>
             [NameInMap("resourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string SupportTerraformer { get; set; }
 
             /// <summary>
-            /// <para>The Terraform provider version.</para>
+            /// <para>The Terraform Provider version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.248.0</para>
@@ -164,7 +170,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>路由表</para>
+            /// <para>Route Table</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]

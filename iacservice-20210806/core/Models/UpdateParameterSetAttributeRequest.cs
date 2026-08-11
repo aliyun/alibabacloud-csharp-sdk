@@ -47,16 +47,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</para>
+            /// </summary>
             [NameInMap("secret")]
             [Validation(Required=false)]
             public bool? Secret { get; set; }
 
             /// <summary>
-            /// <para>The parameter set status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>HAS_VALUE (default): Defines a specific value.</description></item>
-            /// <item><description>EXPLICIT_NULL: Explicitly set to null.</description></item>
-            /// </list>
+            /// <para>The parameter set status. Valid values: </para>
+            /// <para>HAS_VALUE (default): Defines a specific value. </para>
+            /// <para>EXPLICIT_NULL: Explicitly set to null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HAS_VALUE</para>
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The parameter type. Valid values: string, number, bool, map(string), and list(string).</para>
+            /// <para>The parameter type (string/number/bool/map(string)/list(string)).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>

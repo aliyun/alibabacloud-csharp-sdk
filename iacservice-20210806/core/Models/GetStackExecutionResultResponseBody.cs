@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution results of the triggered stacks.</para>
+        /// <para>The execution results of the triggered Stacks.</para>
         /// </summary>
         [NameInMap("stackResults")]
         [Validation(Required=false)]
         public List<GetStackExecutionResultResponseBodyStackResults> StackResults { get; set; }
         public class GetStackExecutionResultResponseBodyStackResults : TeaModel {
             /// <summary>
-            /// <para>The deployment results of the stack.</para>
+            /// <para>The deployment results of the Stack.</para>
             /// </summary>
             [NameInMap("deployments")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The URL to view the deployment details.</para>
+                /// <para>The URL for viewing deployment details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&deploymentNo=6&configVersion=v1">https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&amp;deploymentNo=6&amp;configVersion=v1</a></para>
@@ -74,6 +74,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Url { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>Error code of the stack execution</para>
+            /// </summary>
+            [NameInMap("errorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
 
             /// <summary>
             /// <para>The error message.</para>
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the stack.</para>
+            /// <para>The unique identifier of the Stack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stack-al181av2bloah5s53hacbp4</para>
@@ -96,7 +103,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string StackId { get; set; }
 
             /// <summary>
-            /// <para>The stack name.</para>
+            /// <para>The Stack name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stack-demo</para>
@@ -106,13 +113,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string StackName { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the stack. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Deploying: deploying</description></item>
-            /// <item><description>Errored: deployment failed</description></item>
-            /// <item><description>Deployed: deployment completed</description></item>
-            /// <item><description>Waiting: waiting for deployment.</description></item>
-            /// </list>
+            /// <para>The execution status of the Stack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deployed</para>
@@ -133,6 +134,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string TriggerId { get; set; }
 
+        /// <summary>
+        /// <para>The overall execution status of this trigger task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Waiting: Processing.</description></item>
+        /// <item><description>Success: Processing succeeded.</description></item>
+        /// <item><description>Errored: Processing failed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("triggeredStatus")]
         [Validation(Required=false)]
         public string TriggeredStatus { get; set; }

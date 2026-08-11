@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateParameterSetRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter set. Maximum length: 1024 characters.</para>
+        /// <para>The description of the parameter set. Maximum length: 1,024 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is parameterSet</para>
@@ -58,16 +58,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and on the console, and are stored with encryption.</para>
+            /// </summary>
             [NameInMap("secret")]
             [Validation(Required=false)]
             public bool? Secret { get; set; }
 
             /// <summary>
-            /// <para>The parameter set status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>HAS_VALUE (default): Defines a specific value.</description></item>
-            /// <item><description>EXPLICIT_NULL: Explicitly sets the value to null.</description></item>
-            /// </list>
+            /// <para>The parameter status. Valid values:</para>
+            /// <para>HAS_VALUE (default): Defines a specific value.</para>
+            /// <para>EXPLICIT_NULL: Explicitly sets the value to null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HAS_VALUE</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The parameter type. Valid values: string, number, bool, map(string), and list(string).</para>
+            /// <para>The parameter type (string/number/bool/map(string)/list(string)).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>

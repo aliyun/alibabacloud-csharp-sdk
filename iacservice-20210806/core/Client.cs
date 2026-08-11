@@ -2094,9 +2094,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new parameter set.</description></item>
-        /// <item><description>The name field is required and can be up to 128 characters in length.</description></item>
-        /// <item><description>Each element in the parameters array must contain the name field. Other fields are optional.</description></item>
-        /// <item><description>Use the clientToken field to ensure the idempotence of the request.</description></item>
+        /// <item><description>The <c>name</c> field is required and can be up to 128 characters in length.</description></item>
+        /// <item><description>Each element in the <c>parameters</c> array must contain the <c>name</c> field. Other fields are optional.</description></item>
+        /// <item><description>Use the <c>clientToken</c> field to ensure idempotence of the request.</description></item>
         /// <item><description>The request header must contain authentication information to ensure secure access.</description></item>
         /// </list>
         /// </description>
@@ -2164,9 +2164,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new parameter set.</description></item>
-        /// <item><description>The name field is required and can be up to 128 characters in length.</description></item>
-        /// <item><description>Each element in the parameters array must contain the name field. Other fields are optional.</description></item>
-        /// <item><description>Use the clientToken field to ensure the idempotence of the request.</description></item>
+        /// <item><description>The <c>name</c> field is required and can be up to 128 characters in length.</description></item>
+        /// <item><description>Each element in the <c>parameters</c> array must contain the <c>name</c> field. Other fields are optional.</description></item>
+        /// <item><description>Use the <c>clientToken</c> field to ensure idempotence of the request.</description></item>
         /// <item><description>The request header must contain authentication information to ensure secure access.</description></item>
         /// </list>
         /// </description>
@@ -2234,9 +2234,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new parameter set.</description></item>
-        /// <item><description>The name field is required and can be up to 128 characters in length.</description></item>
-        /// <item><description>Each element in the parameters array must contain the name field. Other fields are optional.</description></item>
-        /// <item><description>Use the clientToken field to ensure the idempotence of the request.</description></item>
+        /// <item><description>The <c>name</c> field is required and can be up to 128 characters in length.</description></item>
+        /// <item><description>Each element in the <c>parameters</c> array must contain the <c>name</c> field. Other fields are optional.</description></item>
+        /// <item><description>Use the <c>clientToken</c> field to ensure idempotence of the request.</description></item>
         /// <item><description>The request header must contain authentication information to ensure secure access.</description></item>
         /// </list>
         /// </description>
@@ -2265,9 +2265,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new parameter set.</description></item>
-        /// <item><description>The name field is required and can be up to 128 characters in length.</description></item>
-        /// <item><description>Each element in the parameters array must contain the name field. Other fields are optional.</description></item>
-        /// <item><description>Use the clientToken field to ensure the idempotence of the request.</description></item>
+        /// <item><description>The <c>name</c> field is required and can be up to 128 characters in length.</description></item>
+        /// <item><description>Each element in the <c>parameters</c> array must contain the <c>name</c> field. Other fields are optional.</description></item>
+        /// <item><description>Use the <c>clientToken</c> field to ensure idempotence of the request.</description></item>
         /// <item><description>The request header must contain authentication information to ensure secure access.</description></item>
         /// </list>
         /// </description>
@@ -3222,7 +3222,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node.</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3345,7 +3345,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node.</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3468,7 +3468,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node.</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3492,7 +3492,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node.</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6692,6 +6692,124 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEncryptionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEncryptionConfigResponse
+        /// </returns>
+        public GetEncryptionConfigResponse GetEncryptionConfigWithOptions(GetEncryptionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEncryptionConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/encryption/config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEncryptionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEncryptionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEncryptionConfigResponse
+        /// </returns>
+        public async Task<GetEncryptionConfigResponse> GetEncryptionConfigWithOptionsAsync(GetEncryptionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEncryptionConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/encryption/config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEncryptionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEncryptionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEncryptionConfigResponse
+        /// </returns>
+        public GetEncryptionConfigResponse GetEncryptionConfig(GetEncryptionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEncryptionConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEncryptionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEncryptionConfigResponse
+        /// </returns>
+        public async Task<GetEncryptionConfigResponse> GetEncryptionConfigAsync(GetEncryptionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEncryptionConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the result of a Terraform run.</para>
         /// </summary>
         /// 
@@ -7387,11 +7505,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves detailed parameter set information by specifying a parameterSetId.</description></item>
-        /// <item><description>Authentication is required to call this operation.</description></item>
-        /// <item><description>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</description></item>
+        /// <item><description>This operation retrieves detailed parameter set information by specifying a <c>parameterSetId</c>.</description></item>
+        /// <item><description>Authentication is required to access this operation.</description></item>
+        /// <item><description>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7437,11 +7555,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves detailed parameter set information by specifying a parameterSetId.</description></item>
-        /// <item><description>Authentication is required to call this operation.</description></item>
-        /// <item><description>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</description></item>
+        /// <item><description>This operation retrieves detailed parameter set information by specifying a <c>parameterSetId</c>.</description></item>
+        /// <item><description>Authentication is required to access this operation.</description></item>
+        /// <item><description>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7487,11 +7605,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves detailed parameter set information by specifying a parameterSetId.</description></item>
-        /// <item><description>Authentication is required to call this operation.</description></item>
-        /// <item><description>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</description></item>
+        /// <item><description>This operation retrieves detailed parameter set information by specifying a <c>parameterSetId</c>.</description></item>
+        /// <item><description>Authentication is required to access this operation.</description></item>
+        /// <item><description>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7516,11 +7634,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves detailed parameter set information by specifying a parameterSetId.</description></item>
-        /// <item><description>Authentication is required to call this operation.</description></item>
-        /// <item><description>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</description></item>
+        /// <item><description>This operation retrieves detailed parameter set information by specifying a <c>parameterSetId</c>.</description></item>
+        /// <item><description>Authentication is required to access this operation.</description></item>
+        /// <item><description>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8814,7 +8932,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a stack.</para>
+        /// <para>Retrieves the trigger result of a Stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8854,7 +8972,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a stack.</para>
+        /// <para>Retrieves the trigger result of a Stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8894,7 +9012,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a stack.</para>
+        /// <para>Retrieves the trigger result of a Stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8913,7 +9031,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a stack.</para>
+        /// <para>Retrieves the trigger result of a Stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8937,7 +9055,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8982,7 +9100,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9027,7 +9145,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9051,7 +9169,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10732,20 +10850,20 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</para>
+        /// <para>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</para>
-        /// <h3>Notes</h3>
+        /// <para>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Use the pageNumber and pageSize parameters to control the number of returned results.</description></item>
-        /// <item><description>Use the name parameter to perform a fuzzy match on template names.</description></item>
-        /// <item><description>Use the source parameter to filter templates by source, such as OSS import or file upload.</description></item>
-        /// <item><description>Use the status parameter to filter templates by status, such as Created or Published.</description></item>
-        /// <item><description>Tag-based filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
+        /// <item><description>The pagination parameters <c>pageNumber</c> and <c>pageSize</c> help control the number of returned results.</description></item>
+        /// <item><description>Use the <c>name</c> parameter to perform a fuzzy match search on template names.</description></item>
+        /// <item><description>Use the <c>source</c> parameter to filter templates by source (such as OSS import or file upload).</description></item>
+        /// <item><description>Use the <c>status</c> parameter to filter templates by status (such as created or published).</description></item>
+        /// <item><description>Tag filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10822,20 +10940,20 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</para>
+        /// <para>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</para>
-        /// <h3>Notes</h3>
+        /// <para>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Use the pageNumber and pageSize parameters to control the number of returned results.</description></item>
-        /// <item><description>Use the name parameter to perform a fuzzy match on template names.</description></item>
-        /// <item><description>Use the source parameter to filter templates by source, such as OSS import or file upload.</description></item>
-        /// <item><description>Use the status parameter to filter templates by status, such as Created or Published.</description></item>
-        /// <item><description>Tag-based filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
+        /// <item><description>The pagination parameters <c>pageNumber</c> and <c>pageSize</c> help control the number of returned results.</description></item>
+        /// <item><description>Use the <c>name</c> parameter to perform a fuzzy match search on template names.</description></item>
+        /// <item><description>Use the <c>source</c> parameter to filter templates by source (such as OSS import or file upload).</description></item>
+        /// <item><description>Use the <c>status</c> parameter to filter templates by status (such as created or published).</description></item>
+        /// <item><description>Tag filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10912,20 +11030,20 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</para>
+        /// <para>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</para>
-        /// <h3>Notes</h3>
+        /// <para>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Use the pageNumber and pageSize parameters to control the number of returned results.</description></item>
-        /// <item><description>Use the name parameter to perform a fuzzy match on template names.</description></item>
-        /// <item><description>Use the source parameter to filter templates by source, such as OSS import or file upload.</description></item>
-        /// <item><description>Use the status parameter to filter templates by status, such as Created or Published.</description></item>
-        /// <item><description>Tag-based filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
+        /// <item><description>The pagination parameters <c>pageNumber</c> and <c>pageSize</c> help control the number of returned results.</description></item>
+        /// <item><description>Use the <c>name</c> parameter to perform a fuzzy match search on template names.</description></item>
+        /// <item><description>Use the <c>source</c> parameter to filter templates by source (such as OSS import or file upload).</description></item>
+        /// <item><description>Use the <c>status</c> parameter to filter templates by status (such as created or published).</description></item>
+        /// <item><description>Tag filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10945,20 +11063,20 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</para>
+        /// <para>Retrieves the list of templates under the current user, with support for pagination and conditional filtering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</para>
-        /// <h3>Notes</h3>
+        /// <para>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>Use the pageNumber and pageSize parameters to control the number of returned results.</description></item>
-        /// <item><description>Use the name parameter to perform a fuzzy match on template names.</description></item>
-        /// <item><description>Use the source parameter to filter templates by source, such as OSS import or file upload.</description></item>
-        /// <item><description>Use the status parameter to filter templates by status, such as Created or Published.</description></item>
-        /// <item><description>Tag-based filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
+        /// <item><description>The pagination parameters <c>pageNumber</c> and <c>pageSize</c> help control the number of returned results.</description></item>
+        /// <item><description>Use the <c>name</c> parameter to perform a fuzzy match search on template names.</description></item>
+        /// <item><description>Use the <c>source</c> parameter to filter templates by source (such as OSS import or file upload).</description></item>
+        /// <item><description>Use the <c>status</c> parameter to filter templates by status (such as created or published).</description></item>
+        /// <item><description>Tag filtering requires a JSON-formatted string, for example, <c>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11122,11 +11240,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</para>
+        /// <para>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</description></item>
-        /// <item><description>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</description></item>
+        /// <item><description>The <c>keyword</c> parameter can be used to fuzzy match parameter sets by name or description.</description></item>
+        /// <item><description>Pagination is controlled by <c>pageNumber</c> and <c>pageSize</c>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11191,11 +11309,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</para>
+        /// <para>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</description></item>
-        /// <item><description>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</description></item>
+        /// <item><description>The <c>keyword</c> parameter can be used to fuzzy match parameter sets by name or description.</description></item>
+        /// <item><description>Pagination is controlled by <c>pageNumber</c> and <c>pageSize</c>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11260,11 +11378,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</para>
+        /// <para>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</description></item>
-        /// <item><description>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</description></item>
+        /// <item><description>The <c>keyword</c> parameter can be used to fuzzy match parameter sets by name or description.</description></item>
+        /// <item><description>Pagination is controlled by <c>pageNumber</c> and <c>pageSize</c>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11290,11 +11408,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</para>
+        /// <para>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</description></item>
-        /// <item><description>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</description></item>
+        /// <item><description>The <c>keyword</c> parameter can be used to fuzzy match parameter sets by name or description.</description></item>
+        /// <item><description>Pagination is controlled by <c>pageNumber</c> and <c>pageSize</c>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11876,7 +11994,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of registry modules.</para>
+        /// <para>Queries the list of Registry modules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11947,7 +12065,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of registry modules.</para>
+        /// <para>Queries the list of Registry modules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12018,7 +12136,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of registry modules.</para>
+        /// <para>Queries the list of Registry modules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12042,7 +12160,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of registry modules.</para>
+        /// <para>Queries the list of Registry modules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12602,7 +12720,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</para>
+        /// <para>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12700,7 +12818,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</para>
+        /// <para>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12798,7 +12916,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</para>
+        /// <para>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12823,7 +12941,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</para>
+        /// <para>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13336,12 +13454,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The maximum number of times that a single user can call this operation per second: 100.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13429,12 +13547,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The maximum number of times that a single user can call this operation per second: 100.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13522,12 +13640,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The maximum number of times that a single user can call this operation per second: 100.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13546,12 +13664,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The maximum number of times that a single user can call this operation per second: 100.</para>
+        /// <para>Per-user call frequency: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14432,7 +14550,153 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger Stack execution</para>
+        /// <para>Sets the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetEncryptionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetEncryptionConfigResponse
+        /// </returns>
+        public SetEncryptionConfigResponse SetEncryptionConfigWithOptions(SetEncryptionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["kmsKeyId"] = request.KmsKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsRegionId))
+            {
+                body["kmsRegionId"] = request.KmsRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetEncryptionConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/encryption/config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetEncryptionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetEncryptionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetEncryptionConfigResponse
+        /// </returns>
+        public async Task<SetEncryptionConfigResponse> SetEncryptionConfigWithOptionsAsync(SetEncryptionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["kmsKeyId"] = request.KmsKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsRegionId))
+            {
+                body["kmsRegionId"] = request.KmsRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetEncryptionConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/encryption/config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetEncryptionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetEncryptionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetEncryptionConfigResponse
+        /// </returns>
+        public SetEncryptionConfigResponse SetEncryptionConfig(SetEncryptionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SetEncryptionConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the encryption configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetEncryptionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetEncryptionConfigResponse
+        /// </returns>
+        public async Task<SetEncryptionConfigResponse> SetEncryptionConfigAsync(SetEncryptionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SetEncryptionConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers the execution of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14472,6 +14736,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["codeVersionId"] = request.CodeVersionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTriggerId))
+            {
+                body["sourceTriggerId"] = request.SourceTriggerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14494,7 +14762,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger Stack execution</para>
+        /// <para>Triggers the execution of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14534,6 +14802,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["codeVersionId"] = request.CodeVersionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTriggerId))
+            {
+                body["sourceTriggerId"] = request.SourceTriggerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14556,7 +14828,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger Stack execution</para>
+        /// <para>Triggers the execution of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14575,7 +14847,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger Stack execution</para>
+        /// <para>Triggers the execution of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15454,9 +15726,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</description></item>
-        /// <item><description>If the request includes the parameters field, the parameter list in the parameter set is updated.</description></item>
-        /// <item><description>The clientToken field can be used to ensure the idempotence of the request.</description></item>
-        /// <item><description>The update operation requires a valid parameterSetId as a path parameter.</description></item>
+        /// <item><description>If the request includes the <c>parameters</c> field, the parameter list in the parameter set is updated.</description></item>
+        /// <item><description>The <c>clientToken</c> field can be used to ensure the idempotence of the request.</description></item>
+        /// <item><description>The update operation requires a valid <c>parameterSetId</c> as a path parameter.</description></item>
         /// <item><description>The request must include authentication information to pass identity verification.</description></item>
         /// </list>
         /// </description>
@@ -15520,9 +15792,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</description></item>
-        /// <item><description>If the request includes the parameters field, the parameter list in the parameter set is updated.</description></item>
-        /// <item><description>The clientToken field can be used to ensure the idempotence of the request.</description></item>
-        /// <item><description>The update operation requires a valid parameterSetId as a path parameter.</description></item>
+        /// <item><description>If the request includes the <c>parameters</c> field, the parameter list in the parameter set is updated.</description></item>
+        /// <item><description>The <c>clientToken</c> field can be used to ensure the idempotence of the request.</description></item>
+        /// <item><description>The update operation requires a valid <c>parameterSetId</c> as a path parameter.</description></item>
         /// <item><description>The request must include authentication information to pass identity verification.</description></item>
         /// </list>
         /// </description>
@@ -15586,9 +15858,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</description></item>
-        /// <item><description>If the request includes the parameters field, the parameter list in the parameter set is updated.</description></item>
-        /// <item><description>The clientToken field can be used to ensure the idempotence of the request.</description></item>
-        /// <item><description>The update operation requires a valid parameterSetId as a path parameter.</description></item>
+        /// <item><description>If the request includes the <c>parameters</c> field, the parameter list in the parameter set is updated.</description></item>
+        /// <item><description>The <c>clientToken</c> field can be used to ensure the idempotence of the request.</description></item>
+        /// <item><description>The update operation requires a valid <c>parameterSetId</c> as a path parameter.</description></item>
         /// <item><description>The request must include authentication information to pass identity verification.</description></item>
         /// </list>
         /// </description>
@@ -15617,9 +15889,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</description></item>
-        /// <item><description>If the request includes the parameters field, the parameter list in the parameter set is updated.</description></item>
-        /// <item><description>The clientToken field can be used to ensure the idempotence of the request.</description></item>
-        /// <item><description>The update operation requires a valid parameterSetId as a path parameter.</description></item>
+        /// <item><description>If the request includes the <c>parameters</c> field, the parameter list in the parameter set is updated.</description></item>
+        /// <item><description>The <c>clientToken</c> field can be used to ensure the idempotence of the request.</description></item>
+        /// <item><description>The update operation requires a valid <c>parameterSetId</c> as a path parameter.</description></item>
         /// <item><description>The request must include authentication information to pass identity verification.</description></item>
         /// </list>
         /// </description>
@@ -16510,7 +16782,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a task.</para>
+        /// <para>Updates the attributes of a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16621,7 +16893,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a task.</para>
+        /// <para>Updates the attributes of a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16732,7 +17004,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a task.</para>
+        /// <para>Updates the attributes of a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16756,7 +17028,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a task.</para>
+        /// <para>Updates the attributes of a node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
