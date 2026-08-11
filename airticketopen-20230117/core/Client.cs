@@ -6339,7 +6339,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消订单</para>
+        /// <para>Cancels an order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6393,7 +6393,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消订单</para>
+        /// <para>Cancels an order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6447,7 +6447,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消订单</para>
+        /// <para>Cancels an order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6466,7 +6466,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消订单</para>
+        /// <para>Cancels an order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7241,7 +7241,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries calendar-based availability and pricing for hotels in batch.</para>
+        /// <para>Queries calendar-based rate availability for hotels in batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7329,7 +7329,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries calendar-based availability and pricing for hotels in batch.</para>
+        /// <para>Queries calendar-based rate availability for hotels in batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7417,7 +7417,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries calendar-based availability and pricing for hotels in batch.</para>
+        /// <para>Queries calendar-based rate availability for hotels in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7436,7 +7436,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries calendar-based availability and pricing for hotels in batch.</para>
+        /// <para>Queries calendar-based rate availability for hotels in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7609,7 +7609,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries city administrative divisions by paging (in Chinese and English).</para>
+        /// <para>Queries city administrative divisions (in Chinese and English) by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7671,7 +7671,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries city administrative divisions by paging (in Chinese and English).</para>
+        /// <para>Queries city administrative divisions (in Chinese and English) by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7733,7 +7733,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries city administrative divisions by paging (in Chinese and English).</para>
+        /// <para>Queries city administrative divisions (in Chinese and English) by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7752,7 +7752,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries city administrative divisions by paging (in Chinese and English).</para>
+        /// <para>Queries city administrative divisions (in Chinese and English) by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7771,7 +7771,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the list of hotels by city with paging.</para>
+        /// <para>Performs a paged query of the hotel list by city with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7833,7 +7833,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the list of hotels by city with paging.</para>
+        /// <para>Performs a paged query of the hotel list by city with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7895,7 +7895,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the list of hotels by city with paging.</para>
+        /// <para>Performs a paged query of the hotel list by city with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7914,7 +7914,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the list of hotels by city with paging.</para>
+        /// <para>Performs a paged query of the hotel list by city with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7933,7 +7933,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验价</para>
+        /// <para>Validates the price of a hotel offer.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8009,7 +8009,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验价</para>
+        /// <para>Validates the price of a hotel offer.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8085,7 +8085,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验价</para>
+        /// <para>Validates the price of a hotel offer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8104,7 +8104,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验价</para>
+        /// <para>Validates the price of a hotel offer.</para>
         /// </summary>
         /// 
         /// <param name="request">

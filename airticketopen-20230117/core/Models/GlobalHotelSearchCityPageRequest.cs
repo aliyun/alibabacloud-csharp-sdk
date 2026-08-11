@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The country code in ISO 3166-1 alpha-2 format.</para>
+        /// <para>The country code (ISO 3166-1 alpha-2).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// <para>The pagination offset, starting from 0.</para>
+        /// <para>The pagination offset (starts from 0).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

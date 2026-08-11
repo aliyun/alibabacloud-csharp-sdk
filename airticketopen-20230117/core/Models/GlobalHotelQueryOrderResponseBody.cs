@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ExternalOrderNo { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC millisecond timestamp.</para>
+            /// <para>The creation time (UTC millisecond timestamp).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672531200000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
+            public string GmtCreate { get; set; }
 
             /// <summary>
             /// <para>The item information.</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy CancelPolicy { get; set; }
                 public class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The list of cancellation penalties.</para>
+                    /// <para>The list of cancellation penalty details.</para>
                     /// </summary>
                     [NameInMap("Penalties")]
                     [Validation(Required=false)]
                     public List<GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties> Penalties { get; set; }
                     public class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties : TeaModel {
                         /// <summary>
-                        /// <para>The currency code. This parameter is valid only when the penalty type is AMOUNT.</para>
+                        /// <para>The currency code (present only for AMOUNT type penalties).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>USD</para>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string Currency { get; set; }
 
                         /// <summary>
-                        /// <para>The effective end time in UTC millisecond timestamp.</para>
+                        /// <para>The effective end time (UTC millisecond timestamp).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1672617600000</para>
                         /// </summary>
                         [NameInMap("End")]
                         [Validation(Required=false)]
-                        public long? End { get; set; }
+                        public string End { get; set; }
 
                         /// <summary>
                         /// <para>The penalty type.</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyType { get; set; }
 
                         /// <summary>
-                        /// <para>The penalty value, which can be a percentage, amount, or number of nights.</para>
+                        /// <para>The penalty value (percentage, amount, or number of nights).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyValue { get; set; }
 
                         /// <summary>
-                        /// <para>The effective start time in UTC millisecond timestamp.</para>
+                        /// <para>The effective start time (UTC millisecond timestamp).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1672531200000</para>
                         /// </summary>
                         [NameInMap("Start")]
                         [Validation(Required=false)]
-                        public long? Start { get; set; }
+                        public string Start { get; set; }
 
                         /// <summary>
                         /// <para>TracerId</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The check-in date in yyyy-MM-dd format.</para>
+                /// <para>The check-in date (yyyy-MM-dd).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-01</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? CheckInNumber { get; set; }
 
                 /// <summary>
-                /// <para>The check-out date in yyyy-MM-dd format.</para>
+                /// <para>The check-out date (yyyy-MM-dd).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-03</para>
@@ -206,55 +206,46 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice Price { get; set; }
                     public class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice : TeaModel {
                         /// <summary>
-                        /// <para>cent</para>
+                        /// <para>The amount in the smallest currency unit.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>1</para>
+                        /// <para>10000</para>
                         /// </summary>
-                        [NameInMap("Cent")]
+                        [NameInMap("Amount")]
                         [Validation(Required=false)]
-                        public long? Cent { get; set; }
+                        public string Amount { get; set; }
 
                         /// <summary>
                         /// <para>The currency.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>USD</para>
                         /// </summary>
                         [NameInMap("Currency")]
                         [Validation(Required=false)]
-                        public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency Currency { get; set; }
-                        public class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency : TeaModel {
-                            /// <summary>
-                            /// <para>The currency code.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>USD</para>
-                            /// </summary>
-                            [NameInMap("CurrencyCode")]
-                            [Validation(Required=false)]
-                            public string CurrencyCode { get; set; }
+                        public string Currency { get; set; }
 
-                            /// <summary>
-                            /// <para>DefaultFractionDigits</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>1</para>
-                            /// </summary>
-                            [NameInMap("DefaultFractionDigits")]
-                            [Validation(Required=false)]
-                            public int? DefaultFractionDigits { get; set; }
-
-                            /// <summary>
-                            /// <para>NumericCode</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>1</para>
-                            /// </summary>
-                            [NameInMap("NumericCode")]
-                            [Validation(Required=false)]
-                            public int? NumericCode { get; set; }
-
-                        }
+                        /// <summary>
+                        /// <para>null</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>null</para>
+                        /// </summary>
+                        [NameInMap("TracerId")]
+                        [Validation(Required=false)]
+                        public string TracerId { get; set; }
 
                     }
+
+                    /// <summary>
+                    /// <para>null</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>null</para>
+                    /// </summary>
+                    [NameInMap("TracerId")]
+                    [Validation(Required=false)]
+                    public string TracerId { get; set; }
 
                 }
 
@@ -310,22 +301,22 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 /// <summary>
                 /// <para>The total selling price.</para>
                 /// </summary>
-                [NameInMap("SellingTotalPrice")]
+                [NameInMap("TotalPrice")]
                 [Validation(Required=false)]
-                public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice SellingTotalPrice { get; set; }
-                public class GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice : TeaModel {
+                public GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice TotalPrice { get; set; }
+                public class GlobalHotelQueryOrderResponseBodyDataItemInfoTotalPrice : TeaModel {
                     /// <summary>
                     /// <para>The amount in the smallest currency unit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>10000</para>
+                    /// <para>574</para>
                     /// </summary>
                     [NameInMap("Amount")]
                     [Validation(Required=false)]
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code in ISO 4217 format.</para>
+                    /// <para>The currency code (ISO 4217).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -335,10 +326,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <para>TracerId</para>
+                    /// <para>null</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>TracerId</para>
+                    /// <para>null</para>
                     /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
@@ -383,7 +374,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code in ISO 4217 format.</para>
+                    /// <para>The currency code (ISO 4217).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -405,14 +396,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The payment completion time in UTC millisecond timestamp.</para>
+                /// <para>The payment completion time (UTC millisecond timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1672531200000</para>
                 /// </summary>
                 [NameInMap("GmtPaid")]
                 [Validation(Required=false)]
-                public long? GmtPaid { get; set; }
+                public string GmtPaid { get; set; }
 
                 /// <summary>
                 /// <para>The payment method.</para>
@@ -444,14 +435,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<GlobalHotelQueryOrderResponseBodyDataRefundOrders> RefundOrders { get; set; }
             public class GlobalHotelQueryOrderResponseBodyDataRefundOrders : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the refund order, in UTC millisecond timestamp.</para>
+                /// <para>The refund order creation time (UTC millisecond timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1672531200000</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
-                public long? GmtCreate { get; set; }
+                public string GmtCreate { get; set; }
+
+                /// <summary>
+                /// <para>The external refund order number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RF202606290001</para>
+                /// </summary>
+                [NameInMap("RefundOrderNo")]
+                [Validation(Required=false)]
+                public string RefundOrderNo { get; set; }
 
                 /// <summary>
                 /// <para>The refund transaction ID.</para>
@@ -464,7 +465,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string RefundTransactionId { get; set; }
 
                 /// <summary>
-                /// <para>The reason for rejection.</para>
+                /// <para>The rejection reason.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Supplier rejected</para>
@@ -472,16 +473,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [NameInMap("RejectReason")]
                 [Validation(Required=false)]
                 public string RejectReason { get; set; }
-
-                /// <summary>
-                /// <para>The external refund order number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RF202606290001</para>
-                /// </summary>
-                [NameInMap("SellRefundOrderNo")]
-                [Validation(Required=false)]
-                public string SellRefundOrderNo { get; set; }
 
                 /// <summary>
                 /// <para>The unified refund status.</para>
@@ -511,7 +502,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code in ISO 4217 format.</para>
+                    /// <para>The currency code (ISO 4217).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -550,7 +541,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code in ISO 4217 format.</para>
+                    /// <para>The currency code (ISO 4217).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -640,7 +631,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? RoomIndex { get; set; }
 
                 /// <summary>
-                /// <para>The delivery status. Valid values: PENDING_CHECKIN, CHECKED_IN, CHECKED_OUT, and CANCELLED. The value is null before the delivery is created.</para>
+                /// <para>The fulfillment status (PENDING_CHECKIN/CHECKED_IN/CHECKED_OUT/CANCELLED). The value is null before the fulfillment is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CHECKED_IN</para>
@@ -704,7 +695,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>260E4F99-983D-1919-834C-5C42E98E5B2B</para>
@@ -714,7 +705,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

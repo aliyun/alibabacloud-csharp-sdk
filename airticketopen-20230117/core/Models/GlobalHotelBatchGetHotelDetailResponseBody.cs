@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotels> Hotels { get; set; }
             public class GlobalHotelBatchGetHotelDetailResponseBodyDataHotels : TeaModel {
                 /// <summary>
-                /// <para>The address of the hotel.</para>
+                /// <para>The address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No.33 East Chang An Avenue</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string CountryName { get; set; }
 
                 /// <summary>
-                /// <para>The description of the hotel.</para>
+                /// <para>The hotel description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Five-star luxury hotel</para>
@@ -121,17 +121,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the facility.</para>
+                    /// <para>The facility name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Swimming pool</para>
+                    /// <para>Swimming Pool</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the facility.</para>
+                    /// <para>The facility type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>parkade</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string HotelName { get; set; }
 
                 /// <summary>
-                /// <para>The Chinese name of the hotel.</para>
+                /// <para>The Chinese hotel name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>北京饭店</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string HotelNameCn { get; set; }
 
                 /// <summary>
-                /// <para>The type of the hotel. Valid values: LUXURY, DELUXE, and COMFORT.</para>
+                /// <para>The hotel type (LUXURY/DELUXE/COMFORT).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LUXURY</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string HotelType { get; set; }
 
                 /// <summary>
-                /// <para>The latitude of the hotel.</para>
+                /// <para>The latitude.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>39.9042</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Latitude { get; set; }
 
                 /// <summary>
-                /// <para>The longitude of the hotel.</para>
+                /// <para>The longitude.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>116.4074</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Longitude { get; set; }
 
                 /// <summary>
-                /// <para>The year the hotel opened.</para>
+                /// <para>The opening year.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPictures> Pictures { get; set; }
                 public class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPictures : TeaModel {
                     /// <summary>
-                    /// <para>The description of the picture.</para>
+                    /// <para>The picture description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Hotel lobby</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public bool? IsHeadPic { get; set; }
 
                     /// <summary>
-                    /// <para>The picture ID. The URL takes precedence.</para>
+                    /// <para>The picture ID (subject to the URL).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PIC001</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string SecondCategoryName { get; set; }
 
                     /// <summary>
-                    /// <para>The URL of the picture.</para>
+                    /// <para>The picture URL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     /// <para>The group name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Check-in policy</para>
+                    /// <para>Check-in Policy</para>
                     /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPoliciesItems> Items { get; set; }
                     public class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPoliciesItems : TeaModel {
                         /// <summary>
-                        /// <para>The list of child items.</para>
+                        /// <para>The list of sub-items.</para>
                         /// </summary>
                         [NameInMap("Children")]
                         [Validation(Required=false)]
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         /// <para>The item name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Check-in time</para>
+                        /// <para>Check-in Time</para>
                         /// </summary>
                         [NameInMap("ItemName")]
                         [Validation(Required=false)]
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The source of the latitude and longitude coordinates.</para>
+                /// <para>The source of the coordinates.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GOOGLE</para>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string PositionType { get; set; }
 
                 /// <summary>
-                /// <para>The year the hotel was last renovated.</para>
+                /// <para>The renovation year.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         /// <para>The bed type name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>King bed</para>
+                        /// <para>King Bed</para>
                         /// </summary>
                         [NameInMap("BedType")]
                         [Validation(Required=false)]
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesPictures> Pictures { get; set; }
                     public class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesPictures : TeaModel {
                         /// <summary>
-                        /// <para>The description of the picture.</para>
+                        /// <para>The picture description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Hotel lobby</para>
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public bool? IsHeadPic { get; set; }
 
                         /// <summary>
-                        /// <para>The picture ID. The URL takes precedence.</para>
+                        /// <para>The picture ID (subject to the URL).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PIC001</para>
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string SecondCategoryName { get; set; }
 
                         /// <summary>
-                        /// <para>The URL of the picture.</para>
+                        /// <para>The picture URL.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string RoomName { get; set; }
 
                     /// <summary>
-                    /// <para>The Chinese room type name.</para>
+                    /// <para>The Chinese room type name (always in Chinese, regardless of the language parameter).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>豪华大床房</para>
@@ -542,17 +542,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string RoomNameCn { get; set; }
 
                     /// <summary>
-                    /// <para>The room size.</para>
+                    /// <para>The room area (passed through as-is, may be a range value).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>35.0</para>
                     /// </summary>
                     [NameInMap("RoomSize")]
                     [Validation(Required=false)]
-                    public double? RoomSize { get; set; }
+                    public string RoomSize { get; set; }
 
                     /// <summary>
-                    /// <para>The size unit (SQM/SQFT).</para>
+                    /// <para>The area unit. Valid values: SQM (square meters) and SQFT (square feet). Default value: SQM.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SQM</para>
@@ -572,7 +572,15 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string StandardRoomId { get; set; }
 
                     /// <summary>
-                    /// <para>The window type.</para>
+                    /// <para>The window type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: no window</description></item>
+                    /// <item><description>1: with window</description></item>
+                    /// <item><description>2: partially with window</description></item>
+                    /// <item><description>3: opaque window</description></item>
+                    /// <item><description>4: partially opaque window</description></item>
+                    /// <item><description>5: floor-to-ceiling window</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>WINDOW</para>
@@ -582,7 +590,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string WindowType { get; set; }
 
                     /// <summary>
-                    /// <para>The defective window type code.</para>
+                    /// <para>The window defect code. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: window cannot be opened for ventilation</description></item>
+                    /// <item><description>1: view is obstructed outside the window</description></item>
+                    /// <item><description>2: window faces the interior of the hotel</description></item>
+                    /// <item><description>3: window is located in a corridor or hallway</description></item>
+                    /// <item><description>4: window can be opened for ventilation and faces an outdoor open environment</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SMALL_WINDOW</para>
@@ -594,7 +609,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The standard hotel ID on the platform.</para>
+                /// <para>The platform standard hotel ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>H001</para>
@@ -604,7 +619,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string StandardHotelId { get; set; }
 
                 /// <summary>
-                /// <para>The star rating of the hotel.</para>
+                /// <para>The star rating.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -614,7 +629,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Star { get; set; }
 
                 /// <summary>
-                /// <para>The status of the hotel. Valid values: ONLINE and OFFLINE.</para>
+                /// <para>The hotel status (ONLINE/OFFLINE).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ONLINE</para>
@@ -624,7 +639,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The phone number of the hotel.</para>
+                /// <para>The phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>+86-10-65137766</para>
@@ -634,7 +649,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Tel { get; set; }
 
                 /// <summary>
-                /// <para>The time zone of the hotel in IANA ID format.</para>
+                /// <para>The hotel time zone (IANA ID).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Asia/Shanghai</para>
@@ -668,7 +683,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>260E4F99-983D-1919-834C-5C42E98E5B2B</para>
@@ -678,7 +693,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

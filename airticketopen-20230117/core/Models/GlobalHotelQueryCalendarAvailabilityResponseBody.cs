@@ -17,45 +17,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public GlobalHotelQueryCalendarAvailabilityResponseBodyData Data { get; set; }
         public class GlobalHotelQueryCalendarAvailabilityResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of failed hotels (in partial success mode).</para>
-            /// </summary>
-            [NameInMap("FailedHotels")]
-            [Validation(Required=false)]
-            public List<GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels> FailedHotels { get; set; }
-            public class GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels : TeaModel {
-                /// <summary>
-                /// <para>The error code.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HOTEL_NOT_FOUND</para>
-                /// </summary>
-                [NameInMap("ErrorCode")]
-                [Validation(Required=false)]
-                public string ErrorCode { get; set; }
-
-                /// <summary>
-                /// <para>The error description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The hotel does not exist</para>
-                /// </summary>
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-
-                /// <summary>
-                /// <para>The standard hotel ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>H001</para>
-                /// </summary>
-                [NameInMap("StandardHotelId")]
-                [Validation(Required=false)]
-                public string StandardHotelId { get; set; }
-
-            }
-
-            /// <summary>
             /// <para>The calendar quotes grouped by standard hotel ID.</para>
             /// </summary>
             [NameInMap("Hotels")]

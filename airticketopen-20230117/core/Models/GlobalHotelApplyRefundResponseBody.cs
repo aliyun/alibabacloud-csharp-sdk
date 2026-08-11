@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public GlobalHotelApplyRefundResponseBodyData Data { get; set; }
         public class GlobalHotelApplyRefundResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The after-sales refund order ID.</para>
+            /// <para>The after-sales refund order number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>100001</para>
+            /// <para>RF202606290001</para>
             /// </summary>
-            [NameInMap("SellRefundOrderId")]
+            [NameInMap("RefundOrderNo")]
             [Validation(Required=false)]
-            public long? SellRefundOrderId { get; set; }
+            public string RefundOrderNo { get; set; }
 
             /// <summary>
             /// <para>The total penalty amount.</para>

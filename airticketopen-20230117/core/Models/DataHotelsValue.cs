@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class DataHotelsValue : TeaModel {
         /// <summary>
-        /// <para>The check-in date in the format of yyyy-MM-dd.</para>
+        /// <para>The check-in date (yyyy-MM-dd).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CheckInDate { get; set; }
 
         /// <summary>
-        /// <para>The check-out date in the format of yyyy-MM-dd.</para>
+        /// <para>The check-out date (yyyy-MM-dd).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-02</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string StandardRoomId { get; set; }
 
             /// <summary>
-            /// <para>The lowest selling price for the room type on the day.</para>
+            /// <para>The lowest price for the room type on the day.</para>
             /// </summary>
-            [NameInMap("LowestSellingPrice")]
+            [NameInMap("LowestPrice")]
             [Validation(Required=false)]
-            public DataHotelsValueRoomsLowestSellingPrice LowestSellingPrice { get; set; }
-            public class DataHotelsValueRoomsLowestSellingPrice : TeaModel {
+            public DataHotelsValueRoomsLowestPrice LowestPrice { get; set; }
+            public class DataHotelsValueRoomsLowestPrice : TeaModel {
                 /// <summary>
-                /// <para>The amount.</para>
+                /// <para>The amount in the smallest currency unit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>100.00</para>
+                /// <para>287</para>
                 /// </summary>
                 [NameInMap("Amount")]
                 [Validation(Required=false)]
-                public double? Amount { get; set; }
+                public string Amount { get; set; }
 
                 /// <summary>
                 /// <para>The currency code.</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>traceId</para>
+                /// <para>null</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TraceId</para>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("TracerId")]
                 [Validation(Required=false)]
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>The list of all available offers for the room type. Calendar quotes cannot be used for price verification, so itemOfferKey is not returned.</para>
+            /// <para>The list of all available offers for the room type.</para>
             /// </summary>
             [NameInMap("Offers")]
             [Validation(Required=false)]
             public List<DataHotelsValueRoomsOffers> Offers { get; set; }
             public class DataHotelsValueRoomsOffers : TeaModel {
                 /// <summary>
-                /// <para>The item-level offer identifier (price verification key, passed through as-is).</para>
+                /// <para>The item-level offer identifier (price verification key, pass through as-is).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>itemOffer_123</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 /// <para>The rate plan name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Room with breakfast</para>
+                /// <para>Breakfast included</para>
                 /// </summary>
                 [NameInMap("RatePlanName")]
                 [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public DataHotelsValueRoomsOffersCancelPolicy CancelPolicy { get; set; }
                 public class DataHotelsValueRoomsOffersCancelPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The policy type. Valid values: NON_REFUNDABLE, FREE_CANCELLATION, and PARTIAL_REFUND.</para>
+                    /// <para>The policy type (NON_REFUNDABLE/FREE_CANCELLATION/PARTIAL_REFUND).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>FREE_CANCELLATION</para>
@@ -157,27 +157,27 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public List<DataHotelsValueRoomsOffersCancelPolicyPenalties> Penalties { get; set; }
                     public class DataHotelsValueRoomsOffersCancelPolicyPenalties : TeaModel {
                         /// <summary>
-                        /// <para>The effective start time, in UTC millisecond timestamp.</para>
+                        /// <para>The effective start time (UTC millisecond timestamp).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1672531200000</para>
                         /// </summary>
                         [NameInMap("Start")]
                         [Validation(Required=false)]
-                        public long? Start { get; set; }
+                        public string Start { get; set; }
 
                         /// <summary>
-                        /// <para>The effective end time, in UTC millisecond timestamp.</para>
+                        /// <para>The effective end time (UTC millisecond timestamp).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1672617600000</para>
                         /// </summary>
                         [NameInMap("End")]
                         [Validation(Required=false)]
-                        public long? End { get; set; }
+                        public string End { get; set; }
 
                         /// <summary>
-                        /// <para>The penalty type. Valid values: PERCENTAGE, AMOUNT, and NIGHTS.</para>
+                        /// <para>The penalty type (PERCENTAGE/AMOUNT/NIGHTS).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PERCENTAGE</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyType { get; set; }
 
                         /// <summary>
-                        /// <para>The penalty value (percentage, amount, or number of nights).</para>
+                        /// <para>The penalty value (percentage/amount/nights).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyValue { get; set; }
 
                         /// <summary>
-                        /// <para>The currency. This parameter has a value only when PenaltyType is set to AMOUNT.</para>
+                        /// <para>The currency code (present only when the penalty type is AMOUNT).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>USD</para>
@@ -233,19 +233,19 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 /// <summary>
                 /// <para>The total selling price.</para>
                 /// </summary>
-                [NameInMap("SellingTotalPrice")]
+                [NameInMap("TotalPrice")]
                 [Validation(Required=false)]
-                public DataHotelsValueRoomsOffersSellingTotalPrice SellingTotalPrice { get; set; }
-                public class DataHotelsValueRoomsOffersSellingTotalPrice : TeaModel {
+                public DataHotelsValueRoomsOffersTotalPrice TotalPrice { get; set; }
+                public class DataHotelsValueRoomsOffersTotalPrice : TeaModel {
                     /// <summary>
-                    /// <para>The amount.</para>
+                    /// <para>The amount in the smallest currency unit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>100.00</para>
+                    /// <para>287</para>
                     /// </summary>
                     [NameInMap("Amount")]
                     [Validation(Required=false)]
-                    public double? Amount { get; set; }
+                    public string Amount { get; set; }
 
                     /// <summary>
                     /// <para>The currency code.</para>
@@ -258,10 +258,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
@@ -270,17 +270,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The list of daily selling prices.</para>
+                /// <para>The list of daily prices.</para>
                 /// </summary>
-                [NameInMap("SellingDailyPrices")]
+                [NameInMap("DailyPrices")]
                 [Validation(Required=false)]
-                public List<DataHotelsValueRoomsOffersSellingDailyPrices> SellingDailyPrices { get; set; }
-                public class DataHotelsValueRoomsOffersSellingDailyPrices : TeaModel {
+                public List<DataHotelsValueRoomsOffersDailyPrices> DailyPrices { get; set; }
+                public class DataHotelsValueRoomsOffersDailyPrices : TeaModel {
                     /// <summary>
-                    /// <para>The check-in date.</para>
+                    /// <para>The check-in date (yyyy-MM-dd, time zone: hotel local time zone).</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>2026-07-01</para>
+                    /// <para>2026-08-16</para>
                     /// </summary>
                     [NameInMap("Date")]
                     [Validation(Required=false)]
@@ -291,17 +291,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     /// </summary>
                     [NameInMap("Price")]
                     [Validation(Required=false)]
-                    public DataHotelsValueRoomsOffersSellingDailyPricesPrice Price { get; set; }
-                    public class DataHotelsValueRoomsOffersSellingDailyPricesPrice : TeaModel {
+                    public DataHotelsValueRoomsOffersDailyPricesPrice Price { get; set; }
+                    public class DataHotelsValueRoomsOffersDailyPricesPrice : TeaModel {
                         /// <summary>
-                        /// <para>The amount.</para>
+                        /// <para>The amount in the smallest currency unit.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>100.00</para>
+                        /// <para>287</para>
                         /// </summary>
                         [NameInMap("Amount")]
                         [Validation(Required=false)]
-                        public double? Amount { get; set; }
+                        public string Amount { get; set; }
 
                         /// <summary>
                         /// <para>The currency code.</para>
@@ -314,10 +314,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string Currency { get; set; }
 
                         /// <summary>
-                        /// <para>traceId</para>
+                        /// <para>null</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>TraceId</para>
+                        /// <para>null</para>
                         /// </summary>
                         [NameInMap("TracerId")]
                         [Validation(Required=false)]
@@ -326,10 +326,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     }
 
                     /// <summary>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? AvailableRooms { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of guests.</para>
+                /// <para>The maximum number of guests allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? MaxOccupancy { get; set; }
 
                 /// <summary>
-                /// <para>The confirmation type. Valid values: INSTANT_CONFIRM and NON_INSTANT_CONFIRM.</para>
+                /// <para>The confirmation type (INSTANT_CONFIRM/NON_INSTANT_CONFIRM).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INSTANT_CONFIRM</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<DataHotelsValueOffers> Offers { get; set; }
         public class DataHotelsValueOffers : TeaModel {
             /// <summary>
-            /// <para>The item-domain offer identifier (price verification key, passed through as-is).</para>
+            /// <para>The item offer key used for price verification. Pass through this value as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>itemOffer_123</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             /// <para>The rate plan name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Breakfast Included</para>
+            /// <para>Breakfast included</para>
             /// </summary>
             [NameInMap("RatePlanName")]
             [Validation(Required=false)]
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? MealCount { get; set; }
 
             /// <summary>
-            /// <para>The cancellation and modification policy.</para>
+            /// <para>The cancellation policy.</para>
             /// </summary>
             [NameInMap("CancelPolicy")]
             [Validation(Required=false)]
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     /// </summary>
                     [NameInMap("Start")]
                     [Validation(Required=false)]
-                    public long? Start { get; set; }
+                    public string Start { get; set; }
 
                     /// <summary>
                     /// <para>The effective end time (UTC millisecond timestamp).</para>
@@ -470,7 +470,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     /// </summary>
                     [NameInMap("End")]
                     [Validation(Required=false)]
-                    public long? End { get; set; }
+                    public string End { get; set; }
 
                     /// <summary>
                     /// <para>The penalty type (PERCENTAGE/AMOUNT/NIGHTS).</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyType { get; set; }
 
                     /// <summary>
-                    /// <para>The penalty value (percentage/amount/number of nights).</para>
+                    /// <para>The penalty value (percentage/amount/nights).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code (only applicable when the penalty type is AMOUNT).</para>
+                    /// <para>The currency code. This field has a value only when the penalty type is AMOUNT.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -529,19 +529,19 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             /// <summary>
             /// <para>The total selling price.</para>
             /// </summary>
-            [NameInMap("SellingTotalPrice")]
+            [NameInMap("TotalPrice")]
             [Validation(Required=false)]
-            public DataHotelsValueOffersSellingTotalPrice SellingTotalPrice { get; set; }
-            public class DataHotelsValueOffersSellingTotalPrice : TeaModel {
+            public DataHotelsValueOffersTotalPrice TotalPrice { get; set; }
+            public class DataHotelsValueOffersTotalPrice : TeaModel {
                 /// <summary>
-                /// <para>The amount.</para>
+                /// <para>The amount in the smallest currency unit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>100.00</para>
+                /// <para>287</para>
                 /// </summary>
                 [NameInMap("Amount")]
                 [Validation(Required=false)]
-                public double? Amount { get; set; }
+                public string Amount { get; set; }
 
                 /// <summary>
                 /// <para>The currency code.</para>
@@ -554,10 +554,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>TraceId</para>
+                /// <para>null</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TraceId</para>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("TracerId")]
                 [Validation(Required=false)]
@@ -566,17 +566,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>The list of daily selling prices.</para>
+            /// <para>The list of daily prices.</para>
             /// </summary>
-            [NameInMap("SellingDailyPrices")]
+            [NameInMap("DailyPrices")]
             [Validation(Required=false)]
-            public List<DataHotelsValueOffersSellingDailyPrices> SellingDailyPrices { get; set; }
-            public class DataHotelsValueOffersSellingDailyPrices : TeaModel {
+            public List<DataHotelsValueOffersDailyPrices> DailyPrices { get; set; }
+            public class DataHotelsValueOffersDailyPrices : TeaModel {
                 /// <summary>
-                /// <para>The check-in date.</para>
+                /// <para>The check-in date in yyyy-MM-dd format, based on the hotel local time zone.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2026-07-01</para>
+                /// <para>2026-08-16</para>
                 /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
@@ -587,17 +587,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 /// </summary>
                 [NameInMap("Price")]
                 [Validation(Required=false)]
-                public DataHotelsValueOffersSellingDailyPricesPrice Price { get; set; }
-                public class DataHotelsValueOffersSellingDailyPricesPrice : TeaModel {
+                public DataHotelsValueOffersDailyPricesPrice Price { get; set; }
+                public class DataHotelsValueOffersDailyPricesPrice : TeaModel {
                     /// <summary>
-                    /// <para>The amount.</para>
+                    /// <para>The amount in the smallest currency unit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>100.00</para>
+                    /// <para>287</para>
                     /// </summary>
                     [NameInMap("Amount")]
                     [Validation(Required=false)]
-                    public double? Amount { get; set; }
+                    public string Amount { get; set; }
 
                     /// <summary>
                     /// <para>The currency code.</para>
@@ -610,10 +610,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>TraceId</para>
+                    /// <para>null</para>
                     /// </summary>
                     [NameInMap("TracerId")]
                     [Validation(Required=false)]
@@ -622,10 +622,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>TraceId</para>
+                /// <para>null</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TraceId</para>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("TracerId")]
                 [Validation(Required=false)]

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? AdultCount { get; set; }
 
         /// <summary>
-        /// <para>The end date of the check-in date range in the format yyyy-MM-dd.</para>
+        /// <para>The end date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the start date. The date range includes both the start and end dates, with a maximum span of 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CheckInDateEnd { get; set; }
 
         /// <summary>
-        /// <para>The start date of the check-in date range in the format yyyy-MM-dd.</para>
+        /// <para>The start date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the current day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? RoomCount { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the hotels.</para>
+        /// <para>The list of standard hotel IDs on the platform. A maximum of 10 IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

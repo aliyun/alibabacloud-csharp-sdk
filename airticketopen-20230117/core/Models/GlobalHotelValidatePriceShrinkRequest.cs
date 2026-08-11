@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelValidatePriceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
+        /// <para>The number of adults per room.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Adults { get; set; }
 
         /// <summary>
+        /// <para>The number of children per room.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Children { get; set; }
 
         /// <summary>
+        /// <para>The list of children ages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[8]</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ChildrenAgesShrink { get; set; }
 
         /// <summary>
+        /// <para>The offer key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ItemOfferKey { get; set; }
 
         /// <summary>
+        /// <para>The number of rooms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? RoomCount { get; set; }
 
         /// <summary>
+        /// <para>TracerId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TracerId</para>
         /// </summary>

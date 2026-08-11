@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelBatchGetHotelDetailShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the distributor account.</para>
+        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
-        /// <para>The language. For example, en or zh.</para>
+        /// <para>The language (such as en or zh).</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

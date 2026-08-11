@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
-        /// <para>The external order number. At least one of ExternalOrderNo and OrderNo is required.</para>
+        /// <para>The external order number. You must specify at least one of ExternalOrderNo and OrderNo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXT_ORDER_001</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ExternalOrderNo { get; set; }
 
         /// <summary>
-        /// <para>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</para>
+        /// <para>The sales order number. You must specify at least one of OrderNo and ExternalOrderNo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SO202606290001</para>
