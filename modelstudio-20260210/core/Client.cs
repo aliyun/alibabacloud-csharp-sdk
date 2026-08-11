@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"},
-                {"cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"},
                 {"cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"},
+                {"cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"},
                 {"ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"},
+                {"us-east-1", "modelstudio.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2874,6 +2876,612 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelLimitsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelLimitsResponse
+        /// </returns>
+        public ListModelLimitsResponse ListModelLimitsWithOptions(ListModelLimitsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelLimits",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/limits",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelLimitsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelLimitsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelLimitsResponse
+        /// </returns>
+        public async Task<ListModelLimitsResponse> ListModelLimitsWithOptionsAsync(ListModelLimitsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelLimits",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/limits",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelLimitsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelLimitsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelLimitsResponse
+        /// </returns>
+        public ListModelLimitsResponse ListModelLimits(ListModelLimitsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListModelLimitsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelLimitsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelLimitsResponse
+        /// </returns>
+        public async Task<ListModelLimitsResponse> ListModelLimitsAsync(ListModelLimitsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListModelLimitsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model authorizations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
+        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
+        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListModelPermissionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelPermissionsResponse
+        /// </returns>
+        public ListModelPermissionsResponse ListModelPermissionsWithOptions(ListModelPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationScope))
+            {
+                query["authorizationScope"] = request.AuthorizationScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelAction))
+            {
+                query["modelAction"] = request.ModelAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelPermissions",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/permissions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model authorizations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
+        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
+        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListModelPermissionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelPermissionsResponse
+        /// </returns>
+        public async Task<ListModelPermissionsResponse> ListModelPermissionsWithOptionsAsync(ListModelPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationScope))
+            {
+                query["authorizationScope"] = request.AuthorizationScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelAction))
+            {
+                query["modelAction"] = request.ModelAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelPermissions",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/permissions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model authorizations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
+        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
+        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListModelPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelPermissionsResponse
+        /// </returns>
+        public ListModelPermissionsResponse ListModelPermissions(ListModelPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListModelPermissionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries model authorizations for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use <c>workspaceId</c> to specify the workspace to query (required, cannot be empty).</description></item>
+        /// <item><description>Token-based pagination is used: <c>nextToken</c> is a string-type offset. Do not pass it for the first page. <c>maxResults</c> defaults to 20. If the upper limit is exceeded, <c>InvalidParameter.maxResults</c> is returned.</description></item>
+        /// <item><description><c>authorizationScope</c> controls the query dimension: <c>AUTHORIZED</c> = models that have been authorized for the specified action. <c>AUTHORIZABLE</c> = full authorizable catalog.</description></item>
+        /// <item><description><c>modelAction</c> specifies the authorization action dimension. Currently only <c>INFERENCE</c> is supported. If left empty, it defaults to <c>INFERENCE</c>.</description></item>
+        /// <item><description><c>filter</c> supports filtering by <c>name</c> (fuzzy match on model and name) or <c>model</c> (exact match on a single model).</description></item>
+        /// <item><description>Returns a <c>TokenBasedPage</c> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListModelPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelPermissionsResponse
+        /// </returns>
+        public async Task<ListModelPermissionsResponse> ListModelPermissionsAsync(ListModelPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListModelPermissionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型元数据-查询基础模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListModelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelsResponse
+        /// </returns>
+        public ListModelsResponse ListModelsWithOptions(ListModelsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListModelsShrinkRequest request = new ListModelsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            {
+                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "capabilities", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Features))
+            {
+                request.FeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Features, "features", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Providers))
+            {
+                request.ProvidersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Providers, "providers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            {
+                query["capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextWindow))
+            {
+                query["contextWindow"] = request.ContextWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeaturesShrink))
+            {
+                query["features"] = request.FeaturesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvidersShrink))
+            {
+                query["providers"] = request.ProvidersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModels",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型元数据-查询基础模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListModelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelsResponse
+        /// </returns>
+        public async Task<ListModelsResponse> ListModelsWithOptionsAsync(ListModelsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListModelsShrinkRequest request = new ListModelsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            {
+                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "capabilities", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Features))
+            {
+                request.FeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Features, "features", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Providers))
+            {
+                request.ProvidersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Providers, "providers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            {
+                query["capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextWindow))
+            {
+                query["contextWindow"] = request.ContextWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeaturesShrink))
+            {
+                query["features"] = request.FeaturesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvidersShrink))
+            {
+                query["providers"] = request.ProvidersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModels",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型元数据-查询基础模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelsResponse
+        /// </returns>
+        public ListModelsResponse ListModels(ListModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListModelsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型元数据-查询基础模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelsResponse
+        /// </returns>
+        public async Task<ListModelsResponse> ListModelsAsync(ListModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListModelsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</para>
         /// </summary>
         /// 
@@ -4156,6 +4764,302 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateApiKeyWithOptionsAsync(apiKeyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateModelLimitsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelLimitsResponse
+        /// </returns>
+        public UpdateModelLimitsResponse UpdateModelLimitsWithOptions(UpdateModelLimitsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateModelLimitsShrinkRequest request = new UpdateModelLimitsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceLimits))
+            {
+                request.WorkspaceLimitsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceLimits, "workspaceLimits", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceLimitsShrink))
+            {
+                body["workspaceLimits"] = request.WorkspaceLimitsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelLimits",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/limits",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelLimitsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateModelLimitsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelLimitsResponse
+        /// </returns>
+        public async Task<UpdateModelLimitsResponse> UpdateModelLimitsWithOptionsAsync(UpdateModelLimitsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateModelLimitsShrinkRequest request = new UpdateModelLimitsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceLimits))
+            {
+                request.WorkspaceLimitsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceLimits, "workspaceLimits", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceLimitsShrink))
+            {
+                body["workspaceLimits"] = request.WorkspaceLimitsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelLimits",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/limits",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelLimitsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelLimitsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelLimitsResponse
+        /// </returns>
+        public UpdateModelLimitsResponse UpdateModelLimits(UpdateModelLimitsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateModelLimitsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the model throttling configuration for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelLimitsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelLimitsResponse
+        /// </returns>
+        public async Task<UpdateModelLimitsResponse> UpdateModelLimitsAsync(UpdateModelLimitsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateModelLimitsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新业务空间模型授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelPermissionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelPermissionsResponse
+        /// </returns>
+        public UpdateModelPermissionsResponse UpdateModelPermissionsWithOptions(UpdateModelPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAllEntities))
+            {
+                body["accessAllEntities"] = request.AccessAllEntities;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelPermissions",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/permissions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新业务空间模型授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelPermissionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelPermissionsResponse
+        /// </returns>
+        public async Task<UpdateModelPermissionsResponse> UpdateModelPermissionsWithOptionsAsync(UpdateModelPermissionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAllEntities))
+            {
+                body["accessAllEntities"] = request.AccessAllEntities;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelPermissions",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/models/permissions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新业务空间模型授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelPermissionsResponse
+        /// </returns>
+        public UpdateModelPermissionsResponse UpdateModelPermissions(UpdateModelPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateModelPermissionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新业务空间模型授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelPermissionsResponse
+        /// </returns>
+        public async Task<UpdateModelPermissionsResponse> UpdateModelPermissionsAsync(UpdateModelPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateModelPermissionsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
