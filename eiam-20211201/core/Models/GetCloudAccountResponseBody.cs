@@ -182,6 +182,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountProviderName { get; set; }
 
+            [NameInMap("CloudAccountRoleCreationType")]
+            [Validation(Required=false)]
+            public string CloudAccountRoleCreationType { get; set; }
+
+            /// <summary>
+            /// <para>The cloud account site.</para>
+            /// </summary>
             [NameInMap("CloudAccountSite")]
             [Validation(Required=false)]
             public string CloudAccountSite { get; set; }
@@ -228,6 +235,50 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <para>The list of associated privilege application IDs.</para>
+            /// </summary>
+            [NameInMap("PrivilegeApplicationIds")]
+            [Validation(Required=false)]
+            public List<string> PrivilegeApplicationIds { get; set; }
+
+            /// <summary>
+            /// <para>The reason for the privilege hosting or removal failure.</para>
+            /// </summary>
+            [NameInMap("PrivilegeHostingError")]
+            [Validation(Required=false)]
+            public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError PrivilegeHostingError { get; set; }
+            public class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError : TeaModel {
+                /// <summary>
+                /// <para>The failure error code.</para>
+                /// </summary>
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// <para>The failure message.</para>
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The privilege hosting state, which indicates whether the privilege capability is available.</para>
+            /// </summary>
+            [NameInMap("PrivilegeHostingState")]
+            [Validation(Required=false)]
+            public string PrivilegeHostingState { get; set; }
+
+            /// <summary>
+            /// <para>The privilege switch status, which indicates whether the privilege capability is enabled.</para>
+            /// </summary>
+            [NameInMap("PrivilegeStatus")]
+            [Validation(Required=false)]
+            public string PrivilegeStatus { get; set; }
 
             /// <summary>
             /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>

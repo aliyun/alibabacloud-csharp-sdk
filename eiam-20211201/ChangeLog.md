@@ -1,3 +1,20 @@
+2026-08-11 Version: 1.25.6
+- Update API CreateAuthorizationRule: add request parameters AuthorizationRuleScenarioLabel.
+- Update API GetAuthorizationRule: add response parameters Body.AuthorizationRule.AuthorizationRuleScenarioLabel.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.CloudAccountRoleCreationType.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeApplicationIds.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeHostingError.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeHostingState.
+- Update API GetCloudAccount: add response parameters Body.CloudAccount.PrivilegeStatus.
+- Update API GetCloudAccountRole: add response parameters Body.CloudAccountRole.CloudAccountRoleCreationType.
+- Update API ListAuthorizationRules: add response parameters Body.AuthorizationRules.$.AuthorizationRuleScenarioLabel.
+- Update API ListCloudAccountRoles: add response parameters Body.CloudAccountRoles.$.CloudAccountRoleCreationType.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeApplicationIds.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeHostingError.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeHostingState.
+- Update API ListCloudAccounts: add response parameters Body.CloudAccounts.$.PrivilegeStatus.
+
+
 2026-07-30 Version: 1.25.5
 - Update API CreateCredentialProvider: add request parameters CredentialProviderConfig.OAuthProviderConfig.AuthorizationEndpoint.
 - Update API CreateCredentialProvider: add request parameters CredentialProviderConfig.OAuthProviderConfig.AuthorizationFlow.

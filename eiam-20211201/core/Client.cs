@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"eu-central-1", "eiam.eu-central-1.aliyuncs.com"},
                 {"cn-hongkong", "eiam.cn-hongkong.aliyuncs.com"},
+                {"ap-northeast-2", "eiam.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "eiam.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-5", "eiam.ap-southeast-5.aliyuncs.com"},
                 {"cn-hangzhou", "eiam.cn-hangzhou.aliyuncs.com"},
                 {"cn-beijing", "eiam.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-5", "eiam.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-1", "eiam.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "eiam.ap-northeast-2.aliyuncs.com"},
+                {"eu-central-1", "eiam.eu-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eiam", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3846,6 +3846,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["AuthorizationRuleName"] = request.AuthorizationRuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleScenarioLabel))
+            {
+                query["AuthorizationRuleScenarioLabel"] = request.AuthorizationRuleScenarioLabel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -3909,6 +3913,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleName))
             {
                 query["AuthorizationRuleName"] = request.AuthorizationRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleScenarioLabel))
+            {
+                query["AuthorizationRuleScenarioLabel"] = request.AuthorizationRuleScenarioLabel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -21181,7 +21189,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query information about an authorization rule.</para>
+        /// <para>Queries the information about an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21227,7 +21235,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query information about an authorization rule.</para>
+        /// <para>Queries the information about an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21273,7 +21281,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query information about an authorization rule.</para>
+        /// <para>Queries the information about an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21291,7 +21299,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query information about an authorization rule.</para>
+        /// <para>Queries the information about an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30189,7 +30197,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more cloud accounts by using paging.</para>
+        /// <para>Queries one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30243,7 +30251,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more cloud accounts by using paging.</para>
+        /// <para>Queries one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30297,7 +30305,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more cloud accounts by using paging.</para>
+        /// <para>Queries one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30315,7 +30323,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about one or more cloud accounts by using paging.</para>
+        /// <para>Queries one or more cloud accounts by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37573,7 +37581,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an application from an authorization rule.</para>
+        /// <para>Removes a group from an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37623,7 +37631,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an application from an authorization rule.</para>
+        /// <para>Removes a group from an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37673,7 +37681,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an application from an authorization rule.</para>
+        /// <para>Removes a group from an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37691,7 +37699,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an application from an authorization rule.</para>
+        /// <para>Removes a group from an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">

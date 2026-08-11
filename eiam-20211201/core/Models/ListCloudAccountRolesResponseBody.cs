@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountId { get; set; }
 
+            [NameInMap("CloudAccountRoleCreationType")]
+            [Validation(Required=false)]
+            public string CloudAccountRoleCreationType { get; set; }
+
             /// <summary>
             /// <para>The cloud role identifier.</para>
             /// 
@@ -39,9 +43,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The health status of the cloud role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>healthy: healthy.</description></item>
-            /// <item><description>unhealthy: unhealthy.</description></item>
-            /// <item><description>unknown: unknown.</description></item>
+            /// <item><description>healthy: Healthy.</description></item>
+            /// <item><description>unhealthy: Unhealthy.</description></item>
+            /// <item><description>unknown: Unknown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The error description.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The last check time, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -100,8 +104,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The health check result of the cloud role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: succeeded.</description></item>
-                /// <item><description>failed: failed.</description></item>
+                /// <item><description>success: Success.</description></item>
+                /// <item><description>failed: Failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleUsageType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the cloud role was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719320115000</para>
@@ -171,7 +175,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud role description.</para>
+            /// <para>The description of the cloud role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_account_role_description</para>
@@ -191,10 +195,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The cloud role status. Valid values:</para>
+            /// <para>The status of the cloud role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: enabled.</description></item>
-            /// <item><description>disable: disabled.</description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disable: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,7 +209,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the cloud role was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719320117000</para>
@@ -217,7 +221,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of rows per page in the paging query.</para>
+        /// <para>The maximum number of rows per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -227,7 +231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The token returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -247,7 +251,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

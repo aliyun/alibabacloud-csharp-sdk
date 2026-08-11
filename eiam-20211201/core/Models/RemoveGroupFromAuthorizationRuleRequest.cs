@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RemoveGroupFromAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the authorization rule.</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

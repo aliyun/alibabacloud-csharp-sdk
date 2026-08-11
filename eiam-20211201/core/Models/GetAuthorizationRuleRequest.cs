@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Authorization rule ID.</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

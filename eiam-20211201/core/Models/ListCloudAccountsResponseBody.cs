@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The error message.</para>
+                    /// <para>The error description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The last check time, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The health check result of the cloud account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: The health check succeeded.</description></item>
-                /// <item><description>failed: The health check failed.</description></item>
+                /// <item><description>success: Succeeded.</description></item>
+                /// <item><description>failed: Failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountProviderName { get; set; }
 
+            /// <summary>
+            /// <para>The cloud account site.</para>
+            /// </summary>
             [NameInMap("CloudAccountSite")]
             [Validation(Required=false)]
             public string CloudAccountSite { get; set; }
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud account was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the cloud account.</para>
+            /// <para>The cloud account description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_description</para>
@@ -181,7 +184,51 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud account was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The list of associated privileged access application IDs.</para>
+            /// </summary>
+            [NameInMap("PrivilegeApplicationIds")]
+            [Validation(Required=false)]
+            public List<string> PrivilegeApplicationIds { get; set; }
+
+            /// <summary>
+            /// <para>The reason for the privilege hosting or removal failure.</para>
+            /// </summary>
+            [NameInMap("PrivilegeHostingError")]
+            [Validation(Required=false)]
+            public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError PrivilegeHostingError { get; set; }
+            public class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError : TeaModel {
+                /// <summary>
+                /// <para>The failure error code.</para>
+                /// </summary>
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// <para>The failure message.</para>
+                /// </summary>
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The privilege hosting state, which indicates whether the account has privileged access capabilities.</para>
+            /// </summary>
+            [NameInMap("PrivilegeHostingState")]
+            [Validation(Required=false)]
+            public string PrivilegeHostingState { get; set; }
+
+            /// <summary>
+            /// <para>The privilege switch status, which indicates whether the privileged access capability is available.</para>
+            /// </summary>
+            [NameInMap("PrivilegeStatus")]
+            [Validation(Required=false)]
+            public string PrivilegeStatus { get; set; }
+
+            /// <summary>
+            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>
@@ -193,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of rows per page when paging is used.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -203,7 +250,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the current call to indicate the starting position of the next page.</para>
+        /// <para>The token returned for the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

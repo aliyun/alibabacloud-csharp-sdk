@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountId { get; set; }
 
+            [NameInMap("CloudAccountRoleCreationType")]
+            [Validation(Required=false)]
+            public string CloudAccountRoleCreationType { get; set; }
+
             /// <summary>
             /// <para>The cloud role identifier.</para>
             /// 
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The last check time, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleUsageType { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719320115000</para>
@@ -207,7 +211,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>

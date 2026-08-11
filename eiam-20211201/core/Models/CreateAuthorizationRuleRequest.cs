@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of authorized resources. Valid values:</para>
+        /// <para>The authorization resource scope. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>global: all resources under the project.</description></item>
         /// <item><description>custom: specified resources under the project.</description></item>
@@ -35,7 +35,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The scenario label of the authorization rule. The label can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>privileged_cloud_account</para>
+        /// </summary>
+        [NameInMap("AuthorizationRuleScenarioLabel")]
+        [Validation(Required=false)]
+        public string AuthorizationRuleScenarioLabel { get; set; }
+
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationRulesRequestFilter> Filter { get; set; }
         public class ListAuthorizationRulesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The name of the field to filter. Valid values:</para>
+            /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AuthorizationRuleId: the ID of the authorization rule.</para>
-            /// </description></item>
-            /// <item><description><para>AuthorizationRuleNameStartWith: the leftmost characters of the authorization rule name.</para>
-            /// </description></item>
+            /// <item><description>AuthorizationRuleId: the authorization rule ID.</description></item>
+            /// <item><description>AuthorizationRuleNameStartWith: the prefix of the authorization rule name for fuzzy match.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of values for the field to filter.</para>
+            /// <para>The values of the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,9 +51,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the default value is 20.</para>
+        /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
         /// </description></item>
         /// <item><description><para>The maximum value is 100.</para>
         /// </description></item>
@@ -69,9 +67,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that identifies the start of the next page of results.</para>
+        /// <para>The token that marks the starting position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the system returns the first page of results.</description></item>
+        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
