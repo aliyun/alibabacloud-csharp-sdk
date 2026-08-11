@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
                 {"cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"},
                 {"eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"},
                 {"rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"},
-                {"na-south-1", "bastionhost.na-south-1.aliyuncs.com"},
                 {"cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"},
-                {"ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"},
                 {"ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"},
+                {"na-south-1", "bastionhost.na-south-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("yundun-bastionhost", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -106,13 +106,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -162,13 +166,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -192,6 +196,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -218,13 +226,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -242,13 +250,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O&amp;M engineer executes a command configured in a command approval control policy, the administrator receives an approval request for the command in the Bastionhost console. The command can be executed only after the administrator approves it. If the approval is rejected, the command cannot be executed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Approves a command execution request submitted by an O&amp;M engineer.
+        /// The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -266,13 +274,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -313,6 +321,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OperationTicketId"] = request.OperationTicketId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -338,13 +350,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -385,6 +397,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OperationTicketId"] = request.OperationTicketId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -410,13 +426,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -434,13 +450,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
+        /// <para>If an administrator enables O&amp;M approval in a control policy, an O&amp;M engineer must submit an O&amp;M request and obtain administrator approval before logging on to an asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is used by administrators to approve O&amp;M requests submitted by O&amp;M engineers.
+        /// This operation has a single-user QPS limit of 10 requests per second. If this limit is exceeded, API calls are throttled, which may affect your business. Please call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -602,14 +618,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// <para>Adds multiple hosts to a specified asset group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -638,6 +654,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -663,14 +683,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// <para>Adds multiple hosts to a specified asset group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -699,6 +719,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -724,14 +748,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// <para>Adds multiple hosts to a specified asset group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -749,14 +773,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more hosts to the specified host group.</para>
+        /// <para>Adds multiple hosts to a specified asset group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
+        /// <para>Adds multiple hosts to a specified host group in a batch. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in a batch.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -910,15 +934,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add one or more users to a user group.</para>
+        /// <para>Adds users to a user group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1></h1>
-        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
-        /// <h1>Limit</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -938,6 +962,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -972,15 +1000,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add one or more users to a user group.</para>
+        /// <para>Adds users to a user group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1></h1>
-        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
-        /// <h1>Limit</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1000,6 +1028,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1034,15 +1066,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add one or more users to a user group.</para>
+        /// <para>Adds users to a user group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1></h1>
-        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
-        /// <h1>Limit</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1060,15 +1092,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add one or more users to a user group.</para>
+        /// <para>Adds users to a user group in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1></h1>
-        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
-        /// <h1>Limit</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation adds users to a user group in a batch. After you create a user group by calling the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, you can call this operation to add multiple users to the user group for batch authorization and management.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1374,7 +1406,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on databases and database accounts to a user group.</para>
+        /// <para>Grants a user group permissions on databases and database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1398,6 +1430,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1428,7 +1464,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on databases and database accounts to a user group.</para>
+        /// <para>Grants a user group permissions on databases and database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1452,6 +1488,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1482,7 +1522,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on databases and database accounts to a user group.</para>
+        /// <para>Grants a user group permissions on databases and database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1540,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on databases and database accounts to a user group.</para>
+        /// <para>Grants a user group permissions on databases and database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1518,7 +1558,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates host accounts with a shared key.</para>
+        /// <para>Associates host accounts with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1547,6 +1587,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1572,7 +1616,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates host accounts with a shared key.</para>
+        /// <para>Associates host accounts with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1601,6 +1645,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1626,7 +1674,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates host accounts with a shared key.</para>
+        /// <para>Associates host accounts with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1644,7 +1692,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates host accounts with a shared key.</para>
+        /// <para>Associates host accounts with a host shared key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1806,12 +1854,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// <para>Grants a user group permissions on hosts and host accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// <para>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1835,6 +1883,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1865,12 +1917,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// <para>Grants a user group permissions on hosts and host accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// <para>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1894,6 +1946,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1924,12 +1980,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// <para>Grants a user group permissions on hosts and host accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// <para>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1947,12 +2003,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage one or more hosts and host accounts.</para>
+        /// <para>Grants a user group permissions on hosts and host accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you authorize a user group to manage specific hosts and host accounts, all the users in the user group have access to the authorized hosts and host accounts.</para>
+        /// <para>After you grant a user group permissions on hosts and host accounts, all users in the user group can access the authorized hosts.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2570,7 +2626,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2631,6 +2687,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolarDBEndpointType"] = request.PolarDBEndpointType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2668,7 +2728,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2729,6 +2789,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolarDBEndpointType"] = request.PolarDBEndpointType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2766,7 +2830,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2784,7 +2848,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
+        /// <para>Imports database assets into a bastion host. Supported database types include MySQL, SQL Server, and PostgreSQL for ApsaraDB RDS instances, MySQL, PostgreSQL, and PostgreSQL (Compatible with Oracle) for PolarDB clusters, and MySQL, SQL Server, PostgreSQL, and Oracle for self-managed databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2802,7 +2866,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,6 +2907,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2868,7 +2936,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2909,6 +2977,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2934,7 +3006,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2952,7 +3024,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for it. After the account is created, O&amp;M engineers can use the account to log on to and manage the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3098,7 +3170,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
+        /// <para>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3155,6 +3227,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OSType"] = request.OSType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3188,7 +3264,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
+        /// <para>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3245,6 +3321,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OSType"] = request.OSType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3278,7 +3358,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
+        /// <para>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3296,7 +3376,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
+        /// <para>Creates a host in a Bastionhost instance. Bastionhost supports O&amp;M for hosts from different sources, including Alibaba Cloud ECS instances, on-premises IDC servers, and servers on other clouds. Before you perform O&amp;M on a host through Bastionhost, you must first import the host into Bastionhost. You can call this operation to create a host that you want to manage in Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3314,7 +3394,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
+        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3363,6 +3443,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivilegeType"] = request.PrivilegeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -3396,7 +3480,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
+        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3445,6 +3529,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivilegeType"] = request.PrivilegeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -3478,7 +3566,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
+        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3496,7 +3584,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
+        /// <para>After you create a host in Bastionhost, you can create a host account for the host to manage the existing account of the host in Bastionhost. After you create a host account, O&amp;M engineers can use the account to log on to the host through Bastionhost for O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3514,7 +3602,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// <para>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3543,6 +3631,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3568,7 +3660,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// <para>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,6 +3689,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3622,7 +3718,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// <para>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3640,7 +3736,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create asset groups based on your business requirements and add assets of the same type to an asset group. This allows you to classify assets and manage multiple assets at a time.</para>
+        /// <para>You can create different asset groups based on your business requirements, add assets of the same type to an asset group, and manage assets by category and perform batch operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3658,7 +3754,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3691,6 +3787,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivateKey"] = request.PrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3716,7 +3816,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3749,6 +3849,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivateKey"] = request.PrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3774,7 +3878,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3792,7 +3896,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost provides the shared key feature. This feature allows you to manage the private key that is used to log on to a host in a bastion host. This way, you can associate the private key with multiple accounts of the host to make host account management more efficient.</para>
+        /// <para>The shared key feature of Bastionhost allows you to store private keys used for host logon in Bastionhost. After being stored, a private key can be shared across multiple host accounts to improve host account management efficiency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3810,7 +3914,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3843,6 +3947,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainType"] = request.NetworkDomainType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proxies))
             {
                 query["Proxies"] = request.Proxies;
@@ -3872,7 +3980,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3905,6 +4013,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainType"] = request.NetworkDomainType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proxies))
             {
                 query["Proxies"] = request.Proxies;
@@ -3934,7 +4046,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3952,7 +4064,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform unified O&amp;M on assets that are distributed across different network environments or that are not connected to the virtual private cloud (VPC) where Bastionhost resides, use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain in Bastionhost and add the proxy server, and then add the assets to the network domain to manage them through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3970,7 +4082,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4015,6 +4127,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["IsOneTimeEffect"] = request.IsOneTimeEffect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -4044,7 +4160,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4089,6 +4205,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["IsOneTimeEffect"] = request.IsOneTimeEffect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -4118,7 +4238,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4136,7 +4256,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
+        /// <para>Creates an O&amp;M request. When an administrator enables O&amp;M approval in control policies, O&amp;M engineers must create an O&amp;M request and obtain administrator approval before performing O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4154,7 +4274,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
+        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4187,6 +4307,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Priority"] = request.Priority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -4212,7 +4336,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
+        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4245,6 +4369,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Priority"] = request.Priority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -4270,7 +4398,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
+        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4288,7 +4416,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
+        /// <para>Controls O&amp;M behaviors through Settings for command control, command approval, protocol control, and access control policy to effectively prevent users from executing high-risk commands or performing misoperations, ensuring O&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4350,6 +4478,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4432,6 +4564,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4817,6 +4953,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -4876,6 +5016,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5134,7 +5278,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database.</para>
+        /// <para>Deletes a single database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5158,6 +5302,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5184,7 +5332,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database.</para>
+        /// <para>Deletes a single database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5208,6 +5356,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5234,7 +5386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database.</para>
+        /// <para>Deletes a single database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5252,7 +5404,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database.</para>
+        /// <para>Deletes a single database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5294,6 +5446,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5344,6 +5500,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5406,7 +5566,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host.</para>
+        /// <para>Deletes a single host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5430,6 +5590,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5456,7 +5620,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host.</para>
+        /// <para>Deletes a single host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5480,6 +5644,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5506,7 +5674,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host.</para>
+        /// <para>Deletes a single host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5524,7 +5692,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host.</para>
+        /// <para>Deletes a single host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5542,18 +5710,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a host account.</para>
+        /// <para>Deletes a single host account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</para>
         /// <remarks>
-        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
+        /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5577,6 +5745,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5603,18 +5775,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a host account.</para>
+        /// <para>Deletes a single host account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</para>
         /// <remarks>
-        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
+        /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5638,6 +5810,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5664,18 +5840,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a host account.</para>
+        /// <para>Deletes a single host account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</para>
         /// <remarks>
-        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
+        /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5693,18 +5869,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a host account.</para>
+        /// <para>Deletes a single host account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation deletes a single host account. If a host account is no longer in use, call this operation to delete the host account that is configured in Bastionhost.</para>
         /// <remarks>
-        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
+        /// <para>After you delete a host account, you must manually enter the host account and password when you log on to the host through Bastionhost.</para>
         /// </remarks>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5722,14 +5898,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host group.</para>
+        /// <para>Deletes a single asset group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
-        /// <h3>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5753,6 +5929,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5779,14 +5959,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host group.</para>
+        /// <para>Deletes a single asset group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
-        /// <h3>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5810,6 +5990,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5836,14 +6020,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host group.</para>
+        /// <para>Deletes a single asset group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
-        /// <h3>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5861,14 +6045,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a host group.</para>
+        /// <para>Deletes a single asset group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
-        /// <h3>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation deletes a single host group. When all hosts in a host group on a bastion host no longer need to be maintained through the bastion host, you can call this operation to delete the host group.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6047,6 +6231,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -6096,6 +6284,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6158,7 +6350,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a control policy.</para>
+        /// <para>Deletes a single control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6182,6 +6374,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6208,7 +6404,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a control policy.</para>
+        /// <para>Deletes a single control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6232,6 +6428,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6258,7 +6458,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a control policy.</para>
+        /// <para>Deletes a single control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6276,7 +6476,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a control policy.</para>
+        /// <para>Deletes a single control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6314,6 +6514,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6364,6 +6568,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6566,7 +6774,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user group from a bastion host.</para>
+        /// <para>Deletes a single user group from a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6586,6 +6794,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6616,7 +6828,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user group from a bastion host.</para>
+        /// <para>Deletes a single user group from a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6636,6 +6848,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6666,7 +6882,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user group from a bastion host.</para>
+        /// <para>Deletes a single user group from a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6684,7 +6900,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user group from a bastion host.</para>
+        /// <para>Deletes a single user group from a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6861,6 +7077,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
         /// </param>
@@ -6906,6 +7127,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <summary>
         /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -6953,6 +7179,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
         /// </param>
@@ -6970,6 +7201,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <summary>
         /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to purchase an Encryption Service instance. This is a prepaid product, and the operation synchronously deducts the payment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -7459,6 +7695,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -7512,6 +7752,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7607,6 +7851,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -7660,6 +7908,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7891,6 +8143,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -7944,6 +8200,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -8447,6 +8707,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -8496,6 +8760,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -8711,6 +8979,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -8760,6 +9032,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9063,6 +9339,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9114,6 +9394,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9207,6 +9491,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9256,6 +9544,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9343,6 +9635,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9392,6 +9688,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9615,6 +9915,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9664,6 +9968,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9751,6 +10059,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9800,6 +10112,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9887,6 +10203,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -9936,6 +10256,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -10023,6 +10347,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10072,6 +10400,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -10167,6 +10499,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSourceId))
+            {
+                query["UserSourceId"] = request.UserSourceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10220,6 +10556,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSourceId))
+            {
+                query["UserSourceId"] = request.UserSourceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10735,6 +11075,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10788,6 +11132,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -10875,6 +11223,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10924,6 +11276,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -11011,6 +11367,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11060,6 +11420,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -11147,6 +11511,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11196,6 +11564,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -11279,6 +11651,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11328,6 +11704,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -11551,6 +11931,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11600,6 +11984,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -11857,6 +12245,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -11916,6 +12308,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -12027,6 +12423,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -12088,6 +12488,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -12355,6 +12759,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -12420,6 +12828,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -12527,6 +12939,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -12596,6 +13012,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -12707,6 +13127,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -12780,6 +13204,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -12891,6 +13319,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -12964,6 +13396,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -13071,6 +13507,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -13140,6 +13580,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
@@ -13239,6 +13683,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -13296,6 +13744,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -13395,6 +13847,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -13460,6 +13916,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -13563,6 +14023,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -13628,6 +14092,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -13719,6 +14187,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -13772,6 +14244,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -13863,6 +14339,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -13916,6 +14396,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14015,6 +14499,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14072,6 +14560,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14171,6 +14663,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14236,6 +14732,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14339,6 +14839,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14404,6 +14908,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14499,6 +15007,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14552,6 +15064,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14659,6 +15175,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14740,6 +15260,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14859,6 +15383,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14932,6 +15460,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -15043,6 +15575,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -15116,6 +15652,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -15523,6 +16063,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -15584,6 +16128,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -15675,6 +16223,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationProjectId))
+            {
+                query["OperationProjectId"] = request.OperationProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -15736,6 +16288,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationProjectId))
+            {
+                query["OperationProjectId"] = request.OperationProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -15847,6 +16403,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -15924,6 +16484,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16191,6 +16755,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OSType"] = request.OSType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationProjectId))
+            {
+                query["OperationProjectId"] = request.OperationProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -16268,6 +16836,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
             {
                 query["OSType"] = request.OSType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationProjectId))
+            {
+                query["OperationProjectId"] = request.OperationProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -16356,7 +16928,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
+        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16389,6 +16961,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -16420,7 +16996,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
+        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16453,6 +17029,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -16484,7 +17064,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
+        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16508,7 +17088,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
-        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
+        /// The queries per second (QPS) limit for a single user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16558,6 +17138,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
                 query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16616,6 +17200,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
                 query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16707,6 +17295,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -16768,6 +17360,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -16990,7 +17586,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
+        /// <para>Queries the tags that are bound to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17052,7 +17648,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
+        /// <para>Queries the tags that are bound to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17114,7 +17710,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
+        /// <para>Queries the tags that are bound to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17132,7 +17728,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
+        /// <para>Queries the tags that are bound to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17182,6 +17778,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -17244,6 +17844,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -17339,6 +17943,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -17396,6 +18004,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18035,6 +18647,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18116,6 +18732,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18219,6 +18839,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18280,6 +18904,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18403,6 +19031,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrefKex"] = request.PrefKex;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18488,6 +19120,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrefKex))
             {
                 query["PrefKex"] = request.PrefKex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18615,6 +19251,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivilegeType"] = request.PrivilegeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18692,6 +19332,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivilegeType))
             {
                 query["PrivilegeType"] = request.PrivilegeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18791,6 +19435,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18848,6 +19496,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18947,6 +19599,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PrivateKey"] = request.PrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -19008,6 +19664,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateKey))
             {
                 query["PrivateKey"] = request.PrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -19099,6 +19759,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -19152,6 +19816,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -19254,6 +19922,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Port"] = request.Port;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
                 query["ProtocolName"] = request.ProtocolName;
@@ -19322,6 +19994,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
             {
                 query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolName))
             {
@@ -19451,9 +20127,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSSL))
             {
                 query["IsSSL"] = request.IsSSL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncEmailAttr))
+            {
+                query["IsSyncEmailAttr"] = request.IsSyncEmailAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncMobileAttr))
+            {
+                query["IsSyncMobileAttr"] = request.IsSyncMobileAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncNameAttr))
+            {
+                query["IsSyncNameAttr"] = request.IsSyncNameAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncOuAsUserGroup))
+            {
+                query["IsSyncOuAsUserGroup"] = request.IsSyncOuAsUserGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileMapping))
             {
@@ -19479,9 +20175,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Server"] = request.Server;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
+            {
+                query["ServerName"] = request.ServerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyServer))
             {
                 query["StandbyServer"] = request.StandbyServer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncInterval))
+            {
+                query["SyncInterval"] = request.SyncInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSourceId))
+            {
+                query["UserSourceId"] = request.UserSourceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -19545,9 +20253,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSSL))
             {
                 query["IsSSL"] = request.IsSSL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncEmailAttr))
+            {
+                query["IsSyncEmailAttr"] = request.IsSyncEmailAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncMobileAttr))
+            {
+                query["IsSyncMobileAttr"] = request.IsSyncMobileAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncNameAttr))
+            {
+                query["IsSyncNameAttr"] = request.IsSyncNameAttr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSyncOuAsUserGroup))
+            {
+                query["IsSyncOuAsUserGroup"] = request.IsSyncOuAsUserGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileMapping))
             {
@@ -19573,9 +20301,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Server"] = request.Server;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
+            {
+                query["ServerName"] = request.ServerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyServer))
             {
                 query["StandbyServer"] = request.StandbyServer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncInterval))
+            {
+                query["SyncInterval"] = request.SyncInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSourceId))
+            {
+                query["UserSourceId"] = request.UserSourceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20183,6 +20923,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainType"] = request.NetworkDomainType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proxies))
             {
                 query["Proxies"] = request.Proxies;
@@ -20248,6 +20992,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainType))
             {
                 query["NetworkDomainType"] = request.NetworkDomainType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Proxies))
             {
@@ -20351,6 +21099,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["Priority"] = request.Priority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -20412,6 +21164,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
                 query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -20519,6 +21275,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -20604,6 +21364,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -20947,6 +21711,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -21004,6 +21772,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -21263,6 +22035,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -21316,6 +22092,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -21407,6 +22187,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -21460,6 +22244,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkDomainId))
             {
                 query["NetworkDomainId"] = request.NetworkDomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -21697,6 +22485,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -21752,6 +22544,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -22005,6 +22801,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["OperationTicketId"] = request.OperationTicketId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -22064,6 +22864,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
             {
                 query["OperationTicketId"] = request.OperationTicketId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -22318,6 +23122,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -22378,6 +23186,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -22638,6 +23450,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -22698,6 +23514,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -22807,6 +23627,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenId))
             {
                 query["TokenId"] = request.TokenId;
@@ -22856,6 +23680,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenId))
             {
@@ -22947,6 +23775,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23000,6 +23832,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23097,6 +23933,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23156,6 +23996,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23253,6 +24097,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23312,6 +24160,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23374,7 +24226,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23411,6 +24263,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23440,7 +24296,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23477,6 +24333,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23506,7 +24366,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23524,7 +24384,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the assets to which a control policy applies.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23576,6 +24436,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23636,6 +24500,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23733,6 +24601,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -23792,6 +24664,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -23885,6 +24761,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolConfigShrink))
             {
                 query["ProtocolConfig"] = request.ProtocolConfigShrink;
@@ -23944,6 +24824,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolConfigShrink))
             {
@@ -24035,6 +24919,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -24096,6 +24984,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

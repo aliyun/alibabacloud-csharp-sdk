@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AcceptOperationTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The review description.</para>
+        /// <para>The approval remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Comment</para>
@@ -20,21 +20,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of logons allowed. Valid values:</para>
+        /// <para>The limit on the number of logons allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</para>
+        /// <item><description><para><b>0</b>: No limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times during the validity period.</para>
         /// </description></item>
-        /// <item><description><para><b>1</b>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para><b>1</b>: The O&amp;M engineer can log on only once during the validity period.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can set this parameter only to 0 if you review an O\&amp;M application on a database.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the default value 0 is used.</para>
-        /// </description></item>
+        /// <item><description>The logon limit for database asset O&amp;M approval can only be set to unlimited.</description></item>
+        /// <item><description>If an empty character string is passed, the default value is unlimited.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string EffectCount { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the validity period for logon (in seconds, UNIX timestamp format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1679393152</para>
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string EffectEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the validity period. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the validity period for logon (in seconds, UNIX timestamp format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1685600242</para>
@@ -64,9 +62,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string EffectStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host.</para>
+        /// <para>The ID of the bastion host instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +76,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the O\&amp;M application that you want to approve. You can call the ListOperationTickets operation to query the IDs of all O\&amp;M applications that require review.</para>
+        /// <para>The ID of the O&amp;M request to approve.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2584313.html">ListOperationTickets</a> operation to query all OperationTicketId values that require approval.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,9 +90,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OperationTicketId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
         /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

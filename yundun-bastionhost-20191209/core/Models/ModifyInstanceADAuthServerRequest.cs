@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("IsDefault")]
+        [Validation(Required=false)]
+        public string IsDefault { get; set; }
+
         /// <summary>
         /// <para>Specifies whether SSL is supported. Valid values:</para>
         /// <list type="bullet">
@@ -84,7 +88,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <item><description><para><b>false</b></para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -92,6 +95,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("IsSSL")]
         [Validation(Required=false)]
         public string IsSSL { get; set; }
+
+        [NameInMap("IsSyncEmailAttr")]
+        [Validation(Required=false)]
+        public string IsSyncEmailAttr { get; set; }
+
+        [NameInMap("IsSyncMobileAttr")]
+        [Validation(Required=false)]
+        public string IsSyncMobileAttr { get; set; }
+
+        [NameInMap("IsSyncNameAttr")]
+        [Validation(Required=false)]
+        public string IsSyncNameAttr { get; set; }
+
+        [NameInMap("IsSyncOuAsUserGroup")]
+        [Validation(Required=false)]
+        public string IsSyncOuAsUserGroup { get; set; }
 
         /// <summary>
         /// <para>The field that is used to indicate the mobile phone number of a user on the AD server.</para>
@@ -158,6 +177,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string Server { get; set; }
 
+        [NameInMap("ServerName")]
+        [Validation(Required=false)]
+        public string ServerName { get; set; }
+
         /// <summary>
         /// <para>The address of the secondary AD server.</para>
         /// 
@@ -167,6 +190,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("StandbyServer")]
         [Validation(Required=false)]
         public string StandbyServer { get; set; }
+
+        [NameInMap("SyncInterval")]
+        [Validation(Required=false)]
+        public string SyncInterval { get; set; }
+
+        [NameInMap("UserSourceId")]
+        [Validation(Required=false)]
+        public string UserSourceId { get; set; }
 
     }
 

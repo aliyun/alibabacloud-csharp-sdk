@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationTicketsRequest : TeaModel {
         /// <summary>
-        /// <para>The exact asset address to search for in the pending approval list.</para>
+        /// <para>The exact address of the asset pending approval for O&amp;M.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.167.XX.XX</para>
@@ -55,6 +55,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         /// <summary>
         /// <para>The region ID of the bastion host.</para>

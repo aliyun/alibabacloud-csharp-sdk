@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateDatabaseAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the database account to be created. The username can be up to 128 characters in length.</para>
+        /// <para>The name of the database account to create. The name can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database for which you want to create a database account.</para>
+        /// <para>The instance ID of the database for which you want to create an account.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. This parameter is required for PostgreSQL and Oracle databases.</para>
+        /// <para>The database name. This parameter is required when the database corresponding to DatabaseId is PostgreSQL or Oracle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>orcl</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseSchema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to create a database account.</para>
+        /// <para>The ID of the bastion host instance for which you want to create a database account.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,10 +61,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The logon attribute. This parameter is required for Oracle databases. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SERVICENAME</para>
-        /// </description></item>
-        /// <item><description><para>SID</para>
-        /// </description></item>
+        /// <item><description>SERVICENAME</description></item>
+        /// <item><description>SID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +73,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string LoginAttribute { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account to be created.</para>
+        /// <para>The password of the database account to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MCQ******</para>
@@ -85,9 +83,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
         /// <para>The region ID of the bastion host for which you want to create a database account.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

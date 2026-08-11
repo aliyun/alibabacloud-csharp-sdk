@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
         /// <summary>
         /// <para>The ID of the O\&amp;M token that you want to renew.</para>
         /// <remarks>

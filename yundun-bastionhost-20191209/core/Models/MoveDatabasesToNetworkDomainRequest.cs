@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
     public class MoveDatabasesToNetworkDomainRequest : TeaModel {
         /// <summary>
         /// <para>The IDs of the databases that you want to add to the network domain.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DatabaseIds")]
         [Validation(Required=false)]
@@ -44,6 +43,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("NetworkDomainId")]
         [Validation(Required=false)]
         public string NetworkDomainId { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         /// <summary>
         /// <para>The region ID of the bastion host.</para>

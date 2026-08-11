@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string NetworkDomainType { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         /// <summary>
         /// <para>The information about the proxy servers in the network domain.</para>
         /// </summary>

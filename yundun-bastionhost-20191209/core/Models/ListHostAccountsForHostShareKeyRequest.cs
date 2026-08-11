@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1124</para>
@@ -56,6 +55,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         /// <summary>
         /// <para>The region ID of the bastion host.</para>

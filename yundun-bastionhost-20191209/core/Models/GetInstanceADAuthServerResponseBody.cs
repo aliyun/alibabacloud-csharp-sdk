@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public bool? HasPassword { get; set; }
 
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public bool? IsDefault { get; set; }
+
             /// <summary>
             /// <para>Indicates whether SSL is supported. Valid values:</para>
             /// <list type="bullet">
@@ -97,6 +101,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("IsSSL")]
             [Validation(Required=false)]
             public bool? IsSSL { get; set; }
+
+            [NameInMap("IsSyncEmailAttr")]
+            [Validation(Required=false)]
+            public bool? IsSyncEmailAttr { get; set; }
+
+            [NameInMap("IsSyncMobileAttr")]
+            [Validation(Required=false)]
+            public bool? IsSyncMobileAttr { get; set; }
+
+            [NameInMap("IsSyncNameAttr")]
+            [Validation(Required=false)]
+            public bool? IsSyncNameAttr { get; set; }
+
+            [NameInMap("IsSyncOuAsUserGroup")]
+            [Validation(Required=false)]
+            public bool? IsSyncOuAsUserGroup { get; set; }
+
+            [NameInMap("LatestSyncTime")]
+            [Validation(Required=false)]
+            public long? LatestSyncTime { get; set; }
 
             /// <summary>
             /// <para>The field that is used to indicate the mobile phone number of a user on the AD server.</para>
@@ -138,6 +162,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string Server { get; set; }
 
+            [NameInMap("ServerName")]
+            [Validation(Required=false)]
+            public string ServerName { get; set; }
+
             /// <summary>
             /// <para>The address of the secondary AD server.</para>
             /// 
@@ -147,6 +175,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("StandbyServer")]
             [Validation(Required=false)]
             public string StandbyServer { get; set; }
+
+            [NameInMap("SyncInterval")]
+            [Validation(Required=false)]
+            public long? SyncInterval { get; set; }
+
+            [NameInMap("UserSourceId")]
+            [Validation(Required=false)]
+            public string UserSourceId { get; set; }
 
         }
 

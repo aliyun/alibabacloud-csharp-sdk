@@ -132,6 +132,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string NetworkDomainId { get; set; }
 
+            [NameInMap("ProjectId")]
+            [Validation(Required=false)]
+            public string ProjectId { get; set; }
+
+            [NameInMap("ProjectName")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
+
             /// <summary>
             /// <para>The source of the database. Valid values:</para>
             /// <list type="bullet">

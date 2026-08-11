@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateNetworkDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the network domain. The remarks can be up to 500 characters in length.</para>
+        /// <para>The description of the network domain. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to create a network domain.</para>
+        /// <para>The instance ID of the Bastionhost instance for which you want to create a network domain.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network domain that you want to create. The name can be up to 128 characters in length.</para>
+        /// <para>The name of the network domain to create. The name can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,12 +45,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainName { get; set; }
 
         /// <summary>
-        /// <para>The connection mode of the network domain to be created. Valid values:</para>
+        /// <para>The type of the network domain to create. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Direct</para>
-        /// </description></item>
-        /// <item><description><para>Proxy</para>
-        /// </description></item>
+        /// <item><description>Direct: direct connection. Bastionhost is directly connected to the asset network without an intermediate proxy server.</description></item>
+        /// <item><description>Proxy: proxy connection. If the network where the assets reside is not connected to the Bastionhost network, you can use a proxy server to forward network requests and manage assets in different network environments.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,14 +60,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainType { get; set; }
 
         /// <summary>
-        /// <para>The information about the proxy servers.</para>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The proxy server information.</para>
         /// </summary>
         [NameInMap("Proxies")]
         [Validation(Required=false)]
         public List<CreateNetworkDomainRequestProxies> Proxies { get; set; }
         public class CreateNetworkDomainRequestProxies : TeaModel {
             /// <summary>
-            /// <para>The IP address of the proxy server.</para>
+            /// <para>The address of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>47.104.**.**</c></para>
@@ -81,10 +86,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The node type of the proxy server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Master</b>: primary proxy server.</para>
-            /// </description></item>
-            /// <item><description><para><b>Slave</b>: secondary proxy server.</para>
-            /// </description></item>
+            /// <item><description>Master: primary proxy server.</description></item>
+            /// <item><description>Slave: secondary proxy server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The Base64-encoded password of the proxy server.</para>
+            /// <para>The Base64-encoded password of the proxy server account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UWdi******Ng==</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The port of the proxy server.</para>
+            /// <para>The Server Port of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -117,12 +120,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The proxy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SSHProxy</b></para>
-            /// </description></item>
-            /// <item><description><para><b>HTTPProxy</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Socks5Proxy</b></para>
-            /// </description></item>
+            /// <item><description>SSHProxy: SSH proxy.</description></item>
+            /// <item><description>HTTPProxy: HTTP proxy.</description></item>
+            /// <item><description>Socks5Proxy: SOCKS proxy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ProxyType { get; set; }
 
             /// <summary>
-            /// <para>The username of the proxy server.</para>
+            /// <para>The account of the proxy server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -145,9 +145,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the bastion host for which you want to create a network domain.</para>
+        /// <para>The region ID of the Bastionhost instance for which you want to create a network domain.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

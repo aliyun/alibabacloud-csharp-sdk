@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("OperationProjectId")]
+        [Validation(Required=false)]
+        public string OperationProjectId { get; set; }
+
         /// <summary>
         /// <para>The page number. Default value: <b>1</b>.</para>
         /// 

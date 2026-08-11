@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateOperationTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The comments on the ticket.</para>
+        /// <para>The remarks of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ApproveComment { get; set; }
 
         /// <summary>
-        /// <para>The logon name of the asset account for the O\&amp;M request.</para>
+        /// <para>The logon name of the asset account for which you want to request O&amp;M access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset for which to request O\&amp;M.</para>
+        /// <para>The ID of the asset for which you want to request O&amp;M access.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> and <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operations to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> or <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string AssetId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period for the logon request. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the validity period for the logon request. Unit: seconds. The value is a UNIX timestamp.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time.</para>
+        /// <para>The end time of the validity period must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? EffectEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the validity period for the logon request. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the validity period for the logon request. Unit: seconds. The value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1685600242</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? EffectStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Bastionhost instance.</para>
+        /// <para>The instance ID of the bastion host.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,12 +83,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the ticket is valid for a single logon. Valid values:</para>
+        /// <para>The number of logon times allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The ticket is valid for a single logon.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The ticket is valid for multiple logons within the validity period.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Only one logon is allowed within the validity period.</description></item>
+        /// <item><description><b>false</b>: Unlimited logons are allowed within the validity period.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,20 +97,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public bool? IsOneTimeEffect { get; set; }
 
         /// <summary>
-        /// <para>The name of the protocol for the O\&amp;M request. Valid values:</para>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the protocol for which you want to request O&amp;M access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SSH</para>
-        /// </description></item>
-        /// <item><description><para>RDP</para>
-        /// </description></item>
-        /// <item><description><para>MySQL</para>
-        /// </description></item>
-        /// <item><description><para>PostgreSQL</para>
-        /// </description></item>
-        /// <item><description><para>Oracle</para>
-        /// </description></item>
-        /// <item><description><para>SQLServer</para>
-        /// </description></item>
+        /// <item><description>SSH</description></item>
+        /// <item><description>RDP</description></item>
+        /// <item><description>MySQL</description></item>
+        /// <item><description>PostgreSQL</description></item>
+        /// <item><description>Oracle</description></item>
+        /// <item><description>SQLServer</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -124,9 +123,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ProtocolName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance.</para>
+        /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

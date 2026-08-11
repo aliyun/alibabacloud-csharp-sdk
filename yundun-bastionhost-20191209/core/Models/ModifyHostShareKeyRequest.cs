@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
     public class ModifyHostShareKeyRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the shared key whose information you want to modify.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10247</para>
@@ -66,6 +65,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         /// <summary>
         /// <para>The region ID of the bastion host.</para>

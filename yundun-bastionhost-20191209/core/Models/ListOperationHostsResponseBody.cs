@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string OSType { get; set; }
 
+            [NameInMap("ProjectName")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
+
             /// <summary>
             /// <para>The source of the host.</para>
             /// <list type="bullet">

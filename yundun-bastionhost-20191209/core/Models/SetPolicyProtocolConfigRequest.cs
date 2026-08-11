@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         /// <summary>
         /// <para>The protocol control configuration.</para>
         /// <para>This parameter is required.</para>

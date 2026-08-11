@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The instance ID of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>334</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98EDD923-236C-5A88-88E7-4979A91B9325</para>

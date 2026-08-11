@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateDatabaseAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the database account.</para>
+        /// <para>The database account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

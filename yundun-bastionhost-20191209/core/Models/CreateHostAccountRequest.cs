@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the new host account. The name can be up to 128 characters long.</para>
+        /// <para>The name of the host account to create. The name can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the host for which you want to create a host account.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Bastionhost instance where you want to create the host account.</para>
+        /// <para>The ID of the Bastionhost instance where the host for which you want to create a host account resides.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The passphrase for the private key of the new host account.</para>
+        /// <para>The passphrase of the private key for the host account to create.</para>
         /// <remarks>
-        /// <para>You can set this parameter only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP.</para>
+        /// <para>You can configure this parameter when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PassPhrase { get; set; }
 
         /// <summary>
-        /// <para>The password of the new host account.</para>
+        /// <para>The password of the host account to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The private key of the new host account. The value is a Base64-encoded string.</para>
+        /// <para>The private key of the host account to create. The value is a Base64-encoded string.</para>
         /// <remarks>
-        /// <para>This parameter is used only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP. You can set both a password and a private key for the host account. When connecting to the asset, Bastionhost prioritizes the private key for the connection.</para>
+        /// <para>This parameter takes effect only when ProtocolName is set to SSH. You do not need to configure this parameter when ProtocolName is set to RDP. You can configure both a password and a private key for the host account. When connecting to an asset, Bastionhost preferentially uses the private key.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,16 +95,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The permission type of the account. If you do not set this parameter, the default value is Normal.</para>
+        /// <para>The privilege type of the account. Default value: Normal.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Privileged</b>: privileged account</para>
-        /// </description></item>
-        /// <item><description><para><b>Normal</b>: normal account</para>
+        /// <item><description><b>Privileged</b>: privileged account.</description></item>
+        /// <item><description><b>Normal</b>: standard account.<remarks>
+        /// <para>Only supported in V3.2.47 and later.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only in Bastionhost V3.2.47 and later.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -114,12 +112,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PrivilegeType { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the new host account. <br>Valid values:<br></para>
+        /// <para>The project ID.</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The protocol name of the host account to create.
+        /// <br>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SSH</para>
-        /// </description></item>
-        /// <item><description><para>RDP</para>
-        /// </description></item>
+        /// <item><description>SSH</description></item>
+        /// <item><description>RDP</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ProtocolName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance where you want to create the host account.</para>
+        /// <para>The region ID of the Bastionhost instance where the host for which you want to create a host account resides.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -144,16 +148,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The password change mode for the account. If you do not set this parameter, the default value is Self.</para>
+        /// <para>The password rotation mode of the account. Default value: Self.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Privileged</b>: Use a privileged account to change the password.</para>
-        /// </description></item>
-        /// <item><description><para><b>Self</b>: Do not use a privileged account to change the password.</para>
+        /// <item><description><b>Privileged</b>: uses a privileged account to rotate the password.</description></item>
+        /// <item><description><b>Self</b>: does not use a privileged account to rotate the password.<remarks>
+        /// <para>Only supported in V3.2.47 and later.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only in Bastionhost V3.2.47 and later.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Self</para>

@@ -16,10 +16,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyInstanceAttribute InstanceAttribute { get; set; }
         public class DescribeInstanceAttributeResponseBodyInstanceAttribute : TeaModel {
+            /// <summary>
+            /// <para>The AI credit status (Available/Exhausted).</para>
+            /// </summary>
             [NameInMap("AiCreditStatus")]
             [Validation(Required=false)]
             public string AiCreditStatus { get; set; }
 
+            /// <summary>
+            /// <para>The intelligent O&amp;M module switch (Enable/Disable).</para>
+            /// </summary>
             [NameInMap("AiOpsModule")]
             [Validation(Required=false)]
             public string AiOpsModule { get; set; }
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string BandwidthPackage { get; set; }
 
             /// <summary>
-            /// <para>The status of the database O&amp;M feature.</para>
+            /// <para>The database O&amp;M status.</para>
             /// <list type="bullet">
             /// <item><description><b>Enable</b>: Database O&amp;M is supported.</description></item>
             /// <item><description><b>Disable</b>: Database O&amp;M is not supported.</description></item>
@@ -79,14 +85,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test API</para>
+            /// <para>TestAPI</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI). An ENI is a virtual network interface controller (NIC) that can be attached to the bastion host instance.</para>
+            /// <para>The ID of the elastic network interfaces (ENIs). This is the network interface controller (NIC) ID bound to the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp1455jrzwm7moaxxxxx</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string EniInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the bastion host instance expires. Unit: milliseconds.</para>
+            /// <para>The expiration timestamp of the bastion host instance. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578326400000</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the HSM hardware encryption module. Indicates whether the bastion host is integrated with HSM.</para>
+            /// <para>The HSM hardware encryption module status. Indicates whether the bastion host is integrated with HSM.</para>
             /// </summary>
             [NameInMap("HSMModule")]
             [Validation(Required=false)]
@@ -206,10 +212,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ModifyPasswordModule { get; set; }
 
             /// <summary>
-            /// <para>The status of the network domain proxy feature.</para>
+            /// <para>The network domain proxy status.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b>: The network domain proxy mode is supported.</description></item>
-            /// <item><description><b>Disable</b>: The network domain proxy mode is not supported.</description></item>
+            /// <item><description><b>Enable</b>: Network domain proxy mode is supported.</description></item>
+            /// <item><description><b>Disable</b>: Network domain proxy mode is not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -227,9 +233,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> Ports { get; set; }
             public class DescribeInstanceAttributeResponseBodyInstanceAttributePorts : TeaModel {
                 /// <summary>
-                /// <para>The custom port defined by the user.</para>
+                /// <para>The custom port.</para>
                 /// <remarks>
-                /// <para>Only SSH and RDP ports can be modified. If no custom O&amp;M port is configured for the bastion host, the value is the same as the standard port.</para>
+                /// <para>Only SSH and RDP support modification. If no custom O&amp;M port is configured for the bastion host, the value is the same as the standard port.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -264,7 +270,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<string> PrivateExportIps { get; set; }
 
             /// <summary>
-            /// <para>The list of IP addresses in the internal whitelist.</para>
+            /// <para>The list of internal whitelist IP addresses.</para>
             /// </summary>
             [NameInMap("PrivateWhiteList")]
             [Validation(Required=false)]
@@ -360,7 +366,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the secondary vSwitch associated with the bastion host instance.</para>
+            /// <para>The ID of the secondary vSwitch bound to the bastion host instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf6cmnae7hu5****</para>
@@ -390,7 +396,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? Storage { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID associated with the instance.</para>
+            /// <para>The VPC ID bound to the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1c85tzgqu1bf5bxxxxx</para>
@@ -400,7 +406,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID associated with the instance.</para>
+            /// <para>The vSwitch ID bound to the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1xfwzzfti0kjbfxxxxx</para>
@@ -410,7 +416,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// <para>The status of the Web Terminal feature.</para>
+            /// <para>The Web Terminal status.</para>
             /// <list type="bullet">
             /// <item><description><b>Enable</b>: Web remote connection is supported.</description></item>
             /// <item><description><b>Disable</b>: Web remote connection is not supported.</description></item>
@@ -455,7 +461,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>082FAB35-6AB9-4FD5-8750-D36673548E76</para>

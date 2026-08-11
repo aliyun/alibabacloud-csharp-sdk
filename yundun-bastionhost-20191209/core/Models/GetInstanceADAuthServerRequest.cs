@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("UserSourceId")]
+        [Validation(Required=false)]
+        public string UserSourceId { get; set; }
+
     }
 
 }

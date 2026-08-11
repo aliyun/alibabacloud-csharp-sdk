@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     [Validation(Required=false)]
                     public string HostAccountId { get; set; }
 
+                    [NameInMap("HostAccountName")]
+                    [Validation(Required=false)]
+                    public string HostAccountName { get; set; }
+
                 }
 
                 /// <summary>

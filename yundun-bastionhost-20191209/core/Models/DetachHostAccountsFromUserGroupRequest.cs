@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         /// <summary>
         /// <para>The region ID of the bastion host in which you want to revoke permissions on the specified hosts and host accounts from the user group.</para>
         /// <remarks>
