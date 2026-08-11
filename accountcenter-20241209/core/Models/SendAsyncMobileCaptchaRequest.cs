@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class SendAsyncMobileCaptchaRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The contact information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string ContactInfo { get; set; }
 
         /// <summary>
+        /// <para>The contact ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

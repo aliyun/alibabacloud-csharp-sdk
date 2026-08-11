@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class SendAsyncEmailCaptchaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The operation result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance invalid-id-123 does not exist.</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5E9636D3-6C10-5FAB-B391-EDD122E28BC6</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

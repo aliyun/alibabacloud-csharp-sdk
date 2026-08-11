@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class EnterpriseContactDeleteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The processing result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36E0A548-4BA3-549B-8855-22E3F5C6D47E</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

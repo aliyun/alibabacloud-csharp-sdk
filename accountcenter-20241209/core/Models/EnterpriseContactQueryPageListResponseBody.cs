@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class EnterpriseContactQueryPageListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The operation result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<EnterpriseContactQueryPageListResponseBodyData> Data { get; set; }
         public class EnterpriseContactQueryPageListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The contact email.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xx@xx.xx">xx@xx.xx</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public string ContactEmail { get; set; }
 
             /// <summary>
+            /// <para>The contact ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public long? ContactId { get; set; }
 
             /// <summary>
+            /// <para>The contact mobile number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1xxxxxxxxxx</para>
             /// </summary>
@@ -45,11 +56,19 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             [Validation(Required=false)]
             public string ContactMobile { get; set; }
 
+            /// <summary>
+            /// <para>The contact name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>曾老师</para>
+            /// </summary>
             [NameInMap("ContactName")]
             [Validation(Required=false)]
             public string ContactName { get; set; }
 
             /// <summary>
+            /// <para>The position.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public string ContactPosition { get; set; }
 
             /// <summary>
+            /// <para>The customer ID, compatible with the old model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public string CustomerId { get; set; }
 
             /// <summary>
+            /// <para>Whether the email is verified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public bool? EmailConfirmed { get; set; }
 
             /// <summary>
+            /// <para>The entity ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -82,7 +107,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>leId/customerId</para>
+            /// <para>The entity type. Valid values: leId and customerId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customerId</para>
@@ -92,6 +117,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// <para>Whether the mobile number is verified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -100,6 +127,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public bool? MobileConfirmed { get; set; }
 
             /// <summary>
+            /// <para>Whether it is a shared contact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -108,6 +137,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public bool? SharedContact { get; set; }
 
             /// <summary>
+            /// <para>The time when the contact was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             public long? UpdateDate { get; set; }
 
             /// <summary>
+            /// <para>The user who last modified the contact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>
@@ -126,7 +159,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         }
 
         /// <summary>
-        /// <para>msg</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C0A6196F-52A0-5EC9-B8D3-263CEF806EC4</para>
         /// </summary>
@@ -160,6 +199,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -168,6 +209,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total data count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -176,6 +219,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

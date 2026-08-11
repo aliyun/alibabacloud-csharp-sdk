@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "accountcenter-intl.aliyuncs.com"},
+                {"cn-hangzhou", "accountcenter.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("accountcenter", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +44,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加私有联系人</para>
+        /// <para>Creates an account contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an account contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccountContactAddRequest
@@ -129,8 +139,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加私有联系人</para>
+        /// <para>Creates an account contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an account contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccountContactAddRequest
@@ -219,8 +234,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加私有联系人</para>
+        /// <para>Creates an account contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an account contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccountContactAddRequest
@@ -237,8 +257,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加私有联系人</para>
+        /// <para>Creates an account contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an account contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccountContactAddRequest
@@ -255,7 +280,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除私有联系人</para>
+        /// <para>Delete a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -313,7 +338,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除私有联系人</para>
+        /// <para>Delete a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -371,7 +396,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除私有联系人</para>
+        /// <para>Delete a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -389,7 +414,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除私有联系人</para>
+        /// <para>Delete a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -407,7 +432,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私有联系人</para>
+        /// <para>Modify a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +526,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私有联系人</para>
+        /// <para>Modify a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -595,7 +620,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私有联系人</para>
+        /// <para>Modify a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -613,7 +638,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私有联系人</para>
+        /// <para>Modify a private contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -631,7 +656,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -689,7 +714,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -747,7 +772,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -765,7 +790,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -783,7 +808,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Queries the contact list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -863,7 +888,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Queries the contact list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -943,7 +968,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Queries the contact list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -961,7 +986,7 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Queries the contact list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3411,8 +3436,14 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加企业联系人</para>
+        /// <para>Adds an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an enterprise public contact.
+        /// For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactAddRequest
@@ -3501,8 +3532,14 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加企业联系人</para>
+        /// <para>Adds an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an enterprise public contact.
+        /// For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactAddRequest
@@ -3591,8 +3628,14 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加企业联系人</para>
+        /// <para>Adds an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an enterprise public contact.
+        /// For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactAddRequest
@@ -3609,8 +3652,14 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加企业联系人</para>
+        /// <para>Adds an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an enterprise public contact.
+        /// For information about Alibaba Cloud account authorization, refer to <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactAddRequest
@@ -3627,8 +3676,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除企业联系人</para>
+        /// <para>Deletes an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactDeleteRequest
@@ -3685,8 +3739,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除企业联系人</para>
+        /// <para>Deletes an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactDeleteRequest
@@ -3743,8 +3802,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除企业联系人</para>
+        /// <para>Deletes an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactDeleteRequest
@@ -3761,8 +3825,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除企业联系人</para>
+        /// <para>Deletes an enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an enterprise public contact. For information about Alibaba Cloud account authorization, refer to the <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactDeleteRequest
@@ -3779,8 +3848,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私企业联系人</para>
+        /// <para>Modifies a private enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactEditRequest
@@ -3873,8 +3947,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私企业联系人</para>
+        /// <para>Modifies a private enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactEditRequest
@@ -3967,8 +4046,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私企业联系人</para>
+        /// <para>Modifies a private enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactEditRequest
@@ -3985,8 +4069,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改私企业联系人</para>
+        /// <para>Modifies a private enterprise contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a public enterprise contact. For information about primary account authorization, see <a href="https://www.alibabacloud.com/help/en/account/user-guide/add-business-address-and-business-contact">documentation</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactEditRequest
@@ -4003,8 +4092,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single enterprise contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryDetailRequest
@@ -4061,8 +4155,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single enterprise contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryDetailRequest
@@ -4119,8 +4218,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single enterprise contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryDetailRequest
@@ -4137,8 +4241,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人详情</para>
+        /// <para>Queries the details of a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single enterprise contact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryDetailRequest
@@ -4155,8 +4264,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Query the contact list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query enterprise contacts by page.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryPageListRequest
@@ -4235,8 +4349,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Query the contact list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query enterprise contacts by page.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryPageListRequest
@@ -4315,8 +4434,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Query the contact list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query enterprise contacts by page.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryPageListRequest
@@ -4333,8 +4457,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人列表</para>
+        /// <para>Query the contact list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query enterprise contacts by page.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnterpriseContactQueryPageListRequest
@@ -4347,6 +4476,454 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnterpriseContactQueryPageListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgCreateNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgCreateNodeResponse
+        /// </returns>
+        public EnterpriseOrgCreateNodeResponse EnterpriseOrgCreateNodeWithOptions(EnterpriseOrgCreateNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgCreateNodeShrinkRequest request = new EnterpriseOrgCreateNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentNodeId))
+            {
+                body["ParentNodeId"] = request.ParentNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentNodeType))
+            {
+                body["ParentNodeType"] = request.ParentNodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgCreateNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgCreateNodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgCreateNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgCreateNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgCreateNodeResponse> EnterpriseOrgCreateNodeWithOptionsAsync(EnterpriseOrgCreateNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgCreateNodeShrinkRequest request = new EnterpriseOrgCreateNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentNodeId))
+            {
+                body["ParentNodeId"] = request.ParentNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentNodeType))
+            {
+                body["ParentNodeType"] = request.ParentNodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgCreateNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgCreateNodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgCreateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgCreateNodeResponse
+        /// </returns>
+        public EnterpriseOrgCreateNodeResponse EnterpriseOrgCreateNode(EnterpriseOrgCreateNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseOrgCreateNodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgCreateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgCreateNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgCreateNodeResponse> EnterpriseOrgCreateNodeAsync(EnterpriseOrgCreateNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseOrgCreateNodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgDeleteNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgDeleteNodeResponse
+        /// </returns>
+        public EnterpriseOrgDeleteNodeResponse EnterpriseOrgDeleteNodeWithOptions(EnterpriseOrgDeleteNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgDeleteNodeShrinkRequest request = new EnterpriseOrgDeleteNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgDeleteNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgDeleteNodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgDeleteNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgDeleteNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgDeleteNodeResponse> EnterpriseOrgDeleteNodeWithOptionsAsync(EnterpriseOrgDeleteNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgDeleteNodeShrinkRequest request = new EnterpriseOrgDeleteNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgDeleteNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgDeleteNodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgDeleteNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgDeleteNodeResponse
+        /// </returns>
+        public EnterpriseOrgDeleteNodeResponse EnterpriseOrgDeleteNode(EnterpriseOrgDeleteNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseOrgDeleteNodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgDeleteNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgDeleteNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgDeleteNodeResponse> EnterpriseOrgDeleteNodeAsync(EnterpriseOrgDeleteNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseOrgDeleteNodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4511,6 +5088,226 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnterpriseOrgQueryLoadTreeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgRenameNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgRenameNodeResponse
+        /// </returns>
+        public EnterpriseOrgRenameNodeResponse EnterpriseOrgRenameNodeWithOptions(EnterpriseOrgRenameNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgRenameNodeShrinkRequest request = new EnterpriseOrgRenameNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgRenameNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgRenameNodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EnterpriseOrgRenameNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgRenameNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgRenameNodeResponse> EnterpriseOrgRenameNodeWithOptionsAsync(EnterpriseOrgRenameNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnterpriseOrgRenameNodeShrinkRequest request = new EnterpriseOrgRenameNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOpenApi))
+            {
+                body["IsOpenApi"] = request.IsOpenApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                body["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
+            {
+                body["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["NodeType"] = request.NodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                body["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TreeId))
+            {
+                body["TreeId"] = request.TreeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseOrgRenameNode",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseOrgRenameNodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgRenameNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgRenameNodeResponse
+        /// </returns>
+        public EnterpriseOrgRenameNodeResponse EnterpriseOrgRenameNode(EnterpriseOrgRenameNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseOrgRenameNodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名组织节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseOrgRenameNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseOrgRenameNodeResponse
+        /// </returns>
+        public async Task<EnterpriseOrgRenameNodeResponse> EnterpriseOrgRenameNodeAsync(EnterpriseOrgRenameNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseOrgRenameNodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6559,8 +7356,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证邮件</para>
+        /// <para>Sends an asynchronous email verification message to verify the email address of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncEmailCaptchaRequest
@@ -6609,8 +7411,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证邮件</para>
+        /// <para>Sends an asynchronous email verification message to verify the email address of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncEmailCaptchaRequest
@@ -6659,8 +7466,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证邮件</para>
+        /// <para>Sends an asynchronous email verification message to verify the email address of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncEmailCaptchaRequest
@@ -6677,8 +7489,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证邮件</para>
+        /// <para>Sends an asynchronous email verification message to verify the email address of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s email address. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncEmailCaptchaRequest
@@ -6695,8 +7512,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证短信</para>
+        /// <para>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncMobileCaptchaRequest
@@ -6745,8 +7567,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证短信</para>
+        /// <para>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncMobileCaptchaRequest
@@ -6795,8 +7622,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证短信</para>
+        /// <para>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncMobileCaptchaRequest
@@ -6813,8 +7645,13 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号中心发送异步验证短信</para>
+        /// <para>Sends an asynchronous verification SMS to a phone number to verify the phone number of a specified contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends an asynchronous verification link for a contact\&quot;s contact information. Additional rate limits apply. The same account and contact information combination cannot exceed 20 requests within 5 minutes. The same account cannot exceed 300 requests globally within 24 hours.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncMobileCaptchaRequest

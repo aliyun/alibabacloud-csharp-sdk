@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class AccountContactEditResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data result of the current category statistics</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AccountContactEditResponseBodyData Data { get; set; }
         public class AccountContactEditResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Contact ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             [Validation(Required=false)]
             public long? ContactId { get; set; }
 
+            /// <summary>
+            /// <para>Error codes.</para>
+            /// </summary>
             [NameInMap("ErrorList")]
             [Validation(Required=false)]
             public List<AccountContactEditResponseBodyDataErrorList> ErrorList { get; set; }
             public class AccountContactEditResponseBodyDataErrorList : TeaModel {
                 /// <summary>
+                /// <para>Error code</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MOBILE_CODE_ILLEGAL</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
+                /// <para>Cause of the diagnostic issue.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MOBILE_CODE_ILLEGAL</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
                 public string ErrorDesc { get; set; }
 
                 /// <summary>
+                /// <para>Exception field</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MOBILE_VERIFY_CODE</para>
                 /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
             }
 
             /// <summary>
+            /// <para>Whether successful</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;TeamDesktops\&quot;: [], \&quot;PrivateDesktops\&quot;: [], \&quot;UnallocatedTeamDesktops\&quot;: []}</para>
             /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E4E192DF-798B-58AE-B8BF-EBC15E2E85F2</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful. Valid values: true: succeeded. false: failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

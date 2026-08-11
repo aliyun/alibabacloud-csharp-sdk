@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class EnterpriseContactQueryDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The contact ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public long? ContactId { get; set; }
 
         /// <summary>
+        /// <para>The entity ID of the cross-enterprise management object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string OrientedEcId { get; set; }
 
         /// <summary>
+        /// <para>The enterprise currently switched to.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string OrientedLeId { get; set; }
 
         /// <summary>
+        /// <para>The marketplace ID of the cross-enterprise management object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>

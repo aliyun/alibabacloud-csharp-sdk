@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
 {
     public class EnterpriseContactAddRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to asynchronously verify the email address. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncEmailCaptcha operation to send a verification link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public bool? AsyncEmailVerify { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to asynchronously verify the mobile phone number. Set this parameter to true for API calls. Otherwise, the verification code is synchronously verified. Call the SendAsyncMobileCaptcha operation to send a verification link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public bool? AsyncMobileVerify { get; set; }
 
         /// <summary>
+        /// <para>The email address of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:xxx@xxx.xx">xxx@xxx.xx</a></para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string ContactEmail { get; set; }
 
         /// <summary>
+        /// <para>The mobile phone number of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1xxxxxxxxxx</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string ContactMobile { get; set; }
 
         /// <summary>
+        /// <para>The name of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -58,6 +70,15 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The position of the contact. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>TECH_MANAGER: technical manager.</description></item>
+        /// <item><description>MAINTAIN_MANAGER: O&amp;M manager.</description></item>
+        /// <item><description>PROJECT_MANAGER: project manager.</description></item>
+        /// <item><description>FINANCE_MANAGER: finance manager.</description></item>
+        /// <item><description>OTHER: other.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string ContactPosition { get; set; }
 
         /// <summary>
+        /// <para>The email verification code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string EmailCode { get; set; }
 
         /// <summary>
+        /// <para>The SMS verification code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string MobileCode { get; set; }
 
         /// <summary>
+        /// <para>The entity ID of the cross-enterprise management object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -90,6 +117,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string OrientedEcId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the enterprise to which you have switched.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -98,6 +127,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string OrientedLeId { get; set; }
 
         /// <summary>
+        /// <para>The sales site ID of the cross-enterprise management object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -106,6 +137,8 @@ namespace AlibabaCloud.SDK.AccountCenter20241209.Models
         public string OrientedNbId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the contact is a public contact. This operation sets this parameter to true by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
