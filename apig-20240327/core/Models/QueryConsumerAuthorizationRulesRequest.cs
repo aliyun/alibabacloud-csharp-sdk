@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer group ID. If specified, the authorization rules of the consumer group are queried.</para>
+        /// <para>The consumer group ID. If specified, the authorization rules for the consumer group are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConsumerGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The consumer group name for fuzzy match.</para>
+        /// </summary>
         [NameInMap("consumerGroupNameLike")]
         [Validation(Required=false)]
         public string ConsumerGroupNameLike { get; set; }

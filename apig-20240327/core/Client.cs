@@ -21,31 +21,31 @@ namespace AlibabaCloud.SDK.APIG20240327
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "apig.us-west-1.aliyuncs.com"},
-                {"us-east-1", "apig.us-east-1.aliyuncs.com"},
-                {"me-east-1", "apig.me-east-1.aliyuncs.com"},
-                {"me-central-1", "apig.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "apig.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "apig.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "apig.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "apig.cn-qingdao.aliyuncs.com"},
-                {"cn-hongkong", "apig.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan", "apig.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "apig.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "apig.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"},
+                {"cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"},
+                {"cn-heyuan", "apig.cn-heyuan.aliyuncs.com"},
+                {"cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"},
+                {"cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "apig.cn-beijing.aliyuncs.com"},
                 {"ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "apig.cn-chengdu.aliyuncs.com"},
+                {"cn-qingdao", "apig.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai", "apig.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "apig.cn-hongkong.aliyuncs.com"},
+                {"ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"},
+                {"cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"},
+                {"us-west-1", "apig.us-west-1.aliyuncs.com"},
+                {"us-east-1", "apig.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "apig.eu-central-1.aliyuncs.com"},
+                {"eu-west-1", "apig.eu-west-1.aliyuncs.com"},
+                {"me-east-1", "apig.me-east-1.aliyuncs.com"},
+                {"me-central-1", "apig.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -799,6 +799,362 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await BatchDeleteConsumerAuthorizationRuleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchExportHttpApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchExportHttpApisResponse
+        /// </returns>
+        public BatchExportHttpApisResponse BatchExportHttpApisWithOptions(BatchExportHttpApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIds))
+            {
+                body["apiIds"] = request.ApiIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["apiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionConfig))
+            {
+                body["extensionConfig"] = request.ExtensionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchExportHttpApis",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/batch-export",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchExportHttpApisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchExportHttpApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchExportHttpApisResponse
+        /// </returns>
+        public async Task<BatchExportHttpApisResponse> BatchExportHttpApisWithOptionsAsync(BatchExportHttpApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiIds))
+            {
+                body["apiIds"] = request.ApiIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["apiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionConfig))
+            {
+                body["extensionConfig"] = request.ExtensionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchExportHttpApis",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/batch-export",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchExportHttpApisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchExportHttpApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchExportHttpApisResponse
+        /// </returns>
+        public BatchExportHttpApisResponse BatchExportHttpApis(BatchExportHttpApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchExportHttpApisWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchExportHttpApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchExportHttpApisResponse
+        /// </returns>
+        public async Task<BatchExportHttpApisResponse> BatchExportHttpApisAsync(BatchExportHttpApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchExportHttpApisWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchImportHttpApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchImportHttpApisResponse
+        /// </returns>
+        public BatchImportHttpApisResponse BatchImportHttpApisWithOptions(BatchImportHttpApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUpdate))
+            {
+                body["allowUpdate"] = request.AllowUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["apiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecFileUrl))
+            {
+                body["specFileUrl"] = request.SpecFileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecOssConfig))
+            {
+                body["specOssConfig"] = request.SpecOssConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithGatewayExtension))
+            {
+                body["withGatewayExtension"] = request.WithGatewayExtension;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchImportHttpApis",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/batch-import",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchImportHttpApisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchImportHttpApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchImportHttpApisResponse
+        /// </returns>
+        public async Task<BatchImportHttpApisResponse> BatchImportHttpApisWithOptionsAsync(BatchImportHttpApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUpdate))
+            {
+                body["allowUpdate"] = request.AllowUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiType))
+            {
+                body["apiType"] = request.ApiType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecFileUrl))
+            {
+                body["specFileUrl"] = request.SpecFileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecOssConfig))
+            {
+                body["specOssConfig"] = request.SpecOssConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithGatewayExtension))
+            {
+                body["withGatewayExtension"] = request.WithGatewayExtension;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchImportHttpApis",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/batch-import",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchImportHttpApisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchImportHttpApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchImportHttpApisResponse
+        /// </returns>
+        public BatchImportHttpApisResponse BatchImportHttpApis(BatchImportHttpApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchImportHttpApisWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入HTTP API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchImportHttpApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchImportHttpApisResponse
+        /// </returns>
+        public async Task<BatchImportHttpApisResponse> BatchImportHttpApisAsync(BatchImportHttpApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchImportHttpApisWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8303,6 +8659,242 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询批量导出任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchExportTaskResponse
+        /// </returns>
+        public GetBatchExportTaskResponse GetBatchExportTaskWithOptions(string taskId, GetBatchExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-export-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchExportTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchExportTaskResponse
+        /// </returns>
+        public async Task<GetBatchExportTaskResponse> GetBatchExportTaskWithOptionsAsync(string taskId, GetBatchExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-export-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchExportTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchExportTaskResponse
+        /// </returns>
+        public GetBatchExportTaskResponse GetBatchExportTask(string taskId, GetBatchExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetBatchExportTaskWithOptions(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchExportTaskResponse
+        /// </returns>
+        public async Task<GetBatchExportTaskResponse> GetBatchExportTaskAsync(string taskId, GetBatchExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetBatchExportTaskWithOptionsAsync(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量操作任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchImportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchImportTaskResponse
+        /// </returns>
+        public GetBatchImportTaskResponse GetBatchImportTaskWithOptions(string taskId, GetBatchImportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchImportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-import-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchImportTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量操作任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchImportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchImportTaskResponse
+        /// </returns>
+        public async Task<GetBatchImportTaskResponse> GetBatchImportTaskWithOptionsAsync(string taskId, GetBatchImportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchImportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-import-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchImportTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量操作任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchImportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchImportTaskResponse
+        /// </returns>
+        public GetBatchImportTaskResponse GetBatchImportTask(string taskId, GetBatchImportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetBatchImportTaskWithOptions(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量操作任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchImportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchImportTaskResponse
+        /// </returns>
+        public async Task<GetBatchImportTaskResponse> GetBatchImportTaskAsync(string taskId, GetBatchImportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetBatchImportTaskWithOptionsAsync(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves an API consumer.</para>
         /// </summary>
         /// 
@@ -11793,6 +12385,192 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListAiModelProvidersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchExportTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchExportTasksResponse
+        /// </returns>
+        public ListBatchExportTasksResponse ListBatchExportTasksWithOptions(ListBatchExportTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Statuses))
+            {
+                query["statuses"] = request.Statuses;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBatchExportTasks",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-export-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBatchExportTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchExportTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchExportTasksResponse
+        /// </returns>
+        public async Task<ListBatchExportTasksResponse> ListBatchExportTasksWithOptionsAsync(ListBatchExportTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Statuses))
+            {
+                query["statuses"] = request.Statuses;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBatchExportTasks",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-api-batch-export-tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBatchExportTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchExportTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchExportTasksResponse
+        /// </returns>
+        public ListBatchExportTasksResponse ListBatchExportTasks(ListBatchExportTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBatchExportTasksWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchExportTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchExportTasksResponse
+        /// </returns>
+        public async Task<ListBatchExportTasksResponse> ListBatchExportTasksAsync(ListBatchExportTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBatchExportTasksWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

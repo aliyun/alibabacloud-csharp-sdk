@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo ResourceInfo { get; set; }
                 public class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The API operation information.</para>
+                    /// <para>The operation information.</para>
                     /// </summary>
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]

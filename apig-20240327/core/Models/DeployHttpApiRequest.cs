@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The publish description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用户服务API发布。</para>
+            /// <para>User service API publish</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In scenarios such as by-ratio or by-content, multiple entries are allowed.</para>
+                /// <para>The existing service configurations. In the single service scenario, only one entry is allowed. In the by-ratio or by-content scenarios, multiple entries are allowed.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -131,8 +131,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The service protocol. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>HTTP</description></item>
-                    /// <item><description>HTTPS</description></item>
+                    /// <item><description>HTTP.</description></item>
+                    /// <item><description>HTTPS.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<DeployHttpApiRequestRestApiConfigOperationDeployments> OperationDeployments { get; set; }
             public class DeployHttpApiRequestRestApiConfigOperationDeployments : TeaModel {
                 /// <summary>
-                /// <para>The action type.</para>
+                /// <para>The operation type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Publish</para>
