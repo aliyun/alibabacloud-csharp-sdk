@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterNodepoolRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to ignore warning-level pre-checks.</para>
+        /// </summary>
         [NameInMap("ignore_warning_check")]
         [Validation(Required=false)]
         public bool? IgnoreWarningCheck { get; set; }
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes version of the node. You can call <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> to obtain the current cluster version information from the <c>KubernetesVersion</c> field.</para>
+        /// <para>The Kubernetes version of the node. You can call <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> to obtain the current cluster version information from <c>KubernetesVersion</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to upgrade. If this parameter is not specified, all nodes in the node pool are upgraded.</para>
+        /// <para>The list of nodes to upgrade. If not specified, all nodes in the node pool are upgraded by default.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
@@ -48,9 +51,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public UpgradeClusterNodepoolRequestRollingPolicy RollingPolicy { get; set; }
         public class UpgradeClusterNodepoolRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade. This parameter takes effect only when the pause policy is set to <c>NotPause</c>.</para>
+            /// <para>The upgrade interval between batches. This parameter takes effect only when the pause policy is set to <c>NotPause</c>.</para>
             /// <para>Valid values: [5,120]. Unit: minutes.</para>
-            /// <para>You can set this parameter to 0 to specify no interval between batches.</para>
+            /// <para>This parameter can be set to 0, which indicates no interval between batches.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -60,7 +63,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be updated in parallel per batch. Nodes in the node pool are updated in batches.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("max_failed_nodes")]
+            [Validation(Required=false)]
+            public int? MaxFailedNodes { get; set; }
+
+            /// <summary>
+            /// <para>The maximum number of nodes that can be updated in parallel per batch. Node pool updates are performed in batches.</para>
             /// <para>Valid values: [1,10].</para>
             /// <para>Default value: 10.</para>
             /// 
@@ -74,9 +87,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The automatic pause policy during node upgrades. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FirstBatch: pauses after the first batch is complete.</description></item>
-            /// <item><description>EveryBatch: pauses after each batch is complete.</description></item>
-            /// <item><description>NotPause: does not pause.</description></item>
+            /// <item><description>FirstBatch: Pauses after the first batch is complete.</description></item>
+            /// <item><description>EveryBatch: Pauses after each batch is complete.</description></item>
+            /// <item><description>NotPause: Does not pause.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,10 +122,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RuntimeVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use system cloud disk replacement for the upgrade. Valid values:</para>
+        /// <para>Specifies whether to use disk replacement for the upgrade. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Uses system cloud disk replacement to upgrade the node pool. ACK reinitializes the nodes based on the current node pool configurations, such as the logon method, labels, taints, operating system image, and runtime version.</description></item>
-        /// <item><description>false: Does not use system cloud disk replacement.</description></item>
+        /// <item><description>true: Uses disk replacement to upgrade the node pool. ACK reinitializes the nodes based on the current node pool configurations, such as logon method, labels, taints, operating system image, and runtime version.</description></item>
+        /// <item><description>false: Does not use disk replacement.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

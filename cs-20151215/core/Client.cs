@@ -51,44 +51,46 @@ namespace AlibabaCloud.SDK.CS20151215
                 {"cn-zhengzhou-nebula-1", "cs.aliyuncs.com"},
                 {"eu-west-1-oxs", "cs.aliyuncs.com"},
                 {"rus-west-1-pop", "cs.aliyuncs.com"},
-                {"us-west-1", "cs.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "cs.us-southeast-1.aliyuncs.com"},
-                {"us-east-1", "cs.us-east-1.aliyuncs.com"},
-                {"na-south-1", "cs.na-south-1.aliyuncs.com"},
-                {"me-east-1", "cs.me-east-1.aliyuncs.com"},
-                {"me-central-1", "cs.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "cs.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "cs.eu-central-1.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "cs.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "cs.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "cs.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "cs.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "cs.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "cs.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "cs.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "cs.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "cs.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "cs.cn-qingdao.aliyuncs.com"},
-                {"cn-nanjing", "cs.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "cs.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "cs.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "cs.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "cs.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "cs.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "cs.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "cs.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "cs.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "cs.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "cs.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing", "cs.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "cs.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-5", "cs.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "cs.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "cs.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "cs.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "cs.ap-south-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "cs.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-heyuan", "cs.cn-heyuan.aliyuncs.com"},
+                {"cn-zhangjiakou", "cs.cn-zhangjiakou.aliyuncs.com"},
                 {"ap-northeast-2", "cs.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "cs.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "cs.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "cs.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "cs.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-7", "cs.ap-southeast-7.aliyuncs.com"},
+                {"cn-wulanchabu", "cs.cn-wulanchabu.aliyuncs.com"},
+                {"cn-qingdao", "cs.cn-qingdao.aliyuncs.com"},
+                {"cn-wuhan-lr", "cs.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shanghai", "cs.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "cs.cn-hongkong.aliyuncs.com"},
+                {"cn-shenzhen", "cs.cn-shenzhen.aliyuncs.com"},
+                {"cn-nanjing", "cs.cn-nanjing.aliyuncs.com"},
+                {"cn-fuzhou", "cs.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "cs.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "cs.cn-guangzhou.aliyuncs.com"},
+                {"cn-huhehaote", "cs.cn-huhehaote.aliyuncs.com"},
+                {"cn-hangzhou", "cs.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-8", "cs.ap-southeast-8.aliyuncs.com"},
+                {"cn-zhongwei", "cs.cn-zhongwei.aliyuncs.com"},
+                {"eu-west-2", "cs.eu-west-2.aliyuncs.com"},
+                {"na-south-1", "cs.na-south-1.aliyuncs.com"},
+                {"us-west-1", "cs.us-west-1.aliyuncs.com"},
+                {"us-east-1", "cs.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "cs.eu-central-1.aliyuncs.com"},
+                {"eu-west-1", "cs.eu-west-1.aliyuncs.com"},
+                {"us-southeast-1", "cs.us-southeast-1.aliyuncs.com"},
+                {"me-central-1", "cs.me-central-1.aliyuncs.com"},
+                {"me-east-1", "cs.me-east-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "cs.cn-north-2-gov-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "cs.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "cs.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "cs.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "cs.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "cs.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "cs.cn-hangzhou-finance.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1998,22 +2000,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</para>
+        /// <para>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters through the console</h3>
-        /// <para>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</para>
-        /// <ol>
-        /// <item><description>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <b>Clusters</b> in the left navigation pane.</description></item>
-        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
-        /// <item><description>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
-        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<remarks>
-        /// <para>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></para>
-        /// </remarks>
-        /// </description></item>
-        /// </ol>
+        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -2467,22 +2459,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</para>
+        /// <para>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters through the console</h3>
-        /// <para>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</para>
-        /// <ol>
-        /// <item><description>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <b>Clusters</b> in the left navigation pane.</description></item>
-        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
-        /// <item><description>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
-        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<remarks>
-        /// <para>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></para>
-        /// </remarks>
-        /// </description></item>
-        /// </ol>
+        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -2936,22 +2918,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</para>
+        /// <para>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters through the console</h3>
-        /// <para>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</para>
-        /// <ol>
-        /// <item><description>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <b>Clusters</b> in the left navigation pane.</description></item>
-        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
-        /// <item><description>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
-        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<remarks>
-        /// <para>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></para>
-        /// </remarks>
-        /// </description></item>
-        /// </ol>
+        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -2970,22 +2942,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</para>
+        /// <para>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When you create a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters through the console</h3>
-        /// <para>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</para>
-        /// <ol>
-        /// <item><description>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <b>Clusters</b> in the left navigation pane.</description></item>
-        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
-        /// <item><description>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
-        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<remarks>
-        /// <para>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></para>
-        /// </remarks>
-        /// </description></item>
-        /// </ol>
+        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -3288,7 +3250,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3394,7 +3356,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3500,7 +3462,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3519,7 +3481,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5728,7 +5690,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeAddon operation to query information about a specified component based on parameters such as region, cluster type, cluster subtype (profile), cluster version, and component name. The returned information includes whether the component is managed, component category, supported custom parameter schema, compatible OS architectures, and the minimum cluster version required by the component version.</para>
+        /// <para>Invokes the DescribeAddon operation to perform a parameter query for information about a specified component based on parameters such as region, cluster type, cluster child class (profile), cluster version, and component name. The returned information includes whether the component is managed, the component categorization, the schema of supported custom parameters, compatible operating system architectures, and the minimum cluster version required by the component version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5798,7 +5760,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeAddon operation to query information about a specified component based on parameters such as region, cluster type, cluster subtype (profile), cluster version, and component name. The returned information includes whether the component is managed, component category, supported custom parameter schema, compatible OS architectures, and the minimum cluster version required by the component version.</para>
+        /// <para>Invokes the DescribeAddon operation to perform a parameter query for information about a specified component based on parameters such as region, cluster type, cluster child class (profile), cluster version, and component name. The returned information includes whether the component is managed, the component categorization, the schema of supported custom parameters, compatible operating system architectures, and the minimum cluster version required by the component version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5868,7 +5830,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeAddon operation to query information about a specified component based on parameters such as region, cluster type, cluster subtype (profile), cluster version, and component name. The returned information includes whether the component is managed, component category, supported custom parameter schema, compatible OS architectures, and the minimum cluster version required by the component version.</para>
+        /// <para>Invokes the DescribeAddon operation to perform a parameter query for information about a specified component based on parameters such as region, cluster type, cluster child class (profile), cluster version, and component name. The returned information includes whether the component is managed, the component categorization, the schema of supported custom parameters, compatible operating system architectures, and the minimum cluster version required by the component version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5887,7 +5849,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeAddon operation to query information about a specified component based on parameters such as region, cluster type, cluster subtype (profile), cluster version, and component name. The returned information includes whether the component is managed, component category, supported custom parameter schema, compatible OS architectures, and the minimum cluster version required by the component version.</para>
+        /// <para>Invokes the DescribeAddon operation to perform a parameter query for information about a specified component based on parameters such as region, cluster type, cluster child class (profile), cluster version, and component name. The returned information includes whether the component is managed, the component categorization, the schema of supported custom parameters, compatible operating system architectures, and the minimum cluster version required by the component version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7106,7 +7068,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</para>
+        /// <para>Queries the details of a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7142,7 +7104,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</para>
+        /// <para>Queries the details of a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7178,7 +7140,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</para>
+        /// <para>Queries the details of a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7193,7 +7155,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</para>
+        /// <para>Queries the details of a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7574,18 +7536,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all node pools in a cluster.</para>
+        /// <para>Queries the list of all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <c>kubectl delete node</c>.</description></item>
-        /// <item><description>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
-        /// <item><description>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
+        /// <item><description>Do not directly release nodes, remove instances in the ECS or ESS console (or through related APIs), or allow nodes to be passively released due to subscription instance expires. In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
+        /// <item><description>If the node pool has a desired number of nodes configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
         /// <item><description>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</description></item>
-        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</description></item>
-        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</description></item>
+        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pods being unable to be scheduling.</description></item>
+        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not unschedulable on other nodes after the node is removed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7632,18 +7594,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all node pools in a cluster.</para>
+        /// <para>Queries the list of all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <c>kubectl delete node</c>.</description></item>
-        /// <item><description>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
-        /// <item><description>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
+        /// <item><description>Do not directly release nodes, remove instances in the ECS or ESS console (or through related APIs), or allow nodes to be passively released due to subscription instance expires. In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
+        /// <item><description>If the node pool has a desired number of nodes configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
         /// <item><description>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</description></item>
-        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</description></item>
-        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</description></item>
+        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pods being unable to be scheduling.</description></item>
+        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not unschedulable on other nodes after the node is removed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7690,18 +7652,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all node pools in a cluster.</para>
+        /// <para>Queries the list of all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <c>kubectl delete node</c>.</description></item>
-        /// <item><description>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
-        /// <item><description>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
+        /// <item><description>Do not directly release nodes, remove instances in the ECS or ESS console (or through related APIs), or allow nodes to be passively released due to subscription instance expires. In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
+        /// <item><description>If the node pool has a desired number of nodes configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
         /// <item><description>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</description></item>
-        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</description></item>
-        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</description></item>
+        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pods being unable to be scheduling.</description></item>
+        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not unschedulable on other nodes after the node is removed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7721,18 +7683,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all node pools in a cluster.</para>
+        /// <para>Queries the list of all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <c>kubectl delete node</c>.</description></item>
-        /// <item><description>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
-        /// <item><description>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
+        /// <item><description>Do not directly release nodes, remove instances in the ECS or ESS console (or through related APIs), or allow nodes to be passively released due to subscription instance expires. In these cases, nodes are directly stopped and automatically removed from the Container Service console.</description></item>
+        /// <item><description>If the node pool has a desired number of nodes configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</description></item>
         /// <item><description>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</description></item>
-        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</description></item>
-        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</description></item>
+        /// <item><description>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pods being unable to be scheduling.</description></item>
+        /// <item><description>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not unschedulable on other nodes after the node is removed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13482,7 +13444,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13536,7 +13498,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13590,7 +13552,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13609,7 +13571,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15550,12 +15512,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
+        /// <para>Modifies the configuration of an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></para>
+        /// <para><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15590,6 +15552,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 body["api_server_eip_id"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["client_token"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
@@ -15677,12 +15643,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
+        /// <para>Modifies the configuration of an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></para>
+        /// <para><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15717,6 +15683,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiServerEipId))
             {
                 body["api_server_eip_id"] = request.ApiServerEipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["client_token"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
@@ -15804,12 +15774,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
+        /// <para>Modifies the configuration of an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></para>
+        /// <para><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15828,12 +15798,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
+        /// <para>Modifies the configuration of an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></para>
+        /// <para><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16022,12 +15992,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
+        /// <para><notice>Starting July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of OpenAPI operations related to ACK cluster management and the deprecation of specific OpenAPI operations</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16105,12 +16075,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
+        /// <para><notice>Starting July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of OpenAPI operations related to ACK cluster management and the deprecation of specific OpenAPI operations</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16188,12 +16158,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
+        /// <para><notice>Starting July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of OpenAPI operations related to ACK cluster management and the deprecation of specific OpenAPI operations</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16212,12 +16182,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><notice>Starting from July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></para>
+        /// <para><notice>Starting July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of OpenAPI operations related to ACK cluster management and the deprecation of specific OpenAPI operations</a>.</notice></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16390,7 +16360,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification is complete, the configurations automatically take effect on existing nodes in the node pool, and new nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16459,7 +16429,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification is complete, the configurations automatically take effect on existing nodes in the node pool, and new nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16528,7 +16498,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification is complete, the configurations automatically take effect on existing nodes in the node pool, and new nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16554,7 +16524,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification is complete, the configurations automatically take effect on existing nodes in the node pool, and new nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -22004,17 +21974,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you call the UpgradeClusterNodepool operation, the API returns a task_id for the upgrade task. You can manage the task by calling the following task API operations:</para>
+        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you successfully call the UpgradeClusterNodepool operation, the API returns a <c>task_id</c> for the upgrade task. You can manage the task by calling the following task-related API operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a paused task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -22089,17 +22059,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you call the UpgradeClusterNodepool operation, the API returns a task_id for the upgrade task. You can manage the task by calling the following task API operations:</para>
+        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you successfully call the UpgradeClusterNodepool operation, the API returns a <c>task_id</c> for the upgrade task. You can manage the task by calling the following task-related API operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a paused task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -22174,17 +22144,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you call the UpgradeClusterNodepool operation, the API returns a task_id for the upgrade task. You can manage the task by calling the following task API operations:</para>
+        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you successfully call the UpgradeClusterNodepool operation, the API returns a <c>task_id</c> for the upgrade task. You can manage the task by calling the following task-related API operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a paused task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -22204,17 +22174,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you call the UpgradeClusterNodepool operation, the API returns a task_id for the upgrade task. You can manage the task by calling the following task API operations:</para>
+        /// <para>Upgrades the Kubernetes version, operating system version, or container runtime version of nodes in a specified cluster node pool. After you successfully call the UpgradeClusterNodepool operation, the API returns a <c>task_id</c> for the upgrade task. You can manage the task by calling the following task-related API operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667985.html">Call DescribeTaskInfo to query task details</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667986.html">Call PauseTask to pause a running task</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/2667987.html">Call ResumeTask to resume a paused task</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a>.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2667988.html">Call CancelTask to cancel a running task</a></description></item>
         /// </list>
         /// </description>
         /// 

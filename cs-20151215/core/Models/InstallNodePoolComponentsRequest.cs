@@ -59,21 +59,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The list of node names for the rolling update. By default, all nodes are included.</para>
+        /// <para>The list of node names for the rolling operation. Default value: all nodes.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The rolling update configuration.</para>
+        /// <para>The rolling policy configuration.</para>
         /// </summary>
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public InstallNodePoolComponentsRequestRollingPolicy RollingPolicy { get; set; }
         public class InstallNodePoolComponentsRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade. Unit: seconds.</para>
+            /// <para>The upgrade interval between batches. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -83,7 +83,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be processed in parallel per batch. Default value: 1.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("maxFailedNodes")]
+            [Validation(Required=false)]
+            public long? MaxFailedNodes { get; set; }
+
+            /// <summary>
+            /// <para>The maximum number of parallel operations per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

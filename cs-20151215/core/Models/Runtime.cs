@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Default value: <c>containerd</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>containerd</para>
+        /// <para>docker</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>For more information about the changes to Sandboxed-Container, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed-Container release notes</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.6.20</para>
+        /// <para>19.03.5</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

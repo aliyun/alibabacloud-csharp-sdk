@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateNodePoolComponentRequest : TeaModel {
         /// <summary>
-        /// <para>The node component configuration.</para>
+        /// <para>The configuration of the node component.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
+        /// <para>Specifies whether to disable rolling. Default value: false. If set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
         /// </summary>
         [NameInMap("disableRolling")]
         [Validation(Required=false)]
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The rolling update configuration.</para>
+        /// <para>The rolling update policy.</para>
         /// </summary>
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
         public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade, in seconds.</para>
+            /// <para>The interval between batches during the upgrade. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("batchInterval")]
             [Validation(Required=false)]
             public long? BatchInterval { get; set; }
+
+            /// <summary>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("maxFailedNodes")]
+            [Validation(Required=false)]
+            public long? MaxFailedNodes { get; set; }
 
             /// <summary>
             /// <para>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</para>

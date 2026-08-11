@@ -61,7 +61,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
         public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("max_failed_nodes")]
+            [Validation(Required=false)]
+            public long? MaxFailedNodes { get; set; }
+
+            /// <summary>
+            /// <para>The node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
             /// <para>Valid values: [1,10].</para>
             /// <para>Default value: 10.</para>
             /// 
