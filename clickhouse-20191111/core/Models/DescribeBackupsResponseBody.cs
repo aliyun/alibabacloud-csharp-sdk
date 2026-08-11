@@ -17,7 +17,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<DescribeBackupsResponseBodyItems> Items { get; set; }
         public class DescribeBackupsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The end time of the backup. The time is in the yyyy-MM-ddTHH:mmZ format and is displayed in UTC.</para>
+            /// <para>The time when the backup ended.
+            /// Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-22T18:28:41Z</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string BackupEndTime { get; set; }
 
             /// <summary>
-            /// <para>The data backup task ID.</para>
+            /// <para>The ID of the backup task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>117403****</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string BackupId { get; set; }
 
             /// <summary>
-            /// <para>The backup method. The value is always <b>Physical</b>, which indicates a physical backup.</para>
+            /// <para>The backup method. The value is <b>Physical</b>, which indicates physical backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Physical</para>
@@ -47,12 +48,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string BackupMethod { get; set; }
 
             /// <summary>
-            /// <para>The number of cluster nodes.</para>
+            /// <para>The backup type. Valid values: manual (manual backup) and scheduled (automatic backup).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>manual</para>
+            /// </summary>
+            [NameInMap("BackupScheduleType")]
+            [Validation(Required=false)]
+            public string BackupScheduleType { get; set; }
+
+            /// <summary>
+            /// <para>The number of nodes in the cluster.</para>
             /// <list type="bullet">
-            /// <item><description><para>For a single-replica edition cluster, the value is an integer from 1 to 48.</para>
-            /// </description></item>
-            /// <item><description><para>For a double-replica edition cluster, the value is an integer from 1 to 24.</para>
-            /// </description></item>
+            /// <item><description>Single-replica edition: valid values: 1 to 48.</description></item>
+            /// <item><description>Master-replica cluster: valid values: 1 to 24.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +72,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string BackupSetInfo { get; set; }
 
             /// <summary>
-            /// <para>The backup size. Unit: MB.</para>
+            /// <para>The backup size.
+            /// Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public long? BackupSize { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup. The time is in the yyyy-MM-ddTHH:mmZ format and is displayed in UTC.</para>
+            /// <para>The time when the backup started. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-22T18:28:22Z</para>
@@ -85,10 +95,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The backup status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Success</b>: The backup is successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>Failure</b>: The backup failed.</para>
-            /// </description></item>
+            /// <item><description><b>Success</b>: The backup is complete.</description></item>
+            /// <item><description><b>Failure</b>: The backup failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +109,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The backup type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>FullBackup</b>: full backup.</para>
-            /// </description></item>
-            /// <item><description><para><b>IncrementalBackup</b>: incremental backup.</para>
-            /// </description></item>
+            /// <item><description><b>FullBackup</b>: full backup.</description></item>
+            /// <item><description><b>IncrementalBackup</b>: incremental backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +131,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the backup set. The time is in the yyyy-MM-ddTHH:mmZ format and is displayed in UTC.</para>
+            /// <para>The expiration time of the backup set.
+            /// Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-22T18:28:41Z</para>
@@ -149,12 +156,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,7 +179,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

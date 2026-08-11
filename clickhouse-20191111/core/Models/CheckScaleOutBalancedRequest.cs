@@ -72,6 +72,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The specification change type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ScaleOut: horizontal scale-out</description></item>
+        /// <item><description>ScaleIn: horizontal scale-in</description></item>
+        /// <item><description>MultiAzUpgrade: upgrade to multi-active zone deployment</description></item>
+        /// <item><description>DiskDownGrade: cloud disk downgrade.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ScaleOut</para>
+        /// </summary>
         [NameInMap("ScalingType")]
         [Validation(Required=false)]
         public string ScalingType { get; set; }
