@@ -1,3 +1,6 @@
+2026-08-12 Version: 6.0.1
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2026-08-11 Version: 6.0.0
 - Update API globalHotelApplyRefund: add response parameters Body.Data.RefundOrderNo.
 - Update API globalHotelApplyRefund: delete response parameters Body.Data.SellRefundOrderId.
