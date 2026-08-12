@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringPrometheusEscalation : TeaModel {
         /// <summary>
-        /// <para>The PromQL expression that defines the alert condition. This parameter is required.</para>
+        /// <para>The PromQL query statement.</para>
         /// </summary>
         [NameInMap("promQl")]
         [Validation(Required=false)]
         public string PromQl { get; set; }
 
         /// <summary>
-        /// <para>The severity of the alert that triggers the escalation. This parameter is required.</para>
+        /// <para>The severity level.</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times the condition must be met to trigger an escalation. This parameter is required.</para>
+        /// <para>The number of consecutive times the alert is triggered.</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

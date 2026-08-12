@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringExpressEscalation : TeaModel {
         /// <summary>
-        /// <para>The expression that defines the alert condition.</para>
+        /// <para>The raw expression.</para>
         /// </summary>
         [NameInMap("rawExpression")]
         [Validation(Required=false)]
         public string RawExpression { get; set; }
 
         /// <summary>
-        /// <para>The alert severity that triggers the escalation.</para>
+        /// <para>The severity level.</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The number of alert occurrences required to trigger the escalation.</para>
+        /// <para>The number of consecutive times the alert is triggered.</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

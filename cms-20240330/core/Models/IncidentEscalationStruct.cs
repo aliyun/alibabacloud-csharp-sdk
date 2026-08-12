@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>当告警未响应时，依次通知运维团队、值班经理、CTO</para>
+        /// <para>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警升级策略</para>
+        /// <para>Production Environment Alert Escalation Policy.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

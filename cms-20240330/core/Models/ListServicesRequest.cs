@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return for this request.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. If this parameter is empty, it means you have reached the last page.</para>
+        /// <para>The token for the next query. An empty value indicates the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7-b81a-4bc9-bbfa-a50cc6988667</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>An array of tags.</para>
+        /// <para>The tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

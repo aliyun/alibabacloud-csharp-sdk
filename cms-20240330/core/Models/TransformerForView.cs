@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试处理流</para>
+        /// <para>Test processing flow.</para>
         /// </summary>
         [NameInMap("transformerName")]
         [Validation(Required=false)]

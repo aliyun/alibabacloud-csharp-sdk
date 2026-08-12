@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class BizSourceFilter : TeaModel {
+        /// <summary>
+        /// <para>The exact match value.</para>
+        /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]
         public string Eq { get; set; }

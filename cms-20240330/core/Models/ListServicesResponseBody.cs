@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results returned. The maximum value is 200.</para>
+        /// <para>The maximum number of entries returned. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging token.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of service information.</para>
+        /// <para>The list of service information.</para>
         /// </summary>
         [NameInMap("services")]
         [Validation(Required=false)]
         public List<ListServicesResponseBodyServices> Services { get; set; }
         public class ListServicesResponseBodyServices : TeaModel {
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The service description. This parameter is valid only when serviceType is RUM.</para>
+            /// <para>The service description. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace api monitor test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name. This parameter is valid only when serviceType is RUM.</para>
+            /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ARMS application for backward compatibility.</para>
+            /// <para>The ARMS application ID for backward compatibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kgcsf@192197e828d51aa</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The service status. This parameter is valid only when serviceType is RUM.</para>
+            /// <para>The service status. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66</para>

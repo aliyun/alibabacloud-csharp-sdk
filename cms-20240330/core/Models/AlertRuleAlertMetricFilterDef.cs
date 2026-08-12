@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The display name in Chinese.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>应用状态</para>
+        /// <para>Application Status</para>
         /// </summary>
         [NameInMap("displayNameCn")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The display name in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>在线</para>
+            /// <para>Online</para>
             /// </summary>
             [NameInMap("displayNameCn")]
             [Validation(Required=false)]

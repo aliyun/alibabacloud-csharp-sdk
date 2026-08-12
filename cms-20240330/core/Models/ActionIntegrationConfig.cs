@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ActionIntegrationConfig : TeaModel {
         /// <summary>
-        /// <para>A list of actions to perform.</para>
+        /// <para>The list of action integration IDs.</para>
         /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
         public List<string> Actions { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether action integration is enabled.</para>
+        /// <para>Indicates whether action integration is started.</para>
         /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]

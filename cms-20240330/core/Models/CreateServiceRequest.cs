@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The extended properties.</para>
+        /// <para>The extended attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The application ID. You do not typically need to specify this parameter.</para>
+        /// <para>The application ID. Generally, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bx3udsi5ie@ed2ba6beebdb6de</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service status. Do not specify this parameter when you create a service.</para>
+        /// <para>The service status. You do not need to specify this parameter when creating a service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Created</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>An array of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateServiceRequestTags> Tags { get; set; }
         public class CreateServiceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The <c>key</c> of the tag.</para>
+            /// <para>The tag <c>key</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The <c>value</c> of the tag.</para>
+            /// <para>The tag <c>value</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>已联系运维团队，正在排查问题。</para>
+        /// <para>The operations team has been contacted and is currently investigating the issue.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San.</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

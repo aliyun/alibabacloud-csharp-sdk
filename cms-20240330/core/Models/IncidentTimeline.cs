@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>已通知运维团队进行排查</para>
+        /// <para>The operations team has been notified to investigate.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The timeline title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>已联系运维团队</para>
+        /// <para>The operations team has been contacted.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

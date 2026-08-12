@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Attributes { get; set; }
 
         /// <summary>
-        /// <para>The description of the service. This parameter is valid only when serviceType is set to RUM.</para>
+        /// <para>The service description. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The status of the service. This parameter is valid only when serviceType is set to RUM.</para>
+        /// <para>The service status. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Stopped</para>

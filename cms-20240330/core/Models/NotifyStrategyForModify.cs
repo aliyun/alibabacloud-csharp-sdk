@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>策略名称</para>
+        /// <para>Policy name.</para>
         /// </summary>
         [NameInMap("notifyStrategyName")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service.</para>
+        /// <para>The service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>em87vd@c2e25bcfe0e21ce0***</para>

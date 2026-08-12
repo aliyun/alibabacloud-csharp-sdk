@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content of the event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检测到 RDS 实例 rds-bp1234567890abcdef 的连接数达到 1000，已触发告警。</para>
+        /// <para>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The title of the event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据库连接数过高</para>
+        /// <para>Excessively high database connection count.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

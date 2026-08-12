@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检测到 user-service 实例 i-abc123 的 CPU 使用率达到 95%，已触发告警。</para>
+        /// <para>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户服务 CPU 使用率过高</para>
+        /// <para>User service CPU usage is too high.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description of the plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>针对数据库连接数过高的应急处理方案</para>
+        /// <para>Emergency response plan for excessively high database connection count.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据库连接数告警预案</para>
+        /// <para>Database connection count alert contingency plan.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

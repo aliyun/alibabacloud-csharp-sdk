@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SubscriptionOp : TeaModel {
+        /// <summary>
+        /// <para>The operation type.</para>
+        /// </summary>
         [NameInMap("op")]
         [Validation(Required=false)]
         public string Op { get; set; }
 
         /// <summary>
-        /// <para>create/update 必填</para>
+        /// <para>Required for create and update operations.</para>
         /// </summary>
         [NameInMap("payload")]
         [Validation(Required=false)]
         public SubscriptionForModify Payload { get; set; }
 
         /// <summary>
-        /// <para>update/remove 必填</para>
+        /// <para>Required for update and remove operations.</para>
         /// </summary>
         [NameInMap("uuid")]
         [Validation(Required=false)]

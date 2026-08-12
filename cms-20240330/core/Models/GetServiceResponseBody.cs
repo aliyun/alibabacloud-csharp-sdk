@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// <para>The time when the service was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-13T03:32:55Z</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>demo应用</para>
+            /// <para>Demo application</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ARMS application that is compatible with earlier versions.</para>
+            /// <para>The ARMS application ID for backward compatibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>by6rjzro2j@0fe8dfa799e5906</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The array of tags.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]

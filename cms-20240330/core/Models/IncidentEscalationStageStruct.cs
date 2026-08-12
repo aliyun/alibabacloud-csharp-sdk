@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>负责处理生产环境告警的主负责人</para>
+        /// <para>Primary owner responsible for handling production environment alerts.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>运维团队</para>
+        /// <para>Operations team.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>通知运维团队</para>
+            /// <para>Notify the operations team.</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一阶段</para>
+            /// <para>Phase one.</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>告警升级至运维团队</para>
+            /// <para>Alert escalated to the operations team.</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>夜间值班组</para>
+            /// <para>Night shift duty team.</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

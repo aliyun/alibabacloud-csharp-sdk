@@ -21,48 +21,48 @@ namespace AlibabaCloud.SDK.Cms20240330
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "metrics.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"},
-                {"us-east-1", "metrics.us-east-1.aliyuncs.com"},
-                {"na-south-1", "metrics.na-south-1.aliyuncs.com"},
-                {"me-east-1", "metrics.me-east-1.aliyuncs.com"},
-                {"me-central-1", "metrics.me-central-1.aliyuncs.com"},
-                {"eu-west-2", "metrics.eu-west-2.aliyuncs.com"},
-                {"eu-west-1", "metrics.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "metrics.eu-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"},
-                {"cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing", "metrics.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"},
+                {"cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"},
                 {"ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"},
+                {"cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"},
+                {"cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"},
+                {"cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"},
+                {"cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"},
+                {"cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"},
+                {"cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"},
+                {"cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"},
+                {"cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"},
+                {"cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"},
+                {"us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"},
+                {"eu-west-1", "metrics.eu-west-1.aliyuncs.com"},
+                {"eu-west-2", "metrics.eu-west-2.aliyuncs.com"},
+                {"eu-central-1", "metrics.eu-central-1.aliyuncs.com"},
+                {"us-east-1", "metrics.us-east-1.aliyuncs.com"},
+                {"us-west-1", "metrics.us-west-1.aliyuncs.com"},
+                {"na-south-1", "metrics.na-south-1.aliyuncs.com"},
+                {"me-east-1", "metrics.me-east-1.aliyuncs.com"},
+                {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
+                {"me-central-1", "metrics.me-central-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1824,6 +1824,204 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPipelineResponse
+        /// </returns>
+        public CreateDataPipelineResponse CreateDataPipelineWithOptions(string workspace, CreateDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPipelineResponse
+        /// </returns>
+        public async Task<CreateDataPipelineResponse> CreateDataPipelineWithOptionsAsync(string workspace, CreateDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPipelineResponse
+        /// </returns>
+        public CreateDataPipelineResponse CreateDataPipeline(string workspace, CreateDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDataPipelineWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPipelineResponse
+        /// </returns>
+        public async Task<CreateDataPipelineResponse> CreateDataPipelineAsync(string workspace, CreateDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDataPipelineWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
@@ -3578,7 +3776,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service for application observability.</para>
+        /// <para>Creates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3656,7 +3854,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service for application observability.</para>
+        /// <para>Creates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3734,7 +3932,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service for application observability.</para>
+        /// <para>Creates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +3951,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service for application observability.</para>
+        /// <para>Creates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4226,7 +4424,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
+        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4276,7 +4474,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
+        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4326,7 +4524,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
+        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4345,7 +4543,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
+        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5628,6 +5826,144 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteContextsWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a data pipeline from a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPipelineResponse
+        /// </returns>
+        public DeleteDataPipelineResponse DeleteDataPipelineWithOptions(string workspace, string pipelineName, DeleteDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a data pipeline from a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPipelineResponse
+        /// </returns>
+        public async Task<DeleteDataPipelineResponse> DeleteDataPipelineWithOptionsAsync(string workspace, string pipelineName, DeleteDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a data pipeline from a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPipelineResponse
+        /// </returns>
+        public DeleteDataPipelineResponse DeleteDataPipeline(string workspace, string pipelineName, DeleteDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a data pipeline from a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPipelineResponse
+        /// </returns>
+        public async Task<DeleteDataPipelineResponse> DeleteDataPipelineAsync(string workspace, string pipelineName, DeleteDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDataPipelineWithOptionsAsync(workspace, pipelineName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7176,7 +7512,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Monitoring service.</para>
+        /// <para>Deletes an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7216,7 +7552,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Monitoring service.</para>
+        /// <para>Deletes an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7256,7 +7592,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Monitoring service.</para>
+        /// <para>Deletes an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7275,7 +7611,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Monitoring service.</para>
+        /// <para>Deletes an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10478,6 +10814,144 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and running status of a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataPipelineResponse
+        /// </returns>
+        public GetDataPipelineResponse GetDataPipelineWithOptions(string workspace, string pipelineName, GetDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and running status of a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataPipelineResponse
+        /// </returns>
+        public async Task<GetDataPipelineResponse> GetDataPipelineWithOptionsAsync(string workspace, string pipelineName, GetDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and running status of a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataPipelineResponse
+        /// </returns>
+        public GetDataPipelineResponse GetDataPipeline(string workspace, string pipelineName, GetDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the configuration and running status of a data pipeline in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataPipelineResponse
+        /// </returns>
+        public async Task<GetDataPipelineResponse> GetDataPipelineAsync(string workspace, string pipelineName, GetDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDataPipelineWithOptionsAsync(workspace, pipelineName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a specified dataset.</para>
         /// </summary>
         /// 
@@ -12574,7 +13048,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Application Monitoring service.</para>
+        /// <para>Queries an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12614,7 +13088,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Application Monitoring service.</para>
+        /// <para>Queries an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12654,7 +13128,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Application Monitoring service.</para>
+        /// <para>Queries an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12673,7 +13147,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Application Monitoring service.</para>
+        /// <para>Queries an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15548,6 +16022,164 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListContextStoresWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DataPipelines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPipelinesResponse
+        /// </returns>
+        public ListDataPipelinesResponse ListDataPipelinesWithOptions(string workspace, ListDataPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataPipelines",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataPipelinesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DataPipelines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPipelinesResponse
+        /// </returns>
+        public async Task<ListDataPipelinesResponse> ListDataPipelinesWithOptionsAsync(string workspace, ListDataPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataPipelines",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataPipelinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DataPipelines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPipelinesResponse
+        /// </returns>
+        public ListDataPipelinesResponse ListDataPipelines(string workspace, ListDataPipelinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDataPipelinesWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DataPipelines.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPipelinesResponse
+        /// </returns>
+        public async Task<ListDataPipelinesResponse> ListDataPipelinesAsync(string workspace, ListDataPipelinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDataPipelinesWithOptionsAsync(workspace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18850,7 +19482,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application observability services.</para>
+        /// <para>Queries application observability services in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18922,7 +19554,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application observability services.</para>
+        /// <para>Queries application observability services in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18994,7 +19626,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application observability services.</para>
+        /// <para>Queries application observability services in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19013,7 +19645,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application observability services.</para>
+        /// <para>Queries application observability services in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19680,6 +20312,220 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await OpenCmsServiceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a data pipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewDataPipelineResponse
+        /// </returns>
+        public PreviewDataPipelineResponse PreviewDataPipelineWithOptions(string workspace, PreviewDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTime))
+            {
+                body["fromTime"] = request.FromTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToTime))
+            {
+                body["toTime"] = request.ToTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewDataPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a data pipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewDataPipelineResponse
+        /// </returns>
+        public async Task<PreviewDataPipelineResponse> PreviewDataPipelineWithOptionsAsync(string workspace, PreviewDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTime))
+            {
+                body["fromTime"] = request.FromTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToTime))
+            {
+                body["toTime"] = request.ToTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewDataPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a data pipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewDataPipelineResponse
+        /// </returns>
+        public PreviewDataPipelineResponse PreviewDataPipeline(string workspace, PreviewDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PreviewDataPipelineWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a data pipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewDataPipelineResponse
+        /// </returns>
+        public async Task<PreviewDataPipelineResponse> PreviewDataPipelineAsync(string workspace, PreviewDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PreviewDataPipelineWithOptionsAsync(workspace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21970,6 +22816,204 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateContextStoreWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a specified data pipeline by using a complete candidate configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataPipelineResponse
+        /// </returns>
+        public UpdateDataPipelineResponse UpdateDataPipelineWithOptions(string workspace, string pipelineName, UpdateDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["expectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a specified data pipeline by using a complete candidate configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataPipelineResponse
+        /// </returns>
+        public async Task<UpdateDataPipelineResponse> UpdateDataPipelineWithOptionsAsync(string workspace, string pipelineName, UpdateDataPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["expectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outputs))
+            {
+                body["outputs"] = request.Outputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
+            {
+                body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sinks))
+            {
+                body["sinks"] = request.Sinks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataPipeline",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/datapipeline/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a specified data pipeline by using a complete candidate configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataPipelineResponse
+        /// </returns>
+        public UpdateDataPipelineResponse UpdateDataPipeline(string workspace, string pipelineName, UpdateDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDataPipelineWithOptions(workspace, pipelineName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a DataPipeline.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a specified data pipeline by using a complete candidate configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataPipelineResponse
+        /// </returns>
+        public async Task<UpdateDataPipelineResponse> UpdateDataPipelineAsync(string workspace, string pipelineName, UpdateDataPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDataPipelineWithOptionsAsync(workspace, pipelineName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

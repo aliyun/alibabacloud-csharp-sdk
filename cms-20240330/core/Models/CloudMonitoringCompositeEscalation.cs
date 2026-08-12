@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringCompositeEscalation : TeaModel {
         /// <summary>
-        /// <para>A single entry in the escalation policy. See the <c>CloudMonitoringCompositeEscalationEntry</c> object for details.</para>
+        /// <para>The list of multi-condition configurations.</para>
         /// </summary>
         [NameInMap("escalations")]
         [Validation(Required=false)]
         public List<CloudMonitoringCompositeEscalationEntry> Escalations { get; set; }
 
         /// <summary>
-        /// <para>Specifies the logical relationship for evaluating the conditions of the composite alert rule. Valid values: <c>and</c> and <c>or</c>.</para>
+        /// <para>The logical relationship between conditions (AND/OR).</para>
         /// </summary>
         [NameInMap("relation")]
         [Validation(Required=false)]
         public string Relation { get; set; }
 
         /// <summary>
-        /// <para>Specifies the severity level of the alert. For example: <c>Critical</c>, <c>Warning</c>, and <c>Info</c>.</para>
+        /// <para>The severity level.</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of times the alert conditions must be met to trigger this escalation policy.</para>
+        /// <para>The number of consecutive times the conditions are met before the alert is triggered.</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

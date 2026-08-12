@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The reverse association to SNS (= snsUuid).</para>
+        /// </summary>
         [NameInMap("notifyStrategyUuid")]
         [Validation(Required=false)]
         public string NotifyStrategyUuid { get; set; }
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</para>
+        /// <para>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</para>
         /// </summary>
         [NameInMap("subscribeLegacyEvent")]
         [Validation(Required=false)]

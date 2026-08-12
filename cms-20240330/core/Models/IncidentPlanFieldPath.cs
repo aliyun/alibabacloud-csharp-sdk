@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The field alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>服务名称</para>
+        /// <para>Service name.</para>
         /// </summary>
         [NameInMap("fieldAlias")]
         [Validation(Required=false)]

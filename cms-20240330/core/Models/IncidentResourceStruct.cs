@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境 Web 服务器</para>
+        /// <para>Production environment web server.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

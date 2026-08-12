@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ARMS application for backward compatibility.</para>
+        /// <para>The ARMS application ID for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cwzxvuc6uo@d60088ad4797d26</para>
