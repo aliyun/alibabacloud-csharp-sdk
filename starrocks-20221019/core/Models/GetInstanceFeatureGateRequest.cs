@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class GetInstanceFeatureGateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

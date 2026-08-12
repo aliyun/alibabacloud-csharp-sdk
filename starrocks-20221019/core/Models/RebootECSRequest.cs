@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class RebootECSRequest : TeaModel {
         /// <summary>
+        /// <para>The system event ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8c96a3fc8a0d4a48b5db5fdb9742fbbc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string EventId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The reboot time for the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1772076782</para>
         /// </summary>

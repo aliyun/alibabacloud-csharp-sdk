@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class AddBackupPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The number of days to retain the backup data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? ExpireDays { get; set; }
 
         /// <summary>
+        /// <para>The hour.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Hour { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-0104730e9de40215</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The minute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -42,6 +50,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Minute { get; set; }
 
         /// <summary>
+        /// <para>The recurrence type for the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>DAILY: Daily.</para>
+        /// </description></item>
+        /// <item><description><para>WEEKLY: Weekly.</para>
+        /// </description></item>
+        /// <item><description><para>MONTHLY: Monthly.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MONTHLY</para>
         /// </summary>
@@ -49,11 +67,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string RecurrenceType { get; set; }
 
+        /// <summary>
+        /// <para>The values for the recurrence.</para>
+        /// </summary>
         [NameInMap("RecurrenceValues")]
         [Validation(Required=false)]
         public List<int?> RecurrenceValues { get; set; }
 
         /// <summary>
+        /// <para>The timeout period for the backup job in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyMaintainableTimeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The maintenance window for the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

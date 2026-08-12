@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class AddGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>The number of gateway nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? FeNodeNumber { get; set; }
 
         /// <summary>
+        /// <para>The alias for the private gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eas_automation_test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string GatewayName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
         /// </summary>

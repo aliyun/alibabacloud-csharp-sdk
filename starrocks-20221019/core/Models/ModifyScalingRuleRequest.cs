@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyScalingRuleRequest : TeaModel {
         /// <summary>
+        /// <para>New trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NewTriggerType { get; set; }
 
         /// <summary>
+        /// <para>Compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
+        /// <para>Old trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string OldTriggerType { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,6 +79,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>ID of the scaling rule to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RenewInstanceResponseBodyData Data { get; set; }
         public class RenewInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of order IDs.</para>
+            /// </summary>
             [NameInMap("OrderIds")]
             [Validation(Required=false)]
             public List<string> OrderIds { get; set; }
@@ -20,6 +26,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
         /// </summary>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE74XXX</para>
         /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

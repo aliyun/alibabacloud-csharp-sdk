@@ -19,14 +19,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The list of zones.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAvailableZonesResponseBodyData Data { get; set; }
         public class DescribeAvailableZonesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The official version.</para>
+            /// </summary>
             [NameInMap("OfficialAvailableZones")]
             [Validation(Required=false)]
             public List<string> OfficialAvailableZones { get; set; }
 
+            /// <summary>
+            /// <para>The trial version.</para>
+            /// </summary>
             [NameInMap("TrialAvailableZones")]
             [Validation(Required=false)]
             public List<string> TrialAvailableZones { get; set; }
@@ -34,6 +43,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -42,6 +53,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</para>
         /// </summary>
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP request status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeBackupPoliciesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The policy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bk-policy-26ec5bc0ea67b5ef</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PolicyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

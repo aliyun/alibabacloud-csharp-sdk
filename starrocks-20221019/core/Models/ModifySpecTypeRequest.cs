@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifySpecTypeRequest : TeaModel {
         /// <summary>
+        /// <para>Restart in fast restart mode. Default is false.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Restarts compute nodes in fast restart mode. Nodes restart in parallel within a batch, and batches execute sequentially.</para>
+        /// </description></item>
+        /// <item><description><para>false: Restarts compute nodes in rolling restart mode.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +26,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? FastMode { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +37,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
+        /// <para>Coupon ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
@@ -46,6 +58,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
+        /// <para>Target specifications type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

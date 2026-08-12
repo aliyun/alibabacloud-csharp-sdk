@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         /// <summary>
         /// <para>Specifies whether to query the minor versions that you can upgrade to. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The minor versions that you can upgrade to.</description></item>
-        /// <item><description>false: The major versions that you can upgrade to.</description></item>
+        /// <item><description><para>true: The minor versions that you can upgrade to.</para>
+        /// </description></item>
+        /// <item><description><para>false: The major versions that you can upgrade to.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

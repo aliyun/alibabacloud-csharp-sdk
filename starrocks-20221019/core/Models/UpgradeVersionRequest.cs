@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpgradeVersionRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to perform a fast restart.</para>
+        /// </summary>
         [NameInMap("FastMode")]
         [Validation(Required=false)]
         public bool? FastMode { get; set; }
@@ -25,10 +28,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the minor version is upgraded. Default value: true. Valid values:</para>
+        /// <para>Specifies whether this upgrade is a minor version upgrade. Default value: true.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The minor version is upgraded.</description></item>
-        /// <item><description>false: The major version is upgraded.</description></item>
+        /// <item><description>true: minor version upgrade.</description></item>
+        /// <item><description>false: major engine version upgrade.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Minor { get; set; }
 
         /// <summary>
-        /// <para>The version to which you want to upgrade.</para>
+        /// <para>The target version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

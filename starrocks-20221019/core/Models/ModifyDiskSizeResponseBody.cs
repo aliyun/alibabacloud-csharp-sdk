@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskSizeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the failed permission verification.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24151320976****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>

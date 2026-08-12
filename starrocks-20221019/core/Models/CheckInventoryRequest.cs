@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class CheckInventoryRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;clusterType&quot;: &quot;sr&quot;,
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ClusterInfo { get; set; }
 
         /// <summary>
+        /// <para>Zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>

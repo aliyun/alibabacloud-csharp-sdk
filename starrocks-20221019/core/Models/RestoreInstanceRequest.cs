@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster administrator password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>password_example</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AdminPassword { get; set; }
 
         /// <summary>
+        /// <para>Enable auto-renewal. This parameter applies only when PayType is prePaid. Default: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
+        /// <para>Backup job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bk-adskj23hd9s</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string BackupTaskId { get; set; }
 
         /// <summary>
+        /// <para>Subscription duration. This parameter applies only when PayType is prePaid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>Instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c1</para>
         /// </summary>
@@ -50,6 +60,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>Payment type:
+        /// prePaid for subscription
+        /// postPaid for pay-as-you-go</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prePaid</para>
         /// </summary>
@@ -58,6 +72,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PayType { get; set; }
 
         /// <summary>
+        /// <para>Billing cycle unit. This parameter applies only when PayType is prePaid.
+        /// Month for monthly billing
+        /// Year for yearly billing</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aekzllkih7jqxxx</para>
         /// </summary>
@@ -81,11 +103,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Tag struct.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<RestoreInstanceRequestTags> Tags { get; set; }
         public class RestoreInstanceRequestTags : TeaModel {
             /// <summary>
+            /// <para>Tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dukang-chengdu-sgueg</para>
             /// </summary>
@@ -94,6 +121,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>Tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;reasons\&quot;: [], \&quot;patterns\&quot;: [], \&quot;aggregates\&quot;: [], \&quot;event_statistic\&quot;: {\&quot;statistic\&quot;: {}}}</para>
             /// </summary>
@@ -103,11 +132,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
         }
 
+        /// <summary>
+        /// <para>VSwitch and zone information.</para>
+        /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public List<RestoreInstanceRequestVSwitches> VSwitches { get; set; }
         public class RestoreInstanceRequestVSwitches : TeaModel {
             /// <summary>
+            /// <para>VSwitch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-bp19mlh98tm9teyyd****</para>
             /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string VswId { get; set; }
 
             /// <summary>
+            /// <para>Zone ID of the VSwitch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
             /// </summary>
@@ -126,7 +162,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>vpc ID</para>
+        /// <para>VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1fll2mci6d7pw8m****</para>

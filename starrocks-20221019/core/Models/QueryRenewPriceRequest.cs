@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryRenewPriceRequest : TeaModel {
         /// <summary>
+        /// <para>List of billing instance IDs to renew. Separate multiple IDs with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string BillingInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>Renewal period.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Renewal unit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>Coupon ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_12378dfj6</para>
         /// </summary>

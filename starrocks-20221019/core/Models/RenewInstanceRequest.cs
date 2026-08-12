@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>A comma-separated list of billing instance IDs to renew. Billing instances include clusters and compute groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string BillingInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Duration unit:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid only when payType is PrePaid.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>The coupon ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_12378dfj6</para>
         /// </summary>

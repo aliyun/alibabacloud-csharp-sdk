@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the cluster resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Only instance is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

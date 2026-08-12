@@ -19,15 +19,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryModifyDiskTypePriceResponseBodyData Data { get; set; }
         public class QueryModifyDiskTypePriceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Component prices.</para>
+            /// </summary>
             [NameInMap("ComponentPrices")]
             [Validation(Required=false)]
             public List<QueryModifyDiskTypePriceResponseBodyDataComponentPrices> ComponentPrices { get; set; }
             public class QueryModifyDiskTypePriceResponseBodyDataComponentPrices : TeaModel {
                 /// <summary>
+                /// <para>Resource group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>disk_type</para>
                 /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string ComponentName { get; set; }
 
                 /// <summary>
+                /// <para>Discount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public float? DiscountAmount { get; set; }
 
                 /// <summary>
+                /// <para>Original price.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10923</para>
                 /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public float? OriginalAmount { get; set; }
 
                 /// <summary>
+                /// <para>Final price, which is the original price minus the discount amount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10923</para>
                 /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
+            /// <para>Currency.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
             /// </summary>
@@ -69,11 +85,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            /// <summary>
+            /// <para>Price reduction ratio.</para>
+            /// </summary>
             [NameInMap("DepreciateInfo")]
             [Validation(Required=false)]
             public QueryModifyDiskTypePriceResponseBodyDataDepreciateInfo DepreciateInfo { get; set; }
             public class QueryModifyDiskTypePriceResponseBodyDataDepreciateInfo : TeaModel {
                 /// <summary>
+                /// <para>Price reduction ratio.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -82,6 +103,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public float? CheapRate { get; set; }
 
                 /// <summary>
+                /// <para>Total official website price after reduction.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10923</para>
                 /// </summary>
@@ -90,6 +113,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public float? CheapStandAmount { get; set; }
 
                 /// <summary>
+                /// <para>Display price reduction range.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -98,6 +123,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public bool? IsShow { get; set; }
 
                 /// <summary>
+                /// <para>Original total official website price.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10923</para>
                 /// </summary>
@@ -108,6 +135,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
+            /// <para>Discount amount = original amount - bill payable amount (including coupon deduction amount).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -115,11 +144,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public float? DiscountAmount { get; set; }
 
+            /// <summary>
+            /// <para>Coupon information.</para>
+            /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
             public List<QueryModifyDiskTypePriceResponseBodyDataOptionalPromotions> OptionalPromotions { get; set; }
             public class QueryModifyDiskTypePriceResponseBodyDataOptionalPromotions : TeaModel {
                 /// <summary>
+                /// <para>The description of the coupon.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>youhuiquan_desc</para>
                 /// </summary>
@@ -128,6 +162,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string PromotionDesc { get; set; }
 
                 /// <summary>
+                /// <para>Coupon name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>youhuiquan_promotion_option_id_for_blank</para>
                 /// </summary>
@@ -136,6 +172,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string PromotionName { get; set; }
 
                 /// <summary>
+                /// <para>Coupon ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>youhuiquan_12378dfj6</para>
                 /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
+            /// <para>Original price (original amount) = catalog price × usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10923</para>
             /// </summary>
@@ -153,11 +193,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public float? OriginalAmount { get; set; }
 
+            /// <summary>
+            /// <para>Returned data structure.</para>
+            /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<QueryModifyDiskTypePriceResponseBodyDataRules> Rules { get; set; }
             public class QueryModifyDiskTypePriceResponseBodyDataRules : TeaModel {
                 /// <summary>
+                /// <para>Quantity.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -166,6 +211,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public float? Amount { get; set; }
 
                 /// <summary>
+                /// <para>Rule name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rule-928shy23sa</para>
                 /// </summary>
@@ -174,6 +221,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Rule ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7dsu230ks23</para>
                 /// </summary>
@@ -184,6 +233,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
+            /// <para>Discounted price based on the official website discount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10923</para>
             /// </summary>
@@ -192,6 +243,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public float? StandDiscountPrice { get; set; }
 
             /// <summary>
+            /// <para>Official website discount price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10923</para>
             /// </summary>
@@ -200,6 +253,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public float? StandPrice { get; set; }
 
             /// <summary>
+            /// <para>Amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10923</para>
             /// </summary>
@@ -210,6 +265,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -218,6 +275,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</para>
         /// </summary>
@@ -226,6 +285,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>HTTP request status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -234,6 +295,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE74XXX</para>
         /// </summary>
@@ -242,6 +305,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Is the request successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

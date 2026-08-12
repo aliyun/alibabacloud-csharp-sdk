@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ToggleAutoMinorVersionUpgradeRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable automatic minor version upgrades. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enables automatic upgrades.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables automatic upgrades.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? AutoUpgrade { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

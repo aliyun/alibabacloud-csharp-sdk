@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>[Deprecated] List of configurations to add</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string AddConfigList { get; set; }
 
         /// <summary>
+        /// <para>Additional information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;type\&quot;:\&quot;sas_analysis_online-sas-operation-log-sh-sas-event-rasp\&quot;,\&quot;configItemList\&quot;:[{\&quot;key\&quot;:\&quot;item_level\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]},{\&quot;key\&quot;:\&quot;alert_type\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]}]}]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ConfigList { get; set; }
 
         /// <summary>
+        /// <para>[Deprecated] List of configurations to delete</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string DeleteConfigList { get; set; }
 
         /// <summary>
+        /// <para>Sample ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Reason for modification</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -51,19 +60,30 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>Configurations to add</para>
+        /// </summary>
         [NameInMap("configsToAdd")]
         [Validation(Required=false)]
         public List<InstanceConfigDto> ConfigsToAdd { get; set; }
 
+        /// <summary>
+        /// <para>Configurations to delete</para>
+        /// </summary>
         [NameInMap("configsToDelete")]
         [Validation(Required=false)]
         public List<InstanceConfigDto> ConfigsToDelete { get; set; }
 
+        /// <summary>
+        /// <para>Configurations to update</para>
+        /// </summary>
         [NameInMap("configsToUpdate")]
         [Validation(Required=false)]
         public List<InstanceConfigDto> ConfigsToUpdate { get; set; }
 
         /// <summary>
+        /// <para>Whether to restart quickly</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -72,6 +92,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? FastMode { get; set; }
 
         /// <summary>
+        /// <para>Whether to restart.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

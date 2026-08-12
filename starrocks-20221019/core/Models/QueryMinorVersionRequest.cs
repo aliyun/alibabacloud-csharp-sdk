@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryMinorVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The major version of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3.3</para>
         /// </summary>

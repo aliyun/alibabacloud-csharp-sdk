@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class CreateScalingRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
+        /// <para>The rule content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +57,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>The trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

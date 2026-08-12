@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeBackupPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>AccessDeniedDetail</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>Information about the instance.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeBackupPoliciesResponseBodyData> Data { get; set; }
         public class DescribeBackupPoliciesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of days to retain backup data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ExpireDays { get; set; }
 
             /// <summary>
+            /// <para>The hour.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Hour { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>c-96f3bc7f04b2****</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The minute.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Minute { get; set; }
 
             /// <summary>
+            /// <para>The backup policy ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -63,11 +76,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string PolicyId { get; set; }
 
+            /// <summary>
+            /// <para>The numeric values for the policy execution cycle.</para>
+            /// </summary>
             [NameInMap("RecurrenceValues")]
             [Validation(Required=false)]
             public List<int?> RecurrenceValues { get; set; }
 
             /// <summary>
+            /// <para>The timeout period for the backup job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3600</para>
             /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -86,6 +106,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</para>
         /// </summary>
@@ -94,6 +116,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -102,6 +126,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>
         /// </summary>
@@ -110,6 +136,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -118,6 +146,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

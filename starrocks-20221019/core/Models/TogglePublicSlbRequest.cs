@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class TogglePublicSlbRequest : TeaModel {
         /// <summary>
+        /// <para>Is Internet-facing SLB enabled?</para>
+        /// <list type="bullet">
+        /// <item><description><para>Enable: true</para>
+        /// </description></item>
+        /// <item><description><para>Disable: false</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? EnablePublicSlb { get; set; }
 
         /// <summary>
+        /// <para>Private gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-0002xci9buu68ongixvk</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
         /// </summary>

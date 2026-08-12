@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The warehouse ID.</para>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,16 +31,28 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The decommission concurrency for BE scale-in scenarios in compute-storage decoupled architecture. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Parallelism")]
         [Validation(Required=false)]
         public int? Parallelism { get; set; }
 
+        /// <summary>
+        /// <para>The coupon ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes to which you want to change to.</para>
+        /// <para>The target number of nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +62,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public int? Target { get; set; }
 
+        /// <summary>
+        /// <para>The duration to wait for running tasks to complete before dropping nodes during CN scale-in scenarios in storage-compute disaggregation architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("TerminationGracePeriodSeconds")]
         [Validation(Required=false)]
         public int? TerminationGracePeriodSeconds { get; set; }

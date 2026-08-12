@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryModifyDiskTypePriceRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
+        /// <para>Coupon ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_12378dfj6</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
+        /// <para>Target disk type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string TargetDiskType { get; set; }
 
         /// <summary>
+        /// <para>Target disk performance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The warehouse ID.</para>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,14 +36,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The disk performance level to which you want to change.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>pl0</description></item>
-        /// <item><description>pl1</description></item>
-        /// <item><description>pl2</description></item>
-        /// <item><description>pl3</description></item>
-        /// </list>
+        /// <para>The target disk performance level.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

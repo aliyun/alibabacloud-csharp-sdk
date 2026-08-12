@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpdateNodeGroupDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the compute group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>okcc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the compute group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ng-3d5ce6454354****</para>
         /// </summary>
@@ -25,6 +29,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The RAM authorization information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Optional</para>
+        /// </summary>
         [NameInMap("X-Acs-Ram-Auth-Context")]
         [Validation(Required=false)]
         public string XAcsRamAuthContext { get; set; }

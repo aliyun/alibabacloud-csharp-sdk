@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeTimeTriggerScalingRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeTimeTriggerScalingRulesResponseBodyData> Data { get; set; }
         public class DescribeTimeTriggerScalingRulesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of elastic nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string NodeNumber { get; set; }
 
+            /// <summary>
+            /// <para>The scale-in rule.</para>
+            /// </summary>
             [NameInMap("ScalingInRule")]
             [Validation(Required=false)]
             public DescribeTimeTriggerScalingRulesResponseBodyDataScalingInRule ScalingInRule { get; set; }
             public class DescribeTimeTriggerScalingRulesResponseBodyDataScalingInRule : TeaModel {
                 /// <summary>
+                /// <para>The day of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Day { get; set; }
 
                 /// <summary>
+                /// <para>The hour of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Hour { get; set; }
 
                 /// <summary>
+                /// <para>The minute of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Minute { get; set; }
 
                 /// <summary>
+                /// <para>The month of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -66,6 +84,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Month { get; set; }
 
                 /// <summary>
+                /// <para>The trigger interval. Its meaning depends on the RecurrenceType value:</para>
+                /// <list type="bullet">
+                /// <item><description><para>DAILY: The interval in days.</para>
+                /// </description></item>
+                /// <item><description><para>WEEKLY: The interval in weeks.</para>
+                /// </description></item>
+                /// <item><description><para>MONTHLY: The interval in months.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WEEKLY</para>
                 /// </summary>
@@ -74,6 +102,18 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? RecurrenceInterval { get; set; }
 
                 /// <summary>
+                /// <para>The trigger method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>ONCE: One-time</para>
+                /// </description></item>
+                /// <item><description><para>DAILY: Daily</para>
+                /// </description></item>
+                /// <item><description><para>WEEKLY: Weekly</para>
+                /// </description></item>
+                /// <item><description><para>MONTHLY: Monthly</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ONCE</para>
                 /// </summary>
@@ -81,11 +121,18 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 [Validation(Required=false)]
                 public string RecurrenceType { get; set; }
 
+                /// <summary>
+                /// <para>The trigger values. Their meaning depends on the RecurrenceType value:</para>
+                /// <para>-WEEKLY: The days of the week for execution.</para>
+                /// <para>-MONTHLY: The days of the month for execution.</para>
+                /// </summary>
                 [NameInMap("RecurrenceValues")]
                 [Validation(Required=false)]
                 public List<string> RecurrenceValues { get; set; }
 
                 /// <summary>
+                /// <para>The second of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
                 /// </summary>
@@ -94,6 +141,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Second { get; set; }
 
                 /// <summary>
+                /// <para>The year of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025</para>
                 /// </summary>
@@ -103,11 +152,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
             }
 
+            /// <summary>
+            /// <para>The scale-out rule.</para>
+            /// </summary>
             [NameInMap("ScalingOutRule")]
             [Validation(Required=false)]
             public DescribeTimeTriggerScalingRulesResponseBodyDataScalingOutRule ScalingOutRule { get; set; }
             public class DescribeTimeTriggerScalingRulesResponseBodyDataScalingOutRule : TeaModel {
                 /// <summary>
+                /// <para>The day of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -116,6 +170,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Day { get; set; }
 
                 /// <summary>
+                /// <para>The hour of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -124,6 +180,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Hour { get; set; }
 
                 /// <summary>
+                /// <para>The minute of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
                 /// </summary>
@@ -132,6 +190,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Minute { get; set; }
 
                 /// <summary>
+                /// <para>The month of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -140,6 +200,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Month { get; set; }
 
                 /// <summary>
+                /// <para>The trigger interval. Its meaning depends on the RecurrenceType value:</para>
+                /// <list type="bullet">
+                /// <item><description><para>DAILY: The interval in days.</para>
+                /// </description></item>
+                /// <item><description><para>WEEKLY: The interval in weeks.</para>
+                /// </description></item>
+                /// <item><description><para>MONTHLY: The interval in months.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -148,6 +218,18 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? RecurrenceInterval { get; set; }
 
                 /// <summary>
+                /// <para>The trigger method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>ONCE: One-time</para>
+                /// </description></item>
+                /// <item><description><para>DAILY: Daily</para>
+                /// </description></item>
+                /// <item><description><para>WEEKLY: Weekly</para>
+                /// </description></item>
+                /// <item><description><para>MONTHLY: Monthly</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ONCE</para>
                 /// </summary>
@@ -155,11 +237,18 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 [Validation(Required=false)]
                 public string RecurrenceType { get; set; }
 
+                /// <summary>
+                /// <para>The trigger values. Their meaning depends on the RecurrenceType value:</para>
+                /// <para>-WEEKLY: The days of the week for execution.</para>
+                /// <para>-MONTHLY: The days of the month for execution.</para>
+                /// </summary>
                 [NameInMap("RecurrenceValues")]
                 [Validation(Required=false)]
                 public List<string> RecurrenceValues { get; set; }
 
                 /// <summary>
+                /// <para>The second of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -168,6 +257,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
                 public int? Second { get; set; }
 
                 /// <summary>
+                /// <para>The year of the execution time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024</para>
                 /// </summary>
@@ -178,6 +269,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
+            /// <para>The ID of the scaling rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>r-d1775b776110****</para>
             /// </summary>
@@ -186,6 +279,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ScalingRuleId { get; set; }
 
             /// <summary>
+            /// <para>The name of the Auto Scaling policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>scale-test1</para>
             /// </summary>
@@ -194,6 +289,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ScalingRuleName { get; set; }
 
             /// <summary>
+            /// <para>The current status of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>INACTIVE: The rule is not triggered.</para>
+            /// </description></item>
+            /// <item><description><para>ACTIVE: The rule is triggered.</para>
+            /// </description></item>
+            /// <item><description><para>DISABLED: The rule is disabled due to an overdue payment.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>INACTIVE</para>
             /// </summary>
@@ -204,6 +309,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -212,6 +319,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
         /// </summary>
@@ -220,6 +329,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -228,6 +339,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>
         /// </summary>
@@ -236,6 +349,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

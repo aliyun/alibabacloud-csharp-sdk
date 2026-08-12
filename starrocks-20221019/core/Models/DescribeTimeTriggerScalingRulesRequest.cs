@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeTimeTriggerScalingRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the compute group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ng-d332aa8bca48****</para>
         /// </summary>

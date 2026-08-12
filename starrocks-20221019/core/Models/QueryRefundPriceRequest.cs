@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryRefundPriceRequest : TeaModel {
         /// <summary>
+        /// <para>A comma-separated list of instance IDs to cancel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ng-1syeu23,ng-81293sa</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string BillingInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. This field is deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-82su12s0kl12</para>
         /// </summary>

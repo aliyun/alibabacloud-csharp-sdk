@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeInstanceDiagnosisResultRequest : TeaModel {
         /// <summary>
+        /// <para>Evaluation dimension.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table_analysis</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string Dimension { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-b25e21e24388****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number for paged queries. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of authorized entries displayed per page for paged queries. The default value is 10, and the maximum value is 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Report time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-03-08</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ReportDate { get; set; }
 
         /// <summary>
+        /// <para>Status collection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>healthy</para>
         /// </summary>

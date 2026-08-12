@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UnTagResourcesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to remove all tags from the resources. This parameter is valid only when the TagKey parameter is left empty. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>A list of resource IDs. The list can contain up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +49,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>A list of tag keys to remove. The list can contain up to 20 tag keys.</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKeyShrink { get; set; }

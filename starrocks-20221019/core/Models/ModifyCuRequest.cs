@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyCuRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to restart the instance in fast restart mode. The default value is false.</para>
         /// <list type="bullet">
-        /// <item><description>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</description></item>
-        /// <item><description>false: Compute nodes are restarted in rolling restart mode.</description></item>
+        /// <item><description><para>true: Restarts the compute nodes in fast restart mode. The compute nodes are restarted in batches. Nodes within a batch are restarted in parallel, and batches are processed sequentially.</para>
+        /// </description></item>
+        /// <item><description><para>false: Restarts the compute nodes in rolling restart mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The warehouse ID.</para>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,15 +52,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The number of CUs to which you want to change.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>4</description></item>
-        /// <item><description>8</description></item>
-        /// <item><description>16</description></item>
-        /// <item><description>32</description></item>
-        /// <item><description>64</description></item>
-        /// </list>
+        /// <para>The target number of CUs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

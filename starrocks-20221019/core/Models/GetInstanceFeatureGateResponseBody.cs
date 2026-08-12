@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class GetInstanceFeatureGateResponseBody : TeaModel {
         /// <summary>
-        /// <para>AccessDeniedDetail</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetInstanceFeatureGateResponseBodyData Data { get; set; }
         public class GetInstanceFeatureGateResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Whether the restart process can be controlled from the console.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? ConsoleControlRestart { get; set; }
 
             /// <summary>
+            /// <para>Whether materialized views can be managed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? EnableManageMv { get; set; }
 
             /// <summary>
+            /// <para>Whether managed security groups are supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? FullManagedSecurityGroup { get; set; }
 
             /// <summary>
+            /// <para>Whether DLF meta tokens can be mounted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -55,11 +66,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public bool? MountDlfMetaToken { get; set; }
 
+            /// <summary>
+            /// <para>A list of new configuration types.</para>
+            /// </summary>
             [NameInMap("SupportAddConfigTypes")]
             [Validation(Required=false)]
             public List<string> SupportAddConfigTypes { get; set; }
 
             /// <summary>
+            /// <para>Whether data backup is supported.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: Supports data backup.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Does not support data backup.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -68,6 +90,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportBackup { get; set; }
 
             /// <summary>
+            /// <para>Whether agents can be created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -76,6 +100,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportCreateAgent { get; set; }
 
             /// <summary>
+            /// <para>Whether compute groups with specifications other than <c>standard</c> can be created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -84,6 +110,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportCreateNonStandardNodeGroup { get; set; }
 
             /// <summary>
+            /// <para>Whether elastic ephemeral disks are supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -92,6 +120,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportEed { get; set; }
 
             /// <summary>
+            /// <para>Whether the AI function is supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -100,6 +130,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportEnableAi { get; set; }
 
             /// <summary>
+            /// <para>Whether SSL can be enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -108,6 +140,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportEnableSSL { get; set; }
 
             /// <summary>
+            /// <para>Whether fast restart is supported for configuration changes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportFastModeModifyConfig { get; set; }
 
             /// <summary>
+            /// <para>Whether resources can be modified by using fast restart.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportFastModeModifyResource { get; set; }
 
             /// <summary>
+            /// <para>Whether fast restart is supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -132,6 +170,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportFastRestart { get; set; }
 
             /// <summary>
+            /// <para>Whether the FE gateway is supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -140,6 +180,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportFeGateway { get; set; }
 
             /// <summary>
+            /// <para>Whether custom domain names are supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -148,6 +190,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportHostAlias { get; set; }
 
             /// <summary>
+            /// <para>Whether the time zone can be modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -156,6 +200,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportModifyTimezone { get; set; }
 
             /// <summary>
+            /// <para>Whether observers can be deployed across multiple availability zones (AZs).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -164,6 +210,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportMultiAZ { get; set; }
 
             /// <summary>
+            /// <para>Whether the instance uses compute nodes (CNs).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -176,7 +224,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? SupportCompactionService { get; set; }
 
             /// <summary>
-            /// <para>是否支持Compaction Service白名单功能</para>
+            /// <para>Whether the Compaction Service allowlist feature is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -188,6 +236,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -196,6 +246,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
         /// </summary>
@@ -204,6 +256,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -212,6 +266,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B67D142D-D54E-184F-A306-22BDC01B2XXX</para>
         /// </summary>
@@ -220,6 +276,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -228,6 +286,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

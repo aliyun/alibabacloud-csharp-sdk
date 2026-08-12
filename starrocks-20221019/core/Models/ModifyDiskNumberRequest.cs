@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskNumberRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to restart the compute nodes in fast mode. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</description></item>
-        /// <item><description>false: Compute nodes are restarted in rolling restart mode.</description></item>
+        /// <item><description><para>true: Restarts the compute nodes in fast mode. The nodes are restarted in batches. Nodes within a batch are restarted in parallel, and the batches are processed sequentially.</para>
+        /// </description></item>
+        /// <item><description><para>false: Restarts the compute nodes in rolling restart mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The warehouse ID.</para>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The number of disks to which you want to change to.</para>
+        /// <para>The target number of disks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

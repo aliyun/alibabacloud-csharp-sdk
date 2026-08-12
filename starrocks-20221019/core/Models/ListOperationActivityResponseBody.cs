@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ListOperationActivityResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the permission verification failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListOperationActivityResponseBodyData> Data { get; set; }
         public class ListOperationActivityResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The activity ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ac-8f3f7c4026e3****</para>
             /// </summary>
@@ -30,6 +37,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ActivityId { get; set; }
 
             /// <summary>
+            /// <para>The activity status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>COMPLETED</description></item>
+            /// <item><description>RUNNING</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
             /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ConsoleRetryCount { get; set; }
 
             /// <summary>
+            /// <para>The end time of the activity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1742178604000</para>
             /// </summary>
@@ -54,6 +69,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ErrMessage { get; set; }
 
             /// <summary>
+            /// <para>The activity name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UpdateClusterStatusToModifyingConfigStatus</para>
             /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The start time of the activity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1742178604000</para>
             /// </summary>
@@ -72,6 +91,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
         /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>
         /// </summary>
@@ -104,6 +131,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -112,6 +141,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of query results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>440</para>
         /// </summary>

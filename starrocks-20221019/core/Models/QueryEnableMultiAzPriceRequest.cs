@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryEnableMultiAzPriceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-8dsy12g*****</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of observers.</para>
+        /// </summary>
         [NameInMap("observers")]
         [Validation(Required=false)]
         public List<QueryEnableMultiAzPriceRequestObservers> Observers { get; set; }
         public class QueryEnableMultiAzPriceRequestObservers : TeaModel {
             /// <summary>
+            /// <para>The vSwitch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-9sdur12t27s</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string VswId { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-h</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The coupon.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_12378dfj6</para>
         /// </summary>

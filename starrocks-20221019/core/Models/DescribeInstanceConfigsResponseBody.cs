@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class DescribeInstanceConfigsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the access denied error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceConfigsResponseBodyData> Data { get; set; }
         public class DescribeInstanceConfigsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the configuration item can be modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string AllowModify { get; set; }
 
             /// <summary>
+            /// <para>The key of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enable_udf</para>
             /// </summary>
@@ -38,6 +47,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ConfigKey { get; set; }
 
             /// <summary>
+            /// <para>The type of the configuration item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>FE</para>
+            /// </description></item>
+            /// <item><description><para>BE</para>
+            /// </description></item>
+            /// <item><description><para>CORE</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>FE</para>
             /// </summary>
@@ -46,6 +65,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ConfigType { get; set; }
 
             /// <summary>
+            /// <para>The value of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -54,6 +75,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ConfigValue { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the item is a custom configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -62,6 +85,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? Custom { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether it is the default compute group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? DefaultNodeGroup { get; set; }
 
             /// <summary>
+            /// <para>The default value of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -77,11 +104,19 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string DefaultValue { get; set; }
 
+            /// <summary>
+            /// <para>The description of the configuration item\&quot;s feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Whether to enable UDF.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The English description of the configuration item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A boolean value to control whether to enable the synchronization of the tablet metadata. true indicates enabling synchronization, and false indicates disabling it.</para>
             /// </summary>
@@ -90,6 +125,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string DescriptionEn { get; set; }
 
             /// <summary>
+            /// <para>The compute group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ng-3d5ce6454354****</para>
             /// </summary>
@@ -98,6 +135,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string NodeGroupId { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ng_1</para>
             /// </summary>
@@ -106,6 +145,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string NodeGroupName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the instance needs to be restarted after the configuration item is changed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Restart.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Do not restart.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -114,6 +161,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? Restart { get; set; }
 
             /// <summary>
+            /// <para>The unit of the configuration item. An empty string is returned if no unit is available.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>s</para>
             /// </summary>
@@ -122,6 +171,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Unit { get; set; }
 
             /// <summary>
+            /// <para>The value range of the configuration item. An empty string is returned if no value range is available.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true,false</para>
             /// </summary>
@@ -130,6 +181,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ValueRange { get; set; }
 
             /// <summary>
+            /// <para>The data type of the configuration item\&quot;s value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>INT</para>
             /// </summary>
@@ -140,6 +193,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParams</para>
         /// </summary>
@@ -148,6 +203,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid params: [instance not exists].</para>
         /// </summary>
@@ -156,6 +213,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP request status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -164,6 +223,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32A44F0D-BFF6-5664-999A-218BBDE7****</para>
         /// </summary>
@@ -172,6 +233,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -180,6 +243,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of query results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

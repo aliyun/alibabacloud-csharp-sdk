@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpdateBackupPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>Validity period in days.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? ExpireDays { get; set; }
 
         /// <summary>
+        /// <para>Trigger time: hour.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Hour { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-0104730e9de40215</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Trigger time: minute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Minute { get; set; }
 
         /// <summary>
+        /// <para>Backup policy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bk-9812023</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>Numerical values for the policy execution cycle.</para>
+        /// </summary>
         [NameInMap("RecurrenceValues")]
         [Validation(Required=false)]
         public List<int?> RecurrenceValues { get; set; }
 
         /// <summary>
+        /// <para>Timeout duration for the backup policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>

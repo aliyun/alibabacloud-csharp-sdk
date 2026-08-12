@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpdateInnerIpWhitelistGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The list of CIDR blocks for the whitelist.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CidrIpList")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public List<string> CidrIpList { get; set; }
 
         /// <summary>
+        /// <para>The ID of the private network whitelist group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InnerIpWhitelistGroupId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

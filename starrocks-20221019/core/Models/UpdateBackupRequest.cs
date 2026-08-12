@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class UpdateBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region where the cluster is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the backup job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bk-t1232839</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string BackupTaskId { get; set; }
 
         /// <summary>
+        /// <para>The description of the backup.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>backupTask-desc1</para>
         /// </summary>

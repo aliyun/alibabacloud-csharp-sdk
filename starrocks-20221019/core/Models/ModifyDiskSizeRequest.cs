@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public bool? FastMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The warehouse ID.</para>
+        /// <para>The ID of the compute group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The disk size to which you want to change to. Unit: GB.</para>
+        /// <para>The target disk size. Unit: GB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
