@@ -9,14 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterRuleRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>[Deprecated] The ID of the hybrid cloud cluster.</para>
+        /// <para><b>[Deprecated]</b> The ID of the hybrid cloud cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10*</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? ClusterId { get; set; }
 
         /// <summary>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query instance ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,17 +76,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The traffic redirection rule configuration.</para>
         /// <para><notice>The mode cannot be modified.</notice></para>
         /// <list type="bullet">
-        /// <item><description><b>check_mode</b>: The mode. Valid values:<list type="bullet">
+        /// <item><description><b>check_mode</b>: the mode. Valid values:<list type="bullet">
         /// <item><description><b>all</b>: full traffic redirection.</description></item>
         /// <item><description><b>part</b>: partial traffic redirection.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>type</b>: The rule matching type. Valid values:<list type="bullet">
+        /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
         /// <item><description><b>exact</b>: exact match.</description></item>
         /// <item><description><b>regex</b>: regular expression.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>substance</b>: The rule value.</description></item>
+        /// <item><description><b>substance</b>: the rule value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,8 +110,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RuleStatus { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>[Deprecated] The rule type. Valid values:</para>
+        /// <para><b>[Deprecated]</b> The rule type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>pullin</b>: traffic redirection configuration.</description></item>
         /// </list>
@@ -118,6 +123,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("RuleType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string RuleType { get; set; }
 
     }

@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the protection rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>template</b> (default): a template protection rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>resource</b>: a rule that is configured for a protected object.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the protection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>
@@ -26,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -56,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -77,12 +71,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The new status of the protection rule. Valid values:</para>
+        /// <para>The status of the protection rule to set. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: disabled</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: enabled</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Disabled.  </description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template.</para>
+        /// <para>The ID of the protection rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7239</para>

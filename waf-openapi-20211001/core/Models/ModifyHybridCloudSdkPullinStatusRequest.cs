@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudSdkPullinStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to view the current WAF instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SDK.</para>
+        /// <para>The machine identifier (MID). You can call the <a href="https://help.aliyun.com/document_detail/2982006.html">DescribeHybridCloudSdkServers</a> operation to query the hybrid cloud SDK list and obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Mid { get; set; }
 
         /// <summary>
-        /// <para>The status of traffic redirection. Valid values of the parameter:</para>
+        /// <para>The traffic redirection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enable</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: Disable</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

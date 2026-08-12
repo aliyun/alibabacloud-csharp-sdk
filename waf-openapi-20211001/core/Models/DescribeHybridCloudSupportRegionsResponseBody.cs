@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of regions that are supported for hybrid cloud access.</para>
+        /// <para>The list of supported regions.</para>
         /// </summary>
         [NameInMap("SupportRegions")]
         [Validation(Required=false)]

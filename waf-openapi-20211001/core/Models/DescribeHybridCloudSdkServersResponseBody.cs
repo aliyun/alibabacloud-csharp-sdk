@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudSdkServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600F008-2E76-5D0B-BC76-EFBD****6D</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the hybrid cloud SDK servers.</para>
+        /// <para>The SDK information.</para>
         /// </summary>
         [NameInMap("SdkServers")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudSdkServersResponseBodySdkServers> SdkServers { get; set; }
         public class DescribeHybridCloudSdkServersResponseBodySdkServers : TeaModel {
             /// <summary>
-            /// <para>The name of the hybrid cloud cluster to which the SDK server belongs.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testcluster</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The time when the hybrid cloud SDK server was created. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The timestamp when the entry was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621428205000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The hostname of the hybrid cloud SDK server.</para>
+            /// <para>The hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qsh5-sec-8-fedd**005</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the hybrid cloud SDK server.</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SDK server.</para>
+            /// <para>The machine identifier (MID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>b11327c21790846374051d5d**83c</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Mid { get; set; }
 
             /// <summary>
-            /// <para>The address of the protection group associated with the SDK server.</para>
+            /// <para>The IP address of the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -87,12 +87,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ProtectionGroupAddress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether traffic redirection is enabled. Valid values:</para>
+            /// <para>The traffic redirection status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: Traffic redirection is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: Traffic redirection is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: enabled.</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string PullinStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-antifaud-2.jqt.wafqax.top-waf</para>
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the hybrid cloud SDK server.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the hybrid cloud SDK server was last updated. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The timestamp when the entry was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719489906000</para>
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of hybrid cloud SDK servers returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

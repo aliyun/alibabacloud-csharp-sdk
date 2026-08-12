@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudSdkServersRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the hybrid cloud cluster that you want to query.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testcluster</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the hybrid cloud SDK server that you want to query.</para>
+        /// <para>The hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online-***wwq</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the hybrid cloud SDK server that you want to query.</para>
+        /// <para>The device IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.*.*1。</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

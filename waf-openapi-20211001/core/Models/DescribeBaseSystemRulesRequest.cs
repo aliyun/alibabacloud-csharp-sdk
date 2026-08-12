@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <item><description><b>protocol_violation</b>: protocol violation.</description></item>
         /// <item><description><b>scanner_behavior</b>: scanner behavior.</description></item>
         /// <item><description><b>logic_flaw</b>: business logic bug.</description></item>
-        /// <item><description><b>arbitrary_file_reading</b>: arbitrary file reading.</description></item>
+        /// <item><description><b>arbitrary_file_reading</b>: arbitrary file read.</description></item>
         /// <item><description><b>arbitrary_file_download</b>: arbitrary file download.</description></item>
         /// <item><description><b>xxe</b>: XML external entity injection.</description></item>
         /// <item><description><b>csrf</b>: cross-site request forgery.</description></item>
-        /// <item><description><b>crlf</b>: CRLF.</description></item>
+        /// <item><description><b>crlf</b>: CRLF injection.</description></item>
         /// <item><description><b>other</b>: other.</description></item>
         /// </list>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the returned rule content. Valid values:</para>
+        /// <para>The language of the returned rules. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page. For more information about paging, see the PageSize parameter.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: 100, which indicates 100 entries per page. For more information about paging, see the PageNumber parameter.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 100. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -121,13 +121,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>super_strict</b>: Super strict.</para>
+        /// <item><description><para><b>super_strict</b>: super strict.</para>
         /// </description></item>
-        /// <item><description><para><b>strict</b>: Strict.</para>
+        /// <item><description><para><b>strict</b>: strict.</para>
         /// </description></item>
-        /// <item><description><para><b>medium</b>: Medium.</para>
+        /// <item><description><para><b>medium</b>: medium.</para>
         /// </description></item>
-        /// <item><description><para><b>loose</b>: Loose.</para>
+        /// <item><description><para><b>loose</b>: loose.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -184,8 +184,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Disabled.</description></item>
-        /// <item><description><b>0</b>: Enabled.</description></item>
+        /// <item><description><b>1</b>: disabled.</description></item>
+        /// <item><description><b>0</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,8 +199,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The ID of the protection template.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify this parameter to query the system protection rules in a specific Web core protection rule template.</description></item>
-        /// <item><description>If this parameter is left empty, the default settings of system protection rules are queried.</description></item>
+        /// <item><description>You can set this parameter to query the system protection rules in a specific Web core protection rule template. Settings apply to the specified template.</description></item>
+        /// <item><description>If this parameter is left empty, the default configurations of system protection rules are queried.</description></item>
         /// </list>
         /// </remarks>
         /// 

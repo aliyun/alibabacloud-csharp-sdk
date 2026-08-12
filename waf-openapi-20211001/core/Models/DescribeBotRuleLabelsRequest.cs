@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LabelType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, this field has a return value.</para>
+        /// <para>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The bot management protection scenario type.</para>
+        /// <para>The type of bot management protection scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>

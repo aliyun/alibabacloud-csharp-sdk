@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudBasicMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of basic monitoring metrics.</para>
+        /// <para>The list of basic monitoring items.</para>
         /// </summary>
         [NameInMap("BasicMonitors")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <list type="bullet">
             /// <item><description><para><b>normal</b>: Normal.</para>
             /// </description></item>
-            /// <item><description><para>\<em>\</em>\<em>\</em>: Abnormal.</para>
+            /// <item><description><para><c>****</c>: abnormal (four asterisk characters are returned).</para>
             /// </description></item>
             /// </list>
             /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Levle { get; set; }
 
             /// <summary>
-            /// <para>The metric. Valid values:</para>
+            /// <para>The monitoring item. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>basic_monitor_cpu_usage</b>: CPU.</para>
             /// </description></item>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MonitorName { get; set; }
 
             /// <summary>
-            /// <para>The usage percentage.</para>
+            /// <para>The usage ratio.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5.905694</para>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("UseRatio")]
             [Validation(Required=false)]
@@ -72,9 +72,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. No meaningful data is returned.</para>
+        /// <para>This parameter is deprecated and no longer returns meaningful data.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,6 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? TotalCount { get; set; }
 
     }

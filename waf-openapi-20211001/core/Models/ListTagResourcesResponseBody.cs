@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that is used to start the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource list.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. ALIYUN::WAF::DEFENSERESOURCE is returned.</para>
+            /// <para>The resource type. Fixed value: ALIYUN::WAF::DEFENSERESOURCE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::WAF::DEFENSERESOURCE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TayValue1</para>

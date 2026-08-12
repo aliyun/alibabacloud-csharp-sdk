@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserLogFieldConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The additional log fields that are added to the default configuration. Multiple fields are separated by commas (,) in the <c>a,b,c,...</c> format.</para>
+        /// <para>The list of log fields that are configured in addition to the default log fields, in the format of &quot;a,b,c,...&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl_action,acl_rule_id</para>
@@ -22,14 +22,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the log field configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>initial</b>: The log field configuration is being initialized.</para>
-        /// </description></item>
-        /// <item><description><para><b>updating</b>: The log field configuration is being updated.</para>
-        /// </description></item>
-        /// <item><description><para><b>failed_finished</b>: The log field configuration update failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>success_finished</b>: The log field configuration update succeeded.</para>
-        /// </description></item>
+        /// <item><description><b>initial</b>: The configuration is in the initialization state.</description></item>
+        /// <item><description><b>updating</b>: The configuration is being updated.</description></item>
+        /// <item><description><b>failed_finished</b>: The configuration failed.</description></item>
+        /// <item><description><b>success_finished</b>: The configuration succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ConfigStatus { get; set; }
 
         /// <summary>
-        /// <para>The default log fields that are excluded from the log delivery configuration. Multiple fields are separated by commas (,) in the <c>a,b,c,...</c> format.</para>
+        /// <para>The list of log fields that are excluded from the default log fields, in the format of &quot;a,b,c,...&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_rule_id,waf_rule_type</para>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DelList { get; set; }
 
         /// <summary>
-        /// <para>The log delivery type. Valid values:</para>
+        /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sls</b>: Simple Log Service.</description></item>
         /// </list>
@@ -63,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The extended configuration for log delivery. The value is a JSON-formatted string that contains configuration key-value pairs, such as custom request headers.</para>
+        /// <para>The extended configuration for log delivery. The value is a string converted from a JSON object constructed with a series of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the <b>ExtendConfig</b> parameter description in <a href="~~ModifyUserLogFieldConfig~~">ModifyUserLogFieldConfig</a>.</para>
+        /// <para>For more information about the parameters, see the <b>ExtendConfig</b> parameter description in the <a href="~~ModifyUserLogFieldConfig~~">ModifyUserLogFieldConfig</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ExtendConfig { get; set; }
 
         /// <summary>
-        /// <para>The complete list of log fields that are delivered. Multiple fields are separated by commas (,) in the <c>a,b,c,...</c> format.</para>
+        /// <para>The list of log fields to be delivered, in the format of &quot;a,b,c,...&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account,acl_action,acl_rule_id,acl_rule_type</para>
@@ -86,9 +82,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string FieldList { get; set; }
 
         /// <summary>
-        /// <para>The log delivery policies. Multiple policies are supported. The value is a JSON-formatted string that contains an array of policy objects.</para>
+        /// <para>The log delivery strategy. Multiple strategies are supported. The value is a string converted from a JSON array constructed with a series of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the <b>LogDeliveryStrategy</b> parameter description in <a href="~~ModifyUserLogFieldConfig~~">ModifyUserLogFieldConfig</a>.</para>
+        /// <para>For more information about the parameters, see the <b>LogDeliveryStrategy</b> parameter description in the <a href="~~ModifyUserLogFieldConfig~~">ModifyUserLogFieldConfig</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LogDeliveryStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>653778B4-4D47-5223-855B-4E******</para>

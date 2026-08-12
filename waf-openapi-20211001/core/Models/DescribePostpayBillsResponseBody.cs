@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ChargeData { get; set; }
 
             /// <summary>
-            /// <para>The total number of Credits.</para>
+            /// <para>The total Credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>382</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CreditChargeData { get; set; }
 
             /// <summary>
-            /// <para>The total number of SeCUs.</para>
+            /// <para>The total SeCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>51</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of Credits consumed by features.</para>
+            /// <para>The Credit consumed by features.</para>
             /// 
             /// <b>Example:</b>
             /// <para>375</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public double? FunctionCredit { get; set; }
 
             /// <summary>
-            /// <para>The number of SeCUs consumed by features.</para>
+            /// <para>The SeCU consumed by features.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The number of Credits consumed by traffic processing.</para>
+            /// <para>The Credit consumed by traffic processing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public double? TrafficCredit { get; set; }
 
             /// <summary>
-            /// <para>The number of SeCUs consumed by traffic processing.</para>
+            /// <para>The SeCU consumed by traffic processing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

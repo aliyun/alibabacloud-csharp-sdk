@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateHybridCloudClusterRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Hybrid Cloud WAF cluster.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about Hybrid Cloud WAF clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -64,29 +64,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the traffic redirection rule, in JSON format.</para>
+        /// <para>The traffic redirection rule configuration.</para>
         /// <remarks>
-        /// <para>The modes are mutually exclusive. You can select only one mode. If you change the mode, all traffic redirection rules in the previous mode are cleared.</para>
+        /// <para>The mode options are mutually exclusive. You can select only one. If you change the mode, all traffic redirection rules under the original mode are cleared.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>check_mode</b>: the traffic redirection mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>all</b>: redirects all traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>part</b>: redirects a specific portion of traffic.</para>
-        /// </description></item>
+        /// <item><description><b>check_mode</b>: the mode. Valid values:<list type="bullet">
+        /// <item><description><b>all</b>: full traffic redirection.</description></item>
+        /// <item><description><b>part</b>: partial traffic redirection.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>type</b>: the match type for the rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>exact</b>: exact match.</para>
-        /// </description></item>
-        /// <item><description><para><b>regex</b>: regular expression match.</para>
-        /// </description></item>
+        /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
+        /// <item><description><b>exact</b>: exact match.</description></item>
+        /// <item><description><b>regex</b>: regular expression.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>substance</b>: the match value of the rule.</para>
-        /// </description></item>
+        /// <item><description><b>substance</b>: the rule value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,12 +91,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The status of the traffic redirection rule. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: disabled.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,9 +106,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the traffic redirection rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pullin</b>: traffic redirection</description></item>
+        /// <item><description><b>pullin</b>: cluster traffic redirection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

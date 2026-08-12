@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the server that you want to query.</para>
+        /// <para>The hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online-xagent1</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the server that you want to query.</para>
+        /// <para>The IP address of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.X.X.1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>. For more information about paging, see the relevant parameter descriptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates that each page contains 10 entries. For more information about paging, see the relevant parameter descriptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

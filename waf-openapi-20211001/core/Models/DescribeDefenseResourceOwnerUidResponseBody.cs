@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos> OwnerInfos { get; set; }
         public class DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos : TeaModel {
             /// <summary>
-            /// <para>The owner account ID of the protected object.</para>
+            /// <para>The ID of the asset owner account of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125************21</para>

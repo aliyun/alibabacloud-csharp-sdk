@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The log delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sls</b>: Alibaba Cloud Simple Log Service.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: Delivers logs to an external Kafka cluster.</para>
-        /// </description></item>
-        /// <item><description><para><b>syslog</b>: Delivers logs to an external syslog server.</para>
-        /// </description></item>
+        /// <item><description><b>sls</b>: Simple Log Service.</description></item>
+        /// <item><description><b>kafka</b>: external delivery to Kafka logs.</description></item>
+        /// <item><description><b>syslog</b>: external delivery to Syslog logs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,9 +26,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The extension configuration for log delivery. This is a JSON object converted to a string.</para>
+        /// <para>The log delivery extension configuration. The value is a string converted from a JSON object constructed with a series of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the description of the <b>ExtendConfig</b> parameter.</para>
+        /// <para>For more information, see the <b>Log delivery extension configuration</b> parameter description.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,13 +39,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ExtendConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of log fields to deliver. Use the \<c>a,b,c,...\\</c> format.</para>
+        /// <para>The list of log fields to deliver. Specify the fields in the &quot;a,b,c,...&quot; format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Include all required log fields. Call <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> to view the log fields that WAF Simple Log Service supports.</para>
-        /// </description></item>
-        /// <item><description><para>If the log fields include <b>request_header</b>, use the <b>ExtendConfig</b> parameter to specify the request headers to deliver.</para>
-        /// </description></item>
+        /// <item><description>All required log fields must be included. You can invoke the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to view the log fields supported by Simple Log Service for WAF. </description></item>
+        /// <item><description>If the log fields include <b>request_header</b>, use the <b>delivery extension configuration</b> (<b>ExtendConfig</b>) parameter to specify the request headers to deliver.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -63,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,9 +70,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The log delivery policies. Multiple policies are supported. This is a JSON array of policy objects converted to a string.</para>
+        /// <para>The log delivery strategy. Multiple strategies are supported. The value is a string converted from a JSON array constructed with a series of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the description of the <b>LogDeliveryStrategy</b> parameter.</para>
+        /// <para>For more information, see the <b>Log delivery strategy</b> parameter description.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

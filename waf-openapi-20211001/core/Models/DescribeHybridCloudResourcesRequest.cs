@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Backend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable public cloud disaster recovery. Valid values:</para>
+        /// <para>Specifies whether public cloud disaster recovery is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// <item><description><para><b>true</b>: Public cloud disaster recovery is enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// <item><description><para><b>false</b>: Public cloud disaster recovery is not enabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return when paging is used. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number to return in a paging query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when paging is used. Default value: <b>10</b>, which indicates 10 entries per page.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

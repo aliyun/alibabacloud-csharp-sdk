@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Public cloud disaster recovery is enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Public cloud disaster recovery is disabled.</para>
+        /// <item><description><para><b>false</b>: Public cloud disaster recovery is not enabled.</para>
         /// </description></item>
         /// </list>
         /// 

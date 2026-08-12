@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeCertsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the encryption algorithm. Valid values:</para>
+        /// <para>The type of encryption algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NotSM2 (default)</b>: Specifies a non-ShangMi (SM) cryptographic algorithm.</para>
+        /// <item><description><para><b>NotSM2 (default)</b>: a non-Chinese cryptographic algorithm.</para>
         /// </description></item>
-        /// <item><description><para><b>SM2</b>: Specifies an SM cryptographic algorithm.</para>
+        /// <item><description><para><b>SM2</b>: a Chinese cryptographic algorithm.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. Maximum value: 100.</para>
+        /// <para>The number of rows per page in a paged query. Default value: <b>10</b>. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 

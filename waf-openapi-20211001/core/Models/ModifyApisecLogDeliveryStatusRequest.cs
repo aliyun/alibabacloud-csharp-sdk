@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The enabling status of API security log subscribe. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// <item><description><para><b>true</b>: subscribe is enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: shutdown.</para>
+        /// <item><description><para><b>false</b>: subscribe is shutdown.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

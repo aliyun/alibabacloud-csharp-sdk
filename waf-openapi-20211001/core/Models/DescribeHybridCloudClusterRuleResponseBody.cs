@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudClusterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the rule.</para>
+        /// <para>The rule information.</para>
         /// </summary>
         [NameInMap("ClusterRule")]
         [Validation(Required=false)]
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule ClusterRule { get; set; }
         public class DescribeHybridCloudClusterRuleResponseBodyClusterRule : TeaModel {
             /// <summary>
-            /// <para>The resource ID of the cluster rule.</para>
+            /// <para>The cluster rule resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdbc-clusterrule-2m*****m0w</para>
@@ -27,26 +27,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClusterRuleResourceId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the traffic routing rule.</para>
+            /// <para>The traffic redirection rule configuration:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>check_mode</b>: Defines the traffic scope for the routing rule. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>all</b>: Routes all traffic.</para>
-            /// </description></item>
-            /// <item><description><para><b>part</b>: Routes a portion of the traffic.</para>
-            /// </description></item>
+            /// <item><description><b>check_mode</b>: the mode selection. Valid values:<list type="bullet">
+            /// <item><description><b>all</b>: full traffic redirection</description></item>
+            /// <item><description><b>part</b>: partial traffic redirection</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>type</b>: The rule\&quot;s match type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>exact</b>: Exact match.</para>
-            /// </description></item>
-            /// <item><description><para><b>regex</b>: Regular expression match.</para>
-            /// </description></item>
+            /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
+            /// <item><description><b>exact</b>: exact match</description></item>
+            /// <item><description><b>regex</b>: regular expression</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>substance</b>: The value of the rule.</para>
-            /// </description></item>
+            /// <item><description><b>substance</b>: the rule value</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,11 +50,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleConfig { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
+            /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: Enabled.</para>
+            /// <item><description><para><b>on</b>: enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>off</b>: Disabled.</para>
+            /// <item><description><para><b>off</b>: disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -73,9 +66,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule.</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pullin: The traffic routing rule.</description></item>
+            /// <item><description>pullin: traffic redirection rule</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

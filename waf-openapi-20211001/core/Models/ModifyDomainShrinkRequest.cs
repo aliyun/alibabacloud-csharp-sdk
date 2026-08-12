@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +70,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RedirectShrink { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

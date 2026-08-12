@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region code.&gt;Notice: This parameter is required when RegionType is set to region. Set this parameter to the code of the selected continent.</para>
+        /// <para>The region code.&gt;Notice: This parameter is required when RegionType is set to region. The value is the code of the selected continent.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>410</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

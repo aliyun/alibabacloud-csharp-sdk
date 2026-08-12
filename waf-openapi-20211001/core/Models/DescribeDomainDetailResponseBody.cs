@@ -150,7 +150,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? EnableTLSv3 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the exclusive IP address feature is enabled. Valid values:</para>
+            /// <para>Indicates whether an exclusive IP address is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: An exclusive IP address is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: An exclusive IP address is not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -171,6 +177,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>Indicates whether HSTS includes subdomains. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// </summary>
             [NameInMap("HstsIncludeSubDomain")]
             [Validation(Required=false)]
@@ -198,6 +210,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>Indicates whether HTTP/2 is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: HTTP/2 is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: HTTP/2 is not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -222,6 +240,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>Indicates whether IPv6 is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: IPv6 is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: IPv6 is not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -272,6 +296,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The TLS version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>tlsv1</b>: Supports TLS 1.0 and later. Provides the highest compatibility and the lowest security.</para>
+            /// </description></item>
+            /// <item><description><para><b>tlsv1.1</b>: Supports TLS 1.1 and later. Provides good compatibility and good security.</para>
+            /// </description></item>
+            /// <item><description><para><b>tlsv1.2</b>: Supports TLS 1.2 and later. Provides good compatibility and the highest security.</para>
+            /// </description></item>
+            /// <item><description><para><b>tlsv1.3</b>: Supports only TLS 1.3. Provides the highest security and the lowest compatibility.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>tlsv1.2</para>
@@ -282,6 +316,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The method that WAF uses to obtain the originating IP address of the client. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>0</b>: The client access traffic is not forwarded by other Layer 7 proxies before reaching WAF.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: WAF reads the first value in the X-Forwarded-For (XFF) header field of the request as the client IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: WAF reads the value of a custom header field that you specify in the request as the client IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -291,7 +335,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? XffHeaderMode { get; set; }
 
             /// <summary>
-            /// <para>The list of custom header fields used to obtain the client IP address.</para>
+            /// <para>The custom header fields used to obtain the client IP address.</para>
             /// </summary>
             [NameInMap("XffHeaders")]
             [Validation(Required=false)]
@@ -349,6 +393,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
                 /// <summary>
                 /// <para>The protocol type of the listener port. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>http</b>: HTTP protocol.</description></item>
+                /// <item><description><b>https</b>: HTTPS protocol.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http</para>
@@ -384,7 +432,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The secondary back-to-origin addresses of the domain name.</para>
+            /// <para>The secondary origin addresses of the domain name.</para>
+            /// <remarks>
+            /// <para>This parameter is about to be deprecated. Use <b>BackUpBackendList</b> to obtain the related information.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("BackupBackends")]
             [Validation(Required=false)]
@@ -418,6 +469,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>Indicates whether forced HTTP back-to-origin is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Forced HTTP back-to-origin is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Forced HTTP back-to-origin is not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -427,7 +484,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? FocusHttpBackend { get; set; }
 
             /// <summary>
-            /// <para>The HTTP/2 back-to-origin setting.</para>
+            /// <para>Indicates whether HTTP/2 back-to-origin is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -437,7 +494,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Http2Origin { get; set; }
 
             /// <summary>
-            /// <para>The number of concurrent connections for HTTP/2 back-to-origin.</para>
+            /// <para>The maximum number of concurrent connections for HTTP/2 back-to-origin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -447,7 +504,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Http2OriginMaxConcurrency { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether persistent connections are enabled. Valid values:</para>
+            /// <para>Specifies whether to keep the connection alive. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): The connection is kept alive.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The connection is not kept alive.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -477,7 +540,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveTimeout { get; set; }
 
             /// <summary>
-            /// <para>The load balancing algorithm used for back-to-origin. Valid values:</para>
+            /// <para>The load balancing algorithm used for back-to-origin requests. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>iphash</b>: IP Hash algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>roundRobin</b>: round-robin algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>leastTime</b>: Least Time algorithm.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>iphash</para>
@@ -497,7 +568,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? MaxBodySize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the feature for preserving the originating IP address of the client is enabled.</para>
+            /// <para>Indicates whether the client source IP address preservation feature is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The client source IP address preservation feature is enabled. After this feature is enabled, backend services can view the original IP address of the client.</description></item>
+            /// <item><description><b>false</b>: The client source IP address preservation feature is not enabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -517,7 +592,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ReadTimeout { get; set; }
 
             /// <summary>
-            /// <para>The traffic mark fields and values of the domain name, which are used to mark traffic processed by WAF.</para>
+            /// <para>The traffic tag fields and values of the domain name, which are used to tag traffic processed by WAF.</para>
             /// </summary>
             [NameInMap("RequestHeaders")]
             [Validation(Required=false)]
@@ -546,7 +621,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether WAF retries when back-to-origin fails. Valid values:</para>
+            /// <para>Specifies whether to retry when WAF fails to forward requests to the origin server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): Retry.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Do not retry.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -556,7 +637,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Retry { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether back-to-origin SNI is enabled. Valid values:</para>
+            /// <para>Indicates whether Server Name Indication (SNI) is enabled for back-to-origin requests. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: SNI is enabled for back-to-origin requests.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): SNI is not enabled for back-to-origin requests.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -576,7 +663,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SniHost { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether WAF is allowed to overwrite WL-Proxy-Client-IP. Valid values:</para>
+            /// <para>Specifies whether WAF is allowed to overwrite the WL-Proxy-Client-IP header. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): WAF is allowed to overwrite the header.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: WAF is not allowed to overwrite the header.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -586,7 +679,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? WLProxyClientIp { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether WAF is allowed to overwrite Web-Server-Type. Valid values:</para>
+            /// <para>Specifies whether WAF is allowed to overwrite the Web-Server-Type header. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): WAF is allowed to overwrite the header.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: WAF is not allowed to overwrite the header.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -606,7 +705,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? WriteTimeout { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether WAF is allowed to overwrite X-Client-IP. Valid values:</para>
+            /// <para>Specifies whether WAF is allowed to overwrite X-Client-IP. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): WAF is allowed to overwrite the header.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: WAF is not allowed to overwrite the header.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -616,7 +721,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? XClientIp { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether WAF is allowed to overwrite X-True-IP. Valid values:</para>
+            /// <para>Specifies whether WAF is allowed to overwrite the X-True-IP header. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b> (default): WAF is allowed to overwrite the header.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: WAF is not allowed to overwrite the header.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -724,7 +835,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The status of the domain name. Valid values:</para>
+        /// <para>The domain name status. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

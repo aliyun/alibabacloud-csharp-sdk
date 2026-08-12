@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A pagination token for the next query</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: indicates the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: indicates regions outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -37,7 +37,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 50 entries.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is conditionally required. You must specify at least one ResourceId.N value. If ResourceType is set to ALIYUN::WAF::DEFENSERESOURCE, the value of ResourceId corresponds to the Resources[].Resource field returned by the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -55,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the resource.</para>
+        /// <para>The list of tags. You can specify up to 20 entries.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

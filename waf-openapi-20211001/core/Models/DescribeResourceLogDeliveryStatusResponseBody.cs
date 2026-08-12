@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourceLogDeliveryStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of log delivery configurations for the protected objects.</para>
+        /// <para>The list of log delivery configurations for protected objects.</para>
         /// </summary>
         [NameInMap("LogConfigs")]
         [Validation(Required=false)]
         public List<DescribeResourceLogDeliveryStatusResponseBodyLogConfigs> LogConfigs { get; set; }
         public class DescribeResourceLogDeliveryStatusResponseBodyLogConfigs : TeaModel {
             /// <summary>
-            /// <para>The name of the log delivery configuration.</para>
+            /// <para>The name of the delivery configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>export-kafka</para>
@@ -27,12 +27,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DeliveryName { get; set; }
 
             /// <summary>
-            /// <para>The type of log delivery for the protected object. Valid values:</para>
+            /// <para>The delivery type of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>syslog</b>: Logs are delivered to a syslog service.</para>
-            /// </description></item>
-            /// <item><description><para><b>kafka</b>: Logs are delivered to a Kafka service.</para>
-            /// </description></item>
+            /// <item><description><b>syslog</b>: delivered to a syslog service.</description></item>
+            /// <item><description><b>kafka</b>: delivered to a Kafka service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DeliveryType { get; set; }
 
             /// <summary>
-            /// <para>The name of the protected object, such as a domain name or Application Load Balancer (ALB) instance.</para>
+            /// <para>The protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.waf.com-waf</para>
@@ -53,11 +51,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether log delivery is enabled for the protected object. Valid values:</para>
+            /// <para>The log delivery status of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Log delivery is enabled.</para>
+            /// <item><description><para><b>true</b>: enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: Log delivery is disabled.</para>
+            /// <item><description><para><b>false</b>: disabled.</para>
             /// </description></item>
             /// </list>
             /// 

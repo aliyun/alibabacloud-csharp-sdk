@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The proxy type of the hybrid cloud cluster. Valid values:</para>
+        /// <para>The proxy type of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>service</b>: SDK-based integration.</para>
+        /// <item><description><para><b>service</b>: SDK integration.</para>
         /// </description></item>
-        /// <item><description><para><b>cname</b>: CNAME-based reverse proxy.</para>
+        /// <item><description><para><b>cname</b>: reverse proxy.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,25 +36,38 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterProxyType { get; set; }
 
         /// <summary>
-        /// <para>The name of the hybrid cloud node group that you want to query.</para>
+        /// <para>The name of the hybrid cloud node group to query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>groupName1</para>
+        /// <para>testGroup</para>
+        /// </summary>
+        [NameInMap("GroupDisplayName")]
+        [Validation(Required=false)]
+        public string GroupDisplayName { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para><b>[Deprecated]</b> Use GroupDisplayName for queries instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? GroupName { get; set; }
 
         /// <summary>
         /// <para>The type of the hybrid cloud node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>protect</b>: protection node group.</para>
+        /// <item><description><para><b>protect</b>: protection.</para>
         /// </description></item>
-        /// <item><description><para><b>control</b>: control node group.</para>
+        /// <item><description><para><b>control</b>: management.</para>
         /// </description></item>
-        /// <item><description><para><b>storage</b>: storage node group.</para>
+        /// <item><description><para><b>storage</b>: storage.</para>
         /// </description></item>
-        /// <item><description><para><b>controlStorage</b>: control and storage node group.</para>
+        /// <item><description><para><b>controlStorage</b>: management and storage.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paging query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +103,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,7 +113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -116,7 +129,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the WAF instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

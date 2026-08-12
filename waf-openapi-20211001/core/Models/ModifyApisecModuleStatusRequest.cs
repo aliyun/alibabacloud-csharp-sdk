@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The name of the protected object group to which the protected object is added.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>Resources</b> and <b>ResourceGroups</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>group1</para>
@@ -75,6 +78,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The name of the protected object.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>Resources</b> and <b>ResourceGroups</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cwaf-***-waf</para>

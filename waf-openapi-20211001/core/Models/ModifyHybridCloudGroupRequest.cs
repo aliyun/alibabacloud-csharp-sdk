@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hybrid cloud group.</para>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the hybrid cloud group.</para>
+        /// <para>The node group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>remarkTest</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

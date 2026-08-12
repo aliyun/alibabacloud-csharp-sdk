@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreatePostpaidInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The WAF instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_v2_public_cn-x0r****gr1i</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>73A4E786-8235-50C0-9631-87C8****4A36</para>

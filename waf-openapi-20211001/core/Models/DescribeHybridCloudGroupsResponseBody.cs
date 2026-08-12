@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of hybrid cloud node groups.</para>
+        /// <para>The collection of hybrid cloud node groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudGroupsResponseBodyGroups> Groups { get; set; }
         public class DescribeHybridCloudGroupsResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>The back-to-origin mark of the protection cluster. The value is in the <b>{CarrierTag}-{ContinentTag}-{CityTag}-{Identifier}</b> format. The identifier is optional.</para>
+            /// <para>The back-to-origin mark of the protection cluster, in the format of {Protection Cluster ISP Name}-{Protection Cluster Continent Name}-{Protection Cluster City Name}-{Protection Cluster Back-to-origin Identifier} (optional).</para>
             /// <remarks>
-            /// <para>For a list of valid values, see Additional information about response parameters.</para>
+            /// <para>For the list of values for the protection cluster ISP name, continent name, city name, and back-to-origin identifier, see the supplementary description of response elements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The continent code of the protection cluster.</para>
             /// <remarks>
-            /// <para>For a list of valid codes, see Additional information about response parameters.</para>
+            /// <para>For the list of code values, see the supplementary description of response elements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -65,13 +65,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the hybrid cloud node group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>protect</b>: protection node group.</para>
+            /// <item><description><para><b>protect</b>: protection.</para>
             /// </description></item>
-            /// <item><description><para><b>control</b>: control node group.</para>
+            /// <item><description><para><b>control</b>: management.</para>
             /// </description></item>
-            /// <item><description><para><b>storage</b>: storage node group.</para>
+            /// <item><description><para><b>storage</b>: storage.</para>
             /// </description></item>
-            /// <item><description><para><b>controlStorage</b>: control and storage node group.</para>
+            /// <item><description><para><b>controlStorage</b>: management and storage.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string GroupType { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the load balancer that is associated with the hybrid cloud node group.</para>
+            /// <para>The load balancing (server) IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.XX.XX</para>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LocationId { get; set; }
 
             /// <summary>
-            /// <para>The carrier code of the protection cluster.</para>
+            /// <para>The ISP code of the protection cluster.</para>
             /// <remarks>
-            /// <para>For a list of valid codes, see Additional information about response parameters.</para>
+            /// <para>For the list of code values, see the supplementary description of response elements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? OperatorValue { get; set; }
 
             /// <summary>
-            /// <para>The ports that are used by the hybrid cloud cluster. Multiple ports are separated by commas (,).</para>
+            /// <para>The ports used by the hybrid cloud cluster. The value is a string. When multiple ports are used, they are returned in the format of <b>port1,port2,port3</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80,9200,20018</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The city code of the protection cluster.</para>
             /// <remarks>
-            /// <para>For a list of valid codes, see Additional information about response parameters.</para>
+            /// <para>For the list of code values, see the supplementary description of response elements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? RegionCodeValue { get; set; }
 
             /// <summary>
-            /// <para>The description of the hybrid cloud node group.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>remarkTest</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is the identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>045660E7-C4C6-5CD7-8182-7B337D95ADF4</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of hybrid cloud node groups returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>146</para>

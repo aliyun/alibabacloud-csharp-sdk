@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBotRuleLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, this field has a return value.</para>
+        /// <para>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19****5EB0</para>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>block</b>: Block.</description></item>
             /// <item><description><b>monitor</b>: Monitor.</description></item>
             /// <item><description><b>js</b>: JavaScript verification.</description></item>
-            /// <item><description><b>captcha</b>: Slider CAPTCHA.</description></item>
-            /// <item><description><b>captcha_strict</b>: Strict slider CAPTCHA.</description></item>
+            /// <item><description><b>captcha</b>: slider CAPTCHA.</description></item>
+            /// <item><description><b>captcha_strict</b>: strict slider CAPTCHA.</description></item>
             /// <item><description><b>bypass</b>: Allow.</description></item>
             /// </list>
             /// 
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Web,app</para>
+            /// <para>web,app</para>
             /// </summary>
             [NameInMap("SubScene")]
             [Validation(Required=false)]

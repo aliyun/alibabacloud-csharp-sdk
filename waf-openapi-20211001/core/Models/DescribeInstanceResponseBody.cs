@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The instance details.</para>
         /// </summary>
         [NameInMap("Details")]
         [Validation(Required=false)]
         public DescribeInstanceResponseBodyDetails Details { get; set; }
         public class DescribeInstanceResponseBodyDetails : TeaModel {
             /// <summary>
-            /// <para>The maximum number of IP addresses that can be added to the match content. For more information about match content, see <a href="https://help.aliyun.com/document_detail/374354.html">Match conditions</a>.</para>
+            /// <para>The maximum number of IP addresses that can be added to the match content. For more information about match content, refer to <a href="https://help.aliyun.com/document_detail/374354.html">Match condition description</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,13 +27,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AclRuleMaxIpCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scan protection is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Indicates whether Agentic API security is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("AgenticApisec")]
+            [Validation(Required=false)]
+            public bool? AgenticApisec { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether scan protection is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -53,6 +57,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AntiScanTemplateMaxCount { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether API security is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("Apisec")]
+            [Validation(Required=false)]
+            public bool? Apisec { get; set; }
+
+            /// <summary>
             /// <para>The maximum number of back-to-origin IP addresses that can be configured.</para>
             /// 
             /// <b>Example:</b>
@@ -63,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BackendMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether basic protection rules are supported. Valid values:</para>
+            /// <para>Specifies whether basic protection rules are supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Supported.</para>
             /// </description></item>
@@ -99,13 +113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BaseWafGroupRuleTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether bot management is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether bot management is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -115,12 +123,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Bot { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scenario-specific bot protection for apps is supported. Valid values:</para>
+            /// <para>Indicates whether scenario-specific protection against app crawlers is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,12 +147,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BotTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scenario-specific bot protection for websites is supported. Valid values:</para>
+            /// <para>Specifies whether scenario-specific protection against web crawlers is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +187,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? CustomResponse { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single custom response template.</para>
+            /// <para>The maximum number of protection rules that a single custom response template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -203,7 +207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CustomResponseTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether custom rules are supported. Valid values:</para>
+            /// <para>Specifies whether custom rules are supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Supported.</para>
             /// </description></item>
@@ -219,7 +223,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? CustomRule { get; set; }
 
             /// <summary>
-            /// <para>The action string for the custom rule.</para>
+            /// <para>The strings included in custom rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>block</para>
@@ -229,7 +233,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CustomRuleAction { get; set; }
 
             /// <summary>
-            /// <para>The match condition for the custom rule. For more information, see the description of the <b>conditions</b> parameter for <b>custom_acl</b> rules in CreateDefenseRule.</para>
+            /// <para>The match conditions for custom rules. For more information, refer to the parameter description of <b>custom rule (custom_acl) conditions</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>
@@ -239,7 +243,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CustomRuleCondition { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single custom rule template.</para>
+            /// <para>The maximum number of protection rules that a single custom rule template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -249,7 +253,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CustomRuleInTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The rate limiting object for the custom rule.</para>
+            /// <para>The rate limiting object for custom rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>header</para>
@@ -279,7 +283,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DefenseGroupMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protected objects that can be included in a protection group.</para>
+            /// <para>The maximum number of protection objects that a protection group can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -289,7 +293,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DefenseObjectInGroupMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protected objects that can be associated with a template.</para>
+            /// <para>The maximum number of protection objects that can be associated with a single template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -299,22 +303,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DefenseObjectInTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protected objects that can be configured.</para>
+            /// <para>The maximum number of protection objects that can be configured.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>20,000</para>
+            /// <para>20000</para>
             /// </summary>
             [NameInMap("DefenseObjectMaxCount")]
             [Validation(Required=false)]
             public long? DefenseObjectMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data leak prevention is supported. Valid values:</para>
+            /// <para>Specifies whether data leak prevention is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -325,7 +327,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Dlp { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single data leak prevention template.</para>
+            /// <para>The maximum number of protection rules that a single information leak prevention template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -335,7 +337,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DlpRuleInTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of data leak prevention templates that can be configured.</para>
+            /// <para>The maximum number of information leak prevention templates that can be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -345,9 +347,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DlpTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The pay-as-you-go QPS of the subscription instance. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 subscription plans</a>.</para>
+            /// <para>The burstable QPS value for the subscription instance with pay-as-you-go billing for burstable capacity. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</para>
             /// <remarks>
-            /// <para>This parameter has no meaning for pay-as-you-go instances.</para>
+            /// <para>This parameter has no practical meaning for <b>pay-as-you-go</b> instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -358,13 +360,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ElasticQps { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether exclusive IP addresses are supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether exclusive IP addresses are supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -374,9 +370,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? ExclusiveIp { get; set; }
 
             /// <summary>
-            /// <para>The extra QPS of the subscription instance. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 subscription plans</a>.</para>
+            /// <para>The extended QPS value of the subscription instance. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</para>
             /// <remarks>
-            /// <para>This parameter has no meaning for pay-as-you-go instances.</para>
+            /// <para>This parameter is not applicable to <b>pay-as-you-go</b> instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -387,9 +383,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ExtendQps { get; set; }
 
             /// <summary>
-            /// <para>The free queries per second (QPS) of the subscription instance. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 subscription plans</a>.</para>
+            /// <para>The free QPS value included in the subscription plan. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</para>
             /// <remarks>
-            /// <para>This parameter has no meaning for pay-as-you-go instances.</para>
+            /// <para>This parameter has no practical meaning for <b>pay-as-you-go</b> instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -400,13 +396,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? FreeQps { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Global Server Load Balancing (GSLB) is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether Global Server Load Balancing (GSLB) is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -416,7 +406,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Gslb { get; set; }
 
             /// <summary>
-            /// <para>The available HTTP ports. For more information, see <a href="">Port numbers supported by WAF</a>.</para>
+            /// <para>The available HTTP port range. For more information, refer to <a href="https://help.aliyun.com/document_detail/385578.html">Ports supported by WAF</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -426,7 +416,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HttpPorts { get; set; }
 
             /// <summary>
-            /// <para>The available HTTPS ports. For more information, see <a href="">Port numbers supported by WAF</a>.</para>
+            /// <para>The available HTTPS port range. For more information, refer to <a href="https://help.aliyun.com/document_detail/385578.html">Ports supported by WAF</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443</para>
@@ -436,7 +426,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HttpsPorts { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the IP address blacklist is supported. Valid values:</para>
+            /// <para>Indicates whether hybrid cloud is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("HybridCloud")]
+            [Validation(Required=false)]
+            public bool? HybridCloud { get; set; }
+
+            /// <summary>
+            /// <para>The number of hybrid cloud extended nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("HybridCloudNodeExtend")]
+            [Validation(Required=false)]
+            public int? HybridCloudNodeExtend { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the IP blacklist is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Supported.</para>
             /// </description></item>
@@ -462,7 +472,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? IpBlacklistIpInRuleMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single blacklist template.</para>
+            /// <para>The maximum number of protection rules that a single blacklist template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -482,13 +492,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? IpBlacklistTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether IPv6 is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether IPv6 is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -498,13 +502,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Ipv6 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Simple Log Service is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Specifies whether the log service is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -514,7 +512,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? LogService { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether critical event protection is supported. Valid values:</para>
+            /// <para>Specifies whether critical event protection is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Supported.</para>
             /// </description></item>
@@ -540,9 +538,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MajorProtectionTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The traffic billing protection threshold for the pay-as-you-go instance. For more information, see <a href="https://help.aliyun.com/document_detail/2249021.html">Traffic billing protection</a> for pay-as-you-go instances.</para>
+            /// <para>The QPS billing protection threshold for the pay-as-you-go edition. For more information, see <a href="https://help.aliyun.com/document_detail/2249021.html">Traffic billing protection</a> for pay-as-you-go.</para>
             /// <remarks>
-            /// <para>This parameter has no meaning for subscription instances.</para>
+            /// <para>This parameter has no practical meaning for <b>subscription</b> instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -553,13 +551,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? QpsBillingCap { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether webpage tamper protection is supported. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Supported.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: Not supported.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Indicates whether the multi-account management feature is supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("ResourceDirectory")]
+            [Validation(Required=false)]
+            public bool? ResourceDirectory { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether web tamper proofing is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -569,7 +571,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Tamperproof { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single webpage tamper protection template.</para>
+            /// <para>The maximum number of protection rules that a single web tamper proofing template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -579,7 +581,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TamperproofRuleInTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of webpage tamper protection templates that can be configured.</para>
+            /// <para>The maximum number of web tamper proofing protection templates that can be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -589,17 +591,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TamperproofTemplateMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of IP addresses that can be imported to the IP address blacklist in a single batch.</para>
+            /// <para>The maximum number of IP addresses that can be imported to the IP blacklist in a single bulk import.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2,000</para>
+            /// <para>2000</para>
             /// </summary>
             [NameInMap("VastIpBlacklistInFileMaxCount")]
             [Validation(Required=false)]
             public long? VastIpBlacklistInFileMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of IP addresses that can be added to the IP address blacklist from the console in a single operation.</para>
+            /// <para>The maximum number of IP addresses that can be added to the IP blacklist in a single page operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -609,17 +611,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? VastIpBlacklistInOperationMaxCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of IP addresses that can be added to the IP address blacklist for a single user.</para>
+            /// <para>The maximum number of IP blacklist entries that a single user can configure.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>50,000</para>
+            /// <para>50000</para>
             /// </summary>
             [NameInMap("VastIpBlacklistMaxCount")]
             [Validation(Required=false)]
             public long? VastIpBlacklistMaxCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the IP address whitelist is supported. Valid values:</para>
+            /// <para>Specifies whether the IP whitelist is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Supported.</para>
             /// </description></item>
@@ -635,7 +637,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Whitelist { get; set; }
 
             /// <summary>
-            /// <para>The logical operator for the whitelist rule. For more information, see the description of the <b>conditions</b> parameter for <b>whitelist</b> rules in CreateDefenseRule.</para>
+            /// <para>The logical operators for whitelist rules. For more information, refer to the parameter description of <b>whitelist rule (whitelist) conditions</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>contain</para>
@@ -645,7 +647,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string WhitelistLogical { get; set; }
 
             /// <summary>
-            /// <para>The match field for the whitelist rule. For more information, see the description of the <b>conditions</b> parameter for <b>whitelist</b> rules in CreateDefenseRule.</para>
+            /// <para>The match fields for whitelist rules. For more information, refer to the parameter description of <b>whitelist rule (whitelist) conditions</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>
@@ -655,7 +657,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string WhitelistRuleCondition { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of protection rules that can be included in a single whitelist template.</para>
+            /// <para>The maximum number of protection rules that a single whitelist template can contain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -677,7 +679,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The edition of the WAF instance.</para>
+        /// <para>The WAF edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default_version</para>
@@ -687,7 +689,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds. Format: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4809859200000</para>
@@ -697,13 +699,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance has an overdue payment:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>0</b>: No.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Yes.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Indicates whether the current instance has an overdue payment. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -713,7 +709,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InDebt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The WAF instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf-cn-xxx</para>
@@ -724,12 +720,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>POSTPAY</b>: The instance is a pay-as-you-go instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>PREPAY</b>: The instance is a subscription instance.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -739,15 +729,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The processing status of the instance. Valid values:</para>
+        /// <para>The instance execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>commodity_converting</b>: The instance is being upgraded or downgraded.</para>
+        /// <item><description><para><b>commodity_converting</b>: The commodity is being converted.</para>
         /// </description></item>
-        /// <item><description><para><b>commodity_convert_check_failed</b>: The check for the instance upgrade or downgrade fails.</para>
+        /// <item><description><para><b>commodity_convert_check_failed</b>: The commodity conversion check failed.</para>
         /// </description></item>
-        /// <item><description><para><b>commodity_convert_process_failed</b>: The instance upgrade or downgrade fails.</para>
+        /// <item><description><para><b>commodity_convert_process_failed</b>: The commodity conversion failed.</para>
         /// </description></item>
-        /// <item><description><para><b>order_create_failed</b>: The order fails to be created.</para>
+        /// <item><description><para><b>order_create_failed</b>: The order failed to be created.</para>
         /// </description></item>
         /// <item><description><para><b>order_pending_payment</b>: The order is pending payment.</para>
         /// </description></item>
@@ -777,7 +767,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014697B11AE</para>
@@ -787,7 +777,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The purchase time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1668496310000</para>
@@ -799,12 +789,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The current status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Normal.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: The instance has expired.</para>
-        /// </description></item>
-        /// <item><description><para><b>3</b>: The instance is released.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: Normal.</description></item>
+        /// <item><description><b>2</b>: Expired.</description></item>
+        /// <item><description><b>3</b>: Released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

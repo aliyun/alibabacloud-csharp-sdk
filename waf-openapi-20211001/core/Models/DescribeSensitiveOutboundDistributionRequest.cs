@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveOutboundDistributionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The hybrid cloud cluster ID.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. The time is in UTC.</para>
+        /// <para>The end time of the query. Specify the value as a UNIX timestamp (UTC). Unit: seconds.</para>
         /// <remarks>
-        /// <para>Compliance review supports queries for the last month, the last 3 months, the last 6 months, the last 12 months, and the period from January 1 of the previous year to the present. Make sure that the specified time range is valid.</para>
+        /// <para>Compliance audit currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. The query time range must fall within one of these supported intervals. <b>StartTime</b> must not be earlier than the start time of the corresponding interval. The query fails if the time range exceeds the supported scope.
+        /// This parameter is optional. Default value: the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +37,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,11 +51,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: regions outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -76,9 +77,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds. The time is in Coordinated Universal Time (UTC).</para>
+        /// <para>The start time of the query. Specify the value as a UNIX timestamp (UTC). Unit: seconds.</para>
         /// <remarks>
-        /// <para>Compliance review supports queries for the last month, the last 3 months, the last 6 months, the last 12 months, and the period from January 1 of the previous year to the present. Make sure that the specified time range is valid.</para>
+        /// <para>Compliance audit currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. The query time range must fall within one of these supported intervals. <b>StartTime</b> must not be earlier than the start time of the corresponding interval. The query fails if the time range exceeds the supported scope.
+        /// This parameter is optional. Default value: 1 month before the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

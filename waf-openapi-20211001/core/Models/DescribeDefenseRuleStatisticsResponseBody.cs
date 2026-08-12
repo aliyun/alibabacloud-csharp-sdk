@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos> StatisticsInfos { get; set; }
         public class DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos : TeaModel {
             /// <summary>
-            /// <para>The number of rules that meet all the query conditions.</para>
+            /// <para>The number of rules that meet all query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>

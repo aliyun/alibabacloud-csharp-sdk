@@ -22,16 +22,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The cipher suite type.</para>
+        /// <remarks>
+        /// <para>This parameter is required. You must specify this parameter when you call this operation.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CipherSuite")]
         [Validation(Required=false)]
         public int? CipherSuite { get; set; }
 
         /// <summary>
-        /// <para>The specific custom cipher suites to add. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
+        /// <para>The custom cipher suites to add. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
         /// </summary>
         [NameInMap("CustomCiphers")]
         [Validation(Required=false)]
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <item><description><para><b>false</b>: TLS 1.3 is not supported.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</description></item>
+        /// <item><description>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. If TLSVersion is set to tlsv1.3, this value must be true.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

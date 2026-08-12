@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateLogDeliveryConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the forwarding delivery configuration. The value is a JSON string constructed from a series of parameters.</para>
+        /// <para>The content of the log delivery configuration. The value is a JSON string constructed from a series of parameters.</para>
         /// <remarks>
-        /// <para>The parameters vary based on the specified <b>forwarding delivery configuration type</b> (<b>DeliveryType</b>). For more information, see <b>Parameter description of the forwarding delivery configuration content</b>.</para>
+        /// <para>The parameters vary based on the specified <b>delivery type</b> (<b>DeliveryType</b>). For more information, see <b>Description of delivery configuration content parameters</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryDetail { get; set; }
 
         /// <summary>
-        /// <para>The name of the forwarding delivery configuration.</para>
+        /// <para>The name of the log delivery configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryName { get; set; }
 
         /// <summary>
-        /// <para>The type of the forwarding delivery configuration. Valid values:</para>
+        /// <para>The type of the log delivery configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>syslog</b>: forwards logs to a syslog service.</description></item>
-        /// <item><description><b>kafka</b>: forwards logs to a Kafka service.</description></item>
+        /// <item><description><b>syslog</b>: delivers logs to a syslog service.</description></item>
+        /// <item><description><b>kafka</b>: delivers logs to a Kafka service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

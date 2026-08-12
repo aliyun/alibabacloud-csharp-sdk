@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The hybrid cloud cluster ID.</para>
         /// <remarks>
         /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
         /// </remarks>
@@ -23,7 +23,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+        /// <para>The end of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+        /// <remarks>
+        /// <para>Only data within the last month can be queried. <b>StartTime</b> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
+        /// This parameter is optional. Default value: the current time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1725966000</para>
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paging query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>, which indicates that each page contains 10 entries.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -93,7 +97,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+        /// <para>The beginning of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
+        /// <remarks>
+        /// <para>Only data within the last month can be queried. <b>StartTime</b> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
+        /// This parameter is optional. Default value: one month before the current time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1672502400</para>
@@ -108,7 +116,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <item><description><b>ip</b>: IP address statistics.</description></item>
         /// <item><description><b>host</b>: domain name statistics.</description></item>
         /// <item><description><b>sensitive_code</b>: sensitive data type statistics.</description></item>
-        /// <item><description><b>api</b>: sensitive data API operation statistics.</description></item>
+        /// <item><description><b>api</b>: sensitive data API statistics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address to query. You can set this parameter to perform a fuzzy query on the added IP address blacklist.</para>
+        /// <para>The IP address to query. You can set this parameter to perform a fuzzy match against the added IP blacklist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string IpLike { get; set; }
 
         /// <summary>
-        /// <para>The property by which to sort the results in <b>descending order</b>. Valid values:</para>
+        /// <para>The sorting attribute. Results are sorted in <b>descending order</b> by the specified attribute. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>gmtModified</b>: sorts by modification time.</para>
         /// </description></item>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number to return when paging is used. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>, which indicates 10 entries per page.</para>
+        /// <para>The number of entries per page when paging is used. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: regions outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP address blacklist rule for critical event protection.</para>
+        /// <para>The ID of the critical event protection IP blacklist rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20013199</para>
@@ -111,6 +111,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the critical event protection template.</para>
+        /// <remarks>
+        /// <para>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after purchasing the critical event protection upgrade separately.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5673</para>

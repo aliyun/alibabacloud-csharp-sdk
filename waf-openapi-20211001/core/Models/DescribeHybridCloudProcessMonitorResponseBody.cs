@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudProcessMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of application statuses.</para>
+        /// <para>The application status list.</para>
         /// </summary>
         [NameInMap("ProcessMonitors")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudProcessMonitorResponseBodyProcessMonitors> ProcessMonitors { get; set; }
         public class DescribeHybridCloudProcessMonitorResponseBodyProcessMonitors : TeaModel {
             /// <summary>
-            /// <para>The severity level of the application status. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>normal</b>: normal.</para>
-            /// </description></item>
-            /// <item><description><para><b>critical</b>: abnormal.</para>
-            /// </description></item>
+            /// <item><description><b>normal</b>: Normal.</description></item>
+            /// <item><description><b>critical</b>: abnormal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,28 +31,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Levle { get; set; }
 
             /// <summary>
-            /// <para>The name of the application running on the cluster node. Valid values:</para>
+            /// <para>The service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>tianqingproxy</b>: the central management service</para>
-            /// </description></item>
-            /// <item><description><para><b>redis</b>: the storage service</para>
-            /// </description></item>
-            /// <item><description><para><b>scc</b>: the traffic metering service</para>
-            /// </description></item>
-            /// <item><description><para><b>keeper</b>: the threat intelligence service</para>
-            /// </description></item>
-            /// <item><description><para><b>node_exporter</b>: the application log upload service</para>
-            /// </description></item>
-            /// <item><description><para><b>xagent</b>: the traffic detection service</para>
-            /// </description></item>
-            /// <item><description><para><b>noproxy</b>: the traffic forwarding service</para>
-            /// </description></item>
-            /// <item><description><para><b>xloge</b>: the attack log upload service</para>
-            /// </description></item>
-            /// <item><description><para><b>ilogtail</b>: the log collection service</para>
-            /// </description></item>
-            /// <item><description><para><b>xlogd</b>: the log analysis service</para>
-            /// </description></item>
+            /// <item><description><b>tianqingproxy</b>: centralized management service.</description></item>
+            /// <item><description><b>redis</b>: storage service.</description></item>
+            /// <item><description><b>scc</b>: traffic computing service.</description></item>
+            /// <item><description><b>keeper</b>: threat intelligence service.</description></item>
+            /// <item><description><b>node_exporter</b>: application log upload service.</description></item>
+            /// <item><description><b>xagent</b>: traffic detection service.</description></item>
+            /// <item><description><b>noproxy</b>: traffic forwarding service.</description></item>
+            /// <item><description><b>xloge</b>: attack log upload service.</description></item>
+            /// <item><description><b>ilogtail</b>: log collection service.</description></item>
+            /// <item><description><b>xlogd</b>: log analysis feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,12 +53,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ProcessName { get; set; }
 
             /// <summary>
-            /// <para>The running status of the application. Valid values:</para>
+            /// <para>The running status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: abnormal.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: normal.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: abnormal.</description></item>
+            /// <item><description><b>1</b>: Normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,16 +78,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is deprecated and no longer returns a valid value.</para>
-        /// </remarks>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and no longer returns meaningful data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? TotalCount { get; set; }
 
     }

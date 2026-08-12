@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecSlsProjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The names of the projects in Simple Log Service.</para>
+        /// <para>The list of Simple Log Service projects.</para>
         /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]

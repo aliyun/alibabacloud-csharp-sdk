@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object that is created.</para>
+        /// <para>The name of the created protected object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cdX.XXX-call.cn-alb</para>

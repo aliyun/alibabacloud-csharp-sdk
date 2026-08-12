@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyMajorProtectionBlackIpRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the IP address blacklist.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Protection for major events</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time after which the IP address blacklist becomes invalid. Unit: seconds.</para>
+        /// <para>The expiration timestamp, in seconds.</para>
         /// <remarks>
-        /// <para>If the value is <b>0</b>, the IP address blacklist is permanently valid.</para>
+        /// <para>If the value is <b>0</b>, the rule takes effect permanently.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 addresses are supported. Separate multiple IP addresses with commas (,).
+        /// <para>The IP blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 are supported. Separate multiple IP addresses with commas (,).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string IpList { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP address blacklist rule for critical event protection.</para>
+        /// <para>The ID of the IP blacklist rule for critical event protection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the critical event protection template.</para>
+        /// <para>The ID of the critical event protection scenario template.</para>
+        /// <remarks>
+        /// <para>This parameter must be set to the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

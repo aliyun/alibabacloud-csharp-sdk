@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterBypassStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The resource ID of the hybrid cloud cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the manual bypass. Valid values:</para>
+        /// <para>The manual bypass enabling status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: The manual bypass is enabled.</para>
+        /// <item><description><para><b>on</b>: enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>off</b> (default): The manual bypass is disabled.</para>
+        /// <item><description><para><b>off (default)</b>: shutdown.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

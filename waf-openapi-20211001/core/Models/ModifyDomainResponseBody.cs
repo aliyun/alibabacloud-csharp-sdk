@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The domain name to modify.</para>
+            /// <para>The domain name to be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>

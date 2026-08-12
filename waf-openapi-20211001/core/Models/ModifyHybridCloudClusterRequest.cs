@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The network access mode of the hybrid cloud cluster. Valid values:</para>
+        /// <para>The network access mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>internet</b>: access over the Internet.</para>
-        /// </description></item>
-        /// <item><description><para><b>vpc</b>: access over a leased line through a virtual private cloud (VPC).</para>
-        /// </description></item>
+        /// <item><description><b>internet</b>: public network access.</description></item>
+        /// <item><description><b>vpc</b>: Express Connect private network access.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,14 +25,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessMode { get; set; }
 
         /// <summary>
-        /// <para>The region in which the leased line resides. This parameter is required when AccessMode is set to vpc. Valid values:</para>
+        /// <para>The Express Connect access region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Hangzhou.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-beijing</b>: Beijing.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai</b>: Shanghai.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Hangzhou.</description></item>
+        /// <item><description><b>cn-beiijng</b>: Beijing.</description></item>
+        /// <item><description><b>cn-shanghai</b>: Shanghai.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessRegion { get; set; }
 
         /// <summary>
-        /// <para>The name of the hybrid cloud cluster.</para>
+        /// <para>The cluster name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The list of HTTP ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <b>port1,port2,port3</b>.</para>
+        /// <para>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, they are returned in the format of <b>port1,port2,port3</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string HttpPorts { get; set; }
 
         /// <summary>
-        /// <para>The list of HTTPS ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <b>port1,port2,port3</b>.</para>
+        /// <para>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, they are returned in the format of <b>port1,port2,port3</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string HttpsPorts { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,9 +84,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The WAF instance ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The log fields that are excluded from the response.</para>
+        /// <para>The log fields to be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>log_example</para>
@@ -113,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LogFieldsNotReturned { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of protection nodes that can be added to the hybrid cloud cluster.</para>
+        /// <para>The number of protection nodes that can be added to the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,12 +119,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? ProtectionServerCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the proxy gateway is enabled. Valid values:</para>
+        /// <para>The proxy gateway mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: The proxy gateway is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: The proxy gateway is disabled.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,12 +133,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ProxyStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the hybrid cloud cluster. Valid values:</para>
+        /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cname</b>: a reverse proxy cluster.</para>
-        /// </description></item>
-        /// <item><description><para><b>service</b>: a service cluster.</para>
-        /// </description></item>
+        /// <item><description><b>cname</b>: reverse proxy cluster.</description></item>
+        /// <item><description><b>service</b>: service-based cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,7 +163,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the hybrid cloud cluster.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remarkExample</para>
@@ -182,7 +173,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -192,7 +183,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The rule configuration in JSON format. This includes settings such as the circuit breaker, request body length limit, and timeout.</para>
+        /// <para>The rule configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -214,12 +205,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the rule is enabled. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: The rule is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: The rule is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,9 +220,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The rule type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>bypass</b>: WAF bypasses security checks.</description></item>
-        /// </list>
+        /// <para>bypass: bypasses security checks and directly allows the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bypass</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateHybridCloudClusterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster rule resource.</para>
+        /// <para>The cluster rule resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdbc-clusterrule-*******m0w</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterRuleResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-*****-3014697B11AE</para>

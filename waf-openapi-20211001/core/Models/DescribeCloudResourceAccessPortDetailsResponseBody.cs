@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails> AccessPortDetails { get; set; }
         public class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails : TeaModel {
             /// <summary>
-            /// <para>The list of certificates for the cloud service ports connected to WAF.</para>
+            /// <para>The list of certificates for the cloud service port connected to WAF.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The idle timeout period for keep-alive connections. Valid values: 10 to 3600. Default value: 15. Unit: seconds.</para>
             /// <remarks>
-            /// <para>Specifies how long an idle keep-alive connection is retained before it is released.</para>
+            /// <para>Specifies how long an idle keep-alive connection remains open before it is released.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the specified custom request header field.</para>
+                /// <para>The value set for the specified custom request header field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? MaxBodySize { get; set; }
 
             /// <summary>
-            /// <para>The UID that indicates the resource ownership of the cloud service.</para>
+            /// <para>The UID of the cloud service resource ownership.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The read timeout period. Unit: seconds.
+            /// <para>The read timeout period, in seconds.
             /// Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </description></item>
             /// <item><description><para><b>ClientCertOpend</b>: mutual authentication is enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>NetworkConfigLost</b>: the cloud service network configuration is abnormal.</para>
+            /// <item><description><para><b>NetworkConfigLost</b>: cloud service network configuration exception.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 /// <summary>
                 /// <para>The specific reason for the protection exception status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>UserUploadCert</b>: The certificate is manually uploaded.</para>
+                /// <item><description><para><b>UserUploadCert</b>: The certificate was manually uploaded.</para>
                 /// </description></item>
                 /// <item><description><para><b>CertNotExistInCertCenter</b>: The certificate does not exist in SSL Certificates Service.</para>
                 /// </description></item>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TLSVersion { get; set; }
 
             /// <summary>
-            /// <para>The write timeout period. Unit: seconds.
+            /// <para>The write timeout period, in seconds.
             /// Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
@@ -453,6 +453,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </description></item>
             /// <item><description><para><b>2</b>: WAF reads the value of a custom header field that you specify as the client IP address.</para>
             /// </description></item>
+            /// <item><description><para><b>3</b>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -463,7 +465,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? XffHeaderMode { get; set; }
 
             /// <summary>
-            /// <para>The list of custom header fields used to obtain the client IP address, in the format <b>[&quot;header1&quot;,&quot;header2&quot;,...]</b>.</para>
+            /// <para>The list of custom header fields used to obtain the client IP address, in the format <b>[&quot;header1&quot;,&quot;header2&quot;,……]</b>.</para>
             /// <remarks>
             /// <para>This parameter is required only when <b>XffHeaderMode</b> is set to 2 (WAF reads the value of a custom header field that you specify as the client IP address).</para>
             /// </remarks>
@@ -473,7 +475,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> XffHeaders { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the X-Forward-For-Proto header is used to pass the WAF protocol. Valid values:</para>
+            /// <para>Specifies whether the X-Forward-For-Proto header passes the WAF protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b> (default): The WAF protocol is passed.</para>
             /// </description></item>

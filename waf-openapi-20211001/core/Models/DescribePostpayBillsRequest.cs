@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribePostpayBillsRequest : TeaModel {
         /// <summary>
         /// <para>The end time. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+        /// <remarks>
+        /// <para>When querying pay-as-you-go bills, <b>StartTime</b> and <b>EndTime</b> are required parameters. You must specify both to determine the query time range.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1779195599</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>
@@ -46,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The pagination token for the next page. If a next page exists, this field has a return value.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to obtain the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter has a return value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The statistical period type for billing.</para>
+        /// <para>The statistical period type of the bill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hour</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -94,6 +97,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The start time. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+        /// <remarks>
+        /// <para>When querying pay-as-you-go bills, <b>StartTime</b> and <b>EndTime</b> are required parameters. You must specify both to determine the query time range.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1779120000</para>

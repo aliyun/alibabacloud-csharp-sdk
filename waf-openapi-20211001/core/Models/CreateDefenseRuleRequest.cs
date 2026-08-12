@@ -11,6 +11,58 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class CreateDefenseRuleRequest : TeaModel {
         /// <summary>
         /// <para>The WAF protection scenario to create.</para>
+        /// <para>When the protection rule type <b>DefenseType</b> is set to <b>template</b>, valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>waf_group</b>: Basic Web Protection.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf_base</b>: new version of Web core protection.</para>
+        /// </description></item>
+        /// <item><description><para><b>antiscan</b>: scan protection.</para>
+        /// </description></item>
+        /// <item><description><para><b>ip_blacklist</b>: IP blacklist.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom_acl</b>: custom rules.</para>
+        /// </description></item>
+        /// <item><description><para><b>whitelist</b>: whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>region_block</b>: Location Blacklist.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom_response</b>: legacy custom response.</para>
+        /// </description></item>
+        /// <item><description><para><b>cc</b>: HTTP flood mitigation.</para>
+        /// </description></item>
+        /// <item><description><para><b>tamperproof</b>: web tamper proofing.</para>
+        /// </description></item>
+        /// <item><description><para><b>dlp</b>: information leak prevention.</para>
+        /// </description></item>
+        /// <item><description><para><b>spike_throttle</b>: peak traffic throttling.</para>
+        /// </description></item>
+        /// <item><description><para><b>bot_manager</b>: bot management.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>When the protection rule type <b>DefenseType</b> is set to <b>resource</b>, valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>account_identifier</b>: account extraction.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom_response</b>: new version of custom response.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf_codec</b>: decoding.</para>
+        /// </description></item>
+        /// <item><description><para><b>websdk</b>: WebSDK integration.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>When the protection rule type <b>DefenseType</b> is set to <b>global</b>, valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>regular_custom</b>: custom regular expression.</para>
+        /// </description></item>
+        /// <item><description><para><b>address_book</b>: address book.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom_response</b>: new version of custom response.</para>
+        /// <remarks>
+        /// <para> The custom response in global configurations can be referenced by protected objects or rules. When custom response rules are referenced at different levels, the effective priority is: rule level &gt; protected object level &gt; default page.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +83,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The WAF instance ID.</para>
+        /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +127,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The rule configuration content, which is a string converted from a JSON object constructed with a series of parameters.</para>
+        /// <para>The rule configuration content, which is a JSON string constructed from a series of parameters.</para>
+        /// <remarks>
+        /// <para> The specific parameters vary depending on the <b>mitigation setting type</b> (<b>DefenseScene</b>) that you specify. For more information, refer to <b>Protection rule parameter description</b>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +141,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template for the protection rule to create.</para>
+        /// <para>The ID of the protection template for which you want to create a protection rule.</para>
+        /// <remarks>
+        /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>template</b>.
+        /// There is an upper limit on the number of rules that can be created in a protection template. For more information, see <b>Rule quantity limits</b>. If the number of rules has reached the upper limit, you can call the <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a> operation to create a new protection template. You can also call the <a href="https://help.aliyun.com/document_detail/461422.html">ModifyDefenseRule</a> operation to modify an existing rule.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1122</para>

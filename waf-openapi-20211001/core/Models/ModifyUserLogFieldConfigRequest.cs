@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyUserLogFieldConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery type. Valid value:</para>
+        /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sls</b>: Simple Log Service.</description></item>
         /// </list>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The extended configuration for log delivery, in JSON format.</para>
+        /// <para>The extended configuration for log delivery. The value is a JSON string constructed from a set of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the description of the <b>ExtendConfig</b> parameter.</para>
+        /// <para>For more information, see the <b>Log delivery extended configuration</b> parameter description.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,13 +36,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ExtendConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of log fields to deliver. Use the \<c>a,b,c,...\\</c> format.</para>
+        /// <para>The list of log fields to deliver. Specify the fields in the &quot;a,b,c,...&quot; format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You must include all required log fields. Call the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to view the log fields that WAF supports.</para>
-        /// </description></item>
-        /// <item><description><para>If the log fields include <b>request_header</b>, use the <b>ExtendConfig</b> parameter to specify the request headers to deliver.</para>
-        /// </description></item>
+        /// <item><description>All required log fields must be included. You can invoke the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to query the log fields supported by Simple Log Service for WAF. </description></item>
+        /// <item><description>If the log fields include <b>request_header</b>, use the <b>delivery extension configuration</b> (<b>ExtendConfig</b>) parameter to specify the request headers to deliver.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -55,9 +53,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string FieldList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the ID of your WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,9 +67,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The log delivery strategy, in JSON array format. You can specify multiple strategies.</para>
+        /// <para>The log delivery strategy. Multiple strategies are supported. The value is a JSON array string constructed from a set of parameters.</para>
         /// <remarks>
-        /// <para>For more information, see the description of the <b>LogDeliveryStrategy</b> parameter.</para>
+        /// <para>For more information, see the <b>Log delivery strategy</b> parameter description.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LogDeliveryStrategy { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

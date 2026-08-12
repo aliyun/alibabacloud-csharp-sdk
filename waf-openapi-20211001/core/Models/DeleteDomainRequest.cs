@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The domain name that has been connected to WAF.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>Domain</b> and <b>DomainId</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The domain name ID.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>Domain</b> and <b>DomainId</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></para>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
