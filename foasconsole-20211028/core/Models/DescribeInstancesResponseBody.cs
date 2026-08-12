@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the instance group.</para>
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
@@ -26,6 +29,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string AskClusterId { get; set; }
 
             /// <summary>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>POST: pay-as-you-go.</description></item>
+            /// <item><description>PRE: subscription.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PRE</para>
             /// </summary>
@@ -140,6 +149,15 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The cluster status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CREATING: Being created.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>DISABLE: Invalid.</description></item>
+            /// <item><description>DELETING: Being deleted.</description></item>
+            /// <item><description>DELETED: Deleted.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -228,6 +246,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public bool? Elastic { get; set; }
 
             /// <summary>
+            /// <para>The elastic order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f-cn-e3afbd321</para>
             /// </summary>
@@ -341,14 +361,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>f-cn-zvp2q0zik06</para>
+            /// <para>f-cn-zvp2q0z****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vvp1</para>
             /// </summary>
@@ -361,6 +385,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string MonitorType { get; set; }
 
             /// <summary>
+            /// <para>The order status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NOT_INIT: The order is placed but components are not deployed.</description></item>
+            /// <item><description>NORMAL: Normal.</description></item>
+            /// <item><description>CEASE: Expired.</description></item>
+            /// <item><description>RELEASE: Overdue.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
             /// </summary>
@@ -395,6 +427,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The region of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -403,6 +437,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Region { get; set; }
 
             /// <summary>
+            /// <para>The time when the instance was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1629879567394</para>
             /// </summary>
@@ -411,6 +447,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public long? ResourceCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1637337600000</para>
             /// </summary>
@@ -423,18 +461,25 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>b3690a1655da47</para>
+            /// <para>b3690a1655****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
+            /// <summary>
+            /// <para>The resource specification information.</para>
+            /// </summary>
             [NameInMap("ResourceSpec")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesResourceSpec ResourceSpec { get; set; }
             public class DescribeInstancesResponseBodyInstancesResourceSpec : TeaModel {
                 /// <summary>
+                /// <para>The number of CPUs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -443,6 +488,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
+                /// <para>The configured memory size.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>40</para>
                 /// </summary>
@@ -452,6 +499,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <para>The storage information.</para>
+            /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesStorage Storage { get; set; }
@@ -464,11 +514,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public string OrderState { get; set; }
 
+                /// <summary>
+                /// <para>The OSS storage information.</para>
+                /// </summary>
                 [NameInMap("Oss")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesStorageOss Oss { get; set; }
                 public class DescribeInstancesResponseBodyInstancesStorageOss : TeaModel {
                     /// <summary>
+                    /// <para>The name of the OSS bucket.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>oss_flink</para>
                     /// </summary>
@@ -488,11 +543,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            [NameInMap("SupportDisasterRecoveryDrill")]
+            [Validation(Required=false)]
+            public bool? SupportDisasterRecoveryDrill { get; set; }
+
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesTags> Tags { get; set; }
             public class DescribeInstancesResponseBodyInstancesTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>flink</para>
                 /// </summary>
@@ -501,6 +565,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -511,13 +577,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The ID of the user to whom the instance belongs.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1838996687368452</para>
+            /// <para>183899668736****</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }
 
+            /// <summary>
+            /// <para>The vSwitch IDs.</para>
+            /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
@@ -561,6 +632,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The VPC ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze9*******nxfmfcdi</para>
             /// </summary>
@@ -599,6 +672,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
+            /// <para>The zone ID of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-g</para>
             /// </summary>
@@ -609,6 +684,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -617,6 +694,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of instances per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -625,14 +704,22 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>C8DF2A5B-6FBA-5651-A3D4-960F36640E6B</para>
+        /// <para>C8DF2A5B-6FBA-5651-A3D4-960F3664****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -641,6 +728,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>
@@ -649,6 +738,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

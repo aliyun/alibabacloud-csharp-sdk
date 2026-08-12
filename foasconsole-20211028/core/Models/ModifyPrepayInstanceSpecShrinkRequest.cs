@@ -42,6 +42,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaZoneId { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +53,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +64,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The resource specification information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]

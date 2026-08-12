@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>是否成功</para>
+        /// <para>Is successful</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

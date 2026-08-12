@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyPrepayNamespaceSpecRequest : TeaModel {
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The namespace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The namespace resource details.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public ModifyPrepayNamespaceSpecRequestResourceSpec ResourceSpec { get; set; }
         public class ModifyPrepayNamespaceSpecRequestResourceSpec : TeaModel {
             /// <summary>
+            /// <para>The number of CPUs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
+            /// <para>The memory size. Unit: GB.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

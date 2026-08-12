@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The namespace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The resource specifications.</para>
+        /// </summary>
         [NameInMap("ResourceSpec")]
         [Validation(Required=false)]
         public string ResourceSpecShrink { get; set; }

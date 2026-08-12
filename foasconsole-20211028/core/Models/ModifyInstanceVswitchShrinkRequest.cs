@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyInstanceVswitchShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The vSwitch IDs in the secondary zone for zone-disaster recovery. This parameter is required if zone-disaster recovery is enabled for your workspace.</para>
+        /// </summary>
         [NameInMap("HaVSwitchIds")]
         [Validation(Required=false)]
         public string HaVSwitchIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,6 +27,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the vSwitches to use after the modification.</para>
+        /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public string VSwitchIdsShrink { get; set; }

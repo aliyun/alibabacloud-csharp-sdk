@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The number of subscription periods.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The subscription period.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +47,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

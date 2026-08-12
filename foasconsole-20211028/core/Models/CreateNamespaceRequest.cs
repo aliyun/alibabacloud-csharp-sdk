@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The namespace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +50,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The resource specifications.</para>
+        /// </summary>
         [NameInMap("ResourceSpec")]
         [Validation(Required=false)]
         public CreateNamespaceRequestResourceSpec ResourceSpec { get; set; }
         public class CreateNamespaceRequestResourceSpec : TeaModel {
             /// <summary>
+            /// <para>The number of CPUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -60,6 +68,11 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
+            /// <para>The memory size. Unit: GB.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>120</para>
             /// </summary>

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class QueryModifyInstancePriceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to select zone-disaster recovery resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Ha")]
         [Validation(Required=false)]
         public bool? Ha { get; set; }
 
         /// <summary>
+        /// <para>The zone-disaster recovery resource description.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaResourceSpecShrink { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch group for the zone-disaster recovery secondary zone.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaVSwitchIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +55,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +66,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The resource specifications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]

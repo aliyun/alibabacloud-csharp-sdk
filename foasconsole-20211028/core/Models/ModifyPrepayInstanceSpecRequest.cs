@@ -52,6 +52,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaZoneId { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +63,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +74,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The resource specification information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]
@@ -79,6 +82,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public ModifyPrepayInstanceSpecRequestResourceSpec ResourceSpec { get; set; }
         public class ModifyPrepayInstanceSpecRequestResourceSpec : TeaModel {
             /// <summary>
+            /// <para>The number of CPUs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -89,6 +93,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
+            /// <para>The memory size.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

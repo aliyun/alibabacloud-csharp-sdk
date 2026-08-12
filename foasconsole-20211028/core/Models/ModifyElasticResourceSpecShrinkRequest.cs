@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyElasticResourceSpecShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sc_flinkserverless_public_cn-7e22ae5sess</para>
+        /// <para>sc_flinkserverless_public_cn-7e22ae****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The maximum pay-as-you-go resource specifications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]

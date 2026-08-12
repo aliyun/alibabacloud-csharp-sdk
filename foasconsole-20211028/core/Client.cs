@@ -18,7 +18,29 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "central";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"},
+                {"cn-wulanchabu", "foasconsole.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "foasconsole.cn-beijing.aliyuncs.com"},
+                {"cn-shanghai", "foasconsole.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "foasconsole.cn-hongkong.aliyuncs.com"},
+                {"cn-zhangjiakou", "foasconsole.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "foasconsole.cn-shenzhen.aliyuncs.com"},
+                {"ap-northeast-1", "foasconsole.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "foasconsole.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "foasconsole.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "foasconsole.ap-southeast-5.aliyuncs.com"},
+                {"cn-hangzhou", "foasconsole.cn-hangzhou.aliyuncs.com"},
+                {"us-east-1", "foasconsole.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "foasconsole.eu-west-1.aliyuncs.com"},
+                {"us-west-1", "foasconsole.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "foasconsole.eu-central-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "foasconsole.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "foasconsole.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "foasconsole.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("foasconsole", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +61,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通弹性计算</para>
+        /// <para>Converts a subscription instance to a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/hybrid-pricing">pricing</a> of hybrid billing for Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConvertHybridInstanceRequest
@@ -95,8 +122,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通弹性计算</para>
+        /// <para>Converts a subscription instance to a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/hybrid-pricing">pricing</a> of hybrid billing for Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConvertHybridInstanceRequest
@@ -151,8 +183,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通弹性计算</para>
+        /// <para>Converts a subscription instance to a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/hybrid-pricing">pricing</a> of hybrid billing for Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertHybridInstanceRequest
@@ -169,8 +206,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通弹性计算</para>
+        /// <para>Converts a subscription instance to a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/hybrid-pricing">pricing</a> of hybrid billing for Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertHybridInstanceRequest
@@ -187,8 +229,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Converts a pay-as-you-go workspace to a subscription workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-pay-as-you-go-to-subscription">pricing</a> of fully managed Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConvertInstanceRequest
@@ -263,8 +310,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Converts a pay-as-you-go workspace to a subscription workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-pay-as-you-go-to-subscription">pricing</a> of fully managed Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConvertInstanceRequest
@@ -339,8 +391,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Converts a pay-as-you-go workspace to a subscription workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-pay-as-you-go-to-subscription">pricing</a> of fully managed Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertInstanceRequest
@@ -357,8 +414,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Converts a pay-as-you-go workspace to a subscription workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-pay-as-you-go-to-subscription">pricing</a> of fully managed Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertInstanceRequest
@@ -375,8 +437,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from subscription to pay-as-you-go.</para>
+        /// <para>Converts a subscription instance to pay-as-you-go.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-subscription-to-pay-as-you-go">billing methods and pricing</a> of Alibaba Cloud Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertPrepayInstanceRequest
@@ -421,8 +488,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from subscription to pay-as-you-go.</para>
+        /// <para>Converts a subscription instance to pay-as-you-go.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-subscription-to-pay-as-you-go">billing methods and pricing</a> of Alibaba Cloud Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertPrepayInstanceRequest
@@ -467,8 +539,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from subscription to pay-as-you-go.</para>
+        /// <para>Converts a subscription instance to pay-as-you-go.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-subscription-to-pay-as-you-go">billing methods and pricing</a> of Alibaba Cloud Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertPrepayInstanceRequest
@@ -485,8 +562,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a workspace from subscription to pay-as-you-go.</para>
+        /// <para>Converts a subscription instance to pay-as-you-go.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/flink/product-overview/switch-from-subscription-to-pay-as-you-go">billing methods and pricing</a> of Alibaba Cloud Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConvertPrepayInstanceRequest
@@ -503,8 +585,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Creates a subscription or pay-as-you-go fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateInstanceRequest
@@ -647,8 +734,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Creates a subscription or pay-as-you-go fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateInstanceRequest
@@ -791,8 +883,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Creates a subscription or pay-as-you-go fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -809,8 +906,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription workspace or a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Creates a subscription or pay-as-you-go fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -827,7 +929,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace in a Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -891,7 +993,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace in a Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -955,7 +1057,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace in a Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -973,7 +1075,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a namespace in a Realtime Compute for Apache Flink workspace.</para>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -991,8 +1093,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Releases a pay-as-you-go Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/refund-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInstanceRequest
@@ -1037,8 +1144,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Releases a pay-as-you-go Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/refund-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInstanceRequest
@@ -1083,8 +1195,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Releases a pay-as-you-go Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/refund-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInstanceRequest
@@ -1101,8 +1218,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Releases a pay-as-you-go Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/refund-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInstanceRequest
@@ -1119,7 +1241,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Deletes a project workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1169,7 +1291,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Deletes a project workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1219,7 +1341,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Deletes a project workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1237,7 +1359,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Deletes a project workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1255,7 +1377,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</para>
+        /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1299,7 +1421,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</para>
+        /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1343,7 +1465,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</para>
+        /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1361,7 +1483,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more Realtime Compute for Apache Flink workspaces.</para>
+        /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1379,7 +1501,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace that belongs to a workspace.</para>
+        /// <para>Queries the namespace information of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1423,7 +1545,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace that belongs to a workspace.</para>
+        /// <para>Queries the namespace information of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1467,7 +1589,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace that belongs to a workspace.</para>
+        /// <para>Queries the namespace information of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1485,7 +1607,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a namespace that belongs to a workspace.</para>
+        /// <para>Queries the namespace information of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1503,12 +1625,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</para>
+        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeSupportedRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1536,12 +1655,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</para>
+        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeSupportedRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1569,7 +1685,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</para>
+        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1583,7 +1699,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are available in which Realtime Compute for Apache Flink is supported.</para>
+        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1597,7 +1713,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the zones that are supported by Realtime Compute for Apache Flink.</para>
+        /// <para>Retrieves information about zones that are available for purchase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1635,7 +1751,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the zones that are supported by Realtime Compute for Apache Flink.</para>
+        /// <para>Retrieves information about zones that are available for purchase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1673,7 +1789,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the zones that are supported by Realtime Compute for Apache Flink.</para>
+        /// <para>Retrieves information about zones that are available for purchase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1807,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the zones that are supported by Realtime Compute for Apache Flink.</para>
+        /// <para>Retrieves information about zones that are available for purchase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1709,7 +1825,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</para>
+        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1767,7 +1883,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</para>
+        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1825,7 +1941,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</para>
+        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1843,7 +1959,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of specified resources. You can query the key of a tag by tag value, or query the value of a tag by tag key. You can also obtain information about all tags that you use in a workspace in the console of fully managed Flink.</para>
+        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1861,8 +1977,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对按量弹性实例修改resource quota</para>
+        /// <para>Modifies the maximum pay-as-you-go resource limit for a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyElasticResourceSpecRequest
@@ -1917,8 +2038,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对按量弹性实例修改resource quota</para>
+        /// <para>Modifies the maximum pay-as-you-go resource limit for a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyElasticResourceSpecRequest
@@ -1973,8 +2099,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对按量弹性实例修改resource quota</para>
+        /// <para>Modifies the maximum pay-as-you-go resource limit for a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticResourceSpecRequest
@@ -1991,8 +2122,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对按量弹性实例修改resource quota</para>
+        /// <para>Modifies the maximum pay-as-you-go resource limit for a hybrid billing instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticResourceSpecRequest
@@ -2009,8 +2145,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scale in or out a workspace to reconfigure resources for the workspace.</para>
+        /// <para>Scales up or scales down the resources of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceSpecRequest
@@ -2093,8 +2234,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scale in or out a workspace to reconfigure resources for the workspace.</para>
+        /// <para>Scales up or scales down the resources of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceSpecRequest
@@ -2177,8 +2323,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scale in or out a workspace to reconfigure resources for the workspace.</para>
+        /// <para>Scales up or scales down the resources of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSpecRequest
@@ -2195,8 +2346,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scale in or out a workspace to reconfigure resources for the workspace.</para>
+        /// <para>Scales up or scales down the resources of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/en/flink/user-guide/reconfigure-resources#task-2507532">billing methods</a> and pricing of Realtime Compute for Apache Flink before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSpecRequest
@@ -2217,8 +2373,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群交换机</para>
+        /// <para>Modifies the vSwitches available to a Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the restrictions on <a href="https://www.alibabacloud.com/help/en/flink/user-guide/modify-a-vswitch">modifying vSwitches</a> in Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceVswitchRequest
@@ -2283,8 +2444,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群交换机</para>
+        /// <para>Modifies the vSwitches available to a Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the restrictions on <a href="https://www.alibabacloud.com/help/en/flink/user-guide/modify-a-vswitch">modifying vSwitches</a> in Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceVswitchRequest
@@ -2349,8 +2515,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群交换机</para>
+        /// <para>Modifies the vSwitches available to a Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the restrictions on <a href="https://www.alibabacloud.com/help/en/flink/user-guide/modify-a-vswitch">modifying vSwitches</a> in Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceVswitchRequest
@@ -2373,8 +2544,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群交换机</para>
+        /// <para>Modifies the vSwitches available to a Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this operation, make sure that you fully understand the restrictions on <a href="https://www.alibabacloud.com/help/en/flink/user-guide/modify-a-vswitch">modifying vSwitches</a> in Realtime Compute for Apache Flink.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceVswitchRequest
@@ -2393,8 +2569,15 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改namespace资源，包含按量和包年包月、混合计费</para>
+        /// <para>Modifies the resource configurations of a project namespace in a pay-as-you-go, subscription, or hybrid billing workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When calling this operation, note the following: - The order status must be normal, that is, OrderType=NORMAL. - When decreasing the quota, the specified resource specification quantity cannot be less than the quantity already in use. For details about the project resource specifications before and after the change, call <a href="https://help.aliyun.com/document_detail/323441.html">DescribeNamespaces</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyNamespaceSpecV2Request
@@ -2467,8 +2650,15 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改namespace资源，包含按量和包年包月、混合计费</para>
+        /// <para>Modifies the resource configurations of a project namespace in a pay-as-you-go, subscription, or hybrid billing workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When calling this operation, note the following: - The order status must be normal, that is, OrderType=NORMAL. - When decreasing the quota, the specified resource specification quantity cannot be less than the quantity already in use. For details about the project resource specifications before and after the change, call <a href="https://help.aliyun.com/document_detail/323441.html">DescribeNamespaces</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyNamespaceSpecV2Request
@@ -2541,8 +2731,15 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改namespace资源，包含按量和包年包月、混合计费</para>
+        /// <para>Modifies the resource configurations of a project namespace in a pay-as-you-go, subscription, or hybrid billing workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When calling this operation, note the following: - The order status must be normal, that is, OrderType=NORMAL. - When decreasing the quota, the specified resource specification quantity cannot be less than the quantity already in use. For details about the project resource specifications before and after the change, call <a href="https://help.aliyun.com/document_detail/323441.html">DescribeNamespaces</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyNamespaceSpecV2Request
@@ -2559,8 +2756,15 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改namespace资源，包含按量和包年包月、混合计费</para>
+        /// <para>Modifies the resource configurations of a project namespace in a pay-as-you-go, subscription, or hybrid billing workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When calling this operation, note the following: - The order status must be normal, that is, OrderType=NORMAL. - When decreasing the quota, the specified resource specification quantity cannot be less than the quantity already in use. For details about the project resource specifications before and after the change, call <a href="https://help.aliyun.com/document_detail/323441.html">DescribeNamespaces</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyNamespaceSpecV2Request
@@ -2581,8 +2785,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</para>
+        /// <para>Modifies the compute resource specifications of a subscription Realtime Compute for Apache Flink instance. If the new specifications are smaller than the current specifications, a scale-in operation is performed. If the new specifications are larger than the current specifications, a scale-out operation is performed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/subscription">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyPrepayInstanceSpecRequest
@@ -2667,8 +2876,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</para>
+        /// <para>Modifies the compute resource specifications of a subscription Realtime Compute for Apache Flink instance. If the new specifications are smaller than the current specifications, a scale-in operation is performed. If the new specifications are larger than the current specifications, a scale-out operation is performed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/subscription">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyPrepayInstanceSpecRequest
@@ -2753,8 +2967,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</para>
+        /// <para>Modifies the compute resource specifications of a subscription Realtime Compute for Apache Flink instance. If the new specifications are smaller than the current specifications, a scale-in operation is performed. If the new specifications are larger than the current specifications, a scale-out operation is performed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/subscription">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -2777,8 +2996,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the computing resources of a subscription fully managed Flink workspace. If the number of computing resources after the modification is less than the current number of computing resources, the scale-in operation is performed. If the number of computing resources after the modification is larger than the current number of computing resources, the scale-out operation is performed.</para>
+        /// <para>Modifies the compute resource specifications of a subscription Realtime Compute for Apache Flink instance. If the new specifications are smaller than the current specifications, a scale-in operation is performed. If the new specifications are larger than the current specifications, a scale-out operation is performed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/subscription">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -2801,7 +3025,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource configurations of a namespace in a subscription workspace.</para>
+        /// <para>Modifies the specifications of a namespace in a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2867,7 +3091,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource configurations of a namespace in a subscription workspace.</para>
+        /// <para>Modifies the specifications of a namespace in a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2933,7 +3157,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource configurations of a namespace in a subscription workspace.</para>
+        /// <para>Modifies the specifications of a namespace in a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2957,7 +3181,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource configurations of a namespace in a subscription workspace.</para>
+        /// <para>Modifies the specifications of a namespace in a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2977,7 +3201,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Queries the price for converting a pay-as-you-go instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3053,7 +3277,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Queries the price for converting a pay-as-you-go instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3129,7 +3353,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Queries the price for converting a pay-as-you-go instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3147,7 +3371,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of switching the billing method of a workspace from pay-as-you-go to subscription.</para>
+        /// <para>Queries the price for converting a pay-as-you-go instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3165,7 +3389,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</para>
+        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3211,7 +3435,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</para>
+        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3257,7 +3481,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</para>
+        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3275,7 +3499,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the estimated refund after the billing method of your Realtime Compute for Apache Flink workspace is changed from subscription to pay-as-you-go. After you change the billing method of your workspace to pay-as-you-go, bills are generated on an hourly basis.</para>
+        /// <para>Queries the estimated refund amount after converting your Flink instance from subscription to pay-as-you-go. After the conversion, your usage is metered hourly and bills are generated accordingly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3293,7 +3517,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of creating a workspace.</para>
+        /// <para>Retrieves the price of a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3413,7 +3637,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of creating a workspace.</para>
+        /// <para>Retrieves the price of a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3533,7 +3757,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of creating a workspace.</para>
+        /// <para>Retrieves the price of a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3775,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of creating a workspace.</para>
+        /// <para>Retrieves the price of a workspace for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3569,7 +3793,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of modifying the resource configuration of a workspace.</para>
+        /// <para>Queries the price for upgrading or downgrading an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3653,7 +3877,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of modifying the resource configuration of a workspace.</para>
+        /// <para>Queries the price for upgrading or downgrading an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3737,7 +3961,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of modifying the resource configuration of a workspace.</para>
+        /// <para>Queries the price for upgrading or downgrading an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3755,7 +3979,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of modifying the resource configuration of a workspace.</para>
+        /// <para>Queries the price for upgrading or downgrading an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3773,7 +3997,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of renewing a subscription workspace.</para>
+        /// <para>Queries the renewal price of a subscription workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3835,7 +4059,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of renewing a subscription workspace.</para>
+        /// <para>Queries the renewal price of a subscription workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3897,7 +4121,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of renewing a subscription workspace.</para>
+        /// <para>Queries the renewal price of a subscription workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3915,7 +4139,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fee of renewing a subscription workspace.</para>
+        /// <para>Queries the renewal price of a subscription workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3933,8 +4157,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewInstanceRequest
@@ -3995,8 +4224,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewInstanceRequest
@@ -4057,8 +4291,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewInstanceRequest
@@ -4075,8 +4314,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription workspace of Realtime Compute for Apache Flink.</para>
+        /// <para>Renews a subscription Realtime Compute for Apache Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewInstanceRequest
@@ -4093,7 +4337,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to specified resources.</para>
+        /// <para>Call this API to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4391,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to specified resources.</para>
+        /// <para>Call this API to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4201,7 +4445,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to specified resources.</para>
+        /// <para>Call this API to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4219,7 +4463,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to specified resources.</para>
+        /// <para>Call this API to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4237,7 +4481,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified resources.</para>
+        /// <para>Deletes resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4295,7 +4539,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified resources.</para>
+        /// <para>Deletes resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4353,7 +4597,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified resources.</para>
+        /// <para>Deletes resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4371,7 +4615,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from specified resources.</para>
+        /// <para>Deletes resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">

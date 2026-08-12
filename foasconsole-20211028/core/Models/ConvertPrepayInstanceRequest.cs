@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ConvertPrepayInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>f-cn-wwo36qj4g06</para>
+        /// <para>f-cn-wwo36qj*****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

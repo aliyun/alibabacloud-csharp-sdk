@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>List of order instance IDs</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Resource type. Set this parameter to vvpinstance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>List of tags. You can specify up to 20 tags</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>Tag key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>Tag value</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tag</para>
             /// </summary>

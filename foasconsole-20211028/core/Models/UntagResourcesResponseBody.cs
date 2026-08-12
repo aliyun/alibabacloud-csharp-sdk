@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F59597FC-CD05-536D-B75B-6F45B8CC8539</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The tag request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>154FT</para>
         /// </summary>

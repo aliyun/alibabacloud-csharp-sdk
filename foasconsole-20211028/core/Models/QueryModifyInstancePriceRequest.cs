@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class QueryModifyInstancePriceRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to select zone-disaster recovery resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Ha")]
         [Validation(Required=false)]
         public bool? Ha { get; set; }
 
         /// <summary>
+        /// <para>The zone-disaster recovery resource description.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -21,10 +29,22 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public QueryModifyInstancePriceRequestHaResourceSpec HaResourceSpec { get; set; }
         public class QueryModifyInstancePriceRequestHaResourceSpec : TeaModel {
+            /// <summary>
+            /// <para>The number of CPUs for zone-disaster recovery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            /// <summary>
+            /// <para>The memory size for zone-disaster recovery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("MemoryGB")]
             [Validation(Required=false)]
             public int? MemoryGB { get; set; }
@@ -32,6 +52,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         }
 
         /// <summary>
+        /// <para>The vSwitch group for the zone-disaster recovery secondary zone.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -40,6 +62,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<string> HaVSwitchIds { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +77,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +88,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The resource specifications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]
@@ -71,6 +96,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public QueryModifyInstancePriceRequestResourceSpec ResourceSpec { get; set; }
         public class QueryModifyInstancePriceRequestResourceSpec : TeaModel {
             /// <summary>
+            /// <para>The number of CPUs after the specification change.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,6 +107,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
+            /// <para>The memory size after the specification change.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ConvertInstanceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The number of subscription cycles.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>The order instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? IsAutoRenew { get; set; }
 
         /// <summary>
+        /// <para>The resource specifications of the namespace.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NamespaceResourceSpecs")]
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string NamespaceResourceSpecsShrink { get; set; }
 
         /// <summary>
+        /// <para>The subscription cycle.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +66,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
