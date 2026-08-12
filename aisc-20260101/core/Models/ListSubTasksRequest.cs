@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
 {
     public class ListSubTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The main task ID returned upon task submission.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>110146ac282314fe4f7cd11afc7540eb</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string RootTaskId { get; set; }
 
         /// <summary>
+        /// <para>The task type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SKILL_CHECK</para>
         /// </summary>
