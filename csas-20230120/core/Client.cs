@@ -12232,6 +12232,250 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of risk events under the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation performs paging query of risk events based on specified conditional criteria.</description></item>
+        /// <item><description><c>CurrentPage</c> and <c>PageSize</c> are required parameters that specify the current page number and the number of entries per page.</description></item>
+        /// <item><description>You can set parameters such as <c>RiskId</c>, <c>RiskScene</c>, and <c>RiskCategory</c> to perform exact or fuzzy queries for specific risk events.</description></item>
+        /// <item><description>The <c>Status</c> and <c>StatusList</c> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</description></item>
+        /// <item><description>Fuzzy matching is supported for <c>PolicyName</c> and <c>Username</c>.</description></item>
+        /// <item><description>The response includes the total number of risk events that match the query conditions and their details.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRiskItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskItemsResponse
+        /// </returns>
+        public ListRiskItemsResponse ListRiskItemsWithOptions(ListRiskItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskCategory))
+            {
+                query["RiskCategory"] = request.RiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskId))
+            {
+                query["RiskId"] = request.RiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskScene))
+            {
+                query["RiskScene"] = request.RiskScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRiskItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRiskItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of risk events under the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation performs paging query of risk events based on specified conditional criteria.</description></item>
+        /// <item><description><c>CurrentPage</c> and <c>PageSize</c> are required parameters that specify the current page number and the number of entries per page.</description></item>
+        /// <item><description>You can set parameters such as <c>RiskId</c>, <c>RiskScene</c>, and <c>RiskCategory</c> to perform exact or fuzzy queries for specific risk events.</description></item>
+        /// <item><description>The <c>Status</c> and <c>StatusList</c> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</description></item>
+        /// <item><description>Fuzzy matching is supported for <c>PolicyName</c> and <c>Username</c>.</description></item>
+        /// <item><description>The response includes the total number of risk events that match the query conditions and their details.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRiskItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskItemsResponse
+        /// </returns>
+        public async Task<ListRiskItemsResponse> ListRiskItemsWithOptionsAsync(ListRiskItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskCategory))
+            {
+                query["RiskCategory"] = request.RiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskId))
+            {
+                query["RiskId"] = request.RiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskScene))
+            {
+                query["RiskScene"] = request.RiskScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRiskItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRiskItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of risk events under the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation performs paging query of risk events based on specified conditional criteria.</description></item>
+        /// <item><description><c>CurrentPage</c> and <c>PageSize</c> are required parameters that specify the current page number and the number of entries per page.</description></item>
+        /// <item><description>You can set parameters such as <c>RiskId</c>, <c>RiskScene</c>, and <c>RiskCategory</c> to perform exact or fuzzy queries for specific risk events.</description></item>
+        /// <item><description>The <c>Status</c> and <c>StatusList</c> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</description></item>
+        /// <item><description>Fuzzy matching is supported for <c>PolicyName</c> and <c>Username</c>.</description></item>
+        /// <item><description>The response includes the total number of risk events that match the query conditions and their details.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRiskItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskItemsResponse
+        /// </returns>
+        public ListRiskItemsResponse ListRiskItems(ListRiskItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRiskItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of risk events under the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation performs paging query of risk events based on specified conditional criteria.</description></item>
+        /// <item><description><c>CurrentPage</c> and <c>PageSize</c> are required parameters that specify the current page number and the number of entries per page.</description></item>
+        /// <item><description>You can set parameters such as <c>RiskId</c>, <c>RiskScene</c>, and <c>RiskCategory</c> to perform exact or fuzzy queries for specific risk events.</description></item>
+        /// <item><description>The <c>Status</c> and <c>StatusList</c> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</description></item>
+        /// <item><description>Fuzzy matching is supported for <c>PolicyName</c> and <c>Username</c>.</description></item>
+        /// <item><description>The response includes the total number of risk events that match the query conditions and their details.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRiskItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskItemsResponse
+        /// </returns>
+        public async Task<ListRiskItemsResponse> ListRiskItemsAsync(ListRiskItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRiskItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists the software installed on a user device.</para>
         /// </summary>
         /// 
@@ -16940,6 +17184,206 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRegistrationPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the current handling status and conclusion of a specified risk event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</description></item>
+        /// <item><description>When <c>Status</c> is set to <c>Processed</c>, you must provide the <c>RiskConfirm</c> parameter to specify the manually confirmed risk conclusion.</description></item>
+        /// <item><description>If <c>Status</c> is <c>Unprocess</c> or <c>Processing</c>, do not include the <c>RiskConfirm</c> parameter.</description></item>
+        /// <item><description>The <c>RiskScene</c> parameter is optional. If not provided, the system automatically populates it based on <c>RiskId</c>.</description></item>
+        /// <item><description>The <c>RiskConfirmDesc</c> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRiskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRiskStatusResponse
+        /// </returns>
+        public UpdateRiskStatusResponse UpdateRiskStatusWithOptions(UpdateRiskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirm))
+            {
+                body["RiskConfirm"] = request.RiskConfirm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirmDesc))
+            {
+                body["RiskConfirmDesc"] = request.RiskConfirmDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskId))
+            {
+                body["RiskId"] = request.RiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskScene))
+            {
+                body["RiskScene"] = request.RiskScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRiskStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRiskStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the current handling status and conclusion of a specified risk event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</description></item>
+        /// <item><description>When <c>Status</c> is set to <c>Processed</c>, you must provide the <c>RiskConfirm</c> parameter to specify the manually confirmed risk conclusion.</description></item>
+        /// <item><description>If <c>Status</c> is <c>Unprocess</c> or <c>Processing</c>, do not include the <c>RiskConfirm</c> parameter.</description></item>
+        /// <item><description>The <c>RiskScene</c> parameter is optional. If not provided, the system automatically populates it based on <c>RiskId</c>.</description></item>
+        /// <item><description>The <c>RiskConfirmDesc</c> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRiskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRiskStatusResponse
+        /// </returns>
+        public async Task<UpdateRiskStatusResponse> UpdateRiskStatusWithOptionsAsync(UpdateRiskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirm))
+            {
+                body["RiskConfirm"] = request.RiskConfirm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskConfirmDesc))
+            {
+                body["RiskConfirmDesc"] = request.RiskConfirmDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskId))
+            {
+                body["RiskId"] = request.RiskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskScene))
+            {
+                body["RiskScene"] = request.RiskScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRiskStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRiskStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the current handling status and conclusion of a specified risk event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</description></item>
+        /// <item><description>When <c>Status</c> is set to <c>Processed</c>, you must provide the <c>RiskConfirm</c> parameter to specify the manually confirmed risk conclusion.</description></item>
+        /// <item><description>If <c>Status</c> is <c>Unprocess</c> or <c>Processing</c>, do not include the <c>RiskConfirm</c> parameter.</description></item>
+        /// <item><description>The <c>RiskScene</c> parameter is optional. If not provided, the system automatically populates it based on <c>RiskId</c>.</description></item>
+        /// <item><description>The <c>RiskConfirmDesc</c> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRiskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRiskStatusResponse
+        /// </returns>
+        public UpdateRiskStatusResponse UpdateRiskStatus(UpdateRiskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRiskStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the current handling status and conclusion of a specified risk event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation allows you to update the handling status of a specific risk event under your Alibaba Cloud account.</description></item>
+        /// <item><description>When <c>Status</c> is set to <c>Processed</c>, you must provide the <c>RiskConfirm</c> parameter to specify the manually confirmed risk conclusion.</description></item>
+        /// <item><description>If <c>Status</c> is <c>Unprocess</c> or <c>Processing</c>, do not include the <c>RiskConfirm</c> parameter.</description></item>
+        /// <item><description>The <c>RiskScene</c> parameter is optional. If not provided, the system automatically populates it based on <c>RiskId</c>.</description></item>
+        /// <item><description>The <c>RiskConfirmDesc</c> field provides additional explanation or remarks for the handling decision. The length must be 1 to 128 characters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRiskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRiskStatusResponse
+        /// </returns>
+        public async Task<UpdateRiskStatusResponse> UpdateRiskStatusAsync(UpdateRiskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRiskStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
