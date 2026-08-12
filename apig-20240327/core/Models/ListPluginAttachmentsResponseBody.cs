@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPluginAttachmentsResponseBodyDataItems> Items { get; set; }
             public class ListPluginAttachmentsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
+                /// <para>The plugin mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GatewayRoute</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AttachResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the plug-in mount is enabled.</para>
+                /// <para>Indicates whether the plugin mount is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public ParentResourceInfo ParentResourceInfo { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in mount ID.</para>
+                /// <para>The plugin mount ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pa-d0j9t5em1hkncrlo51mg</para>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginAttachmentId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in type information.</para>
+                /// <para>The plugin type information.</para>
                 /// </summary>
                 [NameInMap("pluginClassInfo")]
                 [Validation(Required=false)]
                 public PluginClassInfo PluginClassInfo { get; set; }
 
                 /// <summary>
-                /// <para>The Base64-encoded content of the original plug-in configuration.</para>
+                /// <para>The Base64-encoded content of the original plugin configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginConfig { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pl-cvu6r4um1hko3b3ti0a0</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

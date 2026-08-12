@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ApiId { get; set; }
 
             /// <summary>
-            /// <para>The list of assembly sources. This parameter is required when type is AssemblyMCP.</para>
+            /// <para>The list of assembled sources. This parameter is required when type is AssemblyMCP.</para>
             /// </summary>
             [NameInMap("assembledSources")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试专用MCP Server</para>
+            /// <para>Test MCP Server</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The HTTP-to-MCP configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MCP Server配置 base64</para>
+            /// <para>MCP Server configuration base64</para>
             /// </summary>
             [NameInMap("mcpServerConfig")]
             [Validation(Required=false)]

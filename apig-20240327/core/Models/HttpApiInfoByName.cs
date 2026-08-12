@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiInfoByName : TeaModel {
         /// <summary>
-        /// <para>网关Id</para>
-        /// 
         /// <b>Example:</b>
         /// <para>gw-xx</para>
         /// </summary>

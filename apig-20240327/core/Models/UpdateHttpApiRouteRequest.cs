@@ -34,6 +34,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class UpdateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured in the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qwen-plus</para>
+                /// </summary>
+                [NameInMap("modelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
                 /// <para>The service port. Do not specify this parameter for dynamic ports.</para>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>商品中心服务路由</para>
+        /// <para>Product center service route</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ImportHttpApiResponseBodyDataDryRunInfo DryRunInfo { get; set; }
             public class ImportHttpApiResponseBodyDataDryRunInfo : TeaModel {
                 /// <summary>
-                /// <para>The error messages. If error messages are not empty, the API cannot be successfully imported.</para>
+                /// <para>The error messages. If the error messages are not empty, the API cannot be imported successfully.</para>
                 /// </summary>
                 [NameInMap("errorMessages")]
                 [Validation(Required=false)]
                 public List<string> ErrorMessages { get; set; }
 
                 /// <summary>
-                /// <para>The information about the existing API. If this field is not empty, the import action updates this API.</para>
+                /// <para>The information about the existing API. If this field is not empty, the import action updates the existing API.</para>
                 /// </summary>
                 [NameInMap("existHttpApiInfo")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>数据结构定义有误。</para>
+                    /// <para>Invalid data structure definition</para>
                     /// </summary>
                     [NameInMap("errorMessage")]
                     [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>缺少响应定义。</para>
+                    /// <para>Missing response definition</para>
                     /// </summary>
                     [NameInMap("errorMessage")]
                     [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The list of routes that failed.</para>
+                /// <para>The list of routes that failed to be imported.</para>
                 /// </summary>
                 [NameInMap("failureRoutes")]
                 [Validation(Required=false)]
@@ -162,11 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> SuccessComponents { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Create: Create.</description></item>
-                    /// <item><description>Update: Update.</description></item>
-                    /// </list>
+                    /// <para>The action to be performed after the dry run.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Create</para>
@@ -195,11 +191,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> SuccessOperations { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Create: Create.</description></item>
-                    /// <item><description>Update: Update.</description></item>
-                    /// </list>
+                    /// <para>The action to be performed after the dry run.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Create</para>
@@ -248,7 +240,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> SuccessRoutes { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes : TeaModel {
                     /// <summary>
-                    /// <para>The action type.</para>
+                    /// <para>The operation type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Create</para>
@@ -270,7 +262,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The warning messages. If warning messages are not empty, some operations or data structures may not be imported successfully.</para>
+                /// <para>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</para>
                 /// </summary>
                 [NameInMap("warningMessages")]
                 [Validation(Required=false)]

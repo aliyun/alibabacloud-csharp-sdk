@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of the imported API. If not specified, the description is extracted from the API definition. Maximum length: 255 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试专用API</para>
+        /// <para>Test API</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable dry run mode. If enabled, only validation is performed without performing the actual import.</para>
+        /// <para>Specifies whether to perform a dry run. If enabled, only validation is performed without the actual import.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string McpRouteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the imported API. If not specified, the name is extracted from the API definition file. If the API name and version configuration already exist, this import updates the existing API definition based on the strategy field.</para>
+        /// <para>The name of the imported API. If not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, this import updates the existing API definition based on the strategy field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>import-test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded API definition that supports OAS 2.0 and OAS 3.0 specifications in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</para>
+        /// <para>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SpecContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the API definition file. The URL must be accessible from the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Currently, only API definition files stored on OSS are supported.</para>
+        /// <para>The download URL of the API definition file. The URL must be accessible over the Internet or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</para>
         /// </summary>
         [NameInMap("specFileUrl")]
         [Validation(Required=false)]
         public string SpecFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The OSS configuration.</para>
+        /// <para>The OSS information.</para>
         /// </summary>
         [NameInMap("specOssConfig")]
         [Validation(Required=false)]
@@ -134,12 +134,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The update strategy to use when the imported API name and version management match an existing API. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SpecFirst: the imported file takes priority. New operations are added and existing operations are updated. Operations not mentioned in the file remain unchanged.</description></item>
-        /// <item><description>SpecOnly: the imported file is used as the sole source of truth.</description></item>
-        /// <item><description>ExistFirst: the existing API takes priority. Only new operations are added. Existing operations are not updated.</description></item>
-        /// </list>
-        /// <para>Default value: ExistFirst.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExistFirst</para>
@@ -149,7 +143,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Strategy { get; set; }
 
         /// <summary>
-        /// <para>If this field is specified, this import updates the specified API instead of importing a new one or searching for an existing API based on the API name and version management configuration. The target API must be of the REST type.</para>
+        /// <para>If this field is specified, the import updates the specified API instead of importing a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-xxxx</para>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? DeployedCnt { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("cnt")]
         [Validation(Required=false)]
         public long? Cnt { get; set; }

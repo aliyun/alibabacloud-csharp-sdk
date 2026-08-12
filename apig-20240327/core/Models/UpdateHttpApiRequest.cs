@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The base path of the API. The value must start with a forward slash (/).</para>
+        /// <para>The API base path, which must start with /.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The description of the API.</para>
+        /// <para>The API description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>更新API描述</para>
+        /// <para>Updated API description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress class to listen on.</para>
+            /// <para>The Ingress Class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in the Ingress status.</para>
+            /// <para>Specifies whether to update the address in the Ingress Status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only update the configuration without triggering a redeployment. Set this parameter to true to update the configuration only.</para>
+        /// <para>Specifies whether to only modify the configuration without triggering redeployment. A value of true indicates that only the configuration is modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

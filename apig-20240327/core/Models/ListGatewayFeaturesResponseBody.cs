@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<ListGatewayFeaturesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayFeaturesResponseBodyDataItems : TeaModel {
+                [NameInMap("constraints")]
+                [Validation(Required=false)]
+                public ListGatewayFeaturesResponseBodyDataItemsConstraints Constraints { get; set; }
+                public class ListGatewayFeaturesResponseBodyDataItemsConstraints : TeaModel {
+                    [NameInMap("bodyMaxSizeLimit")]
+                    [Validation(Required=false)]
+                    public int? BodyMaxSizeLimit { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The parameter definition.</para>
                 /// </summary>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The plug-in mount point type. This parameter is not yet enabled.</para>
+        /// <para>The plugin mount point type. This parameter is not yet enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct8181um1hkiqns9f6e0</para>

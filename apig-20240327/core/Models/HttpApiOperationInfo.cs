@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The operation description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>获取用户信息</para>
+        /// <para>A example operation.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

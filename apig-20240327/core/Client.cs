@@ -10460,7 +10460,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation supports creating multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -10501,7 +10501,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation supports creating multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -10542,7 +10542,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation supports creating multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10562,7 +10562,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation supports creating multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11709,7 +11709,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11807,7 +11807,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11905,7 +11905,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11924,7 +11924,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14389,7 +14389,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API operations.</para>
+        /// <para>Retrieves the list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14483,7 +14483,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API operations.</para>
+        /// <para>Retrieves the list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14577,7 +14577,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API operations.</para>
+        /// <para>Retrieves the list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14596,7 +14596,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API operations.</para>
+        /// <para>Retrieves the list of API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15313,7 +15313,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plug-in mounts.</para>
+        /// <para>Retrieves the list of plugin mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15391,7 +15391,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plug-in mounts.</para>
+        /// <para>Retrieves the list of plugin mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15469,7 +15469,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plug-in mounts.</para>
+        /// <para>Retrieves the list of plugin mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15488,7 +15488,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plug-in mounts.</para>
+        /// <para>Retrieves the list of plugin mounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21275,7 +21275,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a route of an HttpApi.</para>
+        /// <para>Updates the route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21345,7 +21345,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a route of an HttpApi.</para>
+        /// <para>Updates the route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21415,7 +21415,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a route of an HttpApi.</para>
+        /// <para>Updates the route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21434,7 +21434,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a route of an HttpApi.</para>
+        /// <para>Updates the route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">

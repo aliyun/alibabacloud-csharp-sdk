@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendServiceName { get; set; }
 
         /// <summary>
-        /// <para>Filters the API list by a specific consumer authorization rule ID. The response only includes authorized APIs.</para>
+        /// <para>Filters the API list by a specific consumer authorization rule ID. The response includes only authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
-        /// <para>Filters route information by domain name ID.</para>
+        /// <para>The domain name ID used to filter route information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is for a deployment scenario.</para>
+        /// <para>Specifies whether this is a deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>Includes consumer authorization information in the response.</para>
+        /// <para>Specifies whether to include consumer authorization information in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyInfo { get; set; }
 
         /// <summary>
-        /// <para>Includes the authorization rule list of the specified consumer ID for each route in the response.</para>
+        /// <para>Specifies a consumer ID so that the response includes the authorization rule list for the specified consumer in each route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>Includes the mount information of the specified plug-in ID for each route in the response.</para>
+        /// <para>Specifies a plug-in ID so that the response includes the mount information of the specified plug-in in each route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

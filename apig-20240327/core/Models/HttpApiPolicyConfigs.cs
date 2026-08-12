@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Policy Enable</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Policy Type</para>
         /// 
         /// <b>Example:</b>
-        /// <para>K8S</para>
+        /// <para>AiCache</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

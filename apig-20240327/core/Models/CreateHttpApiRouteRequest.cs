@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The backend service scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SingleService: single service.</description></item>
-            /// <item><description>MultiServiceByRatio: multiple services with ratio-based canary release.</description></item>
-            /// <item><description>Mock: mock service.</description></item>
-            /// <item><description>Redirect: redirect service.</description></item>
+            /// <item><description>SingleService: Single service.</description></item>
+            /// <item><description>MultiServiceByRatio: Multiple services with ratio-based canary release.</description></item>
+            /// <item><description>Mock: Mock service.</description></item>
+            /// <item><description>Redirect: Redirect service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<CreateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class CreateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qwen-plus</para>
+                /// </summary>
+                [NameInMap("modelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
                 /// <para>The service port. Do not specify this parameter for dynamic ports.</para>
                 /// 
                 /// <b>Example:</b>
@@ -52,8 +62,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP.</description></item>
-                /// <item><description>HTTPS.</description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>HTTPS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The service version. This parameter is valid only in the tag-based scenario.</para>
+                /// <para>The service version. This parameter is valid only in the by-tag scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -97,18 +107,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The API deployment configurations.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户登录路由。</para>
+        /// <para>User login route</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -132,7 +145,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The route match rule.</para>
+        /// <para>The route match rules.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -168,9 +181,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The service protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP.</description></item>
-            /// <item><description>HTTP.</description></item>
-            /// <item><description>DUBBO.</description></item>
+            /// <item><description>TCP</description></item>
+            /// <item><description>HTTP</description></item>
+            /// <item><description>DUBBO</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
