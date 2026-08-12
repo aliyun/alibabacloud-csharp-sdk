@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementServicesRequest : TeaModel {
         /// <summary>
-        /// <para><b>The ID of the instance.</b></para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-test123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not currently in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>Filters results by name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-1</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is not currently in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,12 +50,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para><b>The sort order.</b> Valid values:</para>
+        /// <para>The sort order. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para>ASC: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC: descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +64,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para><b>The number of the page to return.</b></para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para><b>The number of entries to return on each page.</b></para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -76,12 +84,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para><b>The field to sort by.</b> Valid values:</para>
+        /// <para>The sorting field. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para>GmtCreateTime: Sort by creation time.</para>
-        /// </description></item>
-        /// <item><description><para>GmtModifiedTime: Sort by modification time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreateTime: creation time.</description></item>
+        /// <item><description>GmtModifiedTime: update time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

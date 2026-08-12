@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not currently in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not currently in effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<ListRecallManagementServicesResponseBodyRecallManagementServices> RecallManagementServices { get; set; }
         public class ListRecallManagementServicesResponseBodyRecallManagementServices : TeaModel {
             /// <summary>
-            /// <para>The ID of the current recall management service version.</para>
+            /// <para>The ID of the currently active recall management service version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CurrentRecallManagementServiceVersionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the current recall management service version.</para>
+            /// <para>The name of the currently active recall management service version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>version-1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CurrentRecallManagementServiceVersionName { get; set; }
 
             /// <summary>
-            /// <para>The recall management service description.</para>
+            /// <para>The description of the recall management service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a test recall</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The recall management service name.</para>
+            /// <para>The service name of the recall management service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hot_group_recall</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The recall management service ID.</para>
+            /// <para>The ID of the recall management service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -109,10 +109,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Online: online.</para>
-            /// </description></item>
-            /// <item><description><para>Offline: offline.</para>
-            /// </description></item>
+            /// <item><description>Online: online.</description></item>
+            /// <item><description>Offline: offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateEngineConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the engine config.</para>
+        /// <para>The engine configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EngineConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E15A1443-7917-5BE0-AE70-25538ECF398D</para>

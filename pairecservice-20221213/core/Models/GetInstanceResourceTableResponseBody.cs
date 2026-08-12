@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetInstanceResourceTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of fields in the data table.</para>
+        /// <para>The list of fields in the table.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? IsPartitionField { get; set; }
 
             /// <summary>
-            /// <para>The meaning of the field.</para>
+            /// <para>The field meaning.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>

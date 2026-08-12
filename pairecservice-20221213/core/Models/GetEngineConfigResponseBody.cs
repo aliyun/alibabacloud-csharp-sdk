@@ -20,20 +20,23 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The description of the engine configuration.</para>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a test config</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment. Valid values:</para>
+        /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: The daily environment.</para>
+        /// <item><description><para>Daily: daily environment.</para>
         /// </description></item>
-        /// <item><description><para>Pre: The pre-production environment.</para>
+        /// <item><description><para>Pre: staging environment.</para>
         /// </description></item>
-        /// <item><description><para>Prod: The production environment.</para>
+        /// <item><description><para>Prod: production environment.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The time the engine configuration was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-03T02:28:00.000Z</para>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time the engine configuration was last modified.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-27T12:00:00Z</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The time the engine configuration was published.</para>
+        /// <para>The publish time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-03 02:28:00</para>
@@ -97,9 +100,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Released: Published</para>
+        /// <item><description><para>Released: published.</para>
         /// </description></item>
-        /// <item><description><para>UnReleased: Unpublished</para>
+        /// <item><description><para>UnReleased: not published.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -109,6 +112,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The engine configuration type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

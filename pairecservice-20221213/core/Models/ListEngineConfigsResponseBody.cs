@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListEngineConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of engine configurations.</para>
+        /// <para>The list of engine configurations.</para>
         /// </summary>
         [NameInMap("EngineConfigs")]
         [Validation(Required=false)]
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ConfigValue { get; set; }
 
             /// <summary>
-            /// <para>The description of the engine configuration.</para>
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>what</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the engine configuration.</para>
+            /// <para>The engine configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -44,13 +47,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EngineConfigId { get; set; }
 
             /// <summary>
-            /// <para>The environment. Valid values:</para>
+            /// <para>The runtime environment.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Daily</b>: the development and test environment.</para>
+            /// <item><description><para>Daily: daily environment.</para>
             /// </description></item>
-            /// <item><description><para><b>Pre</b>: the pre-production environment.</para>
+            /// <item><description><para>Pre: staging environment.</para>
             /// </description></item>
-            /// <item><description><para><b>Prod</b>: the production environment.</para>
+            /// <item><description><para>Prod: production environment.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-27T12:00:00Z</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtReleasedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the engine configuration.</para>
+            /// <para>The engine configuration name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>engine_config_v1</para>
@@ -102,11 +105,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the engine configuration. Valid values:</para>
+            /// <para>The status.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Released</b>: The configuration has been released.</para>
+            /// <item><description><para>Released: released.</para>
             /// </description></item>
-            /// <item><description><para><b>Unreleased</b>: The configuration has not been released.</para>
+            /// <item><description><para>UnReleased: not released.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -118,7 +121,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The version of the currently released or most recently updated engine configuration.</para>
+            /// <para>The engine configuration type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
+            /// <para>The version number of the currently released or most recently updated version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230509161300</para>
@@ -140,7 +153,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of elements in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

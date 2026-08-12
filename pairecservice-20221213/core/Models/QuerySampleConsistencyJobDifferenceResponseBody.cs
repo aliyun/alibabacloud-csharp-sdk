@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string ItemId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>19</para>
+            /// </summary>
+            [NameInMap("ReplyTableFeatureRawValue")]
+            [Validation(Required=false)]
+            public string ReplyTableFeatureRawValue { get; set; }
+
             [NameInMap("ReplyTableFeatureValue")]
             [Validation(Required=false)]
             public double? ReplyTableFeatureValue { get; set; }
@@ -42,6 +50,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>18</para>
+            /// </summary>
+            [NameInMap("SampleTableFeatureRawValue")]
+            [Validation(Required=false)]
+            public string SampleTableFeatureRawValue { get; set; }
 
             [NameInMap("SampleTableFeatureValue")]
             [Validation(Required=false)]

@@ -21,9 +21,6 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "pairecservice.us-west-1.aliyuncs.com"},
-                {"us-east-1", "pairecservice.us-east-1.aliyuncs.com"},
-                {"eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"},
                 {"cn-shenzhen", "pairecservice.cn-shenzhen.aliyuncs.com"},
                 {"cn-shanghai", "pairecservice.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "pairecservice.cn-hongkong.aliyuncs.com"},
@@ -31,6 +28,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
                 {"cn-beijing", "pairecservice.cn-beijing.aliyuncs.com"},
                 {"ap-southeast-5", "pairecservice.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com"},
+                {"eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"},
+                {"us-east-1", "pairecservice.us-east-1.aliyuncs.com"},
+                {"us-west-1", "pairecservice.us-west-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3286,7 +3286,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an engine config.</para>
+        /// <para>Creates an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3326,6 +3326,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3348,7 +3352,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an engine config.</para>
+        /// <para>Creates an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3388,6 +3392,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3410,7 +3418,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an engine config.</para>
+        /// <para>Creates an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3437,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an engine config.</para>
+        /// <para>Creates an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12880,7 +12888,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an engine configuration.</para>
+        /// <para>Retrieves the details of an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12926,7 +12934,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an engine configuration.</para>
+        /// <para>Retrieves the details of an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12972,7 +12980,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an engine configuration.</para>
+        /// <para>Retrieves the details of an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12991,7 +12999,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of an engine configuration.</para>
+        /// <para>Retrieves the details of an engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13766,7 +13774,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the schema of a specified data table within a resource.</para>
+        /// <para>Retrieves the list of data tables under a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13806,7 +13814,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the schema of a specified data table within a resource.</para>
+        /// <para>Retrieves the list of data tables under a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13846,7 +13854,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the schema of a specified data table within a resource.</para>
+        /// <para>Retrieves the list of data tables under a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13865,7 +13873,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the schema of a specified data table within a resource.</para>
+        /// <para>Retrieves the list of data tables under a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17806,7 +17814,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17876,7 +17884,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17946,7 +17954,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17965,7 +17973,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the list of engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20482,17 +20490,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API returns a list of recall management services for a specified instance.</para>
+        /// <para>Queries the list of recall management services under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call <c>ListRecallManagementServices</c> to retrieve a list of recall management services for a specified instance based on parameters such as <c>InstanceId</c>, <c>PageNumber</c>, and <c>PageSize</c>. You can sort the results by creation time or modification time in ascending or descending order.</para>
+        /// <h2>Operation description</h2>
+        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is required. It specifies the target instance.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sort order of the list.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
+        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20520,6 +20528,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -20563,17 +20575,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API returns a list of recall management services for a specified instance.</para>
+        /// <para>Queries the list of recall management services under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call <c>ListRecallManagementServices</c> to retrieve a list of recall management services for a specified instance based on parameters such as <c>InstanceId</c>, <c>PageNumber</c>, and <c>PageSize</c>. You can sort the results by creation time or modification time in ascending or descending order.</para>
+        /// <h2>Operation description</h2>
+        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is required. It specifies the target instance.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sort order of the list.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
+        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20601,6 +20613,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -20644,17 +20660,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API returns a list of recall management services for a specified instance.</para>
+        /// <para>Queries the list of recall management services under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call <c>ListRecallManagementServices</c> to retrieve a list of recall management services for a specified instance based on parameters such as <c>InstanceId</c>, <c>PageNumber</c>, and <c>PageSize</c>. You can sort the results by creation time or modification time in ascending or descending order.</para>
+        /// <h2>Operation description</h2>
+        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is required. It specifies the target instance.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sort order of the list.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
+        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20674,17 +20690,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API returns a list of recall management services for a specified instance.</para>
+        /// <para>Queries the list of recall management services under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>Call <c>ListRecallManagementServices</c> to retrieve a list of recall management services for a specified instance based on parameters such as <c>InstanceId</c>, <c>PageNumber</c>, and <c>PageSize</c>. You can sort the results by creation time or modification time in ascending or descending order.</para>
+        /// <h2>Operation description</h2>
+        /// <para>By calling the <c>ListRecallManagementServices</c> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</para>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b> is required. It specifies the target instance.</description></item>
-        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</description></item>
-        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sort order of the list.</description></item>
+        /// <item><description><b>InstanceId</b> is required and specifies the instance to which the services belong.</description></item>
+        /// <item><description>The pagination parameters <b>PageNumber</b> and <b>PageSize</b> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</description></item>
+        /// <item><description>Use the <b>SortBy</b> and <b>Order</b> parameters to customize the sorting of the list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28238,7 +28254,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an engine configuration.</para>
+        /// <para>Updates a specific engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28278,6 +28294,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -28300,7 +28320,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an engine configuration.</para>
+        /// <para>Updates a specific engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28340,6 +28360,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -28362,7 +28386,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an engine configuration.</para>
+        /// <para>Updates a specific engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28381,7 +28405,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an engine configuration.</para>
+        /// <para>Updates a specific engine configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
