@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of teams to display per page.</para>
+        /// <para>The number of teams displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

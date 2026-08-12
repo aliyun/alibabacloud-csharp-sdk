@@ -288,6 +288,126 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a volume.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVolumeResponse
+        /// </returns>
+        public CreateVolumeResponse CreateVolumeWithOptions(CreateVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a volume.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVolumeResponse
+        /// </returns>
+        public async Task<CreateVolumeResponse> CreateVolumeWithOptionsAsync(CreateVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a volume.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVolumeResponse
+        /// </returns>
+        public CreateVolumeResponse CreateVolume(CreateVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVolumeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a volume.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVolumeResponse
+        /// </returns>
+        public async Task<CreateVolumeResponse> CreateVolumeAsync(CreateVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVolumeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
@@ -654,6 +774,136 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除 Volume </para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVolumeResponse
+        /// </returns>
+        public DeleteVolumeResponse DeleteVolumeWithOptions(string volumeID, DeleteVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Volume </para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVolumeResponse
+        /// </returns>
+        public async Task<DeleteVolumeResponse> DeleteVolumeWithOptionsAsync(string volumeID, DeleteVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Volume </para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVolumeResponse
+        /// </returns>
+        public DeleteVolumeResponse DeleteVolume(string volumeID, DeleteVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteVolumeWithOptions(volumeID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Volume </para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVolumeResponse
+        /// </returns>
+        public async Task<DeleteVolumeResponse> DeleteVolumeAsync(string volumeID, DeleteVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteVolumeWithOptionsAsync(volumeID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries an API key.</para>
         /// </summary>
         /// 
@@ -1016,6 +1266,136 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTeamWithOptionsAsync(teamID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVolumeResponse
+        /// </returns>
+        public GetVolumeResponse GetVolumeWithOptions(string volumeID, GetVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVolumeResponse
+        /// </returns>
+        public async Task<GetVolumeResponse> GetVolumeWithOptionsAsync(string volumeID, GetVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVolumeResponse
+        /// </returns>
+        public GetVolumeResponse GetVolume(string volumeID, GetVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetVolumeWithOptions(volumeID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVolumeResponse
+        /// </returns>
+        public async Task<GetVolumeResponse> GetVolumeAsync(string volumeID, GetVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetVolumeWithOptionsAsync(volumeID, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1498,6 +1878,184 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>分页查询 Volumes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVolumesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVolumesResponse
+        /// </returns>
+        public ListVolumesResponse ListVolumesWithOptions(ListVolumesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
+            {
+                query["resourceGroupID"] = request.ResourceGroupID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserID))
+            {
+                query["userID"] = request.UserID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeName))
+            {
+                query["volumeName"] = request.VolumeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVolumes",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVolumesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询 Volumes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVolumesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVolumesResponse
+        /// </returns>
+        public async Task<ListVolumesResponse> ListVolumesWithOptionsAsync(ListVolumesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupID))
+            {
+                query["resourceGroupID"] = request.ResourceGroupID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserID))
+            {
+                query["userID"] = request.UserID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeName))
+            {
+                query["volumeName"] = request.VolumeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVolumes",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVolumesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询 Volumes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVolumesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVolumesResponse
+        /// </returns>
+        public ListVolumesResponse ListVolumes(ListVolumesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVolumesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询 Volumes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVolumesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVolumesResponse
+        /// </returns>
+        public async Task<ListVolumesResponse> ListVolumesAsync(ListVolumesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVolumesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Resets an API key.</para>
         /// </summary>
         /// 
@@ -1972,6 +2530,126 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateTeamWithOptionsAsync(teamID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVolumeResponse
+        /// </returns>
+        public UpdateVolumeResponse UpdateVolumeWithOptions(string volumeID, UpdateVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVolumeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVolumeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVolumeResponse
+        /// </returns>
+        public async Task<UpdateVolumeResponse> UpdateVolumeWithOptionsAsync(string volumeID, UpdateVolumeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVolume",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/volumes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(volumeID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVolumeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVolumeResponse
+        /// </returns>
+        public UpdateVolumeResponse UpdateVolume(string volumeID, UpdateVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateVolumeWithOptions(volumeID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 Volume</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVolumeResponse
+        /// </returns>
+        public async Task<UpdateVolumeResponse> UpdateVolumeAsync(string volumeID, UpdateVolumeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateVolumeWithOptionsAsync(volumeID, request, headers, runtime);
         }
 
     }

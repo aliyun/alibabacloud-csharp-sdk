@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
+        [NameInMap("teamID")]
+        [Validation(Required=false)]
+        public string TeamID { get; set; }
+
     }
 
 }
