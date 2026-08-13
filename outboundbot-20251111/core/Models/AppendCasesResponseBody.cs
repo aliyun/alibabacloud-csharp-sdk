@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
-    public class UpdateScriptVersionResponseBody : TeaModel {
+    public class AppendCasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -18,16 +18,6 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        /// <summary>
-        /// <para>The scenario version ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
 
         /// <summary>
         /// <para>The HTTP status code.</para>
@@ -40,17 +30,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The message returned by the operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance does not exist. Instance=outb003</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of variable values in the error message.</para>
+        /// <para>The variable values in the error message.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -60,14 +50,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
+        /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

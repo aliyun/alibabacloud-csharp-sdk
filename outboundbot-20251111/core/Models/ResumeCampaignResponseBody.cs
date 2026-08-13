@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 {
-    public class UpdateScriptVersionResponseBody : TeaModel {
+    public class ResumeCampaignResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>结果码</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The scenario version ID.</para>
+        /// <para>操作是否成功</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4f9a8e2b-6c1d-4a7e-9b3f-2d5c8a1e7b26</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP状态码</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,34 +40,34 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>错误信息</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance does not exist. Instance=outb003</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of variable values in the error message.</para>
+        /// <para>错误信息参数列表</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FDAC7-13C5-1B64-A853-999DF105B9EF</para>
+        /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>请求是否成功</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
