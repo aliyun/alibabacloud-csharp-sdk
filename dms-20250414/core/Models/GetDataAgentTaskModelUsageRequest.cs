@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</para>
+        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. We recommend that the time range does not exceed one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</para>
+        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. We recommend that the time range does not exceed one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>
@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("PayLevel")]
+        [Validation(Required=false)]
+        public string PayLevel { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

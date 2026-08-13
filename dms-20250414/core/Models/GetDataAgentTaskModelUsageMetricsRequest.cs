@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("PayLevel")]
+        [Validation(Required=false)]
+        public string PayLevel { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 

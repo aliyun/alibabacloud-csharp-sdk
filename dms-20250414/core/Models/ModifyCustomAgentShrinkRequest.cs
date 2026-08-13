@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <list type="bullet">
         /// <item><description>DataSourceType: remote_data_center is a fixed value</description></item>
         /// <item><description>FileId: the file ID</description></item>
-        /// <item><description>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name</description></item>
+        /// <item><description>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name</description></item>
         /// <item><description>Tables: the table name returned by the ListDataCenterTable operation</description></item>
         /// <item><description>TableIds: the TableId returned by the ListDataCenterTable operation</description></item>
         /// <item><description>RegionId: the current region</description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///     &quot;TableIds&quot;: [
         ///       &quot;35hfn94pxl********50pi&quot;
         ///     ],
-        ///     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+        ///     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
         ///   }
         /// }
         /// </c></pre>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///       &quot;5263****31&quot;
         ///     ],
         ///     &quot;Engine&quot;: &quot;postgresql&quot;,
-        ///     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+        ///     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
         ///   }
         /// }
         /// </c></pre>
@@ -145,11 +145,6 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// 
         /// <b>Example:</b>
         /// <para>Analysis framework:</para>
-        /// <ol>
-        /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis. Analyze trends and year-over-year/month-over-month fluctuations.</description></item>
-        /// <item><description>Segment by new vs. returning customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
-        /// <item><description>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages.</description></item>
-        /// </ol>
         /// </summary>
         [NameInMap("Instruction")]
         [Validation(Required=false)]
@@ -161,10 +156,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <b>Example:</b>
         /// <para>Core metric definitions:</para>
         /// <ol>
-        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</description></item>
-        /// <item><description>Order volume is the number of valid orders placed per day;</description></item>
-        /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</description></item>
-        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</description></item>
+        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+        /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
+        /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
+        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Knowledge")]
@@ -210,7 +205,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The text report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
+        /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("TextReportConfig")]
         [Validation(Required=false)]
@@ -220,7 +215,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The web report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
+        /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("WebReportConfig")]
         [Validation(Required=false)]

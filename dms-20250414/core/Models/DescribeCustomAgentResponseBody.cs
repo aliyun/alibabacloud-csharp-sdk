@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public DescribeCustomAgentResponseBodyData Data { get; set; }
         public class DescribeCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the parent account.</para>
+            /// <para>The Alibaba Cloud primary account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             ///   &quot;personal&quot; : {
             ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
             ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-            ///     &quot;Database&quot; : &quot;Test spreadsheet</b></b></b>.xlsx&quot;,
+            ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
             ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
             ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
-            ///     &quot;RegionId&quot; : &quot;ap-southeast-1&quot;
+            ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
             ///   }
             /// }</para>
             /// </summary>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent test description</para>
+            /// <para>AgentTestDescription</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public DescribeCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class DescribeCustomAgentResponseBodyDataExecutionConfig : TeaModel {
+                [NameInMap("ForbiddenAppendDataSource")]
+                [Validation(Required=false)]
+                public bool? ForbiddenAppendDataSource { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether to disable user inquiries during the process.</para>
                 /// 
@@ -175,7 +179,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the web report drawing confirmation.</para>
+                /// <para>Specifies whether to skip the web report rendering confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -214,7 +218,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <ol>
             /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations;</description></item>
             /// <item><description>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses;</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points;</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to locate drop-off points;</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -240,7 +244,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders;</description></item>
             /// <item><description>Order volume is the number of valid orders placed per day;</description></item>
             /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</description></item>
-            /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</description></item>
+            /// <item><description>Conversion rate = paid orders / UV, reflecting traffic conversion efficiency;</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -311,7 +315,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The name of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent test name</para>
+            /// <para>AgentTestName</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -385,7 +389,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The query of the periodic task.</para>
+                /// <para>The query for the periodic task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Analyze this data and provide a brief report</para>

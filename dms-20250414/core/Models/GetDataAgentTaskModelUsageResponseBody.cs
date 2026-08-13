@@ -16,6 +16,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public GetDataAgentTaskModelUsageResponseBodyData Data { get; set; }
         public class GetDataAgentTaskModelUsageResponseBodyData : TeaModel {
+            [NameInMap("AccelerationRatio")]
+            [Validation(Required=false)]
+            public double? AccelerationRatio { get; set; }
+
+            [NameInMap("RateLimitedSessionCount")]
+            [Validation(Required=false)]
+            public long? RateLimitedSessionCount { get; set; }
+
+            [NameInMap("TotalLlmWaitDuration")]
+            [Validation(Required=false)]
+            public double? TotalLlmWaitDuration { get; set; }
+
+            [NameInMap("TotalSessionCount")]
+            [Validation(Required=false)]
+            public long? TotalSessionCount { get; set; }
+
             /// <summary>
             /// <para>The peak TPM (tokens per minute) within the query time range, which is the maximum number of tokens consumed per minute.</para>
             /// 
@@ -59,7 +75,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DMS-DA-40411</para>
@@ -69,7 +85,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -89,10 +105,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

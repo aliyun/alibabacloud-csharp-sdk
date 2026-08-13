@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ConfigDataAgentMemoryRequest : TeaModel {
         /// <summary>
+        /// <para>The current DMS unit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable memory generation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +36,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable memory recall usage. Valid values:</para>
+        /// <para>true: Enabled.</para>
+        /// <para>false: Disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

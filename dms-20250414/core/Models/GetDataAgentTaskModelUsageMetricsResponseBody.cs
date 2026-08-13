@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of TPM time series metrics for model usage, returned in chronological order with usage at each time point.</para>
+        /// <para>The list of TPM time series metrics for model usage, returned in chronological order.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

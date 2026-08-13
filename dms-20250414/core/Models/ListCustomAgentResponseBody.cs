@@ -151,6 +151,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public ListCustomAgentResponseBodyDataContentExecutionConfig ExecutionConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentExecutionConfig : TeaModel {
+                    [NameInMap("ForbiddenAppendDataSource")]
+                    [Validation(Required=false)]
+                    public bool? ForbiddenAppendDataSource { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether to prevent user inquiries during the process.</para>
                     /// 

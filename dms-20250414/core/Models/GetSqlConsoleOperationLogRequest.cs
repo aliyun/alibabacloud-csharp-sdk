@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>The type of the SQL statement.</para>
+        /// <para>The SQL statement type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>

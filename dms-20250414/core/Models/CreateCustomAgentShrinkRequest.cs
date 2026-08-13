@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallbackConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -24,23 +24,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The specified data scope in <b>JSON string format</b>.</para>
+        /// <para>The specified data range in <b>JSON string format</b>.</para>
         /// <list type="bullet">
         /// <item><description>Common parameter description<list type="bullet">
-        /// <item><description>tableFlag: true indicates a specified data scope</description></item>
-        /// <item><description>scope: personal is a fixed value</description></item>
-        /// <item><description>personal: pass parameters for file or database types</description></item>
+        /// <item><description>tableFlag: true indicates a specified data range.</description></item>
+        /// <item><description>scope: personal is a fixed value.</description></item>
+        /// <item><description>personal: pass parameters for file or database types.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para><b>File type</b>. Pass parameters in the following format:</para>
         /// <list type="bullet">
-        /// <item><description>DataSourceType: remote_data_center is a fixed value</description></item>
-        /// <item><description>FileId: the file ID</description></item>
-        /// <item><description>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name</description></item>
-        /// <item><description>Tables: the table name returned by the ListDataCenterTable operation</description></item>
-        /// <item><description>TableIds: the TableId returned by the ListDataCenterTable operation</description></item>
-        /// <item><description>RegionId: the current region</description></item>
+        /// <item><description>DataSourceType: remote_data_center is a fixed value.</description></item>
+        /// <item><description>FileId: The file ID.</description></item>
+        /// <item><description>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</description></item>
+        /// <item><description>Tables: The table name returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>TableIds: The TableId returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>RegionId: The current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -55,22 +55,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///     &quot;TableIds&quot;: [
         ///       &quot;35hfn94pxl********50pi&quot;
         ///     ],
-        ///     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+        ///     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
         ///   }
         /// }
         /// </c></pre>
-        /// <para><b>Database type</b>. Pass parameters in the following format:</para>
+        /// <para><b>Database type</b>. Pass parameters as follows:</para>
         /// <list type="bullet">
-        /// <item><description>DataSourceType: database is a fixed value</description></item>
-        /// <item><description>DmsInstanceId: the DMS instance ID returned by the data center operation</description></item>
-        /// <item><description>DmsDatabaseId: the DMS database ID returned by the data center operation</description></item>
-        /// <item><description>FileId: the instance name (deprecated)</description></item>
-        /// <item><description>DbName: the database name returned by the data center operation</description></item>
-        /// <item><description>Database: the database name returned by the data center operation</description></item>
-        /// <item><description>Tables: the table name returned by the data center operation</description></item>
-        /// <item><description>TableIds: the TableId returned by the data center operation</description></item>
-        /// <item><description>Engine: the engine type (mysql or postgresql)</description></item>
-        /// <item><description>RegionId: the current region</description></item>
+        /// <item><description>DataSourceType: database is a fixed value.</description></item>
+        /// <item><description>DmsInstanceId: The DMS instance ID returned by the data center operation.</description></item>
+        /// <item><description>DmsDatabaseId: The DMS database ID returned by the data center operation.</description></item>
+        /// <item><description>FileId: The instance name (deprecated).</description></item>
+        /// <item><description>DbName: The database name returned by the data center operation.</description></item>
+        /// <item><description>Database: The database name returned by the data center operation.</description></item>
+        /// <item><description>Tables: The table name returned by the data center operation.</description></item>
+        /// <item><description>TableIds: The TableId returned by the data center operation.</description></item>
+        /// <item><description>Engine: The engine type (mysql or postgresql).</description></item>
+        /// <item><description>RegionId: The current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///       &quot;5263****31&quot;
         ///     ],
         ///     &quot;Engine&quot;: &quot;postgresql&quot;,
-        ///     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+        ///     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
         ///   }
         /// }
         /// </c></pre>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
         ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
         ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
-        ///     &quot;RegionId&quot; : &quot;ap-southeast-1&quot;
+        ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
         ///   }
         /// }</para>
         /// </summary>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The text report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The text report requires all numbers to be written in words instead of Arabic numerals</para>
+        /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("TextReportConfig")]
         [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The web report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The web report requires all numbers to be written in words instead of Arabic numerals</para>
+        /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("WebReportConfig")]
         [Validation(Required=false)]

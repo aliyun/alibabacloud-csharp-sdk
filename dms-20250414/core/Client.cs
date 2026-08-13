@@ -1018,7 +1018,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ConfigDataAgentMemory</para>
+        /// <para>Configures memory generation and usage for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1068,7 +1068,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ConfigDataAgentMemory</para>
+        /// <para>Configures memory generation and usage for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1118,7 +1118,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ConfigDataAgentMemory</para>
+        /// <para>Configures memory generation and usage for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1136,7 +1136,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ConfigDataAgentMemory</para>
+        /// <para>Configures memory generation and usage for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5538,7 +5538,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by its ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5584,7 +5584,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by its ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5630,7 +5630,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by its ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5648,7 +5648,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by its ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7307,7 +7307,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7335,6 +7335,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
+            {
+                query["PayLevel"] = request.PayLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7366,7 +7370,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7394,6 +7398,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
+            {
+                query["PayLevel"] = request.PayLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7425,7 +7433,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7448,7 +7456,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7499,6 +7507,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
+            {
+                query["PayLevel"] = request.PayLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7558,6 +7570,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
+            {
+                query["PayLevel"] = request.PayLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

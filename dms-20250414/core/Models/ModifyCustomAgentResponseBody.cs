@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ModifyCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
-            /// <para>The current Data Management unit.</para>
+            /// <para>The current DMS unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The current Data Management unit.</para>
+            /// <para>The current DMS unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public ModifyCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class ModifyCustomAgentResponseBodyDataExecutionConfig : TeaModel {
+                [NameInMap("ForbiddenAppendDataSource")]
+                [Validation(Required=false)]
+                public bool? ForbiddenAppendDataSource { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether to disable user inquiries during the process.</para>
                 /// 
@@ -396,7 +400,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The query for the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Analyze this data and provide a brief report</para>
+                /// <para>Analyze this data and provide a briefing</para>
                 /// </summary>
                 [NameInMap("Query")]
                 [Validation(Required=false)]
@@ -428,7 +432,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
+            /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -438,7 +442,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
+            /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
