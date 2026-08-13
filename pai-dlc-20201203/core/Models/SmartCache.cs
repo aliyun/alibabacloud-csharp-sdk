@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SmartCache : TeaModel {
         /// <summary>
+        /// <para>The number of cache workers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? CacheWorkerNum { get; set; }
 
         /// <summary>
+        /// <para>The cache size per cache worker. Unit: GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? CacheWorkerSize { get; set; }
 
         /// <summary>
+        /// <para>The SmartCache description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The SmartCache name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The running duration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Duration { get; set; }
 
         /// <summary>
+        /// <para>OSS Endpoint</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss-cn-beijing-internal.aliyuncs.com</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud NAS file system ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1ca404****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <para>The creation time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:36:01Z</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The modification time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T23:36:01Z</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The local mount directory of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/root/data/</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string MountPath { get; set; }
 
         /// <summary>
+        /// <para>The optional hyperparameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;num_threads&quot;: 32}</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Options { get; set; }
 
         /// <summary>
+        /// <para>The OSS data source path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://buc/path/to/dir</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>SmartCacheId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>smartcache-20210114104214-vf9lowjt3pso</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SmartCacheId { get; set; }
 
         /// <summary>
+        /// <para>The running status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The mounted data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss</para>
         /// </summary>
@@ -130,6 +160,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The creator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>189xxx</para>
         /// </summary>

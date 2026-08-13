@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path in the data source is used.</para>
+            /// <para>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/mnt/data/</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public JobElasticSpec ElasticSpec { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the debugger task is enabled.</para>
+        /// <para>Specifies whether the debugger job is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, string> Envs { get; set; }
 
         /// <summary>
-        /// <para>The job creation time (UTC).</para>
+        /// <para>The time when the job was created (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:35:01Z</para>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtStartTime { get; set; }
 
             /// <summary>
-            /// <para>The history pods.</para>
+            /// <para>The historical pods.</para>
             /// </summary>
             [NameInMap("HistoryPods")]
             [Validation(Required=false)]
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The pod substatus, such as preemption status. Valid values:</para>
+                /// <para>The pod sub-status, such as preemption status. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The pod substatus, such as preemption status. Valid values:</para>
+            /// <para>The pod sub-status, such as preemption status. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SubStatus { get; set; }
 
             /// <summary>
-            /// <para>The pod type, which corresponds to a JobSpec in JobSpecs of CreateJob.</para>
+            /// <para>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Worker</para>
@@ -581,7 +581,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The status detail code, which is a classification of the sub-status under the current status (Status).</para>
+        /// <para>The status detail code, which categorizes the sub-status under the current status (Status).</para>
         /// 
         /// <b>Example:</b>
         /// <para>JobStoppedByUser</para>
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description of the status detail.</para>
+        /// <para>The detailed description of the status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Job is stopped by user.</para>
@@ -782,7 +782,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The used retry count and maximum retry count for the job.</para>
+        /// <para>The number of restarts used and the maximum number of restarts for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/10</para>
@@ -828,7 +828,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<StatusTransitionItem> StatusHistory { get; set; }
 
         /// <summary>
-        /// <para>The job substatus, such as preemption retry status.</para>
+        /// <para>The job sub-status, such as preemption retry status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Restarting</para>

@@ -1,3 +1,8 @@
+2026-08-13 Version: 1.12.0
+- Support API TagResources.
+- Support API UntagResources.
+
+
 2026-07-30 Version: 1.11.1
 - Generated csharp 2020-12-03 for pai-dlc.
 

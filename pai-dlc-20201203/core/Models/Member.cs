@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class Member : TeaModel {
         /// <summary>
+        /// <para>The member ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ken_12345</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string MemberId { get; set; }
 
         /// <summary>
+        /// <para>The member role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WorkspaceAdmin</para>
         /// </summary>

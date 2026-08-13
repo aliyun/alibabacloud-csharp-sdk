@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of this request, used for diagnostics and troubleshooting.</para>
+        /// <para>The ID of the request, which is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>

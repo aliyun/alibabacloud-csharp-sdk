@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The data source type. Only File Storage NAS (NAS) file systems are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NAS</para>
+        /// <para>nas</para>
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]

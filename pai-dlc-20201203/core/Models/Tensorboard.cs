@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>Runtime duration (seconds).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>60</para>
+        /// <para>1234567</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>Status details code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>Delete by user</para>
         /// </summary>
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>Status details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>Tensorboard is deleted</para>
         /// </summary>
         [NameInMap("ReasonMessage")]
         [Validation(Required=false)]
