@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AlertUuid { get; set; }
 
         /// <summary>
-        /// <para>The current page number of the list. The value must be greater than or equal to 1.</para>
+        /// <para>The current page number, which must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The entity characteristic value. You can perform a fuzzy search on disposal entities.</para>
+        /// <para>The entity characteristic value, which can be used for fuzzy match on response entities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test22.php</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string GroupKey { get; set; }
 
         /// <summary>
-        /// <para>The incident ID.</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49670d3bbf7aa9556a2fff3dbaa9****</para>
@@ -106,11 +106,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results. Valid values:</para>
+        /// <para>The field used to sort results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModified: sorts by update time</description></item>
-        /// <item><description>GmtCreate: sorts by creation time</description></item>
-        /// <item><description>FinishTime: sorts by policy end time</description></item>
+        /// <item><description>GmtModified: sorts results by update time.</description></item>
+        /// <item><description>GmtCreate: sorts results by creation time.</description></item>
+        /// <item><description>FinishTime: sorts results by policy end time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The maximum value is 100.</para>
+        /// <para>The number of entries per page, with a maximum of 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -173,11 +173,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string QueryMode { get; set; }
 
         /// <summary>
-        /// <para>The China (Hangzhou) region or China (Singapore) region where the China (Hangzhou) region or China (Singapore) region where the data management center of Cloud Threat Detection and Response (CTDR) resides. Specify the management center based on the region where your assets reside. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Chinese mainland and Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: outside China.</description></item>
-        /// </list>
+        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -211,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The SOAR disposal policy ID.</para>
+        /// <para>The SOAR response policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a50a49b7-6044-4593-ab15-2b46567c****</para>
@@ -232,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The disposal policy status.</para>
+        /// <para>The response policy status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

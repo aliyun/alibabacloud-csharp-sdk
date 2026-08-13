@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeDisposeAndPlaybookResponseBodyData Data { get; set; }
         public class DescribeDisposeAndPlaybookResponseBodyData : TeaModel {
+            [NameInMap("Available")]
+            [Validation(Required=false)]
+            public bool? Available { get; set; }
+
             /// <summary>
             /// <para>The pagination information.</para>
             /// </summary>
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [NameInMap("EntityType")]
                 [Validation(Required=false)]
                 public string EntityType { get; set; }
+
+                [NameInMap("EntityUuid")]
+                [Validation(Required=false)]
+                public string EntityUuid { get; set; }
 
                 /// <summary>
                 /// <para>The key-value pairs of opcode and oplevel.</para>

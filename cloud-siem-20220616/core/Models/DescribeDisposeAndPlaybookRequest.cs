@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookRequest : TeaModel {
+        [NameInMap("AvailableOnly")]
+        [Validation(Required=false)]
+        public bool? AvailableOnly { get; set; }
+
         /// <summary>
         /// <para>The current page number. The value must be greater than or equal to 1.</para>
         /// 
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("EntityUuid")]
         [Validation(Required=false)]
         public string EntityUuid { get; set; }
+
+        [NameInMap("EntityUuidList")]
+        [Validation(Required=false)]
+        public string EntityUuidList { get; set; }
 
         /// <summary>
         /// <para>The incident UUID.</para>

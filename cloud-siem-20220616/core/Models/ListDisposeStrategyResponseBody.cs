@@ -199,6 +199,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string EntityType { get; set; }
 
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
                 /// <summary>
                 /// <para>The failure summary of the task.</para>
                 /// 
@@ -210,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the task.</para>
+                /// <para>The finish time of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-08-10 21:34:07</para>
@@ -317,7 +321,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<object> Scope { get; set; }
 
                 /// <summary>
-                /// <para>The SOAR disposal policy ID.</para>
+                /// <para>The SOAR response policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>577bbf90-a770-44a7-8154-586aa2d3****</para>

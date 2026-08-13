@@ -5348,6 +5348,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         public DescribeDisposeAndPlaybookResponse DescribeDisposeAndPlaybookWithOptions(DescribeDisposeAndPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableOnly))
+            {
+                query["AvailableOnly"] = request.AvailableOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuidList))
+            {
+                query["EntityUuidList"] = request.EntityUuidList;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
@@ -5383,6 +5392,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5418,6 +5428,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         public async Task<DescribeDisposeAndPlaybookResponse> DescribeDisposeAndPlaybookWithOptionsAsync(DescribeDisposeAndPlaybookRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableOnly))
+            {
+                query["AvailableOnly"] = request.AvailableOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuidList))
+            {
+                query["EntityUuidList"] = request.EntityUuidList;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
@@ -5453,6 +5472,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10780,7 +10800,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended disposal policies.</para>
+        /// <para>Retrieves the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10934,7 +10954,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended disposal policies.</para>
+        /// <para>Retrieves the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11088,7 +11108,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended disposal policies.</para>
+        /// <para>Retrieves the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11106,7 +11126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended disposal policies.</para>
+        /// <para>Retrieves the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
