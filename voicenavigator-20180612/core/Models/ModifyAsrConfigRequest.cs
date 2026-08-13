@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrOverrides { get; set; }
 
         /// <summary>
-        /// <para>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
+        /// <para>The hotword ID. View the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
@@ -78,6 +78,12 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public int? ConfigLevel { get; set; }
 
+        /// <summary>
+        /// <para>The TTS engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ali</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>NluServiceType</para>
         /// 
         /// <b>Example:</b>
-        /// <para>语音识别</para>
+        /// <para>Speech recognition.</para>
         /// </summary>
         [NameInMap("NlsServiceType")]
         [Validation(Required=false)]

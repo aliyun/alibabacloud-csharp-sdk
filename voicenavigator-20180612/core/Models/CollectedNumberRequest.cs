@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AdditionalContext { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance owner.</para>
+        /// <para>The instance owner ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1426738157626835</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number entered by the user.</para>
+        /// <para>The phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1500060224</para>

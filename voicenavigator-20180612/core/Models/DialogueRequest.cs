@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DialogueRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation context.</para>
+        /// <para>The session context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Emotion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the instance.</para>
+        /// <para>The Alibaba Cloud account ID of the instance owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1426738157626835</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s input.</para>
+        /// <para>The user utterance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

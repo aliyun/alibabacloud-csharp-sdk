@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeTTSConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The custom voice ID.</para>
+        /// <para>The personalized custom voice ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc458bba-5a25-4cbc-b5c2</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
+
+        [NameInMap("BackgroundMusicName")]
+        [Validation(Required=false)]
+        public string BackgroundMusicName { get; set; }
 
         /// <summary>
         /// <para>The TTS engine.</para>
@@ -94,10 +98,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? SpeechRate { get; set; }
 
         /// <summary>
-        /// <para>The TTS error correction dictionary.</para>
+        /// <para>The TTS correction dictionary.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;pronunciation\&quot;:\&quot;环钱\&quot;,\&quot;word\&quot;:\&quot;还钱\&quot;}]</para>
+        /// <para>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</para>
         /// </summary>
         [NameInMap("TtsOverrides")]
         [Validation(Required=false)]

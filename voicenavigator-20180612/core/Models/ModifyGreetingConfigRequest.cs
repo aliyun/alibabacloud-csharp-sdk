@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyGreetingConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The greeting words.</para>
+        /// <para>The greeting message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The intent trigger.</para>
+        /// <para>The trigger intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>开始</para>

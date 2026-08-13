@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"},
                 {"cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -564,7 +564,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects a number entered by a user during a call.</para>
+        /// <para>Collects digits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -622,7 +622,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects a number entered by a user during a call.</para>
+        /// <para>Collects digits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +680,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects a number entered by a user during a call.</para>
+        /// <para>Collects digits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -698,7 +698,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects a number entered by a user during a call.</para>
+        /// <para>Collects digits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2332,7 +2332,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the TTS configuration.</para>
+        /// <para>Queries the text-to-speech (TTS) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2348,7 +2348,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public DescribeTTSConfigResponse DescribeTTSConfigWithOptions(DescribeTTSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
+            {
+                query["InstanceOwnerId"] = request.InstanceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2359,7 +2367,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
                 Version = "2018-06-12",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -2370,7 +2378,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the TTS configuration.</para>
+        /// <para>Queries the text-to-speech (TTS) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2386,7 +2394,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public async Task<DescribeTTSConfigResponse> DescribeTTSConfigWithOptionsAsync(DescribeTTSConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
+            {
+                query["InstanceOwnerId"] = request.InstanceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2397,7 +2413,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
                 Version = "2018-06-12",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -2408,7 +2424,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the TTS configuration.</para>
+        /// <para>Queries the text-to-speech (TTS) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2426,7 +2442,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the TTS configuration.</para>
+        /// <para>Queries the text-to-speech (TTS) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2444,7 +2460,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// <para>Initiates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2514,7 +2530,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// <para>Initiates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2584,7 +2600,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// <para>Initiates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2602,7 +2618,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to continue a conversation with an intelligent assistant by processing a user\&quot;s utterance.</para>
+        /// <para>Initiates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4853,6 +4869,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["AppKey"] = request.AppKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundMusicName))
+            {
+                query["BackgroundMusicName"] = request.BackgroundMusicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -4938,6 +4958,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
             {
                 query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundMusicName))
+            {
+                query["BackgroundMusicName"] = request.BackgroundMusicName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <summary>
         /// <para>The policy level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: system</description></item>
-        /// <item><description>1: tenant</description></item>
-        /// <item><description>2: instance</description></item>
+        /// <item><description>0: system.</description></item>
+        /// <item><description>1: tenant.</description></item>
+        /// <item><description>2: instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                     public string FileId { get; set; }
 
                     /// <summary>
-                    /// <para>The completion progress of the download task.</para>
+                    /// <para>The download task completion progress.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>70</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                     /// <para>The title.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>CBU阿里通信反馈-声音延迟</para>
+                    /// <para>CBU_Alibaba_Communication_Feedback-Audio_Delay.</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                 /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>批量高阶内存整理_2022_02_17_10</para>
+                /// <para>Batch_Advanced_Memory_Optimization_2022_02_17_10</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]

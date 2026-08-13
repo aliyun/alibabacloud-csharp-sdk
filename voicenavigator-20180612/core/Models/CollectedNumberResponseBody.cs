@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CollectedNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies the next action to perform.</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Broadcast</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the action.</para>
+        /// <para>The action parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;duration\&quot;:31340,\&quot;endTime\&quot;:1638243934786,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;startTime\&quot;:1638243903446}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IVR playback can be interrupted.</para>
+        /// <para>Indicates whether the IVR announcement can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public bool? Interruptible { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>da37319b-6c83-4268-9f19-814aed62e401</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The text to play back to the user.</para>
+        /// <para>The announcement text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>收号内容是123</para>
+        /// <para>The collected digits are 123</para>
         /// </summary>
         [NameInMap("TextResponse")]
         [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        [NameInMap("BackgroundMusicName")]
+        [Validation(Required=false)]
+        public string BackgroundMusicName { get; set; }
+
         /// <summary>
         /// <para>The TTS engine.</para>
         /// 
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>The TTS error correction dictionary.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;pronunciation\&quot;:\&quot;环钱\&quot;,\&quot;word\&quot;:\&quot;还钱\&quot;}]</para>
+        /// <para>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huanqian\&quot;}]</para>
         /// </summary>
         [NameInMap("TtsOverrides")]
         [Validation(Required=false)]

@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public class ModifyAsrConfigResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of affected rows.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AffectedRows")]
             [Validation(Required=false)]

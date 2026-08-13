@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DialogueResponseBody : TeaModel {
         /// <summary>
-        /// <para>The action to be performed.</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Broadcast</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IVR greeting can be interrupted.</para>
+        /// <para>Indicates whether the IVR broadcast can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The text to be broadcasted.</para>
+        /// <para>The broadcast text.</para>
         /// 
         /// <b>Example:</b>
         /// <para>您好，欢迎致电智能助手</para>
