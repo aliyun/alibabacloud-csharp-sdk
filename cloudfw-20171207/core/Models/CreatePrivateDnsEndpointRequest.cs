@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud member account. This parameter is required when you use Cloud Firewall to manage member accounts.</para>
+        /// <para>The UID of the Alibaba Cloud member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The primary DNS server.</para>
+        /// <remarks>
+        /// <para>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryVSwitchIp { get; set; }
 
         /// <summary>
-        /// <para>The private DNS type. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</para>
+        /// <para>The type of private DNS. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrivateZone</b></description></item>
         /// <item><description><b>Custom</b> (default)</description></item>
@@ -125,6 +128,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The secondary DNS server.</para>
+        /// <remarks>
+        /// <para>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.2</para>

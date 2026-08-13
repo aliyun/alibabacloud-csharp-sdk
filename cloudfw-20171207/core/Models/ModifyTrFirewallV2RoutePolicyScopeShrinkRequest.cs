@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2RoutePolicyScopeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The destination instances.</para>
+        /// <para>The list of secondary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("DestCandidateList")]
         [Validation(Required=false)]
         public string DestCandidateListShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the TR firewall instance.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,12 +28,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,9 +44,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to restore the traffic redirection configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Rolls back the routes.</para>
+        /// <item><description><para>true: Route rollback.</para>
         /// </description></item>
-        /// <item><description><para>false: Revokes the routes.</para>
+        /// <item><description><para>false: Route withdrawal.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -60,14 +58,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ShouldRecover { get; set; }
 
         /// <summary>
-        /// <para>The source instances.</para>
+        /// <para>The list of primary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("SrcCandidateList")]
         [Validation(Required=false)]
         public string SrcCandidateListShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy.</para>
+        /// <para>The ID of the firewall route policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

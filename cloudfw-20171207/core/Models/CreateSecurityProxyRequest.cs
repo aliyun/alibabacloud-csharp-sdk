@@ -10,10 +10,31 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateSecurityProxyRequest : TeaModel {
         /// <summary>
+        /// <para>The deployment mode of the firewall service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrimaryStandby: active/standby mode</description></item>
+        /// <item><description>MultiPrimary: active-active mode</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrimaryStandby</para>
+        /// </summary>
+        [NameInMap("FirewallServiceMode")]
+        [Validation(Required=false)]
+        public string FirewallServiceMode { get; set; }
+
+        /// <summary>
+        /// <para>The list of zone IDs used by the firewall service.</para>
+        /// </summary>
+        [NameInMap("FirewallServiceZones")]
+        [Validation(Required=false)]
+        public List<string> FirewallServiceZones { get; set; }
+
+        /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: Enabled.</description></item>
-        /// <item><description><b>close</b>: Disabled.</description></item>
+        /// <item><description><b>open</b>: enabled</description></item>
+        /// <item><description><b>close</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,8 +186,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to use the automatic vSwitch mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic mode.</description></item>
-        /// <item><description><b>false</b>: Manual mode.<remarks>
+        /// <item><description><b>true</b>: automatic mode</description></item>
+        /// <item><description><b>false</b>: manual mode<remarks>
         /// <para>The default value of VswitchAuto is true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
         /// </remarks>
         /// </description></item>

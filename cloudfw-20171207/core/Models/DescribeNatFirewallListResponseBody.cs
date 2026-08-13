@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The UID of the Alibaba Cloud account.</para>
             /// <remarks>
-            /// <para>This is the primary account of the Cloud Firewall member account.</para>
+            /// <para>The management account of the Cloud Firewall member accounts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The cause of the error.</para>
+            /// <para>The error details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Firewall creation failed</para>
@@ -40,7 +40,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ErrorDetail { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Cloud Firewall member account.</para>
+            /// <para>The deployment mode of the NAT firewall service. Valid values: <b>PrimaryStandby</b> (active/standby mode) and <b>MultiPrimary</b> (active-active mode).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PrimaryStandby</para>
+            /// </summary>
+            [NameInMap("FirewallServiceMode")]
+            [Validation(Required=false)]
+            public string FirewallServiceMode { get; set; }
+
+            /// <summary>
+            /// <para>The list of zone IDs used by the NAT firewall service.</para>
+            /// </summary>
+            [NameInMap("FirewallServiceZones")]
+            [Validation(Required=false)]
+            public List<string> FirewallServiceZones { get; set; }
+
+            /// <summary>
+            /// <para>The UID of the Cloud Firewall member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19106481******</para>
@@ -50,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway to query.</para>
+            /// <para>The ID of the NAT gateway to query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-uf6tnblxip4qcxg******</para>
@@ -60,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nat-gateway-test</para>
@@ -70,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayName { get; set; }
 
             /// <summary>
-            /// <para>The list of default route entries for the NAT Gateway.</para>
+            /// <para>The list of default route entries for the NAT gateway.</para>
             /// </summary>
             [NameInMap("NatRouteEntryList")]
             [Validation(Required=false)]
@@ -87,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string DestinationCidr { get; set; }
 
                 /// <summary>
-                /// <para>The next hop of the original NAT Gateway.</para>
+                /// <para>The original next hop address of the NAT gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ngw-2ze0s284r9atg5******</para>
@@ -97,7 +114,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string NextHopId { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the next hop. The value is \<c>NatGateway\\</c>.</para>
+                /// <para>The network type of the next hop. Valid values: NatGateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NatGateway</para>
@@ -107,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string NextHopType { get; set; }
 
                 /// <summary>
-                /// <para>The route table that contains the default route of the NAT Gateway.</para>
+                /// <para>The route table that contains the default route of the NAT gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vtb-bp18o0gb******</para>
@@ -119,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The ID of the NAT firewall.</para>
+            /// <para>The NAT firewall ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proxy-nat30******</para>
@@ -129,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT firewall.</para>
+            /// <para>The NAT firewall name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nat-firewall-test</para>
@@ -139,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Elastic Network Interface (ENI) that the firewall uses.</para>
+            /// <para>The elastic network interface (ENI) ID used by the firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp127llmo4v5qju******</para>
@@ -149,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyNetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table that the firewall uses.</para>
+            /// <para>The route table ID used by the firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-bp1pmyga7p4j10a******</para>
@@ -159,22 +176,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyRouteTableId { get; set; }
 
             /// <summary>
-            /// <para>The status of the Cloud Firewall. Valid values:</para>
+            /// <para>The Cloud Firewall status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>configuring: The firewall is being created.</para>
-            /// </description></item>
-            /// <item><description><para>deleting: The firewall is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para>normal: The firewall is working as expected.</para>
-            /// </description></item>
-            /// <item><description><para>abnormal: The firewall is not working as expected.</para>
-            /// </description></item>
-            /// <item><description><para>opening: The firewall is being enabled.</para>
-            /// </description></item>
-            /// <item><description><para>closing: The firewall is being disabled.</para>
-            /// </description></item>
-            /// <item><description><para>closed: The firewall is disabled.</para>
-            /// </description></item>
+            /// <item><description>configuring: being created</description></item>
+            /// <item><description>deleting: being deleted</description></item>
+            /// <item><description>normal: normal </description></item>
+            /// <item><description>abnormal: abnormal</description></item>
+            /// <item><description>opening: being enabled</description></item>
+            /// <item><description>closing: being disabled</description></item>
+            /// <item><description>closed: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,7 +195,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch that the firewall uses.</para>
+            /// <para>The vSwitch ID used by the firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1amn3t1ktjjy8******</para>
@@ -195,9 +205,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyVSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the Cloud Firewall is located.</para>
+            /// <para>The region ID of the Cloud Firewall.</para>
             /// <remarks>
-            /// <para>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+            /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -210,10 +220,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>Indicates whether strict mode is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><para>1: Strict mode is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>0: Strict mode is disabled.</para>
-            /// </description></item>
+            /// <item><description>1: Strict mode is enabled. </description></item>
+            /// <item><description>0: Strict mode is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -224,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? StrictMode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze26ya******</para>
@@ -246,7 +254,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>

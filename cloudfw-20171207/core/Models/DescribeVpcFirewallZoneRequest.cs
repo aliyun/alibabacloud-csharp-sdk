@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-4xbjup276au29r****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Cloud Firewall member account.</para>
+        /// <para>The UID of the Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the TransitRouter instance.</para>
+        /// <para>The transit router instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-m5etmb2q7e0mxcur****</para>

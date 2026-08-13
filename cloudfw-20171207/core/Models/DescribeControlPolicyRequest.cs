@@ -10,18 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The action that Cloud Firewall performs on the traffic. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>accept</b>: Allow</para>
-        /// </description></item>
-        /// <item><description><para><b>drop</b>: Deny</para>
-        /// </description></item>
-        /// <item><description><para><b>log</b>: Monitor</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you do not set this parameter, all action types are queried.</para>
-        /// </remarks>
+        /// <para>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>accept</para>
@@ -31,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclAction { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the access control policy.</para>
+        /// <para>The unique ID of the access control policy. You must specify at least one of AclUuid and Direction. If AclUuid is specified, you can query the policy by its ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00281255-d220-4db1-8f4f-c4df221a****</para>
@@ -41,8 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number of the current page displayed in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,32 +42,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The description of the access control policy. Fuzzy queries are supported.</para>
-        /// <remarks>
-        /// <para>If you do not set this parameter, the descriptions of all policies are queried.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Allow access to office network segment</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the \<c>DestinationType\\</c> parameter.</para>
-        /// <list type="bullet">
-        /// <item><description><para>If \<c>DestinationType\\</c> is \<c>net\\</c>, the value of this parameter is a CIDR block. Example: 10.0.3.0/24.</para>
-        /// </description></item>
-        /// <item><description><para>If \<c>DestinationType\\</c> is \<c>domain\\</c>, the value of this parameter is a domain name. Example: aliyun.</para>
-        /// </description></item>
-        /// <item><description><para>If \<c>DestinationType\\</c> is \<c>group\\</c>, the value of this parameter is the name of an address book. Example: db_group.</para>
-        /// </description></item>
-        /// <item><description><para>If \<c>DestinationType\\</c> is \<c>location\\</c>, the value of this parameter is a region name. For more information about region codes, see AddControlPolicy. Example: \<c>[&quot;BJ11&quot;, &quot;ZB&quot;]\\</c>.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you do not set this parameter, all types of destination addresses are queried.</para>
-        /// </remarks>
+        /// <para>The destination address in the access control policy. Fuzzy queries are supported. The value varies depending on the DestinationType (destination type).</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -89,13 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Destination { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction that the access control policy controls. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>in</b>: Inbound traffic from an external source to an internal destination.</para>
-        /// </description></item>
-        /// <item><description><para><b>out</b>: Outbound traffic from an internal source to an external destination.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The traffic direction controlled by the access control policy. Valid values: in (inbound) or out (outbound). You must specify at least one of Direction and AclUuid. If AclUuid is not specified, you must specify a non-empty Direction. Otherwise, the ErrorParametersDirection error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in</para>
@@ -105,13 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The IP version supported. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>4</b> (default): IPv4 address</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: IPv6 address</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The supported IP address version. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -121,13 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The language type for receiving messages. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -137,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page displayed in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,19 +103,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The protocol type of the traffic in the access control policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>TCP</b></para>
-        /// </description></item>
-        /// <item><description><para><b>UDP</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ICMP</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ANY</b> (all protocol types)</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you do not set this parameter, all protocol types are queried.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -171,13 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Proto { get; set; }
 
         /// <summary>
-        /// <para>The status of the access control policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The access control policy is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The access control policy is disabled.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The enabled status of the access control policy. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -187,19 +122,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The recurrence type for the policy validity period of the access control policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>Permanent</b> (default): Always</para>
-        /// </description></item>
-        /// <item><description><para><b>None</b>: One-time</para>
-        /// </description></item>
-        /// <item><description><para><b>Daily</b>: Daily</para>
-        /// </description></item>
-        /// <item><description><para><b>Weekly</b>: Weekly</para>
-        /// </description></item>
-        /// <item><description><para><b>Monthly</b>: Monthly</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The recurrence type of the policy validity period for the access control policy. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Permanent</para>
@@ -209,18 +132,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RepeatType { get; set; }
 
         /// <summary>
-        /// <para>The source address in the access control policy. Fuzzy queries are supported. The value of this parameter varies based on the value of the \<c>SourceType\\</c> parameter.</para>
-        /// <list type="bullet">
-        /// <item><description><para>If \<c>SourceType\\</c> is \<c>net\\</c>, the value of this parameter is a CIDR block. Example: 192.0.XX.XX/24.</para>
-        /// </description></item>
-        /// <item><description><para>If \<c>SourceType\\</c> is \<c>group\\</c>, the value of this parameter is the name of a source address book. Example: \<c>db_group\\</c>. If you leave this parameter empty, all source addresses are queried.</para>
-        /// </description></item>
-        /// <item><description><para>If \<c>SourceType\\</c> is \<c>location\\</c>, the value of this parameter is a source region. Example: \<c>Beijing\\</c> or \<c>beijing\\</c>. You can use either the Chinese name or the English name for the query.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you do not set this parameter, all types of source addresses are queried.</para>
-        /// </remarks>
+        /// <para>The source address in the access control policy. Fuzzy queries are supported. The value varies depending on the SourceType (source type).</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

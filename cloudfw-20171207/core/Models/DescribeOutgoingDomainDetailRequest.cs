@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclCoverage { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> DomainList { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. Specify the value as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query outbound connections from NAT private IP addresses.</para>
+        /// <para>Queries outbound connections from NAT private IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NatPrivate</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OutBytes</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. Specify the value as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

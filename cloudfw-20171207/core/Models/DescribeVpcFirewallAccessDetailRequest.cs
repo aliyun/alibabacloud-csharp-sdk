@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetIP { get; set; }
 
         /// <summary>
-        /// <para>The page number in a paging query. Settings this parameter to specify the current page for paging.</para>
+        /// <para>The page number in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>out</b>: outbound.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified in Settings, traffic in all directions is queried.</para>
+        /// <para>If you do not configure this parameter in Settings, traffic in all directions is queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

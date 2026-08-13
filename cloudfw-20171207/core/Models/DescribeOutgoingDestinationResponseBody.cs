@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The recommended ACL content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>RecommendedRelease</para>
             /// </summary>
             [NameInMap("AclRecommendDetail")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>group-name</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The inbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The outbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("OutBytes")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// <para>The tag description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>tag-describe</para>
                 /// </summary>
                 [NameInMap("TagDescribe")]
                 [Validation(Required=false)]

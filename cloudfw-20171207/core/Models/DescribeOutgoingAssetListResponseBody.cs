@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The inbound traffic, which is the response traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>244438.0</para>
+            /// <para>244438</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]

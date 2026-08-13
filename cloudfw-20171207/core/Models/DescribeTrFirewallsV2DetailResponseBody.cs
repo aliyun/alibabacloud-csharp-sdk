@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID used by the firewall connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
+        [NameInMap("FirewallAttachmentZone")]
+        [Validation(Required=false)]
+        public string FirewallAttachmentZone { get; set; }
+
+        /// <summary>
         /// <para>The description of the firewall.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the firewall ENI.</para>
+        /// <para>The ENI ID of the firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-uf621u00nafypeex****</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the firewall ENI resides.</para>
+        /// <para>The ID of the VPC to which the firewall ENI belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeppcci782zeh2bk****</para>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniVpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in which the firewall ENI resides.</para>
+        /// <para>The ID of the vSwitch to which the firewall ENI belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6ptq1kl1c1d9pw9****</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-9c7c711abdfa4d80****</para>
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The name of the virtual private cloud (VPC) firewalls instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfirewall-manual</para>
@@ -78,6 +88,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("FirewallName")]
         [Validation(Required=false)]
         public string FirewallName { get; set; }
+
+        /// <summary>
+        /// <para>The deployment mode of the TR firewall service. Valid values: <b>PrimaryStandby</b> (active/standby mode) and <b>MultiPrimary</b> (active-active mode).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrimaryStandby</para>
+        /// </summary>
+        [NameInMap("FirewallServiceMode")]
+        [Validation(Required=false)]
+        public string FirewallServiceMode { get; set; }
+
+        /// <summary>
+        /// <para>The list of zone IDs used by the TR firewall service.</para>
+        /// </summary>
+        [NameInMap("FirewallServiceZones")]
+        [Validation(Required=false)]
+        public List<string> FirewallServiceZones { get; set; }
 
         /// <summary>
         /// <para>The status of the firewall. Valid values:</para>
@@ -98,7 +125,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallStatus { get; set; }
 
         /// <summary>
-        /// <para>The subnet CIDR block that is used to store the firewall ENI in the firewall VPC in automatic mode.</para>
+        /// <para>The subnet CIDR block that hosts the firewall ENI in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.1.0/24</para>
@@ -108,25 +135,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSubnetCidr { get; set; }
 
         /// <summary>
-        /// <para>The status of the virtual private cloud (VPC) firewall. Valid values:</para>
+        /// <para>The status of the virtual private cloud (VPC) firewalls. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>opened</b>: The firewall is enabled.</para>
+        /// <item><description><para><b>opened</b>: enabled</para>
         /// </description></item>
-        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
+        /// <item><description><para><b>closed</b>: disabled</para>
         /// </description></item>
-        /// <item><description><para><b>notconfigured</b>: The virtual private cloud (VPC) firewall is not configured.</para>
+        /// <item><description><para><b>notconfigured</b>: The VPC firewall is not configured.</para>
         /// </description></item>
-        /// <item><description><para><b>configured</b>: The virtual private cloud (VPC) firewall is configured.</para>
+        /// <item><description><para><b>configured</b>: The VPC firewall is configured.</para>
         /// </description></item>
-        /// <item><description><para><b>creating</b>: The virtual private cloud (VPC) firewall is being created.</para>
+        /// <item><description><para><b>creating</b>: The VPC firewall is being created.</para>
         /// </description></item>
-        /// <item><description><para><b>opening</b>: The virtual private cloud (VPC) firewall is being enabled.</para>
+        /// <item><description><para><b>opening</b>: The VPC firewall is being enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>deleting</b>: The virtual private cloud (VPC) firewall is being deleted.</para>
+        /// <item><description><para><b>deleting</b>: The VPC firewall is being deleted.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not set, virtual private cloud (VPC) firewalls in all states are queried.</para>
+        /// <para>If this parameter is not specified, virtual private cloud (VPC) firewalls in all states are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,8 +196,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The routing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>managed</b>: automatic mode</description></item>
-        /// <item><description><b>manual</b>: manual mode</description></item>
+        /// <item><description><para><b>managed</b>: automatic mode</para>
+        /// </description></item>
+        /// <item><description><para><b>manual</b>: manual mode</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -181,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RouteMode { get; set; }
 
         /// <summary>
-        /// <para>The attachment ID that is used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The attachment ID used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-r1llaxxeha71jsm36v</para>
@@ -190,48 +219,89 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The primary subnet CIDR block that is used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The primary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.2.0/24</para>
         /// </summary>
         [NameInMap("TrAttachmentMasterCidr")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TrAttachmentMasterCidr { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The primary zone of the subnet that is used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The primary zone used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("TrAttachmentMasterZone")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TrAttachmentMasterZone { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The secondary subnet CIDR block that is used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The secondary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.3.0/24</para>
         /// </summary>
         [NameInMap("TrAttachmentSlaveCidr")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TrAttachmentSlaveCidr { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The secondary zone of the subnet that is used to connect to the transit router in the firewall VPC in automatic mode.</para>
+        /// <para>The secondary zone used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
         /// </summary>
         [NameInMap("TrAttachmentSlaveZone")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TrAttachmentSlaveZone { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the forward routing router.</para>
+        /// <para>The list of zones and vSwitch CIDR blocks for the transit router connection.</para>
+        /// </summary>
+        [NameInMap("TrAttachmentZones")]
+        [Validation(Required=false)]
+        public List<DescribeTrFirewallsV2DetailResponseBodyTrAttachmentZones> TrAttachmentZones { get; set; }
+        public class DescribeTrFirewallsV2DetailResponseBodyTrAttachmentZones : TeaModel {
+            /// <summary>
+            /// <para>The CIDR block of the vSwitch for the transit router connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.2.0/24</para>
+            /// </summary>
+            [NameInMap("VSwitchCidr")]
+            [Validation(Required=false)]
+            public string VSwitchCidr { get; set; }
+
+            /// <summary>
+            /// <para>The zone ID of the vSwitch for the transit router connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-h</para>
+            /// </summary>
+            [NameInMap("VSwitchZoneId")]
+            [Validation(Required=false)]
+            public string VSwitchZoneId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The instance ID of the transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-wz9y8sgug8b1xb416****</para>

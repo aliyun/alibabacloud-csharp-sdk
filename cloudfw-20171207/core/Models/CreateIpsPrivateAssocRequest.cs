@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateIpsPrivateAssocRequest : TeaModel {
         /// <summary>
-        /// <para>The language type for the request and response messages. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>en: English.</description></item>
-        /// <item><description>zh: Chinese.</description></item>
-        /// </list>
+        /// <para>The language of the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -24,7 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. This parameter is required. If this parameter is not specified, the API returns error code -103201. Only NAT gateway instance IDs (in the format ngw-<em>) that are protected by Cloud Firewall are accepted. Other resource types such as vpc-</em> or eip-* are rejected.</para>
+        /// <para>The ID of the Internet NAT gateway instance to associate. This parameter is required. If this parameter is not specified, ErrorParamsNotEnough is returned (HTTP 400, Parameters are insufficient.).</para>
+        /// <remarks>
+        /// <para>The backend does not validate the ID format. Instead, it queries the instance in the Cloud Firewall private network asset table for the current account. If the instance is not found, ErrorParamsInvalid is returned (HTTP 400, Invalid Params). Common scenarios include the resource type not being a NAT gateway, the resource not being managed by Cloud Firewall, or a newly created NAT gateway for which asynchronous asset synchronization has not yet completed.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-c5vhmjdfp5t****</para>

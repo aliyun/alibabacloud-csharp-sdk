@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserBuyVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. If you specify this parameter, the query is performed based on the instance ID. If you leave this parameter empty, the latest instance is queried by default.</para>
+        /// <para>The instance ID. If you specify an instance ID, the system queries the specified instance. If you leave this parameter empty, the system queries the most recent instance by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cfw_elasticity_public_cn-*******</para>

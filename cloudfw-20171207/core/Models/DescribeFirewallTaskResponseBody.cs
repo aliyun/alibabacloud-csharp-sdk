@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepProgress { get; set; }
 
             /// <summary>
-            /// <para>The status of the task step. Valid values:</para>
+            /// <para>The task step status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>init</b> </para>
             /// </description></item>

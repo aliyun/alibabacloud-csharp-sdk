@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.0</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]

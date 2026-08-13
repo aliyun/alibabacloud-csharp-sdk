@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsAITraffic { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response messages.</para>
+        /// <para>The language of the request and response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the private instance.</para>
+        /// <para>The private instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccessInstanceName")]
         [Validation(Required=false)]
         public string AccessInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The primary DNS server.</para>
+        /// <para>The primary DNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -44,10 +44,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The private DNS type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrivateZone</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Custom</b></para>
-        /// </description></item>
+        /// <item><description><b>PrivateZone</b></description></item>
+        /// <item><description><b>Custom</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The secondary DNS server.</para>
+        /// <para>The standby DNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.2</para>

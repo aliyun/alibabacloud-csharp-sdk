@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Outbound Domain names.</para>
+        /// <para>The list of outbound domains.</para>
         /// </summary>
         [NameInMap("DomainList")]
         [Validation(Required=false)]
         public List<DescribeOutgoingDomainResponseBodyDomainList> DomainList { get; set; }
         public class DescribeOutgoingDomainResponseBodyDomainList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the access control policy covers the domain name. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Uncovered</b>: Not covered.</description></item>
-            /// <item><description><b>FullCoverage</b>: Covered.</description></item>
-            /// </list>
+            /// <para>Indicates whether the access control policy provides coverage. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uncovered</para>
@@ -42,10 +38,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The health status of the access control policy. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Normal</b>: Healthy.</description></item>
-            /// <item><description><b>Abnormal</b>: Unhealthy.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -81,14 +73,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<string> ApplicationNameList { get; set; }
 
+            /// <summary>
+            /// <para>The list of application ports.</para>
+            /// </summary>
             [NameInMap("ApplicationPortList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDomainResponseBodyDomainListApplicationPortList> ApplicationPortList { get; set; }
             public class DescribeOutgoingDomainResponseBodyDomainListApplicationPortList : TeaModel {
+                /// <summary>
+                /// <para>The application names.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>HTTP</para>
+                /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
                 public string ApplicationName { get; set; }
 
+                /// <summary>
+                /// <para>The application port number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>443</para>
+                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
@@ -96,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The total number of assets that initiate outbound connections.</para>
+            /// <para>The total number of assets with outbound connections.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -116,12 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Business { get; set; }
 
             /// <summary>
-            /// <para>The categorization of the intelligence tags label. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Suspicious</b>: Suspicious.</description></item>
-            /// <item><description><b>Malicious</b>: Malicious.</description></item>
-            /// <item><description><b>Trusted</b>: Trusted.</description></item>
-            /// </list>
+            /// <para>The categorization of the intelligence label. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Trusted</para>
@@ -132,10 +134,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The product category ID. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Aliyun</b>: Alibaba Cloud product.</description></item>
-            /// <item><description><b>NotAliyun</b>: Non-Alibaba Cloud product.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Aliyun</para>
@@ -146,20 +144,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The category name of the product. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Alibaba Cloud product</b></description></item>
-            /// <item><description><b>Non-Alibaba Cloud product</b></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud product</para>
+            /// <para>Alibaba Cloud Product</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The domain name of outbound connections.</para>
+            /// <para>The domain name of the outbound connections.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -179,11 +173,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an ACL already covers this domain name. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
-            /// </list>
+            /// <para>Indicates whether an ACL covers the management of this domain name. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -194,10 +184,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>Indicates whether an ACL recommendation exists. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -217,11 +203,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Outbound Domain is marked as normal. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Normal.</description></item>
-            /// <item><description><b>false</b>: Abnormal.</description></item>
-            /// </list>
+            /// <para>Indicates whether the outbound domain is marked as normal. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -251,7 +233,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The total number of private network assets that initiate outbound connections.</para>
+            /// <para>The total number of private network assets with outbound connections.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -291,12 +273,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SecurityReason { get; set; }
 
             /// <summary>
-            /// <para>The security policy for the Outbound Domain of outbound connections. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>pass</b>: Allow.</description></item>
-            /// <item><description><b>alert</b>: Monitor.</description></item>
-            /// <item><description><b>drop</b>: Deny.</description></item>
-            /// </list>
+            /// <para>The security policy for the Outbound Domain. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>pass</para>
@@ -316,19 +293,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDomainResponseBodyDomainListTagList> TagList { get; set; }
             public class DescribeOutgoingDomainResponseBodyDomainListTagList : TeaModel {
                 /// <summary>
-                /// <para>The categorization of the intelligence tags label. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Suspicious</b>: Suspicious.</description></item>
-                /// <item><description><b>Malicious</b>: Malicious.</description></item>
-                /// <item><description><b>Trusted</b>: Trusted.</description></item>
-                /// </list>
+                /// <para>The categorization of the intelligence label. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Trusted</para>
@@ -339,11 +311,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
                 /// <summary>
                 /// <para>The risk assessment level. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>1</b>: Low.</description></item>
-                /// <item><description><b>2</b>: Medium.</description></item>
-                /// <item><description><b>3</b>: High.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -363,7 +330,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagDescribe { get; set; }
 
                 /// <summary>
-                /// <para>The intelligence tags label ID.</para>
+                /// <para>The intelligence label ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AliYun</para>
@@ -397,7 +364,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>
@@ -407,7 +374,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of Outbound Domain names.</para>
+        /// <para>The total number of outbound domains.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallPrecheckDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a task exists.</para>
+        /// <para>Indicates whether the task exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

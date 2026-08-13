@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceRegionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of regions that support the current synchronization node type.</para>
+        /// <para>The list of regions that support the current sync node type.</para>
         /// </summary>
         [NameInMap("RegionNoList")]
         [Validation(Required=false)]

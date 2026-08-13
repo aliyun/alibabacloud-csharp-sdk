@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
         /// <remarks>
-        /// <para>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</para>
+        /// <para>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
         /// <remarks>
-        /// <para>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned.</para>
+        /// <para>FirewallId and FirewallName are both required. If either is not provided, an ErrorParameters(400) error is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

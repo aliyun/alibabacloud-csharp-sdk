@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallSummaryInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content. Valid values:</para>
+        /// <para>The language type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the user. Valid values:</para>
-        /// <para><b>buy</b>: Paid user</para>
-        /// <para><b>free</b>: Free user</para>
+        /// <para>The user type. Valid values:</para>
+        /// <para><b>buy</b>: paid user.</para>
+        /// <para><b>free</b>: free user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>buy</para>

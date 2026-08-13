@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The inbound traffic.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>447458.0</para>
+            /// <para>447458</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]

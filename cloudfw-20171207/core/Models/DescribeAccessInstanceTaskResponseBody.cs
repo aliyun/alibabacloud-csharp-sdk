@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was completed.</para>
+        /// <para>The task completion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17151381075</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created.</para>
+        /// <para>The task creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17151361285</para>

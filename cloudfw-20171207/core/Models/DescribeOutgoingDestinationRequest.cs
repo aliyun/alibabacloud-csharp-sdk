@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address.</para>
+        /// <para>The legacy destination IP parameter.</para>
+        /// <remarks>
+        /// <para>The POP gateway passes this parameter through, but the backend of this operation does not read it. Specifying this parameter has no filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is specified, the operation returns MissingParameter.IpFilter (-340415) because no valid IP filtering parameter is provided.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.111XXX</para>
@@ -122,6 +125,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The private IP address.</para>
+        /// <remarks>
+        /// <para>At least one of PublicIP and PrivateIP must be specified.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10.111.53XXX</para>
@@ -132,6 +138,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The public IP address.</para>
+        /// <remarks>
+        /// <para>At least one of PublicIP and PrivateIP must be specified.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>47.96.74.XXX</para>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The security policy for Outbound Domain of outbound connections.</para>
+        /// <para>The security policy for the Outbound Domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pass</para>
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The IP address of the access source. (This field is deprecated.)</para>
+        /// <para>The IP address of the access source. <b>[Deprecated]</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>106.3.198.XXX</para>

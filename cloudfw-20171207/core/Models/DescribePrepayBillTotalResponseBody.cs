@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bill list, with each entry representing a day.</para>
+        /// <para>The bill list, aggregated by day.</para>
         /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? BilledDetectionTraffic { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data detection traffic for the day.</para>
+            /// <para>The sensitive data detection traffic of the day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? DailyDetectionTraffic { get; set; }
 
             /// <summary>
-            /// <para>The total elastic traffic for the day. Unit: GB.</para>
+            /// <para>The total elastic traffic of the day. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ElasticBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The end time of the day. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The end time of the day. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761667200</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OverflowTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the day. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The start time of the day. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761580800</para>

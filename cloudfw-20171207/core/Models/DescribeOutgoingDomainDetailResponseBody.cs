@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT gateway.</para>
+            /// <para>The NAT gateway name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ACL rule.</para>
+            /// <para>The ACL rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08a58465-ff4d-4c47-8782-eb008301****</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeOutgoingDomainDetailResponseBodyAssetListTagList> TagList { get; set; }
             public class DescribeOutgoingDomainDetailResponseBodyAssetListTagList : TeaModel {
                 /// <summary>
-                /// <para>The risk category ID.</para>
+                /// <para>The risk classification ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the VPC-connected instance.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-9dp16jgwgyvn****</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

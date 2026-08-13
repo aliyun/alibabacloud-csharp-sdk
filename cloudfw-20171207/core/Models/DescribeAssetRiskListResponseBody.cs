@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the assets.</para>
+        /// <para>The asset details returned.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
         public List<DescribeAssetRiskListResponseBodyAssetList> AssetList { get; set; }
         public class DescribeAssetRiskListResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// <para>The IP address of the server.</para>
+            /// <para>The server IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39.108.XX.XX</para>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP version of the asset protected by Cloud Firewall.</para>
+            /// <para>The IP address version of the assets protected by Cloud Firewall.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>4</b>: IPv4</para>
+            /// <item><description><para><b>4</b>: IPv4 address.</para>
             /// </description></item>
-            /// <item><description><para><b>6</b>: IPv6</para>
+            /// <item><description><para><b>6</b>: IPv6 address.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The reason for the risk.</para>
+            /// <para>The risk reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>other</para>

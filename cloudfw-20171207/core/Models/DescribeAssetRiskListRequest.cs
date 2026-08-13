@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListRequest : TeaModel {
         /// <summary>
-        /// <para>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error.</para>
+        /// <para>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If this parameter is not specified, the API returns a 400 error.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>IPv4 example: 47.97.XX.XX.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language type of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

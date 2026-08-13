@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The inbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The outbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("OutBytes")]
             [Validation(Required=false)]

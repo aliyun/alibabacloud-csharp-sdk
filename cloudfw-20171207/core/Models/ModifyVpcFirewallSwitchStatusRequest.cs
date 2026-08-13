@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallSwitchStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the VPC firewall. Valid values:</para>
+        /// <para>The status of the virtual private cloud (VPC) firewall. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>open</b>: enabled.</para>
         /// </description></item>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitch { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member account of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> API call to query the instance ID of the VPC firewall.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

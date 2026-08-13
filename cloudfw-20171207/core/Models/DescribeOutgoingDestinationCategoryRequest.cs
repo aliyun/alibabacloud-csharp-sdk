@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. Valid values are predefined destination category enumerations (25+ in total), such as TrustedDomain (trusted websites), AliPay (Alipay products), and CDN (CDN services). For the complete list of enumeration values and their semantics, refer to the product documentation.</para>
+        /// <para>The destination category ID. In addition to All, RiskDomain, AliYun, and NotAliYun, the NotAliYun category also includes subcategories such as TrustedDomain, AliPay, DingDing, WeChat, Google, Alibaba, CDN, NAT, and TrustIP. More than 25 category values are supported. Use the categories returned by the API as the reference.</para>
         /// 
         /// <b>Example:</b>
         /// <para>All</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. Valid values:</para>
+        /// <para>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. The value is case-sensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Domain: domain name.</description></item>
-        /// <item><description>DstIP: IP address.</description></item>
+        /// <item><description>DstIP: destination IP address.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>domain</para>
+        /// <para>Domain</para>
         /// </summary>
         [NameInMap("DstType")]
         [Validation(Required=false)]
         public string DstType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the value as a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the value as a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

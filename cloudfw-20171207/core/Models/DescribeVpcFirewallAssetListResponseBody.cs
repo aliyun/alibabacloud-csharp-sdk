@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The inbound traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The outbound traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.0</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("OutBytes")]
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The port list.</para>
+            /// <para>The list of ports.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteVpcFirewallCenConfigureRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account of the current Alibaba Cloud account.</para>
+        /// <para>The UID of a member account of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of VPC firewalls.</para>
+        /// <para>The list of instance IDs of VPC border firewalls.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VpcFirewallIdList")]

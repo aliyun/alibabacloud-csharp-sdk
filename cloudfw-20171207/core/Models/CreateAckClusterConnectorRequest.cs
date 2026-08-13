@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ACK cluster ID. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Lists ACK clusters.</description></item>
+        /// <item><description><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries the list of ACK clusters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</description></item>
+        /// <item><description><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Lists the regions of synchronization nodes.</description></item>
+        /// <item><description><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</description></item>
         /// </list>
         /// <remarks>
         /// <para>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches of synchronization nodes.</description></item>
+        /// <item><description><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The number of bytes received. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>17845821669.0</para>
+            /// <para>17845821669</para>
             /// </summary>
             [NameInMap("InBytes")]
             [Validation(Required=false)]

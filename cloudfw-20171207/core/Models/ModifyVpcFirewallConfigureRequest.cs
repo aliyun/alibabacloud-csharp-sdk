@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallConfigureRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -26,15 +26,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block information of the local VPC. The value is a JSON string and contains the following parameters:</para>
+        /// <para>The CIDR block information of the local VPC, in JSON format. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RouteTableId</b>: The ID of the route table for the local VPC.</para>
+        /// <item><description><para><b>RouteTableId</b>: the routing table ID of the local VPC.</para>
         /// </description></item>
-        /// <item><description><para><b>RouteEntryList</b>: The route entries for the local VPC. This parameter is a JSON string that contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the ID of the next hop instance for the local VPC).</para>
+        /// <item><description><para><b>RouteEntryList</b>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the next hop instance ID of the local VPC).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the local VPC for the VPC firewall.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the local VPC for the virtual private cloud (VPC) firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string LocalVpcCidrTableList { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member accounts of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -56,15 +56,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block information of the peer VPC. The value is a JSON string and contains the following parameters:</para>
+        /// <para>The CIDR block information of the peer VPC, in JSON format. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RouteTableId</b>: The ID of the route table for the peer VPC.</para>
+        /// <item><description><para><b>RouteTableId</b>: the routing table ID of the peer VPC.</para>
         /// </description></item>
-        /// <item><description><para><b>RouteEntryList</b>: The route entries for the peer VPC. This parameter is a JSON string that contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the ID of the next hop instance for the peer VPC).</para>
+        /// <item><description><para><b>RouteEntryList</b>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the next hop instance ID of the peer VPC).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the peer VPC for the VPC firewall.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the peer VPC for the virtual private cloud (VPC) firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PeerVpcCidrTableList { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the virtual private cloud (VPC) firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcFirewallId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the VPC firewall.</para>
+        /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
