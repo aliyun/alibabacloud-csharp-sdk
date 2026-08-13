@@ -1,3 +1,8 @@
+2026-08-13 Version: 3.12.2
+- Update API CreateSupabaseProject: add request parameters Lightweight.
+- Update API GetSupabaseProject: add response parameters Body.Lightweight.
+
+
 2026-08-10 Version: 3.12.1
 - Update API DescribeBranch: add response parameters Body.Branch.SpbProjectId.
 - Update API ListBranches: add response parameters Body.Branches.$.SpbProjectId.

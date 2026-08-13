@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("Lightweight")]
+        [Validation(Required=false)]
+        public bool? Lightweight { get; set; }
+
         /// <summary>
         /// <para>The billing method. If this parameter is not specified, the default value Free is used.</para>
         /// <para>Valid values:</para>

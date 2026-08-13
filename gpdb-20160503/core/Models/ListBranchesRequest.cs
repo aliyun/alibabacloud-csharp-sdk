@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent branch ID. This parameter specifies the parent branch for a new branch or as a query filter condition.</para>
+        /// <para>The parent branch ID. Specifies the parent branch for a new branch or as a query filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-main</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy search by branch ID or branch name is supported.</para>
+        /// <para>The search keyword. Supports fuzzy search by branch ID or branch name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>

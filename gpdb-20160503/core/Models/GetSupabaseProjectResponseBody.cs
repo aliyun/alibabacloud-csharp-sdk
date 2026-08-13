@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
 
+        [NameInMap("Lightweight")]
+        [Validation(Required=false)]
+        public string Lightweight { get; set; }
+
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">

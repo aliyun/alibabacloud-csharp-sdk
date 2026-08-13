@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public DescribeBranchResponseBodyBranch Branch { get; set; }
         public class DescribeBranchResponseBodyBranch : TeaModel {
             /// <summary>
-            /// <para>The branch ID that uniquely identifies a Supabase branch.</para>
+            /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-xxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the branch automatically expires and is deleted, in ISO 8601 UTC format.</para>
+            /// <para>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-08T09:11:12Z</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string InitSource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the branch is the default branch.</para>
+            /// <para>Indicates whether this is the default branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</para>
+            /// <para>The LSN of the parent branch at the time this branch was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0/3522648</para>
@@ -181,6 +181,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
+            /// <summary>
+            /// <para>The Supabase project ID that corresponds to the current branch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>spb-xxxx</para>
+            /// </summary>
             [NameInMap("SpbProjectId")]
             [Validation(Required=false)]
             public string SpbProjectId { get; set; }
