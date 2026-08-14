@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class DescribeAuditLogRecordsRequest : TeaModel {
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database on which the SQL statement was executed.</para>
+        /// <para>The name of the database on which the SQL statement is executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -51,6 +51,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>XIHE: audit logs of the default compute engine.</description></item>
+        /// <item><description>AGENT_SERVERLESS: audit logs of the Serverless analytics feature.</description></item>
+        /// </list>
+        /// <para>If this parameter is not specified, the default value is XIHE.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XIHE</para>
         /// </summary>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The IP address and port number of the client that executed the SQL statement.</para>
+        /// <para>The IP address and port number of the client that executes the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.104.XX.XX:43908</para>
@@ -78,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description><b>ExecutionStartTime</b>: the execution start time of the SQL statement.</description></item>
         /// <item><description><b>QueryTime</b>: the execution duration of the SQL statement.</description></item>
         /// <item><description><b>PeakMemoryUsage</b>: the peak memory usage during the execution of the SQL statement.</description></item>
-        /// <item><description><b>ScanRows</b>: the number of rows scanned by the task with a data source.</description></item>
+        /// <item><description><b>ScanRows</b>: the number of rows scanned by tasks with data sources.</description></item>
         /// <item><description><b>ScanSize</b>: the amount of scanned data.</description></item>
         /// <item><description><b>ScanTime</b>: the total time consumed for scanning data.</description></item>
         /// <item><description><b>PlanningTime</b>: the time consumed for generating the execution plan.</description></item>
@@ -149,6 +156,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProcessId")]
+        [Validation(Required=false)]
+        public string ProcessId { get; set; }
+
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// 
@@ -160,7 +171,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProxyUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to filter the returned results.</para>
+        /// <para>The keyword used to search the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb</para>
@@ -203,7 +214,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description><b>CREATE</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only one type can be specified per request. If this parameter is left empty, all types are queried by default.</para>
+        /// <para>Only one type can be specified per request. If this parameter is not specified, all types are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,7 +227,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</para>
         /// <remarks>
-        /// <para>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only entries recorded after re-enabling are available.</para>
+        /// <para>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only logs generated after re-enabling can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -227,10 +238,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the SQL statement was executed successfully. Valid values:</para>
+        /// <para>Specifies whether the SQL statement is executed successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The SQL statement was executed successfully.</description></item>
-        /// <item><description><b>false</b>: The SQL statement failed to be executed.</description></item>
+        /// <item><description><b>true</b>: Executed successfully.</description></item>
+        /// <item><description><b>false</b>: Execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -241,7 +252,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Succeed { get; set; }
 
         /// <summary>
-        /// <para>The username that executed the SQL statement.</para>
+        /// <para>The username that executes the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -13089,14 +13089,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL Audit Log of a cluster.</para>
+        /// <para>Queries the SQL audit logs of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
+        /// <item><description>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only logs generated after re-enabling can be queried. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13158,6 +13158,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyUser))
             {
                 query["ProxyUser"] = request.ProxyUser;
@@ -13215,14 +13219,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL Audit Log of a cluster.</para>
+        /// <para>Queries the SQL audit logs of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
+        /// <item><description>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only logs generated after re-enabling can be queried. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13284,6 +13288,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyUser))
             {
                 query["ProxyUser"] = request.ProxyUser;
@@ -13341,14 +13349,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL Audit Log of a cluster.</para>
+        /// <para>Queries the SQL audit logs of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
+        /// <item><description>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only logs generated after re-enabling can be queried. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13367,14 +13375,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL Audit Log of a cluster.</para>
+        /// <para>Queries the SQL audit logs of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
+        /// <item><description>SQL audit logs can be queried only when SQL audit is enabled, and only logs from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only logs generated after re-enabling can be queried. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class DescribeAuditLogRecordsResponseBody : TeaModel {
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-t4nj8619bz2w3****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ConnId { get; set; }
 
             /// <summary>
-            /// <para>The name of the database on which the SQL statement was executed.</para>
+            /// <para>The name of the database on which the SQL statement is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adb_demo</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The execution start time of the SQL statement in local time. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The execution start time of the SQL statement in local time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-12 10:10:00</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The execution start time of the SQL statement, in millisecond-precision UNIX timestamp.</para>
+            /// <para>The execution start time of the SQL statement. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1774600396584</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? HasDiagnosticInfo { get; set; }
 
             /// <summary>
-            /// <para>The IP address and port number of the client that executed the SQL statement.</para>
+            /// <para>The IP address and port number of the client that executes the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.104.XX.XX:43908</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQLType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SQL statement was executed successfully. Valid values:</para>
+            /// <para>Indicates whether the SQL statement is executed successfully. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The SQL statement was executed successfully.</description></item>
-            /// <item><description><b>false</b>: The SQL statement failed to be executed.</description></item>
+            /// <item><description><b>true</b>: Executed successfully.</description></item>
+            /// <item><description><b>false</b>: Execution failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TotalTime { get; set; }
 
             /// <summary>
-            /// <para>The username that executed the SQL statement.</para>
+            /// <para>The username that executes the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
