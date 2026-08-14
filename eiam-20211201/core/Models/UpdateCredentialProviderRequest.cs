@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class UpdateCredentialProviderRequest : TeaModel {
         /// <summary>
         /// <para>The idempotency token that ensures the idempotence of the request.</para>
-        /// <para>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public List<string> AllowedTokenIssuers { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the JWT derived short token capability.</para>
+                /// <para>Specifies whether the JWT derived short token feature is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? Expiration { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable JWT expiration cleanup.</para>
+                /// <para>Specifies whether JWT expiration cleanup is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -88,7 +88,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig { get; set; }
             public class UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</para>
+                /// <para>The authorization endpoint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/authorize">https://example.com/authorize</a></para>
                 /// </summary>
                 [NameInMap("AuthorizationEndpoint")]
                 [Validation(Required=false)]
@@ -97,9 +100,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The OAuth authorization flow type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>m2m: Machine-to-machine (2LO, Client Credentials).</description></item>
-                /// <item><description>user_federation: User federation (3LO, Authorization Code).</description></item>
+                /// <item><description>m2m: machine-to-machine.</description></item>
+                /// <item><description>user_federation: user federation.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>m2m</para>
                 /// </summary>
                 [NameInMap("AuthorizationFlow")]
                 [Validation(Required=false)]
@@ -119,32 +125,62 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientSecret { get; set; }
 
                 /// <summary>
-                /// <para>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: this parameter is used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</para>
+                /// <para>The auto-discovery URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></para>
                 /// </summary>
                 [NameInMap("DiscoveryUrl")]
                 [Validation(Required=false)]
                 public string DiscoveryUrl { get; set; }
 
+                /// <summary>
+                /// <para>The authorization server identifier URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/issuer">https://example.com/issuer</a></para>
+                /// </summary>
                 [NameInMap("Issuer")]
                 [Validation(Required=false)]
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>The PKCE code_challenge generation method. Default value: s256.</para>
+                /// <para>The PKCE challenge method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>S256.</description></item>
+                /// <item><description>plain.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>S256</para>
                 /// </summary>
                 [NameInMap("PkceChallengeMethod")]
                 [Validation(Required=false)]
                 public string PkceChallengeMethod { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use the PKCE extension for enhanced security. We recommend that you always enable this feature.</para>
+                /// <para>Specifies whether PKCE is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("PkceEnabled")]
                 [Validation(Required=false)]
                 public bool? PkceEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The preset vendor or custom configuration. This parameter is optional. Default value: custom.</para>
+                /// <para>The vendor type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>custom: custom.</description></item>
+                /// <item><description>dingtalk: DingTalk.</description></item>
+                /// <item><description>feishu: Lark.</description></item>
+                /// <item><description>github: GitHub.</description></item>
+                /// <item><description>microsoft: Microsoft.</description></item>
+                /// <item><description>google: Google.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>custom</para>
                 /// </summary>
                 [NameInMap("ProviderVendor")]
                 [Validation(Required=false)]
@@ -153,12 +189,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The scope in the OAuth protocol, which specifies the permission scope.</para>
                 /// <remarks>
-                /// <para>The Scope configuration on the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for token issuance.</para>
+                /// <para>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</para>
                 /// </remarks>
                 /// <remarks>
                 /// <para>Notice: Separate multiple Scope values with spaces. To clear the Scope configuration, pass an empty string.</para>
                 /// </remarks>
-                /// <para>Restrictions for each individual Scope value:</para>
+                /// <para>Restrictions on each individual Scope value:</para>
                 /// <ol>
                 /// <item><description>Allowed characters: lowercase letters, digits, and special characters <c>|/:_-.</c></description></item>
                 /// <item><description>Must contain at least one lowercase letter or digit.</description></item>

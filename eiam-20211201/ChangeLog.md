@@ -1,3 +1,7 @@
+2026-08-14 Version: 1.26.0
+- Support API ExecuteInstanceFailover.
+
+
 2026-08-11 Version: 1.25.6
 - Update API CreateAuthorizationRule: add request parameters AuthorizationRuleScenarioLabel.
 - Update API GetAuthorizationRule: add response parameters Body.AuthorizationRule.AuthorizationRuleScenarioLabel.

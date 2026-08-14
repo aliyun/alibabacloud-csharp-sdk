@@ -19061,6 +19061,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>执行容灾切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteInstanceFailoverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteInstanceFailoverResponse
+        /// </returns>
+        public ExecuteInstanceFailoverResponse ExecuteInstanceFailoverWithOptions(ExecuteInstanceFailoverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceFailoverStatus))
+            {
+                query["InstanceFailoverStatus"] = request.InstanceFailoverStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteInstanceFailover",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteInstanceFailoverResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行容灾切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteInstanceFailoverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteInstanceFailoverResponse
+        /// </returns>
+        public async Task<ExecuteInstanceFailoverResponse> ExecuteInstanceFailoverWithOptionsAsync(ExecuteInstanceFailoverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceFailoverStatus))
+            {
+                query["InstanceFailoverStatus"] = request.InstanceFailoverStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteInstanceFailover",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteInstanceFailoverResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行容灾切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteInstanceFailoverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteInstanceFailoverResponse
+        /// </returns>
+        public ExecuteInstanceFailoverResponse ExecuteInstanceFailover(ExecuteInstanceFailoverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecuteInstanceFailoverWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行容灾切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteInstanceFailoverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteInstanceFailoverResponse
+        /// </returns>
+        public async Task<ExecuteInstanceFailoverResponse> ExecuteInstanceFailoverAsync(ExecuteInstanceFailoverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecuteInstanceFailoverWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates a download URL for file import results.</para>
         /// </summary>
         /// 
