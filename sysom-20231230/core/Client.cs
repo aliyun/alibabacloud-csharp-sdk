@@ -837,15 +837,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群Vpc端点连接</para>
+        /// <para>Creates a VPC endpoint connection for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</description></item>
-        /// <item><description>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</description></item>
-        /// <item><description>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</description></item>
+        /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -900,15 +900,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群Vpc端点连接</para>
+        /// <para>Creates a VPC endpoint connection for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</description></item>
-        /// <item><description>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</description></item>
-        /// <item><description>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</description></item>
+        /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -963,15 +963,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群Vpc端点连接</para>
+        /// <para>Creates a VPC endpoint connection for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</description></item>
-        /// <item><description>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</description></item>
-        /// <item><description>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</description></item>
+        /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -991,15 +991,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群Vpc端点连接</para>
+        /// <para>Creates a VPC endpoint connection for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>需配合aliyun-tea-openapi-inner包的call_sseapi接口使用</description></item>
-        /// <item><description>需要按通用LLM服务输入参数填充参数，转为string后赋给llmParamString</description></item>
-        /// <item><description>返回数据需将string转为dict后使用，参考通用LLM服务返回格式</description></item>
+        /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6287,12 +6287,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在指定的实例上安装 Agent</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6312,6 +6312,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 body["agentId"] = request.AgentId;
@@ -6354,12 +6358,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在指定的实例上安装 Agent</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6379,6 +6383,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 body["agentId"] = request.AgentId;
@@ -6421,12 +6429,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在指定的实例上安装 Agent</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6445,12 +6453,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在指定的实例上安装 Agent</para>
+        /// <para>Installs an Agent on a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口安装 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10767,12 +10775,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载 SysOM Agent</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10830,12 +10838,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载 SysOM Agent</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10893,12 +10901,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载 SysOM Agent</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10917,12 +10925,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载 SysOM Agent</para>
+        /// <para>Uninstalls a specified version of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口卸载 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12071,12 +12079,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 SysOM Agent</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12134,12 +12142,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 SysOM Agent</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12197,12 +12205,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 SysOM Agent</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12221,12 +12229,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 SysOM Agent</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口更新 Agent 是异步的，调用接口后会返回一个 task_id，可以凭借该 ID 调用 GetAgentTask 接口获取任务的执行情况。</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateClusterVpcEndpointConnectionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ACK cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform a dry run.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>The region to which the cluster belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

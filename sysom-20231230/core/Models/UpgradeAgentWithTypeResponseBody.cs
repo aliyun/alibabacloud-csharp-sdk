@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpgradeAgentWithTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// <list type="bullet">
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpgradeAgentWithTypeResponseBodyData Data { get; set; }
         public class UpgradeAgentWithTypeResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>391f5aeba2054f66b3aaef0136142fe2</para>
             /// </summary>
@@ -32,6 +43,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -40,6 +57,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</para>
         /// </summary>

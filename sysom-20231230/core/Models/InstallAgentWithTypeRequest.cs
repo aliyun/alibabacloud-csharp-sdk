@@ -9,7 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentWithTypeRequest : TeaModel {
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<InstallAgentWithTypeRequestTag> Tag { get; set; }
+        public class InstallAgentWithTypeRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
+        /// <para>The ID of the component to install.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +35,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The version of the component to install.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +46,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
+        /// <para>The configuration ID of the component to install.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f0078fbb-4213-11f0-a19b-00163e4ae208</para>
         /// </summary>
@@ -38,6 +56,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ConfigId { get; set; }
 
         /// <summary>
+        /// <para>The instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The list of instances on which to install the component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
@@ -55,6 +75,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<InstallAgentWithTypeRequestInstances> Instances { get; set; }
         public class InstallAgentWithTypeRequestInstances : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
