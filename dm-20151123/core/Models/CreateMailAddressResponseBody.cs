@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateMailAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>Mail address ID</para>
+        /// <para>The ID of the sender address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string MailAddressId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95A7D497-F8DD-4834-B81E-C1783236E55F</para>

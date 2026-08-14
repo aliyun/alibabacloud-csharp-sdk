@@ -21,10 +21,11 @@ namespace AlibabaCloud.SDK.Dm20151123
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
+                {"ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-2", "dm.ap-southeast-2.aliyuncs.com"},
+                {"cn-hangzhou", "dm.aliyuncs.com"},
                 {"us-east-1", "dm.us-east-1.aliyuncs.com"},
                 {"eu-central-1", "dm.eu-central-1.aliyuncs.com"},
-                {"cn-hangzhou", "dm.aliyuncs.com"},
-                {"ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dm", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2493,7 +2494,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a mail address.</para>
+        /// <para>Creates a sender address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,6 +2514,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -2555,7 +2560,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a mail address.</para>
+        /// <para>Creates a sender address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2575,6 +2580,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -2617,7 +2626,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a mail address.</para>
+        /// <para>Creates a sender address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2635,7 +2644,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a mail address.</para>
+        /// <para>Creates a sender address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9565,7 +9574,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Queries the list of sender addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9631,7 +9640,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Queries the list of sender addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +9706,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Queries the list of sender addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9715,7 +9724,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Queries the list of sender addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11449,7 +11458,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieves sending data based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11531,7 +11540,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieves sending data based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11613,7 +11622,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieves sending data based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11631,7 +11640,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieves sending data based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">

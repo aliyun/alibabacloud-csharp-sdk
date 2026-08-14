@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryMailAddressByParamRequest : TeaModel {
         /// <summary>
-        /// <para>The email address. The length is 1 to 60 characters. It supports digits, letters, periods (.), hyphens (-), and at signs (@).</para>
+        /// <para>The email address. The value is 1 to 60 characters in length and can contain digits, letters, periods (.), hyphens (-), and at signs (@).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Account+@+domain</para>
+        /// <para>account+@+domain</para>
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The current page number. The default value is 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,10 +54,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <summary>
         /// <para>The type of the sender address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>batch: batch emails</para>
-        /// </description></item>
-        /// <item><description><para>trigger: triggered emails</para>
-        /// </description></item>
+        /// <item><description>batch: batch email</description></item>
+        /// <item><description>trigger: triggered email</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

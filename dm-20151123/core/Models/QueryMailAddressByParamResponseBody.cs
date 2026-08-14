@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
+                public string AddressType { get; set; }
+
                 [NameInMap("ConfigSetId")]
                 [Validation(Required=false)]
                 public string ConfigSetId { get; set; }
@@ -93,6 +97,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string MailAddressId { get; set; }
 
+                [NameInMap("MailAddressVerificationStatus")]
+                [Validation(Required=false)]
+                public string MailAddressVerificationStatus { get; set; }
+
                 [NameInMap("MonthCount")]
                 [Validation(Required=false)]
                 public string MonthCount { get; set; }
@@ -108,6 +116,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [NameInMap("ReplyStatus")]
                 [Validation(Required=false)]
                 public string ReplyStatus { get; set; }
+
+                [NameInMap("SenderAddress")]
+                [Validation(Required=false)]
+                public string SenderAddress { get; set; }
 
                 [NameInMap("Sendtype")]
                 [Validation(Required=false)]

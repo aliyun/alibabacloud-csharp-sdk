@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateMailAddressRequest : TeaModel {
         /// <summary>
-        /// <para>Sender\&quot;s email address</para>
+        /// <para>The sender address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +20,21 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <para>The type of the address to create. Valid values:
+        /// EXTERNAL: The domain name of the address to create has not been created in this system.
+        /// INTERNAL: The domain name of the address to create has already been created in this system.</para>
+        /// </summary>
+        [NameInMap("AddressType")]
+        [Validation(Required=false)]
+        public string AddressType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Reply-to address</para>
+        /// <para>The reply-to address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1***@example.net</para>
@@ -43,11 +52,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Type of sending. Values:</para>
+        /// <para>The type of email. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>batch: Bulk emails</para>
+        /// <item><description><para>batch: batch email</para>
         /// </description></item>
-        /// <item><description><para>trigger: Triggered emails</para>
+        /// <item><description><para>trigger: triggered email</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
