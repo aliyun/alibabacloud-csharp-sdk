@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 {
     public class UpdateTranscriptionPhrasesRequest : TeaModel {
         /// <summary>
+        /// <para>A description of the hotword list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom fruit phrases list</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the hotword list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>A JSON map string that defines hotwords and their weights.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

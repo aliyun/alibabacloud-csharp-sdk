@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 {
     public class UpdateTranscriptionPhrasesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateTranscriptionPhrasesResponseBodyData Data { get; set; }
         public class UpdateTranscriptionPhrasesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the operation succeeded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCEEDED</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
+        /// <para>The status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -56,7 +69,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35124E1C-AE99-5D6C-A52E-BD689D8D****</para>

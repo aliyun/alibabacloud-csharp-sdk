@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 {
     public class GetTranscriptionPhrasesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTranscriptionPhrasesResponseBodyData Data { get; set; }
         public class GetTranscriptionPhrasesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>Error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>Hotword objects.</para>
+            /// </summary>
             [NameInMap("Phrases")]
             [Validation(Required=false)]
             public List<GetTranscriptionPhrasesResponseBodyDataPhrases> Phrases { get; set; }
             public class GetTranscriptionPhrasesResponseBodyDataPhrases : TeaModel {
                 /// <summary>
+                /// <para>Hotword list description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>custom fruit phrases list</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Hotword list name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fruit_phrase</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>ID of the phrase list.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>a93b91141c0f422fa114af203f8b****</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string PhraseId { get; set; }
 
                 /// <summary>
+                /// <para>Words and their weights in the hotword list, formatted as a JSON map string.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;苹果&quot;:3,&quot;西瓜&quot;:3}</para>
                 /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether the operation succeeded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCEEDED</para>
             /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
+        /// <para>Status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -94,7 +118,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35124E1C-AE99-5D6C-A52E-BD689D8D****</para>

@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "tingwu.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("tingwu", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建听悟任务</para>
+        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建听悟任务</para>
+        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建听悟任务</para>
+        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -186,7 +190,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建听悟任务</para>
+        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -205,7 +209,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词词表</para>
+        /// <para>Creates a custom vocabulary of transcription phrases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -259,7 +263,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词词表</para>
+        /// <para>Creates a custom vocabulary of transcription phrases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -313,7 +317,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词词表</para>
+        /// <para>Creates a custom vocabulary of transcription phrases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -332,7 +336,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词词表</para>
+        /// <para>Creates a custom vocabulary of transcription phrases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -351,7 +355,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除词表</para>
+        /// <para>Deletes phrase tables.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -387,7 +391,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除词表</para>
+        /// <para>Deletes phrase tables.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -423,7 +427,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除词表</para>
+        /// <para>Deletes phrase tables.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -438,7 +442,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除词表</para>
+        /// <para>Deletes phrase tables.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -453,7 +457,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询听悟任务信息</para>
+        /// <para>Query the job status and job result.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -489,7 +493,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询听悟任务信息</para>
+        /// <para>Query the job status and job result.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -525,7 +529,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询听悟任务信息</para>
+        /// <para>Query the job status and job result.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -540,7 +544,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询听悟任务信息</para>
+        /// <para>Query the job status and job result.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -555,7 +559,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词表信息</para>
+        /// <para>Queries information about hotword lists.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -591,7 +595,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词表信息</para>
+        /// <para>Queries information about hotword lists.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -627,7 +631,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词表信息</para>
+        /// <para>Queries information about hotword lists.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -642,7 +646,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词表信息</para>
+        /// <para>Queries information about hotword lists.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -657,7 +661,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户所有热词词表信息</para>
+        /// <para>Lists all of a user\&quot;s hot phrase lists.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -693,7 +697,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户所有热词词表信息</para>
+        /// <para>Lists all of a user\&quot;s hot phrase lists.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -729,7 +733,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户所有热词词表信息</para>
+        /// <para>Lists all of a user\&quot;s hot phrase lists.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -744,7 +748,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户所有热词词表信息</para>
+        /// <para>Lists all of a user\&quot;s hot phrase lists.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -759,7 +763,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词词表</para>
+        /// <para>Update a hotword list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -813,7 +817,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词词表</para>
+        /// <para>Update a hotword list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -867,7 +871,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词词表</para>
+        /// <para>Update a hotword list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -886,7 +890,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词词表</para>
+        /// <para>Update a hotword list.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -13,14 +13,23 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public DeleteTranscriptionPhrasesResponseBodyData Data { get; set; }
         public class DeleteTranscriptionPhrasesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Error code.</para>
+            /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
+            /// <summary>
+            /// <para>Error message.</para>
+            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>Is the operation successful?</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -36,6 +47,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -44,6 +57,8 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>Is the operation successful?</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCEEDED</para>
         /// </summary>
