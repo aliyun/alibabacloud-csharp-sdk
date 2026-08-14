@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFailoverTestJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The test duration. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+            /// <para>The test duration. Unit: minutes. Valid values: <b>1</b> to <b>4320</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The failover test type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>StartNow</b>: The test starts immediately after the failover test job is created.</para>
+            /// <item><description><para><b>StartNow</b>: starts the test immediately after the failover test job is created.</para>
             /// </description></item>
-            /// <item><description><para><b>StartLater</b>: Only the test job is created. The test is not started.</para>
+            /// <item><description><para><b>StartLater</b>: creates the failover test job without starting the test.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -114,15 +114,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the failover test job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Init</b>: Pending.</para>
+            /// <item><description><para><b>Init</b>: pending.</para>
             /// </description></item>
-            /// <item><description><para><b>Starting</b>: Starting.</para>
+            /// <item><description><para><b>Starting</b>: starting.</para>
             /// </description></item>
-            /// <item><description><para><b>Testing</b>: In progress.</para>
+            /// <item><description><para><b>Testing</b>: in progress.</para>
             /// </description></item>
-            /// <item><description><para><b>Stopping</b>: Stopping.</para>
+            /// <item><description><para><b>Stopping</b>: stopping.</para>
             /// </description></item>
-            /// <item><description><para><b>Stopped</b>: Completed.</para>
+            /// <item><description><para><b>Stopped</b>: completed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Valid values: <b>1 to 100</b>. Default value: 20.</para>
+        /// <para>The number of entries per page for a paginated query. Valid values: <b>1</b> to <b>100</b>. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -156,11 +156,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Leave this parameter empty for the first query or if no next query exists.</para>
+        /// <item><description><para>Leave this parameter empty for the first query or if no subsequent query is required.</para>
         /// </description></item>
-        /// <item><description><para>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <item><description><para>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

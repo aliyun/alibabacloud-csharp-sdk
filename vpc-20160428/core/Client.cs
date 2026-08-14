@@ -57,41 +57,42 @@ namespace AlibabaCloud.SDK.Vpc20160428
                 {"cn-zhengzhou-nebula-1", "vpc-nebula.cn-qingdao-nebula.aliyuncs.com"},
                 {"eu-west-1-oxs", "vpc-nebula.cn-shenzhen-cloudstone.aliyuncs.com"},
                 {"rus-west-1-pop", "vpc.aliyuncs.com"},
-                {"us-west-1", "vpc.us-west-1.aliyuncs.com"},
+                {"cn-beijing", "vpc.cn-beijing.aliyuncs.com"},
+                {"cn-heyuan", "vpc.cn-heyuan.aliyuncs.com"},
+                {"cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"},
+                {"ap-northeast-2", "vpc.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "vpc.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "vpc.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "vpc.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "vpc.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "vpc.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "vpc.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-8", "vpc.ap-southeast-8.aliyuncs.com"},
+                {"cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"},
+                {"cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"},
+                {"cn-qingdao", "vpc.cn-qingdao.aliyuncs.com"},
+                {"cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shanghai", "vpc.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "vpc.cn-hongkong.aliyuncs.com"},
+                {"cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"},
+                {"cn-nanjing", "vpc.cn-nanjing.aliyuncs.com"},
+                {"cn-fuzhou", "vpc.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "vpc.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "vpc.cn-guangzhou.aliyuncs.com"},
+                {"cn-huhehaote", "vpc.cn-huhehaote.aliyuncs.com"},
                 {"us-southeast-1", "vpc.us-southeast-1.aliyuncs.com"},
+                {"eu-west-1", "vpc.eu-west-1.aliyuncs.com"},
+                {"eu-west-2", "vpc.eu-west-2.aliyuncs.com"},
+                {"eu-central-1", "vpc.eu-central-1.aliyuncs.com"},
                 {"us-east-1", "vpc.us-east-1.aliyuncs.com"},
+                {"sa-east-1", "vpc.sa-east-1.aliyuncs.com"},
+                {"us-west-1", "vpc.us-west-1.aliyuncs.com"},
                 {"na-south-1", "vpc.na-south-1.aliyuncs.com"},
                 {"me-east-1", "vpc.me-east-1.aliyuncs.com"},
                 {"me-central-1", "vpc.me-central-1.aliyuncs.com"},
-                {"eu-west-2", "vpc.eu-west-2.aliyuncs.com"},
-                {"eu-west-1", "vpc.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "vpc.eu-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "vpc.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "vpc.cn-qingdao.aliyuncs.com"},
-                {"cn-nanjing", "vpc.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "vpc.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "vpc.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "vpc.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "vpc.cn-heyuan.aliyuncs.com"},
-                {"cn-guangzhou", "vpc.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "vpc.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "vpc.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing-finance-1", "vpc.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-beijing", "vpc.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "vpc.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "vpc.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "vpc.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "vpc.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "vpc.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "vpc.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "vpc.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "vpc.ap-northeast-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "vpc.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -118,7 +119,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the router interface is activated, it enters the <b>Active</b> state. </para>
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
         /// </remarks>
@@ -184,7 +186,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the router interface is activated, it enters the <b>Active</b> state. </para>
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
         /// </remarks>
@@ -250,7 +253,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the router interface is activated, it enters the <b>Active</b> state. </para>
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
         /// </remarks>
@@ -276,7 +280,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the router interface is activated, it enters the <b>Active</b> state. </para>
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
         /// </remarks>
@@ -4721,7 +4726,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</para>
+        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4733,7 +4738,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>Only dedicated Express Connect circuits are supported.
         /// Other notes:</description></item>
         /// <item><description>A maximum of three CKN and CAK pairs can be configured.</description></item>
-        /// <item><description>Associating a key that is currently in the Disassociated state cancels the previously associated key.</description></item>
+        /// <item><description>Associating a key that is currently in the Disassociated state disassociates the previously active key.</description></item>
         /// <item><description>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</description></item>
         /// </list>
         /// </description>
@@ -4793,7 +4798,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</para>
+        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4805,7 +4810,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>Only dedicated Express Connect circuits are supported.
         /// Other notes:</description></item>
         /// <item><description>A maximum of three CKN and CAK pairs can be configured.</description></item>
-        /// <item><description>Associating a key that is currently in the Disassociated state cancels the previously associated key.</description></item>
+        /// <item><description>Associating a key that is currently in the Disassociated state disassociates the previously active key.</description></item>
         /// <item><description>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</description></item>
         /// </list>
         /// </description>
@@ -4865,7 +4870,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</para>
+        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4877,7 +4882,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>Only dedicated Express Connect circuits are supported.
         /// Other notes:</description></item>
         /// <item><description>A maximum of three CKN and CAK pairs can be configured.</description></item>
-        /// <item><description>Associating a key that is currently in the Disassociated state cancels the previously associated key.</description></item>
+        /// <item><description>Associating a key that is currently in the Disassociated state disassociates the previously active key.</description></item>
         /// <item><description>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</description></item>
         /// </list>
         /// </description>
@@ -4897,7 +4902,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fiber or Ethernet) to cover all traffic from sender to receiver.</para>
+        /// <para>Associates a MACsec key with a dedicated Express Connect circuit port. MACsec uses dedicated encryption chips (such as NICs or switches) to implement low-latency encryption and decryption, directly encrypting physical links (such as optical fibers or Ethernet) to cover all traffic from the sender to the receiver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4909,7 +4914,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>Only dedicated Express Connect circuits are supported.
         /// Other notes:</description></item>
         /// <item><description>A maximum of three CKN and CAK pairs can be configured.</description></item>
-        /// <item><description>Associating a key that is currently in the Disassociated state cancels the previously associated key.</description></item>
+        /// <item><description>Associating a key that is currently in the Disassociated state disassociates the previously active key.</description></item>
         /// <item><description>Associating a key that is currently in the AssociatedFailed state triggers the device to renegotiate the session.</description></item>
         /// </list>
         /// </description>
@@ -6374,22 +6379,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</para>
+        /// <para>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
-        /// <item><description>The SSL certificates must use Chinese SM algorithms.</description></item>
+        /// <item><description>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
+        /// <item><description>The SSL certificates must use SM algorithms.</description></item>
         /// <item><description>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<list type="bullet">
+        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being attached.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is attached.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
+        /// <para>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6456,22 +6461,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</para>
+        /// <para>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
-        /// <item><description>The SSL certificates must use Chinese SM algorithms.</description></item>
+        /// <item><description>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
+        /// <item><description>The SSL certificates must use SM algorithms.</description></item>
         /// <item><description>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<list type="bullet">
+        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being attached.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is attached.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
+        /// <para>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6538,22 +6543,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</para>
+        /// <para>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
-        /// <item><description>The SSL certificates must use Chinese SM algorithms.</description></item>
+        /// <item><description>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
+        /// <item><description>The SSL certificates must use SM algorithms.</description></item>
         /// <item><description>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<list type="bullet">
+        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being attached.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is attached.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
+        /// <para>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6576,22 +6581,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you attach a VPN gateway to an SSL certificate, take note of the following information:</para>
+        /// <para>Before you associate a VPN gateway with an SSL certificate, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Only Chinese SM VPN gateways support SSL certificate attachment. You must attach two SSL certificates to a Chinese SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
-        /// <item><description>The SSL certificates must use Chinese SM algorithms.</description></item>
+        /// <item><description>Only ShangMi (SM) VPN gateways support SSL certificate binding. You must attach two SSL certificates to an SM VPN gateway: one as the encryption certificate and the other as the signing certificate.</description></item>
+        /// <item><description>The SSL certificates must use SM algorithms.</description></item>
         /// <item><description>You cannot specify the same SSL certificate as both the encryption certificate and the signing certificate for the same VPN gateway instance.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The attachment node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the attachment status of the SSL certificate:<list type="bullet">
+        /// <item><description>When you attach a VPN gateway to an SSL certificate for the first time, the system performs automatic creation of a service-linked role named AliyunServiceRoleForVPNCertificate and adds the access policy named AliyunServiceRolePolicyForVPNCertificate to the role. This grants the VPN gateway permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/203323.html">AliyunServiceRoleForVPNCertificate</a>.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation is asynchronous. After you send a request, the system returns a request ID, but the SSL certificate is not yet attached to the VPN gateway. The binding node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the binding status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being attached.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is attached.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate attachment for the same VPN gateway.</description></item>
+        /// <item><description>The <b>AssociateVpnGatewayWithCertificate</b> operation does not support concurrent SSL certificate binding requests for the same VPN gateway.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that you have two SSL certificates that use Chinese SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
+        /// <para>Make sure that you have two SSL certificates that use SM algorithms in the Alibaba Cloud Certificate Management Service console. For more information about SSL certificates, see <a href="https://help.aliyun.com/document_detail/28535.html">What is Certificate Management Service?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7197,12 +7202,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
+        /// <para>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can cancel access only for Express Connect circuits in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not yet activated).</para>
+        /// <para>You can cancel the access of an Express Connect circuit only when it is in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <b>Allocating</b> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <b>Allocated</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7268,12 +7273,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
+        /// <para>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can cancel access only for Express Connect circuits in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not yet activated).</para>
+        /// <para>You can cancel the access of an Express Connect circuit only when it is in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <b>Allocating</b> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <b>Allocated</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7339,12 +7344,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
+        /// <para>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can cancel access only for Express Connect circuits in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not yet activated).</para>
+        /// <para>You can cancel the access of an Express Connect circuit only when it is in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <b>Allocating</b> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <b>Allocated</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7362,12 +7367,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels access to an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
+        /// <para>Cancels the access of an Express Connect circuit. After the cancellation, the Express Connect circuit enters the Canceled state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can cancel access only for Express Connect circuits in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not yet activated).</para>
+        /// <para>You can cancel the access of an Express Connect circuit only when it is in the <b>Initial</b>, <b>Approved</b>, <b>Allocated</b>, or <b>Confirmed</b> state (not enabled). After an Express Connect circuit is created by calling CreatePhysicalConnection, it may briefly be in the <b>Allocating</b> state, during which it cannot be canceled. Poll the status by calling DescribePhysicalConnections and call this operation after the state changes to <b>Allocated</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7753,7 +7758,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</para>
+        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7811,7 +7816,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</para>
+        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7869,7 +7874,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</para>
+        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7887,7 +7892,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region of an IPsec-VPN connection supports the BGP feature.</para>
+        /// <para>Calls the CheckVpnBgpEnabled operation to query whether the region to which an IPsec-VPN connection belongs supports the BGP feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7905,8 +7910,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction.</para>
+        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompletePhysicalConnectionLOARequest
@@ -7995,8 +8005,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction.</para>
+        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompletePhysicalConnectionLOARequest
@@ -8085,8 +8100,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction.</para>
+        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompletePhysicalConnectionLOARequest
@@ -8103,8 +8123,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction.</para>
+        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompletePhysicalConnectionLOARequest
@@ -11788,7 +11813,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>You cannot create a failover test job in the following scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -11899,7 +11924,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>You cannot create a failover test job in the following scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -12010,7 +12035,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>You cannot create a failover test job in the following scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -12049,7 +12074,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>You cannot create a failover test job in the following scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -19759,7 +19784,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
+        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL-VPN server is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL-VPN server is created.</description></item>
         /// </list>
@@ -19894,7 +19919,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
+        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL-VPN server is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL-VPN server is created.</description></item>
         /// </list>
@@ -20029,7 +20054,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
+        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL-VPN server is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL-VPN server is created.</description></item>
         /// </list>
@@ -20064,7 +20089,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
+        /// <item><description><b>CreateSslVpnServer</b> is an asynchronous operation. After you call this operation, the system returns an instance ID but the SSL-VPN server is not yet created. The creation task continues in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL-VPN server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL-VPN server is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL-VPN server is created.</description></item>
         /// </list>
@@ -20890,21 +20915,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
         /// <item><description>After a vSwitch is created, you cannot modify its CIDR block.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is active.</description></item>
+        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
+        /// <item><description>When the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
+        /// <item><description>When the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVSwitch</b> operation does not support concurrent creation of vSwitches in the same VPC.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</description></item>
+        /// <item><description>When you call the <b>CreateVSwitch</b> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21004,21 +21029,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
         /// <item><description>After a vSwitch is created, you cannot modify its CIDR block.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is active.</description></item>
+        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
+        /// <item><description>When the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
+        /// <item><description>When the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVSwitch</b> operation does not support concurrent creation of vSwitches in the same VPC.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</description></item>
+        /// <item><description>When you call the <b>CreateVSwitch</b> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21118,21 +21143,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
         /// <item><description>After a vSwitch is created, you cannot modify its CIDR block.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is active.</description></item>
+        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
+        /// <item><description>When the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
+        /// <item><description>When the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVSwitch</b> operation does not support concurrent creation of vSwitches in the same VPC.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</description></item>
+        /// <item><description>When you call the <b>CreateVSwitch</b> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21156,21 +21181,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin:</para>
+        /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
         /// <item><description>After a vSwitch is created, you cannot modify its CIDR block.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the vSwitch is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is active.</description></item>
+        /// <item><description>The <b>CreateVSwitch</b> operation is asynchronous. After you send a request, the system returns an instance ID but the vSwitch is not yet created. The background task is still in progress. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the creation status of the vSwitch:<list type="bullet">
+        /// <item><description>When the vSwitch is in the <b>Pending</b> state, the vSwitch is being configured.</description></item>
+        /// <item><description>When the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVSwitch</b> operation does not support concurrent creation of vSwitches in the same VPC.</description></item>
-        /// <item><description>The <b>CreateVSwitch</b> operation does not support creating vSwitches with the CIDR block 100.64.0.0/10 or its subnets.</description></item>
+        /// <item><description>When you call the <b>CreateVSwitch</b> operation, the CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21202,7 +21227,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21231,6 +21256,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPrefixNumber))
+            {
+                query["IpPrefixNumber"] = request.IpPrefixNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
@@ -21318,7 +21347,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21347,6 +21376,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPrefixNumber))
+            {
+                query["IpPrefixNumber"] = request.IpPrefixNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
             {
@@ -21434,7 +21467,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21470,7 +21503,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21493,7 +21526,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VBR failover group by calling the CreateVbrHa operation.</para>
+        /// <para>Creates a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21575,7 +21608,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VBR failover group by calling the CreateVbrHa operation.</para>
+        /// <para>Creates a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21657,7 +21690,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VBR failover group by calling the CreateVbrHa operation.</para>
+        /// <para>Creates a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21675,7 +21708,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VBR failover group by calling the CreateVbrHa operation.</para>
+        /// <para>Creates a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21701,13 +21734,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</description></item>
         /// <item><description>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
+        /// <item><description>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
         /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being created.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>CreateVcoRouteEntry</b> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21802,13 +21835,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</description></item>
         /// <item><description>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
+        /// <item><description>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
         /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being created.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>CreateVcoRouteEntry</b> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21903,13 +21936,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</description></item>
         /// <item><description>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
+        /// <item><description>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
         /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being created.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>CreateVcoRouteEntry</b> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21936,13 +21969,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>The IPsec-VPN connection must be associated with a transit router instance. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</description></item>
         /// <item><description>Adding a destination route with a destination CIDR block of 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a destination route with a destination CIDR block of 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
+        /// <item><description>Do not add a destination route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such route entries cause the console to fail to display the status of the IPsec-VPN connection or cause IPsec negotiation to fail.</description></item>
         /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns an instance ID but the destination route entry is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the creation status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being created.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>CreateVcoRouteEntry</b> operation does not support concurrent creation of destination route entries for the same IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23393,15 +23426,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</para>
+        /// <para>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-        /// Before you execute the transform:
+        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+        /// Before you execute the transform procedure:
         /// The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-        /// After the transform is complete:</para>
+        /// After the transform procedure is complete:</para>
         /// <ol>
         /// <item><description>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</description></item>
         /// <item><description>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</description></item>
@@ -23463,15 +23496,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</para>
+        /// <para>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-        /// Before you execute the transform:
+        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+        /// Before you execute the transform procedure:
         /// The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-        /// After the transform is complete:</para>
+        /// After the transform procedure is complete:</para>
         /// <ol>
         /// <item><description>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</description></item>
         /// <item><description>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</description></item>
@@ -23533,15 +23566,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</para>
+        /// <para>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-        /// Before you execute the transform:
+        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+        /// Before you execute the transform procedure:
         /// The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-        /// After the transform is complete:</para>
+        /// After the transform procedure is complete:</para>
         /// <ol>
         /// <item><description>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</description></item>
         /// <item><description>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</description></item>
@@ -23563,15 +23596,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transforms the sharing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) routing push to cross-account shared port push.</para>
+        /// <para>Transforms the routing mode of shared Express Connect circuits from cross-account Virtual Border Router (VBR) push to cross-account shared port push.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the sharing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
-        /// Before you execute the transform:
+        /// <para>By invoking the CreateVpconnFromVbr operation, a partner can transform the routing mode of shared Express Connect circuits used by a tenant from cross-account VBR push to cross-account shared port push. The transform procedure does not affect the tenant\&quot;s services.
+        /// Before you execute the transform procedure:
         /// The partner must notify the tenant about the service upgrade in advance and ensure that the tenant has enabled outbound traffic billing. For information about how to enable outbound traffic billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Enable outbound traffic billing</a>.
-        /// After the transform is complete:</para>
+        /// After the transform procedure is complete:</para>
         /// <ol>
         /// <item><description>A shared port is added to the tenant\&quot;s account. The tenant must invoke the <a href="https://help.aliyun.com/document_detail/324198.html">ConfirmPhysicalConnection</a> operation to accept the shared port.</description></item>
         /// <item><description>After the tenant accepts the shared port, the partner must invoke the <a href="https://help.aliyun.com/document_detail/324191.html">AttachVbrToVpconn</a> operation to associate the VBR instance with the tenant\&quot;s shared Express Connect circuits instance.</description></item>
@@ -23593,7 +23626,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23601,13 +23634,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</description></item>
-        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
-        /// </list>
-        /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
+        /// <h3>Before you begin.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -23753,7 +23780,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23761,13 +23788,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</description></item>
-        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
-        /// </list>
-        /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
+        /// <h3>Before you begin.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -23913,7 +23934,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23921,13 +23942,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</description></item>
-        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
-        /// </list>
-        /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
+        /// <h3>Before you begin.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -23945,7 +23960,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection for bindng to a transit router instance by calling the CreateVpnAttachment operation.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23953,13 +23968,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>In the transit router binding scenario, IPsec-VPN connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required request parameters, only the following dual-tunnel mode-related request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to transit routers</a>.</description></item>
-        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system allocates a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
-        /// </list>
-        /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
+        /// <h3>Before you begin.</h3>
         /// </description>
         /// 
         /// <param name="request">
@@ -23985,14 +23994,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
         ///   <b>ClientToken</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>Tags</b> array, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.
-        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</description></item>
-        /// <item><description>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
+        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
         ///    <b>ClientToken</b>, <b>CustomerGatewayId</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, <b>RemoteCaCertificate</b>, and <b>Tags</b> array.</description></item>
-        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is created.</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</description></item>
         /// <item><description>The <b>CreateVpnConnection</b> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
@@ -24144,14 +24148,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
         ///   <b>ClientToken</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>Tags</b> array, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.
-        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</description></item>
-        /// <item><description>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
+        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
         ///    <b>ClientToken</b>, <b>CustomerGatewayId</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, <b>RemoteCaCertificate</b>, and <b>Tags</b> array.</description></item>
-        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is created.</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</description></item>
         /// <item><description>The <b>CreateVpnConnection</b> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
@@ -24303,14 +24302,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
         ///   <b>ClientToken</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>Tags</b> array, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.
-        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</description></item>
-        /// <item><description>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
+        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
         ///    <b>ClientToken</b>, <b>CustomerGatewayId</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, <b>RemoteCaCertificate</b>, and <b>Tags</b> array.</description></item>
-        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is created.</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</description></item>
         /// <item><description>The <b>CreateVpnConnection</b> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
@@ -24338,14 +24332,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>If the VPN gateway instance supports creating IPsec-VPN connections in dual-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
         ///   <b>ClientToken</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>Tags</b> array, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.
-        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</description></item>
-        /// <item><description>If the VPN gateway instance supports only creating IPsec-VPN connections in single-tunnel mode, you can configure the following request parameters in addition to the required parameters when you call the <c>CreateVpnConnection</c> operation:
+        ///   For information about the regions and zones that support IPsec-VPN connections in dual-tunnel mode, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.
         ///    <b>ClientToken</b>, <b>CustomerGatewayId</b>, <b>Name</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, <b>RemoteCaCertificate</b>, and <b>Tags</b> array.</description></item>
-        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is created.</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>The <b>CreateVpnConnection</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the IPsec-VPN connection is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the IPsec-VPN connection.</description></item>
         /// <item><description>The <b>CreateVpnConnection</b> operation does not support concurrent creation of IPsec-VPN connections under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
@@ -24371,9 +24360,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
+        /// <item><description><para>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
         /// </description></item>
-        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
+        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
         /// </description></item>
         /// <item><description><para>The <b>CreateVpnGateway</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</para>
         /// <list type="bullet">
@@ -24505,9 +24494,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
+        /// <item><description><para>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
         /// </description></item>
-        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
+        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
         /// </description></item>
         /// <item><description><para>The <b>CreateVpnGateway</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</para>
         /// <list type="bullet">
@@ -24639,9 +24628,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
+        /// <item><description><para>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
         /// </description></item>
-        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
+        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
         /// </description></item>
         /// <item><description><para>The <b>CreateVpnGateway</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</para>
         /// <list type="bullet">
@@ -24673,9 +24662,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><para>Before you create a VPN gateway, familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
+        /// <item><description><para>Before you create a VPN gateway, we recommend that you familiarize yourself with the limits of VPN gateways. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
         /// </description></item>
-        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
+        /// <item><description><para>VPN gateway instances in some regions support only dual-tunnel mode IPsec-VPN connections by default. When you call the <c>CreateVpnGateway</c> operation to create a VPN gateway instance in these regions, you must specify the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters in addition to the required parameters. For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
         /// </description></item>
         /// <item><description><para>The <b>CreateVpnGateway</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the VPN gateway is not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the VPN gateway:</para>
         /// <list type="bullet">
@@ -24701,23 +24690,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</para>
+        /// <para>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
+        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
+        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route has been created.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</description></item>
@@ -24823,23 +24812,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</para>
+        /// <para>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
+        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
+        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route has been created.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</description></item>
@@ -24945,23 +24934,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</para>
+        /// <para>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
+        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
+        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route has been created.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</description></item>
@@ -24983,23 +24972,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy-based route for a VPN gateway by calling the CreateVpnPbrRouteEntry operation.</para>
+        /// <para>Creates a VPN policy-based route by calling the CreateVpnPbrRouteEntry operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before creating a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description>Before creating a policy-based route, we recommend that you understand the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, make sure that you have created an IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
+        /// <item><description>Before you create a policy-based route, we recommend that you familiarize yourself with the limits and matching rules of policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Use policy-based routes</a>.</description></item>
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Adding a policy-based route whose destination CIDR block is 0.0.0.0/0 is not supported.</description></item>
-        /// <item><description>Do not add a policy-based route whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes cause the console to fail to display instance status of the IPsec-VPN connection or cause IPsec-VPN connection negotiation failures.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you call this operation, the system returns the information about the policy-based route, but the route has not been created yet. The system creates the route in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
+        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
+        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route has been created.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation does not support concurrent creation of policy-based routes for the same VPN gateway instance.</description></item>
@@ -25685,7 +25674,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified Border Gateway Protocol (BGP) group.</para>
+        /// <para>Deletes a specified BGP group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25751,7 +25740,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified Border Gateway Protocol (BGP) group.</para>
+        /// <para>Deletes a specified BGP group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25817,7 +25806,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified Border Gateway Protocol (BGP) group.</para>
+        /// <para>Deletes a specified BGP group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25835,7 +25824,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified Border Gateway Protocol (BGP) group.</para>
+        /// <para>Deletes a specified BGP group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27717,12 +27706,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect failover test job.</para>
+        /// <para>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted.</para>
+        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <b>JobId</b>. If the test resource is an Express Connect circuit, the circuit must be in the <b>Enabled</b> state and its business status must be <b>Normal</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27788,12 +27777,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect failover test job.</para>
+        /// <para>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted.</para>
+        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <b>JobId</b>. If the test resource is an Express Connect circuit, the circuit must be in the <b>Enabled</b> state and its business status must be <b>Normal</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27859,12 +27848,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect failover test job.</para>
+        /// <para>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted.</para>
+        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <b>JobId</b>. If the test resource is an Express Connect circuit, the circuit must be in the <b>Enabled</b> state and its business status must be <b>Normal</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27882,12 +27871,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect failover test job.</para>
+        /// <para>Deletes an Express Connect failover test job by calling the DeleteFailoverTestJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted.</para>
+        /// <para>Only failover test jobs in the <b>Pending</b> or <b>Completed</b> state can be deleted. Before calling this operation, create a failover test job by calling CreateFailoverTestJob and obtain the <b>JobId</b>. If the test resource is an Express Connect circuit, the circuit must be in the <b>Enabled</b> state and its business status must be <b>Normal</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29555,7 +29544,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<list type="bullet">
+        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec server is deleted.</description></item>
         /// </list>
@@ -29621,7 +29610,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<list type="bullet">
+        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec server is deleted.</description></item>
         /// </list>
@@ -29687,7 +29676,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<list type="bullet">
+        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec server is deleted.</description></item>
         /// </list>
@@ -29717,7 +29706,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the IPsec server is not yet deleted. The deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the IPsec server:<list type="bullet">
+        /// <item><description><b>DeleteIpsecServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec server is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the deletion status of the IPsec server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec server is deleted.</description></item>
         /// </list>
@@ -30670,13 +30659,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
+        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
         /// <list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Deleting</b> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway cannot be found, the NAT gateway is deleted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The deletion of a NAT gateway is irreversible. Proceed with caution.</para>
+        /// <para>Deleting a NAT gateway is irreversible. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -30748,13 +30737,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
+        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
         /// <list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Deleting</b> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway cannot be found, the NAT gateway is deleted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The deletion of a NAT gateway is irreversible. Proceed with caution.</para>
+        /// <para>Deleting a NAT gateway is irreversible. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -30826,13 +30815,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
+        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
         /// <list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Deleting</b> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway cannot be found, the NAT gateway is deleted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The deletion of a NAT gateway is irreversible. Proceed with caution.</para>
+        /// <para>Deleting a NAT gateway is irreversible. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -30856,13 +30845,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
+        /// <para><em>DeleteNatGateway</em>* is an asynchronous operation. After you send a request, the system returns a request ID. However, the NAT gateway is not immediately deleted. The deletion task runs in the background. You can call <a href="https://www.alibabacloud.com/help/en/nat-gateway/developer-reference/api-vpc-2016-04-28-describenatgateways-natgws">DescribeNatGateways</a> to query the status of the NAT gateway:</para>
         /// <list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Deleting</b> state, the NAT gateway is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway cannot be found, the NAT gateway is deleted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The deletion of a NAT gateway is irreversible. Proceed with caution.</para>
+        /// <para>Deleting a NAT gateway is irreversible. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -33751,12 +33740,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteSslVpnServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL server is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeleteSslVpnServer</b> does not support concurrent deletion of SSL server instances under the same VPN gateway.</description></item>
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33829,12 +33818,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteSslVpnServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL server is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeleteSslVpnServer</b> does not support concurrent deletion of SSL server instances under the same VPN gateway.</description></item>
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33907,12 +33896,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteSslVpnServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL server is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeleteSslVpnServer</b> does not support concurrent deletion of SSL server instances under the same VPN gateway.</description></item>
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33937,12 +33926,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteSslVpnServer</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the SSL server has not yet been deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the SSL server is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the SSL server:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the SSL server is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the SSL server is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeleteSslVpnServer</b> does not support concurrent deletion of SSL server instances under the same VPN gateway.</description></item>
+        /// <item><description>The <b>DeleteSslVpnServer</b> operation does not support concurrent deletion of SSL servers under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35097,7 +35086,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VBR failover group.</para>
+        /// <para>Calls DeleteVbrHa to delete a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35163,7 +35152,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VBR failover group.</para>
+        /// <para>Calls DeleteVbrHa to delete a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35229,7 +35218,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VBR failover group.</para>
+        /// <para>Calls DeleteVbrHa to delete a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35247,7 +35236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VBR failover group.</para>
+        /// <para>Calls DeleteVbrHa to delete a VBR failover group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35271,7 +35260,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
+        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being deleted.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is deleted.</description></item>
         /// </list>
@@ -35361,7 +35350,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
+        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being deleted.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is deleted.</description></item>
         /// </list>
@@ -35451,7 +35440,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
+        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being deleted.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is deleted.</description></item>
         /// </list>
@@ -35481,7 +35470,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
+        /// <item><description><b>DeleteVcoRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the destination route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the deletion status of the destination route entry:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination route entry is being deleted.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination route entry is deleted.</description></item>
         /// </list>
@@ -36345,14 +36334,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</para>
+        /// <para>Deletes an IPsec-VPN connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
-        /// <item><description>If the IPsec-VPN connection is not associated with any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
+        /// <item><description>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
+        /// <item><description>If the IPsec-VPN connection is not bindded to any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36415,14 +36404,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</para>
+        /// <para>Deletes an IPsec-VPN connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
-        /// <item><description>If the IPsec-VPN connection is not associated with any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
+        /// <item><description>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
+        /// <item><description>If the IPsec-VPN connection is not bindded to any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36485,14 +36474,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</para>
+        /// <para>Deletes an IPsec-VPN connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
-        /// <item><description>If the IPsec-VPN connection is not associated with any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
+        /// <item><description>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
+        /// <item><description>If the IPsec-VPN connection is not bindded to any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36511,14 +36500,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IPsec-VPN connection by calling the DeleteVpnAttachment operation.</para>
+        /// <para>Deletes an IPsec-VPN connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is associated with a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
-        /// <item><description>If the IPsec-VPN connection is not associated with any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
+        /// <item><description>If the IPsec-VPN connection is bindded to a transit router instance, disassociate the IPsec-VPN connection from the transit router instance before you delete the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/468251.html">DeleteTransitRouterVpnAttachment</a>.</description></item>
+        /// <item><description>If the IPsec-VPN connection is not bindded to any resource, you can call the <c>DeleteVpnAttachment</c> operation to directly delete the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36543,7 +36532,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is deleted.</description></item>
         /// </list>
@@ -36624,7 +36613,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is deleted.</description></item>
         /// </list>
@@ -36705,7 +36694,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is deleted.</description></item>
         /// </list>
@@ -36738,7 +36727,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance and determine the deletion status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description><b>DeleteVpnConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the IPsec-VPN connection is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the deletion status of the IPsec-VPN connection:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the IPsec-VPN connection is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the IPsec-VPN connection is deleted.</description></item>
         /// </list>
@@ -36771,7 +36760,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</para>
+        /// <para>You cannot delete a VPN gateway that has IPsec-VPN connections.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -36844,7 +36833,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</para>
+        /// <para>You cannot delete a VPN gateway that has IPsec-VPN connections.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -36917,7 +36906,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</para>
+        /// <para>You cannot delete a VPN gateway that has IPsec-VPN connections.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -36942,7 +36931,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot delete a VPN gateway that has existing IPsec-VPN connections.</para>
+        /// <para>You cannot delete a VPN gateway that has IPsec-VPN connections.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -37231,7 +37220,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<list type="bullet">
+        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the VPN destination route is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the VPN destination route is deleted.</description></item>
         /// </list>
@@ -37325,7 +37314,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<list type="bullet">
+        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the VPN destination route is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the VPN destination route is deleted.</description></item>
         /// </list>
@@ -37419,7 +37408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<list type="bullet">
+        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the VPN destination route is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the VPN destination route is deleted.</description></item>
         /// </list>
@@ -37449,7 +37438,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway and determine the deletion status of the VPN destination routing:<list type="bullet">
+        /// <item><description><b>DeleteVpnRouteEntry</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the VPN destination route is not yet deleted, and the deletion node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway, and determine the deletion status of the VPN destination routing:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the VPN destination route is being deleted.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the VPN destination route is deleted.</description></item>
         /// </list>
@@ -39321,12 +39310,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic IP Addresses (EIPs) created in a specified region.</para>
+        /// <para>Queries elastic IP addresses (EIPs) created in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</para>
+        /// <para>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <b>Throttling.DeepPageSkip</b> error code may be returned. Reduce the query frequency or use sequential pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39464,12 +39453,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic IP Addresses (EIPs) created in a specified region.</para>
+        /// <para>Queries elastic IP addresses (EIPs) created in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</para>
+        /// <para>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <b>Throttling.DeepPageSkip</b> error code may be returned. Reduce the query frequency or use sequential pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39607,12 +39596,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic IP Addresses (EIPs) created in a specified region.</para>
+        /// <para>Queries elastic IP addresses (EIPs) created in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</para>
+        /// <para>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <b>Throttling.DeepPageSkip</b> error code may be returned. Reduce the query frequency or use sequential pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39630,12 +39619,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic IP Addresses (EIPs) created in a specified region.</para>
+        /// <para>Queries elastic IP addresses (EIPs) created in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries information about EIPs created in a specified region, including the bandwidth peak, billing method, and the type of instance currently attached with each EIP.</para>
+        /// <para>This operation queries information about EIPs created in a specified region, including the maximum bandwidth, billing method, and the type of instance currently attached to each EIP. If you frequently perform deep paging or page skipping, the <b>Throttling.DeepPageSkip</b> error code may be returned. Reduce the query frequency or use sequential pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40440,6 +40429,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries Express Connect QoS queues.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <b>QosId</b>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeExpressConnectTrafficQosQueueRequest
         /// </param>
@@ -40513,6 +40507,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries Express Connect QoS queues.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <b>QosId</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExpressConnectTrafficQosQueueRequest
@@ -40588,6 +40587,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries Express Connect QoS queues.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <b>QosId</b>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeExpressConnectTrafficQosQueueRequest
         /// </param>
@@ -40605,6 +40609,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries Express Connect QoS queues.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, call CreateExpressConnectTrafficQos to create a QoS policy and obtain the <b>QosId</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExpressConnectTrafficQosQueueRequest
@@ -40813,7 +40822,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</para>
+        /// <para>Queries the details of an Express Connect failover test job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40879,7 +40888,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</para>
+        /// <para>Queries the details of an Express Connect failover test job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40945,7 +40954,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</para>
+        /// <para>Queries the details of an Express Connect failover test job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40963,7 +40972,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Express Connect failover test job by calling the DescribeFailoverTestJob operation.</para>
+        /// <para>Queries the details of an Express Connect failover test job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40981,7 +40990,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries failover test jobs of Express Connect in batches.</para>
+        /// <para>Queries Express Connect failover test jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41055,7 +41064,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries failover test jobs of Express Connect in batches.</para>
+        /// <para>Queries Express Connect failover test jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41129,7 +41138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries failover test jobs of Express Connect in batches.</para>
+        /// <para>Queries Express Connect failover test jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41147,7 +41156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries failover test jobs of Express Connect in batches.</para>
+        /// <para>Queries Express Connect failover test jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45526,7 +45535,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45617,7 +45626,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45708,7 +45717,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45731,7 +45740,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48593,7 +48602,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</para>
+        /// <para>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48671,7 +48680,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</para>
+        /// <para>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48749,7 +48758,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</para>
+        /// <para>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48767,7 +48776,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeTagKeysForExpressConnect operation to return the tag list of Express Connect.</para>
+        /// <para>Queries the tag list of Express Connect resources by calling the DescribeTagKeysForExpressConnect operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49364,6 +49373,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries networkable information. Internal networking is performed by vSwitch.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVSwitches</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVSwitchesRequest
         /// </param>
@@ -49473,6 +49487,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries networkable information. Internal networking is performed by vSwitch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVSwitches</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVSwitchesRequest
@@ -49584,6 +49603,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries networkable information. Internal networking is performed by vSwitch.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVSwitches</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVSwitchesRequest
         /// </param>
@@ -49601,6 +49625,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries networkable information. Internal networking is performed by vSwitch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVSwitches</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVSwitchesRequest
@@ -49985,7 +50014,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Border Routers (VBRs) that you have created.</para>
+        /// <para>Queries Virtual Border Routers (VBRs) that are created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50063,7 +50092,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Border Routers (VBRs) that you have created.</para>
+        /// <para>Queries Virtual Border Routers (VBRs) that are created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50141,7 +50170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Border Routers (VBRs) that you have created.</para>
+        /// <para>Queries Virtual Border Routers (VBRs) that are created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50159,7 +50188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Border Routers (VBRs) that you have created.</para>
+        /// <para>Queries Virtual Border Routers (VBRs) that are created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50748,6 +50777,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries created VPCs.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVpcsRequest
         /// </param>
@@ -50849,6 +50883,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries created VPCs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVpcsRequest
@@ -50952,6 +50991,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries created VPCs.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVpcsRequest
         /// </param>
@@ -50969,6 +51013,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries created VPCs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVpcsRequest
@@ -52793,7 +52842,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</para>
+        /// <para>Queries the logs of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52879,7 +52928,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</para>
+        /// <para>Queries the logs of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52965,7 +53014,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</para>
+        /// <para>Queries the logs of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52983,7 +53032,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of an SSL server by calling the DescribeVpnSslServerLogs operation.</para>
+        /// <para>Queries the logs of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53605,12 +53654,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</para>
+        /// <para>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
+        /// <para>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53672,12 +53721,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</para>
+        /// <para>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
+        /// <para>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53739,12 +53788,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</para>
+        /// <para>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
+        /// <para>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53762,12 +53811,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Diagnoses a specified VPN gateway instance with one click by calling the DiagnoseVpnGateway operation.</para>
+        /// <para>Calls the DiagnoseVpnGateway operation to perform a one-click diagnosis on a specified VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only VPN gateway instances in specific regions support the one-click diagnostics feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
+        /// <para>Only VPN gateway instances in specific regions support the one-click diagnosis feature. For more information about regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Regions that support VPN Gateway features</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54535,12 +54584,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<list type="bullet">
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being dissociated.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is dissociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent SSL certificate dissociation for the same VPN gateway.</description></item>
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54609,12 +54658,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<list type="bullet">
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being dissociated.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is dissociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent SSL certificate dissociation for the same VPN gateway.</description></item>
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54683,12 +54732,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<list type="bullet">
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being dissociated.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is dissociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent SSL certificate dissociation for the same VPN gateway.</description></item>
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54713,12 +54762,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the VPN gateway is not yet dissociated from the SSL certificate, and the dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and check the dissociation status of the SSL certificate:<list type="bullet">
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the VPN gateway has not yet been dissociated from the SSL certificate. The dissociation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance and confirm the dissociation status of the SSL certificate:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL certificate is being dissociated.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL certificate is dissociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent SSL certificate dissociation for the same VPN gateway.</description></item>
+        /// <item><description><b>DissociateVpnGatewayWithCertificate</b> does not support concurrent dissociation of SSL certificates from the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -57773,12 +57822,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</para>
+        /// <para>Queries the one-click diagnosis result of a VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters in addition to the required parameters.</para>
+        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, in addition to the required parameters, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57832,12 +57881,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</para>
+        /// <para>Queries the one-click diagnosis result of a VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters in addition to the required parameters.</para>
+        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, in addition to the required parameters, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57891,12 +57940,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</para>
+        /// <para>Queries the one-click diagnosis result of a VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters in addition to the required parameters.</para>
+        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, in addition to the required parameters, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57914,12 +57963,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the one-click diagnostic result of a VPN gateway instance by calling the GetVpnGatewayDiagnoseResult operation.</para>
+        /// <para>Queries the one-click diagnosis result of a VPN gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters in addition to the required parameters.</para>
+        /// <para>When you call the <b>GetVpnGatewayDiagnoseResult</b> operation, in addition to the required parameters, you must specify at least one of the <b>DiagnoseId</b> and <b>VpnGatewayId</b> parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58365,7 +58414,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</para>
+        /// <para>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58411,7 +58460,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</para>
+        /// <para>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58457,7 +58506,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</para>
+        /// <para>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58475,7 +58524,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListBusinessAccessPoints operation to query access point information for Express Connect circuits.</para>
+        /// <para>Queries the access point information of Express Connect circuits by calling the ListBusinessAccessPoints operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63501,7 +63550,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call <b>ListVpnCertificateAssociations</b>:</para>
         /// <list type="bullet">
         /// <item><description>If you specify only the <b>RegionId</b> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
-        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</description></item>
+        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>VpnGatewayId</b> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateId</b> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</description></item>
         /// </list>
@@ -63574,7 +63623,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call <b>ListVpnCertificateAssociations</b>:</para>
         /// <list type="bullet">
         /// <item><description>If you specify only the <b>RegionId</b> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
-        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</description></item>
+        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>VpnGatewayId</b> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateId</b> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</description></item>
         /// </list>
@@ -63647,7 +63696,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call <b>ListVpnCertificateAssociations</b>:</para>
         /// <list type="bullet">
         /// <item><description>If you specify only the <b>RegionId</b> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
-        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</description></item>
+        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>VpnGatewayId</b> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateId</b> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</description></item>
         /// </list>
@@ -63676,7 +63725,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call <b>ListVpnCertificateAssociations</b>:</para>
         /// <list type="bullet">
         /// <item><description>If you specify only the <b>RegionId</b> parameter, all associations between VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
-        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified certificate type in the specified region are queried.</description></item>
+        /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateType</b> parameters, the associations between VPN gateway instances and SSL certificates of the specified type in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>VpnGatewayId</b> parameters, the associations between the specified VPN gateway instances and SSL certificates in the specified region are queried.</description></item>
         /// <item><description>If you specify the <b>RegionId</b> and <b>CertificateId</b> parameters, the associations between the specified SSL certificates and VPN gateway instances in the specified region are queried.</description></item>
         /// </list>
@@ -64749,7 +64798,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</para>
+        /// <para>Modifies the configuration of a customer gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -64840,7 +64889,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</para>
+        /// <para>Modifies the configuration of a customer gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -64931,7 +64980,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</para>
+        /// <para>Modifies the configuration of a customer gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -64962,7 +65011,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a customer gateway by calling the ModifyCustomerGatewayAttribute operation.</para>
+        /// <para>Modifies the configuration of a customer gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -65721,15 +65770,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</para>
+        /// <para>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</description></item>
-        /// <item><description>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</description></item>
-        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</description></item>
+        /// <item><description>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</description></item>
+        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</description></item>
         /// <item><description>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</description></item>
         /// <item><description>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</description></item>
         /// </list>
@@ -65814,15 +65863,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</para>
+        /// <para>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</description></item>
-        /// <item><description>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</description></item>
-        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</description></item>
+        /// <item><description>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</description></item>
+        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</description></item>
         /// <item><description>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</description></item>
         /// <item><description>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</description></item>
         /// </list>
@@ -65907,15 +65956,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</para>
+        /// <para>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</description></item>
-        /// <item><description>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</description></item>
-        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</description></item>
+        /// <item><description>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</description></item>
+        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</description></item>
         /// <item><description>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</description></item>
         /// <item><description>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</description></item>
         /// </list>
@@ -65936,15 +65985,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyExpressConnectTrafficQos operation to modify an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits.</para>
+        /// <para>Modifies an Express Connect Quality of Service (QoS) policy. You can also use this operation to associate dedicated Express Connect circuits with the policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only dedicated Express Connect circuits that are in the Normal state and do not have overdue payments can be associated. Shared Express Connect circuit ports and Virtual Border Router (VBR) instances are not supported.</description></item>
-        /// <item><description>When associating dedicated Express Connect circuits, only full operations are supported. To dissociate all circuits, pass an empty string.</description></item>
-        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must apply for a whitelist before you can associate it.</description></item>
+        /// <item><description>When associating dedicated Express Connect circuits, only full replacement is supported. To disassociate all circuits, pass an empty string.</description></item>
+        /// <item><description>If a dedicated Express Connect circuit has shared Express Connect circuits or cross-account VBRs, you must be added to the whitelist before you can associate it.</description></item>
         /// <item><description>The device on which the dedicated Express Connect circuit resides must support the QoS feature before association.</description></item>
         /// <item><description>If a single VBR is associated with multiple Express Connect circuits, you must associate all Express Connect circuits of the VBR at the same time.</description></item>
         /// </list>
@@ -72353,20 +72402,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an SSL-VPN server.</para>
+        /// <para>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
-        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <b>Name</b>, this operation is asynchronous.</description></item>
-        /// <item><description>When <b>ModifySslVpnServer</b> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description>When the <b>ModifySslVpnServer</b> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the SSL-VPN server is being modified.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the SSL-VPN server has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72485,20 +72534,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an SSL-VPN server.</para>
+        /// <para>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
-        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <b>Name</b>, this operation is asynchronous.</description></item>
-        /// <item><description>When <b>ModifySslVpnServer</b> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description>When the <b>ModifySslVpnServer</b> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the SSL-VPN server is being modified.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the SSL-VPN server has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72617,20 +72666,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an SSL-VPN server.</para>
+        /// <para>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
-        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <b>Name</b>, this operation is asynchronous.</description></item>
-        /// <item><description>When <b>ModifySslVpnServer</b> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description>When the <b>ModifySslVpnServer</b> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the SSL-VPN server is being modified.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the SSL-VPN server has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -72649,20 +72698,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an SSL-VPN server.</para>
+        /// <para>Modifies the configuration of an SSL-VPN server by calling the ModifySslVpnServer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you want to enable two-factor identity authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
-        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify any configuration other than <b>Name</b>, this operation is asynchronous.</description></item>
-        /// <item><description>When <b>ModifySslVpnServer</b> is asynchronous, the system returns a request ID first, but the configuration of the SSL-VPN server has not been modified yet. The modification task continues in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// <item><description>When you modify only the <b>Name</b> of the SSL-VPN server, this operation is synchronous. If you modify configurations other than <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description>When the <b>ModifySslVpnServer</b> operation is asynchronous, the system returns a request ID but the configuration of the SSL-VPN server has not been modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to check the modification status:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the SSL-VPN server is being modified.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the SSL-VPN server has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the configuration of SSL-VPN servers under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifySslVpnServer</b> operation does not support concurrent modifications to the SSL-VPN server configuration under the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -73529,7 +73578,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the weight of the destination route entry is being modified.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry has been modified.</description></item>
+        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry is modified.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</description></item>
@@ -73623,7 +73672,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the weight of the destination route entry is being modified.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry has been modified.</description></item>
+        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry is modified.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</description></item>
@@ -73717,7 +73766,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the weight of the destination route entry is being modified.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry has been modified.</description></item>
+        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry is modified.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</description></item>
@@ -73747,7 +73796,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the weight of the destination route entry has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the destination route entry weight:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the weight of the destination route entry is being modified.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry has been modified.</description></item>
+        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the weight of the destination route entry is modified.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>ModifyVcoRouteEntryWeight</b> does not support concurrent modifications of destination route entry weights for the same IPsec-VPN connection.</description></item>
@@ -74651,15 +74700,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
+        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the configuration has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> does not support concurrent modification of the IPsec-VPN connection configuration.</description></item>
-        /// <item><description>When you call <b>ModifyVpnAttachmentAttribute</b>, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</description></item>
+        /// <item><description>When you call the <b>ModifyVpnAttachmentAttribute</b> operation, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74800,15 +74849,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
+        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the configuration has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> does not support concurrent modification of the IPsec-VPN connection configuration.</description></item>
-        /// <item><description>When you call <b>ModifyVpnAttachmentAttribute</b>, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</description></item>
+        /// <item><description>When you call the <b>ModifyVpnAttachmentAttribute</b> operation, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74949,15 +74998,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
+        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the configuration has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> does not support concurrent modification of the IPsec-VPN connection configuration.</description></item>
-        /// <item><description>When you call <b>ModifyVpnAttachmentAttribute</b>, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</description></item>
+        /// <item><description>When you call the <b>ModifyVpnAttachmentAttribute</b> operation, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74982,15 +75031,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, you can configure the following request parameters: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the operation is still being performed in the system background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection:<list type="bullet">
+        /// <item><description>When you modify a dual-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
+        /// <item><description>When you modify a single-tunnel IPsec-VPN connection, in addition to the required parameters, the following request parameters are supported: <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>CustomerGatewayId</b>.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPsec-VPN connection configuration has not been modified. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the modification status of the IPsec-VPN connection configuration:<list type="bullet">
         /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the configuration has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnAttachmentAttribute</b> does not support concurrent modification of the IPsec-VPN connection configuration.</description></item>
-        /// <item><description>When you call <b>ModifyVpnAttachmentAttribute</b>, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
+        /// <item><description>The <b>ModifyVpnAttachmentAttribute</b> operation does not support concurrent modifications to the IPsec-VPN connection configuration.</description></item>
+        /// <item><description>When you call the <b>ModifyVpnAttachmentAttribute</b> operation, you cannot modify the gateway type of the IPsec-VPN connection.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75015,16 +75064,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To modify a dual-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a dual-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///  <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>To modify a single-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a single-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///    <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>RemoteCaCertificate</b>.</description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the IPsec-VPN connection is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the IPsec-VPN connection is modified.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75161,16 +75205,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To modify a dual-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a dual-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///  <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>To modify a single-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a single-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///    <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>RemoteCaCertificate</b>.</description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the IPsec-VPN connection is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the IPsec-VPN connection is modified.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75307,16 +75346,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To modify a dual-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a dual-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///  <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>To modify a single-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a single-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///    <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>RemoteCaCertificate</b>.</description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the IPsec-VPN connection is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the IPsec-VPN connection is modified.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75341,16 +75375,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To modify a dual-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a dual-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///  <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>AutoConfigRoute</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>.</description></item>
-        /// <item><description>To modify a single-tunnel IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
+        /// <item><description>To modify a single-tunnel mode IPsec-VPN connection, the <c>ModifyVpnConnectionAttribute</c> operation supports the following request parameters in addition to the required parameters:
         ///    <b>ClientToken</b>, <b>Name</b>, <b>LocalSubnet</b>, <b>RemoteSubnet</b>, <b>EffectImmediately</b>, <b>IkeConfig</b>, <b>IpsecConfig</b>, <b>HealthCheckConfig</b>, <b>AutoConfigRoute</b>, <b>EnableDpd</b>, <b>EnableNatTraversal</b>, <b>BgpConfig</b>, and <b>RemoteCaCertificate</b>.</description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the configuration of the IPsec-VPN connection is not yet modified. The modification node runs in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the configuration of the IPsec-VPN connection is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the configuration of the IPsec-VPN connection is modified.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation does not support concurrent modifications to IPsec-VPN connection configurations under the same VPN gateway.</description></item>
+        /// <item><description>The <b>ModifyVpnConnectionAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the configuration of the IPsec-VPN connection has not been modified yet. The modification node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the instance status of the VPN gateway to determine the modification status of the IPsec-VPN connection configuration:</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75375,7 +75404,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
+        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the configuration has been modified.</description></item>
         /// </list>
@@ -75465,7 +75494,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
+        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the configuration has been modified.</description></item>
         /// </list>
@@ -75555,7 +75584,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
+        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the configuration has been modified.</description></item>
         /// </list>
@@ -75585,7 +75614,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
+        /// <item><description><b>ModifyVpnGatewayAttribute</b> is an asynchronous operation. After you call this operation, the system returns the VPN gateway information, but the configuration of the VPN gateway has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the VPN gateway configuration:<list type="bullet">
         /// <item><description>If the VPN gateway is in the <b>updating</b> state, the configuration is being modified.</description></item>
         /// <item><description>If the VPN gateway is in the <b>active</b> state, the configuration has been modified.</description></item>
         /// </list>
@@ -75917,18 +75946,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</para>
+        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing entry is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing entry has been modified.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<list type="bullet">
+        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing is being modified.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76019,18 +76048,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</para>
+        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing entry is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing entry has been modified.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<list type="bullet">
+        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing is being modified.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76121,18 +76150,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</para>
+        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing entry is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing entry has been modified.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<list type="bullet">
+        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing is being modified.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76151,18 +76180,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing entry.</para>
+        /// <para>Invokes the ModifyVpnPbrRouteEntryPriority operation to modify the policy priority of a policy-based routing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the policy-based routing entry has not been modified yet. The modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the modification status of the policy-based routing entry:<list type="bullet">
-        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing entry is being modified.</description></item>
-        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing entry has been modified.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the policy-based routing has not been modified yet because the modification node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway and determine the modification status of the policy-based routing:<list type="bullet">
+        /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based routing is being modified.</description></item>
+        /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based routing has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing entries on the same VPN gateway instance.</description></item>
+        /// <item><description><b>ModifyVpnPbrRouteEntryPriority</b> does not support concurrent modifications of policy-based routing on the same VPN gateway instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76475,16 +76504,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</para>
+        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
         /// <item><description>If the VPN destination route is in the <b>updating</b> state, the weight is being modified.</description></item>
-        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight is modified.</description></item>
+        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</description></item>
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> does not support concurrent modification of destination route weights on the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76577,16 +76606,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</para>
+        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
         /// <item><description>If the VPN destination route is in the <b>updating</b> state, the weight is being modified.</description></item>
-        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight is modified.</description></item>
+        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</description></item>
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> does not support concurrent modification of destination route weights on the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76679,16 +76708,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</para>
+        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
         /// <item><description>If the VPN destination route is in the <b>updating</b> state, the weight is being modified.</description></item>
-        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight is modified.</description></item>
+        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</description></item>
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> does not support concurrent modification of destination route weights on the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -76713,16 +76742,16 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if you successfully modify it by calling this operation.</para>
+        /// <para>This operation is applicable only to VPN gateway instances that support IPsec-VPN connections in single-tunnel mode. For VPN gateway instances that support IPsec-VPN connections in dual-tunnel mode, the weight does not take effect even if it is modified by calling this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If active/standby destination routes exist on a VPN gateway instance and you want to modify the weight of the active destination route, delete the standby destination route first. After the active destination route is modified, reconfigure the standby destination route. If you want to modify the weight of the standby destination route, delete the active destination route first. After the standby destination route is modified, reconfigure the active destination route. To delete a destination route, see <a href="https://help.aliyun.com/document_detail/2526961.html">DeleteVpnRouteEntry</a>.</description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route is not yet modified, and the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the weight of the VPN destination route has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the modification status of the weight:<list type="bullet">
         /// <item><description>If the VPN destination route is in the <b>updating</b> state, the weight is being modified.</description></item>
-        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight is modified.</description></item>
+        /// <item><description>If the VPN destination route is in the <b>active</b> state, the weight has been modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ModifyVpnRouteEntryWeight</b> operation does not support concurrent weight modifications for destination routes on the same VPN gateway.</description></item>
+        /// <item><description><b>ModifyVpnRouteEntryWeight</b> does not support concurrent modification of destination route weights on the same VPN gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -85745,7 +85774,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</para>
+        /// <para>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85844,7 +85873,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</para>
+        /// <para>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85943,7 +85972,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</para>
+        /// <para>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85974,7 +86003,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of an IPsec server by calling the UpdateIpsecServer operation.</para>
+        /// <para>Calls the UpdateIpsecServer operation to update the configuration of an IPsec server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

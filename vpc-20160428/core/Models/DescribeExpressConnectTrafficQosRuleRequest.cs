@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeExpressConnectTrafficQosRuleRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The QoS policy ID.</para>
+        /// <para>The QoS policy ID returned by the CreateExpressConnectTrafficQos operation.</para>
+        /// <remarks>
+        /// <para>This parameter is required. If you do not specify this parameter, the service returns IllegalParam.QosId (400).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>qos-2giu0a6vd5x0mv****</para>
@@ -42,7 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The QoS queue ID.</para>
+        /// <para>The QoS queue ID returned by the CreateExpressConnectTrafficQosQueue operation.</para>
+        /// <remarks>
+        /// <para>This parameter is required. If you do not specify this parameter, the service returns IllegalParam.QueueId (400).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>qos-queue-9nyx2u7n71s2rc****</para>
@@ -68,14 +74,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The QoS rule IDs.</para>
+        /// <para>The list of QoS rule IDs.</para>
         /// </summary>
         [NameInMap("RuleIdList")]
         [Validation(Required=false)]
         public List<string> RuleIdList { get; set; }
 
         /// <summary>
-        /// <para>The QoS rule names.</para>
+        /// <para>The list of QoS rule names.</para>
         /// </summary>
         [NameInMap("RuleNameList")]
         [Validation(Required=false)]

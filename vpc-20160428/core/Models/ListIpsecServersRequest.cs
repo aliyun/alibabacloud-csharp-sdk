@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</para>
+        /// <item><description><para>You do not need to specify this parameter for the first request or if no subsequent query exists.</para>
         /// </description></item>
-        /// <item><description><para>If a subsequent query is to be sent, set the value to the NextToken value returned in the previous call.</para>
+        /// <item><description><para>If a subsequent query exists, set the value to the <b>NextToken</b> value returned by the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the IPsec server belongs.</para>
+        /// <para>The resource group ID of the IPsec server.</para>
         /// <para>The IPsec server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the resource group ID of the VPN gateway instance.</para>
         /// 
         /// <b>Example:</b>

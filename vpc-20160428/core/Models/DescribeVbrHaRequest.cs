@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeVbrHaRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without starting the instance. The system checks whether required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, <c>DRYRUN.SUCCESS</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <c>DRYRUN.SUCCESS</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the instance is directly started.</para>
+        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the instance is started.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The VBR failover group instance ID.</para>
+        /// <para>The VBR failover group instance ID. You must specify at least one of <b>VbrHaId</b> and <b>VbrId</b>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbrha-sa1sxheuxtd98****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VbrHaId { get; set; }
 
         /// <summary>
-        /// <para>The VBR instance ID.</para>
+        /// <para>The VBR instance ID. You must specify at least one of <b>VbrId</b> and <b>VbrHaId</b>. If both are omitted, the service returns MissingParam.VbrHaIdOrVbrId (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-bp1jcg5cmxjbl9xgc****</para>

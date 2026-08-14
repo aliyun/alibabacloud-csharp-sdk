@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteBgpGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the BGP group.</para>
+        /// <para>The ID of the BGP group. The BGP group must be in the <b>Available</b> state. After you create a BGP group, call DescribeBgpGroups to query the <b>Status</b> value. Wait until the status changes to <b>Available</b> before you delete the BGP group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

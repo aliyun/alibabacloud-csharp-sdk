@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned by the current task. <b>200</b> indicates that the task is successful.</para>
+        /// <para>The status code returned by the current task. A value of <b>200</b> indicates that the task is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp is in the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the IPsec-VPN connection was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1658201810000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Indicates whether the current task is successfully executed.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Successfully executed.</description></item>
-        /// <item><description><b>false</b>: Failed to execute.</description></item>
+        /// <item><description><b>false</b>: Not successfully executed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpnGatewayDiagnoseResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the diagnostic started.</para>
+        /// <para>The time when the diagnosis started.</para>
         /// <para>The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic ID.</para>
+        /// <para>The diagnosis ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpndgn-uf6sgneym02lxyuv4****</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DiagnoseId { get; set; }
 
         /// <summary>
-        /// <para>The list of diagnostic items.</para>
+        /// <para>The list of diagnosis items.</para>
         /// </summary>
         [NameInMap("DiagnoseResult")]
         [Validation(Required=false)]
         public List<GetVpnGatewayDiagnoseResultResponseBodyDiagnoseResult> DiagnoseResult { get; set; }
         public class GetVpnGatewayDiagnoseResultResponseBodyDiagnoseResult : TeaModel {
             /// <summary>
-            /// <para>The diagnostic item.</para>
+            /// <para>The diagnosis item.</para>
             /// <list type="bullet">
             /// <item><description><b>RouteEntryConflict</b>: route conflict.</description></item>
             /// <item><description><b>VpnRouteQuota</b>: VPN gateway destination route quota.</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>VcoUserInternetIpConnectivity</b>: public network connectivity of the customer gateway.</description></item>
             /// <item><description><b>VcoPrivateConnectivity</b>: private network connectivity.</description></item>
             /// </list>
-            /// <para>For more information about each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</para>
+            /// <para>For more information about each diagnosis item, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about one-click diagnosis</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RouteEntryConflict</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DiagnoseName { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic result of the diagnostic item.</para>
-            /// <para>The operation returns different information for each diagnostic item:</para>
+            /// <para>The diagnosis result of the diagnosis item.</para>
+            /// <para>The operation returns different information for each diagnosis item:</para>
             /// <list type="bullet">
             /// <item><description><b>RouteEntryConflict</b>: The system returns information about the route conflict.</description></item>
             /// <item><description><b>VpnRouteQuota</b>:<list type="bullet">
@@ -110,13 +110,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DiagnoseResultDescription { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic result level of the diagnostic item.</para>
+            /// <para>The diagnosis result level of the diagnosis item.</para>
             /// <list type="bullet">
             /// <item><description><b>normal</b>: Normal.</description></item>
             /// <item><description><b>warning</b>: Warning.</description></item>
             /// <item><description><b>error</b>: Error.</description></item>
             /// </list>
-            /// <para>For more information about the diagnostic result levels of each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</para>
+            /// <para>For more information about the diagnosis result levels of each diagnosis item, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about one-click diagnosis</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The time when the diagnostic ended.</para>
+        /// <para>The time when the diagnosis ended.</para>
         /// <para>The time is displayed in UTC in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>The number of diagnostic items that have been completed.</para>
+        /// <para>The number of diagnosis items that have been completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The total number of diagnostic items.</para>
+        /// <para>The total number of diagnosis items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

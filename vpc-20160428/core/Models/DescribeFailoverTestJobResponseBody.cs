@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the failover test job.</para>
+            /// <para>The failover test job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ftj-bp1yh6mvi13aq3g8w****</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The failover test type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>StartNow</b>: starts immediately. The failover test starts immediately after the job is created.</para>
+            /// <item><description><para><b>StartNow</b>: start immediately. The test starts immediately after the job is created.</para>
             /// </description></item>
-            /// <item><description><para><b>StartLater</b>: starts later. Only the job is created without starting the test.</para>
+            /// <item><description><para><b>StartLater</b>: start later. Only the test job is created without starting the test.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<string> ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type for the failover test. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
+            /// <para>The failover test resource type. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHYSICALCONNECTION</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
+            /// <para>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T14:00:00Z</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
+            /// <para>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format as defined by ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T15:00:00Z</para>

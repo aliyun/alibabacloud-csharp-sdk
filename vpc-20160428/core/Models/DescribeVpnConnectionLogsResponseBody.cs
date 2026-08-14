@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IsCompleted { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

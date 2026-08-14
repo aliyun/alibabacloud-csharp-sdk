@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DisassociateMacSecKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically converted to uppercase. When the encryption algorithm is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</para>
+        /// <para>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically converted to uppercase. When the encryption algorithm is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters. This value must be a key name that has been associated with the target Express Connect circuit by calling AssociateMacSecKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ckn { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The ID of the Express Connect circuit. The Express Connect circuit must be in the <b>Enabled</b> state and its <b>BusinessStatus</b> must be <b>Normal</b>. You can call DescribePhysicalConnections to query the circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

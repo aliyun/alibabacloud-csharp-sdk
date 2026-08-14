@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to forcefully delete the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: forcefully deletes the NAT gateway. If this parameter is set to <b>true</b>:</para>
+        /// <item><description><para><b>true</b>: forcefully deletes the NAT gateway. If you set this parameter to <b>true</b>:</para>
         /// <list type="bullet">
         /// <item><description><para>If the NAT gateway has SNAT rules, the system force deletes the SNAT rules.</para>
         /// </description></item>
         /// <item><description><para>If the NAT gateway has DNAT rules, the system force deletes the DNAT rules.</para>
         /// </description></item>
-        /// <item><description><para>If the NAT gateway has associated Elastic IP Addresses (EIPs), the system automatically disassociates the EIPs.</para>
+        /// <item><description><para>If the NAT gateway has associated elastic IP addresses (EIPs), the system automatically disassociates the EIPs.</para>
         /// </description></item>
         /// <item><description><para>If the NAT gateway has NAT service plans that are not deleted, the system force deletes the NAT service plans.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): does not forcefully delete the NAT gateway. If this parameter is set to <b>false</b>:</para>
+        /// <item><description><para><b>false</b> (default): does not forcefully delete the NAT gateway. If you set this parameter to <b>false</b>:</para>
         /// <list type="bullet">
         /// <item><description><para>If the NAT gateway has NAT service plans that are not deleted, delete the NAT service plans first.</para>
         /// </description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the NAT gateway.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

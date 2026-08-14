@@ -32,7 +32,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The QoS policy ID.</para>
+        /// <para>The QoS policy ID returned by the CreateExpressConnectTrafficQos operation.</para>
+        /// <remarks>
+        /// <para>This parameter is required. If you do not specify this parameter, the IllegalParam.QosId (400) error is returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>qos-2giu0a6vd5x0mv****</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

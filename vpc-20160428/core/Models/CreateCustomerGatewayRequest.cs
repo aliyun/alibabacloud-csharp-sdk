@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The Autonomous System Number (ASN) of the gateway device in the on-premises data center. This parameter is required if you plan to enable Border Gateway Protocol (BGP) dynamic routing for the IPsec-VPN connection. Valid values: 1 to 4294967295. The value 45104 is not supported.</para>
-        /// <para><b>Asn</b> is a 4-byte number that can be entered in the two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal notation.</para>
+        /// <para>The autonomous system number (ASN) of the gateway device in the on-premises data center. This parameter is required if you plan to enable the BGP dynamic routing protocol for the IPsec-VPN connection. Valid values: 1 to 4294967295. The value 45104 is not supported.</para>
+        /// <para><b>Asn</b> is a 4-byte number. You can enter the value in two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal format.</para>
         /// <para>For example, if you enter 123.456, the ASN is 123 × 65536 + 456 = 8061384.</para>
         /// <remarks>
         /// <list type="bullet">
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The ID of the resource group to which the customer gateway belongs.</para>
         /// <list type="bullet">
         /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group ID.</description></item>
-        /// <item><description>If you do not specify a resource group, the customer gateway is added to the default resource group after it is created.</description></item>
+        /// <item><description>If you do not specify a resource group, the customer gateway belongs to the default resource group after it is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags to add to the customer gateway.</para>
+        /// <para>The tags to add to the customer gateway.</para>
         /// <para>You can add up to 20 tags to a customer gateway at a time.</para>
         /// </summary>
         [NameInMap("Tags")]

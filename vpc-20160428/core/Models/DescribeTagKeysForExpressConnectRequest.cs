@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>ROUTERINTERFACE</b>: VBR uplink.</description></item>
         /// <item><description><b>TRAFFICQOS</b>: QoS policy.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is essentially required. If it is not specified, the service returns MissingParameter (400).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PHYSICALCONNECTION</para>

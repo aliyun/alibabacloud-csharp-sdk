@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateVpnPbrRouteEntryResponseBody : TeaModel {
         /// <summary>
         /// <para>The timestamp when the policy-based route was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunnel protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OverlayMode { get; set; }
 
         /// <summary>
-        /// <para>The policy priority of the policy-based routing entry.</para>
+        /// <para>The policy priority of the policy-based route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The publish status of the policy-based route.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>published</b>: The policy-based route has been published to the VPC route table.</para>
+        /// <item><description><para><b>published</b>: The policy-based route is published to the VPC route table.</para>
         /// </description></item>
-        /// <item><description><para><b>normal</b>: The policy-based route has not been published to the VPC route table.</para>
+        /// <item><description><para><b>normal</b>: The policy-based route is not published to the VPC route table.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPN gateway.</para>
+        /// <para>The VPN gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1cmw7jh1nfe43m9****</para>

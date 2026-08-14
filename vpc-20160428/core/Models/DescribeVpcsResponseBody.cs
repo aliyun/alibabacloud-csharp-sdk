@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging queries.</para>
+        /// <para>The number of entries per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

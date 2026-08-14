@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without performing the actual request. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run without actually associating the certificate. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</para>
         /// </description></item>
         /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the VPN gateway is associated with the certificate.</para>
         /// </description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The instance ID of the VPN gateway.</para>
         /// <remarks>
-        /// <para>Only Chinese SM VPN gateways support certificate attachment.</para>
+        /// <para>Only ShangMi (SM) VPN gateways support attaching certificates.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

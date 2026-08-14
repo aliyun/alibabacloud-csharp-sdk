@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disables automatic payment.</description></item>
-        /// <item><description><b>true</b>: enables automatic payment.</description></item>
+        /// <item><description><b>false</b> (default): Automatic payment is disabled.</description></item>
+        /// <item><description><b>true</b>: Automatic payment is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>CM</b>: China Mobile</para>
         /// </description></item>
-        /// <item><description><para><b>CO</b>: other carriers in the Chinese mainland</para>
+        /// <item><description><para><b>CO</b>: Other carriers in the Chinese mainland</para>
         /// </description></item>
         /// <item><description><para><b>Equinix</b>: Equinix</para>
         /// </description></item>
-        /// <item><description><para><b>Other</b>: other carriers outside the Chinese mainland</para>
+        /// <item><description><para><b>Other</b>: Other carriers outside the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>100Base-T</b>: 100M Ethernet port.</para>
         /// </description></item>
-        /// <item><description><para><b>1000Base-T</b> (default): 1 GE port.</para>
+        /// <item><description><para><b>1000Base-T</b> (default): 1 GE electrical port.</para>
         /// </description></item>
         /// <item><description><para><b>1000Base-LX</b>: GE single-mode optical port (10 km).</para>
         /// </description></item>
-        /// <item><description><para><b>10GBase-T</b>: 10 GE port.</para>
+        /// <item><description><para><b>10GBase-T</b>: 10 GE electrical port.</para>
         /// </description></item>
         /// <item><description><para><b>10GBase-LR</b>: 10 GE single-mode optical port (10 km).</para>
         /// </description></item>
@@ -99,8 +99,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><para><b>100GBase-LR</b>: 100 GE single-mode optical port.</para>
         /// </description></item>
         /// </list>
+        /// <para>The default value <b>1000Base-T</b> is available only at access points that support this port type. Before calling this operation, call ListBusinessAccessPoints to query the <b>SupportPortTypes</b> of the target access point. For optical ports, also verify the <b>OpticalModuleModels</b>.</para>
         /// <remarks>
-        /// <para>40GBase-LR and 100GBase-LR ports are created based on the actual port availability. Contact your account manager for details.</para>
+        /// <para>40GBase-LR and 100GBase-LR must be created based on the actual backend port availability. Contact your account manager for details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit. </para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

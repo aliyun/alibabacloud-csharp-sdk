@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the client token. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic ID.</para>
-        /// <para>The diagnostic ID is returned when you call the <a href="https://help.aliyun.com/document_detail/469751.html">DiagnoseVpnGateway</a> operation.</para>
+        /// <para>The diagnosis ID.</para>
+        /// <para>When you call the <a href="https://help.aliyun.com/document_detail/469751.html">DiagnoseVpnGateway</a> operation, the system returns the corresponding diagnosis ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpndgn-uf6kuxbe3iv028k3s****</para>

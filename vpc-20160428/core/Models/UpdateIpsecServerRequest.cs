@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>IkePfs</b>: The Diffie-Hellman key exchange algorithm used in Phase 1 negotiations. Default value: <b>group2</b>.</para>
         /// </description></item>
-        /// <item><description><para><b>IkeLifetime</b>: The epoch of the SA negotiated in Phase 1. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</para>
+        /// <item><description><para><b>IkeLifetime</b>: The lifetime of the SA negotiated in Phase 1. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>. The parameter specifies the SA epoch.</para>
         /// </description></item>
         /// <item><description><para><b>LocalId</b>: The identity of the IPsec server. FQDN and IP address formats are supported.</para>
         /// </description></item>

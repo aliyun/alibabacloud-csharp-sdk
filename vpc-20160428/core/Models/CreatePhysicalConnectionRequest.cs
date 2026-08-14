@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access point for the Express Connect circuit.</para>
+        /// <para>The ID of the access point where the Express Connect circuit is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the Express Connect circuit. </para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of advanced device capabilities.</para>
+        /// <para>The list of device advanced capabilities.</para>
         /// </summary>
         [NameInMap("DeviceAdvancedCapacity")]
         [Validation(Required=false)]
         public List<string> DeviceAdvancedCapacity { get; set; }
 
         /// <summary>
-        /// <para>The carrier that provides the Express Connect circuit. Valid values:</para>
+        /// <para>The carrier that provides the physical line for the Express Connect circuit. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>CT</b>: China Telecom.</para>
         /// </description></item>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the Express Connect circuit.  </para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The optical module model supported by the Express Connect circuit access point. Valid values:</para>
+        /// <para>The optical module model supported at the access point of the Express Connect circuit. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1000Base-LX : <list type="bullet">
         /// <item><description><c>SFP-GE-LR-SM1310,10KM</c></description></item>
@@ -170,8 +170,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><para><b>100GBase-LR</b>: 100 GE single-mode optical port.</para>
         /// </description></item>
         /// </list>
+        /// <para>Different access points support different port types. Before you call this operation, call ListBusinessAccessPoints to query the <b>SupportPortTypes</b> of the target access point. For optical ports, also verify the <b>OpticalModuleModels</b>.</para>
         /// <remarks>
-        /// <para>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</para>
+        /// <para>40GBase-LR and 100GBase-LR ports are created based on the actual backend port availability. Contact your account manager for details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -229,7 +230,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreatePhysicalConnectionRequestTag> Tag { get; set; }
         public class CreatePhysicalConnectionRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</para>
             /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -240,7 +241,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>

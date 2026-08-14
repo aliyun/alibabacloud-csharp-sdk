@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The bandwidth specification of the VPN gateway. Unit: Mbit/s.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;- If you want to create a public VPN gateway, valid values are <b>5</b>, <b>10</b>, <b>20</b>, <b>50</b>, <b>100</b>, <b>200</b>, <b>500</b>, and <b>1000</b>.
-        /// &lt;props=&quot;china&quot;&gt;- If you want to create a private VPN gateway, valid values are <b>200</b> and <b>1000</b>.
-        /// &lt;props=&quot;intl&quot;&gt;- If you want to create a public VPN gateway, valid values are <b>10</b>, <b>100</b>, <b>200</b>, <b>500</b>, and <b>1000</b>.
-        /// &lt;props=&quot;intl&quot;&gt;- If you want to create a private VPN gateway, valid values are <b>200</b> and <b>1000</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- To create a public VPN gateway, set the value to <b>5</b>, <b>10</b>, <b>20</b>, <b>50</b>, <b>100</b>, <b>200</b>, <b>500</b>, or <b>1000</b>.
+        /// &lt;props=&quot;china&quot;&gt;- To create a private VPN gateway, set the value to <b>200</b> or <b>1000</b>.
+        /// &lt;props=&quot;intl&quot;&gt;- To create a public VPN gateway, set the value to <b>10</b>, <b>100</b>, <b>200</b>, <b>500</b>, or <b>1000</b>.
+        /// &lt;props=&quot;intl&quot;&gt;- To create a private VPN gateway, set the value to <b>200</b> or <b>1000</b>.</para>
         /// <remarks>
         /// <para>The maximum bandwidth specification supported by VPN gateways in some regions is 500 Mbit/s. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</para>
         /// </remarks>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The second vSwitch associated with the VPN VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description>If the current region supports dual-tunnel IPsec-VPN connections, this parameter is required.</description></item>
+        /// <item><description>If the current region supports dual-tunnel mode IPsec-VPN connections, this parameter is required.</description></item>
         /// <item><description>You must specify two vSwitches in different zones from the VPC associated with the VPN VPC-connected instance to implement zone-level disaster recovery for IPsec-VPN connections.</description></item>
         /// <item><description>For regions that support only one zone, zone-level disaster recovery is not supported. Specify two different vSwitches in the same zone to implement high availability for IPsec-VPN connections. You can also specify the same vSwitch.</description></item>
         /// </list>
-        /// <para>For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
+        /// <para>For information about the regions and zones that support dual-tunnel mode IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-p0wiz7obm0tbimu4r****</para>
@@ -109,13 +109,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableSsl { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The billing method of the VPN gateway. Set the value to <b>PREPAY</b> (subscription).
-        /// &lt;props=&quot;intl&quot;&gt;The billing method of the VPN gateway. Set the value to <b>POSTPAY</b> (pay-as-you-go billing method).
-        /// &lt;props=&quot;partner&quot;&gt;The billing method of the VPN gateway. Set the value to <b>POSTPAY</b> (pay-as-you-go billing method).</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The billable methods of the VPN gateway. Set the value to <b>PREPAY</b>, which specifies the subscription billing method.
+        /// &lt;props=&quot;intl&quot;&gt;The billable methods of the VPN gateway. Set the value to <b>POSTPAY</b>, which specifies the pay-as-you-go billing method.
+        /// &lt;props=&quot;partner&quot;&gt;The billable methods of the VPN gateway. Set the value to <b>POSTPAY</b>, which specifies the pay-as-you-go billing method.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;This parameter is required when you create a VPN gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中国站示例值：PREPAY，国际站示例值：POSTPAY</para>
+        /// <para>China site example value: PREPAY. International site example value: POSTPAY</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -182,12 +182,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the resource group to which the VPN gateway belongs.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group ID.</para>
         /// </description></item>
         /// <item><description><para>If you do not specify a resource group ID, the VPN gateway belongs to the default resource group after it is created.</para>
         /// </description></item>
-        /// <item><description><para>After the VPN gateway is created, if you create SSL servers, SSL client certificates, IPsec servers, or IPsec-VPN connections (when the IPsec-VPN connection is bindded to the VPN gateway) under the VPN gateway, these resources belong to the same resource group as the VPN gateway. The resource group of these resources cannot be modified.</para>
-        /// <para>If you modify the resource group of the VPN gateway, the resource group of the preceding resources is also modified.</para>
+        /// <item><description><para>After the VPN gateway is created, if you create SSL servers, SSL client certificates, IPsec servers, or IPsec-VPN connections (where the IPsec-VPN connection is associated with the VPN gateway) under the VPN gateway, these resources belong to the same resource group as the VPN gateway and cannot be modified individually.</para>
+        /// <para>If you change the resource group of the VPN gateway, the resource group of the preceding resources is also changed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -219,8 +219,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The vSwitch associated with the VPN gateway instance. </para>
         /// <list type="bullet">
-        /// <item><description>In regions that support dual-tunnel IPsec-VPN connections, this parameter is required. You must specify a vSwitch and also specify the <b>DisasterRecoveryVSwitchId</b> parameter.</description></item>
-        /// <item><description>In regions that support single-tunnel IPsec-VPN connections, if you do not specify a vSwitch, the system automatically selects a vSwitch from the VPC.</description></item>
+        /// <item><description>In regions that support dual-tunnel mode IPsec-VPN connections, this parameter is required. You must specify a vSwitch and also specify the <b>DisasterRecoveryVSwitchId</b> parameter.</description></item>
+        /// <item><description>In regions that support single-tunnel mode IPsec-VPN connections, if you do not specify a vSwitch, the system automatically selects a vSwitch from the VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC-connected instance to which the VPN gateway belongs.</para>
+        /// <para>The instance ID of the VPC-connected instance to which the VPN gateway belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

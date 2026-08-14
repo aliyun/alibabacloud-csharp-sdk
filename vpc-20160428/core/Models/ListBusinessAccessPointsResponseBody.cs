@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The CloudBox instance ID.</para>
             /// <remarks>
-            /// <para>This parameter is available when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</para>
+            /// <para>This parameter is available only when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -69,14 +69,48 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public double? Longitude { get; set; }
 
+            /// <summary>
+            /// <para>The collection of optical module models supported by the current access point.</para>
+            /// </summary>
             [NameInMap("OpticalModuleModels")]
             [Validation(Required=false)]
             public List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> OpticalModuleModels { get; set; }
             public class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels : TeaModel {
+                /// <summary>
+                /// <para>The optical module model supported by the Express Connect circuit access point. Valid values:
+                /// 1000Base-LX : 
+                /// SFP-GE-LR-SM1310,10KM
+                /// SFP-GE-ER-SM1310,40KM
+                /// SFP-GE-ZR-SM1550,80KM 
+                /// 10GBase-LR : 
+                /// SFP-10G-LR-SM1310,10KM
+                /// SFP-10G-ER-SM1550,40KM 
+                /// SFP-10G-ZR-SM1550,80KM<br>40GBase-LR : 
+                /// QSFP-40G-LR4-WDM1300,10KM
+                /// QSFP-40G-ER4-WDM1300,40KM
+                /// QSFP-40G-ZR4-WDM1300,80KM
+                /// 100GBase-LR : 
+                /// QSFP28-100G-LR4-WDM1300,10KM
+                /// QSFP28-100G-ER4-WDM1300,40KM
+                /// QSFP28-100G-ZR4-WDM1300,80KM.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SFP-GE-LR-SM1310,10KM</para>
+                /// </summary>
                 [NameInMap("OpticalModuleModel")]
                 [Validation(Required=false)]
                 public string OpticalModuleModel { get; set; }
 
+                /// <summary>
+                /// <para>The port type supported by the optical module at the Express Connect circuit access point. Valid values:
+                /// ● 1000Base-LX: GE single-mode optical port.
+                /// ● 10GBase-LR: 10 GE single-mode optical port.
+                /// ● 40GBase-LR: 40 GE single-mode optical port.
+                /// ● 100GBase-LR: 100 GE single-mode optical port.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000Base-LX</para>
+                /// </summary>
                 [NameInMap("PortType")]
                 [Validation(Required=false)]
                 public string PortType { get; set; }
@@ -113,7 +147,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>100GBase-LR</b>: 100 GE single-mode optical port.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> 40GBase-LR and 100GBase-LR ports are created based on actual backend port availability. Contact your account manager for details.</para>
+            /// <para> The creation of 40GBase-LR and 100GBase-LR ports depends on the actual backend port availability. Contact your account manager for details.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

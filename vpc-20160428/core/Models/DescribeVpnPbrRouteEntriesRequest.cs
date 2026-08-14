@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The VPN gateway instance ID.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

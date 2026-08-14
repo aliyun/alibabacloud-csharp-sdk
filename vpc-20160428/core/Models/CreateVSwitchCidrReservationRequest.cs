@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the reserved CIDR block for a vSwitch is created.</description></item>
+        /// <item><description><b>true</b>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error message is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the vSwitch reserved CIDR block for a vSwitch is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,6 +36,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The expected number of IP prefixes to reserve. Valid values: 1 to 32.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("IpPrefixNumber")]
+        [Validation(Required=false)]
+        public int? IpPrefixNumber { get; set; }
 
         /// <summary>
         /// <para>The IP version of the reserved CIDR block for a vSwitch. Valid values:</para>
@@ -122,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must specify either the <b>VSwitchCidrReservationMask</b> parameter or the <b>VSwitchCidrReservationCidr</b> parameter.</description></item>
-        /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</description></item>
+        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -153,7 +163,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must specify either the <b>VSwitchCidrReservationMask</b> parameter or the <b>VSwitchCidrReservationCidr</b> parameter.</description></item>
-        /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</description></item>
+        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -176,9 +186,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchCidrReservationName { get; set; }
 
         /// <summary>
-        /// <para>The type of the reserved CIDR block for a vSwitch. Valid values: <b>prefix</b>, which indicates that addresses are allocated by CIDR block.</para>
+        /// <para>The type of the reserved CIDR block for a vSwitch. Valid values: <b>prefix</b>, which indicates that IP addresses are allocated by CIDR block.</para>
         /// <remarks>
-        /// <para>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block. If the addresses in the reserved CIDR block are exhausted, the system returns an error.</para>
+        /// <para>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block for a vSwitch. If the IP addresses in the reserved CIDR block for a vSwitch are exhausted, the system returns an error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -189,7 +199,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchCidrReservationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch for which you want to create the reserved CIDR block for a vSwitch.</para>
+        /// <para>The ID of the vSwitch for which you want to create a reserved CIDR block for a vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

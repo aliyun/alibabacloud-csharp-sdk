@@ -18,22 +18,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeVirtualBorderRoutersRequestFilter : TeaModel {
             /// <summary>
             /// <para>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>PhysicalConnectionId</b>: the Express Connect circuit ID.</para>
-            /// </description></item>
-            /// <item><description><para><b>VbrId</b>: the VBR ID.</para>
-            /// </description></item>
-            /// <item><description><para><b>Status</b>: the VBR status.</para>
-            /// </description></item>
-            /// <item><description><para><b>Name</b>: the VBR name.</para>
-            /// </description></item>
-            /// <item><description><para><b>AccessPointId</b>: the access point ID.</para>
-            /// </description></item>
-            /// <item><description><para><b>eccId</b>: the Express Cloud Connect instance ID.</para>
-            /// </description></item>
-            /// <item><description><para><b>type</b>: the Express Connect circuit type.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Status</para>
@@ -43,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The filter values are evaluated by using a logical OR. A match is found if any of the specified filter values is met.</para>
+            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match with the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -55,11 +39,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to include cross-account VBRs.</para>
+        /// <para>Specifies whether to include cross-account Virtual Border Routers.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: includes cross-account VBRs.</para>
+        /// <item><description><para><b>true</b>: Included.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): does not include cross-account VBRs.</para>
+        /// <item><description><para><b>false</b> (default): Not included.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -75,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -107,7 +91,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The resource group ID.</para>
-        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -133,7 +116,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeVirtualBorderRoutersRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -144,7 +126,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

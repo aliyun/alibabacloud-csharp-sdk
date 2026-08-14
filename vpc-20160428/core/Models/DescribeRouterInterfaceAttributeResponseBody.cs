@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The business status of the router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: Normal.</para>
+        /// <item><description><para><b>Normal</b>: normal.</para>
         /// </description></item>
         /// <item><description><para><b>FinancialLocked</b>: locked due to overdue payment.</para>
         /// </description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the connection was established.</para>
+        /// <para>The time when the connection was established. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-14T08:58:04Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ConnectedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the router interface was created.</para>
+        /// <para>The time when the router interface was created. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-14T08:57:24Z</para>
@@ -92,11 +92,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the connection is a cross-border connection. Valid values:</para>
+        /// <para>Indicates whether this is a cross-border connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: The connection is not a cross-border connection.</para>
+        /// <item><description><para><b>false</b>: No.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: The connection is a cross-border connection.</para>
+        /// <item><description><para><b>true</b>: Yes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description of the router interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>对端接口</para>
+        /// <para>Peer interface</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The end time of the data retrieval.</para>
+        /// <para>The end time of the data retrieval. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2999-09-08T16:00:00Z</para>
@@ -128,10 +128,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</para>
+        /// <para>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on both the VBR and VPC sides to automatically connect after creation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The router interface was created in fast link mode.</description></item>
-        /// <item><description><b>false</b> (default): The router interface was not created in fast link mode.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -162,9 +162,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether renewal data exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: No renewal data exists.</para>
+        /// <item><description><para><b>false</b>: No.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Renewal data exists.</para>
+        /// <item><description><para><b>true</b>: Yes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HcThreshold { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the health check.</para>
+        /// <para>The health check source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The health check status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Abnormal</b>: abnormal.</description></item>
-        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>Normal</b>: normal.</description></item>
         /// <item><description><b>NoRedundantRoute</b>: no redundant route configured.</description></item>
         /// <item><description><b>NoHealthCheckConfig</b>: no health check configured.</description></item>
         /// </list>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckStatus { get; set; }
 
         /// <summary>
-        /// <para>The target IP address of the health check.</para>
+        /// <para>The health check target IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.2.XX.XX</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The name of the router interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>路由器接口1</para>
+        /// <para>RouterInterface1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The business status of the peer router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>Normal</b>: normal.</description></item>
         /// <item><description><b>FinancialLocked</b>: locked due to overdue payment.</description></item>
         /// <item><description><b>SecurityLocked</b>: locked due to security risk control.</description></item>
         /// </list>
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The renewal active time.</para>
+        /// <para>The renewal active time. The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-11T16:00:00Z</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ReservationInternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The type of the renewal order. Valid values: <b>RENEW</b>, which indicates a renewal order.</para>
+        /// <para>The renewal order type. Valid values: <b>RENEW</b>, which indicates a renewal order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RENEW</para>
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the routing interface belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the router interface belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1b49rqrybk45nio****</para>

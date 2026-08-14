@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no next query exists.</para>
+        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query exists.</para>
         /// </description></item>
         /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
         /// </description></item>

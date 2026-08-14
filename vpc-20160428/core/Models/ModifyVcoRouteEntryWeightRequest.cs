@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? NewWeight { get; set; }
 
         /// <summary>
-        /// <para>The next hop of the destination route entry to modify.</para>
+        /// <para>The next hop of the destination route entry to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the IPsec-VPN connection.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the destination route entry to modify.</para>
+        /// <para>The destination CIDR block of the destination route entry to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The current weight of the destination route entry to modify. Valid values:</para>
+        /// <para>The current weight of the destination route entry to be modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: low priority.</description></item>
         /// <item><description><b>100</b>: high priority.</description></item>

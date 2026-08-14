@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The resource type.</para>
         /// <list type="bullet">
         /// <item><description><para><b>VpnGateway</b>: VPN gateway instance.</para>
-        /// <para>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (an IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</para>
+        /// <para>After you change the resource group to which a VPN gateway instance belongs, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (the IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</para>
         /// </description></item>
         /// <item><description><para><b>CustomerGateway</b>: customer gateway instance.</para>
         /// </description></item>

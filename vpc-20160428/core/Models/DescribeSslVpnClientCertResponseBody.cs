@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the SSL client certificate was created. Unit: milliseconds.</para>
-        /// <para>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1552550980000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the SSL client certificate expires. Unit: milliseconds.</para>
-        /// <para>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp is in the Unix format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC, to the time when the SSL client certificate expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1647158980000</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SslVpnClientCertId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SSL server.</para>
+        /// <para>The SSL server ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vss-bp155e9yclsg1xgq4****</para>

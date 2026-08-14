@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>The time when the construction crew enters the site.</para>
+            /// <para>The time when the construction crew enters the site. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:00:00Z</para>
@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string ConstructionTime { get; set; }
 
+            /// <summary>
+            /// <para>The LOA error code.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineLabel { get; set; }
 
             /// <summary>
-            /// <para>The contact information of the line O&amp;M personnel.</para>
+            /// <para>The contact information for line O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1388888****</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineSPContactInfo { get; set; }
 
             /// <summary>
-            /// <para>The telecommunications service provider. Valid values:</para>
+            /// <para>The carrier. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>China Telecom</b></description></item>
             /// <item><description><b>China Unicom</b></description></item>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The construction company that enters the site.</para>
+            /// <para>The construction company.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ctcu</para>

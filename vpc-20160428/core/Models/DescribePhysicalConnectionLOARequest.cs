@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

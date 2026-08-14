@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the VBR failover group.</para>
-        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VBRHa</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without starting the instance. The system checks whether the required parameters are specified, whether the request format is valid, and whether the instance status is Normal. If the check fails, the corresponding error is returned. If the check succeeds, <c>DRYRUN.SUCCESS</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <c>DRYRUN.SUCCESS</c> is returned.</para>
         /// </description></item>
         /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the instance is started.</para>
         /// </description></item>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the other VBR in the VBR failover group.</para>
+        /// <para>The instance ID of the other VBR in the VBR failover group. The two VBRs must be in the same region, each connected to the on-premises data center through its own Express Connect circuit, added to the same Express Connect Router (ECR) or the same Cloud Enterprise Network (CEN) instance, and both must have BFD enabled. A VBR can be added to only one failover group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The VBR instance ID.</para>
+        /// <para>The instance ID of the VBR. The two VBRs must be in the same region, each connected to the on-premises data center through its own Express Connect circuit, added to the same Express Connect Router (ECR) or the same Cloud Enterprise Network (CEN) instance, and both must have BFD enabled. A VBR can be added to only one failover group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

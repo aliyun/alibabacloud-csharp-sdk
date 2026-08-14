@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para>The mask length of the vSwitch CIDR block must be 16 to 29 bits.  </para>
         /// </description></item>
-        /// <item><description><para>The vSwitch CIDR block must be a subset of the VPC CIDR block to which the vSwitch belongs. </para>
+        /// <item><description><para>The CIDR block of the vSwitch must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </para>
         /// </description></item>
-        /// <item><description><para>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route in the VPC, but it can be a subset of the destination CIDR block. </para>
+        /// <item><description><para>The CIDR block of the vSwitch cannot be the same as the destination CIDR block of a route in the VPC, but can be a subset of the destination CIDR block. </para>
         /// </description></item>
-        /// <item><description><para>The vSwitch CIDR block cannot be 100.64.0.0/10 or its subnets.</para>
+        /// <item><description><para>The CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <b>0</b> to <b>255</b>.
-        /// You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This parameter allows you to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is assigned, it cannot be changed. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</para>
+        /// You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This allows you to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the vSwitch to create.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region IDs.</para>
+        /// <para>The region ID of the vSwitch that you want to create.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the zone in which to create the vSwitch.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The time when the IPsec server was created.</para>
-            /// <para>T is the delimiter. Z indicates UTC.</para>
+            /// <para>T is the delimiter and Z indicates UTC (Coordinated Universal Time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-03T10:11:55Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The IKE negotiation mode. Valid values:</para>
+                /// <para>The IKE version negotiation mode. Valid values:</para>
                 /// <para><b>main</b>: main mode. Negotiations are highly secure.</para>
                 /// 
                 /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the IPsec server. FQDN and IP address formats are supported. The default value is the public IP address of the selected VPN gateway.</para>
+                /// <para>The identifier of the IPsec server. The value can be in the FQDN or IP address format. The default value is the public IP address of the selected VPN gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>116.64.XX.XX</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalId { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the peer. FQDN and IP address formats are supported. The default value is empty.</para>
+                /// <para>The identifier of the peer. The value can be in the FQDN or IP address format. The default value is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>139.67.XX.XX</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The maximum number of SSL-VPN connections supported by the VPN gateway.</para>
             /// <remarks>
-            /// <para>SSL-VPN and the IPsec server share SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</para>
+            /// <para>SSL-VPN and the IPsec server share the SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the IPsec server belongs.</para>
+            /// <para>The resource group ID of the IPsec server.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
             /// 
             /// <b>Example:</b>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query is to be sent.</para>
+        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query exists.</para>
         /// </description></item>
         /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
         /// </description></item>

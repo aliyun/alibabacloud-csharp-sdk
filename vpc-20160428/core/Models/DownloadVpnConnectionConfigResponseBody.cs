@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig IkeConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig : TeaModel {
                 /// <summary>
-                /// <para>The IKE phase authentication algorithm.</para>
+                /// <para>The authentication algorithm of the IKE phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The IKE phase encryption algorithm.</para>
+                /// <para>The encryption algorithm of the IKE phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The IKE phase lifetime. Unit: seconds.</para>
+                /// <para>The lifetime of the IKE phase. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The IKE negotiation mode. Valid values:</para>
+                /// <para>The IKE negotiation mode.</para>
                 /// <list type="bullet">
-                /// <item><description><b>main</b>: Main mode. This mode provides high security during negotiation.</description></item>
-                /// <item><description><b>aggressive</b>: Aggressive mode. This mode supports fast negotiation and a higher success rate.</description></item>
+                /// <item><description><b>main</b>: Main mode. This mode offers high negotiation security.</description></item>
+                /// <item><description><b>aggressive</b>: Aggressive mode. This mode supports fast negotiation and a high negotiation success rate.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeMode { get; set; }
 
                 /// <summary>
-                /// <para>The DH group in the IKE phase.</para>
+                /// <para>The DH group of the IKE phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig IpsecConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig : TeaModel {
                 /// <summary>
-                /// <para>The IPsec phase authentication algorithm.</para>
+                /// <para>The authentication algorithm of the IPsec phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The IPsec phase encryption algorithm.</para>
+                /// <para>The encryption algorithm of the IPsec phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The IPsec phase lifetime. Unit: seconds.</para>
+                /// <para>The lifetime of the IPsec phase. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IpsecLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The DH group in the IPsec phase.</para>
+                /// <para>The DH group of the IPsec phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>

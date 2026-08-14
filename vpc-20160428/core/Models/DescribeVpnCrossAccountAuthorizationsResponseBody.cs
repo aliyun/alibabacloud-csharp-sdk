@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVpnCrossAccountAuthorizationsResponseBodyCrossAccountAuthorizations> CrossAccountAuthorizations { get; set; }
         public class DescribeVpnCrossAccountAuthorizationsResponseBodyCrossAccountAuthorizations : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the IPsec-VPN connection belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the IPsec-VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1250123456123456</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the CEN instance to which the IPsec-VPN connection grants authorization.</para>
+            /// <para>The instance ID of the CEN instance to which the IPsec-VPN connection authorization is granted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-vv8h0t3klfpaae****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The type of resource to which the IPsec-VPN connection is authorized.</para>
-            /// <para>The value is <b>CEN</b> only, which indicates that the IPsec-VPN connection is authorized to a cross-account Cloud Enterprise Network (CEN) instance. The IPsec-VPN connection can be attached to a transit router instance under the cross-account CEN instance.</para>
+            /// <para>The value is <b>CEN</b> only, which indicates that the IPsec-VPN connection is authorized to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account. The IPsec-VPN connection can be attached to a transit router instance under the cross-account CEN instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CEN</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? BindUid { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cross-account authorization of the IPsec-VPN connection was created.</para>
-            /// <para>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the cross-account authorization was created.</para>
+            /// <para>The timestamp when the cross-account authorization was created for the IPsec-VPN connection.</para>
+            /// <para>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the cross-account authorization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658201810000</para>

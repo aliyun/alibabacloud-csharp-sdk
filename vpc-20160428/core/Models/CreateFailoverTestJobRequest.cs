@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends the request without creating the failover test node. The system checks the request for potential issues, including whether the AccessKey is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request, and the failover test job is created after the check passes. A 2xx HTTP status code is returned.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the failover test node. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the check passes, a 2xx HTTP status code is returned and the failover test node is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the failover test job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>StartNow</b>: The failover test starts immediately after the job is created.</para>
+        /// <item><description><para><b>StartNow</b>: starts immediately. The failover test job starts immediately after it is created.</para>
         /// </description></item>
-        /// <item><description><para><b>StartLater</b>: Only the job is created. The failover test does not start.</para>
+        /// <item><description><para><b>StartLater</b>: does not start. Only the failover test job is created without starting the test.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DiagnoseVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The diagnostic ID.</para>
-        /// <para>After this operation returns the diagnostic ID, you can call the <a href="https://help.aliyun.com/document_detail/2521963.html">GetVpnGatewayDiagnoseResult</a> operation to query the diagnostic report.</para>
+        /// <para>The diagnosis ID.</para>
+        /// <para>After this operation returns the diagnosis ID, you can call the <a href="https://help.aliyun.com/document_detail/2521963.html">GetVpnGatewayDiagnoseResult</a> operation to query the diagnostic report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpndgn-uf6kuxbe3iv028k3s****</para>

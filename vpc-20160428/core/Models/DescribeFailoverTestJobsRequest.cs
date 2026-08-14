@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeFailoverTestJobsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>Specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</para>
+            /// <para>You can specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The filter values that correspond to the filter condition.</para>
             /// <remarks>
-            /// <para>Each filter condition can contain up to 5 filter values. These filter values have an OR relationship. A record is considered a match if it matches any one of the filter values.</para>
+            /// <para>Each filter condition can contain up to 5 filter values. These filter values use the OR logic. A record is considered a match if it matches any one of the filter values.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Value")]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Valid values: <b>1 to 100</b>. Default value: 20.</para>
+        /// <para>The number of entries per page for a paginated query. Valid values: <b>1</b> to <b>100</b>. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Leave this parameter empty for the first query or if no next query exists.</para>
+        /// <item><description><para>Leave this parameter empty for the first query or if no subsequent query is required.</para>
         /// </description></item>
-        /// <item><description><para>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <item><description><para>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 

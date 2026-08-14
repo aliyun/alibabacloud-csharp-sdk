@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The timestamp when the destination route was created.</para>
-            /// <para>The timestamp is in the Unix format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658217008000</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteDest { get; set; }
 
             /// <summary>
-            /// <para>The type of the route. Valid values:</para>
+            /// <para>The type of the route.</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b>: destination route.</description></item>
-            /// <item><description><b>bgp</b>: BGP route.</description></item>
+            /// <item><description><b>custom</b>: The route is a destination route.</description></item>
+            /// <item><description><b>bgp</b>: The route is a BGP route.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteEntryType { get; set; }
 
             /// <summary>
-            /// <para>The source of the BGP route. Valid values:</para>
+            /// <para>The source of the BGP route.</para>
             /// <list type="bullet">
             /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
             /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>
@@ -149,9 +149,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status of the route. Valid values:</para>
+            /// <para>The status of the route.</para>
             /// <list type="bullet">
-            /// <item><description><b>published</b>: The destination route is published to the transit router instance.</description></item>
+            /// <item><description><b>published</b>: The destination route has been published to the transit router instance.</description></item>
             /// <item><description><b>Active</b>: The BGP route is available.</description></item>
             /// </list>
             /// 
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The route statistics of the IPsec-VPN connection in dual-tunnel mode.</para>
+        /// <para>The route statistics for the IPsec-VPN connection in dual-tunnel mode.</para>
         /// <remarks>
         /// <para>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</para>
         /// </remarks>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? RouteCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the route. Valid values:</para>
+            /// <para>The type of the route.</para>
             /// <list type="bullet">
             /// <item><description><b>custom</b>: destination route.</description></item>
             /// <item><description><b>bgp</b>: BGP route.</description></item>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteEntryType { get; set; }
 
             /// <summary>
-            /// <para>The source of the BGP route. Valid values:</para>
+            /// <para>The source of the BGP route.</para>
             /// <list type="bullet">
             /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
             /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>

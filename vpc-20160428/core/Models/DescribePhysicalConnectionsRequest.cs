@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribePhysicalConnectionsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a unique value from your client to ensure that different requests have unique values. ClientToken supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-001</para>
@@ -88,6 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

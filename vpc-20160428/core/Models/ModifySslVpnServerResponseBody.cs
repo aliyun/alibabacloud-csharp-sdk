@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether two-factor identity authentication is enabled.</para>
+        /// <para>Indicates whether two-factor authentication is enabled.</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: enabled.</para>
         /// </description></item>

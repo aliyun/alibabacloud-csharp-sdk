@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The instance ID of the customer gateway. </para>
         /// <remarks>
-        /// <para>If you do not specify the instance ID of a customer gateway, the system queries information about all customer gateways in the current region by default.</para>
+        /// <para>If you do not specify the instance ID of the customer gateway, the system queries information about all customer gateways in the current region by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

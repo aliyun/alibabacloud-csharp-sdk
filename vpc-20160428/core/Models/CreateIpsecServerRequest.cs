@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EffectImmediately { get; set; }
 
         /// <summary>
-        /// <para>The Phase 1 negotiation parameter settings. Valid values:</para>
+        /// <para>The parameter settings of Phase 1 negotiations. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>IkeVersion</b>: The version of the IKE protocol. Valid values: <b>ikev1</b> and <b>ikev2</b>. Default value: <b>ikev2</b>.</para>
         /// </description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpSecServerName { get; set; }
 
         /// <summary>
-        /// <para>The Phase 2 negotiation parameter settings. Valid values:</para>
+        /// <para>The parameter settings of Phase 2 negotiations. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>IpsecEncAlg</b>: The encryption algorithm used in Phase 2 negotiations. Default value: <b>aes</b>.</para>
         /// </description></item>

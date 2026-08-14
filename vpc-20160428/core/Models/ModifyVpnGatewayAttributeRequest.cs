@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpnGatewayAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable routing automatic propagation for the VPN gateway. Valid values:</para>
+        /// <para>Specifies whether to enable the routing automatic propagation feature for the VPN gateway. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: enabled.</para>
-        /// <para>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes in the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</para>
+        /// <para>  After routing automatic propagation is enabled, the VPN gateway instance uses automatic learning to obtain system routes from the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: disabled.</para>
         /// <para>  Before you disable routing automatic propagation, make sure that the BGP dynamic route feature is disabled for all IPsec-VPN connections under the VPN gateway.</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

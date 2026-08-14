@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging queries.</para>
+        /// <para>The number of entries per page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of IPsec-VPN connections associated with transit router instances.</para>
+        /// <para>The list of IPsec-VPN connections that are associated with transit router instances.</para>
         /// </summary>
         [NameInMap("VpnAttachments")]
         [Validation(Required=false)]
         public List<DescribeVpnAttachmentsResponseBodyVpnAttachments> VpnAttachments { get; set; }
         public class DescribeVpnAttachmentsResponseBodyVpnAttachments : TeaModel {
             /// <summary>
-            /// <para>The type of resource to which the IPsec-VPN connection is associated. The value is <b>CEN</b>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</para>
+            /// <para>The type of resource to which the IPsec-VPN connection is attached. The value is <b>CEN</b>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CEN</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Indicates whether the IPsec-VPN connection is associated with a transit router instance that belongs to a different Alibaba Cloud account.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
+            /// <item><description><b>true</b>: The IPsec-VPN connection is associated with a cross-account transit router instance.</description></item>
+            /// <item><description><b>false</b>: The IPsec-VPN connection is not associated with a cross-account transit router instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The system tags of the IPsec-VPN connection.</para>
-            /// <para>You can use system tags to check whether the IPsec-VPN connection supports BGP. You can ignore other properties.</para>
+            /// <para>You can use the system tags to check whether the IPsec-VPN connection supports BGP. You can ignore the other properties.</para>
             /// <para><b>BGPSupport</b>: indicates whether the IPsec-VPN connection supports BGP.</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Supported.</description></item>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;description\&quot;:\&quot;转发1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</para>
+            /// <para>{\&quot;description\&quot;:\&quot;forwarding1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The bandwidth specification of a single VPN tunnel. Valid values:
-            /// Standard (default): standard. The default bandwidth is 1 Gbps.
-            /// Large: large. The default bandwidth is 3 Gbps.</para>
+            /// Standard (default): Standard. The default bandwidth is 1 Gbit/s.
+            /// Large: Large. The default bandwidth is 3 Gbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>

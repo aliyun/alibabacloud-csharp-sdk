@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateVcoRouteEntryResponseBody : TeaModel {
         /// <summary>
         /// <para>The timestamp when the destination route entry was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route entry was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1658387202664</para>
