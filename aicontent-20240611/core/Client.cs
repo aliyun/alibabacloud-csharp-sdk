@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"public", "aicontent.aliyuncs.com"},
-                {"cn-shanghai", "aicontent.aliyuncs.com"},
-                {"cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"},
                 {"cn-beijing", "aicontent.cn-beijing.aliyuncs.com"},
+                {"cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "aicontent.aliyuncs.com"},
+                {"public", "aicontent.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("aicontent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -5928,7 +5928,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates API keys for members under a department in organization management.</para>
+        /// <para>Creates API keys in batches for members under a department in organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5982,7 +5982,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates API keys for members under a department in organization management.</para>
+        /// <para>Creates API keys in batches for members under a department in organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6036,7 +6036,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates API keys for members under a department in organization management.</para>
+        /// <para>Creates API keys in batches for members under a department in organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6055,7 +6055,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates API keys for members under a department in organization management.</para>
+        /// <para>Creates API keys in batches for members under a department in organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6488,7 +6488,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets authorization for multiple members under a department in batch.</para>
+        /// <para>Batch sets member authorization under a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6538,7 +6538,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets authorization for multiple members under a department in batch.</para>
+        /// <para>Batch sets member authorization under a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6588,7 +6588,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets authorization for multiple members under a department in batch.</para>
+        /// <para>Batch sets member authorization under a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +6607,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets authorization for multiple members under a department in batch.</para>
+        /// <para>Batch sets member authorization under a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7030,7 +7030,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/配置成员子钱包余额</para>
+        /// <para>Configures the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7084,7 +7084,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/配置成员子钱包余额</para>
+        /// <para>Configures the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7138,7 +7138,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/配置成员子钱包余额</para>
+        /// <para>Configures the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7157,7 +7157,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/配置成员子钱包余额</para>
+        /// <para>Configures the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10312,7 +10312,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门余额概览</para>
+        /// <para>Retrieves the balance overview of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10352,7 +10352,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门余额概览</para>
+        /// <para>Retrieves the balance overview of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10392,7 +10392,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门余额概览</para>
+        /// <para>Retrieves the balance overview of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10411,7 +10411,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门余额概览</para>
+        /// <para>Retrieves the balance overview of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10576,7 +10576,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员子钱包余额</para>
+        /// <para>Retrieves the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10616,7 +10616,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员子钱包余额</para>
+        /// <para>Retrieves the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10656,7 +10656,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员子钱包余额</para>
+        /// <para>Retrieves the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10675,7 +10675,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员子钱包余额</para>
+        /// <para>Retrieves the sub-wallet balance of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10694,7 +10694,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更日志</para>
+        /// <para>Retrieves the balance change logs of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10752,7 +10752,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更日志</para>
+        /// <para>Retrieves the balance change logs of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10810,7 +10810,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更日志</para>
+        /// <para>Retrieves the balance change logs of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10829,7 +10829,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更日志</para>
+        /// <para>Retrieves the balance change logs of a member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11184,7 +11184,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门成员列表</para>
+        /// <para>Retrieves the list of members in a specified department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11254,7 +11254,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门成员列表</para>
+        /// <para>Retrieves the list of members in a specified department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11324,7 +11324,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门成员列表</para>
+        /// <para>Retrieves the list of members in a specified department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11343,7 +11343,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取部门成员列表</para>
+        /// <para>Retrieves the list of members in a specified department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11362,7 +11362,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更记录</para>
+        /// <para>Retrieves the balance change records of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11424,7 +11424,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更记录</para>
+        /// <para>Retrieves the balance change records of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11486,7 +11486,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更记录</para>
+        /// <para>Retrieves the balance change records of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11505,7 +11505,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员余额变更记录</para>
+        /// <para>Retrieves the balance change records of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11524,7 +11524,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员订阅列表</para>
+        /// <para>Retrieves the subscription list of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11564,7 +11564,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员订阅列表</para>
+        /// <para>Retrieves the subscription list of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11604,7 +11604,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员订阅列表</para>
+        /// <para>Retrieves the subscription list of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11623,7 +11623,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/获取成员订阅列表</para>
+        /// <para>Retrieves the subscription list of a member in the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16735,6 +16735,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                query["phone"] = request.Phone;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -16793,6 +16797,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
+            {
+                query["phone"] = request.Phone;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17136,7 +17144,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门树搜索定位</para>
+        /// <para>Searches and locates nodes in the department tree for organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17182,7 +17190,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门树搜索定位</para>
+        /// <para>Searches and locates nodes in the department tree for organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17228,7 +17236,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门树搜索定位</para>
+        /// <para>Searches and locates nodes in the department tree for organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17247,7 +17255,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门树搜索定位</para>
+        /// <para>Searches and locates nodes in the department tree for organization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17814,7 +17822,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门向成员转账</para>
+        /// <para>Transfers funds from a department to a member within an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17876,7 +17884,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门向成员转账</para>
+        /// <para>Transfers funds from a department to a member within an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17938,7 +17946,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门向成员转账</para>
+        /// <para>Transfers funds from a department to a member within an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17957,7 +17965,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>组织管理/部门向成员转账</para>
+        /// <para>Transfers funds from a department to a member within an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">

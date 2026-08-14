@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterSearchClientTreeRequest : TeaModel {
         /// <summary>
+        /// <para>The search keyword, which can be a department name, username, or phone number.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>研发部</para>
+        /// <para>R&amp;D Department</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]

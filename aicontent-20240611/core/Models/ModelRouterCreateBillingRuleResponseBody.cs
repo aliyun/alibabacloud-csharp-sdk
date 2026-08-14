@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             /// <para>The model name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>通义千问Plus</para>
+            /// <para>Qwen-Plus</para>
             /// </summary>
             [NameInMap("modelName")]
             [Validation(Required=false)]

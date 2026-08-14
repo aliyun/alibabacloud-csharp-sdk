@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterTransferToMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The transfer amount.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100.00</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? Amount { get; set; }
 
         /// <summary>
+        /// <para>The balance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>permanent</description></item>
+        /// <item><description>monthly</description></item>
+        /// </list>
+        /// <para>Default value: permanent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>permanent</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BalanceType { get; set; }
 
         /// <summary>
+        /// <para>The idempotency key. UUID v4 format is recommended.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>550e8400-e29b-41d4-a716-446655440000</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string IdempotencyKey { get; set; }
 
         /// <summary>
+        /// <para>The monthly refresh quota for monthly-type transfers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,8 +55,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? MonthlyQuota { get; set; }
 
         /// <summary>
+        /// <para>The remark for the transfer.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>转账</para>
+        /// <para>Transfer</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]

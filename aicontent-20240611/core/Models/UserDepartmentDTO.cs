@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>研发部</para>
+        /// <para>R&amp;D Department</para>
         /// </summary>
         [NameInMap("clientName")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>成员</para>
+        /// <para>Member</para>
         /// </summary>
         [NameInMap("roleName")]
         [Validation(Required=false)]

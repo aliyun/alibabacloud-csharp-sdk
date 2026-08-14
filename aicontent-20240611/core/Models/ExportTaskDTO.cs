@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>成员余额变更记录_20260730.csv</para>
+        /// <para>MemberBalanceChangeRecords_20260730.csv</para>
         /// </summary>
         [NameInMap("filename")]
         [Validation(Required=false)]

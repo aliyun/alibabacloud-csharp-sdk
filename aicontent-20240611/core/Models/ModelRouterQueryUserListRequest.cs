@@ -39,6 +39,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Specifies the phone number for exact matching (not fuzzy). When specified together with keyword, the two conditions are combined with AND, meaning both must be satisfied. If not specified, no filtering by phone number is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13800000000</para>
+        /// </summary>
+        [NameInMap("phone")]
+        [Validation(Required=false)]
+        public string Phone { get; set; }
+
     }
 
 }

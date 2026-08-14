@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterListMemberBalanceOrdersRequest : TeaModel {
         /// <summary>
+        /// <para>The balance type filter. Valid values: permanent and monthly.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>permanent</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BalanceType { get; set; }
 
         /// <summary>
+        /// <para>The change direction filter. Valid values: in and out.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>in</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>The change type filter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>recharge</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

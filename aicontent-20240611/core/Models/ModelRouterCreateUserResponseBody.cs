@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ModelRouterCreateUserResponseBodyData Data { get; set; }
         public class ModelRouterCreateUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The user ID. This ID is used as the userId addressing key for subsequent member API operations.</para>
+            /// <para>The user ID. This ID is used as the userId addressing key for subsequent member-related operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30001</para>
