@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query a list of cluster IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-****************</para>
+        /// <para>am-bp183qgrwywa6****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query information by table name.</para>
+        /// <para>The keyword for the query. Fuzzy search by table name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you_table_name</para>
@@ -34,14 +34,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the queried information. Specify this parameter as an ordered JSON array that consists of the <c>Field</c> and <c>Type</c> fields. Example: <c>[{ &quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</c>.</para>
+        /// <para>The sorting rule for the returned results. The value is a JSON array that is ordered by the sequence of the elements in the array. Each element consists of <c>Field</c> and <c>Type</c>. Example: <c>[{ &quot;Field&quot;:&quot;TableName&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field that is used to sort the queried information. The following fields are supported: <c>TableName</c>, ColdDataSize, DataSize, PrimaryKeyIndexSize, RowCount, IndexSize, SchemaName, and PartitionCount.</para>
+        /// <item><description><para><c>Field</c>: the field by which to sort the results. Valid values: TableName, ColdDataSize, DataSize, PrimaryKeyIndexSize, RowCount, IndexSize, SchemaName, and PartitionCount.</para>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <item><description><para><c>Type</c>: the sorting type. Valid values (case-insensitive):</para>
         /// <list type="bullet">
-        /// <item><description><b>Desc</b>: descending order.</description></item>
-        /// <item><description><b>Asc</b>: ascending order.</description></item>
+        /// <item><description><para><b>Desc</b>: descending.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asc</b>: ascending.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,11 +74,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,9 +92,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,6 +112,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The database name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cust_pay_instruction</para>
+        /// </summary>
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }

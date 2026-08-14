@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifySQAConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the Data Warehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all Data Warehouse Edition clusters in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-8vb369k7zxdt10tz0</para>
+        /// <para>am-xxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name of a cluster.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to view the name of the resource group for a specific cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable short query acceleration (SQA).</para>
+        /// <para>Specifies whether to enable SQA.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

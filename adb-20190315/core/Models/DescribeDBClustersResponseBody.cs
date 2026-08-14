@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

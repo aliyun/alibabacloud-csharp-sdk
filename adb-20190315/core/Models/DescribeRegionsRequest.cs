@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shenzhen</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

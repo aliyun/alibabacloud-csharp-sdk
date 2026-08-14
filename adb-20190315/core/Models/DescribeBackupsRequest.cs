@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The Resource Access Management (RAM) role of the Alibaba Cloud account to which the backup set belongs.</para>
+        /// <para>The RAM role name of the backup set owner\&quot;s Alibaba Cloud account.</para>
         /// <remarks>
-        /// <para> This parameter must be specified only when cross-account backup operations are performed.</para>
+        /// <para>Specify this parameter only when backing up across Alibaba Cloud accounts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CrossRole { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account to which the backup set belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the backup set owner.</para>
         /// <remarks>
-        /// <para> This parameter must be specified only when cross-account backup operations are performed.</para>
+        /// <para>Specify this parameter only when backing up across Alibaba Cloud accounts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CrossUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> to list cluster IDs in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end time of the query. It must be later than the start time. Format: yyyy-MM-ddTHH:mmZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-02T16:00Z</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Valid values: positive integers greater than 0 and no larger than the maximum value of the integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,9 +90,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> to list supported regions and zones for AnalyticDB for MySQL, including region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-ddTHH:mmZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-01T16:00Z</para>

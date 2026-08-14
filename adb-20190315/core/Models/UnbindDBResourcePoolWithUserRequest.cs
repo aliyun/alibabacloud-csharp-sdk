@@ -9,19 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class UnbindDBResourcePoolWithUserRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Make sure that the client token is unique for each request. The token can be up to 64 ASCII characters in length and is case-sensitive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-t7241****</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the Data Warehouse Edition (V3.0) cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all Data Warehouse Edition (V3.0) clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-bpxxxxxxxx47</para>
+        /// <para>am-bp1ub9grke1****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -47,11 +53,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PoolName { get; set; }
 
         /// <summary>
-        /// <para>The database account with which the resource group is associated.</para>
+        /// <para>The database account to detach.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testb</para>
+        /// <para>accout</para>
         /// </summary>
         [NameInMap("PoolUser")]
         [Validation(Required=false)]

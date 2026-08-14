@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The status of SQL audit. Valid values:</para>
+        /// <para>The status of the SQL audit feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: SQL audit is enabled.</description></item>
-        /// <item><description><b>off</b>: SQL audit is disabled.</description></item>
+        /// <item><description><para><b>on</b>: Enable SQL audit.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disable SQL audit.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string AuditLogStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

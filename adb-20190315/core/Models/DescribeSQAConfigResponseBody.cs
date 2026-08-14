@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQAConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of AnalyticDB for MySQL clusters in a destination region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether short query acceleration (SQA) is enabled.</para>
+        /// <para>Indicates whether SQA is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>

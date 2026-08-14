@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQAConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of AnalyticDB for MySQL clusters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the resource group name of a cluster.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query information about the resource groups of a specific cluster, including the resource group names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region IDs supported by AnalyticDB for MySQL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

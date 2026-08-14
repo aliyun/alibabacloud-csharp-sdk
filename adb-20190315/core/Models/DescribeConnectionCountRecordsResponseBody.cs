@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeConnectionCountRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried client IP addresses.</para>
+        /// <para>The client IP information.</para>
         /// </summary>
         [NameInMap("AccessIpRecords")]
         [Validation(Required=false)]
         public List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> AccessIpRecords { get; set; }
         public class DescribeConnectionCountRecordsResponseBodyAccessIpRecords : TeaModel {
             /// <summary>
-            /// <para>The IP address of the client.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42.120.XX.XX</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried database accounts.</para>
+        /// <para>The list of user information.</para>
         /// </summary>
         [NameInMap("UserRecords")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The username of the database account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

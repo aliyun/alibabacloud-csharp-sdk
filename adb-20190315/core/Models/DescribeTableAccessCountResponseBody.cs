@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTableAccessCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the table usage.</para>
+        /// <para>The details of table usage.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeTableAccessCountResponseBodyItems> Items { get; set; }
         public class DescribeTableAccessCountResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of accesses to the table.</para>
+            /// <para>The number of times the table was accessed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The date when the table was used.</para>
+            /// <para>The date of table usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-30</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOMER</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C242707A-01D1-54DA-A5F6-671557******</para>

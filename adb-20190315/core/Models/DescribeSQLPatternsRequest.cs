@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query details, including cluster IDs, for all AnalyticDB for MySQL clusters in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the query.</para>
+        /// <para>The keyword for filtering SQL patterns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -48,12 +48,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language of file titles and error messages. Valid values:</para>
+        /// <para>The language of the response. This parameter is used to localize messages such as error details. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
-        /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><para><b>zh</b>: Simplified Chinese (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// <item><description><para><b>ja</b>: Japanese</para>
+        /// </description></item>
+        /// <item><description><para><b>zh-tw</b>: Traditional Chinese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,27 +68,40 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <c>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
+        /// <para>Specifies how to sort the query results. Set this parameter to a JSON string. Example: <c>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. The JSON string contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
+        /// <item><description><para><c>Field</c>: The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PatternCreationTime</c>: the earliest commit time of the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>AverageQueryTime</c>: the average total amount of time consumed by the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>MaxQueryTime</c>: the maximum total amount of time consumed by the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>AverageExecutionTime</c>: the average execution duration of the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>MaxExecutionTime</c>: the maximum execution duration of the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>AveragePeakMemory</c>: the average peak memory usage of the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>MaxPeakMemory</c>: the maximum peak memory usage of the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>AverageScanSize</c>: the average amount of data scanned based on the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>MaxScanSize</c>: the maximum amount of data scanned based on the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>QueryCount</c>: the number of queries performed in association with the SQL pattern within the time range to query.</description></item>
-        /// <item><description><c>FailedCount</c>: the number of failed queries performed in association with the SQL pattern within the time range to query.</description></item>
+        /// <item><description><para><c>PatternCreationTime</c>: the earliest submission time of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>AverageQueryTime</c>: the average total query time of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>MaxQueryTime</c>: the maximum total query time of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>AverageExecutionTime</c>: the average execution time of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>MaxExecutionTime</c>: the maximum execution time of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>AveragePeakMemory</c>: the average peak memory usage of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>MaxPeakMemory</c>: the maximum peak memory usage of the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>AverageScanSize</c>: the average amount of data scanned by the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>MaxScanSize</c>: the maximum amount of data scanned by the SQL pattern within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>QueryCount</c>: the number of times the SQL pattern is executed within the specified time range.</para>
+        /// </description></item>
+        /// <item><description><para><c>FailedCount</c>: the number of failed executions for the SQL pattern within the specified time range.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <item><description><para><c>Type</c>: the sort order. Valid values (case-insensitive):</para>
         /// <list type="bullet">
-        /// <item><description><c>Asc</c>: ascending order.</description></item>
-        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// <item><description><para><c>Asc</c>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><c>Desc</c>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -98,9 +115,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be an integer greater than 0.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the value <b>1</b> is used.</para>
+        /// <para>The default value is <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,12 +130,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the value <b>30</b> is used.</para>
+        /// <para>The default value is <b>30</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,9 +149,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the available regions and availability zones for AnalyticDB for MySQL, including the region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -147,15 +167,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? SqlPatternHash { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Only data within the last 14 days can be queried. For example, if the current time is 2021-11-22T12:00:00Z, you can query SQL patterns at a point in time as early as 2021-11-09T12:00:00Z.</para>
+        /// <item><description><para>You can query data for the last 14 days only. For example, if the current time is 2021-11-22T12:00:00Z, the earliest time that you can query is 2021-11-09T12:00:00Z.</para>
         /// </description></item>
-        /// <item><description><para>The maximum time range that can be specified is 24 hours.</para>
+        /// <item><description><para>The interval between the start time and the end time cannot exceed 24 hours.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -165,6 +185,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The username that is used to filter the SQL patterns. If you specify this parameter, only the SQL patterns of the specified user are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_user</para>
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

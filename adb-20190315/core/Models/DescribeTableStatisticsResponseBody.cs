@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -109,12 +109,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of database names.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[\&quot;adb_external_tpch_10gb\&quot;, \&quot;dw_bccb\&quot;, \&quot;dw_fm\&quot;, \&quot;dw_test\&quot;, \&quot;dw_yph\&quot;]</para>
+        /// </summary>
         [NameInMap("SchemaNames")]
         [Validation(Required=false)]
         public string SchemaNames { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

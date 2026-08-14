@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

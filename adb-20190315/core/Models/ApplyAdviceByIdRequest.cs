@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ApplyAdviceByIdRequest : TeaModel {
         /// <summary>
-        /// <para>The date when the suggestion is generated. Specify the date in the yyyyMMdd format. The date must be in UTC.</para>
+        /// <para>The date when the optimization advice was generated, specified in <c>yyyyMMdd</c> format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20221101</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? AdviceDate { get; set; }
 
         /// <summary>
-        /// <para>The suggestion ID.</para>
+        /// <para>The optimization advice ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0baf1f52-53df-487f-8292-99a03716****</para>
@@ -29,10 +29,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string AdviceId { get; set; }
 
+        /// <summary>
+        /// <para>The adoption type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DROP_INDEX</para>
+        /// </summary>
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to start the build task immediately.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("BuildImmediately")]
         [Validation(Required=false)]
         public bool? BuildImmediately { get; set; }
@@ -40,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of data warehouse clusters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,9 +64,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

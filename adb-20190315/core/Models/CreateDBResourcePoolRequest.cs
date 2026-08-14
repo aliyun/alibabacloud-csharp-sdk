@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateDBResourcePoolRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes. Default value: 0.</para>
+        /// <para>The number of nodes. The default value is 0.</para>
         /// <list type="bullet">
-        /// <item><description>Each node provides 16 cores and 64 GB memory.</description></item>
-        /// <item><description>The total amount of resources provided by the nodes (number of nodes × 16 cores, number of nodes × 64 GB memory) cannot exceed the total amount of resources in the cluster. Set this parameter to a proper value.</description></item>
+        /// <item><description><para>A single node provides 16 cores and 64 GB of memory.</para>
+        /// </description></item>
+        /// <item><description><para>The total resources, calculated as (Number of nodes × 16 cores and 64 GB of memory), cannot exceed the total resources of the cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,9 +50,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <list type="bullet">
-        /// <item><description>The name can be up to 255 characters in length.</description></item>
-        /// <item><description>The name must start with a letter or a digit.</description></item>
-        /// <item><description>The name can contain letters, digits, hyphens (<em>), and underscores (</em>).</description></item>
+        /// <item><description><para>The name can be up to 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a digit, an uppercase letter, or a lowercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,11 +67,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PoolName { get; set; }
 
         /// <summary>
-        /// <para>The mode in which to execute SQL statements.</para>
+        /// <para>The execution mode of the SQL query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>batch</b></para>
+        /// <item><description><para><b>batch</b>: batch processing mode.</para>
         /// </description></item>
-        /// <item><description><para><b>interactive</b></para>
+        /// <item><description><para><b>interactive</b> (default): interactive mode.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

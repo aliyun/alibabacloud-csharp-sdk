@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeEIURangeRequest : TeaModel {
         /// <summary>
-        /// <para>The specifications of computing resources.</para>
+        /// <para>The specifications of the compute resources.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/469002.html">DescribeComputeResource</a> operation to query the specifications of computing resources.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/469002.html">DescribeComputeResource</a> operation to query the specifications of compute resources.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,13 +26,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ComputeResource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the Data Lakehouse Edition cluster.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter can be left empty when <b>Operation</b> is set to <b>Buy</b>.</description></item>
-        /// <item><description>This parameter must be specified when <b>Operation</b> is set to <b>Upgrade</b> or <b>Downgrade</b>.</description></item>
+        /// <item><description><para>This parameter can be left empty when <b>Operation</b> is set to <b>Buy</b>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required when <b>Operation</b> is set to <b>Upgrade</b> or <b>Downgrade</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the ID of the Data Lakehouse Edition cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <b>3.0</b>.</para>
+        /// <para>The cluster version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>3.0</b> (default): Data Lakehouse Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>5.0</b>: includes Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -53,10 +61,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Buy</b>: purchases a cluster.</description></item>
-        /// <item><description><b>Modify</b>: changes configurations of a cluster.</description></item>
+        /// <item><description><para><b>Buy</b>: Purchase a cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>Modify</b>: Change the specifications of a cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,14 +84,26 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The edition. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>EnterpriseVersion</b>: Enterprise Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>BasicVersion</b>: Basic Edition.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EnterpriseVersion</para>
+        /// </summary>
         [NameInMap("ProductVersion")]
         [Validation(Required=false)]
         public string ProductVersion { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID of the cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -111,11 +133,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of storage resources. Default value: <b>8ACU</b>. Valid values:</para>
+        /// <para>The specifications of the storage resources. The default value is <b>8ACU</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>8ACU</b></description></item>
-        /// <item><description><b>12ACU</b></description></item>
-        /// <item><description><b>16ACU</b></description></item>
+        /// <item><description><para><b>8ACU</b></para>
+        /// </description></item>
+        /// <item><description><para><b>12ACU</b></para>
+        /// </description></item>
+        /// <item><description><para><b>16ACU</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,10 +151,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the sub-operation. Valid values:</para>
+        /// <para>The sub-operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Upgrade</b>: upgrades a cluster.</description></item>
-        /// <item><description><b>Downgrade</b>: downgrades a cluster.</description></item>
+        /// <item><description><para><b>Upgrade</b>: Upgrade a cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>Downgrade</b>: Downgrade a cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,9 +167,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SubOperation { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the cluster.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeDBClusters</a> operation to query the zone ID of the cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

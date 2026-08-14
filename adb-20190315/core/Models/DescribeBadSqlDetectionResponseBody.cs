@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     /// <para>The information about the diagnostic result.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The query consumes a large amount of memory resources. Perform memory optimization on the query.</para>
+                    /// <para>The query consumes a large amount of memory resources. Perform memory optimization for the query.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]

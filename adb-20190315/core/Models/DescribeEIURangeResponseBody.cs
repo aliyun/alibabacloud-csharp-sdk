@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeEIURangeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried information about the number of EIUs.</para>
+        /// <para>The information about the number of EIUs.</para>
         /// </summary>
         [NameInMap("EIUInfo")]
         [Validation(Required=false)]
         public DescribeEIURangeResponseBodyEIUInfo EIUInfo { get; set; }
         public class DescribeEIURangeResponseBodyEIUInfo : TeaModel {
+            /// <summary>
+            /// <para>This parameter is reserved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
+            /// </summary>
             [NameInMap("DefaultReservedNodeSize")]
             [Validation(Required=false)]
             public string DefaultReservedNodeSize { get; set; }
 
             /// <summary>
-            /// <para>The suggested value for the number of EIUs.</para>
+            /// <para>The recommended number of EIUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -31,14 +37,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>The queried range for the number of EIUs.</para>
+            /// <para>A list of valid values for the number of EIUs.</para>
             /// </summary>
             [NameInMap("EIURange")]
             [Validation(Required=false)]
             public List<long?> EIURange { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>This parameter is reserved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string MaxValue { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>This parameter is reserved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -57,12 +63,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string MinValue { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is reserved.</para>
+            /// </summary>
             [NameInMap("ReservedNodeSizeRange")]
             [Validation(Required=false)]
             public List<string> ReservedNodeSizeRange { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>This parameter is reserved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -72,7 +81,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Step { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>This parameter is reserved.</para>
             /// </summary>
             [NameInMap("StorageResourceRange")]
             [Validation(Required=false)]
@@ -84,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D65A809F-34CE-4550-9BC1-0ED21ETG380</para>
+        /// <para>D65A809F-34CE-4550-9BC1-0ED21ET****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

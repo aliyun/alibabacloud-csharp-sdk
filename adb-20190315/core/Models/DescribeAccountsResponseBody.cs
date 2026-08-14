@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the database accounts.</para>
+        /// </summary>
         [NameInMap("AccountList")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccountList AccountList { get; set; }
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>64E37E6F-C363-41F3-867A-70EF5DC60EA4</para>
+        /// <para>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

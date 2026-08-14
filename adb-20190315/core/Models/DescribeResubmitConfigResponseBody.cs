@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeResubmitConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>The ID of the Data Warehouse Edition (V3.0) cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all Data Warehouse Edition (V3.0) clusters in the destination region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job resubmission rules.</para>
+        /// <para>The list of rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeResubmitConfigResponseBodyRules> Rules { get; set; }
         public class DescribeResubmitConfigResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Indicates whether out-of-memory (OOM) check is configured.</para>
+            /// <para>Indicates whether an out-of-memory (OOM) exception is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string PeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The duration of the SQL statement. Unit: milliseconds.</para>
+            /// <para>The execution duration of the SQL statement. Unit: milliseconds (ms).</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>

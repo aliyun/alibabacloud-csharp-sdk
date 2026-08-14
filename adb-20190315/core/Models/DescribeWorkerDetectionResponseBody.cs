@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     /// <para>The name of the detection metric.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Table accesses</para>
+                    /// <para>Table access count</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]

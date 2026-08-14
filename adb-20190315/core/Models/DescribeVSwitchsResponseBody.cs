@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <para>The name of the vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>VSW-Test-hangzhou-I</para>
+                /// <para>VSW-test-Hangzhou-I</para>
                 /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]

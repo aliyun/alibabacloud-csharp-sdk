@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The name of the database account.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the information about all database accounts is returned.</para>
+        /// <para>If you omit this parameter, information about all database accounts is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,28 +23,30 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:</para>
+        /// <para>The account type. By default, accounts of all types are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: standard account.</description></item>
-        /// <item><description><b>Super</b>: privileged account.</description></item>
+        /// <item><description><para><b>Normal</b>: a standard account.</para>
+        /// </description></item>
+        /// <item><description><para><b>Super</b>: a privileged account.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Normal</para>
+        /// <para>Super</para>
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
+        /// <para>amv-bp11q28kvl688****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -66,14 +68,32 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeAccountsRequestTags> Tags { get; set; }
         public class DescribeAccountsRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// <remarks>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/179253.html">TagResources</a> operation to create a tag for a cluster.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AnalyticDB_IO_UTIL</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>low_env</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

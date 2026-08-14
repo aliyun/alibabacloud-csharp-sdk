@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7559209-7EC3-41E1-8F78-156990******</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

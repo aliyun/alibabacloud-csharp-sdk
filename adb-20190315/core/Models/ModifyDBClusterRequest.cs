@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>N/A</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ExecutorCount")]
         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>N/A</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("StorageResource")]
         [Validation(Required=false)]

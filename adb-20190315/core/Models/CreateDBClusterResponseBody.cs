@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>The ID of the DB cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>am-bp1r053byu48p****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the cluster belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The free size of backup sets. Unit: bytes.</para>
+        /// <para>The free backup size, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of backup sets on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total size of backup sets. Unit: bytes.</para>
+        /// <para>The total backup size, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64953700</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? TotalBackupSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of backup sets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

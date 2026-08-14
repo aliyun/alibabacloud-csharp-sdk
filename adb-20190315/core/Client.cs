@@ -65,6 +65,21 @@ namespace AlibabaCloud.SDK.Adb20190315
                 {"eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"},
                 {"me-east-1", "adb.ap-northeast-1.aliyuncs.com"},
                 {"rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "adb.cn-chengdu.aliyuncs.com"},
+                {"cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"},
+                {"cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"},
+                {"ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"},
+                {"cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"},
+                {"eu-west-1", "adb.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "adb.eu-central-1.aliyuncs.com"},
+                {"na-south-1", "adb.na-south-1.aliyuncs.com"},
+                {"me-central-1", "adb.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -246,7 +261,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an optimization suggestion.</para>
+        /// <para>Applies optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -308,7 +323,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an optimization suggestion.</para>
+        /// <para>Applies optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -370,7 +385,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an optimization suggestion.</para>
+        /// <para>Applies optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -388,7 +403,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an optimization suggestion.</para>
+        /// <para>Applies optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -406,12 +421,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打通用户ENI</para>
+        /// <para>Creates an Elastic Network Interface (ENI) in a VPC for a Data Warehouse Edition cluster to enable network access from AnalyticDB for MySQL nodes to your VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -469,12 +485,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打通用户ENI</para>
+        /// <para>Creates an Elastic Network Interface (ENI) in a VPC for a Data Warehouse Edition cluster to enable network access from AnalyticDB for MySQL nodes to your VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -532,12 +549,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打通用户ENI</para>
+        /// <para>Creates an Elastic Network Interface (ENI) in a VPC for a Data Warehouse Edition cluster to enable network access from AnalyticDB for MySQL nodes to your VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -555,12 +573,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打通用户ENI</para>
+        /// <para>Creates an Elastic Network Interface (ENI) in a VPC for a Data Warehouse Edition cluster to enable network access from AnalyticDB for MySQL nodes to your VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -578,7 +597,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies multiple optimization suggestions at a time.</para>
+        /// <para>Applies multiple optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -640,7 +659,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies multiple optimization suggestions at a time.</para>
+        /// <para>Applies multiple optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -702,7 +721,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies multiple optimization suggestions at a time.</para>
+        /// <para>Applies multiple optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -720,7 +739,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies multiple optimization suggestions at a time.</para>
+        /// <para>Applies multiple optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -738,15 +757,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster with a database account.</para>
+        /// <para>The BindDBResourceGroupWithUser operation attaches a database account to a resource group in a Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode that have 32 or more cores.</description></item>
+        /// <item><description>You cannot attach database accounts to the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -817,15 +836,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster with a database account.</para>
+        /// <para>The BindDBResourceGroupWithUser operation attaches a database account to a resource group in a Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode that have 32 or more cores.</description></item>
+        /// <item><description>You cannot attach database accounts to the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -896,15 +915,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster with a database account.</para>
+        /// <para>The BindDBResourceGroupWithUser operation attaches a database account to a resource group in a Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode that have 32 or more cores.</description></item>
+        /// <item><description>You cannot attach database accounts to the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -923,15 +942,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster with a database account.</para>
+        /// <para>The BindDBResourceGroupWithUser operation attaches a database account to a resource group in a Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition (V3.0) clusters in elastic mode that have 32 or more cores.</description></item>
+        /// <item><description>You cannot attach database accounts to the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -950,14 +969,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a database account. You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition clusters in elastic mode for Cluster Edition.</para>
+        /// <para>Call the BindDBResourcePoolWithUser operation to attach a resource group to a database account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition clusters in elastic mode that have 32 cores or more.</description></item>
+        /// <item><description>The default resource group USER_DEFAULT does not support attaching database accounts.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1028,14 +1048,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a database account. You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition clusters in elastic mode for Cluster Edition.</para>
+        /// <para>Call the BindDBResourcePoolWithUser operation to attach a resource group to a database account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition clusters in elastic mode that have 32 cores or more.</description></item>
+        /// <item><description>The default resource group USER_DEFAULT does not support attaching database accounts.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1106,14 +1127,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a database account. You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition clusters in elastic mode for Cluster Edition.</para>
+        /// <para>Call the BindDBResourcePoolWithUser operation to attach a resource group to a database account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition clusters in elastic mode that have 32 cores or more.</description></item>
+        /// <item><description>The default resource group USER_DEFAULT does not support attaching database accounts.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1132,14 +1154,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a database account. You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition clusters in elastic mode for Cluster Edition.</para>
+        /// <para>Call the BindDBResourcePoolWithUser operation to attach a resource group to a database account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The default resource group USER_DEFAULT cannot be associated with a database account.</description></item>
+        /// <item><description>This operation is available only for Data Warehouse Edition clusters in elastic mode that have 32 cores or more.</description></item>
+        /// <item><description>The default resource group USER_DEFAULT does not support attaching database accounts.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1486,7 +1509,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the CreateAccount operation to create an account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1570,7 +1593,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the CreateAccount operation to create an account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1654,7 +1677,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the CreateAccount operation to create an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1672,7 +1695,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the CreateAccount operation to create an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1690,12 +1713,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Create a Data Warehouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition  clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.</para>
+        /// <h3>Considerations</h3>
+        /// <list type="bullet">
+        /// <item><description>After creating a cluster, you are charged based on the cluster specifications you selected. For more information on the billable items and pricing for the Data Warehouse Edition, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items for Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The Data Warehouse Edition is no longer available for new purchases; you can purchase Enterprise Edition or Basic Edition instead. The Enterprise, Basic, and Lakehouse editions all share the same features. For more information, see <a href="https://help.aliyun.com/document_detail/205001.html">product editions</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1869,12 +1897,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Create a Data Warehouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition  clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.</para>
+        /// <h3>Considerations</h3>
+        /// <list type="bullet">
+        /// <item><description>After creating a cluster, you are charged based on the cluster specifications you selected. For more information on the billable items and pricing for the Data Warehouse Edition, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items for Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The Data Warehouse Edition is no longer available for new purchases; you can purchase Enterprise Edition or Basic Edition instead. The Enterprise, Basic, and Lakehouse editions all share the same features. For more information, see <a href="https://help.aliyun.com/document_detail/205001.html">product editions</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2048,12 +2081,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Create a Data Warehouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition  clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.</para>
+        /// <h3>Considerations</h3>
+        /// <list type="bullet">
+        /// <item><description>After creating a cluster, you are charged based on the cluster specifications you selected. For more information on the billable items and pricing for the Data Warehouse Edition, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items for Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The Data Warehouse Edition is no longer available for new purchases; you can purchase Enterprise Edition or Basic Edition instead. The Enterprise, Basic, and Lakehouse editions all share the same features. For more information, see <a href="https://help.aliyun.com/document_detail/205001.html">product editions</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2071,12 +2109,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Create a Data Warehouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition  clusters, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items of Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.</para>
+        /// <h3>Considerations</h3>
+        /// <list type="bullet">
+        /// <item><description>After creating a cluster, you are charged based on the cluster specifications you selected. For more information on the billable items and pricing for the Data Warehouse Edition, see <a href="https://help.aliyun.com/document_detail/303131.html">Billable items for Data Warehouse Edition</a> and <a href="https://help.aliyun.com/document_detail/135229.html">Pricing for Data Warehouse Edition</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The Data Warehouse Edition is no longer available for new purchases; you can purchase Enterprise Edition or Basic Edition instead. The Enterprise, Basic, and Lakehouse editions all share the same features. For more information, see <a href="https://help.aliyun.com/document_detail/205001.html">product editions</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2094,17 +2137,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Creates a resource group for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is suitable for the following editions:</para>
+        /// <para>Supported product editions:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enterprise Edition</b>.</description></item>
-        /// <item><description><b>Basic Edition</b>.</description></item>
-        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
-        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// <item><description><b>Enterprise Edition</b></description></item>
+        /// <item><description><b>Basic Edition</b></description></item>
+        /// <item><description><b>Data Lakehouse Edition</b></description></item>
+        /// <item><description><b>Data Warehouse Edition (Elastic Mode)</b>: Requires specifications of 32 cores and 128 GB or higher.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2217,17 +2260,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Creates a resource group for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is suitable for the following editions:</para>
+        /// <para>Supported product editions:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enterprise Edition</b>.</description></item>
-        /// <item><description><b>Basic Edition</b>.</description></item>
-        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
-        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// <item><description><b>Enterprise Edition</b></description></item>
+        /// <item><description><b>Basic Edition</b></description></item>
+        /// <item><description><b>Data Lakehouse Edition</b></description></item>
+        /// <item><description><b>Data Warehouse Edition (Elastic Mode)</b>: Requires specifications of 32 cores and 128 GB or higher.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2340,17 +2383,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Creates a resource group for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is suitable for the following editions:</para>
+        /// <para>Supported product editions:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enterprise Edition</b>.</description></item>
-        /// <item><description><b>Basic Edition</b>.</description></item>
-        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
-        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// <item><description><b>Enterprise Edition</b></description></item>
+        /// <item><description><b>Basic Edition</b></description></item>
+        /// <item><description><b>Data Lakehouse Edition</b></description></item>
+        /// <item><description><b>Data Warehouse Edition (Elastic Mode)</b>: Requires specifications of 32 cores and 128 GB or higher.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2369,17 +2412,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Creates a resource group for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is suitable for the following editions:</para>
+        /// <para>Supported product editions:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enterprise Edition</b>.</description></item>
-        /// <item><description><b>Basic Edition</b>.</description></item>
-        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
-        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// <item><description><b>Enterprise Edition</b></description></item>
+        /// <item><description><b>Basic Edition</b></description></item>
+        /// <item><description><b>Data Lakehouse Edition</b></description></item>
+        /// <item><description><b>Data Warehouse Edition (Elastic Mode)</b>: Requires specifications of 32 cores and 128 GB or higher.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2398,12 +2441,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>You can call the CreateDBResourcePool operation to create a resource group. This operation applies only to AnalyticDB for MySQL clusters of the new version in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <h3>Precautions</h3>
+        /// <para>This operation is available only for AnalyticDB for MySQL clusters of the new version in elastic mode that have 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2473,12 +2517,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>You can call the CreateDBResourcePool operation to create a resource group. This operation applies only to AnalyticDB for MySQL clusters of the new version in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <h3>Precautions</h3>
+        /// <para>This operation is available only for AnalyticDB for MySQL clusters of the new version in elastic mode that have 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2548,12 +2593,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>You can call the CreateDBResourcePool operation to create a resource group. This operation applies only to AnalyticDB for MySQL clusters of the new version in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <h3>Precautions</h3>
+        /// <para>This operation is available only for AnalyticDB for MySQL clusters of the new version in elastic mode that have 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2571,12 +2617,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>You can call the CreateDBResourcePool operation to create a resource group. This operation applies only to AnalyticDB for MySQL clusters of the new version in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <h3>Precautions</h3>
+        /// <para>This operation is available only for AnalyticDB for MySQL clusters of the new version in elastic mode that have 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3026,7 +3073,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高权限帐号</para>
+        /// <para>The DeleteAccount operation deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3092,7 +3139,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高权限帐号</para>
+        /// <para>The DeleteAccount operation deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3158,7 +3205,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高权限帐号</para>
+        /// <para>The DeleteAccount operation deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3176,7 +3223,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高权限帐号</para>
+        /// <para>The DeleteAccount operation deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4266,7 +4313,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Describes the database accounts of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4336,7 +4383,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Describes the database accounts of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4406,7 +4453,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Describes the database accounts of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4424,7 +4471,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of database accounts for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Describes the database accounts of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5314,7 +5361,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applied optimization suggestions for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call <c>DescribeAppliedAdvices</c> to retrieve applied optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5396,7 +5443,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applied optimization suggestions for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call <c>DescribeAppliedAdvices</c> to retrieve applied optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5478,7 +5525,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applied optimization suggestions for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call <c>DescribeAppliedAdvices</c> to retrieve applied optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5496,7 +5543,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applied optimization suggestions for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call <c>DescribeAppliedAdvices</c> to retrieve applied optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5674,13 +5721,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeAuditLogRecords operation to query the SQL audit logs of a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL audit. If SQL audit is disabled, you can call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable SQL audit.
-        /// SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, and <b>UPSERT INTO VALUES</b>.</para>
+        /// <para>Before you call this operation to view the SQL audit logs of an AnalyticDB for MySQL cluster, enable SQL Audit. Call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL Audit. If SQL Audit is disabled, call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable it.
+        /// You can query SQL audit logs only when SQL Audit is enabled. You can query only the SQL audit logs from the last 30 days. If you disable SQL Audit and then re-enable it, you can query only the SQL audit logs that are generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5737,6 +5784,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeyword))
             {
                 query["QueryKeyword"] = request.QueryKeyword;
@@ -5790,13 +5841,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeAuditLogRecords operation to query the SQL audit logs of a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL audit. If SQL audit is disabled, you can call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable SQL audit.
-        /// SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, and <b>UPSERT INTO VALUES</b>.</para>
+        /// <para>Before you call this operation to view the SQL audit logs of an AnalyticDB for MySQL cluster, enable SQL Audit. Call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL Audit. If SQL Audit is disabled, call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable it.
+        /// You can query SQL audit logs only when SQL Audit is enabled. You can query only the SQL audit logs from the last 30 days. If you disable SQL Audit and then re-enable it, you can query only the SQL audit logs that are generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5853,6 +5904,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeyword))
             {
                 query["QueryKeyword"] = request.QueryKeyword;
@@ -5906,13 +5961,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeAuditLogRecords operation to query the SQL audit logs of a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL audit. If SQL audit is disabled, you can call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable SQL audit.
-        /// SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, and <b>UPSERT INTO VALUES</b>.</para>
+        /// <para>Before you call this operation to view the SQL audit logs of an AnalyticDB for MySQL cluster, enable SQL Audit. Call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL Audit. If SQL Audit is disabled, call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable it.
+        /// You can query SQL audit logs only when SQL Audit is enabled. You can query only the SQL audit logs from the last 30 days. If you disable SQL Audit and then re-enable it, you can query only the SQL audit logs that are generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5930,13 +5985,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeAuditLogRecords operation to query the SQL audit logs of a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL audit. If SQL audit is disabled, you can call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable SQL audit.
-        /// SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, and <b>UPSERT INTO VALUES</b>.</para>
+        /// <para>Before you call this operation to view the SQL audit logs of an AnalyticDB for MySQL cluster, enable SQL Audit. Call the <a href="https://help.aliyun.com/document_detail/190628.html">DescribeAuditLogConfig</a> operation to query the status of SQL Audit. If SQL Audit is disabled, call the <a href="https://help.aliyun.com/document_detail/190629.html">ModifyAuditLogConfig</a> operation to enable it.
+        /// You can query SQL audit logs only when SQL Audit is enabled. You can query only the SQL audit logs from the last 30 days. If you disable SQL Audit and then re-enable it, you can query only the SQL audit logs that are generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6138,7 +6193,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available suggestions for cluster optimization.</para>
+        /// <para>Use <c>DescribeAvailableAdvices</c> to get optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6216,7 +6271,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available suggestions for cluster optimization.</para>
+        /// <para>Use <c>DescribeAvailableAdvices</c> to get optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6294,7 +6349,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available suggestions for cluster optimization.</para>
+        /// <para>Use <c>DescribeAvailableAdvices</c> to get optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6312,7 +6367,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available suggestions for cluster optimization.</para>
+        /// <para>Use <c>DescribeAvailableAdvices</c> to get optimization advice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6666,7 +6721,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup sets for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists backups for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6756,7 +6811,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup sets for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists backups for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6846,7 +6901,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup sets for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists backups for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6864,7 +6919,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backup sets for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists backups for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7418,7 +7473,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current number of connections to an AnalyticDB for MySQL cluster.</para>
+        /// <para>Returns the current number of connections for a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7480,7 +7535,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current number of connections to an AnalyticDB for MySQL cluster.</para>
+        /// <para>Returns the current number of connections for a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7542,7 +7597,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current number of connections to an AnalyticDB for MySQL cluster.</para>
+        /// <para>Returns the current number of connections for a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7560,7 +7615,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current number of connections to an AnalyticDB for MySQL cluster.</para>
+        /// <para>Returns the current number of connections for a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7922,7 +7977,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the DescribeDBClusterAttribute operation to view the details of a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7984,7 +8039,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the DescribeDBClusterAttribute operation to view the details of a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8046,7 +8101,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the DescribeDBClusterAttribute operation to view the details of a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8064,7 +8119,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>You can call the DescribeDBClusterAttribute operation to view the details of a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8210,7 +8265,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeDBClusterNetInfo API to retrieve network information about an ADB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8276,7 +8331,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeDBClusterNetInfo API to retrieve network information about an ADB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8342,7 +8397,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeDBClusterNetInfo API to retrieve network information about an ADB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8360,7 +8415,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeDBClusterNetInfo API to retrieve network information about an ADB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9402,7 +9457,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>List Data Lakehouse Edition clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9496,7 +9551,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>List Data Lakehouse Edition clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9590,7 +9645,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>List Data Lakehouse Edition clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9608,7 +9663,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>List Data Lakehouse Edition clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10954,7 +11009,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range for the number of elastic I/O units (EIUs) for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>You can call the DescribeEIURange operation to query the range of elastic I/O units (EIUs) available for a Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11048,7 +11103,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range for the number of elastic I/O units (EIUs) for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>You can call the DescribeEIURange operation to query the range of elastic I/O units (EIUs) available for a Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11142,7 +11197,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range for the number of elastic I/O units (EIUs) for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>You can call the DescribeEIURange operation to query the range of elastic I/O units (EIUs) available for a Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11160,7 +11215,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range for the number of elastic I/O units (EIUs) for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>You can call the DescribeEIURange operation to query the range of elastic I/O units (EIUs) available for a Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11178,12 +11233,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看日资源弹性</para>
+        /// <para>You can call DescribeElasticDailyPlan to query the execution information of a daily time-based scaling plan. This operation applies only to new-version Data Warehouse Edition clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation applies only to new-version Data Warehouse Edition clusters in elastic mode with 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11257,12 +11313,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看日资源弹性</para>
+        /// <para>You can call DescribeElasticDailyPlan to query the execution information of a daily time-based scaling plan. This operation applies only to new-version Data Warehouse Edition clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation applies only to new-version Data Warehouse Edition clusters in elastic mode with 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11336,12 +11393,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看日资源弹性</para>
+        /// <para>You can call DescribeElasticDailyPlan to query the execution information of a daily time-based scaling plan. This operation applies only to new-version Data Warehouse Edition clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation applies only to new-version Data Warehouse Edition clusters in elastic mode with 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11359,12 +11417,13 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看日资源弹性</para>
+        /// <para>You can call DescribeElasticDailyPlan to query the execution information of a daily time-based scaling plan. This operation applies only to new-version Data Warehouse Edition clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation applies only to new-version Data Warehouse Edition clusters in elastic mode with 32 or more cores.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12874,12 +12933,12 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about asynchronous import and export tasks of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the details of asynchronous import and export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</para>
+        /// <para>For more information about the details of asynchronous import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit import and export tasks</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12969,12 +13028,12 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about asynchronous import and export tasks of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the details of asynchronous import and export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</para>
+        /// <para>For more information about the details of asynchronous import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit import and export tasks</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13064,12 +13123,12 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about asynchronous import and export tasks of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the details of asynchronous import and export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</para>
+        /// <para>For more information about the details of asynchronous import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit import and export tasks</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13087,12 +13146,12 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about asynchronous import and export tasks of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the details of asynchronous import and export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to asynchronously submit import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit an import or export task</a>.</para>
+        /// <para>For more information about the details of asynchronous import and export tasks, see <a href="https://help.aliyun.com/document_detail/160291.html">Asynchronously submit import and export tasks</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15070,7 +15129,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Resubmit配置</para>
+        /// <para>Query resubmission configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15136,7 +15195,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Resubmit配置</para>
+        /// <para>Query resubmission configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15202,7 +15261,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Resubmit配置</para>
+        /// <para>Query resubmission configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15220,7 +15279,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Resubmit配置</para>
+        /// <para>Query resubmission configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15238,7 +15297,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the short query acceleration (SQA) configuration of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeSQAConfig operation to query the Short Query Acceleration (SQA) configuration for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15308,7 +15367,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the short query acceleration (SQA) configuration of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeSQAConfig operation to query the Short Query Acceleration (SQA) configuration for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15378,7 +15437,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the short query acceleration (SQA) configuration of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeSQAConfig operation to query the Short Query Acceleration (SQA) configuration for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15396,7 +15455,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the short query acceleration (SQA) configuration of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Call the DescribeSQAConfig operation to query the Short Query Acceleration (SQA) configuration for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15414,8 +15473,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL patterns for an AnalyticDB for MySQL cluster within a period of time.</para>
+        /// <para>Call the <c>DescribeSQLPatterns</c> API to retrieve SQL patterns for an AnalyticDB for MySQL cluster within a specified date range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSQLPatternsRequest
@@ -15496,8 +15564,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL patterns for an AnalyticDB for MySQL cluster within a period of time.</para>
+        /// <para>Call the <c>DescribeSQLPatterns</c> API to retrieve SQL patterns for an AnalyticDB for MySQL cluster within a specified date range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSQLPatternsRequest
@@ -15578,8 +15655,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL patterns for an AnalyticDB for MySQL cluster within a period of time.</para>
+        /// <para>Call the <c>DescribeSQLPatterns</c> API to retrieve SQL patterns for an AnalyticDB for MySQL cluster within a specified date range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSQLPatternsRequest
@@ -15596,8 +15682,17 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of SQL patterns for an AnalyticDB for MySQL cluster within a period of time.</para>
+        /// <para>Call the <c>DescribeSQLPatterns</c> API to retrieve SQL patterns for an AnalyticDB for MySQL cluster within a specified date range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSQLPatternsRequest
@@ -16094,7 +16189,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志</para>
+        /// <para>Queries the details of slow query logs for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16188,7 +16283,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志</para>
+        /// <para>Queries the details of slow query logs for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16282,7 +16377,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志</para>
+        /// <para>Queries the details of slow query logs for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16300,7 +16395,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志</para>
+        /// <para>Queries the details of slow query logs for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16886,7 +16981,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表访问统计信息</para>
+        /// <para>Queries the access count for a specific table or all tables in an AnalyticDB for MySQL cluster on a specified date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16952,7 +17047,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表访问统计信息</para>
+        /// <para>Queries the access count for a specific table or all tables in an AnalyticDB for MySQL cluster on a specified date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17018,7 +17113,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表访问统计信息</para>
+        /// <para>Queries the access count for a specific table or all tables in an AnalyticDB for MySQL cluster on a specified date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17036,7 +17131,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表访问统计信息</para>
+        /// <para>Queries the access count for a specific table or all tables in an AnalyticDB for MySQL cluster on a specified date.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17422,8 +17517,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table statistics for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Retrieves table statistics from a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about table statistics, see <a href="https://help.aliyun.com/document_detail/188721.html">Monitoring information</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTableStatisticsRequest
@@ -17504,8 +17606,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table statistics for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Retrieves table statistics from a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about table statistics, see <a href="https://help.aliyun.com/document_detail/188721.html">Monitoring information</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTableStatisticsRequest
@@ -17586,8 +17695,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table statistics for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Retrieves table statistics from a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about table statistics, see <a href="https://help.aliyun.com/document_detail/188721.html">Monitoring information</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTableStatisticsRequest
@@ -17604,8 +17720,15 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table statistics for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Retrieves table statistics from a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about table statistics, see <a href="https://help.aliyun.com/document_detail/188721.html">Monitoring information</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTableStatisticsRequest
@@ -20070,7 +20193,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates data from a Data Warehouse Edition cluster to a Data Lakehouse Edition or Enterprise Edition cluster in AnalyticDB for MySQL.</para>
+        /// <para>Migrates a Data Warehouse Edition cluster to a Data Lakehouse Edition or an Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20172,7 +20295,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates data from a Data Warehouse Edition cluster to a Data Lakehouse Edition or Enterprise Edition cluster in AnalyticDB for MySQL.</para>
+        /// <para>Migrates a Data Warehouse Edition cluster to a Data Lakehouse Edition or an Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20274,7 +20397,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates data from a Data Warehouse Edition cluster to a Data Lakehouse Edition or Enterprise Edition cluster in AnalyticDB for MySQL.</para>
+        /// <para>Migrates a Data Warehouse Edition cluster to a Data Lakehouse Edition or an Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20292,7 +20415,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates data from a Data Warehouse Edition cluster to a Data Lakehouse Edition or Enterprise Edition cluster in AnalyticDB for MySQL.</para>
+        /// <para>Migrates a Data Warehouse Edition cluster to a Data Lakehouse Edition or an Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20862,7 +20985,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审计日志设置</para>
+        /// <para>You can call the ModifyAuditLogConfig operation to modify the audit log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20928,7 +21051,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审计日志设置</para>
+        /// <para>You can call the ModifyAuditLogConfig operation to modify the audit log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20994,7 +21117,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审计日志设置</para>
+        /// <para>You can call the ModifyAuditLogConfig operation to modify the audit log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21012,7 +21135,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审计日志设置</para>
+        /// <para>You can call the ModifyAuditLogConfig operation to modify the audit log settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22842,7 +22965,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the number of shards for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22924,7 +23047,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the number of shards for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23006,7 +23129,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the number of shards for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23024,7 +23147,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the number of shards for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24554,7 +24677,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Resubmit配置</para>
+        /// <para>Modifies the Resubmit configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24626,7 +24749,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Resubmit配置</para>
+        /// <para>Modifies the Resubmit configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24698,7 +24821,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Resubmit配置</para>
+        /// <para>Modifies the Resubmit configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24716,7 +24839,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Resubmit配置</para>
+        /// <para>Modifies the Resubmit configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24734,7 +24857,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改SQA配置</para>
+        /// <para>Modifies the Short Query Acceleration (SQA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24804,7 +24927,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改SQA配置</para>
+        /// <para>Modifies the Short Query Acceleration (SQA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24874,7 +24997,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改SQA配置</para>
+        /// <para>Modifies the Short Query Acceleration (SQA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24892,7 +25015,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改SQA配置</para>
+        /// <para>Modifies the Short Query Acceleration (SQA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25086,7 +25209,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改LogHub投递规则</para>
+        /// <para>Modifies a LogHub delivery rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25196,7 +25319,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改LogHub投递规则</para>
+        /// <para>Modifies a LogHub delivery rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25306,7 +25429,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改LogHub投递规则</para>
+        /// <para>Modifies a LogHub delivery rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25324,7 +25447,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改LogHub投递规则</para>
+        /// <para>Modifies a LogHub delivery rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25998,7 +26121,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster from a database account.</para>
+        /// <para>Call the UnbindDBResourceGroupWithUser operation to detach a database account from a resource group in a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26068,7 +26191,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster from a database account.</para>
+        /// <para>Call the UnbindDBResourceGroupWithUser operation to detach a database account from a resource group in a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26138,7 +26261,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster from a database account.</para>
+        /// <para>Call the UnbindDBResourceGroupWithUser operation to detach a database account from a resource group in a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26156,7 +26279,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a resource group of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster from a database account.</para>
+        /// <para>Call the UnbindDBResourceGroupWithUser operation to detach a database account from a resource group in a Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26174,7 +26297,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a database account from a resource group. This operation can be called only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition.</para>
+        /// <para>The UnbindDBResourcePoolWithUser operation detaches a database account from a resource group. This operation applies only to Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26244,7 +26367,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a database account from a resource group. This operation can be called only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition.</para>
+        /// <para>The UnbindDBResourcePoolWithUser operation detaches a database account from a resource group. This operation applies only to Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26314,7 +26437,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a database account from a resource group. This operation can be called only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition.</para>
+        /// <para>The UnbindDBResourcePoolWithUser operation detaches a database account from a resource group. This operation applies only to Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26332,7 +26455,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a database account from a resource group. This operation can be called only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition.</para>
+        /// <para>The UnbindDBResourcePoolWithUser operation detaches a database account from a resource group. This operation applies only to Data Warehouse Edition (V3.0) clusters in elastic mode.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The information about the detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Multiple oversized non-partitioned tables are detected.</para>
+            /// <para>Tables with improper partitioning are detected.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Oversized non-partitioned tables</para>
+            /// <para>Oversized non-partitioned table detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

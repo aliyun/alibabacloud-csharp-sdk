@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                                 /// <para>A reserved parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>N/A</para>
+                                /// <para>无</para>
                                 /// </summary>
                                 [NameInMap("MaxCount")]
                                 [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                                 /// <para>A reserved parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>N/A</para>
+                                /// <para>无</para>
                                 /// </summary>
                                 [NameInMap("MinCount")]
                                 [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                                 /// <para>A reserved parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>N/A</para>
+                                /// <para>无</para>
                                 /// </summary>
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou-k</para>
+            /// <para>Hangzhou Zone A</para>
             /// </summary>
             [NameInMap("ZoneName")]
             [Validation(Required=false)]

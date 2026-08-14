@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The queried asynchronous import and export tasks.</para>
+        /// <para>The list of task information.</para>
         /// </summary>
         [NameInMap("LoadTasksRecords")]
         [Validation(Required=false)]
         public List<DescribeLoadTasksRecordsResponseBodyLoadTasksRecords> LoadTasksRecords { get; set; }
         public class DescribeLoadTasksRecordsResponseBodyLoadTasksRecords : TeaModel {
             /// <summary>
-            /// <para>The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The start time of the task, accurate to milliseconds. The time is in the <i>yyyy-MM-ddTHH:mm:ss.SSSZ</i> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-18 18:47:27.0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the database that is involved in the import or export task.</para>
+            /// <para>The name of the database involved in the import or export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adb_demo</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string ProcessID { get; set; }
 
             /// <summary>
-            /// <para>The number of rows that are processed in the asynchronous import or export task.</para>
+            /// <para>The number of data rows processed by the asynchronous import or export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? ProcessRows { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement that is used in the asynchronous import or export task.</para>
+            /// <para>The SQL statement used in the asynchronous import or export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>insert overwrite into courses_external_table\nselect * from courses</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Sql { get; set; }
 
             /// <summary>
-            /// <para>The state of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINISH</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ss.SSSZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The time when the task status was updated, accurate to milliseconds. The time is in the <i>yyyy-MM-ddTHH:mm:ss.SSSZ</i> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-18 18:47:31.0</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

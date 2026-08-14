@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OK</para>
+            /// <para>Excessive primary keys detected in tables.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>evm_identity</para>
+            /// <para>Excessive primary key fields</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

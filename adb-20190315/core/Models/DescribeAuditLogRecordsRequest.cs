@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAuditLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the Data Warehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the IDs of all Data Warehouse Edition clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database on which you want to execute the SQL statement.</para>
+        /// <para>The name of the database on which the SQL statement was executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -34,11 +34,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The end time must be later than the start time.</description></item>
-        /// <item><description>The maximum time range that can be specified is 24 hours.</description></item>
+        /// <item><description><para>The end time must be later than the start time.</para>
+        /// </description></item>
+        /// <item><description><para>The time range to query cannot exceed 24 hours.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IP address and port number of the client that is used to execute the SQL statement.</para>
+        /// <para>The IP address and port number of the client that was used to execute the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.104.XX.XX:43908</para>
@@ -60,23 +62,32 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// <para>The order in which specified fields are sorted. Specify this parameter as an ordered JSON array that consists of the Field and Type fields.</para>
+        /// <para>The sorting order of the query results. Specify the value as an ordered JSON array. The results are sorted based on the order of fields in the array. Each object in the array contains the \<c>Field\\</c> and \<c>Type\\</c> fields.</para>
         /// <list type="bullet">
-        /// <item><description><para>Field specifies the field that is used to sort the retrieved entries. Valid values:</para>
+        /// <item><description><para>Field specifies the field by which to sort the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HostAddress: the IP address of the client that is used to connect to the database.</description></item>
-        /// <item><description>Succeed: specifies whether the SQL statement is successfully executed.</description></item>
-        /// <item><description>TotalTime: the total amount of time that is consumed to execute the SQL statement.</description></item>
-        /// <item><description>DBName: the name of the database on which the SQL statement is executed.</description></item>
-        /// <item><description>SQLType: the type of the SQL statement.</description></item>
-        /// <item><description>User: the username that is used to execute the SQL statement.</description></item>
-        /// <item><description>ExecuteTime: the time to start executing the SQL statement.</description></item>
+        /// <item><description><para>HostAddress: the IP address of the client that connects to the database.</para>
+        /// </description></item>
+        /// <item><description><para>Succeed: specifies whether the SQL statement was successfully executed.</para>
+        /// </description></item>
+        /// <item><description><para>TotalTime: the total amount of time that is consumed to execute the SQL statement.</para>
+        /// </description></item>
+        /// <item><description><para>DBName: the name of the database on which the SQL statement was executed.</para>
+        /// </description></item>
+        /// <item><description><para>SQLType: the type of the SQL statement.</para>
+        /// </description></item>
+        /// <item><description><para>User: the username that was used to execute the SQL statement.</para>
+        /// </description></item>
+        /// <item><description><para>ExecuteTime: the start time of the SQL statement execution.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Type specifies the sorting order. Valid values:</para>
+        /// <item><description><para>Type specifies the sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Desc: descending order.</description></item>
-        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description><para>Desc: descending.</para>
+        /// </description></item>
+        /// <item><description><para>Asc: ascending.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -89,10 +100,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the retrieved entries. Valid values:</para>
+        /// <para>The order by which to sort the query results based on the execution time of the SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: sorts the retrieved entries by time in ascending order.</description></item>
-        /// <item><description><b>desc</b>: sorts the retrieved entries by time in descending order.</description></item>
+        /// <item><description><para><b>asc</b>: ascending.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: descending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value is an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,15 +134,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>10</b></description></item>
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>10</b></para>
+        /// </description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you leave this parameter empty, the value 10 is used.</para>
+        /// <para>If you do not specify this parameter, the default value is 10.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,8 +156,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProcessId")]
+        [Validation(Required=false)]
+        public string ProcessId { get; set; }
+
         /// <summary>
-        /// <para>The keywords that are included in the SQL statement to query.</para>
+        /// <para>The keyword for the query. This keyword is used to filter SQL statements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb</para>
@@ -150,9 +171,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string QueryKeyword { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view the regions and zones, including the region IDs, that are supported by AnalyticDB for MySQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -174,16 +195,23 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The type of the SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b></description></item>
-        /// <item><description><b>SELECT</b></description></item>
-        /// <item><description><b>UPDATE</b></description></item>
-        /// <item><description><b>INSERT_INTO_SELECT</b></description></item>
-        /// <item><description><b>ALTER</b></description></item>
-        /// <item><description><b>DROP</b></description></item>
-        /// <item><description><b>CREATE</b></description></item>
+        /// <item><description><para><b>DELETE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SELECT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UPDATE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>INSERT_INTO_SELECT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ALTER</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DROP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>CREATE</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can query only a single type of SQL statements at a time. If you leave this parameter empty, the <b>SELECT</b> statements are queried.</para>
+        /// <para>You can query for only one type of SQL statement at a time. If you leave this parameter empty, all types of SQL statements are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -194,9 +222,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.</para>
+        /// <para>You can query SQL audit logs only when SQL Audit is enabled. You can query only the SQL audit logs from the last 30 days. If you disable and then re-enable SQL Audit, you can query only the logs generated after it was re-enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,10 +235,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the execution of the SQL statement succeeds. Valid values:</para>
+        /// <para>Specifies whether the SQL statement was successfully executed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The SQL statement was successfully executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The SQL statement failed to be executed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,7 +251,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Succeed { get; set; }
 
         /// <summary>
-        /// <para>The name of the user who executed the SQL statement.</para>
+        /// <para>The username that was used to execute the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user</para>

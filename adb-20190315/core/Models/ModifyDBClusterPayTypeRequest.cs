@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Postpaid</para>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]

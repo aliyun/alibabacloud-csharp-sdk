@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU increase detection</para>
+            /// <para>CPU spike detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                         /// <para>The property information about the operator.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>GROUP BY field: uid</para>
+                        /// <para>Group By field: uid</para>
                         /// </summary>
                         [NameInMap("OperatorInfo")]
                         [Validation(Required=false)]

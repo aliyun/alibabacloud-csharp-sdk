@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAuditLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the status of SQL audit is updated. Valid values:</para>
+        /// <para>Indicates whether the status of the SQL audit feature is updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The status of SQL audit is updated.</description></item>
-        /// <item><description><b>false</b>: The status of SQL audit is not updated.</description></item>
+        /// <item><description><para><b>true</b>: The status is updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The status failed to be updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network type of the cluster.</para>
+        /// <para>Cluster network type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The description of the detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Two SQL patterns that have abnormal totalTime metric values are detected. This may result in increased CPU utilization, query slowdown, and degraded system stability. Go to the monitoring page to diagnose the issue and then perform optimization.</para>
+            /// <para>Two SQL patterns that have abnormal totalTime metric values are detected. This may cause high CPU usage or slow queries, which affects system stability. Go to the monitoring page and use one-click diagnostics to view details and optimize the queries.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <b>Example:</b>
                 /// <para>Maximum query duration: 1.43s
                 /// Maximum peak memory: 20.73 MB
-                /// Maximum read table data: 10.12 MB</para>
+                /// Maximum table read data volume: 10.12 MB</para>
                 /// </summary>
                 [NameInMap("RelatedMetrics")]
                 [Validation(Required=false)]

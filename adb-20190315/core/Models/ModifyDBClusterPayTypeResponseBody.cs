@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Postpaid</para>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]

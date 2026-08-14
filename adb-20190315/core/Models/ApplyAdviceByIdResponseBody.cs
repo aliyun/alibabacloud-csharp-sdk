@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ApplyAdviceByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SUCCESS</b> is returned if the operation is successful.</description></item>
-        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// <item><description><para>Returns <b>SUCCESS</b> if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an error message if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5DC10091-348D-12B1-906D-AB49D658012E</para>

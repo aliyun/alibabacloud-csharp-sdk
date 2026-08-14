@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeElasticDailyPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the Data Warehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> to query the IDs of all Data Warehouse Edition clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The start date of the current-day scaling plan. Specify the date in the yyyy-MM-dd format.</para>
+        /// <para>The start date of the daily scaling plan. Specify the date in the yyyy-MM-dd format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-02</para>
@@ -34,12 +34,16 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ElasticDailyPlanDay { get; set; }
 
         /// <summary>
-        /// <para>The execution state of the current-day scaling plan. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The execution status of the daily scaling plan. To query multiple statuses, separate them with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The scaling plan is not executed.</description></item>
-        /// <item><description><b>2</b>: The scaling plan is being executed.</description></item>
-        /// <item><description><b>3</b>: The scaling plan is executed.</description></item>
-        /// <item><description><b>4</b>: The scaling plan fails to be executed.</description></item>
+        /// <item><description><para><b>1</b>: Not executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Executing.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +54,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ElasticDailyPlanStatusList { get; set; }
 
         /// <summary>
-        /// <para>The name of the scaling plan. Valid values:</para>
+        /// <para>The name of the scaling plan. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 30 characters in length.</description></item>
-        /// <item><description>The name can contain letters, digits, and underscores (_).</description></item>
+        /// <item><description><para>It must be 2 to 30 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>It must consist of uppercase letters, lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> to query the name of the resource group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class BatchApplyAdviceByIdListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>The message returned for the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>SUCCESS</b> is returned if the operation is successful.</description></item>
-        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// <item><description><para>If the request is successful, <b>SUCCESS</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86F92D26-B774-5FA1-8E53-82CBEEEBB012</para>

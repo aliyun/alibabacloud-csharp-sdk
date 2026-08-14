@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterNetInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AnalyticDB</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }

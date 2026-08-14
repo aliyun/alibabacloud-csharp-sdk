@@ -1,3 +1,7 @@
+2026-08-14 Version: 5.0.13
+- Update API DescribeAuditLogRecords: add request parameters ProcessId.
+
+
 2026-05-15 Version: 5.0.12
 - Update API ModifyDBClusterShardNumber: add request parameters IsRollback.
 

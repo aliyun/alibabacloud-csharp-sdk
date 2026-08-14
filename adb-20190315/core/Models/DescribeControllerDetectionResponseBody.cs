@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU increase detection</para>
+            /// <para>CPU spike detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

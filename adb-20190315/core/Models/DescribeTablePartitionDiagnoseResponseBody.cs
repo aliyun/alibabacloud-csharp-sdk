@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>The ID of the cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-bp1xxxxxxxx47</para>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A total of 10 tables have an improper partition field</para>
+            /// <para>A total of 10 tables have an improper partition field.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Improper Partition Field Diagnosis</para>
+            /// <para>Table partition rationality check</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The information about inappropriate partitions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>202005,202006</para>
+            /// <para>[20210110, 20210113,20210123]</para>
             /// </summary>
             [NameInMap("PartitionDetail")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The number of partitions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>34</para>
             /// </summary>
             [NameInMap("PartitionNumber")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_table</para>
+            /// <para>user</para>
             /// </summary>
             [NameInMap("TableName")]
             [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>34</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
