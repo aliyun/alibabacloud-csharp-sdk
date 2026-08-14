@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors> PodMonitors { get; set; }
         public class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors : TeaModel {
             /// <summary>
-            /// <para>The name of the add-on.</para>
+            /// <para>The addon name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-ecs</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>The name of the add-on release.</para>
+            /// <para>The addon release name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-2345678</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>The version of the add-on.</para>
+            /// <para>The addon version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>The YAML configuration.</para>
+            /// <para>The configuration YAML.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: xxxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The enabling status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnableStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the YAML file is encrypted.</para>
+            /// <para>The encrypted YAML.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YXBpVmVyc2lvbjogeHh4eHgK</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD8BA7D6-995D-578D-9941-78B0FECD14B5</para>

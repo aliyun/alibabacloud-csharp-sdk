@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetIntegrationPolicyResponseBodyPolicy Policy { get; set; }
         public class GetIntegrationPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
+            /// <para>The names of all components installed in this policy.</para>
+            /// </summary>
+            [NameInMap("addonNames")]
+            [Validation(Required=false)]
+            public List<string> AddonNames { get; set; }
+
+            /// <summary>
             /// <para>The bound resource information.</para>
             /// </summary>
             [NameInMap("bindResource")]
@@ -163,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<string> EntityTypes { get; set; }
 
                     /// <summary>
-                    /// <para>The list of field rules.</para>
+                    /// <para>The list of property rules.</para>
                     /// </summary>
                     [NameInMap("fieldRules")]
                     [Validation(Required=false)]
@@ -180,7 +187,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>The field values.</para>
+                        /// <para>The field content.</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
@@ -326,7 +333,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The query parameter.</para>
+                /// <para>Used for querying.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status: 200 AND totalTime &gt; 0.5</para>

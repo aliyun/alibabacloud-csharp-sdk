@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// <para>The entity IDs used for filtering, separated by commas.</para>
+        /// <para>The entity IDs used for filtering. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eg-1,eg-2,eg-3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EntityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The region IDs used for filtering, separated by commas.</para>
+        /// <para>The region IDs used for region-based queries. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing,cn-hangzhou</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve more results. You do not need to specify this parameter for the first request. Use the token returned from the previous query for subsequent requests.</para>
+        /// <para>The token used to retrieve more results. You do not need to specify this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mvnX6zqg3P</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for general queries.</para>
+        /// <para>The general query string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

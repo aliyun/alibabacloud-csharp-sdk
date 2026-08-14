@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules> CustomScrapeJobRules { get; set; }
         public class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules : TeaModel {
             /// <summary>
-            /// <para>The add-on name.</para>
+            /// <para>The addon name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-ecs</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>The name of the add-on release.</para>
+            /// <para>The addon release name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-12345678</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>The add-on version.</para>
+            /// <para>The addon version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>The configuration YAML file.</para>
+            /// <para>The configuration YAML.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scrape_cofnigs:</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// <para>The enabled status.</para>
+            /// <para>The enabling status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mini</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnableStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the YAML file is encrypted.</para>
+            /// <para>The encrypted YAML.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? MatchedPodCount { get; set; }
 
             /// <summary>
-            /// <para>The details.</para>
+            /// <para>The detailed information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The details.</para>
+                /// <para>The detailed information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>successful</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The scrape path.</para>
+                /// <para>The metrics path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/metrics</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>

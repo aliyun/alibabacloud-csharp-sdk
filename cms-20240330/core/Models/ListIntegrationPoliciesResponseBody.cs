@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page size.
-        /// Default value:
-        ///     50
-        /// Maximum value:
-        ///     50.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,6 +36,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<ListIntegrationPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListIntegrationPoliciesResponseBodyPolicies : TeaModel {
+            /// <summary>
+            /// <para>The names of all components installed in this policy.</para>
+            /// </summary>
+            [NameInMap("addonNames")]
+            [Validation(Required=false)]
+            public List<string> AddonNames { get; set; }
+
             /// <summary>
             /// <para>The bound resource information.</para>
             /// </summary>
@@ -204,7 +207,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>The field values. Multiple values are separated by commas.</para>
+                        /// <para>The field values. Multiple values are separated by commas (,).</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
@@ -491,7 +494,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The number of sub-releases.</para>
+            /// <para>The sub-release count.</para>
             /// </summary>
             [NameInMap("subAddonRelease")]
             [Validation(Required=false)]
@@ -508,7 +511,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? Ready { get; set; }
 
                 /// <summary>
-                /// <para>The total number of rules.</para>
+                /// <para>The number of rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>278</para>

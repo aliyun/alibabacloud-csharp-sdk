@@ -17054,7 +17054,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
+        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17077,6 +17077,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17108,7 +17112,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
+        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17131,6 +17135,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17162,7 +17170,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
+        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17181,7 +17189,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
+        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17366,12 +17374,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>Retrieves the PodMonitor resources of an access center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17394,6 +17402,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17425,12 +17437,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>Retrieves the PodMonitor resources of an access center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17453,6 +17465,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17484,12 +17500,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>Retrieves the PodMonitor resources of an access center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17508,12 +17524,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>Retrieves the PodMonitor resources of an access center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
+        /// <para>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17532,7 +17548,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
+        /// <para>Retrieves the ServiceMonitor information of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17555,6 +17571,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17586,7 +17606,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
+        /// <para>Retrieves the ServiceMonitor information of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17609,6 +17629,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonReleaseName))
             {
                 query["addonReleaseName"] = request.AddonReleaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollectorReleaseName))
+            {
+                query["collectorReleaseName"] = request.CollectorReleaseName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptYaml))
             {
@@ -17640,7 +17664,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
+        /// <para>Retrieves the ServiceMonitor information of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17659,7 +17683,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
+        /// <para>Retrieves the ServiceMonitor information of a Provisioning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
