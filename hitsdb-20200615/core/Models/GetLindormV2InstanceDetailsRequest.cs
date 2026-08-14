@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormV2InstanceDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ts-xxxxxxxxxxxxxxxxx</para>
+        /// <para>ld-bp1mq0tdzbx1m****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

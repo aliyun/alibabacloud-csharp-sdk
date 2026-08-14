@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The regions supported by Lindorm.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -18,16 +18,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
             /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The endpoint for the region.</para>
+            /// <para>The endpoint of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hitsdb.aliyuncs.com</para>
+            /// <para>hitsdb.cn-hangzhou.aliyuncs.com</para>
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instances you want to associate tags with are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs.</para>
+        /// <para>A list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>The type of the resource. Set the value to <b>INSTANCE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to associate with the resource.</para>
+        /// <para>A list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that you want to associate with the resource.</para>
+            /// <para>The tag key.</para>
             /// <remarks>
-            /// <para>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</para>
+            /// <para>You can specify the keys for multiple tags. For example, the Key in the first pair is the key for the first tag, and the Key in the second pair is the key for the second tag.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that you want to associate with the resource.</para>
+            /// <para>The tag value.</para>
             /// <remarks>
-            /// <para>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</para>
+            /// <para>You can specify the values for multiple tags. For example, the Value in the first pair is the value for the first tag, and the Value in the second pair is the value for the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

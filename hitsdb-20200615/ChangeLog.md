@@ -1,3 +1,14 @@
+2026-08-14 Version: 5.4.0
+- Support API GetComputeEngineJobDetail.
+- Support API GetComputeEngineJobLog.
+- Support API ListComputeEngineJob.
+- Update API CheckLdpsColumnarIndexStatus: add response parameters Body.Mode.
+- Update API GetLindormInstance: add response parameters Body.SingleZoneRiskAlert.
+- Update API GetLindormV2Instance: add response parameters Body.SingleZoneRiskAlert.
+- Update API UpdateLindormInstanceAttribute: add request parameters DispositionType.
+- Update API UpdateLindormInstanceAttribute: add request parameters PlannedCompletionDate.
+
+
 2026-05-15 Version: 5.3.1
 - Update API CreateAdditionalVpcLink: add request parameters AdditionalAliBid.
 - Update API CreateAdditionalVpcLink: add request parameters AdditionalAliUid.

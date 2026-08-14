@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<GetLindormInstanceListResponseBodyInstanceList> InstanceList { get; set; }
         public class GetLindormInstanceListResponseBodyInstanceList : TeaModel {
             /// <summary>
-            /// <para>The 16-digit AliUid of the Alibaba Cloud account that owns the instance.</para>
+            /// <para>The 16-digit ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>164901546557****</para>
@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            /// <summary>
+            /// <para>The reason why the instance failed to be created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Resource is not enough</para>
+            /// </summary>
             [NameInMap("CreateErrorCode")]
             [Validation(Required=false)]
             public string CreateErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance is created. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp of when the instance was created. The value is the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631772842000</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public long? CreateMilliseconds { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance is created.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-09-16 14:13:13</para>
@@ -51,9 +57,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the column storage engine is enabled, returning:</para>
+            /// <para>Indicates whether the column store engine is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. - <b>false</b>: Not enabled.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,10 +73,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableColumn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether LDPS is activated for the instance. Valid values:</para>
+            /// <para>Indicates whether the compute engine is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: LDPS is activated for the instance.</description></item>
-            /// <item><description><b>false</b>: LDPS is not activated for the instance.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,9 +89,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableCompute { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the LTS engine is enabled, returning:</para>
+            /// <para>Indicates whether the LTS engine is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. - <b>false</b>: Not enabled.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,9 +105,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableLts { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message engine is enabled, returning:</para>
+            /// <para>Indicates whether the messaging engine is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. - <b>false</b>: Not enabled.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,8 +121,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableMessage { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the table 3.0 storage engine is enabled, returning:</para>
-            /// <para>true: Enabled. - false: Not enabled.</para>
+            /// <para>Indicates whether the LindormTable 3.0 engine is enabled. Valid values:</para>
+            /// <para>true: Enabled.
+            /// false: Not enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -115,10 +133,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableRow { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Lindorm streaming engine is activated for the instance. Valid values:</para>
+            /// <para>Indicates whether the stream engine is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The Lindorm streaming engine is activated for the instance.</description></item>
-            /// <item><description><b>false</b>: The Lindorm streaming engine is not activated for the instance.</description></item>
+            /// <item><description><para><b>true</b>: The stream engine is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The stream engine is not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,9 +149,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableStream { get; set; }
 
             /// <summary>
-            /// <para>Whether the vector engine is enabled, returns:</para>
+            /// <para>Indicates whether the vector engine is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. - <b>false</b>: Not enabled.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,15 +165,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? EnableVector { get; set; }
 
             /// <summary>
-            /// <para>The engine supported by the instance. The engines are indicated by different numbers:</para>
+            /// <para>The types of engines supported by the instance. The value of this parameter is the sum of the values of the supported engines.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: LindormSearch.</description></item>
-            /// <item><description><b>2</b>: LindormTSDB.</description></item>
-            /// <item><description><b>4</b>: LindormTable.</description></item>
-            /// <item><description><b>8</b>: LindormDFS.</description></item>
+            /// <item><description><para><b>1</b>: search engine.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: LindormTSDB.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: LindormTable.</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>: file engine.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if the value of this parameter is 15, which is the sum of 1, 2, 4, and 8, the instance supports all four engines. If the value of this parameter is 6, which is the sum of 2 and 4, the instance supports LindormTSDB and LindormTable.</para>
+            /// <para>For example, a value of 15 (8 + 4 + 2 + 1) indicates that the instance supports the file engine, LindormTable, LindormTSDB, and the search engine. A value of 6 (4 + 2) indicates that the instance supports LindormTSDB and LindormTable.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -161,9 +188,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires.</para>
+            /// <para>The expiration time of the instance.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if the billing method of the instance is subscription.</para>
+            /// <para>This parameter is returned only for subscription instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -174,7 +201,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp of when the instance expires. The value is the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650902400000</para>
@@ -184,7 +211,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public long? ExpiredMilliseconds { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -194,7 +221,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string InstanceAlias { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ld-bp17pwu1541ia****</para>
@@ -206,27 +233,48 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
-            /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
-            /// <item><description><b>COLD_EXPANDING</b>: The Capacity storage of the instance is being scaled up.</description></item>
-            /// <item><description><b>MINOR_VERSION_TRANSING</b>: The minor version of the instance is being updated.</description></item>
-            /// <item><description><b>RESIZING</b>: The nodes in the instance are being scaled up.</description></item>
-            /// <item><description><b>SHRINKING</b>: The nodes in the instance are being scaled down.</description></item>
-            /// <item><description><b>CLASS_CHANGING</b>: The specification of the instance is being changed.</description></item>
-            /// <item><description><b>SSL_SWITCHING: SSL</b>: The SSL configurations of the instance are being changed.</description></item>
-            /// <item><description><b>CDC_OPENING</b>: Data subscription is being enabled for the instance.</description></item>
-            /// <item><description><b>TRANSFER</b>: The data of the instance is being transferred.</description></item>
-            /// <item><description><b>DATABASE_TRANSFER</b>: The data of the instance is being transferred to databases.</description></item>
-            /// <item><description><b>GUARD_CREATING</b>: A disaster recovery instance is being created.</description></item>
-            /// <item><description><b>BACKUP_RECOVERING</b>: The data of the instance is being restored from a backup.</description></item>
-            /// <item><description><b>DATABASE_IMPORTING</b>: Data is being imported to the instance.</description></item>
-            /// <item><description><b>NET_MODIFYING</b>: The network configurations of the instance are being changed.</description></item>
-            /// <item><description><b>NET_SWITCHING</b>: The network of the instance is being switched between a virtual private cloud (VPC) and the Internet.</description></item>
-            /// <item><description><b>NET_CREATING</b>: The connection to the instance is being created.</description></item>
-            /// <item><description><b>NET_DELETING</b>: The connection to the instance is being deleted.</description></item>
-            /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
-            /// <item><description><b>RESTARTING</b>: The instance is restarting.</description></item>
-            /// <item><description><b>LOCKED</b>: The instance is locked because it expires.</description></item>
+            /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>COLD_EXPANDING</b>: The capacity of the storage-optimized instance is being expanded.</para>
+            /// </description></item>
+            /// <item><description><para><b>MINOR_VERSION_TRANSING</b>: The minor version of the instance is being upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><b>RESIZING</b>: The instance is scaling up.</para>
+            /// </description></item>
+            /// <item><description><para><b>SHRINKING</b>: The instance is scaling down.</para>
+            /// </description></item>
+            /// <item><description><para><b>CLASS_CHANGING</b>: The instance class is being changed.</para>
+            /// </description></item>
+            /// <item><description><para><b>SSL_SWITCHING</b>: The SSL certificate is being changed.</para>
+            /// </description></item>
+            /// <item><description><para><b>CDC_OPENING</b>: The data subscription feature is being enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>TRANSFER</b>: Data migration is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>DATABASE_TRANSFER</b>: Data is being migrated to the database.</para>
+            /// </description></item>
+            /// <item><description><para><b>GUARD_CREATING</b>: A disaster recovery instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>BACKUP_RECOVERING</b>: A backup is being restored.</para>
+            /// </description></item>
+            /// <item><description><para><b>DATABASE_IMPORTING</b>: Data is being imported.</para>
+            /// </description></item>
+            /// <item><description><para><b>NET_MODIFYING</b>: The network settings are being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>NET_SWITCHING</b>: The network type is being switched.</para>
+            /// </description></item>
+            /// <item><description><para><b>NET_CREATING</b>: A network connection is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>NET_DELETING</b>: A network connection is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>RESTARTING</b>: The instance is being restarted.</para>
+            /// </description></item>
+            /// <item><description><para><b>LOCKED</b>: The instance has expired and is locked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -259,8 +307,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PREPAY</b>: subscription.</description></item>
-            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+            /// <item><description><para><b>PREPAY</b>: subscription.</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -271,7 +321,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -281,7 +331,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the instance belongs.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzledqeat****</para>
@@ -291,12 +341,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The series of the instance. Valid values:</para>
+            /// <para>The type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>lindorm</b>: The instance is a Lindorm instance.</description></item>
-            /// <item><description><b>serverless_lindorm</b>: The instance is a Lindorm Serverless instance.</description></item>
-            /// <item><description><b>lindorm_standalone</b>: The instance is a single-node Lindorm instance.</description></item>
-            /// <item><description><b>lts</b>: The instance is an LTS instance.</description></item>
+            /// <item><description><para><b>lindorm</b>: a Lindorm instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>serverless_lindorm</b>: a Lindorm Serverless instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>lindorm_standalone</b>: a Lindorm standalone instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>lts</b>: the Lindorm Tunnel Service type.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -307,7 +361,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The list of tags associated with the specified instances.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -336,7 +390,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             }
 
             /// <summary>
-            /// <para>The ID of the VPC in which the instance is deployed.</para>
+            /// <para>The ID of the virtual private cloud (VPC) in which the instance is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1n3i15v90el48nx****</para>
@@ -346,7 +400,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone in which the instance is created.</para>
+            /// <para>The ID of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
@@ -358,7 +412,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The number of returned pages.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -368,7 +422,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that are returned on each page.</para>
+        /// <para>The number of entries returned on the page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -388,7 +442,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>The total number of instances found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

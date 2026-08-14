@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpgradeLindormInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111111111111111</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A7D4F9D-AA26-4E15-A2B1-3E4792C6****</para>

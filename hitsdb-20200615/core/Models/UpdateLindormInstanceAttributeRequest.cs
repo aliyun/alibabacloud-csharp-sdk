@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormInstanceAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable deletion protection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -17,7 +25,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        [NameInMap("DispositionType")]
+        [Validation(Required=false)]
+        public string DispositionType { get; set; }
+
         /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lindorm-test</para>
         /// </summary>
@@ -26,6 +40,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +57,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-10-01</para>
+        /// </summary>
+        [NameInMap("PlannedCompletionDate")]
+        [Validation(Required=false)]
+        public string PlannedCompletionDate { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -8,22 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
+    public class GetComputeEngineJobDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language to use for the region name (LocalName) in the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>zh-CN</b>: Chinese. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>en-US</b>: English.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>en-US</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("AcceptLanguage")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

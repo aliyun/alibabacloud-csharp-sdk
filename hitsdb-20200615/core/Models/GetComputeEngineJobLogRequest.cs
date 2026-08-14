@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetLindormInstanceEngineListRequest : TeaModel {
+    public class GetComputeEngineJobLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ld-bp1nq34mv3smk****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -29,11 +32,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

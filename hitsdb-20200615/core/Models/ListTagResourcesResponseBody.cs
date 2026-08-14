@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// <remarks>
-        /// <para>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</para>
+        /// <para>If not all results are returned in a query, the response includes this parameter. You can use the value of this parameter to start the next query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05CB115C-91CB-529F-9098-50C1F6CB3BD3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource, which is the ID of the instance.</para>
+            /// <para>The resource ID, which is the instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ld-bp17j28j2y7pm****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resources. The returned value is fixed to <b>ALIYUN::HITSDB::INSTANCE</b>.</para>
+            /// <para>The resource type. The value is fixed to <b>ALIYUN::HITSDB::INSTANCE</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::HITSDB::INSTANCE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of the tag associated with the instance.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag associated with the instance.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.8</para>

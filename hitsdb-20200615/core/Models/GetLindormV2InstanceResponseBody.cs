@@ -235,6 +235,28 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
+        [NameInMap("SingleZoneRiskAlert")]
+        [Validation(Required=false)]
+        public GetLindormV2InstanceResponseBodySingleZoneRiskAlert SingleZoneRiskAlert { get; set; }
+        public class GetLindormV2InstanceResponseBodySingleZoneRiskAlert : TeaModel {
+            [NameInMap("ConfirmDate")]
+            [Validation(Required=false)]
+            public string ConfirmDate { get; set; }
+
+            [NameInMap("DispositionType")]
+            [Validation(Required=false)]
+            public string DispositionType { get; set; }
+
+            [NameInMap("NeedAlert")]
+            [Validation(Required=false)]
+            public string NeedAlert { get; set; }
+
+            [NameInMap("PlannedCompletionDate")]
+            [Validation(Required=false)]
+            public string PlannedCompletionDate { get; set; }
+
+        }
+
         [NameInMap("StandbyVSwitchId")]
         [Validation(Required=false)]
         public string StandbyVSwitchId { get; set; }

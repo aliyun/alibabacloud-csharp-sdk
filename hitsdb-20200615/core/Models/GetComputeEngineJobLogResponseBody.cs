@@ -8,21 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class CheckLdpsColumnarIndexStatusResponseBody : TeaModel {
+    public class GetComputeEngineJobLogResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
-        /// <summary>
-        /// <para>Columnar index mode. Valid values: LAKE and OLAP.</para>
-        /// </summary>
-        [NameInMap("Mode")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
+        public string JobId { get; set; }
 
-        [NameInMap("Opened")]
+        [NameInMap("Logs")]
         [Validation(Required=false)]
-        public bool? Opened { get; set; }
+        public List<string> Logs { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

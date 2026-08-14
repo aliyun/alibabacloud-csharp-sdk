@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ModifyInstancePayTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why the access was denied.</para>
+        /// <para>The detailed reason why the access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ld-bp1z3506imz2f****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>211662251220224</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>587BCA54-50DA-4885-ADE9-80A848339151</para>

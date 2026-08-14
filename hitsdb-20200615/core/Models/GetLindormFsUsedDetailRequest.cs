@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormFsUsedDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</para>
+        /// <para>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> API to obtain it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> API to obtain it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

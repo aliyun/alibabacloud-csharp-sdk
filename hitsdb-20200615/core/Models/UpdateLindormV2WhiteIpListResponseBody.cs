@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormV2WhiteIpListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Details about a failed permission check.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0A7153E4-8354-497E-87E5-5D0EBEF5AEB1</para>
         /// </summary>

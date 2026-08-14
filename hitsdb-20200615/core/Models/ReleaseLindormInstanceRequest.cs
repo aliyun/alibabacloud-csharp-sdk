@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ReleaseLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to release the instance immediately. If you set this parameter to false, data in the released instance is retained for seven days before it is completely deleted. If you set this parameter to true, data in the released instance is immediately deleted. The default value is false.</para>
+        /// <para>Specifies whether to release the instance immediately. If set to true, the instance and its data are deleted immediately. If set to false (the default), the instance is retained for seven days before being permanently deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? Immediately { get; set; }
 
         /// <summary>
-        /// <para>Instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> interface.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormV2InstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the access denied error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ld-bp1478w1603****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>240136741090345</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</para>
         /// </summary>

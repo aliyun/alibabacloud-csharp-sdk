@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class CreateLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the vSwitch that is specified for the zone for the coordinate node of the instance. The vSwitch must be deployed in the zone specified by the ArbiterZoneId parameter. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The ID of the VSwitch for the arbiter zone of the multi-zone instance. The VSwitch must be in the zone specified by <c>ArbiterZoneId</c>. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6664pqjawb87k36****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArbiterVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone for the coordinate node of the instance. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The ID of the arbiter zone for the multi-zone instance. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-g</para>
@@ -30,12 +30,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArbiterZoneId { get; set; }
 
         /// <summary>
-        /// <para>The architecture of the instance. Valid values:</para>
+        /// <para>The deployment architecture of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1.0</b>: The instance that you want to create is a single-zone instance.</description></item>
-        /// <item><description><b>2.0</b>: The instance that you want to create is a multi-zone instance.</description></item>
+        /// <item><description><para><b>1.0</b>: Single-zone deployment.</para>
+        /// </description></item>
+        /// <item><description><para><b>2.0</b>: Multi-zone deployment.</para>
+        /// </description></item>
         /// </list>
-        /// <para>By default, the value of this parameter is 1.0. To create a multi-zone instance, set this parameter to 2.0. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The default value is 1.0. To create a multi-zone instance, set this parameter to 2.0. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -45,10 +47,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArchVersion { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration. Unit: month.</para>
-        /// <para>Valid values: <b>1</b> to <b>12</b>.</para>
+        /// <para>The auto-renewal duration, in months.</para>
+        /// <para>The value of this parameter ranges from <b>1</b> to <b>12</b>.</para>
         /// <remarks>
-        /// <para> This parameter is available only when the <b>AutoRenewal</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter takes effect only when <b>AutoRenewal</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,14 +61,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string AutoRenewDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the Subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
+        /// <item><description><para><b>true</b>: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Auto-renewal is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is available only when the <b>PayType</b> parameter is set to <b>PREPAY</b>.</para>
+        /// <para>This parameter takes effect only when the <b>PayType</b> parameter is set to <b>PREPAY</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The cold storage capacity of the instance. By default, if you leave this parameter unspecified, cold storage is not enabled for the instance. Unit: GB. Valid values: <b>800</b> to <b>1000000</b>.</para>
+        /// <para>The cold storage capacity of the instance, in GB. The value of this parameter ranges from <b>800</b> to <b>1,000,000</b>. If you do not specify this parameter, cold storage is not enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? ColdStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the disk of a single core node. Valid values: 400 to 64000. Unit: GB. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The storage capacity of a single core node in the multi-zone instance. Unit: GB. The value of this parameter ranges from 400 to 64,000. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -97,35 +101,58 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? CoreSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.</para>
-        /// <para>Valid values when DiskCategory is set to local_ssd_pro (i3 instance types support only subscription instances):</para>
+        /// <para>The node specification for an instance that uses local disks.</para>
+        /// <para>If the storage type is <b>local_ssd_pro</b>, valid values include the following: Note that I3-family specifications are available only for Subscription instances.</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.i4.xlarge</b>: Each node has 4 CPU cores and 32 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i4.2xlarge</b>: Each node has 8 CPU cores and 64 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i4.4xlarge</b>: Each node has 16 CPU cores and 128 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i4.8xlarge</b>: Each node has 32 CPU cores and 256 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i3.xlarge</b>: Each node has 4 CPU cores and 32 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i3.2xlarge</b>: Each node has 8 CPU cores and 64 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i3.4xlarge</b>: Each node has 16 CPU cores and 128 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i3.8xlarge</b>: Each node has 32 CPU cores and 256 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i2.xlarge</b>: Each node has 4 CPU cores and 32 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i2.2xlarge</b>: Each node has 8 CPU cores and 64 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i2.4xlarge</b>: Each node has 16 CPU cores and 128 GB of memory.</description></item>
-        /// <item><description><b>lindorm.i2.8xlarge</b>: Each node has 32 CPU cores and 256 GB of memory.</description></item>
+        /// <item><description><para><b>lindorm.i4.xlarge</b>: 4 cores, 32 GB memory (I4).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i4.2xlarge</b>: 8 cores, 64 GB memory (I4).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i4.4xlarge</b>: 16 cores, 128 GB memory (I4).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i4.8xlarge</b>: 32 cores, 256 GB memory (I4).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i3.xlarge</b>: 4 cores, 32 GB memory (I3).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i3.2xlarge</b>: 8 cores, 64 GB memory (I3).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i3.4xlarge</b>: 16 cores, 128 GB memory (I3).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i3.8xlarge</b>: 32 cores, 256 GB memory (I3).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i2.xlarge</b>: 4 cores, 32 GB memory (I2).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i2.2xlarge</b>: 8 cores, 64 GB memory (I2).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i2.4xlarge</b>: 16 cores, 128 GB memory (I2).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.i2.8xlarge</b>: 32 cores, 256 GB memory (I2).</para>
+        /// </description></item>
         /// </list>
-        /// <para>Valid values when DiskCategory is set to local_hhd_pro:</para>
+        /// <para>If the storage type is <b>local_hdd_pro</b>, valid values include:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.sd3c.3xlarge</b>: Each node has 14 CPU cores and 56 GB of memory.</description></item>
-        /// <item><description><b>lindorm.sd3c.7xlarge</b>: Each node has 28 CPU cores and 112 GB of memory.</description></item>
-        /// <item><description><b>lindorm.sd3c.14xlarge</b>: Each node has 56 CPU cores and 224 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d2c.6xlarge</b>: Each node has 24 CPU cores and 88 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d2c.12xlarge</b>: Each node has 48 CPU cores and 176 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d2c.24xlarge</b>: Each node has 96 CPU cores and 352 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d2s.5xlarge</b>: Each node has 20 CPU cores and 88 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d2s.10xlarge</b>: Each node has 40 CPU cores and 176 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d1.2xlarge</b>: Each node has 8 CPU cores and 32 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d1.4xlarge</b>: Each node has 16 CPU cores and 64 GB of memory.</description></item>
-        /// <item><description><b>lindorm.d1.6xlarge</b>: Each node has 24 CPU cores and 96 GB of memory.</description></item>
+        /// <item><description><para><b>lindorm.sd3c.3xlarge</b>: 14 cores, 56 GB memory (D3C PRO).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.sd3c.7xlarge</b>: 28 cores, 112 GB memory (D3C PRO).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.sd3c.14xlarge</b>: 56 cores, 224 GB memory (D3C PRO).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d2c.6xlarge</b>: 24 cores, 88 GB memory (D2C).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d2c.12xlarge</b>: 48 cores, 176 GB memory (D2C).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d2c.24xlarge</b>: 96 cores, 352 GB memory (D2C).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d2s.5xlarge</b>: 20 cores, 88 GB memory (D2S).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d2s.10xlarge</b>: 40 cores, 176 GB memory (D2S).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d1.2xlarge</b>: 8 cores, 32 GB memory (D1NE).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d1.4xlarge</b>: 16 cores, 64 GB memory (D1NE).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.d1.6xlarge</b>: 24 cores, 96 GB memory (D1NE).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,11 +165,20 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_efficiency</b>: This instance uses the Standard type of storage.</description></item>
-        /// <item><description><b>cloud_ssd</b>: This instance uses the Performance type of storage.</description></item>
-        /// <item><description><b>capacity_cloud_storage</b>: This instance uses the Capacity type of storage.</description></item>
-        /// <item><description><b>local_ssd_pro</b>: This instance uses local SSDs.</description></item>
-        /// <item><description><b>local_hdd_pro</b>: This instance uses local HDDs.</description></item>
+        /// <item><description><para><b>cloud_efficiency</b>: Efficiency cloud disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_ssd</b>: Performance cloud disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd</b>: Enhanced SSD (ESSD).</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd_pl0</b>: ESSD PL0.</para>
+        /// </description></item>
+        /// <item><description><para><b>capacity_cloud_storage</b>: Capacity-optimized cloud storage. (Not available for multi-zone instances.)</para>
+        /// </description></item>
+        /// <item><description><para><b>local_ssd_pro</b>: Local SSD. (Not available for multi-zone instances.)</para>
+        /// </description></item>
+        /// <item><description><para><b>local_hdd_pro</b>: Local HDD. (Not available for multi-zone instances.)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -154,13 +190,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</para>
+        /// <para>The subscription duration for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If PricingCycle is set to <b>Month</b>, set this parameter to an integer that ranges from <b>1</b> to <b>9</b>.</description></item>
-        /// <item><description>If PricingCycle is set to <b>Year</b>, set this parameter to an integer that ranges from <b>1</b> to <b>3</b>.</description></item>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Month</b>, the value can range from <b>1</b> to <b>9</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Year</b>, the value can range from <b>1</b> to <b>3</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available and required when the PayType parameter is set to <b>PREPAY</b>.</para>
+        /// <para>This parameter is required if you set <b>PayType</b> to <b>PREPAY</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,10 +209,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>The number of LindormDFS nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</para>
+        /// <para>The number of nodes in the file engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the PayType parameter is set to <b>PREPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>60</b>.</description></item>
-        /// <item><description>If the PayType parameter is set to <b>POSTPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>8</b>.</description></item>
+        /// <item><description><para>For a Subscription instance, the value of this parameter ranges from <b>0</b> to <b>60</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For a Pay-As-You-Go instance, the value of this parameter ranges from <b>0</b> to <b>8</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -185,7 +225,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? FilestoreNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of LindormDFS nodes in the instance. Set the value of this parameter to <b>lindorm.c.xlarge</b>, which indicates that each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</para>
+        /// <para>The specification of the file engine nodes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>lindorm.c.xlarge</b>: 4 cores, 8 GB memory (standard).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.c.xlarge</para>
@@ -195,7 +238,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FilestoreSpec { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance that you want to create.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm_test</para>
@@ -205,7 +248,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance you want to create. Unit: GB.</para>
+        /// <para>The storage capacity of the instance, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>480</para>
@@ -215,12 +258,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The number of LindormTable nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</para>
-        /// <list type="bullet">
-        /// <item><description>If the PayType parameter is set to <b>PREPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>90</b>.</description></item>
-        /// <item><description>If the PayType parameter is set to <b>POSTPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>400</b>.</description></item>
-        /// </list>
-        /// <para><b>This parameter is required if you want to create a multi-zone instance</b>.  The valid values of this parameter range from 4 to 400 if you want to create a multi-zone instance.</para>
+        /// <para>The number of nodes in the wide table engine.</para>
+        /// <para>For a single-zone instance, the value of this parameter ranges from <b>0</b> to <b>90</b>.</para>
+        /// <para><b>This parameter is required for multi-zone instances.</b> For an instance that uses cloud disks, the value ranges from <b>4</b> to <b>400</b>. For an instance that uses local disks, the value ranges from <b>6</b> to <b>400</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -230,12 +270,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LindormNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of LindormTable nodes in the instance. Valid values:</para>
+        /// <para>The specification of the wide table engine nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.c.xlarge</b>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.2xlarge</b>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.4xlarge</b>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.8xlarge</b>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores, 128 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -246,12 +296,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LindormSpec { get; set; }
 
         /// <summary>
-        /// <para>The disk type of the log nodes. Valid values:</para>
+        /// <para>The storage type of the log nodes for the multi-zone instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_efficiency</b>: This instance uses the Standard type of storage.</description></item>
-        /// <item><description><b>cloud_ssd</b>: This instance uses the Performance type of storage.</description></item>
+        /// <item><description><para><b>cloud_efficiency</b>: Efficiency cloud disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_ssd</b>: Performance cloud disk.</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para><b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -261,7 +313,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LogDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The number of the log nodes. Valid values: 4 to 400. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The number of log nodes for the multi-zone instance. The value of this parameter ranges from 4 to 400. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -271,7 +323,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LogNum { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the disk of a single log node. Valid values: 400 to 64000. Unit: GB. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The storage capacity of a single log node in the multi-zone instance. Unit: GB. The value of this parameter ranges from 400 to 64,000. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -281,12 +333,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LogSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The type of the log nodes. Valid values:</para>
+        /// <para>The specification of the log nodes for the multi-zone instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.sn1.xlarge</b>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.sn1.2xlarge</b>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.sn1.large</b>: 4 cores, 8 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.sn1.2xlarge</b>: 8 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para><b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.sn1.large</para>
@@ -296,7 +350,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LogSpec { get; set; }
 
         /// <summary>
-        /// <para>The number of LTS nodes in the instance. Valid values: <b>0</b> to <b>60</b>.</para>
+        /// <para>The number of nodes in the LTS engine. The value of this parameter ranges from <b>0</b> to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -306,16 +360,24 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LtsNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of LTS nodes in the instance. Valid values:</para>
+        /// <para>The specification of the LTS engine nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.c.xlarge</b>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.xlarge</b>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.2xlarge</b>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.2xlarge</b>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.4xlarge</b>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.4xlarge</b>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.8xlarge</b>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.8xlarge</b>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.c.xlarge</b>: 4 cores, 8 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores, 128 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -326,21 +388,32 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LtsSpec { get; set; }
 
         /// <summary>
-        /// <para>The combinations of zones that are available for the multi-zone instance. You can go to the purchase page of Lindorm to view the supported zone combinations.</para>
+        /// <para>The combination of zones for the multi-zone instance. For a list of supported combinations, refer to the instance purchase page.</para>
         /// <list type="bullet">
-        /// <item><description><b>ap-southeast-5abc-aliyun</b>: Zone A+B+C in the Indonesia (Jakarta) region.</description></item>
-        /// <item><description><b>cn-hangzhou-ehi-aliyun</b>: Zone E+H+I in the China (Hangzhou) region.</description></item>
-        /// <item><description><b>cn-beijing-acd-aliyun</b>: Zone A+C+D in the China (Beijing) region.</description></item>
-        /// <item><description><b>ap-southeast-1-abc-aliyun</b>: Zone A+B+C in the Singapore region.</description></item>
-        /// <item><description><b>cn-zhangjiakou-abc-aliyun</b>: Zone A+B+C in the China (Zhangjiakou) region.</description></item>
-        /// <item><description><b>cn-shanghai-efg-aliyun</b>: Zone E+F+G in the China (Shanghai) region.</description></item>
-        /// <item><description><b>cn-shanghai-abd-aliyun</b>: Zone A+B+D in the China (Shanghai) region.</description></item>
-        /// <item><description><b>cn-hangzhou-bef-aliyun</b>: Zone B+E+F in the China (Hangzhou) region.</description></item>
-        /// <item><description><b>cn-hangzhou-bce-aliyun</b>: Zone B+C+E in the China (Hangzhou) region.</description></item>
-        /// <item><description><b>cn-beijing-fgh-aliyun</b>: Zone F+G+H in the China (Beijing) region.</description></item>
-        /// <item><description><b>cn-shenzhen-abc-aliyun</b>: Zone A+B+C in the China (Shenzhen) region.</description></item>
+        /// <item><description><para><b>ap-southeast-5abc-aliyun</b>: Indonesia (Jakarta) A+B+C.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-ehi-aliyun</b>: China (Hangzhou) E+H+I.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-beijing-acd-aliyun</b>: China (Beijing) A+C+D.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1-abc-aliyun</b>: Singapore A+B+C.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-zhangjiakou-abc-aliyun</b>: China (Zhangjiakou) A+B+C.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai-efg-aliyun</b>: China (Shanghai) E+F+G.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai-abd-aliyun</b>: China (Shanghai) A+B+D.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-bef-aliyun</b>: China (Hangzhou) B+E+F.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-bce-aliyun</b>: China (Hangzhou) B+C+E.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-beijing-fgh-aliyun</b>: China (Beijing) F+G+H.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen-abc-aliyun</b>: China (Shenzhen) A+B+C.</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para><b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-efg-aliyun</para>
@@ -358,10 +431,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance you want to create. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PREPAY</b>: subscription.</description></item>
-        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+        /// <item><description><para><b>PREPAY</b>: Subscription.</para>
+        /// </description></item>
+        /// <item><description><para><b>POSTPAY</b>: Pay-As-You-Go.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -373,13 +448,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The period based on which you are charged for the instance. Valid values:</para>
+        /// <para>The billing cycle for the Subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: You are charged for the instance on a monthly basis.</description></item>
-        /// <item><description><b>Year</b>: You are charged for the instance on a yearly basis.</description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available and required when the PayType parameter is set to <b>PREPAY</b>.</para>
+        /// <para>This parameter is required if you set <b>PayType</b> to <b>PREPAY</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -390,7 +467,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The ID of the VSwitch for the primary zone of the multi-zone instance. The VSwitch must be in the zone specified by <c>PrimaryZoneId</c>. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6fdqa7c0pipnqzq****</para>
@@ -400,7 +477,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PrimaryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Multi-zone instance, availability zone ID of the primary zone. <b>This parameter is required if you need to create a multi-zone instance.</b></para>
+        /// <para>The ID of the primary zone for the multi-zone instance. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-e</para>
@@ -410,7 +487,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PrimaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region in which you can create the instance.</para>
+        /// <para>The ID of the region in which to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -421,7 +498,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the Lindorm instance belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2i6weeb4nfii</para>
@@ -443,7 +520,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of LindormSearch nodes in the instance. Valid values: integers from <b>0</b> to <b>60</b>.</para>
+        /// <para>The number of search engine nodes. The value of this parameter ranges from <b>0</b> to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -453,15 +530,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? SolrNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of the LindormSearch nodes in the instance. Valid values:</para>
+        /// <para>The specification of the search engine nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.g.xlarge</b>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.2xlarge</b>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.2xlarge</b>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.4xlarge</b>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.4xlarge</b>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.c.8xlarge</b>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.8xlarge</b>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores, 128 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -472,7 +556,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SolrSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The ID of the VSwitch for the standby zone of the multi-zone instance. The VSwitch must be in the zone specified by <c>StandbyZoneId</c>. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zec0kcn08cgdtr6****</para>
@@ -482,7 +566,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary zone of the instance. <b>This parameter is required if you want to create a multi-zone instance</b>.</para>
+        /// <para>The ID of the standby zone for the multi-zone instance. <b>This parameter is required for multi-zone instances.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-f</para>
@@ -492,7 +576,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StandbyZoneId { get; set; }
 
         /// <summary>
-        /// <para>The number of LindormStream nodes in the instance. Valid values: integers from <b>0</b> to <b>60</b>.</para>
+        /// <para>The number of nodes in the stream engine. The value of this parameter ranges from <b>0</b> to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -502,12 +586,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? StreamNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of the LindormStream nodes in the instance. Valid values:</para>
+        /// <para>The specification of the stream engine nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.g.xlarge</b>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.2xlarge</b>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.4xlarge</b>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.8xlarge</b>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores, 128 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -518,16 +612,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StreamSpec { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to instances.</para>
+        /// <para>The tags to add to the instance. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateLindormInstanceRequestTag> Tag { get; set; }
         public class CreateLindormInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20.</para>
+            /// <para>The key of a tag.</para>
             /// <remarks>
-            /// <para> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</para>
+            /// <para>You can specify the keys of multiple tags. For example, <c>Tag.1.Key</c> specifies the key of the first tag and <c>Tag.2.Key</c> specifies the key of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -538,9 +632,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20.</para>
+            /// <para>The value of a tag.</para>
             /// <remarks>
-            /// <para> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</para>
+            /// <para>You can specify the values of multiple tags. For example, <c>Tag.1.Value</c> specifies the value of the first tag and <c>Tag.2.Value</c> specifies the value of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -553,10 +647,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The number of the LindormTSDB nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</para>
+        /// <para>The number of nodes in the time series engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the PayType parameter is set to <b>PREPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>24</b>.</description></item>
-        /// <item><description>If the PayType parameter is set to <b>POSTPAY</b>, set this parameter to an integer that ranges from <b>0</b> to <b>32</b>.</description></item>
+        /// <item><description><para>For a Subscription instance, the value of this parameter ranges from <b>0</b> to <b>24</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For a Pay-As-You-Go instance, the value of this parameter ranges from <b>0</b> to <b>32</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -567,12 +663,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? TsdbNum { get; set; }
 
         /// <summary>
-        /// <para>The specification of the LindormTSDB nodes in the instance. Valid values:</para>
+        /// <para>The specification of the time series engine nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm.g.xlarge</b>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.2xlarge</b>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.4xlarge</b>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</description></item>
-        /// <item><description><b>lindorm.g.8xlarge</b>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</description></item>
+        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 cores, 16 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores, 32 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores, 64 GB memory (dedicated).</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores, 128 GB memory (dedicated).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -583,7 +683,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string TsdbSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which you want to create the instance.</para>
+        /// <para>The ID of the VPC where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -594,7 +694,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which you want the instance to connect.</para>
+        /// <para>The ID of the VSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -605,7 +705,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone in which you want to create the instance.</para>
+        /// <para>The ID of the zone where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

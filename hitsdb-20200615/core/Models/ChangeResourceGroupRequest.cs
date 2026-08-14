@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group into which you want to change.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormV2WhiteIpListRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance. You can call the GetLindormV2InstanceList operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain this ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -48,6 +51,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The list of IP whitelist groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WhiteIpGroupList")]
@@ -55,6 +59,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<UpdateLindormV2WhiteIpListRequestWhiteIpGroupList> WhiteIpGroupList { get; set; }
         public class UpdateLindormV2WhiteIpListRequestWhiteIpGroupList : TeaModel {
             /// <summary>
+            /// <para>The name of the IP whitelist group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +70,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>The IP addresses to add to the IP whitelist.</para>
+            /// <remarks>
+            /// <para>The value 127.0.0.1 denies access from all IP addresses. For example, 192.168.0.0/24 allows all IP addresses in that range to access the Lindorm instance. Use a comma (,) to separate multiple IP addresses or CIDR blocks.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query to retrieve more results.</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// <remarks>
-        /// <para>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <b>NextToken</b> value returned for the query to perform the next query.</para>
+        /// <para>Do not specify this parameter for your first request. If the response returns a <b>NextToken</b>, more results are available. To retrieve the next page, include the returned <b>NextToken</b> value in your next request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instances whose tags you want to query are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to get a list of available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs.</para>
+        /// <para>A list of resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -72,16 +72,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The list of tags associated with the instances you want to query.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The keys of the tags associated with the instances you want to query.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
-            /// <para>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</para>
+            /// <para>Each tag is a key-value pair. This parameter specifies the key.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,9 +92,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The values of the tags associated with the instances you want to query.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
-            /// <para>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</para>
+            /// <para>Each tag is a key-value pair. This parameter specifies the value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

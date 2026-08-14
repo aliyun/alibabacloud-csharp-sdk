@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormV2StorageUsageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The detailed reason why the access was denied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</para>
         /// </summary>
@@ -17,11 +19,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The capacity information for each storage medium.</para>
+        /// </summary>
         [NameInMap("CapacityByDiskCategory")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> CapacityByDiskCategory { get; set; }
 
         /// <summary>
+        /// <para>The capacity information for the multi-zone instance.</para>
+        /// <para>{&quot;ZoneId&quot;:{&quot;CapacityByDiskCategory&quot;:{...},&quot;UsageByDiskCategory&quot;:{...}}}</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;cn-hangzhou-i&quot;: {
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public Dictionary<string, object> InstanceStorageZoneMap { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BDDB1954-002B-4249-B2DF-2CDDA0259668</para>
         /// </summary>
@@ -65,6 +75,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The usage information for each storage medium.</para>
+        /// </summary>
         [NameInMap("UsageByDiskCategory")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> UsageByDiskCategory { get; set; }

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances to return on each page.</para>
+        /// <para>The number of entries to return on each page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword contained in the names of Lindorm instances you want to query. Fuzzy queries based on the keyword is supported.</para>
+        /// <para>A keyword for a fuzzy search on instance names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string QueryStr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instances that you want to query is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the instance is located. Call <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek3b63arvg27vi</para>
@@ -80,13 +80,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The series of instances that you want to query. Valid values:</para>
+        /// <para>The type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lindorm</b>: The instance is a single-zone Lindorm instance.</description></item>
-        /// <item><description><b>lindorm_multizone</b>: The instance is a multi-zone Lindorm instance.</description></item>
-        /// <item><description><b>serverless_lindorm</b>: The instance is a Lindorm Serverless instance.</description></item>
-        /// <item><description><b>lindorm_standalone</b>: The instance is a single-node Lindorm instance.</description></item>
-        /// <item><description><b>lts</b>: The instance is an LTS instance.</description></item>
+        /// <item><description><para><b>lindorm</b>: a single-zone Lindorm instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm_multizone</b>: a multi-zone Lindorm instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>serverless_lindorm</b>: a Lindorm Serverless instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>lindorm_standalone</b>: a Lindorm standalone instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>lts</b>: the Lindorm Tunnel Service (LTS) type.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,15 +102,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The engine supported by the instances that you want to query. The engines are indicated by different numbers:</para>
+        /// <para>The type of the engine supported by the instance that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: LindormSearch.</description></item>
-        /// <item><description><b>2</b>: LindormTSDB</description></item>
-        /// <item><description><b>4</b>: LindormTable</description></item>
-        /// <item><description><b>8</b>: LindormDFS</description></item>
+        /// <item><description><para><b>1</b>: search engine.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: LindormTSDB.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: LindormTable.</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: file engine.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is the sum of all numbers that indicate the engines supported by the instance. For example, if you set the value of this parameter to 15, which is the sum of 1, 2, 4, and 8, this operation queries instances that support all four engines. If you set the value of this parameter to 6, which is the sum of 2 and 4, this operation queries instances that support LindormTSDB and LindormTable.</para>
+        /// <para>For example, a value of 15 (8 + 4 + 2 + 1) indicates that the instance supports the file engine, LindormTable, LindormTSDB, and the search engine. A value of 6 (4 + 2) indicates that the instance supports LindormTSDB and LindormTable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,16 +125,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? SupportEngine { get; set; }
 
         /// <summary>
-        /// <para>The list of tags associated with the specified instances.</para>
+        /// <para>A list of tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetLindormInstanceListRequestTag> Tag { get; set; }
         public class GetLindormInstanceListRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the instances you want to query. You can specify 1 to 20 tag keys.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
-            /// <para>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</para>
+            /// <para>You can pass in keys for multiple tags. For example, the Key in the first pair represents the key for the first tag. The Key in the second pair represents the key for the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -136,9 +145,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the instances you want to query. You can specify 1 to 20 tag values.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
-            /// <para>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</para>
+            /// <para>You can provide values for multiple tags. For example, the Value in the first pair is the value for the first tag. The Value in the second pair is the value for the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

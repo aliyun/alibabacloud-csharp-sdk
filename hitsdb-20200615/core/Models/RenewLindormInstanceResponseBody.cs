@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order. You can obtain the order ID on the Orders page of the Expenses and Costs console.</para>
+        /// <para>The ID of the order. You can find the order ID in the Order Management section of Expenses and Costs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>213465921640411</para>

@@ -8,17 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetLindormInstanceEngineListRequest : TeaModel {
+    public class ListComputeEngineJobRequest : TeaModel {
+        [NameInMap("ComputeGroup")]
+        [Validation(Required=false)]
+        public string ComputeGroup { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         /// <summary>
-        /// <para>The ID of the instance. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ld-bp1nq34mv3smk****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("JobName")]
+        [Validation(Required=false)]
+        public string JobName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -28,12 +40,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>The region ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -49,6 +63,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
 
     }
 

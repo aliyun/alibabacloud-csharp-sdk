@@ -19,6 +19,31 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-wulanchabu", "hitsdb.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "hitsdb.cn-beijing.aliyuncs.com"},
+                {"cn-qingdao", "hitsdb.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai", "hitsdb.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "hitsdb.cn-hongkong.aliyuncs.com"},
+                {"cn-zhangjiakou", "hitsdb.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "hitsdb.cn-shenzhen.aliyuncs.com"},
+                {"ap-northeast-1", "hitsdb.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "hitsdb.cn-chengdu.aliyuncs.com"},
+                {"ap-southeast-1", "hitsdb.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "hitsdb.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "hitsdb.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "hitsdb.ap-southeast-5.aliyuncs.com"},
+                {"cn-hangzhou", "hitsdb.cn-hangzhou.aliyuncs.com"},
+                {"us-east-1", "hitsdb.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "hitsdb.eu-west-1.aliyuncs.com"},
+                {"us-west-1", "hitsdb.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "hitsdb.eu-central-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "hitsdb.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "hitsdb.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "hitsdb.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "hitsdb.cn-north-2-gov-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("hitsdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +64,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group to another.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +114,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group to another.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +164,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group to another.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +182,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group to another.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1483,12 +1508,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Lindorm instance.</para>
+        /// <para>Create a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <b>LindormNum</b> (node count) and <b>LindormSpec</b> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify any data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1710,12 +1739,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Lindorm instance.</para>
+        /// <para>Create a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <b>LindormNum</b> (node count) and <b>LindormSpec</b> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify any data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1937,12 +1970,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Lindorm instance.</para>
+        /// <para>Create a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <b>LindormNum</b> (node count) and <b>LindormSpec</b> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify any data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1960,12 +1997,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Lindorm instance.</para>
+        /// <para>Create a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <b>LindormNum</b> (node count) and <b>LindormSpec</b> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify any data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1983,8 +2024,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Lindorm实例</para>
+        /// <para>Creates a Lindorm V2 instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify a DPI engine parameter when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLindormV2InstanceRequest
@@ -2141,8 +2191,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Lindorm实例</para>
+        /// <para>Creates a Lindorm V2 instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify a DPI engine parameter when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLindormV2InstanceRequest
@@ -2299,8 +2358,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Lindorm实例</para>
+        /// <para>Creates a Lindorm V2 instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify a DPI engine parameter when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLindormV2InstanceRequest
@@ -2317,8 +2385,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Lindorm实例</para>
+        /// <para>Creates a Lindorm V2 instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify a DPI engine parameter when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLindormV2InstanceRequest
@@ -3107,7 +3184,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the regions supported by Lindorm.</para>
+        /// <para>Queries all regions where Lindorm is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,7 +3246,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the regions supported by Lindorm.</para>
+        /// <para>Queries all regions where Lindorm is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3231,7 +3308,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the regions supported by Lindorm.</para>
+        /// <para>Queries all regions where Lindorm is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,7 +3326,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the regions supported by Lindorm.</para>
+        /// <para>Queries all regions where Lindorm is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,6 +3794,366 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await GetClientSourceIpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobDetailResponse
+        /// </returns>
+        public GetComputeEngineJobDetailResponse GetComputeEngineJobDetailWithOptions(GetComputeEngineJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeEngineJobDetail",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeEngineJobDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobDetailResponse
+        /// </returns>
+        public async Task<GetComputeEngineJobDetailResponse> GetComputeEngineJobDetailWithOptionsAsync(GetComputeEngineJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeEngineJobDetail",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeEngineJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobDetailResponse
+        /// </returns>
+        public GetComputeEngineJobDetailResponse GetComputeEngineJobDetail(GetComputeEngineJobDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetComputeEngineJobDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobDetailResponse
+        /// </returns>
+        public async Task<GetComputeEngineJobDetailResponse> GetComputeEngineJobDetailAsync(GetComputeEngineJobDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetComputeEngineJobDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobLogResponse
+        /// </returns>
+        public GetComputeEngineJobLogResponse GetComputeEngineJobLogWithOptions(GetComputeEngineJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeEngineJobLog",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeEngineJobLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobLogResponse
+        /// </returns>
+        public async Task<GetComputeEngineJobLogResponse> GetComputeEngineJobLogWithOptionsAsync(GetComputeEngineJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeEngineJobLog",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeEngineJobLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobLogResponse
+        /// </returns>
+        public GetComputeEngineJobLogResponse GetComputeEngineJobLog(GetComputeEngineJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetComputeEngineJobLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎作业日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComputeEngineJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeEngineJobLogResponse
+        /// </returns>
+        public async Task<GetComputeEngineJobLogResponse> GetComputeEngineJobLogAsync(GetComputeEngineJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetComputeEngineJobLogWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// GetEngineDefaultAuthRequest
         /// </param>
@@ -3867,7 +4304,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelists configured for a Lindorm instance.</para>
+        /// <para>Retrieves the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3929,7 +4366,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelists configured for a Lindorm instance.</para>
+        /// <para>Retrieves the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3991,7 +4428,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelists configured for a Lindorm instance.</para>
+        /// <para>Retrieves the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4009,7 +4446,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelists configured for a Lindorm instance.</para>
+        /// <para>Retrieves the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4165,6 +4602,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await GetInstanceSecurityGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of Lindorm instances in your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceSummaryRequest
         /// </param>
@@ -4222,6 +4664,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<GetInstanceSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of Lindorm instances in your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceSummaryRequest
         /// </param>
@@ -4279,6 +4726,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<GetInstanceSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of Lindorm instances in your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceSummaryRequest
         /// </param>
@@ -4292,6 +4744,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return GetInstanceSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of Lindorm instances in your account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceSummaryRequest
         /// </param>
@@ -4967,12 +5424,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of each storage type in a Lindorm instance.</para>
+        /// <para>Retrieves the storage details for each storage medium in a specified Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</para>
+        /// <para>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <c>LStorageUsageList</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5038,12 +5495,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of each storage type in a Lindorm instance.</para>
+        /// <para>Retrieves the storage details for each storage medium in a specified Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</para>
+        /// <para>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <c>LStorageUsageList</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5109,12 +5566,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of each storage type in a Lindorm instance.</para>
+        /// <para>Retrieves the storage details for each storage medium in a specified Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</para>
+        /// <para>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <c>LStorageUsageList</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5132,12 +5589,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of each storage type in a Lindorm instance.</para>
+        /// <para>Retrieves the storage details for each storage medium in a specified Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</para>
+        /// <para>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <c>LStorageUsageList</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5155,7 +5612,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</para>
+        /// <para>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5217,7 +5674,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</para>
+        /// <para>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5279,7 +5736,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</para>
+        /// <para>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5297,7 +5754,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</para>
+        /// <para>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5315,7 +5772,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the engine types supported by the specified Lindorm instance.</para>
+        /// <para>Queries the engine types that a Lindorm instance supports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5381,7 +5838,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the engine types supported by the specified Lindorm instance.</para>
+        /// <para>Queries the engine types that a Lindorm instance supports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5447,7 +5904,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the engine types supported by the specified Lindorm instance.</para>
+        /// <para>Queries the engine types that a Lindorm instance supports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5465,7 +5922,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the engine types supported by the specified Lindorm instance.</para>
+        /// <para>Queries the engine types that a Lindorm instance supports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5483,7 +5940,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instances that meet the specified conditions.</para>
+        /// <para>Queries a list of Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +6030,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instances that meet the specified conditions.</para>
+        /// <para>Queries a list of Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5663,7 +6120,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instances that meet the specified conditions.</para>
+        /// <para>Queries a list of Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5681,7 +6138,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instances that meet the specified conditions.</para>
+        /// <para>Queries a list of Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5859,8 +6316,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新架构实例详情</para>
+        /// <para>Queries the details of an instance that uses the new architecture.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLindormV2InstanceDetailsRequest
@@ -5921,8 +6383,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新架构实例详情</para>
+        /// <para>Queries the details of an instance that uses the new architecture.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLindormV2InstanceDetailsRequest
@@ -5983,8 +6450,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新架构实例详情</para>
+        /// <para>Queries the details of an instance that uses the new architecture.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLindormV2InstanceDetailsRequest
@@ -6001,8 +6473,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新架构实例详情</para>
+        /// <para>Queries the details of an instance that uses the new architecture.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLindormV2InstanceDetailsRequest
@@ -6485,6 +6962,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await GetLindormV2InstanceSecurityGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLindormV2StorageUsageRequest
         /// </param>
@@ -6542,6 +7024,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<GetLindormV2StorageUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLindormV2StorageUsageRequest
         /// </param>
@@ -6599,6 +7086,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<GetLindormV2StorageUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLindormV2StorageUsageRequest
         /// </param>
@@ -6612,6 +7104,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return GetLindormV2StorageUsageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLindormV2StorageUsageRequest
         /// </param>
@@ -7311,6 +7808,238 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询计算引擎作业列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComputeEngineJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComputeEngineJobResponse
+        /// </returns>
+        public ListComputeEngineJobResponse ListComputeEngineJobWithOptions(ListComputeEngineJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeGroup))
+            {
+                query["ComputeGroup"] = request.ComputeGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListComputeEngineJob",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListComputeEngineJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计算引擎作业列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComputeEngineJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComputeEngineJobResponse
+        /// </returns>
+        public async Task<ListComputeEngineJobResponse> ListComputeEngineJobWithOptionsAsync(ListComputeEngineJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeGroup))
+            {
+                query["ComputeGroup"] = request.ComputeGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListComputeEngineJob",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListComputeEngineJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计算引擎作业列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComputeEngineJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComputeEngineJobResponse
+        /// </returns>
+        public ListComputeEngineJobResponse ListComputeEngineJob(ListComputeEngineJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListComputeEngineJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计算引擎作业列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComputeEngineJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComputeEngineJobResponse
+        /// </returns>
+        public async Task<ListComputeEngineJobResponse> ListComputeEngineJobAsync(ListComputeEngineJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListComputeEngineJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取计算引擎资源组列表</para>
         /// </summary>
         /// 
@@ -7479,7 +8208,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags associated with the specified Lindorm instance.</para>
+        /// <para>Get Lindorm instance-to-tag bindings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7557,7 +8286,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags associated with the specified Lindorm instance.</para>
+        /// <para>Get Lindorm instance-to-tag bindings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7635,7 +8364,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags associated with the specified Lindorm instance.</para>
+        /// <para>Get Lindorm instance-to-tag bindings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7653,7 +8382,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags associated with the specified Lindorm instance.</para>
+        /// <para>Get Lindorm instance-to-tag bindings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8435,13 +9164,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of the specified Lindorm instance.</para>
+        /// <para>Changes the billing method of a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</para>
+        /// <para>Switches the billing method of an instance between subscription and pay-as-you-go.
+        /// Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8515,13 +9245,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of the specified Lindorm instance.</para>
+        /// <para>Changes the billing method of a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</para>
+        /// <para>Switches the billing method of an instance between subscription and pay-as-you-go.
+        /// Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8595,13 +9326,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of the specified Lindorm instance.</para>
+        /// <para>Changes the billing method of a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</para>
+        /// <para>Switches the billing method of an instance between subscription and pay-as-you-go.
+        /// Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8619,13 +9351,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of the specified Lindorm instance.</para>
+        /// <para>Changes the billing method of a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</para>
+        /// <para>Switches the billing method of an instance between subscription and pay-as-you-go.
+        /// Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9891,7 +10624,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9957,7 +10690,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10023,7 +10756,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10041,7 +10774,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10064,7 +10797,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+        /// <para>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
         /// Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</para>
         /// </description>
         /// 
@@ -10144,7 +10877,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+        /// <para>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
         /// Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</para>
         /// </description>
         /// 
@@ -10224,7 +10957,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+        /// <para>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
         /// Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</para>
         /// </description>
         /// 
@@ -10248,7 +10981,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+        /// <para>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
         /// Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</para>
         /// </description>
         /// 
@@ -10587,16 +11320,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the MySQL compatibility feature for a Lindorm instance.</para>
+        /// <para>Enables or disables the Lindorm protocol that is compatible with MySQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The LindormTable version of your instance is 2.6.0 or later.</description></item>
-        /// <item><description>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-        /// You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</description></item>
+        /// <item><description>The version of LindormTable for the instance is 2.6.0 or later.</description></item>
+        /// <item><description>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+        /// You can enable the MySQL protocol only if the two preceding conditions are met.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10663,16 +11396,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the MySQL compatibility feature for a Lindorm instance.</para>
+        /// <para>Enables or disables the Lindorm protocol that is compatible with MySQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The LindormTable version of your instance is 2.6.0 or later.</description></item>
-        /// <item><description>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-        /// You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</description></item>
+        /// <item><description>The version of LindormTable for the instance is 2.6.0 or later.</description></item>
+        /// <item><description>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+        /// You can enable the MySQL protocol only if the two preceding conditions are met.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10739,16 +11472,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the MySQL compatibility feature for a Lindorm instance.</para>
+        /// <para>Enables or disables the Lindorm protocol that is compatible with MySQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The LindormTable version of your instance is 2.6.0 or later.</description></item>
-        /// <item><description>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-        /// You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</description></item>
+        /// <item><description>The version of LindormTable for the instance is 2.6.0 or later.</description></item>
+        /// <item><description>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+        /// You can enable the MySQL protocol only if the two preceding conditions are met.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10767,16 +11500,16 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the MySQL compatibility feature for a Lindorm instance.</para>
+        /// <para>Enables or disables the Lindorm protocol that is compatible with MySQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The LindormTable version of your instance is 2.6.0 or later.</description></item>
-        /// <item><description>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-        /// You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</description></item>
+        /// <item><description>The version of LindormTable for the instance is 2.6.0 or later.</description></item>
+        /// <item><description>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+        /// You can enable the MySQL protocol only if the two preceding conditions are met.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10795,7 +11528,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more Lindorm instances.</para>
+        /// <para>Attaches tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10869,7 +11602,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more Lindorm instances.</para>
+        /// <para>Attaches tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10943,7 +11676,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more Lindorm instances.</para>
+        /// <para>Attaches tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10961,7 +11694,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more Lindorm instances.</para>
+        /// <para>Attaches tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10979,12 +11712,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a Lindorm instance.</para>
+        /// <para>Detaches tags from Lindorm instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a tag is not added to any Lindorm instance, it is deleted.</para>
+        /// <para>If a tag is not attached to any Lindorm instance, the tag is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11058,12 +11791,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a Lindorm instance.</para>
+        /// <para>Detaches tags from Lindorm instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a tag is not added to any Lindorm instance, it is deleted.</para>
+        /// <para>If a tag is not attached to any Lindorm instance, the tag is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11137,12 +11870,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a Lindorm instance.</para>
+        /// <para>Detaches tags from Lindorm instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a tag is not added to any Lindorm instance, it is deleted.</para>
+        /// <para>If a tag is not attached to any Lindorm instance, the tag is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11160,12 +11893,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a Lindorm instance.</para>
+        /// <para>Detaches tags from Lindorm instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a tag is not added to any Lindorm instance, it is deleted.</para>
+        /// <para>If a tag is not attached to any Lindorm instance, the tag is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11183,7 +11916,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an IP address whitelist for a Lindorm instance.</para>
+        /// <para>Sets the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11257,7 +11990,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an IP address whitelist for a Lindorm instance.</para>
+        /// <para>Sets the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11331,7 +12064,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an IP address whitelist for a Lindorm instance.</para>
+        /// <para>Sets the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11349,7 +12082,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an IP address whitelist for a Lindorm instance.</para>
+        /// <para>Sets the access whitelist for a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11679,8 +12412,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称或删除保护</para>
+        /// <para>Updates the name or deletion protection settings of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <b>LindormNum</b> (number of LindormTable nodes) and <b>LindormSpec</b> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLindormInstanceAttributeRequest
@@ -11700,6 +12442,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["DeletionProtection"] = request.DeletionProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispositionType))
+            {
+                query["DispositionType"] = request.DispositionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceAlias))
             {
                 query["InstanceAlias"] = request.InstanceAlias;
@@ -11715,6 +12461,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedCompletionDate))
+            {
+                query["PlannedCompletionDate"] = request.PlannedCompletionDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -11749,8 +12499,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称或删除保护</para>
+        /// <para>Updates the name or deletion protection settings of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <b>LindormNum</b> (number of LindormTable nodes) and <b>LindormSpec</b> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLindormInstanceAttributeRequest
@@ -11770,6 +12529,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["DeletionProtection"] = request.DeletionProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispositionType))
+            {
+                query["DispositionType"] = request.DispositionType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceAlias))
             {
                 query["InstanceAlias"] = request.InstanceAlias;
@@ -11785,6 +12548,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlannedCompletionDate))
+            {
+                query["PlannedCompletionDate"] = request.PlannedCompletionDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -11819,8 +12586,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称或删除保护</para>
+        /// <para>Updates the name or deletion protection settings of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <b>LindormNum</b> (number of LindormTable nodes) and <b>LindormSpec</b> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLindormInstanceAttributeRequest
@@ -11837,8 +12613,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称或删除保护</para>
+        /// <para>Updates the name or deletion protection settings of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <b>LindormNum</b> (number of LindormTable nodes) and <b>LindormSpec</b> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// If you do not specify data engine parameters when you create an instance, the API call fails.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLindormInstanceAttributeRequest
@@ -11855,7 +12640,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新LindormV2Instance</para>
+        /// <para>Updates a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11941,7 +12726,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新LindormV2Instance</para>
+        /// <para>Updates a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12027,7 +12812,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新LindormV2Instance</para>
+        /// <para>Updates a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12045,7 +12830,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新LindormV2Instance</para>
+        /// <para>Updates a Lindorm instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12227,7 +13012,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// <para>Modifies the IP whitelists for a LindormV2 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12297,7 +13082,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// <para>Modifies the IP whitelists for a LindormV2 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12367,7 +13152,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// <para>Modifies the IP whitelists for a LindormV2 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12385,7 +13170,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// <para>Modifies the IP whitelists for a LindormV2 instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12403,12 +13188,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades, scales up, or enable cold storage for a Lindorm instance.</para>
+        /// <para>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12554,12 +13339,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades, scales up, or enable cold storage for a Lindorm instance.</para>
+        /// <para>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12705,12 +13490,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades, scales up, or enable cold storage for a Lindorm instance.</para>
+        /// <para>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12728,12 +13513,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades, scales up, or enable cold storage for a Lindorm instance.</para>
+        /// <para>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</para>
+        /// <para>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

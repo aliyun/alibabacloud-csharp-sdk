@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormV2StorageUsageRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
