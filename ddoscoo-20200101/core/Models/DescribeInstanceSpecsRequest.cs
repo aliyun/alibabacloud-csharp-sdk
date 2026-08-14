@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the IDs of instances to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

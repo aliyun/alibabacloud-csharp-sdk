@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public List<string> Domains { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>rg-acfm2pz25js****</para>
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

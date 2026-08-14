@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class ConfigL7GlobalRuleResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
