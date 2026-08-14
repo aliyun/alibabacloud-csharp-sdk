@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeJobMonitorRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter will be removed in the future.</para>
+        /// <para>The error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> If the specified <b>DtsJobId</b> parameter is invalid, <b>The Value of Input Parameter %s is not valid</b> is returned for <b>ErrMessage</b> and <b>DtsJobId</b> is returned for <b>DynamicMessage</b>.</para>
+        /// <para>For example, if <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -73,28 +73,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The monitoring rules of the DTS task.</para>
+        /// <para>The monitoring rule information of the DTS task.</para>
         /// </summary>
         [NameInMap("MonitorRules")]
         [Validation(Required=false)]
         public List<DescribeJobMonitorRuleResponseBodyMonitorRules> MonitorRules { get; set; }
         public class DescribeJobMonitorRuleResponseBodyMonitorRules : TeaModel {
             /// <summary>
-            /// <para>The threshold that triggers the alert.</para>
-            /// <list type="bullet">
-            /// <item><description>If the request parameter <b>Type</b> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <b>delay</b>, the unit of DelayRuleTime is seconds.</description></item>
-            /// <item><description>If the request parameter <b>Type</b> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <b>full_timeout</b>, the unit of DelayRuleTime is hours.</description></item>
-            /// </list>
+            /// <para>The threshold that triggers a latency alert. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11</para>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("DelayRuleTime")]
             [Validation(Required=false)]
             public long? DelayRuleTime { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bi6e22ay243****</para>
@@ -104,7 +100,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task type of the DTS instance, with values: - <b>normal</b>: Migration or synchronization task. - <b>full_check</b>: Associated full check task. - <b>etl_check</b>: Associated incremental check task.</para>
+            /// <para>The task type of the DTS instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>normal</b>: data migration or data synchronization task.</description></item>
+            /// <item><description><b>full_check</b>: associated full data validation task.</description></item>
+            /// <item><description><b>etl_check</b>: associated incremental data validation task.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>Alarm threshold.</para>
+            /// <para>The alert threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -124,9 +125,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? NoticeValue { get; set; }
 
             /// <summary>
-            /// <para>The statistical period for incremental validation tasks, in minutes.</para>
+            /// <para>The statistical period of the incremental data validation task. Unit: minutes.</para>
             /// <remarks>
-            /// <para>Currently supported values are 1 minute, 5 minutes, 10 minutes, and 30 minutes.</para>
+            /// <para>Valid values: 1, 5, 10, and 30 minutes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -137,7 +138,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).</para>
+            /// <para>The phone numbers of the contacts to be notified when an alert is triggered. Multiple phone numbers are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1361234****,1371234****</para>
@@ -149,8 +150,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>Indicates whether the monitoring rule is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Y</b>: The monitoring rule is enabled.</description></item>
-            /// <item><description><b>N</b>: The monitoring rule is disabled.</description></item>
+            /// <item><description><b>Y</b>: enabled.</description></item>
+            /// <item><description><b>N</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,7 +162,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The number of cycles for the incremental validation task.</para>
+            /// <para>The number of periods for the incremental data validation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -173,8 +174,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The type of the monitoring rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>delay</b>: If the task latency reaches the threshold, an alert is triggered.</description></item>
-            /// <item><description><b>error</b>: If an exception occurs, an alert is triggered.</description></item>
+            /// <item><description><b>delay</b>: latency alert.</description></item>
+            /// <item><description><b>error</b>: anomaly alert.</description></item>
+            /// <item><description><b>full_timeout</b>: alert for the runtime of the full data module.</description></item>
+            /// <item><description><b>warn</b>: notification alert (the task succeeded but the result did not meet expectations).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,7 +190,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CA14388-DD89-4A7B-8CDD-884A10CE****</para>
@@ -197,10 +200,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>:The call failed.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,7 +214,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The topics of all subtasks in the distributed change tracking task.</para>
+        /// <para>The Kafka topics.</para>
         /// </summary>
         [NameInMap("Topics")]
         [Validation(Required=false)]

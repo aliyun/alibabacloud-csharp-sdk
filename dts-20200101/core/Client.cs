@@ -76,6 +76,15 @@ namespace AlibabaCloud.SDK.Dts20200101
                 {"cn-zhengzhou-nebula-1", "dts.aliyuncs.com"},
                 {"eu-west-1-oxs", "dts.aliyuncs.com"},
                 {"rus-west-1-pop", "dts.aliyuncs.com"},
+                {"ap-northeast-1", "dts.ap-northeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "dts.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-6", "dts.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "dts.ap-southeast-7.aliyuncs.com"},
+                {"cn-guangzhou", "dts.cn-guangzhou.aliyuncs.com"},
+                {"cn-heyuan", "dts.cn-heyuan.aliyuncs.com"},
+                {"cn-wuhan-lr", "dts.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "dts.cn-zhengzhou-jva.aliyuncs.com"},
+                {"me-central-1", "dts.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dts", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -306,6 +315,14 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</description></item>
+        /// <item><description>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -607,6 +624,14 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</description></item>
+        /// <item><description>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
         /// </param>
@@ -907,6 +932,14 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</description></item>
+        /// <item><description>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
         /// </param>
@@ -924,6 +957,14 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</description></item>
+        /// <item><description>Tasks on dedicated clusters support only the configure-before-purchase mode and do not support cross-region tasks.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -1132,7 +1173,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data migration task.</para>
+        /// <para>Configures a legacy data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1220,7 +1261,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data migration task.</para>
+        /// <para>Configures a legacy data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1308,7 +1349,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data migration task.</para>
+        /// <para>Configures a legacy data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1326,7 +1367,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data migration task.</para>
+        /// <para>Configures a legacy data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1344,7 +1385,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// <para>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1463,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// <para>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1541,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// <para>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1518,7 +1559,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// <para>Configures monitoring alerts to monitor the latency and exception status of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1536,13 +1577,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking task.</para>
+        /// <para>Configures a DTS change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1737,13 +1778,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking task.</para>
+        /// <para>Configures a DTS change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1938,13 +1979,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking task.</para>
+        /// <para>Configures a DTS change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1963,13 +2004,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking task.</para>
+        /// <para>Configures a DTS change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1988,12 +2029,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking instance of the previous version.</para>
+        /// <para>Configures a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <remarks>
+        /// <para>In the <b>Advanced Settings</b> step of the console, move the pointer over the <b>Next: Save the task and perform a precheck</b> button, and then click <b>Preview OpenAPI parameters</b> in the tooltip to view the parameter information for configuring this instance by using API operations.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2077,12 +2121,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking instance of the previous version.</para>
+        /// <para>Configures a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <remarks>
+        /// <para>In the <b>Advanced Settings</b> step of the console, move the pointer over the <b>Next: Save the task and perform a precheck</b> button, and then click <b>Preview OpenAPI parameters</b> in the tooltip to view the parameter information for configuring this instance by using API operations.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2166,12 +2213,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking instance of the previous version.</para>
+        /// <para>Configures a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <remarks>
+        /// <para>In the <b>Advanced Settings</b> step of the console, move the pointer over the <b>Next: Save the task and perform a precheck</b> button, and then click <b>Preview OpenAPI parameters</b> in the tooltip to view the parameter information for configuring this instance by using API operations.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2189,12 +2239,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a change tracking instance of the previous version.</para>
+        /// <para>Configures a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <remarks>
+        /// <para>In the <b>Advanced Settings</b> step of the console, move the pointer over the <b>Next: Save the task and perform a precheck</b> button, and then click <b>Preview OpenAPI parameters</b> in the tooltip to view the parameter information for configuring this instance by using API operations.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2212,7 +2265,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2290,7 +2343,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2368,7 +2421,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2386,7 +2439,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2404,17 +2457,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data synchronization task.</para>
+        /// <para>Configures a data synchronization task by using the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
-        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// <item><description>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2515,17 +2570,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data synchronization task.</para>
+        /// <para>Configures a data synchronization task by using the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
-        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// <item><description>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2626,17 +2683,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data synchronization task.</para>
+        /// <para>Configures a data synchronization task by using the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
-        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// <item><description>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2655,17 +2714,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a data synchronization task.</para>
+        /// <para>Configures a data synchronization task by using the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</description></item>
-        /// <item><description>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</description></item>
+        /// <item><description>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2684,7 +2745,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2766,7 +2827,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2848,7 +2909,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2866,7 +2927,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// <para>Configures monitoring and alerting to monitor the latency and exception status of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2884,7 +2945,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// <para>Configures the full image matching switch for a data synchronization instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2954,7 +3015,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// <para>Configures the full image matching switch for a data synchronization instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3024,7 +3085,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// <para>Configures the full image matching switch for a data synchronization instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3042,7 +3103,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// <para>Configures the full image matching switch for a data synchronization instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3060,7 +3121,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers resource groups of instance resources.</para>
+        /// <para>Transfers a DTS instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3122,7 +3183,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers resource groups of instance resources.</para>
+        /// <para>Transfers a DTS instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3184,7 +3245,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers resource groups of instance resources.</para>
+        /// <para>Transfers a DTS instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3202,7 +3263,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers resource groups of instance resources.</para>
+        /// <para>Transfers a DTS instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3220,7 +3281,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Counts tasks by condition.</para>
+        /// <para>Queries the count of tasks by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3298,7 +3359,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Counts tasks by condition.</para>
+        /// <para>Queries the count of tasks by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3376,7 +3437,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Counts tasks by condition.</para>
+        /// <para>Queries the count of tasks by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3394,7 +3455,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Counts tasks by condition.</para>
+        /// <para>Queries the count of tasks by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3412,7 +3473,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// <para>Creates a consumer group for a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3478,7 +3539,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// <para>Creates a consumer group for a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3544,7 +3605,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// <para>Creates a consumer group for a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3562,7 +3623,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// <para>Creates a consumer group for a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3756,7 +3817,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert rule.</para>
+        /// <para>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3838,7 +3899,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert rule.</para>
+        /// <para>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3920,7 +3981,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert rule.</para>
+        /// <para>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3938,7 +3999,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert rule.</para>
+        /// <para>Creates an alert rule by calling the CreateDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3958,6 +4019,17 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</description></item>
+        /// <item><description>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -4021,6 +4093,17 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</description></item>
+        /// <item><description>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
         /// </param>
@@ -4083,6 +4166,17 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</description></item>
+        /// <item><description>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
         /// </param>
@@ -4100,6 +4194,17 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calling this operation creates a document parsing task and returns a task ID (DtsJobId).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation relies on Object Storage Service (OSS) for file transfer. We recommend that you call this operation by using an SDK. The CreateDocParserJobAdvance operation automatically encapsulates the file transfer process.</description></item>
+        /// <item><description>After you obtain the DtsJobId response parameter, you can call the DescribeDocParserJobStatus operation to query the execution status of the document parsing task, and call the DescribeDocParserJobResult operation to obtain the output of the document parsing task.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -4308,14 +4413,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// <para>Purchases a DTS instance by calling the CreateDtsInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</description></item>
+        /// <item><description>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4450,14 +4558,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// <para>Purchases a DTS instance by calling the CreateDtsInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</description></item>
+        /// <item><description>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4592,14 +4703,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// <para>Purchases a DTS instance by calling the CreateDtsInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</description></item>
+        /// <item><description>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4618,14 +4732,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// <para>Purchases a DTS instance by calling the CreateDtsInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</description></item>
+        /// <item><description>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4644,16 +4761,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// <para>Creates or modifies an alert rule for a DTS task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <para>DTS currently supports the following alert metrics: <b>Latency</b>, <b>Migration Status</b>, and <b>Full Migration Duration</b>:</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
-        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
+        /// <item><description><b>Latency</b>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</description></item>
+        /// <item><description><b>Migration Status</b>: Monitors the task status. An alert is triggered when the task status is <b>Error</b> or <b>Recovered</b>.</description></item>
+        /// <item><description><b>Full Migration Duration</b>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4732,16 +4849,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// <para>Creates or modifies an alert rule for a DTS task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <para>DTS currently supports the following alert metrics: <b>Latency</b>, <b>Migration Status</b>, and <b>Full Migration Duration</b>:</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
-        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
+        /// <item><description><b>Latency</b>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</description></item>
+        /// <item><description><b>Migration Status</b>: Monitors the task status. An alert is triggered when the task status is <b>Error</b> or <b>Recovered</b>.</description></item>
+        /// <item><description><b>Full Migration Duration</b>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4820,16 +4937,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// <para>Creates or modifies an alert rule for a DTS task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <para>DTS currently supports the following alert metrics: <b>Latency</b>, <b>Migration Status</b>, and <b>Full Migration Duration</b>:</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
-        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
+        /// <item><description><b>Latency</b>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</description></item>
+        /// <item><description><b>Migration Status</b>: Monitors the task status. An alert is triggered when the task status is <b>Error</b> or <b>Recovered</b>.</description></item>
+        /// <item><description><b>Full Migration Duration</b>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4848,16 +4965,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// <para>Creates or modifies an alert rule for a DTS task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DTS provides the following metrics for DTS tasks:************</para>
+        /// <para>DTS currently supports the following alert metrics: <b>Latency</b>, <b>Migration Status</b>, and <b>Full Migration Duration</b>:</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
-        /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
+        /// <item><description><b>Latency</b>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</description></item>
+        /// <item><description><b>Migration Status</b>: Monitors the task status. An alert is triggered when the task status is <b>Error</b> or <b>Recovered</b>.</description></item>
+        /// <item><description><b>Full Migration Duration</b>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5044,14 +5161,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
+        /// <para>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <para>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <b>StartReverseWriter</b> operation to start it.</para>
         /// <remarks>
-        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// <para>The created reverse task is a synchronization task that contains only the incremental write module.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5106,14 +5223,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
+        /// <para>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <para>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <b>StartReverseWriter</b> operation to start it.</para>
         /// <remarks>
-        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// <para>The created reverse task is a synchronization task that contains only the incremental write module.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5168,14 +5285,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
+        /// <para>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <para>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <b>StartReverseWriter</b> operation to start it.</para>
         /// <remarks>
-        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// <para>The created reverse task is a synchronization task that contains only the incremental write module.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5194,14 +5311,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
+        /// <para>Creates a reverse task for a specified synchronization or migration task by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <para>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <b>StartReverseWriter</b> operation to start it.</para>
         /// <remarks>
-        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// <para>The created reverse task is a synchronization task that contains only the incremental write module.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5220,7 +5337,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a change tracking instance.</para>
+        /// <para>Creates a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5298,7 +5415,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a change tracking instance.</para>
+        /// <para>Creates a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5376,7 +5493,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a change tracking instance.</para>
+        /// <para>Creates a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5394,7 +5511,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases a change tracking instance.</para>
+        /// <para>Creates a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5412,7 +5529,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data synchronization instance.</para>
+        /// <para>Creates a data synchronization job instance. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5514,7 +5631,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data synchronization instance.</para>
+        /// <para>Creates a data synchronization job instance. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5616,7 +5733,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data synchronization instance.</para>
+        /// <para>Creates a data synchronization job instance. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5634,7 +5751,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data synchronization instance.</para>
+        /// <para>Creates a data synchronization job instance. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5652,7 +5769,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group of a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5710,7 +5827,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group of a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5768,7 +5885,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group of a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5786,7 +5903,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group of a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5804,7 +5921,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group from a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5866,7 +5983,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group from a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5928,7 +6045,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group from a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5946,7 +6063,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a consumer group.</para>
+        /// <para>Deletes a consumer group from a change tracking channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5964,8 +6081,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Releases a data migration, synchronization, or change tracking instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobRequest
@@ -6030,8 +6154,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Releases a data migration, synchronization, or change tracking instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobRequest
@@ -6096,8 +6227,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Releases a data migration, synchronization, or change tracking instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobRequest
@@ -6114,8 +6252,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Releases a data migration, synchronization, or change tracking instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobRequest
@@ -6132,8 +6277,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// <para>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobsRequest
@@ -6186,8 +6338,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// <para>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobsRequest
@@ -6240,8 +6399,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// <para>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobsRequest
@@ -6258,8 +6424,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple data migration, data synchronization, or change tracking tasks.</para>
+        /// <para>Releases data migration, data synchronization, or change tracking tasks in batches by calling the DeleteDtsJobs operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDtsJobsRequest
@@ -6428,7 +6601,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a change tracking instance.</para>
+        /// <para>Releases the channel of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6486,7 +6659,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a change tracking instance.</para>
+        /// <para>Releases the channel of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6544,7 +6717,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a change tracking instance.</para>
+        /// <para>Releases the channel of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6562,7 +6735,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a change tracking instance.</para>
+        /// <para>Releases the channel of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6900,7 +7073,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies data migration tasks and data synchronization tasks</para>
+        /// <para>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6966,7 +7139,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies data migration tasks and data synchronization tasks</para>
+        /// <para>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7032,7 +7205,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies data migration tasks and data synchronization tasks</para>
+        /// <para>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7050,7 +7223,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies data migration tasks and data synchronization tasks</para>
+        /// <para>Contains data validation tasks associated with data migration tasks and data synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7068,7 +7241,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// <para>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7148,7 +7321,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// <para>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7228,7 +7401,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// <para>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7246,7 +7419,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.</para>
+        /// <para>Queries the log information of a DTS cluster by calling the DescribeClusterOperateLogs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7264,7 +7437,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of a cluster.</para>
+        /// <para>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7344,7 +7517,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of a cluster.</para>
+        /// <para>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7424,7 +7597,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of a cluster.</para>
+        /// <para>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7442,7 +7615,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of a cluster.</para>
+        /// <para>Queries the current usage of a cluster by calling the DescribeClusterUsedUtilization operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7460,7 +7633,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// <para>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7594,7 +7767,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// <para>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7728,7 +7901,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// <para>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7746,7 +7919,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// <para>Tests the connectivity between the execution node of a data migration task and the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7764,7 +7937,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// <para>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7830,7 +8003,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// <para>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7896,7 +8069,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// <para>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7914,7 +8087,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// <para>Queries the consumer group information of a DTS change tracking task, such as the consumer group ID, name, account, and consumption latency.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8100,7 +8273,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// <para>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8154,7 +8327,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// <para>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8208,7 +8381,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// <para>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8226,7 +8399,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// <para>Retrieves the DTS IP addresses that must be added to the whitelists of both the source and destination databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8244,7 +8417,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// <para>Obtains the download URL for the list data of inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8302,7 +8475,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// <para>Obtains the download URL for the list data of inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8360,7 +8533,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// <para>Obtains the download URL for the list data of inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8378,7 +8551,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the data consistency verification report.</para>
+        /// <para>Obtains the download URL for the list data of inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8396,7 +8569,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data verification task.</para>
+        /// <para>Queries data consistency verification results at the table level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8466,7 +8639,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data verification task.</para>
+        /// <para>Queries data consistency verification results at the table level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8536,7 +8709,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data verification task.</para>
+        /// <para>Queries data consistency verification results at the table level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8554,7 +8727,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data verification task.</para>
+        /// <para>Queries data consistency verification results at the table level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8572,7 +8745,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// <para>Lists data inconsistency results grouped by inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8638,7 +8811,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// <para>Lists data inconsistency results grouped by inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8704,7 +8877,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// <para>Lists data inconsistency results grouped by inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8722,7 +8895,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// <para>Lists data inconsistency results grouped by inconsistent data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8740,7 +8913,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a dedicated cluster.</para>
+        /// <para>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8794,7 +8967,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a dedicated cluster.</para>
+        /// <para>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8848,7 +9021,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a dedicated cluster.</para>
+        /// <para>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8866,7 +9039,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a dedicated cluster.</para>
+        /// <para>Queries the details of a specified cluster by calling the DescribeDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8884,7 +9057,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an alert rule.</para>
+        /// <para>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8938,7 +9111,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an alert rule.</para>
+        /// <para>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8992,7 +9165,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an alert rule.</para>
+        /// <para>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9010,7 +9183,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an alert rule.</para>
+        /// <para>Queries alert rules by calling the DescribeDedicatedClusterMonitorRule operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9030,6 +9203,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold per region is 100 calls per second.</description></item>
+        /// <item><description>The call threshold per account per region is 5 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
@@ -9085,6 +9267,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold per region is 100 calls per second.</description></item>
+        /// <item><description>The call threshold per account per region is 5 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
         /// </param>
@@ -9139,6 +9330,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold per region is 100 calls per second.</description></item>
+        /// <item><description>The call threshold per account per region is 5 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
         /// </param>
@@ -9157,6 +9357,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold per region is 100 calls per second.</description></item>
+        /// <item><description>The call threshold per account per region is 5 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
         /// </param>
@@ -9174,6 +9383,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has call frequency limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold for a single region is 200 calls per second.</description></item>
+        /// <item><description>The call threshold for a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
@@ -9229,6 +9447,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has call frequency limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold for a single region is 200 calls per second.</description></item>
+        /// <item><description>The call threshold for a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
         /// </param>
@@ -9283,6 +9510,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has call frequency limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold for a single region is 200 calls per second.</description></item>
+        /// <item><description>The call threshold for a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
         /// </param>
@@ -9301,6 +9537,15 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has call frequency limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative call threshold for a single region is 200 calls per second.</description></item>
+        /// <item><description>The call threshold for a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
         /// </param>
@@ -9316,7 +9561,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the details of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9378,7 +9623,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the details of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9440,7 +9685,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the details of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9458,7 +9703,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the details of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9636,8 +9881,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>Queries the details of a DTS task by calling DescribeDtsJobDetail.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 160 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDtsJobDetailRequest
@@ -9653,6 +9907,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbObjectOutputType))
+            {
+                query["DbObjectOutputType"] = request.DbObjectOutputType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceID))
             {
                 query["DtsInstanceID"] = request.DtsInstanceID;
@@ -9702,8 +9960,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>Queries the details of a DTS task by calling DescribeDtsJobDetail.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 160 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDtsJobDetailRequest
@@ -9719,6 +9986,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbObjectOutputType))
+            {
+                query["DbObjectOutputType"] = request.DbObjectOutputType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsInstanceID))
             {
                 query["DtsInstanceID"] = request.DtsInstanceID;
@@ -9768,8 +10039,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>Queries the details of a DTS task by calling DescribeDtsJobDetail.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 160 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDtsJobDetailRequest
@@ -9786,8 +10066,17 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>Queries the details of a DTS task by calling DescribeDtsJobDetail.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 160 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDtsJobDetailRequest
@@ -9804,13 +10093,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// <para>Queries the list of DTS tasks and the execution details of each task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 200 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9944,13 +10236,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// <para>Queries the list of DTS tasks and the execution details of each task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 200 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10084,13 +10379,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// <para>Queries the list of DTS tasks and the execution details of each task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 200 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10108,13 +10406,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Data Transmission Service (DTS) tasks and the details of each task.</para>
+        /// <para>Queries the list of DTS tasks and the execution details of each task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Debugging</h2>
-        /// <para><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// <para>This operation has rate limits. Calls that exceed the limits are rejected.</para>
+        /// <list type="bullet">
+        /// <item><description>The cumulative threshold for calls in a single region is 200 calls per second.</description></item>
+        /// <item><description>The threshold for calls by a single account in a single region is 20 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10132,7 +10433,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// <para>Queries the log information of a data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10214,7 +10515,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// <para>Queries the log information of a data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10296,7 +10597,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// <para>Queries the log information of a data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10314,7 +10615,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a data migration or synchronization task.</para>
+        /// <para>Queries the log information of a data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10332,7 +10633,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// <para>Queries the execution status of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10394,7 +10695,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// <para>Queries the execution status of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10456,7 +10757,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// <para>Queries the execution status of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10474,7 +10775,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// <para>Queries the execution status of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10492,7 +10793,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the running logs of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10542,7 +10843,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the running logs of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10592,7 +10893,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the running logs of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10610,7 +10911,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// <para>Queries the running logs of an ETL task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10628,7 +10929,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries full data migration tasks.</para>
+        /// <para>Queries the running details of a full data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10682,7 +10983,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries full data migration tasks.</para>
+        /// <para>Queries the running details of a full data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10736,7 +11037,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries full data migration tasks.</para>
+        /// <para>Queries the running details of a full data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10754,7 +11055,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries full data migration tasks.</para>
+        /// <para>Queries the running details of a full data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10772,7 +11073,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the GAD instances.</para>
+        /// <para>Queries a list of Global Active Database (GAD) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10846,7 +11147,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the GAD instances.</para>
+        /// <para>Queries a list of Global Active Database (GAD) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10920,7 +11221,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the GAD instances.</para>
+        /// <para>Queries a list of Global Active Database (GAD) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10938,7 +11239,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the GAD instances.</para>
+        /// <para>Queries a list of Global Active Database (GAD) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10956,7 +11257,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// <para>Queries the initialization status. This is an earlier version of the operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11022,7 +11323,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// <para>Queries the initialization status. This is an earlier version of the operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11088,7 +11389,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// <para>Queries the initialization status. This is an earlier version of the operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11106,7 +11407,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// <para>Queries the initialization status. This is an earlier version of the operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11124,7 +11425,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11174,7 +11475,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11224,7 +11525,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11242,7 +11543,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the alert rules of a DTS task by calling DescribeJobMonitorRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11260,7 +11561,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a cluster.</para>
+        /// <para>Queries cluster monitoring information by calling the DescribeMetricList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11348,7 +11649,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a cluster.</para>
+        /// <para>Queries cluster monitoring information by calling the DescribeMetricList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11436,7 +11737,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a cluster.</para>
+        /// <para>Queries cluster monitoring information by calling the DescribeMetricList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11454,7 +11755,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a cluster.</para>
+        /// <para>Queries cluster monitoring information by calling the DescribeMetricList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11472,7 +11773,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// <para>Queries the monitoring and alert settings of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11534,7 +11835,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// <para>Queries the monitoring and alert settings of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11596,7 +11897,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// <para>Queries the monitoring and alert settings of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11614,7 +11915,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// <para>Queries the monitoring and alert settings of a data migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11632,7 +11933,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data migration task.</para>
+        /// <para>Queries the execution details of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11706,7 +12007,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data migration task.</para>
+        /// <para>Queries the execution details of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11780,7 +12081,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data migration task.</para>
+        /// <para>Queries the execution details of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11798,7 +12099,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data migration task.</para>
+        /// <para>Queries the execution details of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11816,7 +12117,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data migration task.</para>
+        /// <para>Queries the status of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11878,7 +12179,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data migration task.</para>
+        /// <para>Queries the status of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11940,7 +12241,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data migration task.</para>
+        /// <para>Queries the status of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11958,7 +12259,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data migration task.</para>
+        /// <para>Queries the status of a data migration task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11976,7 +12277,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// <para>Queries the list of data migration instances and details of each migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12046,7 +12347,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// <para>Queries the list of data migration instances and details of each migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12116,7 +12417,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// <para>Queries the list of data migration instances and details of each migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12134,7 +12435,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data migration instances and the details of each instance.</para>
+        /// <para>Queries the list of data migration instances and details of each migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12152,7 +12453,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
+        /// <para>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12210,7 +12511,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
+        /// <para>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12268,7 +12569,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
+        /// <para>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12286,7 +12587,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
+        /// <para>Queries the task result of a precheck for creating a Global Active Database (GAD) order node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12304,7 +12605,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// <para>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12382,7 +12683,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// <para>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12460,7 +12761,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// <para>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12478,7 +12779,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// <para>Queries the execution details of subtasks of a DTS task, including precheck, schema migration or synchronization, full data migration or synchronization, and incremental data migration or synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12496,7 +12797,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12558,7 +12859,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12620,7 +12921,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12638,7 +12939,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12656,7 +12957,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a change tracking instance.</para>
+        /// <para>Queries the instance status details of a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12714,7 +13015,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a change tracking instance.</para>
+        /// <para>Queries the instance status details of a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12772,7 +13073,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a change tracking instance.</para>
+        /// <para>Queries the instance status details of a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12790,7 +13091,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a change tracking instance.</para>
+        /// <para>Queries the instance status details of a change tracking channel. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12992,14 +13293,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// <para>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// <item><description>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13072,14 +13378,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// <para>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// <item><description>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13152,14 +13463,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// <para>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// <item><description>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13178,14 +13494,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// <para>Queries the information about subtasks of a PolarDB-X 1.0 distributed change tracking task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</description></item>
+        /// <item><description>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+        /// .</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13356,7 +13677,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13422,7 +13743,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13488,7 +13809,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13506,7 +13827,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// <para>Queries the monitoring and alerting settings of a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13524,7 +13845,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// <para>Retrieves the current image matching switch configuration. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13590,7 +13911,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// <para>Retrieves the current image matching switch configuration. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13656,7 +13977,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// <para>Retrieves the current image matching switch configuration. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13674,7 +13995,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// <para>Retrieves the current image matching switch configuration. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13692,7 +14013,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data synchronization instance.</para>
+        /// <para>Queries the running status of a data synchronization task. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13758,7 +14079,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data synchronization instance.</para>
+        /// <para>Queries the running status of a data synchronization task. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13824,7 +14145,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data synchronization instance.</para>
+        /// <para>Queries the running status of a data synchronization task. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13842,7 +14163,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a data synchronization instance.</para>
+        /// <para>Queries the running status of a data synchronization task. This is a legacy API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13860,7 +14181,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// <para>Queries the status list of synchronization jobs. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13922,7 +14243,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// <para>Queries the status list of synchronization jobs. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13984,7 +14305,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// <para>Queries the status list of synchronization jobs. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14002,7 +14323,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// <para>Queries the status list of synchronization jobs. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14020,7 +14341,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
+        /// <para>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14094,7 +14415,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
+        /// <para>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14168,7 +14489,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
+        /// <para>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14186,7 +14507,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
+        /// <para>Queries a list of data synchronization instances and the details of each instance by calling DescribeSynchronizationJobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14204,7 +14525,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// <para>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14266,7 +14587,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// <para>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14328,7 +14649,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// <para>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14346,7 +14667,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// <para>Queries the execution status of a task that modifies synchronization objects. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14364,7 +14685,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14430,7 +14751,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14496,7 +14817,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14514,7 +14835,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all tags that are bound to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14532,7 +14853,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14602,7 +14923,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14672,7 +14993,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14690,7 +15011,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// <para>Queries all values of a tag key that is attached to a data migration, data synchronization, or change tracking instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14708,7 +15029,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a secondary instance</para>
+        /// <para>Removes a secondary role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14766,7 +15087,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a secondary instance</para>
+        /// <para>Removes a secondary role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14824,7 +15145,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a secondary instance</para>
+        /// <para>Removes a secondary role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14842,7 +15163,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a secondary instance</para>
+        /// <para>Removes a secondary role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14860,14 +15181,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// <para>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
         /// <list type="bullet">
-        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// <item><description>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</description></item>
+        /// <item><description>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14934,14 +15255,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// <para>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
         /// <list type="bullet">
-        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// <item><description>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</description></item>
+        /// <item><description>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15008,14 +15329,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// <para>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
         /// <list type="bullet">
-        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// <item><description>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</description></item>
+        /// <item><description>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15034,14 +15355,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.</para>
+        /// <para>Initializes a built-in account in a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses this account to connect to the node and perform synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</para>
         /// <list type="bullet">
-        /// <item><description>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</description></item>
+        /// <item><description>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</description></item>
+        /// <item><description>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15060,7 +15381,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// <para>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15138,7 +15459,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// <para>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15216,7 +15537,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// <para>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15234,7 +15555,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.</para>
+        /// <para>Queries all clusters created by the current user. You can also filter specific clusters based on specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15252,7 +15573,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询JobStep列表。</para>
+        /// <para>Query the JobStep list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15306,7 +15627,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询JobStep列表。</para>
+        /// <para>Query the JobStep list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15360,7 +15681,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询JobStep列表。</para>
+        /// <para>Query the JobStep list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15378,7 +15699,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询JobStep列表。</para>
+        /// <para>Query the JobStep list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15396,12 +15717,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// <para>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15463,12 +15784,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// <para>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15530,12 +15851,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// <para>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15553,12 +15874,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// <para>Queries the tags bound to data migration, data synchronization, and change tracking instances. You can also query the instances bound to specific tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15576,7 +15897,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// <para>Modifies the information of a consumer group in a change tracking channel (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15646,7 +15967,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// <para>Modifies the information of a consumer group in a change tracking channel (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15716,7 +16037,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// <para>Modifies the information of a consumer group in a change tracking channel (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15734,7 +16055,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// <para>Modifies the information of a consumer group in a change tracking channel (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15752,7 +16073,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password of a consumer group</para>
+        /// <para>Modifies the password of a consumer group. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15830,7 +16151,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password of a consumer group</para>
+        /// <para>Modifies the password of a consumer group. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15908,7 +16229,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password of a consumer group</para>
+        /// <para>Modifies the password of a consumer group. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15926,7 +16247,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password of a consumer group</para>
+        /// <para>Modifies the password of a consumer group. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15944,7 +16265,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16006,7 +16327,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16068,7 +16389,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16086,7 +16407,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16104,12 +16425,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cluster.</para>
+        /// <para>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only the overcommit ratio.</para>
+        /// <para>Currently, only the overcommit ratio can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16175,12 +16496,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cluster.</para>
+        /// <para>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only the overcommit ratio.</para>
+        /// <para>Currently, only the overcommit ratio can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16246,12 +16567,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cluster.</para>
+        /// <para>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only the overcommit ratio.</para>
+        /// <para>Currently, only the overcommit ratio can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16269,12 +16590,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cluster.</para>
+        /// <para>Modifies the configuration of a dedicated cluster by calling the ModifyDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify only the overcommit ratio.</para>
+        /// <para>Currently, only the overcommit ratio can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16292,12 +16613,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// <para>Modifies a data synchronization task by calling the ModifyDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// <remarks>
+        /// <para>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16407,12 +16730,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// <para>Modifies a data synchronization task by calling the ModifyDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// <remarks>
+        /// <para>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16522,12 +16847,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// <para>Modifies a data synchronization task by calling the ModifyDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// <remarks>
+        /// <para>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -16545,12 +16872,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a data synchronization task.</para>
+        /// <para>Modifies a data synchronization task by calling the ModifyDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over <b>Next: Save Task Settings and Precheck</b> in the <b>Advanced Settings</b> step and click <b>Preview OpenAPI parameters</b> to view the parameters that are used to configure the task by calling an API operation.</para>
+        /// <remarks>
+        /// <para>You can preconfigure settings in the console as needed, and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -16760,7 +17089,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16818,7 +17147,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16876,7 +17205,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16894,7 +17223,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the parameters of a DTS task by calling the ModifyDtsJobConfig operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16912,13 +17241,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
+        /// <para>Changes the dedicated cluster on which a task runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// <para>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16977,13 +17306,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
+        /// <para>Changes the dedicated cluster on which a task runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// <para>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17042,13 +17371,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
+        /// <para>Changes the dedicated cluster on which a task runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// <para>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17067,13 +17396,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
+        /// <para>Changes the dedicated cluster on which a task runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// <para>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17092,14 +17421,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// <item><description>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</description></item>
+        /// <item><description>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17158,14 +17487,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// <item><description>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</description></item>
+        /// <item><description>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17224,14 +17553,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// <item><description>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</description></item>
+        /// <item><description>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17250,14 +17579,14 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the DU upper limit of a DTS task by calling the ModifyDtsJobDuLimit operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</description></item>
+        /// <item><description>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</description></item>
+        /// <item><description>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17276,13 +17605,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
+        /// <para>Modifies the source or destination instance of a DTS synchronization or migration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17405,13 +17734,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
+        /// <para>Modifies the source or destination instance of a DTS synchronization or migration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17534,13 +17863,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
+        /// <para>Modifies the source or destination instance of a DTS synchronization or migration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17559,13 +17888,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
+        /// <para>Modifies the source or destination instance of a DTS synchronization or migration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17584,7 +17913,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the name of a DTS task by calling ModifyDtsJobName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17642,7 +17971,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the name of a DTS task by calling ModifyDtsJobName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17700,7 +18029,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the name of a DTS task by calling ModifyDtsJobName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17718,7 +18047,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the name of a DTS task by calling ModifyDtsJobName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17736,7 +18065,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the password of a DTS task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17810,7 +18139,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the password of a DTS task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17884,7 +18213,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the password of a DTS task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17902,7 +18231,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// <para>Modifies the password of a DTS task (new version).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17920,7 +18249,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// <para>Adjusts the migration rate of a data synchronization or migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17982,7 +18311,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// <para>Adjusts the migration rate of a data synchronization or migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18044,7 +18373,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// <para>Adjusts the migration rate of a data synchronization or migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18062,7 +18391,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// <para>Adjusts the migration rate of a data synchronization or migration instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18080,7 +18409,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a GAD instance.</para>
+        /// <para>Modifies the name of a Global Active Database (GAD) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18138,7 +18467,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a GAD instance.</para>
+        /// <para>Modifies the name of a Global Active Database (GAD) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18196,7 +18525,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a GAD instance.</para>
+        /// <para>Modifies the name of a Global Active Database (GAD) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18214,7 +18543,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a GAD instance.</para>
+        /// <para>Modifies the name of a Global Active Database (GAD) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18232,7 +18561,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增量写入的位点。</para>
+        /// <para>Modify the offset for incremental data writing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18290,7 +18619,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增量写入的位点。</para>
+        /// <para>Modify the offset for incremental data writing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18348,7 +18677,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增量写入的位点。</para>
+        /// <para>Modify the offset for incremental data writing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18366,7 +18695,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增量写入的位点。</para>
+        /// <para>Modify the offset for incremental data writing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18384,13 +18713,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a change tracking task.</para>
+        /// <para>Modifies a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -18465,13 +18794,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a change tracking task.</para>
+        /// <para>Modifies a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -18546,13 +18875,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a change tracking task.</para>
+        /// <para>Modifies a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -18571,13 +18900,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a change tracking task.</para>
+        /// <para>Modifies a change tracking task (new version).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// <para>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -18596,7 +18925,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects for change tracking.</para>
+        /// <para>Modifies the subscription objects of a change tracking task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18658,7 +18987,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects for change tracking.</para>
+        /// <para>Modifies the subscription objects of a change tracking task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18720,7 +19049,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects for change tracking.</para>
+        /// <para>Modifies the subscription objects of a change tracking task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18738,7 +19067,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects for change tracking.</para>
+        /// <para>Modifies the subscription objects of a change tracking task. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18756,7 +19085,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects to be synchronized.</para>
+        /// <para>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18824,7 +19153,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects to be synchronized.</para>
+        /// <para>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18892,7 +19221,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects to be synchronized.</para>
+        /// <para>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18910,7 +19239,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the objects to be synchronized.</para>
+        /// <para>Modifies the synchronization objects in a data synchronization job instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18928,7 +19257,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prechecks before a GAD instance is created.</para>
+        /// <para>Prechecks an order for creating a Global Active Database (GAD) instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19014,7 +19343,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prechecks before a GAD instance is created.</para>
+        /// <para>Prechecks an order for creating a Global Active Database (GAD) instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19100,7 +19429,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prechecks before a GAD instance is created.</para>
+        /// <para>Prechecks an order for creating a Global Active Database (GAD) instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19118,7 +19447,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prechecks before a GAD instance is created.</para>
+        /// <para>Prechecks an order for creating a Global Active Database (GAD) instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19134,6 +19463,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await PreCheckCreateGadOrderWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Promote a geo-disaster recovery instance from the secondary role to the primary role</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PromoteToMasterRequest
         /// </param>
@@ -19187,6 +19521,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<PromoteToMasterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Promote a geo-disaster recovery instance from the secondary role to the primary role</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PromoteToMasterRequest
         /// </param>
@@ -19240,6 +19579,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TeaModel.ToObject<PromoteToMasterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Promote a geo-disaster recovery instance from the secondary role to the primary role</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PromoteToMasterRequest
         /// </param>
@@ -19253,6 +19597,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return PromoteToMasterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Promote a geo-disaster recovery instance from the secondary role to the primary role</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PromoteToMasterRequest
         /// </param>
@@ -19268,7 +19617,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// <para>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19330,7 +19679,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// <para>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19392,7 +19741,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// <para>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19410,7 +19759,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// <para>Renews a DTS instance. This operation is applicable only to subscription DTS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19434,7 +19783,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// <para>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19499,7 +19848,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// <para>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19564,7 +19913,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// <para>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19589,7 +19938,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</para>
+        /// <para>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19608,13 +19957,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// <para>Resets the configuration of a data synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// <para>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the synchronization task before you can start the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19677,13 +20026,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// <para>Resets the configuration of a data synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// <para>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the synchronization task before you can start the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19746,13 +20095,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// <para>Resets the configuration of a data synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// <para>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the synchronization task before you can start the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19771,13 +20120,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// <para>Resets the configuration of a data synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the task.</para>
+        /// <para>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <b>ConfigureSynchronizationJob</b> operation to reconfigure the synchronization task before you can start the task.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19796,7 +20145,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse the direction of a two-way synchronization task.</para>
+        /// <para>调转双向任务的方向</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19850,7 +20199,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse the direction of a two-way synchronization task.</para>
+        /// <para>调转双向任务的方向</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19904,7 +20253,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse the direction of a two-way synchronization task.</para>
+        /// <para>调转双向任务的方向</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19922,7 +20271,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse the direction of a two-way synchronization task.</para>
+        /// <para>调转双向任务的方向</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19940,7 +20289,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// <para>Skips the precheck for a legacy data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19994,7 +20343,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// <para>Skips the precheck for a legacy data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20048,7 +20397,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// <para>Skips the precheck for a legacy data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20066,7 +20415,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
+        /// <para>Skips the precheck for a legacy data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20084,7 +20433,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// <para>Skips tables that do not need to be synchronized during the full data synchronization phase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20142,7 +20491,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// <para>Skips tables that do not need to be synchronized during the full data synchronization phase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20200,7 +20549,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// <para>Skips tables that do not need to be synchronized during the full data synchronization phase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20218,7 +20567,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// <para>Skips tables that do not need to be synchronized during the full data synchronization phase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20236,7 +20585,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips one or more precheck items.</para>
+        /// <para>Suppresses or unsuppresses precheck alert items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20302,7 +20651,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips one or more precheck items.</para>
+        /// <para>Suppresses or unsuppresses precheck alert items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20368,7 +20717,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips one or more precheck items.</para>
+        /// <para>Suppresses or unsuppresses precheck alert items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20386,7 +20735,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Skips one or more precheck items.</para>
+        /// <para>Suppresses or unsuppresses precheck alert items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20404,7 +20753,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20466,7 +20815,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20528,7 +20877,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20546,7 +20895,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Starts a data migration, data synchronization, or change tracking task by calling the StartDtsJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20564,7 +20913,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// <para>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20618,7 +20967,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// <para>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20672,7 +21021,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// <para>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20690,7 +21039,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// <para>Starts multiple data migration or synchronization tasks in a batch by calling the StartDtsJobs operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20708,7 +21057,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration task.</para>
+        /// <para>Starts a data migration task of Data Transmission Service (DTS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20766,7 +21115,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration task.</para>
+        /// <para>Starts a data migration task of Data Transmission Service (DTS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20824,7 +21173,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration task.</para>
+        /// <para>Starts a data migration task of Data Transmission Service (DTS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20842,7 +21191,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data migration task.</para>
+        /// <para>Starts a data migration task of Data Transmission Service (DTS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20860,12 +21209,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// <para>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// <para>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20915,12 +21264,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// <para>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// <para>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20970,12 +21319,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// <para>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// <para>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20993,12 +21342,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts the reverse task that is created by calling the CreateReverseDtsJob operation.</para>
+        /// <para>Starts a reverse task that is created by calling the CreateReverseDtsJob operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</para>
+        /// <para>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21016,7 +21365,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a change tracking task.</para>
+        /// <para>Starts the channel of a change tracking instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21074,7 +21423,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a change tracking task.</para>
+        /// <para>Starts the channel of a change tracking instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21132,7 +21481,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a change tracking task.</para>
+        /// <para>Starts the channel of a change tracking instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21150,7 +21499,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a change tracking task.</para>
+        /// <para>Starts the channel of a change tracking instance. This is a legacy operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21328,7 +21677,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a cluster.</para>
+        /// <para>Releases a cluster by calling the StopDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21390,7 +21739,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a cluster.</para>
+        /// <para>Releases a cluster by calling the StopDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21452,7 +21801,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a cluster.</para>
+        /// <para>Releases a cluster by calling the StopDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21470,7 +21819,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a cluster.</para>
+        /// <para>Releases a cluster by calling the StopDedicatedCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21488,7 +21837,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21550,7 +21899,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21612,7 +21961,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21630,7 +21979,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Stops a data migration, data synchronization, or change tracking task by calling StopDtsJob.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21648,7 +21997,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// <para>Stops multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21702,7 +22051,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// <para>Stops multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21756,7 +22105,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// <para>Stops multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21774,7 +22123,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// <para>Stops multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21792,7 +22141,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// <para>Ends a data migration task that is in a migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21854,7 +22203,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// <para>Ends a data migration task that is in a migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21916,7 +22265,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// <para>Ends a data migration task that is in a migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21934,7 +22283,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// <para>Ends a data migration task that is in a migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21952,7 +22301,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22022,7 +22371,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22092,7 +22441,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22110,7 +22459,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// <para>Queries the number of tables migrated in a Data Transmission Service (DTS) data migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22128,7 +22477,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22195,7 +22544,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22262,7 +22611,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22285,7 +22634,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// <para>Suspends a data migration or synchronization task. Change tracking tasks are not supported. Change tracking instances do not support the suspend capability. Do not call this operation on change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22308,7 +22657,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// <para>Suspends multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22362,7 +22711,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// <para>Suspends multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22416,7 +22765,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// <para>Suspends multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22434,7 +22783,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// <para>Suspends multiple DTS tasks at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22452,7 +22801,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration task.</para>
+        /// <para>Suspends a data migration task that is in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22514,7 +22863,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration task.</para>
+        /// <para>Suspends a data migration task that is in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22576,7 +22925,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration task.</para>
+        /// <para>Suspends a data migration task that is in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22594,7 +22943,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data migration task.</para>
+        /// <para>Suspends a data migration task that is in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22612,17 +22961,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data synchronization task.</para>
+        /// <para>Pauses a data synchronization task that is in the Synchronizing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the synchronization task must be in the Synchronizing state.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
-        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
-        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// <item><description>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</description></item>
+        /// <item><description>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22685,17 +23036,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data synchronization task.</para>
+        /// <para>Pauses a data synchronization task that is in the Synchronizing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the synchronization task must be in the Synchronizing state.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
-        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
-        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// <item><description>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</description></item>
+        /// <item><description>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22758,17 +23111,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data synchronization task.</para>
+        /// <para>Pauses a data synchronization task that is in the Synchronizing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the synchronization task must be in the Synchronizing state.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
-        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
-        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// <item><description>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</description></item>
+        /// <item><description>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22787,17 +23142,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses a data synchronization task.</para>
+        /// <para>Pauses a data synchronization task that is in the Synchronizing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, the synchronization task must be in the Synchronizing state.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, the data synchronization task must be in the Synchronizing state.</description></item>
-        /// <item><description>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</description></item>
-        /// <item><description>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</description></item>
+        /// <item><description>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</description></item>
+        /// <item><description>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22816,7 +23173,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
+        /// <para>Performs physical migration of an MSSQL database to Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22874,7 +23231,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
+        /// <para>Performs physical migration of an MSSQL database to Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22932,7 +23289,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
+        /// <para>Performs physical migration of an MSSQL database to Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22950,7 +23307,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
+        /// <para>Performs physical migration of an MSSQL database to Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22968,7 +23325,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// <para>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23038,7 +23395,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// <para>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23108,7 +23465,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// <para>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23126,7 +23483,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// <para>Passes the connection information of the new database to DTS after a primary/secondary switchover. DTS restarts data synchronization from the checkpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23144,18 +23501,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
-        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can add up to 20 tags to an instance.</description></item>
-        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
+        /// <item><description>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</description></item>
+        /// <item><description>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</description></item>
+        /// <item><description>If the instance already has a tag with the same key, the existing tag is overwritten.</description></item>
+        /// <item><description>You can attach up to 20 tags to each instance.</description></item>
+        /// <item><description>You can invoke the operation to attach tags to up to 50 instances at a time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23214,18 +23571,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
-        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can add up to 20 tags to an instance.</description></item>
-        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
+        /// <item><description>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</description></item>
+        /// <item><description>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</description></item>
+        /// <item><description>If the instance already has a tag with the same key, the existing tag is overwritten.</description></item>
+        /// <item><description>You can attach up to 20 tags to each instance.</description></item>
+        /// <item><description>You can invoke the operation to attach tags to up to 50 instances at a time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23284,18 +23641,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
-        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can add up to 20 tags to an instance.</description></item>
-        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
+        /// <item><description>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</description></item>
+        /// <item><description>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</description></item>
+        /// <item><description>If the instance already has a tag with the same key, the existing tag is overwritten.</description></item>
+        /// <item><description>You can attach up to 20 tags to each instance.</description></item>
+        /// <item><description>You can invoke the operation to attach tags to up to 50 instances at a time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23314,18 +23671,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Binds tags to one or more data migration, synchronization, and change tracking instances by calling the TagResources operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
-        /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can add up to 20 tags to an instance.</description></item>
-        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
+        /// <item><description>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</description></item>
+        /// <item><description>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</description></item>
+        /// <item><description>If the instance already has a tag with the same key, the existing tag is overwritten.</description></item>
+        /// <item><description>You can attach up to 20 tags to each instance.</description></item>
+        /// <item><description>You can invoke the operation to attach tags to up to 50 instances at a time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23344,8 +23701,20 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// <para>Upgrades or downgrades the specifications of a DTS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Downgrading DTS instance specifications is no longer supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
@@ -23406,8 +23775,20 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// <para>Upgrades or downgrades the specifications of a DTS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Downgrading DTS instance specifications is no longer supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
@@ -23468,8 +23849,20 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// <para>Upgrades or downgrades the specifications of a DTS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Downgrading DTS instance specifications is no longer supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
@@ -23486,8 +23879,20 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// <para>Upgrades or downgrades the specifications of a DTS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Downgrading DTS instance specifications is no longer supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
@@ -23504,15 +23909,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// <para>Transforms the payment method of a DTS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
         /// <list type="bullet">
-        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
-        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
+        /// <item><description>To avoid resource waste, confirm the payment method transformation before you perform the operation.</description></item>
+        /// <item><description>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>Serverless instances do not support payment method transformation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23591,15 +23999,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// <para>Transforms the payment method of a DTS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
         /// <list type="bullet">
-        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
-        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
+        /// <item><description>To avoid resource waste, confirm the payment method transformation before you perform the operation.</description></item>
+        /// <item><description>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>Serverless instances do not support payment method transformation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23678,15 +24089,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// <para>Transforms the payment method of a DTS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
         /// <list type="bullet">
-        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
-        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
+        /// <item><description>To avoid resource waste, confirm the payment method transformation before you perform the operation.</description></item>
+        /// <item><description>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>Serverless instances do not support payment method transformation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23705,15 +24119,18 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// <para>Transforms the payment method of a DTS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+        /// &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
         /// <list type="bullet">
-        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
-        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
+        /// <item><description>To avoid resource waste, confirm the payment method transformation before you perform the operation.</description></item>
+        /// <item><description>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>Serverless instances do not support payment method transformation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23732,13 +24149,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Unbinds tags from data migration, synchronization, and change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// <para>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23801,13 +24218,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Unbinds tags from data migration, synchronization, and change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// <para>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23870,13 +24287,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Unbinds tags from data migration, synchronization, and change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// <para>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23895,13 +24312,13 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// <para>Unbinds tags from data migration, synchronization, and change tracking instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</para>
+        /// <para>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23920,18 +24337,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// <para>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-        /// When you call this operation, take note of the following information:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+        /// Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
-        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
-        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
-        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// <item><description>The database type of both the source instance and the destination instance of the data synchronization node must be <b>MySQL</b>.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization node must be <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization node must be in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23986,18 +24404,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// <para>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-        /// When you call this operation, take note of the following information:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+        /// Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
-        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
-        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
-        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// <item><description>The database type of both the source instance and the destination instance of the data synchronization node must be <b>MySQL</b>.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization node must be <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization node must be in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24052,18 +24471,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// <para>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-        /// When you call this operation, take note of the following information:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+        /// Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
-        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
-        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
-        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// <item><description>The database type of both the source instance and the destination instance of the data synchronization node must be <b>MySQL</b>.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization node must be <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization node must be in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24082,18 +24502,19 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// <para>Upgrades the synchronization topology of a DTS data synchronization instance from one-way synchronization to two-way synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-        /// When you call this operation, take note of the following information:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+        /// Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>The source and destination databases of the data synchronization task are both <b>MySQL</b> databases.</description></item>
-        /// <item><description>The synchronization topology of the data synchronization task is <b>one-way synchronization</b>.</description></item>
-        /// <item><description>The data synchronization task is in the <b>Synchronizing</b> state.</description></item>
-        /// <item><description>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</description></item>
+        /// <item><description>The database type of both the source instance and the destination instance of the data synchronization node must be <b>MySQL</b>.</description></item>
+        /// <item><description>The synchronization topology of the data synchronization node must be <b>one-way synchronization</b>.</description></item>
+        /// <item><description>The data synchronization node must be in the <b>Synchronizing</b> state.</description></item>
+        /// <item><description>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24112,13 +24533,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
+        /// <para>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+        /// &lt;props=&quot;intl&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</para>
+        /// <remarks>
+        /// <para>If the <b>source or destination database</b> is an <b>Alibaba Cloud database instance</b> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <b>self-managed database hosted on ECS</b>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <b>Authorize Whitelist and Proceed to Next Step</b> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24220,13 +24644,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
+        /// <para>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+        /// &lt;props=&quot;intl&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</para>
+        /// <remarks>
+        /// <para>If the <b>source or destination database</b> is an <b>Alibaba Cloud database instance</b> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <b>self-managed database hosted on ECS</b>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <b>Authorize Whitelist and Proceed to Next Step</b> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24328,13 +24755,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
+        /// <para>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+        /// &lt;props=&quot;intl&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</para>
+        /// <remarks>
+        /// <para>If the <b>source or destination database</b> is an <b>Alibaba Cloud database instance</b> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <b>self-managed database hosted on ECS</b>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <b>Authorize Whitelist and Proceed to Next Step</b> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24352,13 +24782,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
-        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
+        /// <para>Queries the IP addresses of DTS servers by calling the WhiteIpList operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>WhiteIpList</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+        /// &lt;props=&quot;intl&quot;&gt;If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party ApsaraDB database</b>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</para>
+        /// <remarks>
+        /// <para>If the <b>source or destination database</b> is an <b>Alibaba Cloud database instance</b> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <b>self-managed database hosted on ECS</b>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <b>Authorize Whitelist and Proceed to Next Step</b> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">

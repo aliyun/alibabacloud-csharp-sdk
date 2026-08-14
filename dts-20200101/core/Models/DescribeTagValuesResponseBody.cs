@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The start page of the returned pages.</para>
+        /// <para>The page number of the returned tag values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tag values returned on each page.</para>
+        /// <para>The number of tag values returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD110813-9AD6-5F07-BFC8-4C841309****</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tag values that are associated with the tag key.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("TagValues")]
         [Validation(Required=false)]
         public List<string> TagValues { get; set; }
 
         /// <summary>
-        /// <para>The total number of tag values that are associated with the tag key.</para>
+        /// <para>The total number of tag values that correspond to the tag key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

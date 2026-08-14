@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SkipFullJobTableRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</para>
+        /// <para>The ID of the data migration, synchronization, or change tracking task. This parameter is deprecated and no longer takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>l3m1213ye7l****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary key.</para>
+        /// <para>The primary key ID of JobProgress. Each object in a full data migration task corresponds to a JobProgress entry. Specify this parameter to identify the table to skip.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobProgressId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only zero-extract, transform, load (ETL) integration tasks. Valid values:</para>
+        /// <para>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes.</description></item>
-        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: The node is a zero-ETL node.</description></item>
+        /// <item><description><b>false</b>: The node is not a zero-ETL node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SwitchPhysicalDtsJobToCloudRequest : TeaModel {
         /// <summary>
-        /// <para>Migration, synchronization, or subscription instance ID.</para>
+        /// <para>The ID of the migration, synchronization, or change tracking instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl3m1213ye7l****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Data migration or synchronization instance ID, which can be queried by calling the <b>describedtsjobs</b> interface.</para>
+        /// <para>The ID of the data migration or synchronization task. You can call the <b>DescribeDtsJobs</b> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>l5512es7w15****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>Region ID. Pass this parameter to specify the region where the instance is located. For more details, see the list of supported regions.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz4us4iruleja</para>
@@ -50,12 +50,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Synchronization direction, values: - <b>Forward</b>: Forward. - <b>Reverse</b>: Reverse.</para>
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
+        /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>Forward</b>. - <b>Reverse</b> can only be passed when the topology of the data synchronization instance is bidirectional, to release the reverse synchronization link.</description></item>
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can set this parameter to <b>Reverse</b> to release the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Forward</para>

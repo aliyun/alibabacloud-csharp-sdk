@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The type of the tag key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b>: The tag key is created by users.</description></item>
-        /// <item><description><b>System</b>: The tag key is created by the system.</description></item>
+        /// <item><description><b>Custom</b>: a user-added tag key.</description></item>
+        /// <item><description><b>System</b>: a system-created tag key.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.</para>
+        /// <para>If this parameter is left empty, all tag keys are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
+        /// <para>The key of the tag.</para>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.</para>
+        /// <para>The page number. Specifies the page to return when a tag key has multiple tag values. The value must be a positive integer that does not exceed the maximum value of the Integer data type. This parameter is typically used together with PageSize. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tag values to return each time for a tag key that has multiple values. Default value: 20.</para>
+        /// <para>The number of tag values to return per page when a tag key has multiple tag values. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The ID of the data migration, data synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
         /// <remarks>
-        /// <para> If this parameter is left empty, the values of all tag keys of the current user are returned.</para>
+        /// <para>If this parameter is left empty, all tag values of the specified tag key for the current account are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>ALIYUN::DTS::INSTANCE</b>.</para>
+        /// <para>The resource type defined by the system. Set the value to <b>ALIYUN::DTS::INSTANCE</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN::DTS::INSTANCE</para>

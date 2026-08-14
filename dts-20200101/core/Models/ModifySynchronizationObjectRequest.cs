@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifySynchronizationObjectRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -46,14 +46,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>This parameter is required only when the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</para>
+        /// <para>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobId { get; set; }
 
         /// <summary>
-        /// <para>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</para>
+        /// <para>The modified synchronization objects. The value is a JSON string that supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

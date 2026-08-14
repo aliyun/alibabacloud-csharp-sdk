@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsServiceLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dynamic error code. This parameter will be removed soon.</para>
+        /// <para>The dynamic error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DtsJobId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries returned per page.</para>
+        /// <para>The number of log entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F87DF250-952C-47FE-8A02-69414FAA****</para>
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the logs.</para>
+        /// <para>The task logs details of the node.</para>
         /// </summary>
         [NameInMap("ServiceLogContexts")]
         [Validation(Required=false)]
         public List<DescribeDtsServiceLogResponseBodyServiceLogContexts> ServiceLogContexts { get; set; }
         public class DescribeDtsServiceLogResponseBodyServiceLogContexts : TeaModel {
             /// <summary>
-            /// <para>The log content.</para>
+            /// <para>The specific log information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Statistics: generator = 369173; collector = 470109; replicator = 2470; ping = 2/2/2; execute = 29/29/29; rt = 29/29/29; state = IDLE; queries = -1; exceptions = {connects = 0, replicates = 0}; infos = {}</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The log level.</para>
+            /// <para>The status of the log entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the log was collected, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-13T09:13:39.443+00:00</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of logs that meet the query conditions.</para>
+        /// <para>The total number of log entries that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35</para>

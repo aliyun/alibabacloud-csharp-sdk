@@ -86,16 +86,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to query the details of incremental data migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: no</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>Default value: <b>false</b></para>
-        /// </remarks>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -105,7 +96,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -115,7 +106,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -125,7 +116,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The maximum number of migration instances that can be displayed on one page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -135,16 +126,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the details of full data migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: no</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>Default value: <b>false</b></para>
-        /// </remarks>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AE3CD0B-4148-426F-A90E-952467CC****</para>
@@ -234,7 +216,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -244,7 +226,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

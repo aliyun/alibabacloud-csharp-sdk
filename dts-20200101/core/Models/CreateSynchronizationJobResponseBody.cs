@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9056C8B0-5799-493A-9655-70F607B8****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance.</para>
+        /// <para>The instance ID of the data synchronization instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtshvj11k25255****</para>

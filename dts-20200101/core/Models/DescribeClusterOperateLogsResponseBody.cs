@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeClusterOperateLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned by the backend service. The number is incremented.</para>
+        /// <para>The backend error code, which is incrementally numeric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the operation logs.</para>
+        /// <para>The monitoring statistics information.</para>
         /// </summary>
         [NameInMap("DataPoints")]
         [Validation(Required=false)]
         public List<DescribeClusterOperateLogsResponseBodyDataPoints> DataPoints { get; set; }
         public class DescribeClusterOperateLogsResponseBodyDataPoints : TeaModel {
             /// <summary>
-            /// <para>Other description of the operation.</para>
+            /// <para>The additional remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The primary key of the log table.</para>
+            /// <para>The primary key of the log record table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>237827</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the operation is recorded. The value is in the UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642077211574</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? LogDatetime { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter after the operation if the operation is an UPDATE operation.</para>
+            /// <para>The new parameter value when the operation type is update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>105</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string NewValue { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter before the operation if the operation is an UPDATE operation.</para>
+            /// <para>The old parameter value when the operation type is update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OldValue { get; set; }
 
             /// <summary>
-            /// <para>The type of the operation.</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>modify-oversold-ratio</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OperationName { get; set; }
 
             /// <summary>
-            /// <para>The user who performed the operation.</para>
+            /// <para>The operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OperationUser { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. A value of <b>1</b> indicates that the request was successful.</para>
+            /// <para>The call result. Indicates whether the call was successful. A value of <b>1</b> indicates success.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Type</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned for an exception.</para>
+        /// <para>The HTTP status code corresponding to the exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>621BB4F8-3016-4FAA-8D5A-5D3163CC****</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The call result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The subscription duration of the DTS instance after renewal. Default value: 1.</para>
+        /// <para>The subscription duration of the renewed instance. Default value: 1.</para>
         /// <list type="bullet">
         /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values are <b>1 to 5</b>.</description></item>
         /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values are <b>1 to 60</b>.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string BuyCount { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the DTS instance. Set the value to <b>PREPAY</b>, which specifies the subscription billing method.</para>
+        /// <para>The billing method. Set the value to <b>PREPAY</b>, which indicates the subscription billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the data synchronization or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the DTS instance after renewal. Valid values:</para>
+        /// <para>The billing method for the renewal instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b> (default)</description></item>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

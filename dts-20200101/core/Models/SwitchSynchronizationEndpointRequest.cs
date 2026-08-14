@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public SwitchSynchronizationEndpointRequestEndpoint Endpoint { get; set; }
         public class SwitchSynchronizationEndpointRequestEndpoint : TeaModel {
             /// <summary>
-            /// <para>The IP address of the database.</para>
+            /// <para>新数据库的IP地址。</para>
             /// <remarks>
-            /// <para> You must specify the IP address only if the <b>Endpoint.InstanceType</b> parameter is set to <b>Express</b>.</para>
+            /// <para>当<b>Endpoint.InstanceType</b>取值为<b>Express</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -27,12 +27,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECS instance or the virtual private cloud (VPC).</para>
+            /// <para>ECS或专有网络的实例ID。</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>Endpoint.InstanceType</b>取值为<b>ECS</b>时，本参数需传入ECS实例的ID。</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If the <b>Endpoint.InstanceType</b> parameter is set to <b>ECS</b>, you must specify the ID of the ECS instance.</description></item>
-            /// <item><description>If the <b>Endpoint.InstanceType</b> parameter is set to <b>Express</b>, you must specify the ID of the VPC.</description></item>
+            /// <item><description>当<b>Endpoint.InstanceType</b>取值为<b>Express</b>时，本参数需传入专有网络ID。</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -44,11 +46,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the database. Valid values:</para>
+            /// <para>新数据库所属的实例类型，取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-            /// <item><description><b>ECS</b>: self-managed database that is hosted on ECS</description></item>
-            /// <item><description><b>Express</b>: self-managed database that is connected over Express Connect</description></item>
+            /// <item><description><b>LocalInstance</b>：有公网IP的自建数据库；</description></item>
+            /// <item><description><b>ECS</b>：ECS上的自建数据库。</description></item>
+            /// <item><description><b>Express</b>：通过专线接入的自建数据库。</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The service port number of the database.</para>
+            /// <para>新的数据库服务端口。</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,10 +73,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:</para>
+            /// <para>待调整连接信息的实例，取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>Source</b></description></item>
-            /// <item><description><b>Destination</b></description></item>
+            /// <item><description><b>Source</b>：源实例。</description></item>
+            /// <item><description><b>Destination</b>：目标实例。</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public SwitchSynchronizationEndpointRequestSourceEndpoint SourceEndpoint { get; set; }
         public class SwitchSynchronizationEndpointRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.</para>
+            /// <para>当源实例与目标实例所属阿里云账号不同时，您需要传入该参数指定源实例的所属阿里云账号的ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>14069264****</para>
@@ -102,9 +104,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OwnerID { get; set; }
 
             /// <summary>
-            /// <para>The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</para>
+            /// <para>当源实例与目标实例所属阿里云账号不同时，需传入该参数，来指定源实例的授权角色，以允许目标实例阿里云账号访问源实例的实例信息。</para>
             /// <remarks>
-            /// <para> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+            /// <para>角色所需的权限及授权方式，请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The Alibaba Cloud account ID. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -153,13 +155,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>Forward</b>.</para>
+        /// <para>Default value: <b>Forward</b>. The value <b>Reverse</b> takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization.</para>
         /// </remarks>
-        /// <para>The value <b>Reverse</b> takes effect only if the topology of the data synchronization instance is two-way synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Forward</para>
@@ -169,7 +170,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</para>
+        /// <para>Instance ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

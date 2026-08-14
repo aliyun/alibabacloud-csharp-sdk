@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConnectionStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The connectivity of DTS servers to the destination database.</para>
+        /// <para>The connectivity test result of the destination database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;PolarDB_o JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A47C784-70EF-4111-8677-369CAA00****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The connectivity of DTS servers to the source database.</para>
+        /// <para>The connectivity test result of the source database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;Oracle JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: false       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</para>

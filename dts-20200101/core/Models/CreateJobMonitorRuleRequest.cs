@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The threshold for triggering an alert.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Type</b> is set to <b>delay</b>, the threshold must be an integer in units of seconds. You can specify the threshold based on your business requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</description></item>
-        /// <item><description>If <b>Type</b> is set to <b>full_timeout</b>, the threshold must be an integer in units of hours.</description></item>
+        /// <item><description><para>If <b>Type</b> is set to <b>delay</b>, the unit is seconds and the value must be an integer. Set the threshold based on your business requirements. A value of 10 or greater is recommended to avoid alert fluctuations caused by network issues or database loads.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Type</b> is set to <b>full_timeout</b>, the unit is hours and the value must be an integer.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if <b>Type</b> is set to <b>delay</b> or <b>full_timeout</b> and <b>State</b> is set to <b>Y</b>.</para>
+        /// <para>This parameter is required when <b>Type</b> is set to <b>delay</b> or <b>full_timeout</b> and <b>State</b> is set to <b>Y</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DelayRuleTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the data migration, data synchronization, or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,9 +50,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? NoticeValue { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of the incremental data verification task. Unit: minutes.</para>
+        /// <para>The statistical period of the incremental verification task. Unit: minutes.</para>
         /// <remarks>
-        /// <para>Valid values: 1, 3, 5, and 30.</para>
+        /// <para>Valid values: 1, 5, 10, and 30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,14 +63,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).</para>
+        /// <para>The mobile phone numbers of alert contacts, separated by commas (,).</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is supported only on the China site (aliyun.com) and only for the Chinese mainland mobile phone numbers. A maximum of 10 mobile phone numbers can be specified.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</para>
-        /// </description></item>
-        /// <item><description><para>Users of the international site (alibabacloud.com) cannot receive notifications on alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</para>
-        /// </description></item>
+        /// <item><description>The international site does not support SMS-based alerting. You can only <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks through the CloudMonitor monitoring platform</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -101,8 +103,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to enable the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: enables the alert rule.</description></item>
-        /// <item><description><b>N</b>: disables the alert rule.</description></item>
+        /// <item><description><b>Y</b>: Enable the alert rule.</description></item>
+        /// <item><description><b>N</b>: Disable the alert rule.</description></item>
         /// </list>
         /// <para>Default value: <b>Y</b>.</para>
         /// 
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The number of statistical periods of the incremental data verification task.</para>
+        /// <para>The number of statistical periods for the incremental verification task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -124,13 +126,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? Times { get; set; }
 
         /// <summary>
-        /// <para>The metric that is used to monitor the task. Valid values:</para>
+        /// <para>The type of the alert metric. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>delay</b>: the <b>Latency</b> metric.</description></item>
-        /// <item><description><b>error</b>: the <b>Status</b> metric.</description></item>
-        /// <item><description><b>full_timeout</b>: the <b>Full Timeout</b> metric.</description></item>
+        /// <item><description><b>error</b>: the <b>Migration Status</b> metric.</description></item>
+        /// <item><description><b>full_timeout</b>: the <b>Full Migration Duration</b> metric.</description></item>
         /// </list>
-        /// <para>Default value: <b>error</b>. You must manually set this value.</para>
+        /// <para>Default value: <b>error</b>. This parameter must be manually specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>delay</para>

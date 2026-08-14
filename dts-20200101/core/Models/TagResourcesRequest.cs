@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the Data Transmission Service (DTS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the data migration, data synchronization, or change tracking instances. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance IDs.</para>
+        /// <para>The ID of the data migration, synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query instance IDs.</para>
         /// <remarks>
-        /// <para>N specifies the serial number of the instance. For example, ResourceId.1 specifies the ID of the first instance and ResourceId.2 specifies the ID of the second instance.</para>
+        /// <para>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to be added to the instances.</para>
+        /// <para>The list of tags (key-value pairs) to bind.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the key of the first tag, and Tag.1.Key specifies the key of the second tag.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag.</para>
-            /// </description></item>
-            /// <item><description><para>The tag key cannot be an empty string.</para>
-            /// </description></item>
+            /// <item><description>Empty strings are not allowed.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the value of the first tag, and Tag.1.Value specifies the value of the second tag.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be an empty string.</para>
-            /// </description></item>
+            /// <item><description>Empty strings are allowed.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

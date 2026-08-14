@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TransferInstanceClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the DTS instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// <item><description><b>PREPAY</b>: subscription.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The error code that is returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the value of the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the %<b>s</b> variable in the <b>ErrMessage</b> parameter.</para>
         /// <remarks>
-        /// <para>For example, if the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified value of the <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the DTS instance.</para>
+        /// <para>The time when the instance expires.</para>
         /// <remarks>
-        /// <para>This parameter is returned only if the value of the ChargeType parameter is <b>PREPAY</b>.</para>
+        /// <para>This parameter is returned only when ChargeType is set to <b>PREPAY</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsr4yr723m199****</para>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

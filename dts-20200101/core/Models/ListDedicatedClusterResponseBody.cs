@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// <para>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of records that can be displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>621BB4F8-3016-4FAA-8D5A-5D3163CC****</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of clusters that meet the query condition.</para>
+        /// <para>The total number of clusters that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

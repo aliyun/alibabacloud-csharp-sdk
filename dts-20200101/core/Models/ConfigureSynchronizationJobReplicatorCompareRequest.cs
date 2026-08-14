@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureSynchronizationJobReplicatorCompareRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -56,14 +56,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>This parameter is required only when the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You need to specify this parameter only if the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,10 +87,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable image matching. Valid values:</para>
+        /// <para>Specifies whether to enable full image matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables image matching</description></item>
-        /// <item><description><b>false</b>: disables image matching</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

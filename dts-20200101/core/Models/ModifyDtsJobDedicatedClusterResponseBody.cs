@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobDedicatedClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned by the backend service.</para>
+        /// <para>The error code returned by the backend. The value is incremental.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace %s in <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message used to replace the %s variable in the ErrMessage parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Type</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>

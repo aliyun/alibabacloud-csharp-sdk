@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSynchronizationJobRequestDestinationEndpoint DestinationEndpoint { get; set; }
         public class ConfigureSynchronizationJobRequestDestinationEndpoint : TeaModel {
             /// <summary>
-            /// <para>The name of the database to which the synchronization object in the destination instance belongs.</para>
+            /// <para>目标实例中的同步对象所属数据库名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestdata</para>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DataBaseName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the destination database.</para>
+            /// <para>目标库的IP地址。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>Express</b>, <b>dg</b>, or <b>cen</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数必须传入本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination instance.</para>
+            /// <para>同步目标实例的实例ID</para>
             /// <remarks>
-            /// <para> If the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b> or <b>DataHub</b>, you must specify the name of the MaxCompute project or the DataHub project.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>MaxCompute</b>或<b>DataHub</b>时，本参数传入MaxCompute实例或DataHub的Project名称。
+            /// 当目标实例为阿里云分析型数据库MySQL版时，传入分析型数据库MySQL版的集群ID。</para>
             /// </remarks>
-            /// <para>If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp1r46452ai50****</para>
@@ -51,20 +51,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the destination instance. Valid values:</para>
+            /// <para>目标实例类型，取值为：</para>
             /// <list type="bullet">
-            /// <item><description><b>Redis</b>: ApsaraDB for Redis instance</description></item>
-            /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster or PolarDB O Edition cluster</description></item>
-            /// <item><description><b>ECS</b>: self-managed database that is hosted on ECS</description></item>
-            /// <item><description><b>Express</b>: self-managed database that is connected over Express Connect</description></item>
-            /// <item><description><b>DataHub</b>: DataHub project</description></item>
-            /// <item><description><b>MaxCompute</b>: MaxCompute project</description></item>
-            /// <item><description><b>AnalyticDB</b>: AnalyticDB for MySQL cluster V3.0 or V2.0</description></item>
-            /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL instance</description></item>
+            /// <item><description><b>Redis</b>：阿里云Redis实例。</description></item>
+            /// <item><description><b>RDS</b>：阿里云RDS实例。</description></item>
+            /// <item><description><b>PolarDB</b>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</description></item>
+            /// <item><description><b>ECS</b>：ECS上的自建数据库。</description></item>
+            /// <item><description><b>Express</b>：通过专线接入的本地数据库。</description></item>
+            /// <item><description><b>DataHub</b>：阿里云DataHub实例。</description></item>
+            /// <item><description><b>MaxCompute</b>：阿里云MaxCompute实例。</description></item>
+            /// <item><description><b>AnalyticDB</b>：云原生数据仓库AnalyticDB MySQL  3.0和2.0版本。</description></item>
+            /// <item><description><b>Greenplum</b>：云原生数据仓库ADB PostgreSQL版（原分析型数据库PostgreSQL版）。</description></item>
             /// </list>
             /// <remarks>
-            /// <para> The default value is <b>RDS</b>.</para>
+            /// <para>默认取值为<b>RDS</b>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -75,12 +75,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The password of the destination database account.</para>
+            /// <para>目标库数据库账号密码。</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>, you must specify the DestinationEndpoint.Password parameter.</description></item>
+            /// <item><description>当<b>DestinationEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数必须传入。</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Test654321</para>
@@ -90,9 +90,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The service port number of the destination database.</para>
+            /// <para>目标库的数据库服务端口。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -103,14 +103,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The database account of the destination database.</para>
+            /// <para>目标库的数据库账号。</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</description></item>
-            /// <item><description>If the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>, you must specify the DestinationEndpoint.UserName parameter.</description></item>
-            /// <item><description>If the <b>DestinationEndpoint.InstanceType</b> parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and <b>DestinationEndpoint.Password</b> parameters.</description></item>
-            /// <item><description>If the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>Redis</b>, you do not need to specify the DestinationEndpoint.UserName parameter.</description></item>
+            /// <item><description>当<b>DestinationEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数必须传入。</description></item>
+            /// <item><description>当<b>DestinationEndpoint.InstanceType</b>取值为RDS且数据库版本为MySQL 5.5或MySQL 5.6，无需传入本参数和<b>DestinationEndpoint.Password</b>参数。</description></item>
+            /// <item><description>当<b>DestinationEndpoint.InstanceType</b>取值为<b>Redis</b>时，无需传入本参数。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,9 +129,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSynchronizationJobRequestPartitionKey PartitionKey { get; set; }
         public class ConfigureSynchronizationJobRequestPartitionKey : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>设置增量日志表是否包含以增量更新时间对应日期信息定义的分区，取值：<b>true</b>或<b>false</b>。</para>
             /// <remarks>
-            /// <para> This parameter is available only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>参数取值为<b>Maxcompute</b>时，本参数才可用。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -140,9 +142,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? ModifyTimeDay { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>设置增量日志表是否包含以增量更新时间对应小时信息定义的分区，取值：<b>true</b>或<b>false</b>。</para>
             /// <remarks>
-            /// <para> This parameter is available only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>参数取值为<b>Maxcompute</b>时，本参数才可用。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -153,9 +155,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? ModifyTimeHour { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>设置增量日志表是否包含以增量更新时间对应分钟信息定义的分区，取值：<b>true</b>或<b>false</b>。</para>
             /// <remarks>
-            /// <para> This parameter is available only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>参数取值为<b>Maxcompute</b>时，本参数才可用。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -166,9 +168,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? ModifyTimeMinute { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>设置增量日志表是否包含以增量更新时间对应月份信息定义的分区，取值：<b>true</b>或<b>false</b>。</para>
             /// <remarks>
-            /// <para> This parameter is available only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>参数取值为<b>Maxcompute</b>时，本参数才可用。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -179,9 +181,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? ModifyTimeMonth { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>设置增量日志表是否包含以增量更新时间对应年份信息定义的分区，取值：<b>true</b>或<b>false</b>。</para>
             /// <remarks>
-            /// <para> This parameter is available only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>MaxCompute</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>参数取值为<b>Maxcompute</b>时，本参数才可用。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -198,7 +200,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureSynchronizationJobRequestSourceEndpoint SourceEndpoint { get; set; }
         public class ConfigureSynchronizationJobRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The name of the database to which the synchronization object in the source instance belongs.</para>
+            /// <para>源实例中的同步对象所属数据库名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestdata</para>
@@ -208,9 +210,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the source database.</para>
+            /// <para>源库的IP地址。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>.</para>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -221,7 +223,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source instance.</para>
+            /// <para>源实例ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp1i99e8l7913****</para>
@@ -231,18 +233,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the source instance. Valid values:</para>
+            /// <para>源实例类型，取值为：</para>
             /// <list type="bullet">
-            /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description><b>Redis</b>: ApsaraDB for Redis instance</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster or PolarDB O Edition cluster</description></item>
-            /// <item><description><b>ECS</b>: self-managed database that is hosted on Elastic Compute Service (ECS)</description></item>
-            /// <item><description><b>Express</b>: self-managed database that is connected over Express Connect</description></item>
-            /// <item><description><b>dg</b>: self-managed database that is connected over Database Gateway</description></item>
-            /// <item><description><b>cen</b>: self-managed database that is connected over Cloud Enterprise Network (CEN)</description></item>
+            /// <item><description><b>RDS</b>：阿里云RDS实例。</description></item>
+            /// <item><description><b>Redis</b>：阿里云Redis实例。</description></item>
+            /// <item><description><b>PolarDB</b>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</description></item>
+            /// <item><description><b>ECS</b>：ECS上的自建数据库。</description></item>
+            /// <item><description><b>Express</b>：通过专线接入的自建数据库。</description></item>
+            /// <item><description><b>dg</b>：通过数据库网关DG接入的自建数据库。</description></item>
+            /// <item><description><b>cen</b>：通过云企业网CEN接入的自建数据库。</description></item>
             /// </list>
             /// <remarks>
-            /// <para> The default value is <b>RDS</b>.</para>
+            /// <para>默认取值为<b>RDS</b>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -253,9 +255,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the source RDS instance.</para>
+            /// <para>源RDS实例所属的阿里云账号ID。</para>
             /// <remarks>
-            /// <para> You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the <b>SourceEndpoint.Role</b> parameter.</para>
+            /// <para>传入本参数即代表执行跨阿里云账号的数据同步，同时您还需要传入<b>SourceEndpoint.Role</b>参数。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -266,9 +268,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OwnerID { get; set; }
 
             /// <summary>
-            /// <para>The password of the source database account.</para>
+            /// <para>源库数据库账号密码。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>.</para>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -279,9 +281,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The service port number of the source database.</para>
+            /// <para>源库的数据库服务端口。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>.</para>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -292,9 +294,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</para>
+            /// <para>源实例所属云账号配置的角色名称。</para>
             /// <remarks>
-            /// <para> You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+            /// <para>执行跨阿里云账号的数据同步时须传入本参数，该角色所需的权限及授权方式请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -305,13 +307,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The database account of the source database.</para>
+            /// <para>源库的数据库账号。</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>SourceEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>Express</b>、<b>dg</b>或<b>cen</b>时，本参数才可用且必须传入。</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>You must specify this parameter only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>Express</b>, <b>dg</b>, or <b>cen</b>.</description></item>
-            /// <item><description>If the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>Redis</b>, you do not need to specify the database account.</description></item>
-            /// <item><description>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</description></item>
+            /// <item><description>当<b>SourceEndpoint.InstanceType</b>取值为<b>Redis</b>时，本参数无需传入。</description></item>
+            /// <item><description>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -324,7 +328,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -346,11 +350,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to perform initial full data synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>true</b>.</para>
+        /// <para>Default value: <b>true</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -362,9 +366,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? DataInitialization { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</para>
+        /// <para>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</para>
         /// <remarks>
-        /// <para> This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances</a>.</para>
+        /// <para>For example, you can use this parameter for data synchronization between ApsaraDB for Redis Enhanced Edition (Tair) instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI to configure one-way or bidirectional data synchronization between ApsaraDB for Redis Enhanced Edition instances</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -379,7 +383,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -389,7 +393,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -401,11 +405,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to perform initial schema synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>true</b>.</para>
+        /// <para>Default value: <b>true</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -419,14 +423,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>The value <b>Reverse</b> takes effect only if the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only if you set it to <b>Reverse</b> and the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -448,9 +454,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data synchronization task.</para>
+        /// <para>The name of the synchronization task.</para>
         /// <remarks>
-        /// <para> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</para>
+        /// <para>Specify a descriptive name that makes it easy to identify the task. It does not need to be unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -461,7 +467,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobName { get; set; }
 
         /// <summary>
-        /// <para>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</para>
+        /// <para>The objects to be synchronized. The value is a JSON string and supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of data synchronization instances displayed on one page.</para>
+        /// <para>The number of synchronization instances displayed on one page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1413460B-138A-48D1-836C-B24EDDC1****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,23 +70,23 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The status of the data synchronization tasks.</para>
+        /// <para>The status list of synchronization jobs.</para>
         /// </summary>
         [NameInMap("SynchronizationJobListStatusList")]
         [Validation(Required=false)]
         public List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> SynchronizationJobListStatusList { get; set; }
         public class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList : TeaModel {
             /// <summary>
-            /// <para>The details of data synchronization tasks in each direction.</para>
+            /// <para>The list of synchronization direction details.</para>
             /// </summary>
             [NameInMap("SynchronizationDirectionInfoList")]
             [Validation(Required=false)]
             public List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList> SynchronizationDirectionInfoList { get; set; }
             public class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList : TeaModel {
                 /// <summary>
-                /// <para>The UNIX timestamp generated when the latest data record was synchronized.</para>
+                /// <para>The timestamp of the latest synchronized data, in UNIX timestamp format.</para>
                 /// <remarks>
-                /// <para> You can use a search engine to obtain a UNIX timestamp converter.</para>
+                /// <para>You can use a search engine to find a UNIX timestamp converter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -97,18 +97,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public string Checkpoint { get; set; }
 
                 /// <summary>
-                /// <para>The status of the data synchronization task in this direction. Valid values:</para>
+                /// <para>The synchronization status of the synchronization instance in this direction. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-                /// <item><description><b>Prechecking</b>: The task is being prechecked.</description></item>
-                /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-                /// <item><description><b>Initializing</b>: The task is performing initial synchronization.</description></item>
-                /// <item><description><b>InitializeFailed</b>: Initial synchronization failed.</description></item>
-                /// <item><description><b>Synchronizing</b>: The task is synchronizing data.</description></item>
-                /// <item><description><b>Failed</b>: The task failed to synchronize data.</description></item>
-                /// <item><description><b>Suspending</b>: The task is paused.</description></item>
-                /// <item><description><b>Modifying</b>: The objects in the task are being modified.</description></item>
-                /// <item><description><b>Finished</b>: The task is completed.</description></item>
+                /// <item><description><b>NotStarted</b>: not started.</description></item>
+                /// <item><description><b>Prechecking</b>: running a precheck.</description></item>
+                /// <item><description><b>PrecheckFailed</b>: precheck failed.</description></item>
+                /// <item><description><b>Initializing</b>: performing initial synchronization.</description></item>
+                /// <item><description><b>InitializeFailed</b>: initial synchronization failed.</description></item>
+                /// <item><description><b>Synchronizing</b>: synchronizing.</description></item>
+                /// <item><description><b>Failed</b>: synchronization failed.</description></item>
+                /// <item><description><b>Suspending</b>: paused.</description></item>
+                /// <item><description><b>Modifying</b>: modifying synchronization objects.</description></item>
+                /// <item><description><b>Finished</b>: completed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 /// <summary>
                 /// <para>The synchronization direction. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Forward</b></description></item>
-                /// <item><description><b>Reverse</b></description></item>
+                /// <item><description><b>Forward</b>: forward.</description></item>
+                /// <item><description><b>Reverse</b>: reverse.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             }
 
             /// <summary>
-            /// <para>The ID of the data synchronization instance.</para>
+            /// <para>The instance ID of the data synchronization instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtsexjk1alb116****</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The total number of data synchronization instances.</para>
+        /// <para>The total number of synchronization instances that were queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

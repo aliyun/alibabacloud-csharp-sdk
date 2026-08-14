@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateDtsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal upon expiration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: does not automatically renew the DTS instance when it expires. This is the default value.</description></item>
-        /// <item><description><b>true</b>: automatically renews the DTS instance when it expires.</description></item>
+        /// <item><description><b>false</b>: no. This is the default value.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:</para>
+        /// <para>Specifies whether to automatically start the task after the purchase is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: no. This is the default value.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter can be set to <b>true</b> and take effect only if you specify a valid value for <b>JobId</b>.</para>
+        /// <para>This parameter takes effect only when <b>JobId</b> is set to a valid task ID and this parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? AutoStart { get; set; }
 
         /// <summary>
-        /// <para>The specification of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</para>
+        /// <para>The specifications of the ETL instance. Unit: compute unit (CU). 1 CU = 1 vCPU + 4 GB memory. Valid values: integers that are greater than or equal to 2.
+        /// &lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>If you specify this parameter, the <a href="https://help.aliyun.com/document_detail/212324.html">ETL feature</a> is enabled for data cleaning and transformation..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -51,9 +55,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? ComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of custom ApsaraDB RDS instances in the PolarDB-X instance. Default value: <b>1</b>.</para>
+        /// <para>The number of private custom ApsaraDB RDS instances under PolarDB-X. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required only if <b>SourceEndpointEngineName</b> is set to <b>drds</b>.</para>
+        /// <para>This parameter is required only when <b>SourceEndpointEngineName</b> is set to <b>drds</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,35 +68,37 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? DatabaseCount { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the destination instance.</para>
+        /// <para>The database engine type of the destination instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
-        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
-        /// <item><description><b>polardb_o</b>: PolarDB for Oracle cluster</description></item>
-        /// <item><description><b>polardb_pg</b>: PolarDB for PostgreSQL cluster</description></item>
-        /// <item><description><b>Redis</b>: ApsaraDB for Redis instance or self-managed Redis database</description></item>
-        /// <item><description><b>DRDS</b>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</description></item>
-        /// <item><description><b>PostgreSQL</b>: self-managed PostgreSQL database</description></item>
-        /// <item><description><b>odps</b>: MaxCompute project</description></item>
-        /// <item><description><b>oracle</b>: self-managed Oracle database</description></item>
-        /// <item><description><b>mongodb</b>: ApsaraDB for MongoDB instance or self-managed MongoDB database</description></item>
-        /// <item><description><b>tidb</b>: TiDB database</description></item>
-        /// <item><description><b>ADS</b>: AnalyticDB for MySQL V2.0 cluster</description></item>
-        /// <item><description><b>ADB30</b>: AnalyticDB for MySQL V3.0 cluster</description></item>
-        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL instance</description></item>
-        /// <item><description><b>MSSQL</b>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</description></item>
-        /// <item><description><b>kafka</b>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</description></item>
-        /// <item><description><b>DataHub</b>: DataHub project</description></item>
-        /// <item><description><b>DB2</b>: self-managed Db2 for LUW database</description></item>
-        /// <item><description><b>as400</b>: AS/400</description></item>
-        /// <item><description><b>Tablestore</b>: Tablestore instance</description></item>
+        /// <item><description><b>MySQL</b>: MySQL database, including ApsaraDB RDS for MySQL and self-managed MySQL.</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL.</description></item>
+        /// <item><description><b>polardb_o</b>: PolarDB for Oracle.</description></item>
+        /// <item><description><b>polardb_pg</b>: PolarDB for PostgreSQL.</description></item>
+        /// <item><description><b>Redis</b>: Redis database, including Tair (Redis® OSS-Compatible) and self-managed Redis.</description></item>
+        /// <item><description><b>DRDS</b>: cloud-native distributed database PolarDB-X 1.0 and 2.0.</description></item>
+        /// <item><description><b>PostgreSQL</b>: self-managed PostgreSQL.</description></item>
+        /// <item><description><b>odps</b>: MaxCompute.</description></item>
+        /// <item><description><b>oracle</b>: self-managed Oracle.</description></item>
+        /// <item><description><b>mongodb</b>: MongoDB database, including ApsaraDB for MongoDB and self-managed MongoDB.</description></item>
+        /// <item><description><b>tidb</b>: TiDB database.</description></item>
+        /// <item><description><b>ADS</b>: AnalyticDB for MySQL 2.0.</description></item>
+        /// <item><description><b>ADB30</b>: AnalyticDB for MySQL 3.0.</description></item>
+        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL.</description></item>
+        /// <item><description><b>MSSQL</b>: SQL Server database, including ApsaraDB RDS for SQL Server and self-managed SQL Server.</description></item>
+        /// <item><description><b>kafka</b>: Kafka database, including ApsaraMQ for Kafka and self-managed Kafka.</description></item>
+        /// <item><description><b>DataHub</b>: Alibaba Cloud DataHub.</description></item>
+        /// <item><description><b>DB2</b>: self-managed Db2 for LUW.</description></item>
+        /// <item><description><b>as400</b>: AS/400.</description></item>
+        /// <item><description><b>Tablestore</b>: Tablestore.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>MySQL</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>MySQL</b>.</description></item>
-        /// <item><description>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</description></item>
-        /// <item><description>You must specify one of this parameter and the <b>JobId</b> parameter.</description></item>
+        /// <item><description>For more information about the supported source and destination database combinations, see <a href="https://help.aliyun.com/document_detail/130744.html">Databases, initial synchronization types, and synchronization topologies</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</description></item>
+        /// <item><description>You must specify this parameter or <b>JobId</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,9 +109,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointEngineName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// <remarks>
-        /// <para> You must specify one of this parameter and the <b>JobId</b> parameter.</para>
+        /// <para>You must specify this parameter or <b>JobId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationRegion { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. Set this parameter to the value of <b>RegionId</b>.</para>
+        /// <para>The region to which the instance belongs. The value must be the same as the value of <b>RegionId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -126,11 +132,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsRegion { get; set; }
 
         /// <summary>
-        /// <para>The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>The number of DU resources to allocate to the DTS task on a DTS dedicated cluster. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The value must be within the range of available DUs in the DTS dedicated cluster.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter must be within the range of the number of DUs available for the DTS dedicated cluster.</description></item>
+        /// <item><description>For more information about DTS dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">What is a DTS dedicated cluster</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? Du { get; set; }
 
         /// <summary>
-        /// <para>The billing type for a change tracking instance. Valid values: ONLY_CONFIGURATION_FEE and CONFIGURATION_FEE_AND_DATA_FEE. ONLY_CONFIGURATION_FEE: charges only configuration fees. CONFIGURATION_FEE_AND_DATA_FEE: charges configuration fees and data traffic fees.</para>
+        /// <para>The billing type for change tracking. Valid values: ONLY_CONFIGURATION_FEE, which indicates that only configuration fees are charged and data traffic fees are waived. CONFIGURATION_FEE_AND_DATA_FEE, which indicates that data traffic fees are additionally charged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ONLY_CONFIGURATION_FEE</para>
@@ -155,13 +164,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? InsightModule { get; set; }
 
         /// <summary>
-        /// <para>The instance class.</para>
+        /// <para>The specification of the data migration or data synchronization instance.</para>
         /// <list type="bullet">
-        /// <item><description>DTS supports the following instance classes for a data migration instance: <b>xxlarge</b>, <b>xlarge</b>, <b>large</b>, <b>medium</b>, and <b>small</b>.</description></item>
-        /// <item><description>DTS supports the following instance classes for a data synchronization instance: <b>large</b>, <b>medium</b>, <b>small</b>, and <b>micro</b>.</description></item>
+        /// <item><description>Specifications supported by data migration instances: <b>xxlarge</b>, <b>xlarge</b>, <b>large</b>, <b>medium</b>, and <b>small</b>.</description></item>
+        /// <item><description>Specifications supported by data synchronization instances: <b>large</b>, <b>medium</b>, <b>small</b>, and <b>micro</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
+        /// <para>For more information about the performance of each specification, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,9 +181,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can call the <b>ConfigureDtsJob</b> operation to obtain the task ID from the <b>DtsJobId</b> parameter.</para>
+        /// <para>The task ID (<b>DtsJobId</b>) obtained by calling the <b>ConfigureDtsJob</b> operation.</para>
         /// <remarks>
-        /// <para> If this parameter is specified, you do not need to specify the <b>SourceRegion</b>, <b>DestinationRegion</b>, <b>Type</b>, <b>SourceEndpointEngineName</b>, or <b>DestinationEndpointEngineName</b> parameter. Even if these parameters are specified, the value of the <b>JobId</b> parameter takes precedence.</para>
+        /// <para>If you specify this parameter, you do not need to specify <b>SourceRegion</b>, <b>DestinationRegion</b>, <b>Type</b>, <b>SourceEndpointEngineName</b>, or <b>DestinationEndpointEngineName</b>. Even if you specify these parameters, the configurations in <b>JobId</b> take precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,9 +194,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Upper limit of DU.</para>
+        /// <para>The maximum number of DUs.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless instances.</para>
+        /// <para>This parameter is supported only for serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -198,9 +207,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public double? MaxDu { get; set; }
 
         /// <summary>
-        /// <para>Lower limit of DU.</para>
+        /// <para>The minimum number of DUs.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless instances.</para>
+        /// <para>This parameter is supported only for serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -213,11 +222,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter must be specified.</para>
+        /// <para>Correction: This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,9 +237,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values: <b>Year</b> and <b>Month</b>.</para>
+        /// <para>The billing method of the subscription instance. Valid values: <b>Year</b> and <b>Month</b>.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>PayType</b> parameter is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is valid and required only when <b>PayType</b> is set to <b>PrePaid</b> (subscription).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -241,9 +250,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The number of DTS instances that you want to purchase.</para>
+        /// <para>The number of instances to purchase.</para>
         /// <remarks>
-        /// <para> You can purchase only one DTS instance each time you call this operation.</para>
+        /// <para>A maximum of one instance can be purchased per call.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -254,7 +263,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -264,7 +273,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -274,48 +283,51 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the source instance.</para>
+        /// <para>The database engine type of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
-        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
-        /// <item><description><b>polardb_o</b>: PolarDB for Oracle cluster</description></item>
-        /// <item><description><b>polardb_pg</b>: PolarDB for PostgreSQL cluster</description></item>
-        /// <item><description><b>Redis</b>: ApsaraDB for Redis instance or self-managed Redis database</description></item>
-        /// <item><description><b>DRDS</b>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</description></item>
-        /// <item><description><b>PostgreSQL</b>: self-managed PostgreSQL database</description></item>
-        /// <item><description><b>odps</b>: MaxCompute project</description></item>
-        /// <item><description><b>oracle</b>: self-managed Oracle database</description></item>
-        /// <item><description><b>mongodb</b>: ApsaraDB for MongoDB instance or self-managed MongoDB database</description></item>
-        /// <item><description><b>tidb</b>: TiDB database</description></item>
-        /// <item><description><b>ADS</b>: AnalyticDB for MySQL V2.0 cluster</description></item>
-        /// <item><description><b>ADB30</b>: AnalyticDB for MySQL V3.0 cluster</description></item>
-        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL instance</description></item>
-        /// <item><description><b>MSSQL</b>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</description></item>
-        /// <item><description><b>kafka</b>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</description></item>
-        /// <item><description><b>DataHub</b>: DataHub project</description></item>
-        /// <item><description><b>DB2</b>: self-managed Db2 for LUW database</description></item>
-        /// <item><description><b>as400</b>: AS/400</description></item>
-        /// <item><description><b>Tablestore</b>: Tablestore instance</description></item>
+        /// <item><description><b>MySQL</b>: MySQL database, including ApsaraDB RDS for MySQL and self-managed MySQL.</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL.</description></item>
+        /// <item><description><b>polardb_o</b>: PolarDB for Oracle.</description></item>
+        /// <item><description><b>polardb_pg</b>: PolarDB for PostgreSQL.</description></item>
+        /// <item><description><b>Redis</b>: Redis database, including Tair (Redis® OSS-Compatible) and self-managed Redis.</description></item>
+        /// <item><description><b>DRDS</b>: cloud-native distributed database PolarDB-X 1.0 and 2.0.</description></item>
+        /// <item><description><b>PostgreSQL</b>: self-managed PostgreSQL.</description></item>
+        /// <item><description><b>odps</b>: MaxCompute.</description></item>
+        /// <item><description><b>oracle</b>: self-managed Oracle.</description></item>
+        /// <item><description><b>mongodb</b>: MongoDB database, including ApsaraDB for MongoDB and self-managed MongoDB.</description></item>
+        /// <item><description><b>tidb</b>: TiDB database.</description></item>
+        /// <item><description><b>ADS</b>: AnalyticDB for MySQL 2.0.</description></item>
+        /// <item><description><b>ADB30</b>: AnalyticDB for MySQL 3.0.</description></item>
+        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL.</description></item>
+        /// <item><description><b>MSSQL</b>: SQL Server database, including ApsaraDB RDS for SQL Server and self-managed SQL Server.</description></item>
+        /// <item><description><b>kafka</b>: Kafka database, including ApsaraMQ for Kafka and self-managed Kafka.</description></item>
+        /// <item><description><b>DataHub</b>: Alibaba Cloud DataHub.</description></item>
+        /// <item><description><b>DB2</b>: self-managed Db2 for LUW.</description></item>
+        /// <item><description><b>as400</b>: AS/400.</description></item>
+        /// <item><description><b>Tablestore</b>: Tablestore.</description></item>
+        /// <item><description><b>OceanBase</b>: OceanBase (MySQL). Only data migration instances are supported.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>MySQL</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>MySQL</b>.</description></item>
-        /// <item><description>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</description></item>
-        /// <item><description>You must specify one of this parameter and the <b>JobId</b> parameter.</description></item>
+        /// <item><description>For more information about the supported source and destination database combinations, see <a href="https://help.aliyun.com/document_detail/130744.html">Databases, initial synchronization types, and synchronization topologies</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</description></item>
+        /// <item><description>You must specify this parameter or <b>JobId</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>MYSQL</para>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("SourceEndpointEngineName")]
         [Validation(Required=false)]
         public string SourceEndpointEngineName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// <remarks>
-        /// <para> You must specify one of this parameter and the <b>JobId</b> parameter.</para>
+        /// <para>You must specify this parameter or <b>JobId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -340,18 +352,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SyncArchitecture { get; set; }
 
         /// <summary>
-        /// <para>The type of the DTS instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MIGRATION</b>: data migration instance</para>
-        /// </description></item>
-        /// <item><description><para><b>SYNC</b>: data synchronization instance</para>
-        /// </description></item>
-        /// <item><description><para><b>SUBSCRIBE</b>: change tracking instance</para>
+        /// <item><description><b>MIGRATION</b>: data migration.</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization.</description></item>
+        /// <item><description><b>SUBSCRIBE</b>: change tracking.<remarks>
+        /// <para>You must specify this parameter or <b>JobId</b>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You must specify one of this parameter and the <b>JobId</b> parameter.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SYNC</para>
@@ -361,18 +370,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration.</para>
+        /// <para>The subscription duration of the subscription instance.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if <b>Period</b> is set to <b>Month</b>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>Valid values if <b>Period</b> is set to <b>Year</b>: 1, 2, 3, and 5.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values are 1, 2, 3, and 5.<remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is valid and required only when <b>PayType</b> is set to <b>PrePaid</b> (subscription).</description></item>
         /// </list>
-        /// <remarks>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>This parameter is valid and required only if <b>PayType</b> is set to <b>PrePaid</b>.</para>
         /// </description></item>
-        /// <item><description><para>You can configure <b>Period</b> to specify the unit of the subscription duration.</para>
-        /// </description></item>
+        /// <item><description>You can set the billing method of the subscription instance by using the <b>Period</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyConsumerChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> operation to query the consumer group ID.</para>
+        /// <para>The ID of the consumer group. You can call <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> to query the consumer group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,20 +21,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ConsumerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</para>
+        /// <para>The new name of the consumer group. The name can be up to 128 characters in length. Specify a descriptive name for easy identification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dtstest</para>
+        /// <para>订阅组B</para>
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The new password of the consumer group.</para>
+        /// <para>The new password of the consumer group account.</para>
         /// <list type="bullet">
-        /// <item><description>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>A password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ConsumerGroupPassword { get; set; }
 
         /// <summary>
-        /// <para>The new username of the consumer group.</para>
+        /// <para>The new username of the consumer group account.</para>
         /// <list type="bullet">
-        /// <item><description>A username can contain one or more of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>A username cannot exceed 16 characters in length.</description></item>
+        /// <item><description>The username can contain one or more types of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The username can be up to 16 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ConsumerGroupUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
+        /// <para>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>DtsInstanceId</b> and <b>DtsJobId</b> parameters.</para>
+        /// <para>You must specify either <b>DtsInstanceId</b> or <b>DtsJobId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>DtsInstanceId</b> and <b>DtsJobId</b> parameters.</para>
+        /// <para>You must specify either <b>DtsInstanceId</b> or <b>DtsJobId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the DTS change tracking instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

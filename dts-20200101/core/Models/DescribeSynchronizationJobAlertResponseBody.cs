@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSynchronizationJobAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>The mobile phone numbers that receive latency-related alerts.</para>
+        /// <para>The mobile phone number of the contact for latency alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task latency is monitored. Valid values:</para>
+        /// <para>Indicates whether latency monitoring is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: enabled.</description></item>
+        /// <item><description><b>disable</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering latency alerts. Unit: seconds.</para>
+        /// <para>The threshold that triggers a latency alert. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers that receive status-related alerts.</para>
+        /// <para>The mobile phone number of the contact for error alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task status is monitored. Valid values:</para>
+        /// <para>Indicates whether error status monitoring is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: enabled.</description></item>
+        /// <item><description><b>disable</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210ec20e16055205968635339d****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -110,13 +110,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Forward</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Reverse</b></para>
-        /// </description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only when the topology of data synchronization is two-way synchronization.</para>
+        /// <para>Default value: <b>Forward</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance.</para>
+        /// <para>The instance ID of the data synchronization instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kxz1170c10p****</para>

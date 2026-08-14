@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the tag.</para>
+        /// <para>The tag type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The start page of the returned pages.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD110813-9AD6-5F07-BFC8-4C841309****</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The key of the tag.</para>
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<string> TagKeys { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned tag keys.</para>
+        /// <para>The total number of tag keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

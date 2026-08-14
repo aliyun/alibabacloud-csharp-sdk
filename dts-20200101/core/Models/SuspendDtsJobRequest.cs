@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SuspendDtsJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
+        /// <para>The migration, synchronization, or subscribe instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl3m1213ye7l****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Data Transmission Service (DTS) task. The DTS task can be a data migration, data synchronization, or change tracking task.</para>
+        /// <para>The ID of the data migration, synchronization, or change tracking task.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -55,16 +55,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The default value is <b>Forward</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The default value is <b>Forward</b>.</para>
-        /// </description></item>
-        /// <item><description><para>You can set this parameter to <b>Reverse</b> only if the topology is two-way synchronization.</para>
-        /// </description></item>
+        /// <item><description>You can set this parameter to <b>Reverse</b> to suspend the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

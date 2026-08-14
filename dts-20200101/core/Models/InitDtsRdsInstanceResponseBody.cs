@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class InitDtsRdsInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The built-in account that is used by DTS to connect to the node.</para>
+        /// <para>The built-in account that DTS uses to connect to the unit node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsdt_dtsacct</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AdminPassword { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7796ECE0-9C17-5E4D-9CE6-B7EC825A****</para>

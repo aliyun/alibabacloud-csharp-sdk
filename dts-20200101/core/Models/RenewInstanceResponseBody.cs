@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the DTS instance. Only <b>PREPAY</b> may be returned, which indicates the subscription billing method.</para>
+        /// <para>The billing method. Set the value to <b>PREPAY</b>, which indicates the subscription billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// <remarks>
-        /// <para>This parameter will be removed in the future.</para>
+        /// <para>This parameter will be deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the value of <b>ErrMessage</b>.</para>
+        /// <para>The dynamic error message, which is used to replace the %<b>s</b> variable in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If the return value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the return value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the specified value of <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</para>
+        /// <para>The time when the renewal instance expires. The time is displayed in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ssZZZ</i> (UTC).</para>
         /// <remarks>
-        /// <para><b>ZZZ</b> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <b>+00:00</b>.</para>
+        /// <para><b>ZZZ</b> indicates the full time zone offset (&quot;+&quot; or &quot;-&quot; followed by hours and minutes), for example, <b>+00:00</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsqi0r643lc31****</para>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

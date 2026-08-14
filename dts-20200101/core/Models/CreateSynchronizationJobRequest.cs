@@ -14,18 +14,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public CreateSynchronizationJobRequestDestinationEndpoint DestinationEndpoint { get; set; }
         public class CreateSynchronizationJobRequestDestinationEndpoint : TeaModel {
             /// <summary>
-            /// <para>The instance type of the destination database. Valid values:</para>
+            /// <para>目标库的实例类型，取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster or PolarDB O Edition cluster</description></item>
-            /// <item><description><b>Redis</b>: Redis database</description></item>
-            /// <item><description><b>MaxCompute</b>: MaxCompute project</description></item>
+            /// <item><description><b>MySQL</b>：MySQL数据库（包括RDS MySQL和自建MySQL）。</description></item>
+            /// <item><description><b>PolarDB</b>：PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</description></item>
+            /// <item><description><b>Redis</b>：Redis数据库。</description></item>
+            /// <item><description><b>MaxCompute</b>：MaxCompute实例。</description></item>
             /// </list>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>默认取值为<b>MySQL</b>。</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>Default value: <b>MySQL</b>.</description></item>
-            /// <item><description>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Database types, initial synchronization types, and synchronization topologies</a>.</description></item>
+            /// <item><description>关于支持的源库和目标库对应情况，请参见支持的<a href="https://help.aliyun.com/document_detail/130744.html">数据库、同步初始化类型和同步拓扑</a>。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,18 +44,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public CreateSynchronizationJobRequestSourceEndpoint SourceEndpoint { get; set; }
         public class CreateSynchronizationJobRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The instance type of the source database. Valid values:</para>
+            /// <para>源库的实例类型，取值：</para>
             /// <list type="bullet">
-            /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster or PolarDB O Edition cluster</description></item>
-            /// <item><description><b>Redis</b>: Redis database</description></item>
-            /// <item><description><b>DRDS</b>: PolarDB-X instance V1.0</description></item>
+            /// <item><description><b>MySQL</b>：MySQL数据库（包括RDS MySQL和自建MySQL）。</description></item>
+            /// <item><description><b>PolarDB</b>：PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</description></item>
+            /// <item><description><b>Redis</b>：Redis数据库。</description></item>
+            /// <item><description><b>DRDS</b>：云原生分布式数据库PolarDB-X 1.0。</description></item>
             /// </list>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>默认取值为<b>MySQL</b>。</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>Default value: <b>MySQL</b>.</description></item>
-            /// <item><description>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Database types, initial synchronization types, and synchronization topologies</a>.</description></item>
+            /// <item><description>关于支持的源库和目标库对应情况，请参见支持的<a href="https://help.aliyun.com/document_detail/130744.html">数据库、同步初始化类型和同步拓扑</a>。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a value from your client to ensure uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -86,19 +90,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>If you set the <b>SourceEndpoint.InstanceType</b> parameter to <b>DRDS</b>, you must specify the DBInstanceCount parameter. This parameter specifies the number of private RDS instances attached to the source PolarDB-X instance. Default value: <b>1</b>.</para>
+        /// <para>The number of private custom ApsaraDB RDS instances attached to the source PolarDB-X instance. This parameter is required when <b>SourceEndpoint.InstanceType</b> is set to <b>DRDS</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DBInstanceCount")]
         [Validation(Required=false)]
         public int? DBInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the destination database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the destination database for data synchronization. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <remarks>
-        /// <para> If the <b>SourceRegion</b> parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.</para>
+        /// <para>If the region specified by the <b>SourceRegion</b> parameter is Hong Kong (China) or a region outside China, set this parameter to the same region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -114,10 +118,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the data synchronization instance.</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid</b> (default value): pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go. This is the default value.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -129,13 +133,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription instance. Valid values:</para>
+        /// <para>The billing method of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: annual subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify this parameter only if you set the PayType parameter to <b>PrePaid</b>.</para>
+        /// <para>This parameter is valid and required only when <b>PayType</b> is set to <b>PrePaid</b> (subscription).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. The region ID is the same as the value of the <b>DestRegion</b> parameter.</para>
+        /// <para>The region ID of the data synchronization instance. Set this parameter to the same value as the <b>DestRegion</b> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource GroupId</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the source database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the source database for data synchronization. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -177,9 +181,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The specification of the data synchronization instance. Valid values: <b>micro</b>, <b>small</b>, <b>medium</b>, and <b>large</b>.</para>
+        /// <para>The specification of the data synchronization link. Valid values: <b>micro</b>, <b>small</b>, <b>medium</b>, <b>large</b>.</para>
         /// <remarks>
-        /// <para> For more information about the test performance of each specification, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
+        /// <para>For more information about the description and performance test results of each specification, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization links</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -193,14 +197,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization topology. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>oneway</b>: one-way synchronization</description></item>
-        /// <item><description><b>bidirectional</b>: two-way synchronization</description></item>
+        /// <item><description><b>oneway</b>: one-way synchronization.</description></item>
+        /// <item><description><b>bidirectional</b>: two-way synchronization.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>oneway</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>oneway</b>.</description></item>
-        /// <item><description>This parameter can be set to <b>bidirectional</b> only when the <b>SourceEndpoint.InstanceType</b> and <b>DestinationEndpoint.InstanceType</b> parameters are set to <b>MySQL</b>, <b>PolarDB</b>, or <b>Redis</b>.</description></item>
+        /// <item><description>You can set this parameter to <b>bidirectional</b> only when both <b>SourceEndpoint.InstanceType</b> and <b>DestinationEndpoint.InstanceType</b> are set to <b>MySQL</b>, <b>PolarDB</b>, or <b>Redis</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,13 +217,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Topology { get; set; }
 
         /// <summary>
-        /// <para>The subscription length.</para>
+        /// <para>The subscription duration of the subscription instance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing cycle is <b>Year</b>, the value range is <b>1 to 5</b>.</description></item>
-        /// <item><description>If the billing cycle is <b>Month</b>, the value range is <b>1 to 60</b>.</description></item>
+        /// <item><description>If the billing method is set to <b>Year</b>, valid values are <b>1 to 5</b>.</description></item>
+        /// <item><description>If the billing method is set to <b>Month</b>, valid values are <b>1 to 60</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify this parameter only if you set the PayType parameter to <b>PrePaid</b>.</para>
+        /// <para>This parameter is valid and required only when <b>PayType</b> is set to <b>PrePaid</b> (subscription).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,7 +234,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The network type. Valid value: <b>Intranet</b>, which indicates virtual private cloud (VPC).</para>
+        /// <para>The network type for Data Transmission Service. Set the value to <b>Intranet</b> (Express Connect).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Intranet</para>

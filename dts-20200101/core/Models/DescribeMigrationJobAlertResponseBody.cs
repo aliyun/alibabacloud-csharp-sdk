@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>Phone number of the contact for delay alarm.</para>
+        /// <para>The mobile phone number of the contact for latency alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -20,9 +20,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Whether to monitor the delay status, return values:</para>
+        /// <para>Indicates whether latency status monitoring is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: Yes. - <b>disable</b>: No.</description></item>
+        /// <item><description><b>enable</b>: Enabled.</description></item>
+        /// <item><description><b>disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering a delayed alarm, in seconds.</para>
+        /// <para>The threshold that triggers a latency alert. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayOverSeconds { get; set; }
 
         /// <summary>
-        /// <para>Error code returned when the call fails.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -63,7 +64,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>Phone number of the contact for abnormal alarm notifications</para>
+        /// <para>The mobile phone number of the contact for error alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -73,9 +74,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Whether to monitor for abnormal status, return values:</para>
+        /// <para>Indicates whether error status monitoring is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: Yes. - <b>disable</b>: No.</description></item>
+        /// <item><description><b>enable</b>: Enabled.</description></item>
+        /// <item><description><b>disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>Data migration instance ID.</para>
+        /// <para>The ID of the data migration instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtslb9113qq11n****</para>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MigrationJobId { get; set; }
 
         /// <summary>
-        /// <para>Name of the data migration task.</para>
+        /// <para>The name of the data migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zwy-test5</para>
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MigrationJobName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CFB89C51-6F03-519C-A921-AAE28D50AEFB</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The ID of the dedicated cluster.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>InstanceId</b> and <b>DedicatedClusterId</b> parameters.</para>
+        /// <para>Either <b>InstanceId</b> or <b>DedicatedClusterId</b> must be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID of the cluster.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>InstanceId</b> and <b>DedicatedClusterId</b> parameters.</para>
+        /// <para>Either the <b>InstanceId</b> or <b>DedicatedClusterId</b> parameter must be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides.</para>
+        /// <para>The region in which the DTS instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

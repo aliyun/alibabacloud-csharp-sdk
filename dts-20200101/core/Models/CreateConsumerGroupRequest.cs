@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</para>
+        /// <para>The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use a descriptive name for easy identification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The password that corresponds to the username of the consumer group.</para>
+        /// <para>The password of the consumer group account.</para>
         /// <list type="bullet">
-        /// <item><description>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>A password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,11 +46,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ConsumerGroupPassword { get; set; }
 
         /// <summary>
-        /// <para>The username of the consumer group.</para>
-        /// <list type="bullet">
-        /// <item><description>A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>A username cannot exceed 16 characters in length.</description></item>
-        /// </list>
+        /// <para>The account of the consumer group.</para>
+        /// <para>The account can contain uppercase letters, lowercase letters, digits, and underscores (_). The account can be up to 16 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

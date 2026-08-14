@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or data synchronization task.</para>
+        /// <para>The ID of the data migration or synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>l3m1213ye7l****</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The returned information about the migrated or synchronized objects in arrays.</para>
+        /// <para>The array of migration object information.</para>
         /// <remarks>
-        /// <para> The arrays are in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</para>
+        /// <para>The array is returned in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ProgressSummaryDetails")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public List<SummaryJobDetailResponseBodyProgressSummaryDetails> ProgressSummaryDetails { get; set; }
         public class SummaryJobDetailResponseBodyProgressSummaryDetails : TeaModel {
             /// <summary>
-            /// <para>The type of migrated or synchronized object. Valid values: <b>Table</b>, <b>Constraint</b>, <b>Index</b>, <b>View</b>, <b>Materialize View</b>, <b>Type</b>, <b>Synonym</b>, <b>Trigger</b>, <b>Function</b>, <b>Procedure</b>, <b>Package</b>, <b>Default</b>, <b>Rule</b>, <b>PlanGuide</b>, and <b>Sequence</b>.</para>
+            /// <para>The object type of the migration object. Valid values: <b>Table</b>, <b>Constraint</b>, <b>Index</b>, <b>View</b>, <b>Materialize View</b>, <b>Type</b> (user-defined type), <b>Synonym</b>, <b>Trigger</b>, <b>Function</b>, <b>Procedure</b> (stored procedure), <b>Package</b>, <b>Default</b>, <b>Rule</b>, <b>PlanGuide</b> (execute plan), and <b>Sequence</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Table</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The state of the data migration or data synchronization task. Valid values:</para>
+            /// <para>The migration status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The task was complete.</description></item>
-            /// <item><description><b>1</b>: The task was waiting to start.</description></item>
-            /// <item><description><b>2</b>: The task was being initialized.</description></item>
-            /// <item><description><b>3</b>: The task was in progress.</description></item>
-            /// <item><description><b>4</b>: An error occurred.</description></item>
-            /// <item><description><b>5</b>: The task failed.</description></item>
+            /// <item><description><b>0</b>: finish (completed).</description></item>
+            /// <item><description><b>1</b>: catched (waiting for synchronization).</description></item>
+            /// <item><description><b>2</b>: init (initializing).</description></item>
+            /// <item><description><b>3</b>: running (synchronizing).</description></item>
+            /// <item><description><b>4</b>: warning (error).</description></item>
+            /// <item><description><b>5</b>: failed (failed).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? State { get; set; }
 
             /// <summary>
-            /// <para>The total number of migrated or synchronized objects.</para>
+            /// <para>The total number of migration objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9033138C-5AB3-5EB7-BA78-43131F19297C</para>

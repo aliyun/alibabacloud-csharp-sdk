@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class PreCheckCreateGadOrderRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the active geo-redundancy instance group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gad-bp1i99e8l7913****</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfntftbiobqyky</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SlaveDatabaseName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the database instance that assumes the secondary role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-bp17562h64****</para>
         /// </summary>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SlaveDbInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region of the database instance that assumes the secondary role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

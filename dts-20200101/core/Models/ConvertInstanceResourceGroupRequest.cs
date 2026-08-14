@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConvertInstanceResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>This historical parameter does not take effect and is not required.</para>
+        /// <para>A legacy parameter. This parameter does not take effect. You do not need to pass this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m4312mab158****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of new resource group. You can obtain the ID on the Resource Group page in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</para>
+        /// <para>The ID of the new resource group. You can obtain the ID from the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2r4fkrqw****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides.</para>
+        /// <para>The region in which the DTS instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is only for special services and not required.</para>
+        /// <para>A parameter reserved for special business scenarios. You do not need to pass this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-3m1213ye7l****</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS instance. You can view the ID in the <b>ID/Name</b> column on the task page in the console.</para>
+        /// <para>The ID of the DTS instance. You can view the ID in the <b>ID/Name</b> column on the task list page in the console.</para>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is only for special services and not required.</para>
+        /// <para>A parameter reserved for special business scenarios. You do not need to pass this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

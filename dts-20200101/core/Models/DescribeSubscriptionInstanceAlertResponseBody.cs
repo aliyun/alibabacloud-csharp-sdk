@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSubscriptionInstanceAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>The mobile phone numbers that receive latency-related alerts.</para>
+        /// <para>The mobile phone number of the contact for latency alerts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1361234****,1371234****</para>
+        /// <para>13465****</para>
         /// </summary>
         [NameInMap("DelayAlertPhone")]
         [Validation(Required=false)]
         public string DelayAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task latency is monitored. Valid values:</para>
+        /// <para>Indicates whether latency alerting is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: Enabled.</description></item>
+        /// <item><description><b>disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering latency alerts. The unit is seconds and the value is an integer. The recommended value is 10 seconds.</para>
+        /// <para>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. A value of 10 seconds is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,20 +64,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers that receive status-related alerts.</para>
+        /// <para>The mobile phone number of the contact for error alerts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1361234****,1371234****</para>
+        /// <para>13555*****</para>
         /// </summary>
         [NameInMap("ErrorAlertPhone")]
         [Validation(Required=false)]
         public string ErrorAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task status is monitored. Valid values:</para>
+        /// <para>Indicates whether error alerting is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: Enabled.</description></item>
+        /// <item><description><b>disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210ec2e116055198849072222d****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking instance.</para>
+        /// <para>The change tracking instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl8zl9ek6292****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

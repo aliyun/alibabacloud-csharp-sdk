@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureSubscriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The UNIX timestamp that represents the start time of change tracking. Unit: seconds.</para>
+        /// <para>The start time of change tracking, in the format of a UNIX timestamp. Unit: seconds.</para>
         /// <remarks>
-        /// <para> You can use a search engine to obtain a UNIX timestamp converter.</para>
+        /// <para>You can use a search engine to find a UNIX timestamp converter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Checkpoint { get; set; }
 
         /// <summary>
-        /// <para>The objects for which you want to track data changes. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
+        /// <para>The objects to be tracked, in JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DbList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS dedicated cluster on which the change tracking task is scheduled to run.</para>
+        /// <para>The ID of the DTS dedicated cluster. This parameter is used to schedule the change tracking task to the specified DTS dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtscluster_atyl3b5214uk***</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to monitor the task latency. Valid values:</para>
+        /// <para>Specifies whether to monitor the latency status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: monitors the task latency.</description></item>
-        /// <item><description><b>false</b>: does not monitor the task latency.</description></item>
+        /// <item><description><b>true</b>: monitors the latency status.</description></item>
+        /// <item><description><b>false</b>: does not monitor the latency status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,12 +58,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? DelayNotice { get; set; }
 
         /// <summary>
-        /// <para>The mobile numbers to which latency-related alerts are sent. Separate multiple mobile numbers with commas (,).</para>
+        /// <para>The mobile phone numbers for receiving latency alerts. Separate multiple phone numbers with commas (,).</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</description></item>
-        /// <item><description>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// <item><description>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,9 +76,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayPhone { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</para>
+        /// <para>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. To avoid alert fluctuations caused by network conditions or database loads, set the threshold to 10 seconds or more.</para>
         /// <remarks>
-        /// <para> If the <b>DelayNotice</b> parameter is set to <b>true</b>, this parameter is required.</para>
+        /// <para>This parameter is required when <b>DelayNotice</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,9 +89,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DelayRuleTime { get; set; }
 
         /// <summary>
-        /// <para>Environment label of the DTS instance, with values:</para>
+        /// <para>The environment tag of the DTS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: <b>general</b> - <b>online</b>: <b>production</b></description></item>
+        /// <item><description><b>normal</b>: normal</description></item>
+        /// <item><description><b>online</b>: online.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +103,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsBisLabel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
+        /// <para>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsy0zz3t13h7d****</para>
@@ -110,7 +113,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>y0zz3t13h7d****</para>
@@ -122,22 +125,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The name of the change tracking task.</para>
         /// <remarks>
-        /// <para> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</para>
+        /// <para>Specify a descriptive name that makes it easy to identify the task. The name does not need to be unique.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>for_test</para>
+        /// <para>MySQL订阅</para>
         /// </summary>
         [NameInMap("DtsJobName")]
         [Validation(Required=false)]
         public string DtsJobName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to monitor the task status. Valid values:</para>
+        /// <para>Specifies whether to monitor the error status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: monitors the task status.</description></item>
-        /// <item><description><b>false</b>: does not monitor the task status.</description></item>
+        /// <item><description><b>true</b>: monitors the error status.</description></item>
+        /// <item><description><b>false</b>: does not monitor the error status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,12 +151,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? ErrorNotice { get; set; }
 
         /// <summary>
-        /// <para>The mobile numbers to which status-related alerts are sent. Separate multiple mobile numbers with commas (,).</para>
+        /// <para>The mobile phone numbers for receiving error alerts. Separate multiple phone numbers with commas (,).</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is supported only on the China site (aliyun.com). Only Chinese mainland phone numbers are supported, and you can specify up to 10 phone numbers.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</description></item>
-        /// <item><description>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// <item><description>The China site (Chinese mainland) does not support phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in CloudMonitor</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,8 +169,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorPhone { get; set; }
 
         /// <summary>
-        /// <para>The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16. 
-        /// Currently, this feature is not supported, please do not pass in parameters.</para>
+        /// <para>The maximum number of DUs for a serverless instance. Valid values: 2, 4, 8, and 16.
+        /// &lt;props=&quot;intl&quot;&gt;</para>
+        /// <remarks>
+        /// <para>This feature is currently not supported. Do not specify this parameter..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -175,8 +183,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public double? MaxDu { get; set; }
 
         /// <summary>
-        /// <para>The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16. 
-        /// This feature is currently not supported, please do not pass in parameters.</para>
+        /// <para>The minimum number of DTS Units (DUs) for a serverless instance. Valid values: 1, 2, 4, 8, and 16.
+        /// &lt;props=&quot;intl&quot;&gt;</para>
+        /// <remarks>
+        /// <para>This feature is currently not supported. Do not specify this parameter..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -186,7 +197,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public double? MinDu { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -197,7 +208,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</para>
+        /// <para>The reserved parameter of DTS, in JSON format. You can specify this parameter to add information about the source and destination databases, such as the data storage format of the destination Kafka database or the CEN instance ID. For more information, see the <a href="https://help.aliyun.com/document_detail/176470.html">Reserve metric description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</para>
@@ -207,7 +218,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Reserve { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -217,7 +228,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Name of the database to be subscribed.</para>
+        /// <para>The name of the database to be tracked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtstestdata</para>
@@ -227,9 +238,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The engine of the source database. Valid values: <b>MySQL</b>, <b>PostgreSQL</b>, and <b>Oracle</b>.</para>
+        /// <para>The engine type of the source database. Valid values: <b>MySQL</b>, <b>PostgreSQL</b>, and <b>Oracle</b>.</para>
         /// <remarks>
-        /// <para> If the source database is a self-managed database, you must specify this parameter.</para>
+        /// <para>This parameter is required if the source database is a self-managed database.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -242,7 +253,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The endpoint of the source database.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the source database is a self-managed database.</para>
+        /// <para>This parameter is available and required only when the source database is a self-managed database.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -253,9 +264,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source database.</para>
+        /// <para>The instance ID of the source instance.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</para>
+        /// <para>This parameter is active and required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,16 +277,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The type of the source database. Valid values:</para>
+        /// <para>The instance type of the source database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: ApsaraDB RDS for MySQL instance</description></item>
-        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
-        /// <item><description><b>DRDS</b>: PolarDB-X 1.0 instance</description></item>
-        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-        /// <item><description><b>ECS</b>: self-managed database hosted on an Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>Express</b>: self-managed database connected over Express Connect</description></item>
-        /// <item><description><b>CEN</b>: self-managed database connected over Cloud Enterprise Network (CEN)</description></item>
-        /// <item><description><b>dg</b>: self-managed database connected over Database Gateway</description></item>
+        /// <item><description><b>RDS</b>: ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster.</description></item>
+        /// <item><description><b>DRDS</b>: PolarDB-X 1.0 instance.</description></item>
+        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address.</description></item>
+        /// <item><description><b>ECS</b>: self-managed database hosted on an ECS instance.</description></item>
+        /// <item><description><b>Express</b>: self-managed database connected over Express Connect.</description></item>
+        /// <item><description><b>CEN</b>: self-managed database connected over Cloud Enterprise Network (CEN).</description></item>
+        /// <item><description><b>dg</b>: self-managed database connected over Database Gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -286,9 +297,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The system ID (SID) of the Oracle database.</para>
+        /// <para>The SID of the Oracle database.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</para>
+        /// <para>This parameter is available and required only when the source database is a self-managed Oracle database that is not a Real Application Cluster (RAC) instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -299,9 +310,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointOracleSID { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the source database belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the account to which the source instance belongs.</para>
         /// <remarks>
-        /// <para> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</para>
+        /// <para>This parameter is active and required only when you configure cross-Alibaba Cloud account change tracking. You must subscribe to the task.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -312,7 +323,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointOwnerID { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to connect to the source database.</para>
+        /// <para>The password of the database account for the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test123456</para>
@@ -322,9 +333,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The service port number of the source database.</para>
+        /// <para>The service port of the source database.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the source database is a self-managed database.</para>
+        /// <para>This parameter is available and required only when the source database is a self-managed database.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -335,9 +346,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the source database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <remarks>
-        /// <para> If the source database is a self-managed database with a public IP address, you can set the value of this parameter to <b>cn-hangzhou</b> or the ID of the region that is closest to the region in which the self-managed database resides.</para>
+        /// <para>If the source instance is a self-managed database with a public IP address, you can set this parameter to <b>cn-hangzhou</b> or the region ID closest to the self-managed database.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -348,9 +359,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</para>
+        /// <para>The authorized role of the source instance. If the source instance and the change tracking task belong to different Alibaba Cloud accounts, specify this parameter to allow the Alibaba Cloud account that owns the change tracking task to access the source instance.</para>
         /// <remarks>
-        /// <para> For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+        /// <para>For more information about the permissions and authorization methods required for the role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -361,9 +372,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointRole { get; set; }
 
         /// <summary>
-        /// <para>The username of the account that is used to connect to the source database.</para>
+        /// <para>The database account of the source instance.</para>
         /// <remarks>
-        /// <para> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/212653.html">Prepare the source database account for change tracking</a>.</para>
+        /// <para>The permissions required for change tracking vary depending on the database type. For more information, see the account permissions section in <a href="https://help.aliyun.com/document_detail/212653.html">Prepare database accounts for change tracking</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -374,9 +385,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <para>The path of the CA certificate when the source database uses an SSL connection.</para>
         /// <remarks>
-        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// <para>This feature is currently not supported. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -387,9 +398,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcCaCertificateOssUrl { get; set; }
 
         /// <summary>
-        /// <para>The key of the CA certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <para>The key of the CA certificate when the source database uses an SSL connection.</para>
         /// <remarks>
-        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// <para>This feature is currently not supported. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -400,9 +411,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcCaCertificatePassword { get; set; }
 
         /// <summary>
-        /// <para>The path to the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <para>The path of the client certificate when the source database uses an SSL connection.</para>
         /// <remarks>
-        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// <para>This feature is currently not supported. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -413,9 +424,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcClientCertOssUrl { get; set; }
 
         /// <summary>
-        /// <para>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <para>The path of the client certificate private key when the source database uses an SSL connection.</para>
         /// <remarks>
-        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// <para>This feature is currently not supported. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -426,9 +437,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcClientKeyOssUrl { get; set; }
 
         /// <summary>
-        /// <para>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <para>The password of the client certificate private key when the source database uses an SSL connection.</para>
         /// <remarks>
-        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// <para>This feature is currently not supported. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -439,10 +450,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcClientPassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to track DDL statements. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to track DDL data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: tracks DDL statements.</description></item>
-        /// <item><description><b>false</b>: does not track DDL statements.</description></item>
+        /// <item><description><b>true</b> (default): tracks DDL data.</description></item>
+        /// <item><description><b>false</b>: does not track DDL data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -453,10 +464,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? SubscriptionDataTypeDDL { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to track DML statements. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to track DML data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: tracks DML statements.</description></item>
-        /// <item><description><b>false</b>: does not track DML statements.</description></item>
+        /// <item><description><b>true</b> (default): tracks DML data.</description></item>
+        /// <item><description><b>false</b>: does not track DML data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -467,12 +478,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? SubscriptionDataTypeDML { get; set; }
 
         /// <summary>
-        /// <para>The network type of the change tracking task. Set the value to <b>vpc</b>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</para>
+        /// <para>The network type of the change tracking task. The only valid value is <b>vpc</b>, which indicates virtual private cloud (VPC).</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify this parameter, the change tracking task is defined as the new version. You must also correctly set the <b>SubscriptionInstanceVPCId</b> and <b>SubscriptionInstanceVSwitchID</b> parameters. If you do not specify this parameter, the change tracking task is defined as the legacy version.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <b>SubscriptionInstanceVPCId</b> and <b>SubscriptionInstanceVSwitchID</b> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</description></item>
-        /// <item><description>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</description></item>
+        /// <item><description>Legacy change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, and PolarDB-X 1.0. New-version change tracking tasks support tracking data from self-managed MySQL, ApsaraDB RDS for MySQL, PolarDB for MySQL, and Oracle.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -484,9 +497,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the change tracking instance is deployed.</para>
+        /// <para>The VPC ID of the change tracking instance.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+        /// <para>This parameter is available and required only when <b>SubscriptionInstanceNetworkType</b> is set to <b>vpc</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -497,9 +510,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceVPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the specified VPC.</para>
+        /// <para>The vSwitch ID of the change tracking instance.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+        /// <para>This parameter is available and required only when <b>SubscriptionInstanceNetworkType</b> is set to <b>vpc</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

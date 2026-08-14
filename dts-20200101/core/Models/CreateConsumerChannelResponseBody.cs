@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateConsumerChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</para>
+        /// <para>The consumer group ID. You can pass this ID to the downstream client to consume the change tracking data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsor2y66j4219****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5F566C5B-E5B0-4020-A531-FC6F5005****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The dedicated cluster ID.</para>
+        /// <para>The ID of the dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The DTS task IDs. The value can be a JSON array that consists of multiple DTS task IDs. Separate the IDs with commas (,).</para>
+        /// <para>The task ID. You can specify multiple task IDs in a JSON array. Separate the IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;dtsxxxx01&quot;, &quot;dtsxxx02&quot;]</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the DTS instance resides.</para>
+        /// <para>The region in which the DTS instance resides.</para>
         /// <remarks>
-        /// <para>For information about the regions that support dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</para>
+        /// <para>For the regions supported by dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

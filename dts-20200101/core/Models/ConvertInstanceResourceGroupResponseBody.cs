@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConvertInstanceResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned by the backend service. The number is incremented.</para>
+        /// <para>The backend error code, which increments numerically.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> If <b>The Value of Input Parameter %s is not valid</b> is returned and DtsJobId is returned for DynamicMessage, it indicates that the request parameter DtsJobId is invalid.</para>
+        /// <para>For example, if <b>The Value of Input Parameter %s is not valid</b> is returned and DynamicMessage returns DtsJobId, the request parameter DtsJobId that you specified is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned when the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of a request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD823BD3-1BA6-4117-A536-165CB280****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

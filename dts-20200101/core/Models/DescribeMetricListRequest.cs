@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or synchronization task.</para>
+        /// <para>The ID of the data migration or data synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k2gm967v16f****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1642476194000</para>
@@ -61,13 +61,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><b>InternetOut</b>: the outbound traffic over the Internet. Unit: byte.</description></item>
-        /// <item><description><b>diskusage_utilization</b>: the disk usage.</description></item>
-        /// <item><description><b>IntranetInRate</b>: the inbound traffic over the internal network. Unit: byte.</description></item>
-        /// <item><description><b>InternetIn</b>: the inbound traffic from the Internet. Unit: byte.</description></item>
-        /// <item><description><b>cpu_total</b>: the CPU utilization.</description></item>
-        /// <item><description><b>memory_usedutilization</b>: the memory usage.</description></item>
-        /// <item><description><b>IntranetOutRate</b>: the outbound traffic over the internal network. Unit: byte.</description></item>
+        /// <item><description><b>InternetOut</b>: outbound Internet traffic, in bytes.</description></item>
+        /// <item><description><b>diskusage_utilization</b>: disk usage.</description></item>
+        /// <item><description><b>IntranetInRate</b>: inbound internal network traffic, in bytes.</description></item>
+        /// <item><description><b>InternetIn</b>: inbound Internet traffic, in bytes.</description></item>
+        /// <item><description><b>cpu_total</b>: CPU utilization.</description></item>
+        /// <item><description><b>memory_usedutilization</b>: memory utilization.</description></item>
+        /// <item><description><b>IntranetOutRate</b>: outbound internal network traffic, in bytes.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the metrics of the cluster or a node are queried. Valid values:</para>
+        /// <para>Specifies whether to query a cluster or a node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLUSTER</b>: The metrics of the cluster are queried.</description></item>
-        /// <item><description><b>NODE</b>: The metrics of a node are queried.</description></item>
+        /// <item><description><b>CLUSTER</b>: cluster.</description></item>
+        /// <item><description><b>NODE</b>: node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerID { get; set; }
 
         /// <summary>
-        /// <para>The monitored object. If the <b>MetricType</b> parameter is set to <b>NODE</b>, set this parameter to the ID of the node that is monitored.</para>
+        /// <para>The observation value. If <b>MetricType</b> is set to <b>NODE</b>, the value is <b>nodeid</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The monitoring interval. Unit: seconds. The minimum value is 15.</para>
+        /// <para>The observation interval in seconds. The minimum interval is 15 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1642476144000</para>

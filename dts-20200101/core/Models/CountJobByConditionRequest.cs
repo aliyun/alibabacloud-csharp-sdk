@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestDbType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS task.</para>
+        /// <para>The parent task ID of a distributed synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pk13r731m****</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the DTS task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MIGRATION</b>: data migration task</description></item>
-        /// <item><description><b>SYNC</b>: data synchronization task</description></item>
-        /// <item><description><b>SUBSCRIBE</b>: change tracking task</description></item>
+        /// <item><description><b>MIGRATION</b>: data migration.</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization.</description></item>
+        /// <item><description><b>SUBSCRIBE</b>: change tracking.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The content of the query condition, which corresponds to the value of the JobType parameter.</para>
+        /// <para>The query value that corresponds to JobType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtspk3f13r731m****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>One of the query conditions. The ID of the region. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The region ID used as a filter condition. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID, global parameter that does not need to be passed in by the current API.</para>
+        /// <para>The resource group ID. This is a global parameter and does not need to be passed for this API operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Resource group ID, global parameter that does not need to be passed in by the current API.</para>
+        /// <para>资源组ID，全局参数，当前API无需传入。</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -97,56 +97,56 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcDbType { get; set; }
 
         /// <summary>
-        /// <para>The status of the DTS task.</para>
-        /// <para>Valid values for a data migration task:</para>
+        /// <para>The instance status of the DTS instance. Valid values:</para>
+        /// <para>Data migration node statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is in precheck.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>Migrating</b>: The task is in progress.</description></item>
-        /// <item><description><b>Suspending</b>: The task is paused.</description></item>
-        /// <item><description><b>MigrationFailed</b>: The task failed to migrate data.</description></item>
-        /// <item><description><b>Finished</b>: The task is complete.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a dry run.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: dry run failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: dry run passed.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>Migrating</b>: migrating.</description></item>
+        /// <item><description><b>Suspending</b>: paused.</description></item>
+        /// <item><description><b>MigrationFailed</b>: migration failed.</description></item>
+        /// <item><description><b>Finished</b>: finished.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
-        /// <para>Valid values for a data synchronization task:</para>
+        /// <para>Data synchronization node statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is in precheck.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>Initializing</b>: The task is performing initial synchronization.</description></item>
-        /// <item><description><b>InitializeFailed</b>: Initial synchronization failed.</description></item>
-        /// <item><description><b>Synchronizing</b>: The task is in progress.</description></item>
-        /// <item><description><b>Failed</b>: The task failed to synchronize data.</description></item>
-        /// <item><description><b>Suspending</b>: The task is paused.</description></item>
-        /// <item><description><b>Modifying</b>: The objects in the task are being modified.</description></item>
-        /// <item><description><b>Finished</b>: The task is complete.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a dry run.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: dry run failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: dry run passed.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>Initializing</b>: performing initial synchronization.</description></item>
+        /// <item><description><b>InitializeFailed</b>: initial synchronization failed.</description></item>
+        /// <item><description><b>Synchronizing</b>: synchronizing.</description></item>
+        /// <item><description><b>Failed</b>: synchronization failed.</description></item>
+        /// <item><description><b>Suspending</b>: paused.</description></item>
+        /// <item><description><b>Modifying</b>: modifying sub-objects.</description></item>
+        /// <item><description><b>Finished</b>: finished.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
-        /// <para>Valid values for a change tracking task:</para>
+        /// <para>Subscribe node statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is in precheck.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>Starting</b>: The task is being started.</description></item>
-        /// <item><description><b>Normal</b>: The task is running as expected.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Abnormal</b>: The task is not running as expected.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a dry run.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: dry run failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: dry run passed.</description></item>
+        /// <item><description><b>Starting</b>: starting.</description></item>
+        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Abnormal</b>: abnormal.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,15 +157,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The content of the query condition. Valid values:</para>
+        /// <para>The query type. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of the task</description></item>
-        /// <item><description><b>rds</b>: the ID of the destination instance</description></item>
-        /// <item><description><b>instance</b>: the ID of the Data Transmission Service (DTS) instance</description></item>
-        /// <item><description><b>srcRds</b>: the ID of the source instance</description></item>
+        /// <item><description><b>name</b>: queries by job name.  </description></item>
+        /// <item><description><b>rds</b>: queries by destination instance ID.  </description></item>
+        /// <item><description><b>instance</b>: queries by DTS instance ID.</description></item>
+        /// <item><description><b>srcRds</b>: queries by source instance ID.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The value of this parameter corresponds to the value of the <b>JobType</b> parameter.</para>
+        /// <para>This parameter corresponds to the <b>JobType</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

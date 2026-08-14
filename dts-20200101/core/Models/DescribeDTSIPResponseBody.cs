@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDTSIPResponseBody : TeaModel {
         /// <summary>
-        /// <para>The internal error code. This parameter will be removed in the future.</para>
+        /// <para>The internal error code of the service. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks of DTS servers.</para>
+        /// <para>The IP addresses of the DTS service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C99C0BE-F312-40FA-ADFA-4DC1166B****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsEtlJobVersionInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of ETL tasks.</para>
+        /// <para>The array of ETL task information objects.</para>
         /// </summary>
         [NameInMap("DtsEtlJobVersionInfos")]
         [Validation(Required=false)]
         public List<DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos> DtsEtlJobVersionInfos { get; set; }
         public class DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos : TeaModel {
             /// <summary>
-            /// <para>The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the ETL task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637229315000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>The creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DTS instance.</para>
+            /// <para>The DTS instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtsg******gd</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DtsInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ETL task.</para>
+            /// <para>The ETL task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>l5512es7w15****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DtsJobName { get; set; }
 
             /// <summary>
-            /// <para>The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The modification timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637230117000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The safe checkpoint of the ETL task.</para>
+            /// <para>The safe checkpoint, which indicates the current position of the ETL task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637230117000</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic error code associated with this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The dynamic error message associated with this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>present environment is not support,so skip</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code. This example indicates that the specified ETL task ID is invalid.</para>
+        /// <para>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidJobId</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.</para>
+        /// <para>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified dts job id %s is not exists.</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number of the instance status list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records returned on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>224DB9F7-3100-4899-AB9C-C938BCCB43E7</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. If the call failed, false is returned.</para>
+        /// <para>Indicates whether the request was successful. A value of false indicates a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

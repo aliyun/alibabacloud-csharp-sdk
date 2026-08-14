@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSubscriptionMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the distributed change tracking instance.</para>
+        /// <para>The instance ID of the distributed change tracking task.</para>
+        /// <remarks>
+        /// <para>This parameter is required.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dtsbr4m9luv2******</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the change tracking instance resides.</para>
+        /// <para>The region in which the change tracking instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the consumer group.</para>
+        /// <para>The consumer group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,26 +54,26 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Sid { get; set; }
 
         /// <summary>
-        /// <para>The IDs of all subtasks in the distributed change tracking task. Separate multiple subtask IDs with commas (,).</para>
+        /// <para>The IDs of all change tracking subtasks in the distributed change tracking task. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You must specify at least one of the SubMigrationJobIds and <b>Topics</b> parameters. We recommend that you specify the SubMigrationJobIds parameter.</para>
+        /// <para>You must specify at least one of this parameter and <b>Topics</b>. We recommend that you specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>z38m91gg2******</para>
+        /// <para>[&quot;zsls58agp6f****&quot;]</para>
         /// </summary>
         [NameInMap("SubMigrationJobIds")]
         [Validation(Required=false)]
         public Dictionary<string, object> SubMigrationJobIds { get; set; }
 
         /// <summary>
-        /// <para>The topics of all subtasks in the distributed change tracking task. Separate multiple topics with commas (,).</para>
+        /// <para>All topics of the distributed change tracking task. Separate multiple topics with commas (,).</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>SubMigrationJobIds</b> and Topics parameters. We recommend that you specify the <b>SubMigrationJobIds</b> parameter.</para>
+        /// <para>You must specify at least one of this parameter and <b>SubMigrationJobIds</b>. We recommend that you specify <b>SubMigrationJobIds</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</para>
+        /// <para>[&quot;rm_bp15jj3qi1p8f****&quot;]</para>
         /// </summary>
         [NameInMap("Topics")]
         [Validation(Required=false)]

@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public CreateSubscriptionInstanceRequestSourceEndpoint SourceEndpoint { get; set; }
         public class CreateSubscriptionInstanceRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The type of the source instance. Valid values: <b>MySQL</b>, <b>PolarDB</b>, <b>DRDS</b>, and <b>Oracle</b>.</para>
+            /// <para>数据订阅的实例类型，取值为：<b>MySQL</b>、<b>PolarDB</b>、<b>DRDS</b>、<b>Oracle</b>。</para>
             /// <remarks>
-            /// <para> Default value: <b>MySQL</b>.</para>
+            /// <para>默认取值为：<b>MySQL</b>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a value from your client to make sure that the value is unique among different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the change tracking instance.</para>
+        /// <para>The billing method.</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go. This is the default value.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,13 +67,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription instance. Valid values:</para>
+        /// <para>The billing method of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: annual subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify this parameter only if you set the PayType parameter to <b>Prepaid</b>.</para>
+        /// <para>This parameter is valid and required only when PayType is set to <b>Prepaid</b> (subscription).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Set this parameter to the region where the subscription object resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the change tracking instance. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The region to which the change tracking instance belongs. You do not need to specify this parameter. This parameter will be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -115,13 +115,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The subscription length.</para>
+        /// <para>The purchase duration of the subscription instance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing cycle is <b>Year</b>, the value range is <b>1 to 5</b>.</description></item>
-        /// <item><description>If the billing cycle is <b>Month</b>, the value range is <b>1 to 60</b>.</description></item>
+        /// <item><description>If the billing method is set to <b>Year</b> (annual subscription), the valid values are <b>1 to 5</b>.</description></item>
+        /// <item><description>If the billing method is set to <b>Month</b> (monthly subscription), the valid values are <b>1 to 60</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify this parameter only if you set the PayType parameter to <b>Prepaid</b>.</para>
+        /// <para>This parameter is valid and required only when PayType is set to <b>Prepaid</b> (subscription).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDedicatedClusterMonitorRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alert threshold for CPU utilization. Unit: percentage.</para>
+        /// <para>The CPU alert threshold, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string CpuAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsClustervcwn1oeyu5fx4yf</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for disk usage. Unit: percentage.</para>
+        /// <para>The disk alert threshold, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DiskAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</para>
+        /// <para>The DU alert threshold, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DuAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for memory usage. Unit: percentage.</para>
+        /// <para>The memory alert threshold, in percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MemAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert feature is enabled. Valid values:</para>
+        /// <para>The alert switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The alert feature is enabled.</description></item>
-        /// <item><description><b>0</b>: The alert feature is disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string NoticeSwitch { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>The phone numbers that receive alerts. If there are multiple phone numbers, they are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>186****7653</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Phones { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>621BB4F8-3016-4FAA-8D5A-5D3163CC****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

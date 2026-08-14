@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ShieldPrecheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
-        /// <remarks>
-        /// <para> You must specify at least one of the <b>DtsInstanceId</b> and <b>DtsJobId</b> parameters.</para>
-        /// </remarks>
+        /// <para>The ID of the data migration or synchronization instance. You can call the <b>DescribeMigrationJobs</b> or DescribeSynchronizationJobs operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,22 +21,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The precheck items that you want to ignore. Separate multiple items with commas (,). Valid values:</para>
+        /// <para>The precheck items to skip. Separate multiple items with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CHECK_SAME_OBJ</b>: schema name conflict</para>
-        /// </description></item>
-        /// <item><description><para><b>CHECK_SAME_USER</b>: multiple usernames for one instance</para>
-        /// </description></item>
-        /// <item><description><para><b>CHECK_SRC</b>: source database version</para>
-        /// </description></item>
-        /// <item><description><para><b>CHECK_TOPOLOGY</b>: topology</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</para>
+        /// <item><description><b>CHECK_SAME_OBJ</b>: checks whether objects with the same name exist.</description></item>
+        /// <item><description><b>CHECK_SAME_USER</b>: checks whether accounts with different names exist.</description></item>
+        /// <item><description><b>CHECK_SRC</b>: checks the source database version.</description></item>
+        /// <item><description><b>CHECK_TOPOLOGY</b>: checks the topology version.<remarks>
+        /// <para>For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><b>CHECK_SERVER_ID</b>: value of server_id in the source database</description></item>
+        /// </description></item>
+        /// <item><description><b>CHECK_SERVER_ID</b>: checks the server_id of the source database.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +42,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PrecheckItems { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -61,7 +52,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

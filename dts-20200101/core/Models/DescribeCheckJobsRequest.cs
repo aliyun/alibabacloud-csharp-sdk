@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeCheckJobsRequest : TeaModel {
         /// <summary>
-        /// <para>Check the task job ID.</para>
+        /// <para>The ID of the data validation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>z9p104ib23***</para>
@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string CheckJobId { get; set; }
 
         /// <summary>
-        /// <para>The type of the check</para>
-        /// <remarks>
-        /// <remarks>
-        /// <para>1 full quantity, 2 incremental, 3 all</para>
-        /// </remarks>
-        /// </remarks>
+        /// <para>The data validation method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: full data validation.</description></item>
+        /// <item><description><b>2</b>: incremental data validation.</description></item>
+        /// <item><description><b>3</b>: all.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? CheckType { get; set; }
 
         /// <summary>
-        /// <para>Data migration instance ID, which can be queried by calling the <b>describemigrationjobs</b> API.</para>
+        /// <para>The ID of the data migration instance. You can call the <b>DescribeMigrationJobs</b> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsz9p104ib23e972e</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data migration or synchronization job.</para>
+        /// <para>The name of the data migration or data synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zwy_test</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

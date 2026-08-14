@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyGadInstanceNameRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the active geo-redundancy instance group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-bp1i99e8l7913****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance name of the active geo-redundancy instance group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-uf6b0m001ir8mr9i9</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek26mat2ldb4oy</para>
         /// </summary>

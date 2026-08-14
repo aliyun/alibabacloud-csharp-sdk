@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform full data migration or synchronization. Valid values:</para>
+        /// <para>Specifies whether to perform full data migration or initial full data synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to perform incremental data migration or synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? DataSynchronization { get; set; }
 
         /// <summary>
-        /// <para>The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
-        /// <remarks>
-        /// </remarks>
+        /// <para>The modified synchronization objects, in JSON format. For more information about the definition, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</para>
         /// <list type="bullet">
-        /// <item><description><para>The new value of DbList overwrites the original value. Make sure that all the objects that you want to synchronize are specified. Otherwise, some objects may be lost. Specify this parameter with caution.</para>
-        /// </description></item>
-        /// <item><description><para>Before you call the ModifyDtsJob operation, we recommend that you call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</para>
-        /// </description></item>
+        /// <item><description>The original DbList is overwritten by the new DbList. Make sure that the new DbList contains all the objects that need to be synchronized. Otherwise, synchronization objects may be lost. Modify this parameter with caution.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> to query the current synchronization objects before you modify them based on your business requirements. For example, if the current objects are tables A and B, and you want to add table C, specify tables A, B, and C in this parameter.</description></item>
+        /// <item><description>The maximum size of DbList is 1 MB.</description></item>
+        /// <item><description>If DbList contains filter conditions, the total length of DbList (including filter conditions) cannot exceed 1 MB.</description></item>
+        /// <item><description>For distributed tasks (such as migration or synchronization tasks whose source is PolarDB-X 1.0), DbList is split based on physical shards and multiple subtasks are generated. The maximum size of DbList for each subtask is 1 MB.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DbListShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance.</para>
+        /// <para>The instance ID of the data synchronization instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +76,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization task ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the synchronization task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fpx1149rw7p***</para>
@@ -87,7 +86,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The operator that is related to the extract, transform, and load (ETL) feature and dedicated to T+1 business.</para>
+        /// <para>A field dedicated to T+1 business scenarios. This is an ETL operator and a business-specific field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -135,7 +134,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EtlOperatorColumnReference { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the Object Storage Service (OSS) bucket in which the files to be synchronized are stored.</para>
+        /// <para>The OSS URL of the synchronization file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_12185******43989">http://db-list-os-file.oss-cn-shanghai.aliyuncs.com/8e42_12185******43989</a>_************</para>
@@ -155,7 +154,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string FilterTableName { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to modify the data synchronization task. If you do not specify the parameter, the objects of the data synchronization task are modified by default. If you specify UPDATE_RESERVED for the parameter, the reserved parameters are modified.</para>
+        /// <para>The method used to modify the synchronization task. If this parameter is not specified, the synchronization objects are modified by default. Set this parameter to UPDATE_RESERVED to modify reserved parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UPDATE_RESERVED</para>
@@ -165,7 +164,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ModifyTypeEnum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -175,17 +174,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</para>
+        /// <para>The reserved parameters of DTS. The update method is append rather than overwrite. The value is in the MAP JSON format. You can specify this parameter to meet special requirements, such as whether to automatically start a precheck. The usage is similar to that of the Reserve parameter. For details, see <a href="https://help.aliyun.com/document_detail/273111.html">Reserve parameter description</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<b>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</b>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</para>
+        /// <para>{&quot;definer&quot;: false,&quot;syncArchitecture&quot;: &quot;oneway&quot;,&quot;whitelist.dms.online.ddl.enable&quot;: false,&quot;destSSL&quot;: &quot;0&quot;,&quot;triggerMode&quot;: &quot;manual&quot;,&quot;sqlparser.dms.original.ddl&quot;: true,&quot;whitelist.ghost.online.ddl.enable&quot;: false,&quot;privilegeMigration&quot;: false,&quot;maxRetryTime&quot;: 43200,&quot;srcSSL&quot;: &quot;0&quot;,&quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;}</para>
         /// </summary>
         [NameInMap("Reserved")]
         [Validation(Required=false)]
         public string Reserved { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -195,10 +194,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform schema migration or synchronization. Valid values:</para>
+        /// <para>Specifies whether to perform schema migration or initial schema synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,14 +210,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
-        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>This parameter is required only if the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -229,9 +230,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether this is a seamless integration (zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

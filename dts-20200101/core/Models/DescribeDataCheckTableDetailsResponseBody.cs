@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckTableDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of tables that contain inconsistent data.</para>
+        /// <para>The number of tables with data inconsistency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DiffTableCount { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code. This parameter will be discontinued in the future.</para>
+        /// <para>The dynamic error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message used to replace the <b>%s</b> variable in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>For example, if the returned value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>Type</b>, the specified <b>Type</b> parameter is invalid.</para>
+        /// <para>For example, if <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>Type</b>, the request parameter <b>Type</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The total number of data rows that were failed.</para>
+        /// <para>The number of tables that failed the verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? FailedTableCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of data rows that were verified.</para>
+        /// <para>The total number of rows that have been verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? FinishedCount { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -123,14 +123,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of data verification results.</para>
+        /// <para>The details of the data consistency verification results for tables.</para>
         /// </summary>
         [NameInMap("TableDetails")]
         [Validation(Required=false)]
         public List<DescribeDataCheckTableDetailsResponseBodyTableDetails> TableDetails { get; set; }
         public class DescribeDataCheckTableDetailsResponseBodyTableDetails : TeaModel {
             /// <summary>
-            /// <para>The time when data verification was performed.</para>
+            /// <para>The time when the verification was performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-18 11:26:59</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string BootTime { get; set; }
 
             /// <summary>
-            /// <para>The number of data rows that contain inconsistent data.</para>
+            /// <para>The number of rows with data inconsistency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -150,12 +150,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? DiffCount { get; set; }
 
             /// <summary>
-            /// <para>The error code returned if the data verification task failed. Valid values:</para>
+            /// <para>The error code returned when the task fails. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The number of tables that do not contain primary keys exceeds the limit.</description></item>
-            /// <item><description><b>2</b>: The number of data rows that contain inconsistent data exceeds 300.</description></item>
-            /// <item><description><b>3</b>: One or more tables to be verified do not exist.</description></item>
-            /// <item><description><b>4</b>: The SQL statements used for verifying data contain a syntax error.</description></item>
+            /// <item><description><b>1</b>: the number of tables without primary key exceeds the limit.</description></item>
+            /// <item><description><b>2</b>: the number of rows with data inconsistency exceeds 300.</description></item>
+            /// <item><description><b>3</b>: the table to be queried does not exist.</description></item>
+            /// <item><description><b>4</b>: the SQL statement used to query data contains a syntax error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The number of data rows that were verified.</para>
+            /// <para>The number of rows that have been verified in the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? FinishCount { get; set; }
 
             /// <summary>
-            /// <para>The auto-increment primary key that is used to identify the data in a verification result.</para>
+            /// <para>The auto-increment primary key that identifies a verification result record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167401241974****</para>
@@ -206,12 +206,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string SourceTbName { get; set; }
 
             /// <summary>
-            /// <para>The status of data verification results. Valid values:</para>
+            /// <para>The status of the verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The data verification task was complete.</description></item>
-            /// <item><description><b>2</b>: The data verification task was being initialized.</description></item>
-            /// <item><description><b>3</b>: The data verification task was in progress.</description></item>
-            /// <item><description><b>5</b>: The data verification task failed.</description></item>
+            /// <item><description><b>0</b>: completed.</description></item>
+            /// <item><description><b>2</b>: initializing.</description></item>
+            /// <item><description><b>3</b>: running.</description></item>
+            /// <item><description><b>5</b>: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string TargetTbName { get; set; }
 
             /// <summary>
-            /// <para>The total number of data rows.</para>
+            /// <para>The total number of rows to be verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The total number of tables on which data verification was performed.</para>
+        /// <para>The total number of tables to be verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

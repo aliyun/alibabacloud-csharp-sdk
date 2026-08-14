@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SummaryJobDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration or data synchronization instance.</para>
-        /// <remarks>
-        /// <para> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</para>
-        /// </remarks>
+        /// <para>The migration or synchronization instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl3m1213ye7l****</para>
@@ -23,10 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or data synchronization task.</para>
-        /// <remarks>
-        /// <para> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</para>
-        /// </remarks>
+        /// <para>The ID of the data migration or synchronization task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,10 +31,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The phase of the data migration task. Valid values:</para>
+        /// <para>The migration phase. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>02</b>: The task is in the schema migration phase.</description></item>
-        /// <item><description><b>03</b>: The task is in the incremental migration phase.</description></item>
+        /// <item><description><b>02</b>: schema migration phase.</description></item>
+        /// <item><description><b>03</b>: incremental data migration phase.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +46,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -62,10 +56,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek25bwhtt22cjq</para>
+        /// <para>rg-aek2mjc4qlnog6q</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -74,8 +68,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The type of schema definition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>before</b>: schema migration or initial schema synchronization</description></item>
-        /// <item><description><b>after</b>: DDL operations performed during incremental data migration or synchronization</description></item>
+        /// <item><description><b>before</b>: schema migration or initial schema synchronization.</description></item>
+        /// <item><description><b>after</b>: DDL operations during incremental data migration or synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,16 +80,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string StructType { get; set; }
 
         /// <summary>
-        /// <para>The synchronization direction of the data synchronization task. Valid values:</para>
+        /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
-        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>You can set this parameter to <b>Reverse</b> to delete the reverse synchronization task only if the topology is two-way synchronization.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can set this parameter to <b>Reverse</b> to release the reverse synchronization link only when the topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,9 +102,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>true</b>: The node is a seamless integration node.</description></item>
+        /// <item><description><b>false</b>: The node is not a seamless integration node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned by the backend service. The number is incremented.</para>
+        /// <para>The backend error code, which is an incrementing number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The monitoring statistics.</para>
+        /// <para>The monitoring statistics information.</para>
         /// </summary>
         [NameInMap("DataPoints")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public float? Statistics { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the record. Unit: milliseconds.</para>
+            /// <para>The record timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650872310000</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the %s variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the %s placeholder in the <b>ErrMessage</b> error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Type</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned for an exception.</para>
+        /// <para>The HTTP status code corresponding to the exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -90,13 +90,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><b>InternetOut</b>: the outbound traffic over the Internet. Unit: byte.</description></item>
-        /// <item><description><b>diskusage_utilization</b>: the disk usage.</description></item>
-        /// <item><description><b>IntranetInRate</b>: the inbound traffic over the internal network. Unit: byte.</description></item>
-        /// <item><description><b>InternetIn</b>: the inbound traffic from the Internet. Unit: byte.</description></item>
-        /// <item><description><b>cpu_total</b>: the CPU utilization.</description></item>
-        /// <item><description><b>memory_usedutilization</b>: the memory usage.</description></item>
-        /// <item><description><b>IntranetOutRate</b>: the outbound traffic over the internal network. Unit: byte.</description></item>
+        /// <item><description><b>InternetOut</b>: outbound Internet traffic, in bytes.</description></item>
+        /// <item><description><b>diskusage_utilization</b>: disk usage.</description></item>
+        /// <item><description><b>IntranetInRate</b>: inbound internal network traffic, in bytes.</description></item>
+        /// <item><description><b>InternetIn</b>: inbound Internet traffic, in bytes.</description></item>
+        /// <item><description><b>cpu_total</b>: CPU utilization.</description></item>
+        /// <item><description><b>memory_usedutilization</b>: memory utilization.</description></item>
+        /// <item><description><b>IntranetOutRate</b>: outbound internal network traffic, in bytes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the metrics of the cluster or a node are queried. Valid values:</para>
+        /// <para>Specifies whether to query a cluster or a node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLUSTER</b>: The metrics of the cluster are queried.</description></item>
-        /// <item><description><b>NODE</b>: The metrics of a node are queried.</description></item>
+        /// <item><description><b>CLUSTER</b>: cluster.</description></item>
+        /// <item><description><b>NODE</b>: node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The monitored object.</para>
+        /// <para>The observation value.</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>MetricType</b> parameter is set to <b>NODE</b>, the value of this parameter is the ID of the node that is monitored.****</description></item>
-        /// <item><description>If the <b>MetricType</b> parameter is set to <b>CLUSTER</b>, the value of this parameter is the ID of the dedicated cluster. You can obtain the ID by calling the ListDedicatedCluster operation.</description></item>
+        /// <item><description>If <b>MetricType</b> is set to <b>NODE</b>, the value is <b>nodeid</b>.</description></item>
+        /// <item><description>If <b>MetricType</b> is set to <b>CLUSTER</b>, the value is the ID of the dedicated cluster, which can be obtained by calling the ListDedicatedCluster operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The monitoring interval. Unit: seconds. Minimum value: 15.</para>
+        /// <para>The observation interval in seconds. The minimum interval is 15 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>621BB4F8-3016-4FAA-8D5A-5D3163CC****</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

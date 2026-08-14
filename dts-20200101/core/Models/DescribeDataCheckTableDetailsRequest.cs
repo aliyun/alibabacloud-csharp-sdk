@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckTableDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The data verification method. Valid values:</para>
+        /// <para>The data validation method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: full data verification.</description></item>
-        /// <item><description><b>2</b>: incremental data verification.</description></item>
+        /// <item><description><b>1</b>: full data validation.</description></item>
+        /// <item><description><b>2</b>: incremental data validation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and does not exceed the maximum value of the Integer data type. Default value:<b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the schema whose data is verified in the source database.</para>
+        /// <para>The schema name of the object to be verified in the source database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtstest</para>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The status of the data verification result. Valid values:</para>
+        /// <para>The status of the verification result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b> (default): All status.</description></item>
-        /// <item><description><b>6</b>: Inconsistent data detected in the table.</description></item>
+        /// <item><description><b>-1</b> (default): all statuses.</description></item>
+        /// <item><description><b>6</b>: tables with inconsistent data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the table whose data is verified in the source database.</para>
+        /// <para>The name of the table to be verified in the source database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>student</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class PromoteToMasterRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gad-bp162d4tp0500****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Primary instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-bp1756****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MasterDbInstanceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Secondary instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-bp1756****</para>
         /// </summary>

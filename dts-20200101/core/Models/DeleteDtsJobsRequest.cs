@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DeleteDtsJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <para>The IDs of the data migration, data synchronization, or change tracking tasks.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Separate multiple task IDs with commas (,).</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query task IDs.</description></item>
+        /// <item><description>You can specify up to 10 task IDs, separated by commas (,).</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the DTS task IDs.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -37,17 +39,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>A special parameter for specific business scenarios. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekz4us4iruleja</para>
+        /// <para>rg3m1213ye7l****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Is it ZeroETL task</para>
+        /// <para>A special parameter for specific business scenarios. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

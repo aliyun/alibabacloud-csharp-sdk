@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeEtlJobLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic error code associated with this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The dynamic error message associated with this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>present environment is not support,so skip.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code. This example indicates that the specified ETL task ID is invalid.</para>
+        /// <para>The error code returned when the specified ETL task ID is invalid and the corresponding task cannot be found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidJobId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.</para>
+        /// <para>The error message returned when the specified ETL task ID is invalid and the corresponding task cannot be found. The task may have been deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified dts job id %s is not exists.</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The logs of ETL tasks.</para>
+        /// <para>The array of ETL task running log objects.</para>
         /// </summary>
         [NameInMap("EtlRunningLogs")]
         [Validation(Required=false)]
         public List<DescribeEtlJobLogsResponseBodyEtlRunningLogs> EtlRunningLogs { get; set; }
         public class DescribeEtlJobLogsResponseBodyEtlRunningLogs : TeaModel {
             /// <summary>
-            /// <para>The state of the ETL task.</para>
+            /// <para>The description of the ETL task running status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Starting DTS-ETL...</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The module for which the logs are generated, such as the conversion module of ETL tasks.</para>
+            /// <para>The status, which indicates the name of the module that generated the log, such as the transformation module of the ETL task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DTS-ETL</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string EtlId { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the log was generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637306503000</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>121323*******454512</para>
+            /// <para>123123******12131</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>224DB9F7-3100-4899-AB9C-C938BCCB43E7</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. If the call failed, false is returned.</para>
+        /// <para>Indicates whether the request was successful. A value of false indicates a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

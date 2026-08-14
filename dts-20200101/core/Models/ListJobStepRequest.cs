@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ListJobStepRequest : TeaModel {
         /// <summary>
+        /// <para>Migration or sync task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
+        /// <para>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek3dcgyq7p****</para>
         /// </summary>
@@ -36,6 +41,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the job is a seamless integration (Zero-ETL) job. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsJobDetailRequest : TeaModel {
+        [NameInMap("DbObjectOutputType")]
+        [Validation(Required=false)]
+        public string DbObjectOutputType { get; set; }
+
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
+        /// <para>The instance ID of the data migration, data synchronization, or subscribe instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsta7w132u12h****</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <para>The ID of the region in which the task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the information about all data synchronization subtasks. Default value: <b>false</b>. A value of false indicates that the system returns only the information about a data synchronization subtask that is running or was most recently run.</para>
+        /// <para>Specifies whether to return information about all synchronization subtasks. Default value: <b>false</b>, which returns only the synchronization subtask that is in progress or the most recently executed synchronization subtask.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -62,14 +66,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>Forward</b>.</description></item>
-        /// <item><description>The value <b>Reverse</b> takes effect only if the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// <item><description>The value <b>Reverse</b> takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,10 +86,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only zero-extract, transform, load (ETL) integration tasks. Valid values:</para>
+        /// <para>Specifies whether the task is a zero-ETL task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The task is a zero-ETL task.</description></item>
+        /// <item><description><b>false</b>: The task is not a zero-ETL task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

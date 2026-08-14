@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartDtsJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration or data synchronization task.</para>
+        /// <para>The IDs of the data migration or synchronization tasks.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple task IDs with commas (,).</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For multiple tasks, separate them with commas (<b>,</b>).</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query DTS task IDs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource GroupId</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -47,9 +49,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

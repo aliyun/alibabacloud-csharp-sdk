@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6EB407F-C59F-4682-A682-A00FA6A2****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether image matching is enabled. Valid values:</para>
+        /// <para>The full image switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Image matching is enabled.</description></item>
-        /// <item><description><b>false</b>: Image matching is disabled.</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

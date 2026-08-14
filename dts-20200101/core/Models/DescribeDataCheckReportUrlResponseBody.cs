@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckReportUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL for downloading the verification report.</para>
+        /// <para>The download URL of the verification report.</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>

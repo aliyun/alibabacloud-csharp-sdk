@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StopDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>InstanceId</b> and <b>DedicatedClusterId</b> parameters.</para>
+        /// <para>You must specify either <b>InstanceId</b> or <b>DedicatedClusterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtscluster_test_001</para>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>InstanceId</b> and <b>DedicatedClusterId</b> parameters.</para>
+        /// <para>You must specify either <b>InstanceId</b> or <b>DedicatedClusterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// <para>The resource group ID. This is a global parameter that does not need to be specified for this operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// <para>资源组ID，全局参数，当前API无需传入。</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

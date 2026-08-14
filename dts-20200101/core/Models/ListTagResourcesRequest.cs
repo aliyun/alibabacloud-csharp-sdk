@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The query token.</para>
         /// <remarks>
-        /// <para> If a query does not return all results, you can specify the returned <b>NextToken</b> parameter in the next query to obtain more results.</para>
+        /// <para>If a single request does not return all results, you can pass the <b>NextToken</b> value returned from the previous request in the subsequent request to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -44,7 +44,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID for data migration, synchronization, and subscription, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.  &gt; - N indicates the Nth instance ID being passed. For example, ResourceId.0 represents the first instance ID; ResourceId.1 represents the second instance ID. Up to 50 instance IDs can be queried simultaneously. - At least one of this parameter and <b>Tag.N.Key</b> must be provided.</para>
+        /// <para>The ID of the data migration, data synchronization, or change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query instance IDs.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID. You can query 1 to 50 instance IDs at a time.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must specify at least one of this parameter and <b>Tag.N.Key</b>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>dtsntk10k6r12v****</para>
@@ -54,7 +62,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value: <b>ALIYUN::DTS::INSTANCE</b>.</para>
+        /// <para>The resource type. Set the value to <b>ALIYUN::DTS::INSTANCE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +73,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The value corresponding to the tag key.</para>
+        /// <para>The tag value that corresponds to the tag key.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -74,10 +82,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the first tag key, and Tag.1.Key specifies the second tag key. You can query 1 to 20 tag keys at a time.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</description></item>
-            /// <item><description>You must specify at least one of the <b>ResourceId.N</b> and Tag.N.Key parameters. The parameters cannot be empty strings.</description></item>
+            /// <item><description>You must specify at least one of this parameter and <b>ResourceId.N</b>. An empty string is not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,10 +100,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the first tag value, and Tag.1.Value specifies the second tag value. You can query 1 to 20 tag values at a time.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</description></item>
-            /// <item><description>This parameter can be an empty string.</description></item>
+            /// <item><description>An empty string is allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

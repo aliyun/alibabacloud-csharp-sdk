@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSubscriptionMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C12E7A51-09A4-5796-94BE-08B6DA******</para>
@@ -50,16 +50,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the subtasks.</para>
+        /// <para>The data information about the change tracking subtasks.</para>
         /// </summary>
         [NameInMap("SubscriptionMetaList")]
         [Validation(Required=false)]
         public List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> SubscriptionMetaList { get; set; }
         public class DescribeSubscriptionMetaResponseBodySubscriptionMetaList : TeaModel {
             /// <summary>
-            /// <para>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</para>
+            /// <para>The consumption checkpoint of the subtask, which is the timestamp of the first data record consumed by the client. The value is a UNIX timestamp. Unit: seconds.</para>
             /// <remarks>
-            /// <para> You can use a search engine to obtain a UNIX timestamp converter.</para>
+            /// <para>You can use a search engine to find a UNIX timestamp converter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DBList { get; set; }
 
             /// <summary>
-            /// <para>The endpoint and port number of the change tracking instance.</para>
+            /// <para>The network address and port number of the change tracking channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dts-cn-hangzhou.aliyuncs.com:18001</para>

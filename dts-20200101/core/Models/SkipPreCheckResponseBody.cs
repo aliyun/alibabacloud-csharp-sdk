@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class SkipPreCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter will be removed in the future.</para>
+        /// <para>The error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace %s in ErrMessage.</para>
+        /// <para>The dynamic error message used to replace the %s variable in the ErrMessage parameter.</para>
         /// <remarks>
-        /// <para>If JobId is invalid, JobId is returned for DynamicMessage, and the following message is returned for ErrMessage: The Value of Input Parameter %s is not valid.</para>
+        /// <para>For example, if ErrMessage returns The Value of Input Parameter %s is not valid and DynamicMessage returns JobId, the JobId request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status codes returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The precheck task ID.</para>
+        /// <para>The ID of the precheck task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b4my3zg929a****</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The precheck task ID.</para>
+        /// <para>The ID of the precheck task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b4my3zg929a****</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ScheduleJobId { get; set; }
 
         /// <summary>
-        /// <para>The shortened name of the precheck item.</para>
+        /// <para>The abbreviated names of the precheck items to suppress or unsuppress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CHECK_SAME_OBJ</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SkipItems { get; set; }
 
         /// <summary>
-        /// <para>The precheck item name.</para>
+        /// <para>The full names of the precheck items to suppress or unsuppress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CHECK_SAME_OBJ_DETAIL</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SkipNames { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

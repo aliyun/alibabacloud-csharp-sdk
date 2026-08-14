@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the tag. Valid values:</para>
+        /// <para>The tag type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b>: The tag is added by a user.</description></item>
-        /// <item><description><b>System</b>: The tag is added by the system.</description></item>
+        /// <item><description><b>System</b>: tags created by the system.</description></item>
+        /// <item><description><b>Custom</b>: tags added by users.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> By default, if the parameter is left empty, custom tags and system tags are returned.</para>
+        /// <para>If this parameter is left empty, publicly visible tags are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1. This parameter is used together with PageSize.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. This parameter is used together with PageSize. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tags to return on each page if the DTS instance has multiple tags. Default value: 20.</para>
+        /// <para>The number of tag keys to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

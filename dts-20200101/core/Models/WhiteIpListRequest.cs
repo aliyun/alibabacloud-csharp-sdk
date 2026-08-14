@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class WhiteIpListRequest : TeaModel {
         /// <summary>
-        /// <para>destination aliyun uid</para>
+        /// <para>The UID of the destination Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestAliyunUid { get; set; }
 
         /// <summary>
-        /// <para>VPCNAT destination main VSW</para>
+        /// <para>The primary vSwitch of the destination for VPC NAT.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestPrimaryVswId { get; set; }
 
         /// <summary>
-        /// <para>destination role name</para>
+        /// <para>The name of the destination role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ram-for-dts-sq</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestRoleName { get; set; }
 
         /// <summary>
-        /// <para>VPCNAT destination backup VSW</para>
+        /// <para>The secondary vSwitch of the destination for VPC NAT.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestSecondaryVswId { get; set; }
 
         /// <summary>
-        /// <para>source vpc id</para>
+        /// <para>The ID of the destination VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestVpcId { get; set; }
 
         /// <summary>
-        /// <para>The region ID to which the target instance belongs, please refer to the supported region list for details.</para>
+        /// <para>The region ID of the destination instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// <remarks>
-        /// <remarks>
-        /// <para>If the target instance is a self built database or third-party cloud database with a public IP address, you can pass in the cn Hangzhou or the region ID closest to the physical distance of the database.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the destination instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <b>ap-southeast-1</b> or the area ID that is geographically closest to the database.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When the DTS task is migration or synchronization, this parameter must be passed in.</description></item>
+        /// <item><description>This parameter is required when the DTS task is a data migration or data synchronization task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationRegion { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the source instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <remarks>
+        /// <para>If the source instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <b>ap-southeast-1</b> or the area ID that is geographically closest to the database.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region to which the DTS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek26mat2ldb4oy</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>source aliyun uid</para>
+        /// <para>The UID of the source Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1971721963139419</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcAliyunUid { get; set; }
 
         /// <summary>
-        /// <para>VPCNAT source end main VSW</para>
+        /// <para>The primary vSwitch of the source for VPC NAT.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcPrimaryVswId { get; set; }
 
         /// <summary>
-        /// <para>source role Name</para>
+        /// <para>The name of the source role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ram-for-dts</para>
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcRoleName { get; set; }
 
         /// <summary>
-        /// <para>VPCNAT source backup VSW</para>
+        /// <para>The secondary vSwitch of the source for VPC NAT.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcSecondaryVswId { get; set; }
 
         /// <summary>
-        /// <para>source vpc id</para>
+        /// <para>The ID of the source VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -159,10 +162,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcVpcId { get; set; }
 
         /// <summary>
-        /// <para>The access method for self built databases or third-party cloud databases, with a value of</para>
+        /// <para>The connection method of the self-managed database or third-party ApsaraDB database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Internet: accessed through the public network.</description></item>
-        /// <item><description>VPC: Connected through dedicated line/VPN gateway/intelligent gateway.</description></item>
+        /// <item><description><b>internet</b>: connected over the Internet.</description></item>
+        /// <item><description><b>vpc</b>: connected over Express Connect, VPN Gateway, or Smart Access Gateway.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -174,9 +177,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>true</b>: The node is a seamless integration (Zero-ETL) node.</description></item>
+        /// <item><description><b>false</b>: The node is not a seamless integration (Zero-ETL) node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

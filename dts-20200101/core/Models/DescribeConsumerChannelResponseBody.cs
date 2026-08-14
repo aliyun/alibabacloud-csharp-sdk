@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConsumerChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the consumer groups.</para>
+        /// <para>The list of consumer groups.</para>
         /// </summary>
         [NameInMap("ConsumerChannels")]
         [Validation(Required=false)]
         public List<DescribeConsumerChannelResponseBodyConsumerChannels> ConsumerChannels { get; set; }
         public class DescribeConsumerChannelResponseBodyConsumerChannels : TeaModel {
             /// <summary>
-            /// <para>The ID of the consumer group.</para>
+            /// <para>The consumer group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtsor2y66j4219****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <para>The name of the consumer group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>consumergrouptest</para>
+            /// <para>订阅组A</para>
             /// </summary>
             [NameInMap("ConsumerGroupName")]
             [Validation(Required=false)]
             public string ConsumerGroupName { get; set; }
 
             /// <summary>
-            /// <para>The username of the consumer group.</para>
+            /// <para>The account of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstest</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string ConsumerGroupUserName { get; set; }
 
             /// <summary>
-            /// <para>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
+            /// <para>The consumption checkpoint, which is the point in time when the client consumed the last message in the subscription channel. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-20T12:00:00Z</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string ConsumptionCheckpoint { get; set; }
 
             /// <summary>
-            /// <para>The message latency, which is the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data tracked by the change tracking task. The value is a UNIX timestamp. Unit: seconds.</para>
-            /// <para>For example, the latest data in the source database is generated at 10:00. The change tracking task reads the data generated at 09:55, and the downstream client consumes the data generated at 09:30. In this case, the message latency is the UNIX timestamp difference between 09:55 and 09:30.</para>
+            /// <para>The message delay. This value is calculated as the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data in the change tracking task. The value is a UNIX timestamp. Unit: seconds.
+            /// For example, if the latest data in the source database was generated at 10:00, the DTS change tracking task has read data up to 09:55, and the downstream client has consumed data up to 09:30, the message delay is the difference in UNIX timestamps between 09:55 and 09:30.</para>
             /// <remarks>
-            /// <para> If the return value of this parameter is <b>-1</b>, no client is connected to the consumer group.</para>
+            /// <para>If this parameter returns <b>-1</b>, no client is connected to the consumer group.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? MessageDelay { get; set; }
 
             /// <summary>
-            /// <para>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</para>
+            /// <para>The total number of unconsumed messages, which is the sum of unconsumed subscription data and heartbeat messages.</para>
             /// <remarks>
-            /// <para> If the return value of this parameter is -1, no client is connected to the consumer group.</para>
+            /// <para>If this parameter returns -1, no client is connected to the consumer group.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D66140B3-C747-42B6-8315-BAF6490E****</para>

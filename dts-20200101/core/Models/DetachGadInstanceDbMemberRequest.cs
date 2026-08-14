@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DetachGadInstanceDbMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the active geo-redundancy instance group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gad-bp162d4tp0500****</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the secondary role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-sdfghjk****</para>
         /// </summary>

@@ -14,10 +14,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureMigrationJobRequestDestinationEndpoint DestinationEndpoint { get; set; }
         public class ConfigureMigrationJobRequestDestinationEndpoint : TeaModel {
             /// <summary>
-            /// <para>The region ID of the destination database.</para>
+            /// <para>待迁入的数据库名称或鉴权数据库名称。 </para>
             /// <remarks>
-            /// <para> If the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>LocalInstance</b>, you can enter <b>cn-hangzhou</b> or the ID of the region closest to the self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+            /// <list type="bullet">
+            /// <item><description>当<b>DestinationEndpoint.EngineName</b>取值为<b>PostgreSQL</b>、<b>DRDS</b>或<b>MongoDB</b>时，本参数才可用且必须传入。</description></item>
+            /// </list>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>DestinationEndpoint.EngineName</b>取值为<b>PostgreSQL</b>或<b>DRDS</b>时，传入待迁移的数据库名称；取值为<b>MongoDB</b>时，传入数据库账号的鉴权数据库名称。</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestdatabase</para>
@@ -27,9 +32,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DataBaseName { get; set; }
 
             /// <summary>
-            /// <para>The authorized RAM role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</para>
+            /// <para>目标库的数据库类型。取值：<b>MySQL</b>、<b>DRDS</b>、<b>SQLServer</b>、<b>PostgreSQL</b>、<b>PPAS</b>、<b>MongoDB</b>、<b>Redis</b>、<b>POLARDB</b>、<b>polardb_pg</b></para>
             /// <remarks>
-            /// <para> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>RDS</b>、<b>POLARDB</b>、<b>ECS</b>、<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,9 +45,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string EngineName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance that hosts the destination database.</para>
+            /// <para>目标库的连接地址。</para>
             /// <remarks>
-            /// <para> You must specify the instance ID only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>RDS</b>, <b>ECS</b>, <b>MongoDB</b>, <b>Redis</b>, <b>DRDS</b>, <b>PetaData</b>, <b>OceanBase</b>, <b>POLARDB</b>, <b>PolarDB_o</b>, <b>AnalyticDB</b>, or <b>Greenplum</b>. For example, if the DestinationEndpoint.InstanceType parameter is set to <b>ECS</b>, you must specify the ID of the ECS instance.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,9 +58,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the source instance belongs.</para>
+            /// <para>目标实例ID。</para>
             /// <remarks>
-            /// <para> You must specify this parameter only when you configure data migration across different Alibaba Cloud accounts.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>RDS</b>、<b>ECS</b>、<b>MongoDB</b>、<b>Redis</b>、<b>DRDS</b>、<b>PetaData</b>、<b>OceanBase</b>、<b>POLARDB</b>、<b>PolarDB_o</b>、<b>AnalyticDB</b>或<b>Greenplum</b>时，本参数才可用且必须传入对应的实例ID（例如取值为<b>ECS</b>，则需要传入ECS实例ID）。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -66,7 +71,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceID { get; set; }
 
             /// <summary>
-            /// <para>The password of the source database account.</para>
+            /// <para>目标库的实例类型，取值：</para>
+            /// <list type="bullet">
+            /// <item><description><b>ECS</b>：ECS上的自建数据库。</description></item>
+            /// <item><description><b>LocalInstance</b>：有公网IP的自建数据库。</description></item>
+            /// <item><description><b>RDS</b>：阿里云RDS实例。</description></item>
+            /// <item><description><b>DRDS</b>：阿里云PolarDB-X实例。</description></item>
+            /// <item><description><b>MongoDB</b>：阿里云MongoDB实例。</description></item>
+            /// <item><description><b>Redis</b>：阿里云Redis实例。</description></item>
+            /// <item><description><b>PetaData</b>：阿里云HybridDB for MySQL实例。</description></item>
+            /// <item><description><b>POLARDB</b>：阿里云PolarDB MySQL、PolarDB PostgreSQL。</description></item>
+            /// <item><description><b>PolarDB_o</b>：阿里云PolarDB O引擎集群。</description></item>
+            /// <item><description><b>AnalyticDB</b>：阿里云云原生数据仓库AnalyticDB MySQL 3.0和2.0版本。</description></item>
+            /// <item><description><b>Greenplum</b>：阿里云云原生数据仓库AnalyticDB PostgreSQL。</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,7 +95,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</para>
+            /// <para>Oracle数据库的SID信息。</para>
+            /// <remarks>
+            /// <para>当<b>DestinationEndpoint.EngineName</b>取值为<b>Oracle</b>，且<b>Oracle</b>数据库为非RAC实例时，本参数才可用且必须传入。</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>testsid</para>
@@ -87,10 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OracleSID { get; set; }
 
             /// <summary>
-            /// <para>The service port number of the destination database.</para>
-            /// <remarks>
-            /// <para> You must specify the service port number only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
-            /// </remarks>
+            /// <para>目标库数据库账号的密码。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test123456</para>
@@ -100,9 +118,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The engine type of the destination database. Valid values: <b>MySQL</b>, <b>DRDS</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>PPAS</b>, <b>MongoDB</b>, <b>Redis</b>, <b>POLARDB</b>, and <b>polardb_pg</b>.</para>
+            /// <para>目标库的服务端口。</para>
             /// <remarks>
-            /// <para> You must specify the engine type only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>RDS</b>, <b>POLARDB</b>, <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -113,20 +131,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the destination database. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ECS</b>: self-managed database that is hosted on Elastic Compute Service (ECS)</description></item>
-            /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-            /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description><b>DRDS</b>: PolarDB-X instance</description></item>
-            /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance</description></item>
-            /// <item><description><b>Redis</b>: ApsaraDB for Redis instance</description></item>
-            /// <item><description><b>PetaData</b>: HybridDB for MySQL instance</description></item>
-            /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster</description></item>
-            /// <item><description><b>PolarDB_o</b>: PolarDB O Edition cluster</description></item>
-            /// <item><description><b>AnalyticDB</b>: AnalyticDB for MySQL cluster V3.0 or V2.0</description></item>
-            /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL instance</description></item>
-            /// </list>
+            /// <para>目标库所属的地域ID。</para>
+            /// <remarks>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>LocalInstance</b>时，您可以传入<b>cn-hangzhou</b>或者离自建数据库地物理距离最近的地域ID，详情请参见<a href="https://help.aliyun.com/document_detail/141033.html">支持的地域列表</a>。</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -136,10 +144,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the destination database.</para>
-            /// <remarks>
-            /// <para> You must specify the endpoint only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>LocalInstance</b> or <b>Express</b>.</para>
-            /// </remarks>
+            /// <para>目标库的数据库账号。</para>
+            /// <para>说明 迁移不同的数据库所需的权限有所差异，详情请参见迁移方案概览中对应的配置案例。</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestaccount</para>
@@ -155,9 +161,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureMigrationJobRequestMigrationMode MigrationMode { get; set; }
         public class ConfigureMigrationJobRequestMigrationMode : TeaModel {
             /// <summary>
-            /// <para>The database account of the destination database.</para>
+            /// <para>是否进行全量数据迁移，取值：</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>：是。</description></item>
+            /// <item><description><b>false</b>：否。</description></item>
+            /// </list>
             /// <remarks>
-            /// <para> The permissions that are required for database accounts vary with the migration scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</para>
+            /// <para>DTS对全量数据迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -169,7 +179,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? DataIntialization { get; set; }
 
             /// <summary>
-            /// <para>The password of the destination database account.</para>
+            /// <para>是否进行增量数据迁移，取值：</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>：是。</description></item>
+            /// <item><description><b>false</b>：否。</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>DTS对增量数据迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -180,13 +197,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? DataSynchronization { get; set; }
 
             /// <summary>
-            /// <para>The name of the destination database or the authentication database.</para>
-            /// <remarks>
-            /// </remarks>
+            /// <para>是否进行结构迁移，取值：</para>
             /// <list type="bullet">
-            /// <item><description>You must specify the database name only if the <b>DestinationEndpoint.EngineName</b> parameter is set to <b>PostgreSQL</b>, <b>DRDS</b>, or <b>MongoDB</b>.</description></item>
-            /// <item><description>If the <b>DestinationEndpoint.EngineName</b> parameter is set to <b>PostgreSQL</b> or <b>DRDS</b>, specify the name of the destination database. If the DestinationEndpoint.EngineName parameter is set to <b>MongoDB</b>, specify the name of the authentication database.</description></item>
+            /// <item><description><b>true</b>：是。</description></item>
+            /// <item><description><b>false</b>：否。</description></item>
             /// </list>
+            /// <remarks>
+            /// <para>DTS对结构迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -203,10 +221,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public ConfigureMigrationJobRequestSourceEndpoint SourceEndpoint { get; set; }
         public class ConfigureMigrationJobRequestSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The endpoint of the source database.</para>
+            /// <para>待迁移的数据库名称或鉴权数据库名称。</para>
             /// <remarks>
-            /// <para> You must specify the endpoint only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>LocalInstance</b> or <b>Express</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>当<b>SourceEndpoint.EngineName</b>取值为<b>PostgreSQL</b>或<b>MongoDB</b>时，本参数才可用且必须传入。</description></item>
+            /// </list>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>SourceEndpoint.EngineName</b>取值为<b>PostgreSQL</b>时，传入待迁移的数据库名称；取值为<b>MongoDB</b>时，传入数据库账号的鉴权数据库名称。</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestdatabase</para>
@@ -216,18 +239,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the source database. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description><b>ECS</b>: self-managed database that is hosted on ECS</description></item>
-            /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-            /// <item><description><b>Express</b>: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway</description></item>
-            /// <item><description><b>dg</b>: self-managed database that is connected over Database Gateway</description></item>
-            /// <item><description><b>cen</b>: self-managed database that is connected over Cloud Enterprise Network (CEN)</description></item>
-            /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance</description></item>
-            /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster</description></item>
-            /// <item><description><b>PolarDB_o</b>: PolarDB O Edition cluster</description></item>
-            /// </list>
+            /// <para>源库的数据库类型，取值：<b>MySQL</b>、<b>TiDB</b>、<b>SQLServer</b>、<b>PostgreSQL</b>、<b>Oracle</b>、<b>MongoDB</b>、<b>Redis</b>、<b>POLARDB</b>、<b>polardb_pg</b>。</para>
+            /// <remarks>
+            /// <para>当<b>DestinationEndpoint.InstanceType</b>取值为<b>RDS</b>、<b>POLARDB</b>、<b>ECS</b>、<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -237,7 +252,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string EngineName { get; set; }
 
             /// <summary>
-            /// <para>rm-bp1i99e8l7913****</para>
+            /// <para>源库的连接地址。</para>
+            /// <remarks>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.88.***</para>
@@ -247,17 +265,36 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>dtsl3m1213ye7l****</para>
+            /// <para>源库的实例ID。</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>SourceEndpoint.InstanceType</b>取值为<b>RDS</b>、<b>ECS</b>、<b>Express</b>、<b>MongoDB</b>、<b>POLARDB</b>或<b>PolarDB_o</b>时，本参数才可用且必须传入对应的实例ID（例如取值为<b>ECS</b>，则本参数传入ECS实例的ID）。</description></item>
+            /// </list>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description>当<b>SourceEndpoint.InstanceType</b>取值为<b>Express</b>时，本参数传入VPC ID（即专有网络ID）。</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the data migration task. The name can be up to 32 characters in length. We recommend that you specify an informative name to identify the task. You do not need to use a unique task name.</para>
+            /// <para>bp-rmxxxxxxxx</para>
             /// </summary>
             [NameInMap("InstanceID")]
             [Validation(Required=false)]
             public string InstanceID { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data migration instance. You can call the <b>DescribeMigrationJobs</b> operation to query the instance ID.</para>
+            /// <para>源库的实例类型，取值：</para>
+            /// <list type="bullet">
+            /// <item><description><b>RDS</b>：阿里云RDS实例。</description></item>
+            /// <item><description><b>ECS</b>：ECS上的自建数据库。</description></item>
+            /// <item><description><b>LocalInstance</b>：有公网IP的自建数据库。</description></item>
+            /// <item><description><b>Express</b>：通过专线/VPN网关/智能接入网关接入的自建数据库。</description></item>
+            /// <item><description><b>dg</b>：通过数据库网关DG接入的自建数据库。</description></item>
+            /// <item><description><b>cen</b>：通过云企业网CEN接入的自建数据库。</description></item>
+            /// <item><description><b>MongoDB</b>：阿里云MongoDB实例。</description></item>
+            /// <item><description><b>POLARDB</b>：阿里云PolarDB MySQL、PolarDB PostgreSQL。</description></item>
+            /// <item><description><b>PolarDB_o</b>：阿里云PolarDB O引擎集群。</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -268,9 +305,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the source database.</para>
+            /// <para>Oracle数据库的SID信息。</para>
             /// <remarks>
-            /// <para> If the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>LocalInstance</b>, you can enter <b>cn-hangzhou</b> or the ID of the region closest to the self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+            /// <para>当<b>SourceEndpoint.EngineName</b>取值为<b>Oracle</b>，且Oracle数据库为非RAC实例时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -281,13 +318,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OracleSID { get; set; }
 
             /// <summary>
-            /// <para>The name of the source database or the authentication database.</para>
+            /// <para>源实例所属的阿里云账号ID。</para>
             /// <remarks>
+            /// <para>仅在配置跨阿里云账号的数据迁移时本参数才可用，且必须传入。</para>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>You must specify the database name only if the <b>SourceEndpoint.EngineName</b> parameter is set to <b>PostgreSQL</b> or <b>MongoDB</b>.</description></item>
-            /// <item><description>If the <b>SourceEndpoint.EngineName</b> parameter is set to <b>PostgreSQL</b>, specify the name of the source database. If the SourceEndpoint.EngineName parameter is set to <b>MongoDB</b>, specify the name of the authentication database.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>140692647406****</para>
@@ -297,10 +331,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string OwnerID { get; set; }
 
             /// <summary>
-            /// <para>The system ID (SID) of the Oracle database.</para>
-            /// <remarks>
-            /// <para> You must specify this parameter only if the <b>SourceEndpoint.EngineName</b> parameter is set to <b>Oracle</b> and the <b>Oracle</b> database is deployed in a non-RAC architecture.</para>
-            /// </remarks>
+            /// <para>源库数据库账号对应的密码。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test123456</para>
@@ -310,9 +341,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The engine type of the source database. Valid values: <b>MySQL</b>, <b>TiDB</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>Oracle</b>, <b>MongoDB</b>, <b>Redis</b>, <b>POLARDB</b>, and <b>polardb_pg</b>.</para>
+            /// <para>源库的服务端口。</para>
             /// <remarks>
-            /// <para> You must specify the engine type only if the <b>DestinationEndpoint.InstanceType</b> parameter is set to <b>RDS</b>, <b>POLARDB</b>, <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>ECS</b>、<b>LocalInstance</b>或<b>Express</b>时，本参数才可用且必须传入。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -323,13 +354,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance that hosts the source database.</para>
+            /// <para>源库所属的地域ID。</para>
             /// <remarks>
+            /// <para>当<b>SourceEndpoint.InstanceType</b>取值为<b>LocalInstance</b>时，您可以传入<b>cn-hangzhou</b>或者离自建数据库地物理距离最近的地域ID，详情请参见<a href="https://help.aliyun.com/document_detail/141033.html">支持的地域列表</a>。</para>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>You must specify the instance ID only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>RDS</b>, <b>ECS</b>, <b>Express</b>, <b>MongoDB</b>, <b>POLARDB</b>, or <b>PolarDB_o</b>. For example, if the SourceEndpoint.InstanceType parameter is set to <b>ECS</b>, you must specify the ID of the ECS instance.</description></item>
-            /// <item><description>If the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>Express</b>, you must specify the ID of the virtual private cloud (VPC).</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -339,9 +367,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The database account of the source database.</para>
+            /// <para>当源实例与目标实例所属阿里云账号不同时，需传入该参数，来指定源实例的授权角色，以允许目标实例阿里云账号访问源实例的实例信息。</para>
             /// <remarks>
-            /// <para> The permissions that are required for database accounts vary with the migration scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</para>
+            /// <para>角色所需的权限及授权方式，请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -352,10 +380,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The service port number of the source database.</para>
-            /// <remarks>
-            /// <para> You must specify the service port number only if the <b>SourceEndpoint.InstanceType</b> parameter is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
-            /// </remarks>
+            /// <para>源库的数据库账号。</para>
+            /// <para>说明 迁移不同的数据库所需的权限有所差异，详情请参见迁移方案概览中对应的配置案例。</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstestaccount</para>
@@ -367,8 +393,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The objects that you want to migrate. The value is a JSON string and can contain regular expressions.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/141227.html">MigrationObject</a>.</para>
+        /// <para>The Alibaba Cloud account ID. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -378,14 +403,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform incremental data migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> For more information about databases that support incremental data migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</para>
-        /// </remarks>
+        /// <para>The start position of incremental data migration. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111</para>
@@ -395,21 +413,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Checkpoint { get; set; }
 
         /// <summary>
-        /// <para>system</para>
+        /// <para>The ID of the data migration instance. You can call the <b>DescribeMigrationJobs</b> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The operation that you want to perform. Set the value to <b>ConfigureMigrationJob</b>.</para>
+        /// <para>dtsxxxxxxxx</para>
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
-        /// <remarks>
-        /// <para> The region ID of the data migration instance is the same as that of the destination database.</para>
-        /// </remarks>
+        /// <para>The name of the migration task. The name can be up to 32 characters in length. Specify a descriptive name for easy identification. Uniqueness is not required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -420,14 +435,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MigrationJobName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform schema migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> For more information about databases that support schema migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</para>
-        /// </remarks>
+        /// <para>The objects to be migrated. The value is a JSON string that supports regular expressions. For more information, see <a href="~141901~">Migration object configuration</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -438,14 +446,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MigrationObject { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform full data migration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> For more information about databases that support full data migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</para>
-        /// </remarks>
+        /// <para>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, such as whether to automatically start the precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;,     &quot;targetTableMode&quot;: 2 }</para>
@@ -459,6 +460,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the data migration instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
+        /// <remarks>
+        /// <para>The region ID must be the same as the region ID of the destination database.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -467,7 +473,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource GroupId</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>

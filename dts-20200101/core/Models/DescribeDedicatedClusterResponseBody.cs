@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDedicatedClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CPU utilization. Unit: percentage.</para>
+        /// <para>The CPU utilization percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? CpuUtilization { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsCluster****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily_test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterName { get; set; }
 
         /// <summary>
-        /// <para>The disk usage.</para>
+        /// <para>The disk utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DiskUtilization { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsb8r****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The number of DTS units (DUs).</para>
+        /// <para>The number of DUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? Du { get; set; }
 
         /// <summary>
-        /// <para>The DU usage. Unit: percentage.</para>
+        /// <para>The DU utilization percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DuUtilization { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1642476144000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster stopped.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1645200000000</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The memory usage.</para>
+        /// <para>The memory utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>The number of DUs that exceeds the upper limit.</para>
+        /// <para>The number of oversold DUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? OversoldDu { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>621BB4F8-3016-4FAA-8D5A-5D3163CC****</para>
@@ -180,16 +180,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The cluster is being initialized.</description></item>
-        /// <item><description><b>schedule</b>: The cluster is pending scheduling.</description></item>
-        /// <item><description><b>running</b>: The cluster is running.</description></item>
-        /// <item><description><b>upgrade</b>: The cluster is being upgraded.</description></item>
-        /// <item><description><b>downgrade</b>: The cluster is being downgraded.</description></item>
-        /// <item><description><b>locked</b>: The cluster is locked.</description></item>
-        /// <item><description><b>releasing</b>: The cluster is being released.</description></item>
-        /// <item><description><b>released</b>: The cluster is released.</description></item>
+        /// <item><description><b>init</b>: initialization.</description></item>
+        /// <item><description><b>schedule</b>: pending scheduling.</description></item>
+        /// <item><description><b>running</b>: running.</description></item>
+        /// <item><description><b>upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>downgrade</b>: downgrading.</description></item>
+        /// <item><description><b>locked</b>: locked.</description></item>
+        /// <item><description><b>releasing</b>: being released.</description></item>
+        /// <item><description><b>released</b>: released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? TotalCpuCore { get; set; }
 
         /// <summary>
-        /// <para>The total disk size. Unit: GB.</para>
+        /// <para>The total disk size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? TotalDiskGBSize { get; set; }
 
         /// <summary>
-        /// <para>The total amount of memory. Unit: GB.</para>
+        /// <para>The total memory size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>256</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? UsedCpuCore { get; set; }
 
         /// <summary>
-        /// <para>The used disk size. Unit: GB.</para>
+        /// <para>The used disk size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? UsedDu { get; set; }
 
         /// <summary>
-        /// <para>The amount of used memory. Unit: GB.</para>
+        /// <para>The used memory size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>

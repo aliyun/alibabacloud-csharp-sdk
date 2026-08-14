@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureSynchronizationJobAlertRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -20,13 +20,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers that receive latency-related alerts. Separate mobile phone numbers with commas (,).</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</description></item>
-        /// <item><description>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</description></item>
-        /// </list>
+        /// <para>The mobile phone numbers of contacts for latency alerts. Separate multiple phone numbers with commas (,).</para>
+        /// <para>Note
+        /// This parameter is supported only on the China site (aliyun.com) and only Chinese mainland phone numbers are supported. You can specify up to 10 phone numbers.
+        /// China site (Chinese mainland) does not support phone alerts on the China site. You can configure alert rules for DTS tasks only in the CloudMonitor console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -36,16 +33,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to monitor task latency. Valid values:</para>
+        /// <para>Specifies whether to monitor the latency status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: yes.</description></item>
+        /// <item><description><b>disable</b>: no.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>enable</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>enable</b>.</description></item>
-        /// <item><description>You must specify at least one of the DelayAlertStatus and <b>ErrorAlertStatus</b> parameters.</description></item>
+        /// <item><description>You must specify at least one of this parameter and the <b>ErrorAlertStatus</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,9 +55,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering latency alerts. The unit is seconds and the value must be an integer. You can set the threshold based on your business needs. To avoid delay fluctuations caused by network and database loads, we recommend that you set the threshold to more than 10 seconds.</para>
+        /// <para>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. Set the threshold based on your business requirements. We recommend that you set the threshold to 10 seconds or more to avoid alert fluctuations caused by network issues or database loads.</para>
         /// <remarks>
-        /// <para> If the <b>DelayAlertStatus</b> parameter is set to <b>enable</b>, this parameter must be specified.</para>
+        /// <para>This parameter is required when <b>DelayAlertStatus</b> is set to <b>enable</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,13 +68,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayOverSeconds { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers that receive status-related alerts. Separate mobile phone numbers with commas (,).</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</description></item>
-        /// <item><description>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</description></item>
-        /// </list>
+        /// <para>The mobile phone numbers of contacts for exception alerts. Separate multiple phone numbers with commas (,).</para>
+        /// <para>Note
+        /// This parameter is supported only on the China site (aliyun.com) and only Chinese mainland phone numbers are supported. You can specify up to 10 phone numbers.
+        /// The China site does not support phone alerts on the international site (alibabacloud.com). You can configure alert rules for DTS tasks only in the CloudMonitor console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -85,17 +81,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to monitor task status. Valid values:</para>
+        /// <para>Specifies whether to monitor the exception status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: yes.</description></item>
+        /// <item><description><b>disable</b>: no.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>enable</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The default value is <b>enable</b>.</description></item>
-        /// <item><description>You must specify at least one of the <b>DelayAlertStatus</b> and ErrorAlertStatus parameters.</description></item>
-        /// <item><description>If the task that you monitor enters an abnormal state, an alert is triggered.</description></item>
+        /// <item><description>You must specify at least one of this parameter and the <b>DelayAlertStatus</b> parameter.</description></item>
+        /// <item><description>After you enable exception status monitoring, an alert is triggered when an exception is detected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -120,7 +118,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource GroupId</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -132,11 +130,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b></description></item>
-        /// <item><description><b>Reverse</b></description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>Forward</b>.</para>
+        /// <para>Default value: <b>Forward</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -147,7 +145,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</para>
+        /// <para>Instance ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

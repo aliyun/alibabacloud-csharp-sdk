@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateDedicatedClusterMonitorRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The alert threshold for CPU utilization. Unit: percentage.</para>
+        /// <para>The CPU alert threshold. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? CpuAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for disk usage. Unit: percentage.</para>
+        /// <para>The disk alert threshold. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DiskAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</para>
+        /// <para>The DU alert threshold. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DuAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1162kryivb8****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The alert threshold for memory usage. Unit: percentage.</para>
+        /// <para>The memory alert threshold. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? MemAlarmThreshold { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the alert feature. Valid values:</para>
+        /// <para>The alert switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enables the alert feature.</description></item>
-        /// <item><description><b>0</b>: disables the alert feature.</description></item>
+        /// <item><description><b>1</b>: on.</description></item>
+        /// <item><description><b>0</b>: off.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>The alert phone numbers. Separate multiple phone numbers with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Phones { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides.</para>
+        /// <para>The region in which the DTS instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// <para>The resource group ID. This is a global parameter and does not need to be passed in for this API operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// <para>资源组ID，全局参数，当前API无需传入。</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

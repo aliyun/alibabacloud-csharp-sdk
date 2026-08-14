@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSubscriptionInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer greater than <b>0</b> and cannot exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of records per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/49442.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/49442.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz4us4iruleja</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The name of the change tracking instance.</para>
         /// <remarks>
-        /// <para> If you specify this parameter, DTS returns all the change tracking instances that match the specified name.</para>
+        /// <para>If you specify this parameter, DTS returns the change tracking instances that contain the specified name in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,19 +87,21 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Tags of the data migration instance, used as a filter. When this is not empty, only instances with this tag will be returned.</para>
+        /// <para>The tags of the data migration instance. These tags are used as filter conditions. If this parameter is specified, only instances that have the specified tags are returned.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSubscriptionInstancesRequestTag> Tag { get; set; }
         public class DescribeSubscriptionInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag key. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag. You can query 1 to 20 tag keys at a time.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</description></item>
-            /// <item><description>This parameter cannot be an empty string.</description></item>
+            /// <item><description>Empty strings are not allowed.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -111,12 +113,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>N specifies the sequence number of the tag value. For example, Tag.1.Value specifies the value of the first tag, and Tag.2.Value specifies the value of the second tag. You can query 1 to 20 tag values at a time.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</description></item>
-            /// <item><description>This parameter can be an empty string.</description></item>
+            /// <item><description>Empty strings are allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

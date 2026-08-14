@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeClusterUsedUtilizationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster. If the <b>MetricType</b> parameter is set to <b>CLUSTER</b>, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.</para>
+        /// <para>The dedicated cluster ID if <b>MetricType</b> is set to <b>CLUSTER</b>. Otherwise, set this parameter to the <b>nodeid</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or synchronization task.</para>
+        /// <para>The ID of the data migration or data synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k2gm967v16f****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The cluster environment. Default value: <b>ALIYUN</b>.</para>
+        /// <para>The environment. Default value: <b>ALIYUN</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the metrics of the cluster or a node. Default value: CLUSTER. Valid values:</para>
+        /// <para>Specifies whether to query a cluster or a node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLUSTER</b>: query the metrics of the cluster.</description></item>
-        /// <item><description><b>NODE</b>: query the metrics of a node.</description></item>
+        /// <item><description><b>CLUSTER</b> (default): cluster.</description></item>
+        /// <item><description><b>NODE</b>: node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerID { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the Data Transmission Service (DTS) instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ListDedicatedClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:</para>
+        /// <para>The sort column when the response contains multiple DTS dedicated cluster instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>gmtCreated</b>: the time when a cluster was created.</description></item>
-        /// <item><description><b>orderCount</b>: the number of nodes in a cluster.</description></item>
+        /// <item><description><b>gmtCreated</b>: creation time.</description></item>
+        /// <item><description><b>orderCount</b>: number of nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the retrieved entries. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: sorts the retrieved entries in ascending order. This is the default value.</description></item>
-        /// <item><description>desc: sorts the retrieved entries in descending order.</description></item>
+        /// <item><description><b>asc</b>: ascending order. This is the default value.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters to return on each page.</para>
+        /// <para>The number of clusters to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The content of the query condition.</para>
+        /// <para>The specific content of the query condition.</para>
         /// <remarks>
-        /// <para> You must set the <b>Type parameter</b> to specify the type of the query condition.</para>
+        /// <para>You must first specify the <b>Type</b> parameter to define the query key.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID. This parameter is used as a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -95,16 +95,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The cluster is being initialized.</description></item>
-        /// <item><description><b>schedule</b>: The cluster is pending scheduling.</description></item>
-        /// <item><description><b>running</b>: The cluster is running.</description></item>
-        /// <item><description><b>upgrade</b>: The cluster is being upgraded.</description></item>
-        /// <item><description><b>downgrade</b>: The cluster is being downgraded.</description></item>
-        /// <item><description><b>locked</b>: The cluster is locked.</description></item>
-        /// <item><description><b>releasing</b>: The cluster is being released.</description></item>
-        /// <item><description><b>released</b>: The cluster is released.</description></item>
+        /// <item><description><b>init</b>: initializing.</description></item>
+        /// <item><description><b>schedule</b>: pending scheduling.</description></item>
+        /// <item><description><b>running</b>: running.</description></item>
+        /// <item><description><b>upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>downgrade</b>: downgrading.</description></item>
+        /// <item><description><b>locked</b>: locked.</description></item>
+        /// <item><description><b>releasing</b>: being released.</description></item>
+        /// <item><description><b>released</b>: released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The query key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NAME</b>: the name of the cluster.</description></item>
-        /// <item><description><b>INSTANCE</b>: the ID of a cluster instance.</description></item>
-        /// <item><description><b>DEDICAETEDCLUSTERID</b>: the ID of a dedicated cluster.</description></item>
+        /// <item><description><b>NAME</b>: cluster name.</description></item>
+        /// <item><description><b>INSTANCE</b>: cluster instance ID.</description></item>
+        /// <item><description><b>DEDICATEDCLUSTERID</b>: dedicated cluster ID.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify the query condition by using the <b>Params</b> parameter.</para>
+        /// <para>You must also specify the <b>Params</b> parameter to provide the specific content of the query condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

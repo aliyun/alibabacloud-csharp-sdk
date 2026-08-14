@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe63****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS dedicated cluster on which a DTS task runs.</para>
+        /// <para>The ID of the DTS dedicated cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DedicatedClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or synchronization task.</para>
+        /// <para>The ID of the data migration or data synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k2gm967v16f****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>The end timestamp. Unit: milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1650866995000</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerID { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Specify the parameter to a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of log entries per page. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds. If you do not specify this parameter, the data within the last seven days is returned by default.</para>
+        /// <para>The start timestamp. If this parameter is not specified, data from the last seven days is returned by default. Unit: milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1650866955000</para>

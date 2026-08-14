@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConnectionStatusRequest : TeaModel {
         /// <summary>
-        /// <para>You must specify this parameter only if the <b>SourceEndpointEngineName</b> parameter is set to <b>Oracle</b>. Valid values:</para>
+        /// <para>This parameter is required only when <b>SourceEndpointEngineName</b> is set to <b>Oracle</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SID</b>: non-RAC architecture</description></item>
-        /// <item><description><b>RAC</b>: Real Application Cluster (RAC) architecture</description></item>
+        /// <item><description><b>SID</b>: non-cluster architecture.</description></item>
+        /// <item><description><b>RAC</b>: Real Application Cluster architecture.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is optional. The data type of this parameter is String.</para>
+        /// <para>The type of this parameter is String, and this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,13 +27,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointArchitecture { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination database or the authentication database.</para>
+        /// <para>The name of the database to be migrated to or the name of the authentication database.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available and required only when <b>DestinationEndpointEngineName</b> is set to <b>PostgreSQL</b>, <b>DRDS</b>, or <b>MongoDB</b>, or when <b>DestinationEndpointInstanceType</b> is set to <b>PolarDB_o</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify this parameter if the <b>DestinationEndpointEngineName</b> parameter is set to <b>PostgreSQL</b>, <b>DRDS</b>, or <b>MongoDB</b>. You must also specify this parameter if the <b>DestinationEndpointInstanceType</b> parameter is set to <b>PolarDB_o</b>.</description></item>
-        /// <item><description>If the <b>DestinationEndpointEngineName</b> parameter is set to <b>PostgreSQL</b> or <b>DRDS</b>, specify the name of the destination database. If the DestinationEndpointEngineName parameter is set to <b>MongoDB</b>, specify the name of the authentication database.</description></item>
-        /// <item><description>If the <b>DestinationEndpointInstanceType</b> parameter is set to <b>PolarDB_o</b>, specify the name of the destination database.</description></item>
+        /// <item><description>When <b>DestinationEndpointEngineName</b> is set to <b>PostgreSQL</b> or <b>DRDS</b>, specify the name of the database to be migrated. When the value is <b>MongoDB</b>, specify the name of the authentication database for the database account.</description></item>
+        /// <item><description>When <b>DestinationEndpointInstanceType</b> is set to <b>PolarDB_o</b>, specify the name of the database to be migrated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,9 +46,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The engine type of the destination database. Valid values: <b>MySQL</b>, <b>DRDS</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>PPAS</b>, <b>MongoDB</b>, and <b>Redis</b>.</para>
+        /// <para>The database type of the destination database. Valid values: <b>MySQL</b>, <b>DRDS</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>PPAS</b>, <b>MongoDB</b>, and <b>Redis</b>.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>DestinationEndpointInstanceType</b> parameter is set to <b>RDS</b>, <b>DRDS</b>, <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
+        /// <para>This parameter is available and required only when <b>DestinationEndpointInstanceType</b> is set to <b>RDS</b>, <b>DRDS</b>, <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The endpoint of the destination database.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>DestinationEndpointInstanceType</b> parameter is set to <b>LocalInstance</b> or <b>Express</b>.</para>
+        /// <para>This parameter is available and required only when <b>DestinationEndpointInstanceType</b> is set to <b>LocalInstance</b> or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination instance.</para>
+        /// <para>The instance ID of the destination instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testsid</para>
@@ -80,21 +82,23 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the destination database. Valid values:</para>
+        /// <para>The type of the destination instance. Valid values:</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>ECS</b>: self-managed database hosted on an ECS instance.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: self-managed database that is hosted on Elastic Compute Service (ECS)</description></item>
-        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-        /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-        /// <item><description><b>DRDS</b>: PolarDB-X instance</description></item>
-        /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance</description></item>
-        /// <item><description><b>Redis</b>: ApsaraDB for Redis instance</description></item>
-        /// <item><description><b>PetaData</b>: HybridDB for MySQL instance</description></item>
-        /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster</description></item>
-        /// <item><description><b>PolarDB_o</b>: PolarDB for Oracle cluster</description></item>
-        /// <item><description><b>AnalyticDB</b>: AnalyticDB for MySQL cluster V3.0 or V2.0</description></item>
-        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL instance</description></item>
+        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address.</description></item>
+        /// <item><description><b>RDS</b>: ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>DRDS</b>: PolarDB-X instance.</description></item>
+        /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description><b>Redis</b>: ApsaraDB for Redis instance.</description></item>
+        /// <item><description><b>PetaData</b>: HybridDB for MySQL instance.</description></item>
+        /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster.</description></item>
+        /// <item><description><b>PolarDB_o</b>: PolarDB for PostgreSQL (Oracle-Compatible) cluster.</description></item>
+        /// <item><description><b>AnalyticDB</b>: AnalyticDB for MySQL V3.0 or V2.0.</description></item>
+        /// <item><description><b>Greenplum</b>: AnalyticDB for PostgreSQL.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -106,13 +110,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>You must specify this parameter only if the <b>DestinationEndpointEngineName</b> parameter is set to <b>Oracle</b>. Valid values:</para>
+        /// <para>This parameter is required only when <b>DestinationEndpointEngineName</b> is set to <b>Oracle</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SID</b>: non-RAC architecture</description></item>
-        /// <item><description><b>RAC</b>: RAC architecture</description></item>
+        /// <item><description><b>SID</b>: non-cluster architecture.</description></item>
+        /// <item><description><b>RAC</b>: Real Application Cluster architecture.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is optional. The data type of this parameter is String.</para>
+        /// <para>The type of this parameter is String, and this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,9 +137,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The service port number of the source database.</para>
+        /// <para>The service port of the source database.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>SourceEndpointInstanceType</b> parameter is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
+        /// <para>This parameter is available and required only when <b>SourceEndpointInstanceType</b> is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -157,9 +161,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The database account of the destination database.</para>
-        /// <remarks>
-        /// <para> The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a> and <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dtstest</para>
@@ -169,7 +170,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestinationEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -179,7 +180,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -189,13 +190,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>You must specify this parameter only if the <b>SourceEndpointEngineName</b> parameter is set to <b>Oracle</b>. Valid values:</para>
+        /// <para>This parameter is required only when <b>SourceEndpointEngineName</b> is set to <b>Oracle</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SID</b>: non-RAC architecture</description></item>
-        /// <item><description><b>RAC</b>: RAC architecture</description></item>
+        /// <item><description><b>SID</b>: non-cluster architecture.</description></item>
+        /// <item><description><b>RAC</b>: Real Application Cluster architecture.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is optional.</para>
+        /// <para>This parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -206,13 +207,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointArchitecture { get; set; }
 
         /// <summary>
-        /// <para>The name of the source database or the authentication database.</para>
+        /// <para>The name of the database to be migrated or the name of the authentication database.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is available and required only when <b>SourceEndpointEngineName</b> is set to <b>PostgreSQL</b> or <b>MongoDB</b>, or when <b>SourceEndpointInstanceType</b> is set to <b>PolarDB_o</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify this parameter if the <b>SourceEndpointEngineName</b> parameter is set to <b>PostgreSQL</b> or <b>MongoDB</b>. You must also specify this parameter if the <b>SourceEndpointInstanceType</b> parameter is set to <b>PolarDB_o</b>.</description></item>
-        /// <item><description>If the <b>SourceEndpointEngineName</b> parameter is set to <b>PostgreSQL</b> or <b>DRDS</b>, specify the name of the source database. If the SourceEndpointEngineName parameter is set to <b>MongoDB</b>, specify the name of the authentication database.</description></item>
-        /// <item><description>If the <b>SourceEndpointInstanceType</b> parameter is set to <b>PolarDB_o</b>, specify the name of the source database.</description></item>
+        /// <item><description>When <b>SourceEndpointEngineName</b> is set to <b>PostgreSQL</b> or <b>DRDS</b>, specify the name of the database to be migrated. When the value is <b>MongoDB</b>, specify the name of the authentication database for the database account.</description></item>
+        /// <item><description>When <b>SourceEndpointInstanceType</b> is set to <b>PolarDB_o</b>, specify the name of the database to be migrated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,9 +226,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The engine type of the source database. Valid values: <b>MySQL</b>, <b>TiDB</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>Oracle</b>, <b>MongoDB</b>, and <b>Redis</b>.</para>
+        /// <para>The database engine type of the source instance. Valid values: <b>MySQL</b>, <b>TiDB</b>, <b>SQLServer</b>, <b>PostgreSQL</b>, <b>Oracle</b>, <b>MongoDB</b>, and <b>Redis</b>.</para>
         /// <remarks>
-        /// <para> Default value: <b>MySQL</b>.</para>
+        /// <para>Default value: <b>MySQL</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -238,7 +241,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The endpoint of the source database.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>SourceEndpointInstanceType</b> parameter is set to <b>LocalInstance</b> or <b>Express</b>.</para>
+        /// <para>This parameter is available and required only when <b>SourceEndpointInstanceType</b> is set to <b>LocalInstance</b> or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -249,7 +252,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance.</para>
+        /// <para>The instance ID of the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1imrtn6fq7h****</para>
@@ -261,14 +264,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The type of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: ApsaraDB RDS instance</description></item>
-        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
-        /// <item><description><b>ECS</b>: self-managed database that is hosted on ECS</description></item>
-        /// <item><description><b>Express</b>: self-managed database that is connected over Express Connect</description></item>
-        /// <item><description><b>dg</b>: self-managed database that is connected over Database Gateway</description></item>
-        /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance</description></item>
-        /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster</description></item>
-        /// <item><description><b>PolarDB_o</b>: PolarDB for Oracle cluster</description></item>
+        /// <item><description><b>RDS</b>: ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address.</description></item>
+        /// <item><description><b>ECS</b>: self-managed database hosted on an ECS instance.</description></item>
+        /// <item><description><b>Express</b>: self-managed database connected over Express Connect.</description></item>
+        /// <item><description><b>dg</b>: self-managed database connected over Database Gateway.</description></item>
+        /// <item><description><b>MongoDB</b>: ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description><b>POLARDB</b>: PolarDB for MySQL cluster.</description></item>
+        /// <item><description><b>PolarDB_o</b>: PolarDB for PostgreSQL (Oracle-Compatible) cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -282,7 +285,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The SID of the Oracle database.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>SourceEndpointEngineName</b> parameter is set to <b>Oracle</b> and the Oracle database is deployed in a non-RAC architecture.</para>
+        /// <para>This parameter is available and required only when <b>SourceEndpointEngineName</b> is set to <b>Oracle</b> and the Oracle database is a non-RAC instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -303,9 +306,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The service port number of the source database.</para>
+        /// <para>The service port of the source database.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>SourceEndpointInstanceType</b> parameter is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
+        /// <para>This parameter is available and required only when <b>SourceEndpointInstanceType</b> is set to <b>ECS</b>, <b>LocalInstance</b>, or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -316,7 +319,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -327,9 +330,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The database account of the source database.</para>
-        /// <remarks>
-        /// <para> The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a> and <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dtstest</para>

@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. You can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</para>
+        /// <para>The end time of the log information. You can call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the end time.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To obtain the logs that are generated for DTS subtasks within a specific period of time, you can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</description></item>
-        /// <item><description>Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</description></item>
+        /// <item><description>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1620897227000</para>
@@ -36,9 +38,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is passed to specify the query content.</para>
+        /// <para>The keyword used to filter query results.</para>
         /// <remarks>
-        /// <para> Fuzzy match is used and the keyword is case-sensitive.</para>
+        /// <para>Fuzzy match is used and the keyword is case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries to return on each page. Valid values: <b>20</b>, <b>50</b>, <b>100</b>, <b>500</b>, and <b>1000</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of log entries per page. Valid values: <b>20</b>, <b>50</b>, <b>100</b>, <b>500</b>, and <b>1000</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -89,13 +91,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the log information.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To obtain the logs that are generated for Data Transmission Service (DTS) subtasks within a specific period of time, you can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</description></item>
-        /// <item><description>Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</description></item>
+        /// <item><description>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The start time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1620896327000</para>
@@ -105,11 +109,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The log level. Separate multiple log levels with commas (,). Valid values:</para>
+        /// <para>The log level of the log information. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: displays the logs that are generated when the DTS task runs as expected.</description></item>
-        /// <item><description><b>WARN</b>: displays the logs about severe issues that stop the DTS task from running.</description></item>
-        /// <item><description><b>ERROR</b>: displays the logs about unexpected issues that stop specific processes form running.</description></item>
+        /// <item><description><b>NORMAL</b>: Normal.</description></item>
+        /// <item><description><b>WARN</b>: Warning.</description></item>
+        /// <item><description><b>ERROR</b>: Error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,11 +124,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of a DTS subtask. Valid values:</para>
+        /// <para>The type of the DTS task subnode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DATA_LOAD</b>: full migration or full synchronization</description></item>
-        /// <item><description><b>ONLINE_WRITER</b>: incremental migration</description></item>
-        /// <item><description><b>SYNC_WRITER</b>: incremental synchronization</description></item>
+        /// <item><description><b>DATA_LOAD</b>: full data migration or initial full data synchronization.</description></item>
+        /// <item><description><b>ONLINE_WRITER</b>: incremental data migration.</description></item>
+        /// <item><description><b>SYNC_WRITER</b>: incremental data synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +139,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubJobType { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be: - <b>true</b>: Yes. - <b>false</b>: No.</para>
+        /// <para>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

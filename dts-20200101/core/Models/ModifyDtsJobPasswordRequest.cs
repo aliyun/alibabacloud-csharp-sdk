@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</para>
-        /// </remarks>
+        /// <para>The instance ID of the data migration, synchronization, or subscribe instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl3m1213ye7l****</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</para>
+        /// <para>The ID of the data migration, synchronization, or change tracking task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>l3m1213ye7l****</para>
@@ -33,13 +30,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The database to which the password belongs. Valid values:</para>
+        /// <para>The database to which the account belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>src</b>: source database.</description></item>
-        /// <item><description><b>dest</b>: destination database.</description></item>
+        /// <item><description><b>src</b>: the source database.</description></item>
+        /// <item><description><b>dest</b>: the destination database.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,9 +47,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>The new password.</para>
+        /// <para>The new password for the database account.</para>
         /// <remarks>
-        /// <para> This parameter is required and cannot be set to a value that is the same as the current password.</para>
+        /// <para>This parameter is required and must be different from the current password.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -73,7 +70,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -83,9 +80,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Synchronization direction, with values:</para>
+        /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b> (default): Forward. - <b>Reverse</b>: Reverse.</description></item>
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,10 +102,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>The account of the source or destination database.</para>
-        /// <remarks>
-        /// <para> This parameter is required.</para>
-        /// </remarks>
+        /// <para>The username of the database account to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtstest</para>
@@ -109,9 +112,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckTableDiffDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the source database to which the table that contains inconsistent data belongs.</para>
+        /// <para>The name of the database in the source instance that contains the table with inconsistent data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db_dtstest</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The number of data rows that contain inconsistent data.</para>
+        /// <para>The number of rows with data inconsistency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? DiffCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the inconsistent data.</para>
+        /// <para>The inconsistency details.</para>
         /// </summary>
         [NameInMap("DiffDetails")]
         [Validation(Required=false)]
         public List<DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails> DiffDetails { get; set; }
         public class DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails : TeaModel {
             /// <summary>
-            /// <para>The details of the inconsistent data, whose value is a JSON string. The JSON string contains the following parameters:</para>
+            /// <para>The specific inconsistency details, which is a JSON string.</para>
             /// <list type="bullet">
-            /// <item><description>column: the name of the field.</description></item>
-            /// <item><description>source: the value of the field in the source database.</description></item>
-            /// <item><description>dest: the value of the field in the destination database.</description></item>
+            /// <item><description>column: the field name.</description></item>
+            /// <item><description>source: the value in the source database.</description></item>
+            /// <item><description>dest: the value in the destination database.</description></item>
             /// <item><description>isPrimary: indicates whether the field is a primary key.</description></item>
             /// </list>
             /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Diff { get; set; }
 
             /// <summary>
-            /// <para>The time when the data verification was performed.</para>
+            /// <para>The time when the verification was performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-23T10:36:05.000+00:00</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The auto-increment primary key that is used to identify the data in a verification result.</para>
+            /// <para>The auto-increment primary key that identifies a verification result record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13058****</para>
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response element.</para>
         /// <remarks>
-        /// <para>For example, if the value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the value of the <b>DynamicMessage</b> parameter is <b>Type</b>, the specified <b>Type</b> parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>Type</b>, the request parameter <b>Type</b> that you specified is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The value of the parameter tbName is invalid.</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The name of the table that contains inconsistent data in the source database.</para>
+        /// <para>The name of the table in the source database that contains inconsistent data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_person</para>

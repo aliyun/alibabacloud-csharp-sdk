@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeCheckJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Item information check.</para>
+        /// <para>The information about the data validation tasks.</para>
         /// </summary>
         [NameInMap("CheckJobs")]
         [Validation(Required=false)]
         public List<DescribeCheckJobsResponseBodyCheckJobs> CheckJobs { get; set; }
         public class DescribeCheckJobsResponseBodyCheckJobs : TeaModel {
             /// <summary>
-            /// <para>Billing type, return values: - <b>POSTPAY</b>: Pay-as-you-go (postpaid). - <b>PREPAY</b>: Subscription (prepaid).</para>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+            /// <item><description><b>PREPAY</b>: subscription.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>checkpoint</para>
+            /// <para>The checkpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111****</para>
@@ -37,9 +41,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? CheckPoint { get; set; }
 
             /// <summary>
-            /// <para>Data validation method, with values:</para>
+            /// <para>The data validation method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Full validation. - <b>2</b>: Incremental validation.</description></item>
+            /// <item><description><b>1</b>: full data validation.</description></item>
+            /// <item><description><b>2</b>: incremental data validation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? CheckType { get; set; }
 
             /// <summary>
-            /// <para>Number of rows with data inconsistency</para>
+            /// <para>The number of rows with data inconsistency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? DiffCount { get; set; }
 
             /// <summary>
-            /// <para>Synchronization initialization progress, in percentage.</para>
+            /// <para>The progress of initial synchronization, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? DiffSum { get; set; }
 
             /// <summary>
-            /// <para>Migration, synchronization, or subscription instance ID.</para>
+            /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtsz8tc99sy2158b36</para>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DtsInstanceID { get; set; }
 
             /// <summary>
-            /// <para>Migration, synchronization, or subscription task ID.</para>
+            /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n08o6si4q338b1x</para>
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DtsJobId { get; set; }
 
             /// <summary>
-            /// <para>The number of data rows in the table that have completed validation.</para>
+            /// <para>The number of rows that have been validated in the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15094</para>
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? FinishCount { get; set; }
 
             /// <summary>
-            /// <para>DTS task ID. In most cases, there is no need to set this parameter.</para>
+            /// <para>The DTS task ID. &gt; In most cases, you do not need to specify this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c3d12dii27t632g</para>
@@ -110,7 +115,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>Instance specification.</para>
+            /// <para>The instance specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMALL</para>
@@ -120,7 +125,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>Check the name of the task.</para>
+            /// <para>The name of the data validation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtstest</para>
@@ -130,7 +135,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>as0e1ks426bq3z0</para>
@@ -150,7 +155,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string ParentJobType { get; set; }
 
             /// <summary>
-            /// <para>Region ID to which it belongs.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -160,7 +165,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Check result, return values: -<b>0</b>: Check passed -<b>1</b>: Check failed</para>
+            /// <para>The validation result. Valid values: - <b>0</b>: passed. - <b>1</b>: failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -170,7 +175,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Verify the total number of rows in the data.</para>
+            /// <para>The total number of rows to be validated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>159</para>
@@ -182,7 +187,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>Dynamic error code, this parameter will be deprecated soon.</para>
+        /// <para>The dynamic error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -192,7 +197,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message, used to replace the <b>%s</b> in the <b>errmessage</b> return parameter. If <b>errmessage</b> returns <b>thevalueofinputparameter%sisnotvalid</b>, and <b>dynamicmessage</b> returns <em>[1,2,3]</em>, it indicates that the request parameter <b>dtsjobid</b> is invalid.</para>
+        /// <para>The dynamic error message used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter. &gt; If <b>ErrMessage</b> returns <b>The value of input parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>[1,2,3]</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>present environment is not support,so skip.</para>
@@ -202,7 +207,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Error code returned when the call fails.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -212,7 +217,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Error message returned when the call fails.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -222,7 +227,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -232,7 +237,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -252,7 +257,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public long? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC1D920B-AB89-52A9-AA5F-AA724C4205E8</para>
@@ -262,7 +267,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -272,7 +277,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

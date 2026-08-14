@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class InitDtsRdsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data synchronization task.</para>
+        /// <para>The instance ID of the synchronization node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtszvxa4qmot6p****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>If the node is a self-managed MySQL database that is connected over CEN, you must specify the ID of the CEN instance.</para>
+        /// <para>The instance ID of the CEN instance. This parameter is required if the unit node is a self-managed MySQL database connected through CEN.</para>
         /// <remarks>
-        /// <para>You must specify the <b>EndpointRegion</b> and <b>EndpointInstanceId</b> parameters or the EndpointCenId parameter based on the type of the node.</para>
+        /// <para>You must specify either this parameter or the ApsaraDB RDS for MySQL-related parameters (<b>EndpointRegion</b> and <b>EndpointInstanceId</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,13 +33,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointCenId { get; set; }
 
         /// <summary>
-        /// <para>If the node is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The instance ID of the ApsaraDB RDS for MySQL instance. This parameter is required if the unit node is an ApsaraDB RDS for MySQL instance.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must also specify the <b>EndpointRegion</b> parameter.</description></item>
-        /// <item><description>You must specify the EndpointInstanceId parameter or the <b>EndpointCenId</b> parameter based on the type of the node.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must specify either this parameter or <b>EndpointCenId</b>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1162kryivb8****</para>
@@ -49,10 +51,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the node. Valid values:</para>
+        /// <para>The instance type of the unit node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: an ApsaraDB RDS for MySQL instance</description></item>
-        /// <item><description><b>CEN</b>: a self-managed MySQL database that is connected over CEN</description></item>
+        /// <item><description><b>RDS</b>: ApsaraDB RDS for MySQL instance.</description></item>
+        /// <item><description><b>CEN</b>: self-managed MySQL database connected through CEN.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,13 +65,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>If the node is an ApsaraDB RDS for MySQL instance, you must specify the region in which the ApsaraDB RDS for MySQL instance resides.</para>
+        /// <para>The region in which the ApsaraDB RDS for MySQL instance resides. This parameter is required if the unit node is an ApsaraDB RDS for MySQL instance.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must also specify the <b>EndpointInstanceId</b> parameter.</description></item>
-        /// <item><description>You must specify the EndpointRegion parameter or the <b>EndpointCenId</b> parameter based on the type of the node.</description></item>
         /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must specify either this parameter or <b>EndpointCenId</b>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the active geo-redundancy database cluster resides.</para>
+        /// <para>The region in which the active geo-redundancy database cluster resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -89,10 +93,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The ID of the resource group. This is a global parameter and does not need to be specified for this operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmzawhxxc****</para>
+        /// <para>资源组ID，全局参数，当前API无需传入。</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDataCheckReportUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The data verification method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>1</b>: full data verification.</description></item>
-        /// <item><description><b>2</b>: incremental data verification.</description></item>
-        /// </list>
+        /// <para>The data verification method. Currently, only the value <b>1</b> is supported, which indicates full verification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +21,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? CheckType { get; set; }
 
         /// <summary>
-        /// <para>The name of the verified source database.</para>
+        /// <para>The name of the source database to be verified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Data Transmission Service (DTS) task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
+        /// <para>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzawhxxc****</para>
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the table verified in the source database.</para>
+        /// <para>The name of the table in the source database to be verified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

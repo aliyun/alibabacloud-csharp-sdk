@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeGadInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>403</para>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> parameter.</para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>Type</b>, the request parameter <b>Type</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>present environment is not support,so skip.</para>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The error code returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
         /// </summary>
@@ -34,6 +43,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
@@ -42,6 +53,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -118,6 +131,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -126,6 +141,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries that can be displayed on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -134,6 +151,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C166D79D-436B-45F0-B5A5-25E1959F****</para>
         /// </summary>
@@ -142,6 +161,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -150,6 +175,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>

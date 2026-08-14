@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DeleteDtsJobRequest : TeaModel {
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
-        /// <remarks>
-        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
-        /// </remarks>
+        /// <para>The instance ID of the data migration, synchronization, or subscribe instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsl3m1213ye7l****</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <para>The ID of the data migration, synchronization, or change tracking task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>l3m1213ye7l****</para>
@@ -33,11 +30,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Data Transmission Service (DTS) task. Valid values:</para>
+        /// <para>The node type of the DTS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MIGRATION</b>: data migration task</description></item>
-        /// <item><description><b>SYNC</b>: data synchronization task</description></item>
-        /// <item><description><b>SUBSCRIBE</b>: change tracking task</description></item>
+        /// <item><description><b>MIGRATION</b>: data migration.</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization.</description></item>
+        /// <item><description><b>SUBSCRIBE</b>: change tracking.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The ID of the region where the data migration or synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -58,17 +55,29 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>A special business-specific field. You do not need to pass this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek26lwshijfk3q</para>
+        /// <para>rg-aek26lwshij****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code. This parameter will be removed in the future.</para>
+        /// <para>The synchronization direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Forward</b>: forward.</description></item>
+        /// <item><description><b>Reverse</b>: reverse.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: <b>Forward</b>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can set this parameter to <b>Reverse</b> to release the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Forward</para>
@@ -78,10 +87,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationDirection { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
-        /// </list>
+        /// <para>A special business-specific field. You do not need to pass this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

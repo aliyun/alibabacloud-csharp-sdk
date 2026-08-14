@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DTS dedicated cluster on which the task runs.</para>
+        /// <para>The ID of the DTS dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtscluster_atyl3b5214uk***</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DestProductType { get; set; }
 
         /// <summary>
-        /// <para>The environment tag of the DTS instance. Valid values:</para>
+        /// <para>The environment label of the DTS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b></description></item>
-        /// <item><description><b>online</b></description></item>
+        /// <item><description><b>normal</b>: normal</description></item>
+        /// <item><description><b>online</b>: online</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The ID of the data migration, data synchronization, or change tracking instance.</para>
+        /// <remarks>
+        /// <para>Separate multiple instance IDs with commas (,). Make sure that the <b>JobType</b> parameter is set as expected.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dtsi03e3zty16i****</para>
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <remarks>
+        /// <para>Separate multiple task IDs with commas (,). Make sure that the <b>JobType</b> parameter is set as expected.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>qa110wq5r93hb49</para>
@@ -64,9 +70,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent task.</para>
+        /// <para>The DTS task ID.</para>
         /// <remarks>
-        /// <para> In most cases, you do not need to specify this parameter.</para>
+        /// <para>In most cases, you do not need to set this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source or target database instance corresponding to the request parameter <b>InstanceType</b>.</para>
+        /// <para>The ID of the source or destination database instance that corresponds to the <b>InstanceType</b> request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1966yuut4w3****</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the source or target database instance.</para>
+        /// <para>The type of the source or destination database instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -97,9 +103,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The type of the DTS task. Valid values:</para>
+        /// <para>The task type of the DTS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MIGRATION</b>: data migration. This is the default value.</description></item>
+        /// <item><description><b>MIGRATION</b>: data migration (default).</description></item>
         /// <item><description><b>SYNC</b>: data synchronization.</description></item>
         /// <item><description><b>SUBSCRIBE</b>: change tracking.</description></item>
         /// </list>
@@ -112,14 +118,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The basis on which the returned DTS tasks are sorted. Valid values:</para>
+        /// <para>The sort criterion when the response contains multiple DTS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTime</b>: sorts the DTS tasks based on the points in time when the DTS tasks are created.</description></item>
-        /// <item><description><b>FinishTime</b>: sorts the DTS tasks based on the points in time when the DTS tasks are complete.</description></item>
-        /// <item><description><b>duLimit</b> sorts the DTS tasks based on the upper limits on DTS Units (DUs) that the DTS tasks can use. This option applies only to the DTS tasks that are run on a DTS dedicated cluster.</description></item>
+        /// <item><description><b>CreateTime</b>: sorts by task creation time.</description></item>
+        /// <item><description><b>FinishTime</b>: sorts by task completion time.</description></item>
+        /// <item><description><b>duLimit</b> (dedicated cluster tasks): sorts by the upper limit of DU usage for DTS tasks. This value is supported only for dedicated clusters.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can also set the <b>OrderDirection</b> parameter to specify whether to sort the DTS tasks in ascending or descending order.</para>
+        /// <para>You can also specify <b>OrderDirection</b> to set the sort order to ascending or descending.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,10 +136,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The order in which the returned DTS tasks are sorted. Valid values:</para>
+        /// <para>The sort order of instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASC</b>: sorts the DTS tasks in ascending order. This is the default value.</description></item>
-        /// <item><description><b>DESC</b>: sorts the DTS tasks in descending order.</description></item>
+        /// <item><description><b>ASC</b>: ascending order. This is the default value.</description></item>
+        /// <item><description><b>DESC</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>20</b>, <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of records per page. Valid values: <b>10</b>, <b>20</b>, and <b>30</b>. Default value: <b>20</b>. Maximum value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -168,9 +174,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The content of the query condition.</para>
+        /// <para>The specific content of the query condition.</para>
         /// <remarks>
-        /// <para> You must set the <b>Type</b> parameter to specify the type of the query condition.</para>
+        /// <para>Specify <b>Type</b> in advance to define the query condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -181,7 +187,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -191,49 +197,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-hangzhou</description></item>
-        /// <item><description>cn-shanghai</description></item>
-        /// <item><description>cn-beijing</description></item>
-        /// <item><description>cn-guangzhou</description></item>
-        /// <item><description>cn-shenzhen</description></item>
-        /// <item><description>cn-chengdu</description></item>
-        /// <item><description>cn-heyuan</description></item>
-        /// <item><description>cn-hongkong</description></item>
-        /// <item><description>cn-qingdao</description></item>
-        /// <item><description>cn-zhangbei</description></item>
-        /// <item><description>cn-zhangjiakou</description></item>
-        /// <item><description>us-east-1</description></item>
-        /// <item><description>us-west-1</description></item>
-        /// <item><description>cn-hangzhou-finance</description></item>
-        /// <item><description>cn-shanghai-finance</description></item>
-        /// <item><description>cn-shanghai-finance-1</description></item>
-        /// <item><description>cn-shenzhen-finance</description></item>
-        /// <item><description>cn-shenzhen-finance-1</description></item>
-        /// <item><description>cn-beijing-finance-1</description></item>
-        /// <item><description>cn-huhehaote</description></item>
-        /// <item><description>cn-north-2-gov-1</description></item>
-        /// <item><description>eu-central-1</description></item>
-        /// <item><description>eu-west-1</description></item>
-        /// <item><description>me-central-1</description></item>
-        /// <item><description>me-east-1</description></item>
-        /// <item><description>ap-northeast-1</description></item>
-        /// <item><description>ap-northeast-2</description></item>
-        /// <item><description>ap-southeast-1</description></item>
-        /// <item><description>ap-southeast-2</description></item>
-        /// <item><description>ap-southeast-3</description></item>
-        /// <item><description>ap-southeast-5</description></item>
-        /// <item><description>ap-southeast-6</description></item>
-        /// <item><description>ap-southeast-7</description></item>
-        /// <item><description>cn-wulanchabu</description></item>
-        /// <item><description>cn-zhengzhou-jva</description></item>
-        /// <item><description>cn-wuhan-lr</description></item>
-        /// </list>
+        /// <para>Deprecated parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -260,56 +227,56 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SrcProductType { get; set; }
 
         /// <summary>
-        /// <para>The state of the DTS task.</para>
-        /// <para>Valid values for a data migration task:</para>
+        /// <para>The instance status of the DTS instance. Valid values:</para>
+        /// <para>Data migration task statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is being prechecked.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>Migrating</b>: The task is in progress.</description></item>
-        /// <item><description><b>Suspending</b>: The task is paused.</description></item>
-        /// <item><description><b>MigrationFailed</b>: The task failed.</description></item>
-        /// <item><description><b>Finished</b>: The task is complete.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a precheck.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: precheck failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: precheck passed.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>Migrating</b>: migrating.</description></item>
+        /// <item><description><b>Suspending</b>: paused.</description></item>
+        /// <item><description><b>MigrationFailed</b>: migration failed.</description></item>
+        /// <item><description><b>Finished</b>: completed.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
-        /// <para>Valid values for a data synchronization task:</para>
+        /// <para>Data synchronization task statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is being prechecked.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>Initializing</b>: The task is being initialized.</description></item>
-        /// <item><description><b>InitializeFailed</b>: Initialization failed.</description></item>
-        /// <item><description><b>Synchronizing</b>: The task is in progress.</description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
-        /// <item><description><b>Suspending</b>: The task is paused.</description></item>
-        /// <item><description><b>Modifying</b>: The objects in the task are being modified.</description></item>
-        /// <item><description><b>Finished</b>: The task is complete.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a precheck.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: precheck failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: precheck passed.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>Initializing</b>: performing initial synchronization.</description></item>
+        /// <item><description><b>InitializeFailed</b>: initial synchronization failed.</description></item>
+        /// <item><description><b>Synchronizing</b>: synchronizing.</description></item>
+        /// <item><description><b>Failed</b>: synchronization failed.</description></item>
+        /// <item><description><b>Suspending</b>: paused.</description></item>
+        /// <item><description><b>Modifying</b>: modifying synchronization objects.</description></item>
+        /// <item><description><b>Finished</b>: completed.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
-        /// <para>Valid values for a change tracking task:</para>
+        /// <para>Change tracking task statuses:</para>
         /// <list type="bullet">
-        /// <item><description><b>NotConfigured</b>: The task is not configured.</description></item>
-        /// <item><description><b>NotStarted</b>: The task is not started.</description></item>
-        /// <item><description><b>Prechecking</b>: The task is being prechecked.</description></item>
-        /// <item><description><b>PrecheckFailed</b>: The task failed to pass the precheck.</description></item>
-        /// <item><description><b>PreCheckPass</b>: The task passed the precheck.</description></item>
-        /// <item><description><b>Starting</b>: The task is being started.</description></item>
-        /// <item><description><b>Normal</b>: The task is running as expected.</description></item>
-        /// <item><description><b>Retrying</b>: The task is being retried.</description></item>
-        /// <item><description><b>Abnormal</b>: The task is not running as expected.</description></item>
-        /// <item><description><b>Upgrade</b>: The task is being upgraded.</description></item>
-        /// <item><description><b>Locked</b>: The task is locked.</description></item>
-        /// <item><description><b>Downgrade</b>: The task is being downgraded.</description></item>
+        /// <item><description><b>NotConfigured</b>: not configured.</description></item>
+        /// <item><description><b>NotStarted</b>: not started.</description></item>
+        /// <item><description><b>Prechecking</b>: running a precheck.</description></item>
+        /// <item><description><b>PrecheckFailed</b>: precheck failed.</description></item>
+        /// <item><description><b>PreCheckPass</b>: precheck passed.</description></item>
+        /// <item><description><b>Starting</b>: starting.</description></item>
+        /// <item><description><b>Normal</b>: normal.</description></item>
+        /// <item><description><b>Retrying</b>: retrying.</description></item>
+        /// <item><description><b>Abnormal</b>: abnormal.</description></item>
+        /// <item><description><b>Upgrade</b>: upgrading.</description></item>
+        /// <item><description><b>Locked</b>: locked.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrading.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -320,9 +287,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the DTS task to be queried. Specify tags in the JSON format.</para>
+        /// <para>The tag-based search condition in JSON format.</para>
         /// <remarks>
-        /// <para> You can call the <b>ListTagResources</b> operation to query the tag key and tag value.</para>
+        /// <para>You can call the <b>ListTagResources</b> operation to query tag keys and values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -333,15 +300,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The conditional query parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instance</b>: queries DTS tasks based on the ID of a DTS instance.</description></item>
-        /// <item><description><b>name</b>: queries DTS tasks based on the name of a DTS instance. Fuzzy match is supported.</description></item>
-        /// <item><description><b>srcRds</b>: queries DTS tasks based on the ID of an ApsaraDB RDS instance. The ApsaraDB RDS instance is the source instance of a DTS task.</description></item>
-        /// <item><description><b>rds</b>: queries DTS tasks based on the ID of an ApsaraDB RDS instance. The ApsaraDB RDS instance is the destination instance of a DTS task.</description></item>
+        /// <item><description><b>instance</b>: queries by DTS instance ID.</description></item>
+        /// <item><description><b>name</b>: queries by DTS instance name. Fuzzy match is supported.</description></item>
+        /// <item><description><b>srcRds</b>: queries by the ID of the source instance (ApsaraDB RDS).</description></item>
+        /// <item><description><b>rds</b>: queries by the ID of the destination instance (ApsaraDB RDS).</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must set the <b>Params</b> parameter to specify the content of the query condition.</para>
+        /// <para>Specify the <b>Params</b> parameter to provide the specific content of the query condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -352,10 +319,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip the <b>DbObject</b> parameter in the response. The DbObject parameter specifies the objects of the data migration, data synchronization, or change tracking task. Valid values:</para>
+        /// <para>Specifies whether to exclude task objects from the response (not return the <b>DbObject</b> parameter). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: does not return <b>DbObject</b>.</description></item>
-        /// <item><description><b>false</b>: returns <b>DbObject</b>. If you set this parameter to false, the response time is shortened.</description></item>
+        /// <item><description><b>true</b>: excludes <b>DbObject</b> from the response.</description></item>
+        /// <item><description><b>false</b>: includes <b>DbObject</b> in the response, which can improve the response speed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -366,9 +333,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? WithoutDbList { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <para>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
