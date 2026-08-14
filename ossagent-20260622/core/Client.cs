@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ossagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天流式接口</para>
+        /// <para>Initiates a streaming chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天流式接口</para>
+        /// <para>Initiates a streaming chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天流式接口</para>
+        /// <para>Initiates a streaming chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天流式接口</para>
+        /// <para>Initiates a streaming chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具确认接口</para>
+        /// <para>Confirms a tool calling operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具确认接口</para>
+        /// <para>Confirms a tool calling operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具确认接口</para>
+        /// <para>Confirms a tool calling operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具确认接口</para>
+        /// <para>Confirms a tool calling operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天中断接口</para>
+        /// <para>Interrupts a chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天中断接口</para>
+        /// <para>Interrupts a chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天中断接口</para>
+        /// <para>Interrupts a chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.OssAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>聊天中断接口</para>
+        /// <para>Interrupts a chat session.</para>
         /// </summary>
         /// 
         /// <param name="request">
