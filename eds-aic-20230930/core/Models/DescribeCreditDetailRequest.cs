@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of plan packages or credit top-up packages.</para>
+        /// <para>The list of plan packages or credit booster packages.</para>
         /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]

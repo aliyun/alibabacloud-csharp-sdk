@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The list of associated instance IDs.</para>
+            /// <para>The list of bound instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
@@ -151,6 +151,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public int? MaxSteps { get; set; }
 
                 /// <summary>
+                /// <para>The list of skill IDs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;sk-abc&quot;]</para>
                 /// </summary>
@@ -159,7 +161,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public List<string> Skills { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period, in seconds.</para>
+                /// <para>The timeout period in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -234,7 +236,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The user prompt or task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Execute daily data synchronization task</para>
+            /// <para>Execute daily data sync task</para>
             /// </summary>
             [NameInMap("UserPrompt")]
             [Validation(Required=false)]

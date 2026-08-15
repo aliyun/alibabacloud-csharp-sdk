@@ -47,8 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AuthorizedUserId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition/Matrix Edition).</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones..</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition or Matrix Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -94,6 +93,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The instance version. Default value: basic, which queries Wuying cloud phone instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EnterpriseAi</para>
+        /// </summary>
         [NameInMap("InstanceVersion")]
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
@@ -119,7 +124,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
+        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -129,8 +134,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The matrix ID.
-        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The matrix ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_id</para>
@@ -140,8 +144,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.
-        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The cloud phone network ID.</para>
+        /// <para>The cloud phone network IDs.</para>
         /// </summary>
         [NameInMap("OfficeSiteIds")]
         [Validation(Required=false)]
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The public network rate limiting rule group ID. The rate limiting rule for instances in the basic shared network.</para>
+        /// <para>The IDs of the public network rate limiting rule groups. These are rate limiting rules for instances in the basic shared network.</para>
         /// </summary>
         [NameInMap("QosRuleIds")]
         [Validation(Required=false)]
@@ -184,10 +187,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string SaleMode { get; set; }
 
+        /// <summary>
+        /// <para>The sort key used when querying resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreationTime</para>
+        /// </summary>
         [NameInMap("SortKey")]
         [Validation(Required=false)]
         public string SortKey { get; set; }
 
+        /// <summary>
+        /// <para>The sort order. Default value: descending order. Valid values:</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASC</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }

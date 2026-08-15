@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 /// <para>The task description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Open Xiaohongshu.</para>
+                /// <para>Open Xiaohongshu</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

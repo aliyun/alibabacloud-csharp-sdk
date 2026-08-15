@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Auto-reply to DingTalk messages.</para>
+        /// <para>Auto-reply to DingTalk messages</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Open DingTalk and reply to the first 5 unread messages.</para>
+        /// <para>Open DingTalk and reply to the first 5 unread messages</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

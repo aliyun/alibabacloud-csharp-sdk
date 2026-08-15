@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The status switch: ACTIVE/DISABLED.</para>
+        /// <para>Switches the status. Valid values: ACTIVE and DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NewTaskName.</para>
+        /// <para>NewTaskName</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The user prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Execute daily data synchronization task.</para>
+        /// <para>Execute daily data synchronization task</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

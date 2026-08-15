@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public ModifyScheduledTaskRequestRunConfig RunConfig { get; set; }
         public class ModifyScheduledTaskRequestRunConfig : TeaModel {
             /// <summary>
-            /// <para>The extended parameters as a JSON string.</para>
+            /// <para>The extended parameter JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;batchSize&quot;:&quot;1000&quot;}</para>
@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? MaxSteps { get; set; }
 
             /// <summary>
+            /// <para>The list of skill IDs. A maximum of 1 skill ID is supported. The value overwrites aim_task_config.run_config after modification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[&quot;sk-abc&quot;]</para>
             /// 
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<string> Skills { get; set; }
 
             /// <summary>
-            /// <para>The timeout in seconds.</para>
+            /// <para>The timeout period, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The status switch: ACTIVE/DISABLED.</para>
+        /// <para>Switches the status. Valid values: ACTIVE and DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NewTaskName.</para>
+        /// <para>NewTaskName</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The user prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Execute daily data synchronization task.</para>
+        /// <para>Execute daily data synchronization task</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

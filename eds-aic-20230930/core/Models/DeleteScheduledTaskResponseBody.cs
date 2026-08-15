@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ScheduledId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scheduled task is deleted successfully.</para>
+            /// <para>Indicates whether the deletion is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

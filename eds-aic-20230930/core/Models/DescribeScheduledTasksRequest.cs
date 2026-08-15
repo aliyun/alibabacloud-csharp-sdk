@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scheduled task IDs used for filtering.</para>
+        /// <para>Filters by scheduled task IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;scheduled-abcd1234&quot;]</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> ScheduledIds { get; set; }
 
         /// <summary>
-        /// <para>The status used for filtering. Valid values: ACTIVE and DISABLED.</para>
+        /// <para>Filters by status: ACTIVE/DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>

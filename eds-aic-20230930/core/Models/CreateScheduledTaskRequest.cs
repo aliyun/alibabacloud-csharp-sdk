@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public CreateScheduledTaskRequestRunConfig RunConfig { get; set; }
         public class CreateScheduledTaskRequestRunConfig : TeaModel {
             /// <summary>
-            /// <para>The extended parameter JSON string.</para>
+            /// <para>The extended parameters as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;batchSize&quot;:&quot;1000&quot;}</para>
@@ -72,6 +72,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? MaxSteps { get; set; }
 
             /// <summary>
+            /// <para>The list of skill IDs, up to 1. Written to aim_task_config.run_config when the scheduled task is created and read when the callback is delivered.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[&quot;sk-abc&quot;]</para>
             /// </summary>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<string> Skills { get; set; }
 
             /// <summary>
-            /// <para>The timeout period, in seconds.</para>
+            /// <para>The timeout in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Auto-reply to DingTalk messages.</para>
+        /// <para>Auto-reply to DingTalk messages</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Open DingTalk and reply to the first 5 unread messages.</para>
+        /// <para>Open DingTalk and reply to the first 5 unread messages</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com"},
                 {"ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com"},
+                {"cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -5832,7 +5832,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent scheduled task.</para>
+        /// <para>Deletes a scheduled task of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5874,7 +5874,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent scheduled task.</para>
+        /// <para>Deletes a scheduled task of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5916,7 +5916,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent scheduled task.</para>
+        /// <para>Deletes a scheduled task of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5934,7 +5934,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an agent scheduled task.</para>
+        /// <para>Deletes a scheduled task of an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9724,7 +9724,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of scheduled tasks for an agent.</para>
+        /// <para>Queries the list of agent scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9794,7 +9794,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of scheduled tasks for an agent.</para>
+        /// <para>Queries the list of agent scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9864,7 +9864,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of scheduled tasks for an agent.</para>
+        /// <para>Queries the list of agent scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9882,7 +9882,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of scheduled tasks for an agent.</para>
+        /// <para>Queries the list of agent scheduled tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16824,7 +16824,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a mobile agent package.</para>
+        /// <para>Renews a resource plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16848,6 +16848,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageIds))
             {
@@ -16890,7 +16894,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a mobile agent package.</para>
+        /// <para>Renews a resource plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16914,6 +16918,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageIds))
             {
@@ -16956,7 +16964,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a mobile agent package.</para>
+        /// <para>Renews a resource plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16974,7 +16982,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a mobile agent package.</para>
+        /// <para>Renews a resource plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17300,7 +17308,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17380,7 +17388,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17460,7 +17468,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17478,7 +17486,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an Agent to execute an AI automation task on Mobile nodes.</para>
+        /// <para>Triggers an Agent on Mobile nodes to execute an AI automation task.</para>
         /// </summary>
         /// 
         /// <param name="request">

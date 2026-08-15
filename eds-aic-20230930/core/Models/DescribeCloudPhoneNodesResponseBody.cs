@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a next pagination token exists. Valid values:</para>
+        /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> has a value, the value is the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results exist.</description></item>
+        /// <item><description>If <b>NextToken</b> has a value, the value indicates the token from which the next query starts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("Channel")]
+            [Validation(Required=false)]
+            public string Channel { get; set; }
 
             /// <summary>
             /// <para>The billing type.</para>
@@ -272,6 +276,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
+
+            [NameInMap("PackageId")]
+            [Validation(Required=false)]
+            public string PackageId { get; set; }
 
             /// <summary>
             /// <para>The number of instances provisioned under the cloud phone matrix.</para>

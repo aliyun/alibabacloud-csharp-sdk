@@ -1,3 +1,9 @@
+2026-08-15 Version: 4.30.1
+- Update API DescribeCloudPhoneNodes: add response parameters Body.NodeModel.$.Channel.
+- Update API DescribeCloudPhoneNodes: add response parameters Body.NodeModel.$.PackageId.
+- Update API RenewMobileAgentPackage: add request parameters ClientToken.
+
+
 2026-08-06 Version: 4.30.0
 - Support API ModifyInstanceGroupSpec.
 - Update API CreateScheduledTask: add request parameters RunConfig.Skills.
