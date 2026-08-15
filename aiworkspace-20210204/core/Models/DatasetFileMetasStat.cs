@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetFileMetasStat : TeaModel {
         /// <summary>
+        /// <para>The count after aggregation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The metadata property content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cat</para>
         /// </summary>

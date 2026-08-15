@@ -61,14 +61,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 {"eu-west-1-oxs", "aiworkspace.aliyuncs.com"},
                 {"me-east-1", "aiworkspace.aliyuncs.com"},
                 {"rus-west-1-pop", "aiworkspace.aliyuncs.com"},
-                {"us-west-1", "aiworkspace.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"},
-                {"us-east-1", "aiworkspace.us-east-1.aliyuncs.com"},
-                {"na-south-1", "aiworkspace.na-south-1.aliyuncs.com"},
-                {"eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"},
                 {"cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"},
                 {"cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"},
                 {"cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"},
                 {"cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"},
@@ -79,9 +73,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 {"ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com"},
+                {"eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"},
+                {"na-south-1", "aiworkspace.na-south-1.aliyuncs.com"},
+                {"us-east-1", "aiworkspace.us-east-1.aliyuncs.com"},
+                {"us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"},
+                {"us-west-1", "aiworkspace.us-west-1.aliyuncs.com"},
+                {"ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("aiworkspace", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -317,6 +317,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["SourceType"] = request.SourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 body["WorkspaceId"] = request.WorkspaceId;
@@ -398,6 +402,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 body["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -4165,7 +4173,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4231,7 +4239,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4297,7 +4305,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4316,7 +4324,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4667,6 +4675,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["RoleType"] = request.RoleType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4720,6 +4732,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
             {
                 body["RoleType"] = request.RoleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

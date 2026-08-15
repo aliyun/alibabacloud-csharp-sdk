@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-01-12T14:36:01.001Z</para>
+        /// <para>2025-01-12T14:36:01Z</para>
         /// </summary>
         [NameInMap("FileCreateTime")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-01-12T14:36:01.001Z</para>
+        /// <para>2025-01-12T14:36:01Z</para>
         /// </summary>
         [NameInMap("FileUpdateTime")]
         [Validation(Required=false)]
@@ -172,16 +172,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{
-        ///     &quot;user&quot;:{
-        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;],
-        ///         &quot;remove&quot;:[&quot;Water horse&quot;]
-        ///     },
-        ///     &quot;user-delete-ai-tags&quot;:{
-        ///         &quot;add&quot;: [&quot;Ground shadow&quot;],
-        ///         &quot;remove&quot;: []
-        ///     }
-        /// }</para>
+        /// <para>{&quot;ai&quot;:[&quot;cat&quot;], &quot;user&quot;:[&quot;black&quot;]}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

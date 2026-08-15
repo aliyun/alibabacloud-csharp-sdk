@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateRunRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the experiment associated with the run.</para>
+        /// <para>The experiment ID associated with the run.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,16 +28,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The name of the run. The naming convention is as follows:</para>
+        /// <para>The name of the run. Naming rules:</para>
         /// <list type="bullet">
-        /// <item><description><para>Starts with a lowercase or uppercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>The length must be 1 to 63 characters.</para>
-        /// </description></item>
+        /// <item><description>Must start with a lowercase or uppercase letter.</description></item>
+        /// <item><description>Can contain uppercase and lowercase letters, digits, underscores (_), or hyphens (-).</description></item>
+        /// <item><description>Must be 1 to 63 characters in length.</description></item>
         /// </list>
-        /// <para>If this parameter is left empty, the server-generated random ID (RunID) is used as the name.</para>
+        /// <para>If the name is left empty during creation, the server-generated random ID (RunID) is used as the name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myName</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<RunParam> Params { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PAI workload associated with the run.</para>
+        /// <para>The PAI workload ID associated with the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-jdnhf***fnrimv</para>
@@ -64,7 +61,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type of the PAI workload associated with the run. Options include TrainingService, DLC, or empty. This parameter is optional. The default value is empty.</para>
+        /// <para>The type of PAI workload source associated with the run. Valid values: TrainingService, DLC, or empty. This parameter is optional and defaults to empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DLC</para>

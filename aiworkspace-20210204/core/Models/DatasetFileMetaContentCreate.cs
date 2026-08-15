@@ -100,8 +100,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;ImageHeight&quot;: 1080,
-        ///     &quot;ImageWidth&quot;: 1920
+        ///     &quot;Image&quot;:
+        ///     {
+        ///         &quot;Width&quot;: 1920,
+        ///         &quot;Height&quot;: 1080,
+        ///         &quot;Channel&quot;: 3
+        ///     }
         /// }</para>
         /// </summary>
         [NameInMap("MetaAttributes")]
@@ -122,11 +126,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{
-        ///     &quot;user&quot;:{
-        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
-        ///     }
-        /// }</para>
+        /// <para>{&quot;user&quot;:[&quot;cat&quot;, &quot;White&quot;]}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
