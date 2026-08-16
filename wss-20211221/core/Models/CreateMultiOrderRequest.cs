@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The list of resource IDs.</para>
             /// <remarks>
-            /// <para>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to create.</para>
+            /// <para>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <c>create</c>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ResourceIds")]

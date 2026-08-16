@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of business data.</para>
+        /// <para>The array of usage data.</para>
         /// </summary>
         [NameInMap("UsageInfoList")]
         [Validation(Required=false)]
@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo UsageInfo { get; set; }
             public class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo : TeaModel {
+                [NameInMap("AvailableAmount")]
+                [Validation(Required=false)]
+                public int? AvailableAmount { get; set; }
+
                 [NameInMap("ContactGroupNames")]
                 [Validation(Required=false)]
                 public List<string> ContactGroupNames { get; set; }
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string TimePoint { get; set; }
 
                     /// <summary>
-                    /// <para>The number of credits consumed during this hour.</para>
+                    /// <para>The number of credits consumed in this hour.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 }
 
                 /// <summary>
-                /// <para>The instance ID of the currently active credit package.</para>
+                /// <para>The instance ID of the current active credit package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cp-inst-001</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string CurrentInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The remaining credits of the currently active credit package.</para>
+                /// <para>The remaining credits of the current active credit package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Current period remaining credits</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? CurrentRemainCredit { get; set; }
 
                 /// <summary>
-                /// <para>The total credits of the currently active credit package.</para>
+                /// <para>The total credits of the current active credit package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Current period credit quota</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? CurrentTotalCredit { get; set; }
 
                 /// <summary>
-                /// <para>The used credits of the currently active credit package.</para>
+                /// <para>The used credits of the current active credit package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Current period credits consumed</para>
@@ -150,8 +154,22 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 [Validation(Required=false)]
                 public long? RemainCredit { get; set; }
 
+                [NameInMap("RemainCreditInfo")]
+                [Validation(Required=false)]
+                public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo RemainCreditInfo { get; set; }
+                public class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo : TeaModel {
+                    [NameInMap("DeductingAmount")]
+                    [Validation(Required=false)]
+                    public int? DeductingAmount { get; set; }
+
+                    [NameInMap("PendingAmount")]
+                    [Validation(Required=false)]
+                    public int? PendingAmount { get; set; }
+
+                }
+
                 /// <summary>
-                /// <para>The credits used today.</para>
+                /// <para>The quota used today.</para>
                 /// </summary>
                 [NameInMap("TodayUsed")]
                 [Validation(Required=false)]
@@ -168,7 +186,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? TotalCredit { get; set; }
 
                 /// <summary>
-                /// <para>The cumulative credits used.</para>
+                /// <para>The cumulative used quota.</para>
                 /// </summary>
                 [NameInMap("TotalUsed")]
                 [Validation(Required=false)]

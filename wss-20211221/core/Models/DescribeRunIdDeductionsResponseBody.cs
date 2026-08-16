@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<DescribeRunIdDeductionsResponseBodyDeductions> Deductions { get; set; }
         public class DescribeRunIdDeductionsResponseBodyDeductions : TeaModel {
             /// <summary>
-            /// <para>The agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
+            /// <para>The agent type: <c>CREDIT_PACKAGE</c> / <c>JVS_CLAW</c> / <c>OPEN_CLAW</c> / <c>JVS_COPILOT</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenClaw</para>
@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
             /// <summary>
             /// <para>The credit or plan package ID.</para>
             /// 
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the run.</para>
+            /// <para>The unique run ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run-szwB1fYHCTocjGkFAIf6V8A</para>

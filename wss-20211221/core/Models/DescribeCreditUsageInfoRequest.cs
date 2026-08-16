@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of instance ID list. This parameter can be omitted when <c>UsageType=User</c>. Pass the credit package instance ID when <c>UsageType=CreditPackage</c>, or pass the <c>AgentId</c> when <c>UsageType=Agent</c>.</para>
+        /// <para>The JSON string of instance IDs. This parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an <c>AgentId</c> when <c>UsageType=Agent</c>.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

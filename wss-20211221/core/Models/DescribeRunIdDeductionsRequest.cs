@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeRunIdDeductionsRequest : TeaModel {
         /// <summary>
-        /// <para>The agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
+        /// <para>The agent type: <c>CREDIT_PACKAGE</c> / <c>JVS_CLAW</c> / <c>OPEN_CLAW</c> / <c>JVS_COPILOT</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JVSCopilot、JVSClaw、OpenClaw</para>
@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [NameInMap("AgentType")]
         [Validation(Required=false)]
         public string AgentType { get; set; }
+
+        [NameInMap("AgentTypes")]
+        [Validation(Required=false)]
+        public List<string> AgentTypes { get; set; }
 
         /// <summary>
         /// <para>The Alibaba Cloud UID.</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The deduction type. Do not specify this parameter for non-knowledge base scenarios.</para>
+        /// <para>The deduction types. Do not specify this parameter for non-knowledge base scenarios.</para>
         /// </summary>
         [NameInMap("DeductionTypes")]
         [Validation(Required=false)]
@@ -55,6 +59,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("GroupByFields")]
+        [Validation(Required=false)]
+        public List<string> GroupByFields { get; set; }
+
+        [NameInMap("GroupResourceTypes")]
+        [Validation(Required=false)]
+        public List<string> GroupResourceTypes { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to group results by deduction type.</para>
@@ -156,6 +168,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        [NameInMap("WyId")]
+        [Validation(Required=false)]
+        public string WyId { get; set; }
 
     }
 

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in Settings for paging. Maximum value: 100.</para>
+        /// <para>The number of entries per page in a paged query. Settings the number of rows per page for paging. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

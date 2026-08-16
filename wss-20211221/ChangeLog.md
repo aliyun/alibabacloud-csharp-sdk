@@ -1,3 +1,13 @@
+2026-08-16 Version: 1.5.1
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.AvailableAmount.
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.RemainCreditInfo.
+- Update API DescribeRunIdDeductions: add request parameters AgentTypes.
+- Update API DescribeRunIdDeductions: add request parameters GroupByFields.
+- Update API DescribeRunIdDeductions: add request parameters GroupResourceTypes.
+- Update API DescribeRunIdDeductions: add request parameters WyId.
+- Update API DescribeRunIdDeductions: add response parameters Body.Deductions.$.Model.
+
+
 2026-08-05 Version: 1.5.0
 - Support API DescribeRunIdDeductions.
 - Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.ContactGroupNames.

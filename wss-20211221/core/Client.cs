@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Wss20211221
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-shanghai", "wss.cn-shanghai.aliyuncs.com"},
                 {"ap-southeast-1", "wss.ap-southeast-1.aliyuncs.com"},
+                {"cn-shanghai", "wss.cn-shanghai.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("wss", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -442,14 +442,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits of the current credit package, hourly consumption samples, alert thresholds, and period quotas.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples for the specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information for the specified agent.
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
         /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass the credit package instance ID when <c>UsageType=CreditPackage</c>, or pass the AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logged-in <c>wyId</c>.</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
         /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
@@ -508,14 +508,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits of the current credit package, hourly consumption samples, alert thresholds, and period quotas.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples for the specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information for the specified agent.
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
         /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass the credit package instance ID when <c>UsageType=CreditPackage</c>, or pass the AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logged-in <c>wyId</c>.</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
         /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
@@ -574,14 +574,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits of the current credit package, hourly consumption samples, alert thresholds, and period quotas.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples for the specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information for the specified agent.
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
         /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass the credit package instance ID when <c>UsageType=CreditPackage</c>, or pass the AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logged-in <c>wyId</c>.</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
         /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
@@ -608,14 +608,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits of the current credit package, hourly consumption samples, alert thresholds, and period quotas.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits across all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples for the specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information for the specified agent.
+        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
         /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass the credit package instance ID when <c>UsageType=CreditPackage</c>, or pass the AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logged-in <c>wyId</c>.</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
         /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
@@ -1279,8 +1279,8 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>A <c>SalesClientException</c> exception is thrown when the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
+        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1302,6 +1302,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["AgentType"] = request.AgentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUid))
             {
                 query["AliUid"] = request.AliUid;
@@ -1317,6 +1321,14 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByFields))
+            {
+                query["GroupByFields"] = request.GroupByFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupSeparator))
             {
@@ -1361,6 +1373,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyId))
+            {
+                query["WyId"] = request.WyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1394,8 +1410,8 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>A <c>SalesClientException</c> exception is thrown when the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
+        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1417,6 +1433,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["AgentType"] = request.AgentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliUid))
             {
                 query["AliUid"] = request.AliUid;
@@ -1432,6 +1452,14 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByFields))
+            {
+                query["GroupByFields"] = request.GroupByFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupSeparator))
             {
@@ -1477,6 +1505,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyId))
+            {
+                query["WyId"] = request.WyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1509,8 +1541,8 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>A <c>SalesClientException</c> exception is thrown when the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
+        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1540,8 +1572,8 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>A <c>SalesClientException</c> exception is thrown when the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing.</description></item>
+        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
+        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
