@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
+        /// <para>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -59,6 +61,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string PolicyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The storage-related policy.</para>
+        /// </summary>
         [NameInMap("StoragePolicy")]
         [Validation(Required=false)]
         public string StoragePolicyShrink { get; set; }

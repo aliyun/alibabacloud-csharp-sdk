@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListDesktopAgentRuntimeRequest : TeaModel {
         /// <summary>
+        /// <para>The agent IM online status filter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Online</para>
         /// </summary>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <para>The list of agent platforms. If AgentPlatform is also specified, AgentPlatform takes precedence and this list is ignored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentPlatformList { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent provider.</para>
+        /// <para>The agent provider name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenClaw</para>
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
+        /// <para>The list of agent providers. If AgentProvider is also specified, AgentProvider takes precedence and this list is ignored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OpenClaw</para>
         /// </summary>
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentProviderList { get; set; }
 
         /// <summary>
+        /// <para>The list of agent template IDs. A match occurs only when all valid templates are assigned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>at-xxxxx</para>
         /// </summary>
@@ -92,6 +100,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthUsers { get; set; }
 
         /// <summary>
+        /// <para>The business region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopStatuses { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether an authorized user exists.</para>
+        /// <para>Indicates whether an authorized user exists for authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -170,8 +180,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasAuthUser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a risk exists. This parameter filters Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</para>
-        /// <para>Set to true to return only records with risks. Set to false to return only records without risks. If not specified, no filtering is applied.</para>
+        /// <para>Specifies whether a risk exists. This parameter is used to filter Cloud Desktops with or without risks and takes effect only when IncludeRiskInfo is set to true.</para>
+        /// <para>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -191,6 +201,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeRiskInfo { get; set; }
 
         /// <summary>
+        /// <para>The management status filter, such as Hibernated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Hibernated</para>
         /// </summary>
@@ -219,6 +231,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The office network ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-xxxx</para>
         /// </summary>
@@ -227,7 +241,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number. Starts from 1. Values 0 and 1 return the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -257,7 +271,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs (underlying real resource IDs).</para>
+        /// <para>The list of resource IDs (underlying actual resource IDs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-xxxxx</para>

@@ -2221,8 +2221,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2259,6 +2259,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2285,8 +2289,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2323,6 +2327,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2349,8 +2357,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2373,8 +2381,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before invoking this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5497,7 +5505,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5560,7 +5568,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5623,7 +5631,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5646,7 +5654,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After risk information mode is enabled, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
+        /// <para>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After enabling the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7025,7 +7033,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// <para>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
         /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -7049,6 +7057,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 request.LlmTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LlmTemplateIds, "LlmTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmCode))
             {
                 query["LlmCode"] = request.LlmCode;
@@ -7072,6 +7084,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderTemplateId))
             {
                 query["ProviderTemplateId"] = request.ProviderTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartModel))
+            {
+                query["SmartModel"] = request.SmartModel;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7099,7 +7115,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// <para>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
         /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -7123,6 +7139,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 request.LlmTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LlmTemplateIds, "LlmTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmCode))
             {
                 query["LlmCode"] = request.LlmCode;
@@ -7146,6 +7166,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderTemplateId))
             {
                 query["ProviderTemplateId"] = request.ProviderTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartModel))
+            {
+                query["SmartModel"] = request.SmartModel;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7173,7 +7197,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// <para>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
         /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -7197,7 +7221,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center with paging support. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
+        /// <para>You can query the list of model templates under a model provider template in the Wuying Agent Management Center with paging. Filtering by model group ID, model provider template ID, model template ID, and model encoding is supported. When querying by model group dimension, the default model is automatically placed at the top.
         /// Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
@@ -7745,8 +7769,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7797,6 +7821,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["ModelTemplateIdList"] = request.ModelTemplateIdListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -7804,6 +7832,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7831,8 +7867,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7883,6 +7919,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["ModelTemplateIdList"] = request.ModelTemplateIdListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -7890,6 +7930,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7917,8 +7965,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7941,8 +7989,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paged query to retrieve the list of model groups created in the WUYING Agent Management Center. You can filter results by Agent provider, Agent platform, template group ID, and whether a model has been configured. Paging is supported.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the model groups created in the WUYING Agent Management Center with paging. Filtering is supported by Agent provider, Agent platform, template group ID, and whether models have been configured.
+        /// Before using this operation, make sure you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13319,6 +13367,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13378,6 +13430,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefScope))
+            {
+                query["RefScope"] = request.RefScope;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

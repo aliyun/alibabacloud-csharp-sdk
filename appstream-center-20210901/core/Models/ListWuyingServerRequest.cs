@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the creation time range, in ISO 8601 format. This time point is exclusive.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-08-01T00:00:00Z</para>
         /// </summary>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The start time of the creation time range, in ISO 8601 format. This time point is inclusive.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-07-01T00:00:00Z</para>
         /// </summary>
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
+        /// <para>The end time of the expiration time range, in ISO 8601 format. This time point is exclusive.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-08-01T00:00:00Z</para>
         /// </summary>
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExpiredTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The start time of the expiration time range, in ISO 8601 format. This time point is inclusive.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-07-01T00:00:00Z</para>
         /// </summary>
@@ -192,7 +200,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> WuyingServerIdList { get; set; }
 
         /// <summary>
-        /// <para>The workstation name or workstation ID. Fuzzy match is supported.</para>
+        /// <para>The workstation name or workstation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>
@@ -202,6 +210,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string WuyingServerNameOrId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>

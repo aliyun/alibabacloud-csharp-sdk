@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The model group configuration JSON object. You can use this field to modify the default model. The configuration format varies depending on the agent provider (AgentProvider):</para>
         /// <list type="bullet">
         /// <item><description><para><b>OpenClaw / AgenticComputer scenarios:</b>
-        /// Set the default model by using the <c>defaults.model.primary</c> field. The format is <c>ProviderName/ModelCode</c>.</para>
+        /// Set the default model by using the <c>defaults.model.primary</c> field in the format of <c>provider name/model code</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>HermesAgent scenario:</b>
-        /// Specify the provider name by using <c>model.provider</c> and specify the model code by using <c>model.default</c>.</para>
+        /// <item><description><para><b>HermesAgent scenarios:</b>
+        /// Specify the provider name by using <c>model.provider</c> and the model code by using <c>model.default</c>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>:</para>
+        /// <para>Note:</para>
         /// <list type="bullet">
         /// <item><description>When you modify the default model, the system verifies whether the specified provider and model code already exist in the model group.</description></item>
         /// </list>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The template group description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试模型分组</para>
+        /// <para>Test model group</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -66,6 +66,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The authorization scope. This parameter is optional and can be modified only for Common model groups. Valid values: ALL_USER and USER_MIXED.</para>
+        /// </summary>
+        [NameInMap("RefScope")]
+        [Validation(Required=false)]
+        public string RefScope { get; set; }
 
     }
 

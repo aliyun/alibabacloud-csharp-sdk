@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<ListModelTemplatesResponseBodyData> Data { get; set; }
         public class ListModelTemplatesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The Agent platform (such as ENTERPRISE or ENTERPRISE_JVS).</para>
+            /// </summary>
             [NameInMap("AgentPlatform")]
             [Validation(Required=false)]
             public string AgentPlatform { get; set; }
 
             /// <summary>
-            /// <para>The name of the Agent provider.</para>
+            /// <para>The Agent provider name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenClaw</para>
@@ -50,14 +53,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The template group description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试模型分组</para>
+            /// <para>Test model group</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether a model is configured in the group.</para>
+            /// <para>Specifies whether models are configured in the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -65,6 +68,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("HasModel")]
             [Validation(Required=false)]
             public bool? HasModel { get; set; }
+
+            /// <summary>
+            /// <para>The number of models in the model group, including referenced system provider models.</para>
+            /// </summary>
+            [NameInMap("ModelCount")]
+            [Validation(Required=false)]
+            public int? ModelCount { get; set; }
 
             /// <summary>
             /// <para>The model group ID.</para>
@@ -85,6 +95,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The group authorization scope. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ALL_USER: all users.</description></item>
+            /// <item><description>USER_MIXED: user mixed (a mix of user groups and users, only for Common groups).</description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("RefScope")]
+            [Validation(Required=false)]
+            public string RefScope { get; set; }
+
+            /// <summary>
+            /// <para>The number of authorized users in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</para>
+            /// </summary>
+            [NameInMap("UserCount")]
+            [Validation(Required=false)]
+            public int? UserCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of authorized user groups in the group. Returned only when ListModelTemplates is called with refScope=USER_MIXED. Otherwise null.</para>
+            /// </summary>
+            [NameInMap("UserGroupCount")]
+            [Validation(Required=false)]
+            public int? UserGroupCount { get; set; }
 
         }
 

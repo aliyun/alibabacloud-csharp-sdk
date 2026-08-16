@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListLlmTemplatesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The model code used for filtering. Fuzzy match is supported.</para>
+        /// <para>The business type. This parameter is required when SmartModel is set to true.</para>
+        /// </summary>
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public int? BizType { get; set; }
+
+        /// <summary>
+        /// <para>The model code filter. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3.6-plus</para>
@@ -65,6 +72,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ProviderTemplateId")]
         [Validation(Required=false)]
         public string ProviderTemplateId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to query smart models. If set to true, only LLMs under system preset smart models are returned, and BizType is required. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SmartModel")]
+        [Validation(Required=false)]
+        public bool? SmartModel { get; set; }
 
     }
 

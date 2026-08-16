@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListWuyingServerResponseBodyWuyingServerList> WuyingServerList { get; set; }
         public class ListWuyingServerResponseBodyWuyingServerList : TeaModel {
             /// <summary>
-            /// <para>The status of joining the virtual node pool.</para>
+            /// <para>The status of adding to the virtual node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Added</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskNo { get; set; }
 
                 /// <summary>
-                /// <para>The data cloud disk performance level (PL).</para>
+                /// <para>The data cloud disk performance level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The FOTA version.</para>
+            /// <para>The FOTA version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
@@ -219,14 +219,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Linux 3.2104 LTS 64-bit.</para>
+            /// <para>Alibaba Cloud Linux 3.2104 LTS 64位</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The list of workstation instance information.</para>
+            /// <para>The list of workspace instance information.</para>
             /// </summary>
             [NameInMap("InstanceInfoList")]
             [Validation(Required=false)]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The network interface controller (NIC) ID.</para>
+                /// <para>The ID of the network interface controller (NIC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-uf65b****dfnt3wb</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The maximum price for the spot instance.</para>
+            /// <para>The maximum price of the spot instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -322,14 +322,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<string> PolicyGroupIdList { get; set; }
 
             /// <summary>
-            /// <para>The set of private IP addresses, including the primary and secondary IP addresses.</para>
+            /// <para>The set of private IP addresses, including the primary IP address and secondary IP addresses.</para>
             /// </summary>
             [NameInMap("PrivateIpSets")]
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> PrivateIpSets { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether this is the primary private IP address. A value of true indicates the primary private IP address. A value of false indicates a secondary private IP address.</para>
+                /// <para>Indicates whether the IP address is the primary private IP address. A value of true indicates the primary private IP address. A value of false indicates a secondary private IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<ListWuyingServerResponseBodyWuyingServerListSessions> Sessions { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListSessions : TeaModel {
                 /// <summary>
-                /// <para>The session start time.</para>
+                /// <para>The start time of the session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T08:00:00Z</para>
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk ID.</para>
+            /// <para>The ID of the system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bp1234567890abcde</para>
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskId { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk performance level (PL).</para>
+            /// <para>The system cloud disk performance level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -526,7 +526,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task group ID.</para>
+            /// <para>The ID of the timer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tg-bp1234567890abcde</para>
@@ -563,7 +563,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VirtualNodePoolId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a Virtual Kubelet upgrade is required.</para>
+            /// <para>Indicates whether the Virtual Kubelet needs to be upgraded.</para>
             /// </summary>
             [NameInMap("VkUpgradeNeeded")]
             [Validation(Required=false)]

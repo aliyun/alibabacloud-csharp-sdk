@@ -41,10 +41,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public List<GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList> LlmInfoList { get; set; }
                 public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList : TeaModel {
                     /// <summary>
+                    /// <para>The credit consumption multiplier. An empty value indicates the model does not participate in credit-based billing.</para>
+                    /// </summary>
+                    [NameInMap("CreditMultiplier")]
+                    [Validation(Required=false)]
+                    public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier CreditMultiplier { get; set; }
+                    public class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier : TeaModel {
+                        /// <summary>
+                        /// <para>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</para>
+                        /// </summary>
+                        [NameInMap("Max")]
+                        [Validation(Required=false)]
+                        public float? Max { get; set; }
+
+                        /// <summary>
+                        /// <para>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</para>
+                        /// </summary>
+                        [NameInMap("Min")]
+                        [Validation(Required=false)]
+                        public float? Min { get; set; }
+
+                    }
+
+                    /// <summary>
                     /// <para>The model description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强。</para>
+                    /// <para>Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -101,7 +124,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The published time (ISO 8601 format).</para>
+                    /// <para>The publish time (ISO 8601 format).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-04T06:25:17.000+00:00</para>
@@ -175,7 +198,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The model template association type (returned only when an association exists).</para>
+            /// <para>The model template association type (returned only when present).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runtime</para>
@@ -185,7 +208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateRefType { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID of the runtime (null if not assigned to a resource group).</para>
+            /// <para>The resource group ID to which the runtime belongs (null if not assigned to a resource group).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxx</para>
