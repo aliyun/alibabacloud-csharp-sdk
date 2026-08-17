@@ -9364,6 +9364,178 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>分页查询域名条目</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainItemsResponse
+        /// </returns>
+        public ListDomainItemsResponse ListDomainItemsWithOptions(ListDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemValue))
+            {
+                query["ItemValue"] = request.ItemValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                query["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                query["ListType"] = request.ListType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询域名条目</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainItemsResponse
+        /// </returns>
+        public async Task<ListDomainItemsResponse> ListDomainItemsWithOptionsAsync(ListDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemValue))
+            {
+                query["ItemValue"] = request.ItemValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                query["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                query["ListType"] = request.ListType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询域名条目</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainItemsResponse
+        /// </returns>
+        public ListDomainItemsResponse ListDomainItems(ListDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDomainItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询域名条目</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainItemsResponse
+        /// </returns>
+        public async Task<ListDomainItemsResponse> ListDomainItemsAsync(ListDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDomainItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of domain name lists.</para>
         /// </summary>
         /// 
