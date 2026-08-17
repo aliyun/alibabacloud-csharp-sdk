@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<ListJobsResponseBodyJobList> JobList { get; set; }
         public class ListJobsResponseBodyJobList : TeaModel {
             /// <summary>
-            /// <para>The additional information about the application.</para>
+            /// <para>Additional information about the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</para>
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string AppExtraInfo { get; set; }
 
+            /// <summary>
+            /// <para>The name of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alphafold3</para>
+            /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the job.</para>
+            /// <para>The time when the job ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-25 12:35:23</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The job name.</para>
+            /// <para>The name of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testJob</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The UID of the creator.</para>
+            /// <para>The UID of the user who created the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>129**********</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string OwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The start time of the job.</para>
+            /// <para>The time when the job started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-25 12:29:23</para>
@@ -111,18 +117,30 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The status of the job. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending</description></item>
-            /// <item><description>Initing</description></item>
-            /// <item><description>Succeed</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Exception</description></item>
-            /// <item><description>Retrying</description></item>
-            /// <item><description>Expired</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>Deleted</description></item>
+            /// <item><description><para>Pending: The job is in the queue.</para>
+            /// </description></item>
+            /// <item><description><para>Initing: The job is initializing.</para>
+            /// </description></item>
+            /// <item><description><para>Succeeded: The job was successful.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The job failed.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The job is running.</para>
+            /// </description></item>
+            /// <item><description><para>Exception: A scheduling exception occurred.</para>
+            /// </description></item>
+            /// <item><description><para>Retrying: The job is being retried.</para>
+            /// </description></item>
+            /// <item><description><para>Expired: The job timed out.</para>
+            /// </description></item>
+            /// <item><description><para>Suspended: The job is in hibernation.</para>
+            /// </description></item>
+            /// <item><description><para>Restarting: The job is restarting.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The job is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +190,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TaskCount { get; set; }
 
             /// <summary>
-            /// <para>Indicate whether the job is a long-running job.</para>
+            /// <para>Indicates whether the job is a long-running job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -194,7 +212,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -204,7 +222,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
@@ -214,7 +232,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. This parameter is optional and is not returned by default.</para>
+        /// <para>The total number of entries that meet the filter conditions.
+        /// This parameter is optional and may not be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

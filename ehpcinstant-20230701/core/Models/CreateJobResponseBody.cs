@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public List<string> ExecutorIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task0</para>

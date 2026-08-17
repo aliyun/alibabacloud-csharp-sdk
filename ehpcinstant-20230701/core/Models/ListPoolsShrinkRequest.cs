@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListPoolsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Queries the filter conditions of a resource pool.</para>
+        /// <para>The filter conditions for querying resource pools.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page. Maximum value: 50. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetActionPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the execution plan.</para>
+        /// <para>ID of the execution plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-hz036ubmx2qmw93k****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanId { get; set; }
 
         /// <summary>
-        /// <para>The name of the execution plan.</para>
+        /// <para>Name of the execution plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestActionPlan</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>Resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AllocationSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ci-vm-rYfypJKwlN9Y</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The time when the execution plan was created.</para>
+        /// <para>Time when the execution plan was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-10 18:28:05</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</para>
+        /// <para>Target resource size for the execution plan. If ResourceType is VCpuCapacity, this value represents the target vCPU count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? IntervalMinutes { get; set; }
 
         /// <summary>
-        /// <para>The computing power level.</para>
+        /// <para>Computing power level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>General</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The pre-processing script. Base64 encoding is required.</para>
+        /// <para>Prologue script. Must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</para>
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string PrologScript { get; set; }
 
         /// <summary>
-        /// <para>The list of resource configurations in the region where the execution plan runs.</para>
+        /// <para>List of region-specific resource configurations for the execution plan\&quot;s runtime environment.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<GetActionPlanResponseBodyRegions> Regions { get; set; }
         public class GetActionPlanResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of security groups available for the execution plan in the region.</para>
+            /// <para>List of security groups available to the execution plan in this region.</para>
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The list of VSwitches available for the execution plan in the region.</para>
+            /// <para>List of vSwitches available to the execution plan in this region.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
@@ -141,10 +141,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</para>
+        /// <para>Type of target resource for the execution plan. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description>VCpuCapacity</description></item>
-        /// <item><description>ExecutorCapacity</description></item>
+        /// <item><description><para>VCpuCapacity: vCPU capacity</para>
+        /// </description></item>
+        /// <item><description><para>ExecutorCapacity: number of executor nodes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,14 +157,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of resource configurations of the execution plan runtime environment.</para>
+        /// <para>List of resource configurations for the execution plan\&quot;s runtime environment.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<GetActionPlanResponseBodyResources> Resources { get; set; }
         public class GetActionPlanResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The number of CPUs in the running environment.</para>
+            /// <para>Number of CPUs in the runtime environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -172,7 +174,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public float? Cores { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the running environment. Unit: GiB.</para>
+            /// <para>Memory size in the runtime environment, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -184,11 +186,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The status of the execution plan. The possible values are as follows:</para>
+        /// <para>Status of the execution plan. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description>Active Instant tasks are dynamically managed only when the execution plan is in the Active state.</description></item>
-        /// <item><description>Inactive Instant tasks are no longer managed by execution plans in the Inactive state.</description></item>
-        /// <item><description>Deleting You cannot modify the parameters of an execution plan in this state.</description></item>
+        /// <item><description><para>Active: The execution plan is active and dynamically manages Instant jobs.</para>
+        /// </description></item>
+        /// <item><description><para>Inactive: The execution plan is inactive and no longer manages Instant jobs.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The execution plan is being deleted. You cannot modify parameters during this state.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The size of the resources currently managed by the execution plan.</para>
+        /// <para>Current resource size managed by the execution plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -209,7 +214,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public float? TotalCapacity { get; set; }
 
         /// <summary>
-        /// <para>The time when the execution plan was last modified.</para>
+        /// <para>Last time the execution plan was modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-10 18:28:05</para>

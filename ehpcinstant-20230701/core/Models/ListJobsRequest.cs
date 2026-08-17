@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListJobsRequest : TeaModel {
         /// <summary>
-        /// <para>Queries job filter conditions.</para>
+        /// <para>The filter conditions for querying jobs.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -26,8 +26,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            [NameInMap("JobIds")]
+            [Validation(Required=false)]
+            public List<string> JobIds { get; set; }
+
             /// <summary>
-            /// <para>The job name. Fuzzy search is supported.</para>
+            /// <para>The name of the job. Fuzzy search is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testJob</para>
@@ -37,19 +41,38 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The job status. Valid values:</para>
+            /// <b>Example:</b>
+            /// <para>jt-xxxx</para>
+            /// </summary>
+            [NameInMap("JobTemplateId")]
+            [Validation(Required=false)]
+            public string JobTemplateId { get; set; }
+
+            /// <summary>
+            /// <para>The status of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending</description></item>
-            /// <item><description>initing</description></item>
-            /// <item><description>Succeed</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Exception</description></item>
-            /// <item><description>Retrying</description></item>
-            /// <item><description>Expired</description></item>
-            /// <item><description>Suspended</description></item>
-            /// <item><description>Restarting</description></item>
-            /// <item><description>Deleted</description></item>
+            /// <item><description><para>Pending: The job is in the queue.</para>
+            /// </description></item>
+            /// <item><description><para>Initing: The job is initializing.</para>
+            /// </description></item>
+            /// <item><description><para>Succeeded: The job was successful.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The job failed.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The job is running.</para>
+            /// </description></item>
+            /// <item><description><para>Exception: A scheduling exception occurred.</para>
+            /// </description></item>
+            /// <item><description><para>Retrying: The job is being retried.</para>
+            /// </description></item>
+            /// <item><description><para>Expired: The job timed out.</para>
+            /// </description></item>
+            /// <item><description><para>Suspended: The job is in hibernation.</para>
+            /// </description></item>
+            /// <item><description><para>Restarting: The job is restarting.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The job is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,8 +82,30 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<ListJobsRequestFilterTag> Tag { get; set; }
+            public class ListJobsRequestFilterTag : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</para>
+            /// <para>The time after which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703819914</para>
@@ -70,7 +115,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? TimeCreatedAfter { get; set; }
 
             /// <summary>
-            /// <para>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</para>
+            /// <para>The time before which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1703820113</para>
@@ -82,9 +127,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The current page number.</para>
+        /// <para>Start value: 1</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +139,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page. Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. The default value is 50. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -111,10 +156,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public ListJobsRequestSortBy SortBy { get; set; }
         public class ListJobsRequestSortBy : TeaModel {
             /// <summary>
-            /// <para>The sorting label. Valid values:</para>
+            /// <para>The field to sort by. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>time_start</description></item>
-            /// <item><description>job_name</description></item>
+            /// <item><description><para>time_start</para>
+            /// </description></item>
+            /// <item><description><para>job_name</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,10 +172,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The sorting order. Valid values:</para>
+            /// <para>The sort order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ASC (default): ascending order</description></item>
-            /// <item><description>DESC: descending order</description></item>
+            /// <item><description><para>ASC (default): Ascending</para>
+            /// </description></item>
+            /// <item><description><para>DESC: Descending</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class CreateJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Dependency policy.</para>
+        /// <para>The dependency policy.</para>
         /// </summary>
         [NameInMap("DependencyPolicy")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string DeploymentPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the job.</para>
+        /// <para>The job description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Demo</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// <para>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, and Chinese characters. It can contain hyphens (-) and underscores (_).</para>
+        /// <para>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,20 +44,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string JobName { get; set; }
 
-        /// <summary>
-        /// <para>The type of the job scheduler.</para>
-        /// <list type="bullet">
-        /// <item><description>HPC</description></item>
-        /// <item><description>K8S</description></item>
-        /// </list>
-        /// <para>Default value: HPC</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>HPC</para>
-        /// </summary>
         [NameInMap("JobScheduler")]
         [Validation(Required=false)]
         public string JobScheduler { get; set; }
+
+        /// <summary>
+        /// <para>The job template ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jt-xxxx</para>
+        /// </summary>
+        [NameInMap("JobTemplateId")]
+        [Validation(Required=false)]
+        public string JobTemplateId { get; set; }
 
         /// <summary>
         /// <para>The security policy.</para>
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks. Only one task is supported.</para>
+        /// <para>The task list. Currently, only one task is supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]

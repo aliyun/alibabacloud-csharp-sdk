@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the job.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-xxxx</para>

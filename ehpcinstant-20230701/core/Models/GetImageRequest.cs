@@ -14,10 +14,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<string> AdditionalRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The source of the image. Valid values:</para>
+        /// <para>Image source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: public images provided by Alibaba Cloud.</description></item>
-        /// <item><description>Custom: the custom image that you added.</description></item>
+        /// <item><description><para>Public: public images provided by Alibaba Cloud.</para>
+        /// </description></item>
+        /// <item><description><para>Custom: custom images that you added.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>Image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-2ze74g5mvy4pjg*****</para>
@@ -38,10 +40,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The type of the images. Valid values:</para>
+        /// <para>Image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VM: virtual machine image.</description></item>
-        /// <item><description>Container: the container image.</description></item>
+        /// <item><description><para>VM: virtual machine image.</para>
+        /// </description></item>
+        /// <item><description><para>Container: container image.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: VM</para>
         /// 

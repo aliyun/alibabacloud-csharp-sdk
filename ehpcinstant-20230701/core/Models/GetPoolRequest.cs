@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <summary>
         /// <para>The name of the resource pool.</para>
         /// <list type="bullet">
-        /// <item><description>The value can be up to 15 characters in length.</description></item>
-        /// <item><description>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</description></item>
+        /// <item><description><para>The name can be up to 15 characters long.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain letters, digits, underscores (_), and periods (.).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListJobExecutorsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the job.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job-xxx</para>
+        /// <para>job-xxxx</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task0</para>
+        /// <para>Task0</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

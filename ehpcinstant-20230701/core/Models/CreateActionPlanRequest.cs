@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// <list type="bullet">
-        /// <item><description>Standard</description></item>
-        /// <item><description>Dedicated: You must enable a whitelist for use.</description></item>
-        /// <item><description>Economic: You must enable a whitelist for use.</description></item>
+        /// <item><description><para>Standard: Standard.</para>
+        /// </description></item>
+        /// <item><description><para>Dedicated: Dedicated. This type is available only to users in the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para>Economic: Economy. This type is available only to users in the whitelist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AllocationSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ci-vm-rYfypJKwlN9Y</para>
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</para>
+        /// <para>The desired size of the resource for the execution plan. For example, if you set ResourceType to VcpuCapacity, this parameter specifies the number of vCPUs that you want to maintain for the execution plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -63,10 +66,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? IntervalMinutes { get; set; }
 
         /// <summary>
-        /// <para>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</para>
+        /// <para>The computing power level. This parameter is valid only when you set AllocationSpec to Economic. The following types are supported:</para>
         /// <list type="bullet">
-        /// <item><description>General</description></item>
-        /// <item><description>Performance</description></item>
+        /// <item><description><para>General: General-purpose.</para>
+        /// </description></item>
+        /// <item><description><para>Performance: Compute-optimized.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: General</para>
         /// 
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The pre-processing script. Base64 encoding is required.</para>
+        /// <para>The pre-execution script. The script must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</para>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string PrologScript { get; set; }
 
         /// <summary>
-        /// <para>The list of resource configurations in the region where the execution plan runs.</para>
+        /// <para>A list of regional resource configurations for the runtime environment of the execution plan.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -105,18 +110,21 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of security groups available for the execution plan in the region. You can have 0 to 5 security groups.</para>
+            /// <para>A list of security groups that are available for the execution plan in the region. You can specify 0 to 5 security groups.</para>
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public List<string> SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// <para>A list of security group IDs. You can call the <a href="https://api.aliyun.com/document/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> operation to query information about available security groups.</para>
+            /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The list of VSwitches available for the execution plan in the region. Supports 0 to 5 VSwitches.</para>
+            /// <para>A list of vSwitches that are available for the execution plan in the region. You can specify 0 to 5 vSwitches.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -125,10 +133,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</para>
+        /// <para>The type of resource for the execution target. The value can be the vCPU capacity or the number of executor nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VCpuCapacity</description></item>
-        /// <item><description>ExecutorCapacity</description></item>
+        /// <item><description><para>VCpuCapacity: vCPU capacity</para>
+        /// </description></item>
+        /// <item><description><para>ExecutorCapacity: number of executor nodes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +149,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of resource configurations of the execution plan runtime environment. You can configure 1 to 10 resources.</para>
+        /// <para>A list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<CreateActionPlanRequestResources> Resources { get; set; }
         public class CreateActionPlanRequestResources : TeaModel {
             /// <summary>
-            /// <para>The number of CPUs in the running environment.</para>
+            /// <para>The number of vCPUs for the runtime environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -159,7 +169,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public double? Cores { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the running environment. Unit: GiB.</para>
+            /// <para>The memory size of the runtime environment. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -171,7 +181,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The running-job script. Base64 encoding is required.</para>
+        /// <para>The script to run the job. The script must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</para>

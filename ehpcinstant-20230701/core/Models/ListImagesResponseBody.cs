@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
             /// <summary>
             /// <para>The description of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>应用测试镜像。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

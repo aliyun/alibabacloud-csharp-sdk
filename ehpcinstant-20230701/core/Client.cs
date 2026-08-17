@@ -18,7 +18,25 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "ehpcinstant.cn-shenzhen.aliyuncs.com"},
+                {"cn-wulanchabu", "ehpcinstant.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "ehpcinstant.cn-beijing.aliyuncs.com"},
+                {"ap-northeast-2", "ehpcinstant.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "ehpcinstant.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "ehpcinstant.cn-chengdu.aliyuncs.com"},
+                {"cn-shanghai", "ehpcinstant.cn-shanghai.aliyuncs.com"},
+                {"cn-guangzhou", "ehpcinstant.cn-guangzhou.aliyuncs.com"},
+                {"cn-hongkong", "ehpcinstant.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "ehpcinstant.cn-heyuan.aliyuncs.com"},
+                {"ap-southeast-1", "ehpcinstant.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "ehpcinstant.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "ehpcinstant.ap-southeast-5.aliyuncs.com"},
+                {"cn-hangzhou", "ehpcinstant.cn-hangzhou.aliyuncs.com"},
+                {"eu-central-1", "ehpcinstant.eu-central-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ehpcinstant", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -219,12 +237,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC execution plan.</para>
+        /// <para>Creates an E-HPC execution plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</para>
+        /// <para><em>Before you call this operation, ensure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO"><b>pricing</b></a></b>&#x20;of E-HPC Instant.*</em></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -316,12 +334,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC execution plan.</para>
+        /// <para>Creates an E-HPC execution plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</para>
+        /// <para><em>Before you call this operation, ensure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO"><b>pricing</b></a></b>&#x20;of E-HPC Instant.*</em></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -413,12 +431,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC execution plan.</para>
+        /// <para>Creates an E-HPC execution plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</para>
+        /// <para><em>Before you call this operation, ensure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO"><b>pricing</b></a></b>&#x20;of E-HPC Instant.*</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -436,12 +454,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC execution plan.</para>
+        /// <para>Creates an E-HPC execution plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</para>
+        /// <para><em>Before you call this operation, ensure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO"><b>pricing</b></a></b>&#x20;of E-HPC Instant.*</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -459,7 +477,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC Instant job.</para>
+        /// <para>Creates an E-HPC Instant job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -514,6 +532,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["JobScheduler"] = request.JobScheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobTemplateId))
+            {
+                query["JobTemplateId"] = request.JobTemplateId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyShrink))
             {
                 query["SecurityPolicy"] = request.SecurityPolicyShrink;
@@ -543,7 +565,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC Instant job.</para>
+        /// <para>Creates an E-HPC Instant job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -598,6 +620,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["JobScheduler"] = request.JobScheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobTemplateId))
+            {
+                query["JobTemplateId"] = request.JobTemplateId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityPolicyShrink))
             {
                 query["SecurityPolicy"] = request.SecurityPolicyShrink;
@@ -627,7 +653,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC Instant job.</para>
+        /// <para>Creates an E-HPC Instant job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -645,7 +671,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a E-HPC Instant job.</para>
+        /// <para>Creates an E-HPC Instant job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1675,7 +1701,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query job logs</para>
+        /// <para>Retrieves the logs for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1737,7 +1763,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query job logs</para>
+        /// <para>Retrieves the logs for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1825,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query job logs</para>
+        /// <para>Retrieves the logs for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1817,7 +1843,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query job logs</para>
+        /// <para>Retrieves the logs for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1835,7 +1861,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Execution Plan Details</para>
+        /// <para>Queries the details of an execution plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1877,7 +1903,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Execution Plan Details</para>
+        /// <para>Queries the details of an execution plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1919,7 +1945,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Execution Plan Details</para>
+        /// <para>Queries the details of an execution plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1937,7 +1963,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Execution Plan Details</para>
+        /// <para>Queries the details of an execution plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2133,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about an image.</para>
+        /// <para>Get image details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2167,7 +2193,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about an image.</para>
+        /// <para>Get image details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2227,7 +2253,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about an image.</para>
+        /// <para>Get image details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2245,7 +2271,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about an image.</para>
+        /// <para>Get image details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2263,7 +2289,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an execution job.</para>
+        /// <para>Retrieves the details of an execution job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2305,7 +2331,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an execution job.</para>
+        /// <para>Retrieves the details of an execution job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2347,7 +2373,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an execution job.</para>
+        /// <para>Retrieves the details of an execution job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2391,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an execution job.</para>
+        /// <para>Retrieves the details of an execution job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2383,7 +2409,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业保留时长</para>
+        /// <para>Retrieves the job record retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2417,7 +2443,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业保留时长</para>
+        /// <para>Retrieves the job record retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2477,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业保留时长</para>
+        /// <para>Retrieves the job record retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2469,7 +2495,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业保留时长</para>
+        /// <para>Retrieves the job record retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2513,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a resource pool.</para>
+        /// <para>Retrieves the details of a specified resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2529,7 +2555,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a resource pool.</para>
+        /// <para>Retrieves the details of a specified resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2597,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a resource pool.</para>
+        /// <para>Retrieves the details of a specified resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2615,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a resource pool.</para>
+        /// <para>Retrieves the details of a specified resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3059,7 +3085,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Global Executor Information</para>
+        /// <para>Queries information about global executors.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3115,7 +3141,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Global Executor Information</para>
+        /// <para>Queries information about global executors.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3171,7 +3197,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Global Executor Information</para>
+        /// <para>Queries information about global executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3189,7 +3215,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying Global Executor Information</para>
+        /// <para>Queries information about global executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3395,12 +3421,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3454,12 +3480,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3513,12 +3539,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3536,12 +3562,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries job executor information.</para>
+        /// <para>Retrieves information about job executors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3559,7 +3585,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Returns a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3623,7 +3649,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Returns a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3687,7 +3713,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Returns a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3705,7 +3731,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs in a cluster.</para>
+        /// <para>Returns a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3723,7 +3749,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource pool list.</para>
+        /// <para>Lists resource pools.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3779,7 +3805,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource pool list.</para>
+        /// <para>Lists resource pools.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3835,7 +3861,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource pool list.</para>
+        /// <para>Lists resource pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3853,7 +3879,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource pool list.</para>
+        /// <para>Lists resource pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4715,7 +4741,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新作业保留时长</para>
+        /// <para>Updates the job record duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4757,7 +4783,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新作业保留时长</para>
+        /// <para>Updates the job record duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4799,7 +4825,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新作业保留时长</para>
+        /// <para>Updates the job record duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4817,7 +4843,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新作业保留时长</para>
+        /// <para>Updates the job record duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4835,7 +4861,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the resource pool configuration.</para>
+        /// <para>Updates the configuration of a resource pool.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4895,7 +4921,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the resource pool configuration.</para>
+        /// <para>Updates the configuration of a resource pool.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4955,7 +4981,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the resource pool configuration.</para>
+        /// <para>Updates the configuration of a resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4973,7 +4999,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the resource pool configuration.</para>
+        /// <para>Updates the configuration of a resource pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
