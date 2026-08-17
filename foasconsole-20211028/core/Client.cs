@@ -61,6 +61,126 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Disables the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseFlinkAiServiceResponse
+        /// </returns>
+        public CloseFlinkAiServiceResponse CloseFlinkAiServiceWithOptions(CloseFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseFlinkAiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseFlinkAiServiceResponse
+        /// </returns>
+        public async Task<CloseFlinkAiServiceResponse> CloseFlinkAiServiceWithOptionsAsync(CloseFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloseFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloseFlinkAiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseFlinkAiServiceResponse
+        /// </returns>
+        public CloseFlinkAiServiceResponse CloseFlinkAiService(CloseFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloseFlinkAiServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseFlinkAiServiceResponse
+        /// </returns>
+        public async Task<CloseFlinkAiServiceResponse> CloseFlinkAiServiceAsync(CloseFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloseFlinkAiServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Converts a subscription instance to a hybrid billing instance.</para>
         /// </summary>
         /// 
@@ -1825,6 +1945,246 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceResponse
+        /// </returns>
+        public GetFlinkAiServiceResponse GetFlinkAiServiceWithOptions(GetFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlinkAiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceResponse
+        /// </returns>
+        public async Task<GetFlinkAiServiceResponse> GetFlinkAiServiceWithOptionsAsync(GetFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlinkAiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceResponse
+        /// </returns>
+        public GetFlinkAiServiceResponse GetFlinkAiService(GetFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFlinkAiServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceResponse
+        /// </returns>
+        public async Task<GetFlinkAiServiceResponse> GetFlinkAiServiceAsync(GetFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFlinkAiServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the free quota usage of Flink AI services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceFreeQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceFreeQuotaResponse
+        /// </returns>
+        public GetFlinkAiServiceFreeQuotaResponse GetFlinkAiServiceFreeQuotaWithOptions(GetFlinkAiServiceFreeQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlinkAiServiceFreeQuota",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlinkAiServiceFreeQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the free quota usage of Flink AI services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceFreeQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceFreeQuotaResponse
+        /// </returns>
+        public async Task<GetFlinkAiServiceFreeQuotaResponse> GetFlinkAiServiceFreeQuotaWithOptionsAsync(GetFlinkAiServiceFreeQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlinkAiServiceFreeQuota",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlinkAiServiceFreeQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the free quota usage of Flink AI services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceFreeQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceFreeQuotaResponse
+        /// </returns>
+        public GetFlinkAiServiceFreeQuotaResponse GetFlinkAiServiceFreeQuota(GetFlinkAiServiceFreeQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFlinkAiServiceFreeQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the free quota usage of Flink AI services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFlinkAiServiceFreeQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlinkAiServiceFreeQuotaResponse
+        /// </returns>
+        public async Task<GetFlinkAiServiceFreeQuotaResponse> GetFlinkAiServiceFreeQuotaAsync(GetFlinkAiServiceFreeQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFlinkAiServiceFreeQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
         /// </summary>
         /// 
@@ -1973,6 +2333,134 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the shutdown protection setting for a Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiServiceProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiServiceProtectionResponse
+        /// </returns>
+        public ModifyAiServiceProtectionResponse ModifyAiServiceProtectionWithOptions(ModifyAiServiceProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                body["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAiServiceProtection",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAiServiceProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the shutdown protection setting for a Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiServiceProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiServiceProtectionResponse
+        /// </returns>
+        public async Task<ModifyAiServiceProtectionResponse> ModifyAiServiceProtectionWithOptionsAsync(ModifyAiServiceProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                body["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAiServiceProtection",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAiServiceProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the shutdown protection setting for a Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiServiceProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiServiceProtectionResponse
+        /// </returns>
+        public ModifyAiServiceProtectionResponse ModifyAiServiceProtection(ModifyAiServiceProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAiServiceProtectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the shutdown protection setting for a Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAiServiceProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAiServiceProtectionResponse
+        /// </returns>
+        public async Task<ModifyAiServiceProtectionResponse> ModifyAiServiceProtectionAsync(ModifyAiServiceProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAiServiceProtectionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3197,6 +3685,126 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPrepayNamespaceSpecWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenFlinkAiServiceResponse
+        /// </returns>
+        public OpenFlinkAiServiceResponse OpenFlinkAiServiceWithOptions(OpenFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenFlinkAiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenFlinkAiServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenFlinkAiServiceResponse
+        /// </returns>
+        public async Task<OpenFlinkAiServiceResponse> OpenFlinkAiServiceWithOptionsAsync(OpenFlinkAiServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenFlinkAiService",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenFlinkAiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenFlinkAiServiceResponse
+        /// </returns>
+        public OpenFlinkAiServiceResponse OpenFlinkAiService(OpenFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenFlinkAiServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the Flink AI service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenFlinkAiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenFlinkAiServiceResponse
+        /// </returns>
+        public async Task<OpenFlinkAiServiceResponse> OpenFlinkAiServiceAsync(OpenFlinkAiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenFlinkAiServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
