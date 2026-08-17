@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                 }
 
+                [NameInMap("CurrentInstanceExpiredTime")]
+                [Validation(Required=false)]
+                public string CurrentInstanceExpiredTime { get; set; }
+
                 /// <summary>
                 /// <para>The instance ID of the current active credit package.</para>
                 /// 
