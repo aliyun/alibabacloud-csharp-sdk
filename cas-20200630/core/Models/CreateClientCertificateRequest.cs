@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateClientCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration time of the client certificate in UNIX timestamp format. The unit is seconds.</para>
+        /// <para>The expiration time of the client certificate in UNIX timestamp format. Unit: seconds.</para>
         /// <remarks>
-        /// <para><b>BeforeTime</b> and <b>AfterTime</b> must be specified together or left empty together.</para>
+        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,26 +23,19 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public long? AfterTime { get; set; }
 
         /// <summary>
-        /// <para>The key algorithm for the client certificate. The format is <c>&lt;encryption algorithm&gt;_&lt;key length&gt;</c>. Valid values:</para>
+        /// <para>The key algorithm of the client certificate. The key algorithm is in the format of <c>&lt;encryption algorithm&gt;_&lt;key length&gt;</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RSA_1024</b>: The signature algorithm is Sha256WithRSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>RSA_2048</b>: The signature algorithm is Sha256WithRSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>RSA_4096</b>: The signature algorithm is Sha256WithRSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECC_256</b>: The signature algorithm is Sha256WithECDSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECC_384</b>: The signature algorithm is Sha256WithECDSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECC_512</b>: The signature algorithm is Sha256WithECDSA.</para>
-        /// </description></item>
-        /// <item><description><para><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</para>
-        /// </description></item>
+        /// <item><description><b>RSA_1024</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>RSA_2048</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>RSA_4096</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>ECC_256</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>ECC_384</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>ECC_512</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
         /// </list>
-        /// <para>The encryption algorithm of the client certificate must be the same as the subordinate CA certificate. The key length can be different. For example, if the subordinate CA certificate uses the RSA_2048 key algorithm, the client certificate must use RSA_1024, RSA_2048, or RSA_4096.</para>
+        /// <para>The encryption algorithm of the client certificate must be the same as that of the subordinate CA certificate, but the key length can be different. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm of the client certificate must be RSA_1024, RSA_2048, or RSA_4096.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to find the key algorithm of the subordinate CA certificate.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the key algorithm of the subordinate CA certificate.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +46,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>Set the name of the issued certificate.</para>
+        /// <para>The name of the issued certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert-name</para>
@@ -63,9 +56,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The issuance time of the client certificate in UNIX timestamp format. The unit is seconds. The default value is the time when you call this operation.</para>
+        /// <para>The asynchronous processing flag. If the value is set to &quot;true&quot;, the backend service issues the certificate asynchronously.
+        /// After the request is submitted, you can call the ListClientCertificate operation to obtain the latest certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("AsynchronousFlag")]
+        [Validation(Required=false)]
+        public bool? AsynchronousFlag { get; set; }
+
+        /// <summary>
+        /// <para>The issuance time of the client certificate in UNIX timestamp format. Default value: the time when you call this operation. Unit: seconds.</para>
         /// <remarks>
-        /// <para><b>BeforeTime</b> and <b>AfterTime</b> must be specified together or left empty together.</para>
+        /// <para>The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public long? BeforeTime { get; set; }
 
         /// <summary>
-        /// <para>Used to ensure request idempotence. The client generates this parameter value, which must be unique across different requests. It can contain a maximum of 64 ASCII characters and must not include any non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The value is generated by the client and must be unique among different requests. The value can contain up to 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the certificate user. For a client authentication (ClientAuth) certificate, the user is typically an individual, a company, an organization, or an application. Specify the common name of the user, such as John Doe, Alibaba, Alibaba Cloud Cryptography Platform, or Tmall Genie.</para>
+        /// <para>The common name of the certificate subject. For client authentication (ClientAuth) certificates, the subject is typically a person, company, organization, or application. Specify the common name of the subject. For example, John Smith, Alibaba Group, Alibaba Cloud Crypto Platform, or Tmall Genie.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CommonName { get; set; }
 
         /// <summary>
-        /// <para>The country code. Default: CN.</para>
+        /// <para>The country. Default value: CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>A custom identifier. This is a unique key.</para>
+        /// <para>The custom identifier, which serves as a unique key.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>6bb538d538c70c01f81jh2</b></b></para>
@@ -116,20 +120,19 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CustomIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the client certificate in days. The <b>Days</b>, <b>BeforeTime</b>, or <b>AfterTime</b> parameters cannot all be empty. The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be set together or left empty. The parameters are configured as follows:</para>
+        /// <para>The validity period of the client certificate. Unit: days.
+        /// The <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters cannot all be empty. The <b>BeforeTime</b> and <b>AfterTime</b> parameters must both be empty or both be specified. The following rules apply:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the <b>Days</b> parameter, the <b>BeforeTime</b> and <b>AfterTime</b> parameters are optional.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not set the <b>Days</b> parameter, you must set both the <b>BeforeTime</b> and <b>AfterTime</b> parameters.</para>
-        /// </description></item>
+        /// <item><description>If you specify the <b>Days</b> parameter, you can optionally specify or omit both the <b>BeforeTime</b> and <b>AfterTime</b> parameters.</description></item>
+        /// <item><description>If you do not specify the <b>Days</b> parameter, you must specify both the <b>BeforeTime</b> and <b>AfterTime</b> parameters.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set the <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters, the value of the <b>Days</b> parameter takes precedence.</description></item>
+        /// <item><description>If you specify the <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters at the same time, the validity period of the client certificate is determined by the <b>Days</b> parameter.</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The validity period of the client certificate cannot exceed the validity period of the subordinate CA certificate. To view the validity period of the subordinate CA certificate, you can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a>.</description></item>
+        /// <item><description>The validity period of the client certificate cannot exceed that of the subordinate CA certificate. You can call <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> to query the validity period of the subordinate CA certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,8 +143,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? Days { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the Certificate Revocation List (CRL) address.</para>
-        /// <para>Valid values: 0 (No) and 1 (Yes).</para>
+        /// <para>Specifies whether to include the Certificate Revocation List (CRL) address. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1: yes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -151,14 +157,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public long? EnableCrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the digital certificate immediately.</para>
+        /// <para>Specifies whether to immediately return the digital certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: No. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Yes, return the certificate.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: Yes, return the certificate and its certificate chain.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: does not return the certificate. This is the default value.</description></item>
+        /// <item><description><b>1</b>: returns the certificate.</description></item>
+        /// <item><description><b>2</b>: returns the certificate and its certificate chain.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,17 +172,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? Immediately { get; set; }
 
         /// <summary>
-        /// <para>The name of the city where the organization is located. The default value is the city of the subordinate CA that issues the certificate.</para>
+        /// <para>The name of the city where the certificate organization is located. Chinese and English characters are supported.
+        /// Default value: the city of the subordinate CA certificate that issues this certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("Locality")]
         [Validation(Required=false)]
         public string Locality { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the certificate in months.</para>
+        /// <para>The validity period of the certificate. Unit: months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -189,17 +193,17 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? Months { get; set; }
 
         /// <summary>
-        /// <para>The name of the organization. Default: Alibaba Inc.</para>
+        /// <para>The organization name. Default value: Alibaba Inc.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>阿里云</para>
+        /// <para>Alibaba Cloud</para>
         /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public string Organization { get; set; }
 
         /// <summary>
-        /// <para>The name of the department. Default: Alibaba Cloud CDN.</para>
+        /// <para>The department name. Default value: Aliyun CDN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IT</para>
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The unique identifier of the subordinate CA certificate that issues this certificate.</para>
         /// <remarks>
-        /// <para>Call DescribeCACertificateList to query the unique identifier of the subordinate CA certificate.</para>
+        /// <para>You can call [DescribeCACertificateList] to query the unique identifier of the subordinate CA certificate.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,7 +226,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ParentIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek****wia</para>
@@ -232,12 +236,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of Subject Alternative Name (SAN) extension for the client certificate. Valid values:</para>
+        /// <para>The type of Subject Alternative Name (SAN) extension supported by the client certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Email</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: Uniform Resource Identifier (URI)</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: email address.</description></item>
+        /// <item><description><b>6</b>: Uniform Resource Identifier (URI).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -248,7 +250,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? SanType { get; set; }
 
         /// <summary>
-        /// <para>The extension information for the client certificate. To enter multiple extensions, separate them with commas (,).</para>
+        /// <para>The specific SAN extension information of the client certificate. You can enter multiple SAN values separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:somebody@example.com">somebody@example.com</a></para>
@@ -258,7 +260,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string SanValue { get; set; }
 
         /// <summary>
-        /// <para>Specify the province or state of the certificate organization. The value can contain letters. The default value is the province or state of the organization for the intermediate CA that issued the certificate.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the certificate organization is located. Chinese and English characters are supported. Default value: the province, municipality, or autonomous region of the subordinate CA certificate that issues this certificate.
+        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the certificate organization is located. Chinese and English characters are supported. Default value: the province or state of the subordinate CA certificate that issues this certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zhejiang</para>
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -297,7 +300,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The validity period of the certificate in years.</para>
+        /// <para>The validity period of the certificate. Unit: years.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

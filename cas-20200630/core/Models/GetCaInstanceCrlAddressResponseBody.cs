@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CaType { get; set; }
 
         /// <summary>
-        /// <para>The cron expression.</para>
+        /// <para>The CRL URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl">https://crl-cn-publish.oss-cn-hangzhou.aliyuncs.com/pca/crl/35118048/1f0be094-14bd-6caa-bd7f-db45730d510a.crl</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CrlUrl { get; set; }
 
         /// <summary>
-        /// <para>Used to identify whether there are new revoked certificates in the revocation list.</para>
+        /// <para>The hash code used to identify whether the CRL contains new revoked certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5481d1b1228fXXX40ee70dc8cd</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string HashCode { get; set; }
 
         /// <summary>
-        /// <para>The next update time of the revocation list.</para>
+        /// <para>The next update time of the CRL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1778688000000</para>

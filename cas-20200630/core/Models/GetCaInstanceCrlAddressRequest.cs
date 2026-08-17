@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class GetCaInstanceCrlAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the CA certificate.</para>
+        /// <para>The CA certificate identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1f0167b4-ee84-XXX-49bc4d39fa68</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CaIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the CAS instance resides.</para>
+        /// <para>The zone ID of the China CAS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1f047318-0815-XXX-f7ceb76b5c0a</para>

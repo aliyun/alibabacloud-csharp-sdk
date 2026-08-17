@@ -72,13 +72,13 @@ namespace AlibabaCloud.SDK.Cas20200630
                 {"rus-west-1-pop", "cas.aliyuncs.com"},
                 {"us-east-1", "cas.aliyuncs.com"},
                 {"us-west-1", "cas.aliyuncs.com"},
-                {"me-east-1", "cas.me-east-1.aliyuncs.com"},
-                {"me-central-1", "cas.me-central-1.aliyuncs.com"},
-                {"eu-central-1", "cas.eu-central-1.aliyuncs.com"},
                 {"ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "cas.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"},
+                {"eu-central-1", "cas.eu-central-1.aliyuncs.com"},
+                {"me-central-1", "cas.me-central-1.aliyuncs.com"},
+                {"ap-south-1", "cas.ap-south-1.aliyuncs.com"},
+                {"me-east-1", "cas.me-east-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -252,14 +252,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a system-generated certificate signing request (CSR). You must create a root CA certificate and a subordinate CA certificate before calling this operation.</para>
+        /// <para>Issues a single client certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. Calls that exceed this limit are throttled, which can impact your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -287,6 +287,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
             {
                 query["AliasName"] = request.AliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -387,14 +391,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a system-generated certificate signing request (CSR). You must create a root CA certificate and a subordinate CA certificate before calling this operation.</para>
+        /// <para>Issues a single client certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. Calls that exceed this limit are throttled, which can impact your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -422,6 +426,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
             {
                 query["AliasName"] = request.AliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -522,14 +530,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a system-generated certificate signing request (CSR). You must create a root CA certificate and a subordinate CA certificate before calling this operation.</para>
+        /// <para>Issues a single client certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. Calls that exceed this limit are throttled, which can impact your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -547,14 +555,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a system-generated certificate signing request (CSR). You must create a root CA certificate and a subordinate CA certificate before calling this operation.</para>
+        /// <para>Issues a single client certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. Calls that exceed this limit are throttled, which can impact your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -572,14 +580,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single client certificate based on a custom certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate. Only sub-CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you plan your calls to avoid being throttled.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -603,6 +611,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -701,14 +713,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single client certificate based on a custom certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate. Only sub-CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you plan your calls to avoid being throttled.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -732,6 +744,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -830,14 +846,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single client certificate based on a custom certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate. Only sub-CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you plan your calls to avoid being throttled.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -855,14 +871,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a client certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single client certificate based on a custom certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>. Only subordinate CA certificates can issue client certificates.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate. Only sub-CA certificates can issue client certificates.</para>
         /// <h2>QPS limit</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you plan your calls to avoid being throttled.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1764,14 +1780,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a system-generated certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root certificate authority (CA) certificate and <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only a subordinate CA certificate can issue a server certificate.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, the system throttles your API calls, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1795,6 +1811,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -1885,14 +1905,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a system-generated certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root certificate authority (CA) certificate and <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only a subordinate CA certificate can issue a server certificate.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, the system throttles your API calls, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1916,6 +1936,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -2006,14 +2030,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a system-generated certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root certificate authority (CA) certificate and <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only a subordinate CA certificate can issue a server certificate.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, the system throttles your API calls, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2031,14 +2055,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a system-generated certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a system-generated certificate signing request (CSR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root certificate authority (CA) certificate and <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only a subordinate CA certificate can issue a server certificate.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, the system throttles your API calls, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465975.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2056,14 +2080,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a custom CSR.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Server-side certificates can be issued only by subordinate CA certificates.</para>
-        /// <h2>Limits</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 requests per user. If you exceed this limit, rate limiting is triggered, which may affect your business. Call this operation only as needed.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2087,6 +2111,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -2181,14 +2209,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a custom CSR.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Server-side certificates can be issued only by subordinate CA certificates.</para>
-        /// <h2>Limits</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 requests per user. If you exceed this limit, rate limiting is triggered, which may affect your business. Call this operation only as needed.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2212,6 +2240,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsynchronousFlag))
+            {
+                query["AsynchronousFlag"] = request.AsynchronousFlag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
@@ -2306,14 +2338,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a custom CSR.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Server-side certificates can be issued only by subordinate CA certificates.</para>
-        /// <h2>Limits</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 requests per user. If you exceed this limit, rate limiting is triggered, which may affect your business. Call this operation only as needed.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2331,14 +2363,14 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a server certificate by using a custom certificate signing request (CSR).</para>
+        /// <para>Issues a single server certificate based on a custom CSR.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Server-side certificates can be issued only by subordinate CA certificates.</para>
-        /// <h2>Limits</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 requests per user. If you exceed this limit, rate limiting is triggered, which may affect your business. Call this operation only as needed.</para>
+        /// <para>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate. Only subordinate CA certificates can issue server certificates.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4492,15 +4524,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the CRL URL of a CA</para>
+        /// <para>Retrieves the certificate revocation list (CRL) URL of a certificate authority (CA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query the status information of a private CA instance that you purchased through the SSL Certificates Service console by using the ID of the private CA instance. For example, the status of the CA instance, the number of certificates contained, the number of issued certificates, and so on.
-        /// Before calling this API, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API appropriately.</para>
+        /// <para>Queries the status information of a private CA instance that you purchased in the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4546,15 +4578,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the CRL URL of a CA</para>
+        /// <para>Retrieves the certificate revocation list (CRL) URL of a certificate authority (CA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query the status information of a private CA instance that you purchased through the SSL Certificates Service console by using the ID of the private CA instance. For example, the status of the CA instance, the number of certificates contained, the number of issued certificates, and so on.
-        /// Before calling this API, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API appropriately.</para>
+        /// <para>Queries the status information of a private CA instance that you purchased in the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4600,15 +4632,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the CRL URL of a CA</para>
+        /// <para>Retrieves the certificate revocation list (CRL) URL of a certificate authority (CA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query the status information of a private CA instance that you purchased through the SSL Certificates Service console by using the ID of the private CA instance. For example, the status of the CA instance, the number of certificates contained, the number of issued certificates, and so on.
-        /// Before calling this API, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API appropriately.</para>
+        /// <para>Queries the status information of a private CA instance that you purchased in the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4626,15 +4658,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the CRL URL of a CA</para>
+        /// <para>Retrieves the certificate revocation list (CRL) URL of a certificate authority (CA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query the status information of a private CA instance that you purchased through the SSL Certificates Service console by using the ID of the private CA instance. For example, the status of the CA instance, the number of certificates contained, the number of issued certificates, and so on.
-        /// Before calling this API, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>The per-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API appropriately.</para>
+        /// <para>Queries the status information of a private CA instance that you purchased in the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
+        /// Before you invoke this operation, you must have purchased a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
