@@ -5435,7 +5435,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复外呼活动</para>
+        /// <para>Resumes an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5486,7 +5486,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复外呼活动</para>
+        /// <para>Resumes an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5537,7 +5537,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复外呼活动</para>
+        /// <para>Resumes an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5560,7 +5560,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复外呼活动</para>
+        /// <para>Resumes an outbound campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5583,7 +5583,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交外呼活动</para>
+        /// <para>Submits an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5634,7 +5634,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交外呼活动</para>
+        /// <para>Submits an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5685,7 +5685,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交外呼活动</para>
+        /// <para>Submits an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5708,7 +5708,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交外呼活动</para>
+        /// <para>Submits an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

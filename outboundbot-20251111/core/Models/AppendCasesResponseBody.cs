@@ -19,6 +19,28 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<AppendCasesResponseBodyData> Data { get; set; }
+        public class AppendCasesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>133xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("PhoneNumber")]
+            [Validation(Required=false)]
+            public string PhoneNumber { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bizId-xxxxxx</para>
+            /// </summary>
+            [NameInMap("ReferenceId")]
+            [Validation(Required=false)]
+            public string ReferenceId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// 
