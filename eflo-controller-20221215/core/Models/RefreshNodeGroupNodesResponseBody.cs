@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class RefreshNodeGroupNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID. Query the task progress through DescribeNodeGroupRefreshTask. If no nodes have configuration drift, no task is created and this field returns an empty string.</para>
+        /// <para>The task ID. Query the task progress by calling DescribeNodeGroupRefreshTask. If no nodes have configuration drift, no task is created and this field returns an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-159136551662516768776</para>

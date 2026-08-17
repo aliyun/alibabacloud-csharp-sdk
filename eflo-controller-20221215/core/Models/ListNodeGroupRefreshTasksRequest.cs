@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. Valid values: 1 to 500. Default value: 100.</para>
+        /// <para>The maximum number of entries per page for paging. Valid values: 1 to 500. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

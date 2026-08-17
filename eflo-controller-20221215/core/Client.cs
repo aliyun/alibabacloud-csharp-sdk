@@ -3513,7 +3513,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results include the following:</para>
+        /// <para>The returned results contain the following information:</para>
         /// <list type="bullet">
         /// <item><description>The processing status of each node with configuration drift</description></item>
         /// <item><description>The processing result, status, and reason for each node</description></item>
@@ -3583,7 +3583,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results include the following:</para>
+        /// <para>The returned results contain the following information:</para>
         /// <list type="bullet">
         /// <item><description>The processing status of each node with configuration drift</description></item>
         /// <item><description>The processing result, status, and reason for each node</description></item>
@@ -3653,7 +3653,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results include the following:</para>
+        /// <para>The returned results contain the following information:</para>
         /// <list type="bullet">
         /// <item><description>The processing status of each node with configuration drift</description></item>
         /// <item><description>The processing result, status, and reason for each node</description></item>
@@ -3681,7 +3681,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The returned results include the following:</para>
+        /// <para>The returned results contain the following information:</para>
         /// <list type="bullet">
         /// <item><description>The processing status of each node with configuration drift</description></item>
         /// <item><description>The processing result, status, and reason for each node</description></item>
@@ -6596,12 +6596,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// <para>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6665,12 +6665,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// <para>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -6734,12 +6734,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// <para>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6757,12 +6757,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paging list of node group configuration refresh tasks.</para>
+        /// <para>Queries the list of node group configuration refresh tasks with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not know which node group has refresh tasks, you can perform a conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
+        /// <para>If you do not know which node group has refresh tasks, you can use conditional query. The task list contains only summary information. To query task details, use the DescribeNodeGroupRefreshTask operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7668,15 +7668,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7735,15 +7735,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7802,15 +7802,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>
@@ -7831,15 +7831,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.</para>
+        /// <para>Refreshes node group configurations to existing nodes. Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID, and the result can be queried through DescribeNodeGroupRefreshTask.
+        /// <para>Manually triggers the node group configuration to take effect on existing nodes. After node group properties are changed, existing nodes do not perform automatic synchronization by default, which causes configuration drift. You can call this operation to refresh node properties. The operation returns an asynchronous refresh task ID. Query the result by calling DescribeNodeGroupRefreshTask.
         /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>A node group can have only one running node group configuration refresh task at a time.</description></item>
+        /// <item><description>Only one node group configuration refresh task can be running at a time for a node group.</description></item>
         /// <item><description>When the asynchronous task executes the refresh, if a node is not in the &quot;In Use&quot; state, the refresh of that node is failed.
         /// <warning>Currently, only the RamRoleName property is supported for refresh.</warning></description></item>
         /// </list>

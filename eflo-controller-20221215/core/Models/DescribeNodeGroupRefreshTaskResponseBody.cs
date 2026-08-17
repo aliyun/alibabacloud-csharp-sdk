@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The property drift list for the node, including both executed and skipped properties.</para>
+            /// <para>The list of property drifts for the node, including both executed and skipped properties.</para>
             /// </summary>
             [NameInMap("PropertyDrifts")]
             [Validation(Required=false)]

@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of nodes to be refreshed by this task.</para>
+            /// <para>The total number of nodes to refresh in this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
