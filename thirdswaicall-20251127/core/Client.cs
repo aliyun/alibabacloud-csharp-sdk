@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
             {
                 body["CustomerName"] = request.CustomerName;
@@ -117,6 +125,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
             {
                 body["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
             {
@@ -212,6 +228,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["ApplicationCode"] = request.ApplicationCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -257,6 +281,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
             {
                 body["ApplicationCode"] = request.ApplicationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -362,9 +394,17 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CallStartTimeEnd"] = request.CallStartTimeEnd;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerNameOrPhone))
             {
@@ -462,9 +502,17 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CallStartTimeEnd"] = request.CallStartTimeEnd;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                body["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
+            {
+                body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerNameOrPhone))
             {

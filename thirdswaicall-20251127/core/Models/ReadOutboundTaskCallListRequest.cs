@@ -43,11 +43,27 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>abc123***</para>
+        /// </summary>
+        [NameInMap("CallerUacAccountId")]
+        [Validation(Required=false)]
+        public string CallerUacAccountId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("Current")]
         [Validation(Required=false)]
         public int? Current { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>abc123***</para>
+        /// </summary>
+        [NameInMap("CurrentWorkspaceId")]
+        [Validation(Required=false)]
+        public string CurrentWorkspaceId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
