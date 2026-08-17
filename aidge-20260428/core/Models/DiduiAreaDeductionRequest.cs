@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class DiduiAreaDeductionRequest : TeaModel {
         /// <summary>
+        /// <para>The list of products and their detection boxes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Products")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<DiduiAreaDeductionRequestProducts> Products { get; set; }
         public class DiduiAreaDeductionRequestProducts : TeaModel {
             /// <summary>
+            /// <para>The detection boxes for the current SKU. Coordinate values range from 0 to 1000.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Boxes")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<DiduiAreaDeductionRequestProductsBoxes> Boxes { get; set; }
             public class DiduiAreaDeductionRequestProductsBoxes : TeaModel {
                 /// <summary>
+                /// <para>The bottom boundary of the detection box.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public double? Bottom { get; set; }
 
                 /// <summary>
+                /// <para>The left boundary of the detection box.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -44,6 +48,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public double? Left { get; set; }
 
                 /// <summary>
+                /// <para>The right boundary of the detection box.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -54,6 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public double? Right { get; set; }
 
                 /// <summary>
+                /// <para>The top boundary of the detection box.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -66,6 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
+            /// <para>The unique ID of the SKU.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -78,6 +85,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
+        /// <para>The ID of the customer-specific SKU vector database that determines which database is used for retrieval. The database must be created in advance through the database creation process.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rag_xxx</para>
         /// </summary>
@@ -86,6 +95,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
+        /// <para>The optional business request ID used for Tracing Analysis.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>didui-request-001</para>
         /// </summary>
@@ -94,6 +105,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ReqId { get; set; }
 
         /// <summary>
+        /// <para>The HTTPS URL of the overall floor display image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -64,6 +64,30 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [Validation(Required=false)]
         public List<int?> ObjectRemoveElements { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[10,10,100,100]</para>
+        /// </summary>
+        [NameInMap("Position")]
+        [Validation(Required=false)]
+        public string Position { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;<a href="https://img.alicdn.com/bao/uploaded/i2/xxx.jpg%22%5D">https://img.alicdn.com/bao/uploaded/i2/xxx.jpg&quot;]</a></para>
+        /// </summary>
+        [NameInMap("UserImage")]
+        [Validation(Required=false)]
+        public List<string> UserImage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;xx&quot;,&quot;yy&quot;]</para>
+        /// </summary>
+        [NameInMap("UserText")]
+        [Validation(Required=false)]
+        public List<string> UserText { get; set; }
+
     }
 
 }

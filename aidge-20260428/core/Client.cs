@@ -2183,20 +2183,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地堆面积推理</para>
+        /// <para>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para><b>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</b></para>
+        /// <h2>Description</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
         /// <list type="bullet">
-        /// <item><description>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</description></item>
-        /// <item><description>确保提供的<c>RagId</c>对应的知识库属于调用者且状态为可用(<c>AVAILABLE</c>)。</description></item>
-        /// <item><description><c>Products</c>数组中至少包含一个商品项，并且每个商品项下的<c>Boxes</c>也至少需要定义一个边界框。</description></item>
-        /// <item><description>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<c>Left &lt; Right</c>与<c>Top &lt; Bottom</c>的关系。</description></item>
-        /// <item><description>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</description></item>
-        /// <item><description>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</description></item>
+        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</description></item>
+        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the available (<c>AVAILABLE</c>) state.</description></item>
+        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
+        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
+        /// <item><description>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</description></item>
+        /// <item><description>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2257,20 +2257,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地堆面积推理</para>
+        /// <para>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para><b>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</b></para>
+        /// <h2>Description</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
         /// <list type="bullet">
-        /// <item><description>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</description></item>
-        /// <item><description>确保提供的<c>RagId</c>对应的知识库属于调用者且状态为可用(<c>AVAILABLE</c>)。</description></item>
-        /// <item><description><c>Products</c>数组中至少包含一个商品项，并且每个商品项下的<c>Boxes</c>也至少需要定义一个边界框。</description></item>
-        /// <item><description>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<c>Left &lt; Right</c>与<c>Top &lt; Bottom</c>的关系。</description></item>
-        /// <item><description>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</description></item>
-        /// <item><description>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</description></item>
+        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</description></item>
+        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the available (<c>AVAILABLE</c>) state.</description></item>
+        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
+        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
+        /// <item><description>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</description></item>
+        /// <item><description>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2331,20 +2331,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地堆面积推理</para>
+        /// <para>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para><b>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</b></para>
+        /// <h2>Description</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
         /// <list type="bullet">
-        /// <item><description>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</description></item>
-        /// <item><description>确保提供的<c>RagId</c>对应的知识库属于调用者且状态为可用(<c>AVAILABLE</c>)。</description></item>
-        /// <item><description><c>Products</c>数组中至少包含一个商品项，并且每个商品项下的<c>Boxes</c>也至少需要定义一个边界框。</description></item>
-        /// <item><description>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<c>Left &lt; Right</c>与<c>Top &lt; Bottom</c>的关系。</description></item>
-        /// <item><description>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</description></item>
-        /// <item><description>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</description></item>
+        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</description></item>
+        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the available (<c>AVAILABLE</c>) state.</description></item>
+        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
+        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
+        /// <item><description>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</description></item>
+        /// <item><description>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2363,20 +2363,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地堆面积推理</para>
+        /// <para>Calculates the edge lengths and floor area of a floor display based on the display image and product detection boxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para><b>请确保在使用该接口前，已充分了解地堆面积推理产品的收费方式和<a href="https://www.aliyun.com/price/product#/ecs/detail">价格</a>。</b></para>
+        /// <h2>Description</h2>
+        /// <para><b>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
         /// <list type="bullet">
-        /// <item><description>本接口用于通过提供的地堆整体图、SKU知识库以及商品在图片中的位置信息来推断地堆的实际尺寸（两条边的长度）及其占地面积。</description></item>
-        /// <item><description>确保提供的<c>RagId</c>对应的知识库属于调用者且状态为可用(<c>AVAILABLE</c>)。</description></item>
-        /// <item><description><c>Products</c>数组中至少包含一个商品项，并且每个商品项下的<c>Boxes</c>也至少需要定义一个边界框。</description></item>
-        /// <item><description>所有坐标值均采用0到1000之间的归一化坐标系表示，请确保输入时满足<c>Left &lt; Right</c>与<c>Top &lt; Bottom</c>的关系。</description></item>
-        /// <item><description>调用此API时请设置合理的超时时间（建议不超过300秒），以避免因网络延迟或处理复杂度高导致的操作失败。</description></item>
-        /// <item><description>对于正式环境下的调用，请使用POP Action方式接入；内部REST地址主要用于开发测试阶段的联调工作。</description></item>
+        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall display image, SKU knowledge base, and product location information in the image.</description></item>
+        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the available (<c>AVAILABLE</c>) state.</description></item>
+        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
+        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
+        /// <item><description>Set a reasonable timeout period when calling this operation (recommended not to exceed 300 seconds) to avoid failures caused by network latency or high processing complexity.</description></item>
+        /// <item><description>For calls in production environments, use the POP Action method. The internal REST address is primarily used for joint debugging during the development and testing phase.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4310,6 +4310,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
             {
                 request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            {
+                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            {
+                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
@@ -4326,6 +4334,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                query["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            {
+                query["UserImage"] = request.UserImageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            {
+                query["UserText"] = request.UserTextShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4471,6 +4491,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
             {
                 request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            {
+                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            {
+                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
@@ -4487,6 +4515,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                query["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            {
+                query["UserImage"] = request.UserImageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            {
+                query["UserText"] = request.UserTextShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
