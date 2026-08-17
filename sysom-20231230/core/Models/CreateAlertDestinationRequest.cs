@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAlertDestinationRequest : TeaModel {
+        [NameInMap("app_id")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        [NameInMap("app_secret")]
+        [Validation(Required=false)]
+        public string AppSecret { get; set; }
+
+        [NameInMap("group_id")]
+        [Validation(Required=false)]
+        public List<string> GroupId { get; set; }
+
+        [NameInMap("imbot")]
+        [Validation(Required=false)]
+        public bool? Imbot { get; set; }
+
         /// <summary>
         /// <para>The name of the alert contact.</para>
         /// 
