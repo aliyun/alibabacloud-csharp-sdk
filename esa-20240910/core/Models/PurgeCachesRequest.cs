@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public PurgeCachesRequestContent Content { get; set; }
         public class PurgeCachesRequestContent : TeaModel {
             /// <summary>
-            /// <para>The list of cache keys to refresh. This parameter is required when Type is set to cachekey.</para>
+            /// <para>The list of cache keys to refresh. This parameter is required when the type is set to cachekey.</para>
             /// </summary>
             [NameInMap("CacheKeys")]
             [Validation(Required=false)]
             public List<PurgeCachesRequestContentCacheKeys> CacheKeys { get; set; }
             public class PurgeCachesRequestContentCacheKeys : TeaModel {
                 /// <summary>
-                /// <para>The header information corresponding to the cache key for the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</para>
+                /// <para>The header information corresponding to the cache key specified during the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</para>
                 /// <para><b>UserGeo: country/region</b></para>
                 /// <list type="bullet">
                 /// <item><description>Country/region codes follow the ISO 3166-2 standard.</description></item>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// </list>
                 /// <para><b>UserLanguage: language</b></para>
                 /// <list type="bullet">
-                /// <item><description>Language codes follow the ISO 639-1 or BCP 47 standard. For example, set this to zh to refresh content in Chinese.</description></item>
+                /// <item><description>Language codes follow the ISO 639-1 standard or the BCP47 standard. For example, entering zh indicates refreshing content in Chinese.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Headers")]
@@ -60,42 +60,42 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The list of cache tags to refresh. This parameter is required when Type is set to cachetag.</para>
+            /// <para>The list of cache tags to refresh. This parameter is required when the type is set to cachetag.</para>
             /// </summary>
             [NameInMap("CacheTags")]
             [Validation(Required=false)]
             public List<string> CacheTags { get; set; }
 
             /// <summary>
-            /// <para>The list of directories to refresh. This parameter is required when Type is set to directory.</para>
+            /// <para>The list of directories to refresh. This parameter is required when the type is set to directory.</para>
             /// </summary>
             [NameInMap("Directories")]
             [Validation(Required=false)]
             public List<string> Directories { get; set; }
 
             /// <summary>
-            /// <para>The list of files to refresh. This parameter is required when Type is set to file.</para>
+            /// <para>The list of files to refresh. This parameter is required when the type is set to file.</para>
             /// </summary>
             [NameInMap("Files")]
             [Validation(Required=false)]
             public List<object> Files { get; set; }
 
             /// <summary>
-            /// <para>The list of hostnames to refresh. This parameter is required when Type is set to hostname.</para>
+            /// <para>The list of hostnames to refresh. This parameter is required when the type is set to hostname.</para>
             /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
             /// <summary>
-            /// <para>The list of files with parameters ignored. This parameter is required when Type is set to ignoreParams.</para>
+            /// <para>The list of files with parameters ignored. This parameter is required when the type is set to ignoreParams.</para>
             /// </summary>
             [NameInMap("IgnoreParams")]
             [Validation(Required=false)]
             public List<string> IgnoreParams { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to refresh all cached content under the site. Default value: false. Set this parameter to true when Type is set to purgeall.</para>
+            /// <para>The flag for refreshing the entire site. Default value: false. Set this parameter to true when the type is set to purgeall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,13 +117,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? EdgeComputePurge { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to refresh all resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</para>
+        /// <para>Specifies whether to refresh resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Refreshes all resources under the corresponding directory.</description></item>
         /// <item><description><b>false</b>: Refreshes only the changed resources under the corresponding directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site cache refresh.</para>
+        /// <para> Effective scope: directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and refreshing all cached content under the site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>cachekey</b>: cache key refresh.</description></item>
         /// <item><description><b>cachetag</b>: cache label refresh.</description></item>
         /// <item><description><b>directory</b>: folder refresh.</description></item>
-        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the submitted URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the submitted URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this operation, the committed URL is matched against cached resource URLs after their parameters are stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
         /// <item><description><b>hostname</b>: hostname refresh.</description></item>
         /// <item><description><b>purgeall</b>: refreshes all cached content under the site.</description></item>
         /// </list>

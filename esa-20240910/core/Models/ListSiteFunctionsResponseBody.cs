@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSiteFunctionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration information.</para>
+        /// <para>The response body configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -34,11 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable cache reserve. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable cache reserve. This feature is disabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -78,11 +74,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The browser cache mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>no_cache: no caching.</description></item>
-                /// <item><description>follow_origin: follows the origin server cache policy.</description></item>
-                /// <item><description>override_origin: overrides the origin server cache policy.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>follow_origin</para>
@@ -116,11 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string BypassCache { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable cache deception armor. This feature protects against web cache deception attacks by caching only content that passes validation. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether cache deception armor is enabled. This feature protects against web cache deception attacks by caching only content that passes validation. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -130,10 +117,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CacheDeceptionArmor { get; set; }
 
                 /// <summary>
-                /// <para>The cache reserve eligibility. Controls whether requests bypass the cache reserve node during back-to-origin. Valid values:</para>
+                /// <para>The cache reserve eligibility. Controls whether user requests bypass cache reserve nodes during back-to-origin. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>bypass_cache_reserve: requests bypass cache reserve.</description></item>
-                /// <item><description>eligible_for_cache_reserve: requests are eligible for cache reserve.</description></item>
+                /// <item><description>eligible_for_cache_reserve: eligible for cache reserve.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CacheReserveEligibility { get; set; }
 
                 /// <summary>
-                /// <para>Checks whether a cookie exists when generating cache keys. If the cookie exists, the cookie name (case-insensitive) is added to the cache key. Multiple cookie names are supported and separated by spaces.</para>
+                /// <para>The cookie names to check for presence when generating cache keys. If a cookie exists, its name (case-insensitive) is added to the cache key. Multiple cookie names are separated by spaces.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cookiename</para>
@@ -154,7 +141,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string CheckPresenceCookie { get; set; }
 
                 /// <summary>
-                /// <para>Checks whether a header exists when generating cache keys. If the header exists, the header name (case-insensitive) is added to the cache key. Multiple header names are supported and separated by spaces.</para>
+                /// <para>The header names to check for presence when generating cache keys. If a header exists, its name (case-insensitive) is added to the cache key. Multiple header names are separated by spaces.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>headername</para>
@@ -176,10 +163,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The edge cache mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>follow_origin: follows the origin server cache policy (if present). Otherwise, uses the default cache policy.</description></item>
-                /// <item><description>no_cache: no caching.</description></item>
-                /// <item><description>override_origin: overrides the origin server cache policy.</description></item>
-                /// <item><description>follow_origin_bypass: follows the origin server cache policy (if present). Otherwise, does not cache.</description></item>
+                /// <item><description>follow_origin: follows the origin cache policy if one exists. Otherwise, uses the default cache policy.</description></item>
+                /// <item><description>no_cache: does not cache.</description></item>
+                /// <item><description>override_origin: overrides the origin cache policy.</description></item>
+                /// <item><description>follow_origin_bypass: follows the origin cache policy if one exists. Otherwise, does not cache.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,7 +177,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string EdgeCacheMode { get; set; }
 
                 /// <summary>
-                /// <para>The edge cache expiration time, in seconds.</para>
+                /// <para>The edge node cache expiration time, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -210,7 +197,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string EdgeStatusCodeCacheTtl { get; set; }
 
                 /// <summary>
-                /// <para>The cookie names and their values to include when generating cache keys. Multiple values are supported and separated by spaces.</para>
+                /// <para>The specified cookie names and their values to include when generating cache keys. Multiple values are separated by spaces.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cookie_exapmle</para>
@@ -220,7 +207,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string IncludeCookie { get; set; }
 
                 /// <summary>
-                /// <para>The header names and their values to include when generating cache keys. Multiple values are supported and separated by spaces.</para>
+                /// <para>The specified header names and their values to include when generating cache keys. Multiple values are separated by spaces.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -240,7 +227,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string PostBodyCacheKey { get; set; }
 
                 /// <summary>
-                /// <para>The body size limit, in KB. Supports body sizes from 1 to 8 KB. If left empty, the default value of 8 KB is used.</para>
+                /// <para>The body size limit, in KB. Supports body sizes from 1 to 8 KB. If the value is empty, the default value of 8 KB takes effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -250,7 +237,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string PostBodySizeLimit { get; set; }
 
                 /// <summary>
-                /// <para>The POST cache switch.</para>
+                /// <para>Specifies whether POST caching is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -260,7 +247,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string PostCache { get; set; }
 
                 /// <summary>
-                /// <para>The query strings to retain or remove. Multiple values are supported and separated by spaces.</para>
+                /// <para>The query strings to retain or remove. Multiple values are separated by spaces.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -270,13 +257,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string QueryString { get; set; }
 
                 /// <summary>
-                /// <para>The query string processing mode when generating cache keys. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ignore_all: ignores all query strings.</description></item>
-                /// <item><description>exclude_query_string: removes specified query strings.</description></item>
-                /// <item><description>reserve_all: retains all query strings. This is the default value.</description></item>
-                /// <item><description>include_query_string: retains specified query strings.</description></item>
-                /// </list>
+                /// <para>The processing mode for query strings when generating cache keys. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>reserve_all</para>
@@ -296,11 +277,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -320,7 +297,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -330,11 +307,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Sequence { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to serve stale cache. When enabled, the edge node can respond to user requests with cached expired content when the origin server is unavailable. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to serve stale cache. When enabled, edge nodes can respond to user requests with cached expired content when the origin server is unavailable. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -344,11 +317,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string ServeStale { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to sort query strings. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to sort query strings for caching. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -359,10 +328,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to include the type of the client when generating cache keys. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: shutdown.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -373,10 +338,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to include the client geographic location when generating cache keys. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -387,10 +348,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to include the client language type when generating cache keys. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -402,7 +359,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The cache tags. When using the purge-by-cache-tag feature, specifies the CacheTag name carried in the origin server response.</para>
+            /// <para>The cache tag configuration. When using the purge-by-cache-tag feature, specifies the CacheTag name carried in the origin server response.</para>
             /// </summary>
             [NameInMap("CacheTags")]
             [Validation(Required=false)]
@@ -410,10 +367,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class ListSiteFunctionsResponseBodyConfigsCacheTags : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to ignore case. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -433,7 +386,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -475,7 +428,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The flattening mode. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>flatten_all: flattens all records.</description></item>
-                /// <item><description>flatten_at_root: flattens only the root domain. This is the default value.</description></item>
+                /// <item><description>flatten_at_root: flattens only the root domain. The root domain is flattened by default.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -486,7 +439,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string FlattenMode { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -505,11 +458,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<ListSiteFunctionsResponseBodyConfigsCompressionRules> CompressionRules { get; set; }
             public class ListSiteFunctionsResponseBodyConfigsCompressionRules : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable Brotli compression. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>The Brotli compression setting. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -529,11 +478,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable Gzip compression. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>The Gzip compression setting. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -553,11 +498,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -577,7 +518,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -587,11 +528,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Sequence { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable Zstd compression. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>The Zstd compression setting. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -621,10 +558,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable Chinese mainland network access optimization. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -634,7 +567,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -646,7 +579,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The custom response code rules.</para>
+            /// <para>The custom response code configurations.</para>
             /// </summary>
             [NameInMap("CustomResponseCode")]
             [Validation(Required=false)]
@@ -683,10 +616,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string ReturnCode { get; set; }
 
                 /// <summary>
-                /// <para>The rule content. Uses conditional expressions to match user requests. This parameter is not required when adding a global configuration. Two scenarios are supported:</para>
+                /// <para>The rule content. A conditional expression is used to match user requests. You do not need to set this parameter when you add a global configuration. Two scenarios are supported:</para>
                 /// <list type="bullet">
-                /// <item><description>Match all incoming requests: set the value to true.</description></item>
-                /// <item><description>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
+                /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+                /// <item><description>Match specified requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -697,11 +630,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. This parameter is not required when adding a global configuration. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable the rule. You do not need to set this parameter when adding a global configuration. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -711,7 +640,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleEnable { get; set; }
 
                 /// <summary>
-                /// <para>The rule name. This parameter is not required when adding a global configuration.</para>
+                /// <para>The rule name. You do not need to set this parameter when adding a global configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rule_example</para>
@@ -721,7 +650,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
+                /// <para>The execution priority of the rule. A smaller value indicates a higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -751,10 +680,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The feature switch. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -764,7 +689,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -776,7 +701,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The error page redirect rules.</para>
+            /// <para>The error code redirect rules.</para>
             /// </summary>
             [NameInMap("ErrorPagesRedirects")]
             [Validation(Required=false)]
@@ -793,27 +718,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>The error page redirect configuration.</para>
+                /// <para>The error code redirect configuration.</para>
                 /// </summary>
                 [NameInMap("ErrorPagesRedirect")]
                 [Validation(Required=false)]
                 public List<ListSiteFunctionsResponseBodyConfigsErrorPagesRedirectsErrorPagesRedirect> ErrorPagesRedirect { get; set; }
                 public class ListSiteFunctionsResponseBodyConfigsErrorPagesRedirectsErrorPagesRedirect : TeaModel {
                     /// <summary>
-                    /// <para>The response status code used by the edge node when responding with the redirect address to the client. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>400</description></item>
-                    /// <item><description>403</description></item>
-                    /// <item><description>404</description></item>
-                    /// <item><description>405</description></item>
-                    /// <item><description>414</description></item>
-                    /// <item><description>416</description></item>
-                    /// <item><description>500</description></item>
-                    /// <item><description>501</description></item>
-                    /// <item><description>502</description></item>
-                    /// <item><description>503</description></item>
-                    /// <item><description>504</description></item>
-                    /// </list>
+                    /// <para>The response status code used by the node when returning the redirect address to the client. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>400</para>
@@ -823,7 +735,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string StatusCode { get; set; }
 
                     /// <summary>
-                    /// <para>The target URL after redirection.</para>
+                    /// <para>The target URL to which the request is redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://example.com/test">http://example.com/test</a></para>
@@ -835,10 +747,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>The rule content. Uses conditional expressions to match user requests. This parameter is not required when adding a global configuration. Two scenarios are supported:</para>
+                /// <para>The rule content. A conditional expression is used to match user requests. You do not need to set this parameter when you add a global configuration. Two scenarios are supported:</para>
                 /// <list type="bullet">
-                /// <item><description>Match all incoming requests: set the value to true.</description></item>
-                /// <item><description>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
+                /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+                /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -849,11 +761,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. This parameter is not required when adding a global configuration. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable the rule. You do not need to set this parameter when adding a global configuration. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -863,7 +771,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleEnable { get; set; }
 
                 /// <summary>
-                /// <para>The rule name. This parameter is not required when adding a global configuration.</para>
+                /// <para>The rule name. You do not need to set this parameter when adding a global configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rule_example</para>
@@ -873,7 +781,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
+                /// <para>The execution priority of the rule. A smaller value indicates a higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -920,11 +828,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                     /// <summary>
                     /// <para>The operation type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>add: adds a header.</description></item>
-                    /// <item><description>del: deletes a header.</description></item>
-                    /// <item><description>modify: modifies a header.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -956,11 +859,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -980,7 +879,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -992,7 +891,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The inbound response header modification rules.</para>
+            /// <para>The rules for modifying inbound response headers.</para>
             /// </summary>
             [NameInMap("HttpIncomingResponseHeaderModificationRules")]
             [Validation(Required=false)]
@@ -1027,11 +926,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                     /// <summary>
                     /// <para>The operation type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>add: adds a header.</description></item>
-                    /// <item><description>del: deletes a header.</description></item>
-                    /// <item><description>modify: modifies a header.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -1063,11 +957,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1087,7 +977,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1137,11 +1027,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                     /// <summary>
                     /// <para>The operation type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>add: adds a header.</description></item>
-                    /// <item><description>del: deletes a header.</description></item>
-                    /// <item><description>modify: modifies a header.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -1173,11 +1058,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1197,7 +1078,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1247,11 +1128,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                     /// <summary>
                     /// <para>The operation type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>add: adds a header.</description></item>
-                    /// <item><description>del: deletes a header.</description></item>
-                    /// <item><description>modify: modifies a header.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -1283,11 +1159,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1307,7 +1179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1327,10 +1199,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class ListSiteFunctionsResponseBodyConfigsHttpsApplicationConfiguration : TeaModel {
                 /// <summary>
                 /// <para>The Alt-Svc feature switch. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1341,10 +1209,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether the Alt-Svc header includes the clear parameter. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1365,10 +1229,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether the Alt-Svc header includes the persist parameter. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1389,10 +1249,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable HSTS. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1403,10 +1259,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to include subdomains in HSTS. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1427,10 +1279,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable HSTS preload. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1441,12 +1289,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable forced HTTPS. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>on: enabled.</para>
-                /// </description></item>
-                /// <item><description><para>off: disabled.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1456,13 +1298,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string HttpsForce { get; set; }
 
                 /// <summary>
-                /// <para>The status code used for forced HTTPS redirect. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>301</description></item>
-                /// <item><description>302</description></item>
-                /// <item><description>307</description></item>
-                /// <item><description>308</description></item>
-                /// </list>
+                /// <para>The HTTP status code for forced HTTPS redirect. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>301</para>
@@ -1483,10 +1319,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1506,7 +1338,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1525,7 +1357,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<ListSiteFunctionsResponseBodyConfigsHttpsBasicConfiguration> HttpsBasicConfiguration { get; set; }
             public class ListSiteFunctionsResponseBodyConfigsHttpsBasicConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The custom cipher suites. Specifies the specific encryption algorithms selected when CiphersuiteGroup is set to custom.</para>
+                /// <para>The custom cipher suite. Specifies the specific encryption algorithms selected when CiphersuiteGroup is set to custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</para>
@@ -1535,7 +1367,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Ciphersuite { get; set; }
 
                 /// <summary>
-                /// <para>The cipher suite group. All cipher suites are enabled by default. Valid values:</para>
+                /// <para>The cipher suite group. By default, all cipher suites are enabled. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>all: all cipher suites.</description></item>
                 /// <item><description>strict: strong cipher suites.</description></item>
@@ -1561,10 +1393,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable HTTP/2. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1575,10 +1403,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable HTTP/3. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1589,12 +1413,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable HTTPS. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>on: enabled.</para>
-                /// </description></item>
-                /// <item><description><para>off: disabled.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1605,10 +1423,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable OCSP stapling. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1628,11 +1442,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1652,7 +1462,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1663,10 +1473,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable TLS 1.0. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1677,10 +1483,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable TLS 1.1. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1691,10 +1493,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable TLS 1.2. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1705,10 +1503,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable TLS 1.3. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1757,11 +1551,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable image transformation. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable image transformation. This feature is disabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>off</para>
@@ -1781,11 +1571,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1805,7 +1591,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1835,10 +1621,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable IPv6. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1848,7 +1630,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -1868,10 +1650,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class ListSiteFunctionsResponseBodyConfigsManagedTransforms : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to add visitor geolocation headers. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1881,7 +1659,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string AddClientGeolocationHeaders { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to add the &quot;ali-real-client-ip&quot; header that contains the real client IP address. Valid values:</para>
+                /// <para>Adds the &quot;ali-real-client-ip&quot; header that contains the originating IP address of the client. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>on: enabled.</description></item>
                 /// <item><description>off: disabled.</description></item>
@@ -1905,11 +1683,41 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
+                [NameInMap("Sequence")]
+                [Validation(Required=false)]
+                public string Sequence { get; set; }
+
+            }
+
+            [NameInMap("MarkdownForAgent")]
+            [Validation(Required=false)]
+            public List<ListSiteFunctionsResponseBodyConfigsMarkdownForAgent> MarkdownForAgent { get; set; }
+            public class ListSiteFunctionsResponseBodyConfigsMarkdownForAgent : TeaModel {
+                [NameInMap("ConfigId")]
+                [Validation(Required=false)]
+                public long? ConfigId { get; set; }
+
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public string Enable { get; set; }
+
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public string Rule { get; set; }
+
+                [NameInMap("RuleEnable")]
+                [Validation(Required=false)]
+                public string RuleEnable { get; set; }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
+                public string RuleName { get; set; }
+
                 [NameInMap("Sequence")]
                 [Validation(Required=false)]
                 public string Sequence { get; set; }
@@ -1934,11 +1742,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable gRPC. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable gRPC. This feature is disabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1948,11 +1752,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Grpc { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable HTTP/2 back-to-origin. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable HTTP/2 back-to-origin. This feature is disabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1973,10 +1773,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -1996,7 +1792,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2006,11 +1802,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Sequence { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable smart routing. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable the smart routing service. This feature is disabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2020,7 +1812,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SmartRouting { get; set; }
 
                 /// <summary>
-                /// <para>The maximum upload file size, in MB. Valid values: 100 to 500.</para>
+                /// <para>The maximum upload file size. Unit: MB. Valid values: 100 to 500.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -2030,11 +1822,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string UploadMaxFilesize { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable WebSocket. Enabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable WebSocket. This feature is enabled by default. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2063,7 +1851,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>The overridden DNS resolution record for back-to-origin requests.</para>
+                /// <para>The rewritten DNS resolution record for back-to-origin requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.example.com</para>
@@ -2103,11 +1891,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string OriginHttpsPort { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable mTLS for back-to-origin. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable mTLS for back-to-origin requests. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2128,11 +1912,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The protocol used for back-to-origin requests. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>http: uses HTTP for back-to-origin.</description></item>
-                /// <item><description>https: uses HTTPS for back-to-origin.</description></item>
-                /// <item><description>follow: follows the client protocol for back-to-origin.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http</para>
@@ -2153,10 +1932,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>Specifies whether to enable origin server certificate verification. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2166,7 +1941,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string OriginVerify { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use range-based origin fetch for file downloads. Valid values:</para>
+                /// <para>Uses range-based origin fetch to download files. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>on: enabled.</description></item>
                 /// <item><description>off: disabled.</description></item>
@@ -2182,12 +1957,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The range chunk size. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>512KB</description></item>
-                /// <item><description>1MB</description></item>
-                /// <item><description>2MB</description></item>
-                /// <item><description>4MB</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>512KB</para>
@@ -2207,11 +1976,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2231,7 +1996,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2260,11 +2025,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to preserve the query string. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether to reserve the query string. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2284,11 +2045,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2308,7 +2065,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2318,7 +2075,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Sequence { get; set; }
 
                 /// <summary>
-                /// <para>The response status code used by the edge node when responding with the redirect address to the client. Valid values:</para>
+                /// <para>The HTTP status code used when the node responds to the client with a redirect address. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>301</description></item>
                 /// <item><description>302</description></item>
@@ -2346,9 +2103,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The redirect type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>static: static mode.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>static</para>
@@ -2388,9 +2142,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The query string rewrite type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>static: static mode.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>static</para>
@@ -2401,9 +2152,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The path rewrite type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>static: static mode.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>static</para>
@@ -2423,11 +2171,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2447,7 +2191,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2487,10 +2231,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The feature switch. Disabled by default. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2500,7 +2240,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2512,7 +2252,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The site name exclusive configuration. When enabled, other accounts cannot create sites or subsites with the same name as the current site.</para>
+            /// <para>Site name exclusive. When enabled, other accounts cannot create sites or subsites with the same name as the current site.</para>
             /// </summary>
             [NameInMap("SiteNameExclusive")]
             [Validation(Required=false)]
@@ -2530,10 +2270,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The feature switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2543,7 +2279,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -2555,7 +2291,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The site acceleration pause configuration. Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to clients.</para>
+            /// <para>Site acceleration pause. Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to the client.</para>
             /// </summary>
             [NameInMap("SitePause")]
             [Validation(Required=false)]
@@ -2572,10 +2308,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>Temporarily pauses the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to clients. Valid values:</para>
+                /// <para>Specifies whether to temporarily pause the proxy acceleration feature for the entire site. When enabled, all DNS records directly return record values to the client. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: site acceleration is paused.</description></item>
-                /// <item><description>false: site acceleration is active.</description></item>
+                /// <item><description>true: Site acceleration is paused.</description></item>
+                /// <item><description>false: Site acceleration is active.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -2586,7 +2322,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Paused { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2606,12 +2342,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class ListSiteFunctionsResponseBodyConfigsTieredCache : TeaModel {
                 /// <summary>
                 /// <para>The tiered cache architecture mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>edge: edge cache layer.</description></item>
-                /// <item><description>edge_smart: edge cache layer + smart cache layer.</description></item>
-                /// <item><description>edge_regional: edge cache layer + regional cache layer.</description></item>
-                /// <item><description>edge_regional_smart: edge cache layer + regional cache layer + smart cache layer.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edge_smart</para>
@@ -2631,7 +2361,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? ConfigId { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2643,7 +2373,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The video processing configuration.</para>
+            /// <para>The video processing configurations.</para>
             /// </summary>
             [NameInMap("VideoProcessing")]
             [Validation(Required=false)]
@@ -2681,10 +2411,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The FLV seeking mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>by_byte: seeks by byte.</description></item>
-                /// <item><description>by_time: seeks by time.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>by_time</para>
@@ -2724,11 +2450,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The rule switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>on: enabled.</description></item>
-                /// <item><description>off: disabled.</description></item>
-                /// </list>
+                /// <para>Specifies whether the rule is enabled. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -2748,7 +2470,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The rule execution order.</para>
+                /// <para>The execution order of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2758,13 +2480,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Sequence { get; set; }
 
                 /// <summary>
-                /// <para>The video seeking switch. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>on: enabled.</para>
-                /// </description></item>
-                /// <item><description><para>off: disabled.</para>
-                /// </description></item>
-                /// </list>
+                /// <para>Specifies whether to enable the audio seeking feature. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>

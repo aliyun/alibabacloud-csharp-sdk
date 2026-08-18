@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <list type="bullet">
         /// <item><description>startTime: the effective period of the instance.</description></item>
         /// <item><description>endTime: the expiration time of the instance.</description></item>
+        /// <item><description>StartTime: the effective period of the instance.</description></item>
+        /// <item><description>EndTime: the expiration time of the instance.</description></item>
+        /// <item><description>default: no sorting field.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The collation. Default value: desc. Valid values:</para>
+        /// <para>The sorting rule. Default value: desc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>asc</description></item>
         /// <item><description>desc</description></item>

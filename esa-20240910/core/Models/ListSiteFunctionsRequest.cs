@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>global: queries global configurations.</description></item>
-        /// <item><description>rule: queries rule configurations.</description></item>
-        /// </list>
-        /// <para>This parameter is optional. If not specified, both global and rule configurations are returned. This parameter takes effect only when the FunctionName parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule name. Returns the rule that matches the specified name. This parameter takes effect only when the FunctionName parameter is specified.</para>
+        /// <para>The rule name. Filters the rule that matches the specified name. This parameter takes effect only when FunctionName is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

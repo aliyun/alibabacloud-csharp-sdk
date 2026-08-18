@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class TraceSiteShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The HTTP request body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;PlainText&quot;:&quot;bc58c54211db&quot;}</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The environment context. This parameter is optional.</para>
+        /// </summary>
         [NameInMap("Context")]
         [Validation(Required=false)]
         public string ContextShrink { get; set; }
 
         /// <summary>
+        /// <para>The cookie parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CookiesShrink { get; set; }
 
         /// <summary>
+        /// <para>The request headers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HeadersShrink { get; set; }
 
         /// <summary>
+        /// <para>The HTTP method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GET</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Method { get; set; }
 
         /// <summary>
+        /// <para>The HTTP protocol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HTTP/1.1</para>
         /// </summary>
@@ -54,6 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>The URL of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

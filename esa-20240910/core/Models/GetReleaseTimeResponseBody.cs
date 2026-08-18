@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetReleaseTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scheduled release time.</para>
+        /// <para>The scheduled release time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-02T06:00:00Z</para>

@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>block</b>: blocks the URL.</description></item>
-        /// <item><description><b>unblock</b>: unblocks the URL.</description></item>
+        /// <item><description><b>block</b>: Block.</description></item>
+        /// <item><description><b>unblock</b>: Unblock.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

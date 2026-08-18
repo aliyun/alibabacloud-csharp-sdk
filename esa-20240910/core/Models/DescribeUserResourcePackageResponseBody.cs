@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The current remaining capacity of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for data transfer plans: Byte.</para>
+            /// <item><description><para>Unit for traffic plans: Byte.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request count plans: count.</para>
+            /// <item><description><para>Unit for request plans: count.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The total capacity of the resource plan.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for data transfer plans: Byte.</para>
+            /// <item><description><para>Unit for traffic plans: Byte.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request count plans: count.</para>
+            /// <item><description><para>Unit for request plans: count.</para>
             /// </description></item>
             /// </list>
             /// 

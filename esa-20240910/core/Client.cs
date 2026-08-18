@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.ESA20240910
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-hangzhou", "esa.cn-hangzhou.aliyuncs.com"},
                 {"ap-southeast-1", "esa.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "esa.cn-hangzhou.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("esa", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -19043,6 +19043,190 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRoutineCodeVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public DeleteRoutineEnvironmentVariablesResponse DeleteRoutineEnvironmentVariablesWithOptions(DeleteRoutineEnvironmentVariablesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteRoutineEnvironmentVariablesShrinkRequest request = new DeleteRoutineEnvironmentVariablesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVariableKeys))
+            {
+                request.EnvironmentVariableKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVariableKeys, "EnvironmentVariableKeys", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariableKeysShrink))
+            {
+                body["EnvironmentVariableKeys"] = request.EnvironmentVariableKeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRoutineEnvironmentVariablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<DeleteRoutineEnvironmentVariablesResponse> DeleteRoutineEnvironmentVariablesWithOptionsAsync(DeleteRoutineEnvironmentVariablesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteRoutineEnvironmentVariablesShrinkRequest request = new DeleteRoutineEnvironmentVariablesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVariableKeys))
+            {
+                request.EnvironmentVariableKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVariableKeys, "EnvironmentVariableKeys", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariableKeysShrink))
+            {
+                body["EnvironmentVariableKeys"] = request.EnvironmentVariableKeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRoutineEnvironmentVariablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public DeleteRoutineEnvironmentVariablesResponse DeleteRoutineEnvironmentVariables(DeleteRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRoutineEnvironmentVariablesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<DeleteRoutineEnvironmentVariablesResponse> DeleteRoutineEnvironmentVariablesAsync(DeleteRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRoutineEnvironmentVariablesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46611,6 +46795,178 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to perform a paged query of all Edge Routines (Routines) created under your account, and provides the Routine quota and usage for your current plan. You can specify the paging parameters <c>PageNumber</c> and <c>PageSize</c> to control the number of returned results, and use <c>SearchKeyWord</c> to perform a fuzzy search to filter specific Routine names.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public ListRoutineEnvironmentVariablesResponse ListRoutineEnvironmentVariablesWithOptions(ListRoutineEnvironmentVariablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                body["KeyWord"] = request.KeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRoutineEnvironmentVariablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to perform a paged query of all Edge Routines (Routines) created under your account, and provides the Routine quota and usage for your current plan. You can specify the paging parameters <c>PageNumber</c> and <c>PageSize</c> to control the number of returned results, and use <c>SearchKeyWord</c> to perform a fuzzy search to filter specific Routine names.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<ListRoutineEnvironmentVariablesResponse> ListRoutineEnvironmentVariablesWithOptionsAsync(ListRoutineEnvironmentVariablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                body["KeyWord"] = request.KeyWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRoutineEnvironmentVariablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to perform a paged query of all Edge Routines (Routines) created under your account, and provides the Routine quota and usage for your current plan. You can specify the paging parameters <c>PageNumber</c> and <c>PageSize</c> to control the number of returned results, and use <c>SearchKeyWord</c> to perform a fuzzy search to filter specific Routine names.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public ListRoutineEnvironmentVariablesResponse ListRoutineEnvironmentVariables(ListRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRoutineEnvironmentVariablesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the environment variables of a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to perform a paged query of all Edge Routines (Routines) created under your account, and provides the Routine quota and usage for your current plan. You can specify the paging parameters <c>PageNumber</c> and <c>PageSize</c> to control the number of returned results, and use <c>SearchKeyWord</c> to perform a fuzzy search to filter specific Routine names.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<ListRoutineEnvironmentVariablesResponse> ListRoutineEnvironmentVariablesAsync(ListRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRoutineEnvironmentVariablesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>The records associated with the function.</para>
         /// </summary>
         /// 
@@ -51243,7 +51599,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches URLs to warm the cache.</para>
+        /// <para>Prefetches cache content.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51303,7 +51659,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches URLs to warm the cache.</para>
+        /// <para>Prefetches cache content.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51363,7 +51719,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches URLs to warm the cache.</para>
+        /// <para>Prefetches cache content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51381,7 +51737,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches URLs to warm the cache.</para>
+        /// <para>Prefetches cache content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55899,6 +56255,210 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Sets environment variables for a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<list type="bullet">
+        /// <item><description>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</description></item>
+        /// <item><description>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public SetRoutineEnvironmentVariablesResponse SetRoutineEnvironmentVariablesWithOptions(SetRoutineEnvironmentVariablesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetRoutineEnvironmentVariablesShrinkRequest request = new SetRoutineEnvironmentVariablesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVariables))
+            {
+                request.EnvironmentVariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVariables, "EnvironmentVariables", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariablesShrink))
+            {
+                body["EnvironmentVariables"] = request.EnvironmentVariablesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetRoutineEnvironmentVariablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets environment variables for a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<list type="bullet">
+        /// <item><description>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</description></item>
+        /// <item><description>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<SetRoutineEnvironmentVariablesResponse> SetRoutineEnvironmentVariablesWithOptionsAsync(SetRoutineEnvironmentVariablesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetRoutineEnvironmentVariablesShrinkRequest request = new SetRoutineEnvironmentVariablesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnvironmentVariables))
+            {
+                request.EnvironmentVariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnvironmentVariables, "EnvironmentVariables", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVariablesShrink))
+            {
+                body["EnvironmentVariables"] = request.EnvironmentVariablesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetRoutineEnvironmentVariables",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetRoutineEnvironmentVariablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets environment variables for a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<list type="bullet">
+        /// <item><description>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</description></item>
+        /// <item><description>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public SetRoutineEnvironmentVariablesResponse SetRoutineEnvironmentVariables(SetRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetRoutineEnvironmentVariablesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets environment variables for a Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<list type="bullet">
+        /// <item><description>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</description></item>
+        /// <item><description>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</description></item>
+        /// <item><description>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetRoutineEnvironmentVariablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetRoutineEnvironmentVariablesResponse
+        /// </returns>
+        public async Task<SetRoutineEnvironmentVariablesResponse> SetRoutineEnvironmentVariablesAsync(SetRoutineEnvironmentVariablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetRoutineEnvironmentVariablesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a scheduled prefetch based on the prefetch plan ID.</para>
         /// </summary>
         /// 
@@ -56655,13 +57215,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trace站点</para>
+        /// <para>Performs Tracing Analysis. You can use this operation to construct and initiate an impersonation HTTP/HTTPS request to the ESA platform, displaying the site configuration matching and effective settings on the ESA platform for the request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// <para>Notice: Before you use this operation, make sure that the site is connected to the ESA platform and enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -56746,13 +57306,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trace站点</para>
+        /// <para>Performs Tracing Analysis. You can use this operation to construct and initiate an impersonation HTTP/HTTPS request to the ESA platform, displaying the site configuration matching and effective settings on the ESA platform for the request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// <para>Notice: Before you use this operation, make sure that the site is connected to the ESA platform and enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -56837,13 +57397,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trace站点</para>
+        /// <para>Performs Tracing Analysis. You can use this operation to construct and initiate an impersonation HTTP/HTTPS request to the ESA platform, displaying the site configuration matching and effective settings on the ESA platform for the request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// <para>Notice: Before you use this operation, make sure that the site is connected to the ESA platform and enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -56862,13 +57422,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trace站点</para>
+        /// <para>Performs Tracing Analysis. You can use this operation to construct and initiate an impersonation HTTP/HTTPS request to the ESA platform, displaying the site configuration matching and effective settings on the ESA platform for the request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// <para>Notice: Before you use this operation, make sure that the site is connected to the ESA platform and enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -59079,7 +59639,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59133,7 +59693,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59187,7 +59747,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59205,7 +59765,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

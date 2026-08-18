@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetReleaseTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the security instance. The value must be a DDoS security instance ID in the format of esa-ddos-. You can obtain the ID by calling the ListDDoSInstances operation. Site instance IDs in the format of esa-site- are not supported.</para>
+        /// <para>The ID of the security instance. This must be a DDoS security instance ID (in the format esa-ddos-), which you can obtain by calling the ListDDoSInstances operation. Site instance IDs (in the format esa-site-) are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBillingMode { get; set; }
 
         /// <summary>
-        /// <para>The instance specifications for the Chinese mainland.</para>
+        /// <para>The instance specification for the Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBurstableDomesticProtection { get; set; }
 
         /// <summary>
-        /// <para>The instance specifications for regions outside China.</para>
+        /// <para>The instance specification for regions outside the Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

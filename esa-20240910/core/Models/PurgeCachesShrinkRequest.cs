@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? EdgeComputePurge { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to refresh all resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</para>
+        /// <para>Specifies whether to refresh resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Refreshes all resources under the corresponding directory.</description></item>
         /// <item><description><b>false</b>: Refreshes only the changed resources under the corresponding directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site cache refresh.</para>
+        /// <para> Effective scope: directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and refreshing all cached content under the site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description><b>cachekey</b>: cache key refresh.</description></item>
         /// <item><description><b>cachetag</b>: cache label refresh.</description></item>
         /// <item><description><b>directory</b>: folder refresh.</description></item>
-        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the submitted URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the submitted URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this operation, the committed URL is matched against cached resource URLs after their parameters are stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
         /// <item><description><b>hostname</b>: hostname refresh.</description></item>
         /// <item><description><b>purgeall</b>: refreshes all cached content under the site.</description></item>
         /// </list>

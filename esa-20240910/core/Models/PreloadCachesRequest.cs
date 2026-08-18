@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PreloadCachesRequest : TeaModel {
         /// <summary>
-        /// <para>The objects to prefetch.</para>
+        /// <para>The prefetch objects.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<string> Content { get; set; }
 
         /// <summary>
-        /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to customize the prefetch headers.</para>
+        /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to customize prefetch headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
