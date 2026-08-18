@@ -1,3 +1,7 @@
+2026-08-18 Version: 5.6.5
+- Update API CreateImageByInstance: add request parameters CopyProfile.
+
+
 2026-08-16 Version: 5.6.4
 - Update API CreateModelTemplate: add request parameters RefScope.
 - Update API GetRuntimeModelConfig: add response parameters Body.Data.ModelProviderList.$.LlmInfoList.$.CreditMultiplier.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter applies only to Cloud Desktop instances. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</para>
+        /// <para>This parameter applies only to Cloud Desktop scenarios. Specifies whether to clear user personal data. If set to true, the created image clears data in all directories under C:\Users except Administrator and Public.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
+
+        [NameInMap("CopyProfile")]
+        [Validation(Required=false)]
+        public bool? CopyProfile { get; set; }
 
         /// <summary>
         /// <para>The image description.</para>

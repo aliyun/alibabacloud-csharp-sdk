@@ -1698,6 +1698,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyProfile))
+            {
+                body["CopyProfile"] = request.CopyProfile;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -1777,6 +1781,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopyProfile))
+            {
+                body["CopyProfile"] = request.CopyProfile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
