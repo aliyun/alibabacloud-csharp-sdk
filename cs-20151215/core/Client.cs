@@ -3678,6 +3678,152 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>安装节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNodePoolComponentInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodePoolComponentInstancesResponse
+        /// </returns>
+        public CreateNodePoolComponentInstancesResponse CreateNodePoolComponentInstancesWithOptions(string clusterId, string nodepoolId, CreateNodePoolComponentInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
+            {
+                body["components"] = request.Components;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
+            {
+                body["node_names"] = request.NodeNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNodePoolComponentInstances",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNodePoolComponentInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNodePoolComponentInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodePoolComponentInstancesResponse
+        /// </returns>
+        public async Task<CreateNodePoolComponentInstancesResponse> CreateNodePoolComponentInstancesWithOptionsAsync(string clusterId, string nodepoolId, CreateNodePoolComponentInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
+            {
+                body["components"] = request.Components;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
+            {
+                body["node_names"] = request.NodeNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNodePoolComponentInstances",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNodePoolComponentInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNodePoolComponentInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodePoolComponentInstancesResponse
+        /// </returns>
+        public CreateNodePoolComponentInstancesResponse CreateNodePoolComponentInstances(string clusterId, string nodepoolId, CreateNodePoolComponentInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateNodePoolComponentInstancesWithOptions(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNodePoolComponentInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNodePoolComponentInstancesResponse
+        /// </returns>
+        public async Task<CreateNodePoolComponentInstancesResponse> CreateNodePoolComponentInstancesAsync(string clusterId, string nodepoolId, CreateNodePoolComponentInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateNodePoolComponentInstancesWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>An orchestration template defines and describes a set of Kubernetes cluster resources in a declarative manner, specifying how applications should run or be configured. You can use these templates to automate the deployment and cluster management of resources, such as Pods, Services, Deployments, ConfigMaps, and PersistentVolumes. You can invoke the CreateTemplate operation to create an orchestration template.</para>
         /// </summary>
         /// 
@@ -5206,6 +5352,180 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteKubernetesTriggerWithOptionsAsync(Id, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteNodePoolComponentInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodePoolComponentInstanceResponse
+        /// </returns>
+        public DeleteNodePoolComponentInstanceResponse DeleteNodePoolComponentInstanceWithOptions(string clusterId, string nodepoolId, string name, DeleteNodePoolComponentInstanceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNodePoolComponentInstanceShrinkRequest request = new DeleteNodePoolComponentInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeNames))
+            {
+                request.NodeNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeNames, "node_names", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchInterval))
+            {
+                query["batch_interval"] = request.BatchInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFailedNodes))
+            {
+                query["max_failed_nodes"] = request.MaxFailedNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxParallelism))
+            {
+                query["max_parallelism"] = request.MaxParallelism;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNamesShrink))
+            {
+                query["node_names"] = request.NodeNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PausePolicy))
+            {
+                query["pause_policy"] = request.PausePolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNodePoolComponentInstance",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNodePoolComponentInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteNodePoolComponentInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodePoolComponentInstanceResponse
+        /// </returns>
+        public async Task<DeleteNodePoolComponentInstanceResponse> DeleteNodePoolComponentInstanceWithOptionsAsync(string clusterId, string nodepoolId, string name, DeleteNodePoolComponentInstanceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteNodePoolComponentInstanceShrinkRequest request = new DeleteNodePoolComponentInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeNames))
+            {
+                request.NodeNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeNames, "node_names", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchInterval))
+            {
+                query["batch_interval"] = request.BatchInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxFailedNodes))
+            {
+                query["max_failed_nodes"] = request.MaxFailedNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxParallelism))
+            {
+                query["max_parallelism"] = request.MaxParallelism;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNamesShrink))
+            {
+                query["node_names"] = request.NodeNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PausePolicy))
+            {
+                query["pause_policy"] = request.PausePolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNodePoolComponentInstance",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNodePoolComponentInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodePoolComponentInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodePoolComponentInstanceResponse
+        /// </returns>
+        public DeleteNodePoolComponentInstanceResponse DeleteNodePoolComponentInstance(string clusterId, string nodepoolId, string name, DeleteNodePoolComponentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteNodePoolComponentInstanceWithOptions(clusterId, nodepoolId, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodePoolComponentInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodePoolComponentInstanceResponse
+        /// </returns>
+        public async Task<DeleteNodePoolComponentInstanceResponse> DeleteNodePoolComponentInstanceAsync(string clusterId, string nodepoolId, string name, DeleteNodePoolComponentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteNodePoolComponentInstanceWithOptionsAsync(clusterId, nodepoolId, name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14556,6 +14876,334 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询节点组件实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentInstancesResponse
+        /// </returns>
+        public ListNodePoolComponentInstancesResponse ListNodePoolComponentInstancesWithOptions(string clusterId, string nodepoolId, ListNodePoolComponentInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodePoolComponentInstances",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodePoolComponentInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点组件实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentInstancesResponse
+        /// </returns>
+        public async Task<ListNodePoolComponentInstancesResponse> ListNodePoolComponentInstancesWithOptionsAsync(string clusterId, string nodepoolId, ListNodePoolComponentInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodePoolComponentInstances",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodePoolComponentInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点组件实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentInstancesResponse
+        /// </returns>
+        public ListNodePoolComponentInstancesResponse ListNodePoolComponentInstances(string clusterId, string nodepoolId, ListNodePoolComponentInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListNodePoolComponentInstancesWithOptions(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点组件实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentInstancesResponse
+        /// </returns>
+        public async Task<ListNodePoolComponentInstancesResponse> ListNodePoolComponentInstancesAsync(string clusterId, string nodepoolId, ListNodePoolComponentInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListNodePoolComponentInstancesWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点池可安装的节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodePoolComponentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentsResponse
+        /// </returns>
+        public ListNodePoolComponentsResponse ListNodePoolComponentsWithOptions(string clusterId, ListNodePoolComponentsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodePoolComponentsShrinkRequest request = new ListNodePoolComponentsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceTypes))
+            {
+                request.InstanceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceTypes, "instance_types", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["image_id"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["image_type"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypesShrink))
+            {
+                query["instance_types"] = request.InstanceTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["nodepool_id"] = request.NodepoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolType))
+            {
+                query["nodepool_type"] = request.NodepoolType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodePoolComponents",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepool_components",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodePoolComponentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点池可安装的节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListNodePoolComponentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentsResponse
+        /// </returns>
+        public async Task<ListNodePoolComponentsResponse> ListNodePoolComponentsWithOptionsAsync(string clusterId, ListNodePoolComponentsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodePoolComponentsShrinkRequest request = new ListNodePoolComponentsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceTypes))
+            {
+                request.InstanceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceTypes, "instance_types", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["image_id"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["image_type"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypesShrink))
+            {
+                query["instance_types"] = request.InstanceTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["nodepool_id"] = request.NodepoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolType))
+            {
+                query["nodepool_type"] = request.NodepoolType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodePoolComponents",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepool_components",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodePoolComponentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点池可安装的节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentsResponse
+        /// </returns>
+        public ListNodePoolComponentsResponse ListNodePoolComponents(string clusterId, ListNodePoolComponentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListNodePoolComponentsWithOptions(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点池可安装的节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodePoolComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodePoolComponentsResponse
+        /// </returns>
+        public async Task<ListNodePoolComponentsResponse> ListNodePoolComponentsAsync(string clusterId, ListNodePoolComponentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListNodePoolComponentsWithOptionsAsync(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of automated O&amp;M execution plans.</para>
         /// </summary>
         /// 
@@ -21104,6 +21752,168 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateNodePoolComponentWithOptionsAsync(clusterId, nodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNodePoolComponentInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodePoolComponentInstanceResponse
+        /// </returns>
+        public UpdateNodePoolComponentInstanceResponse UpdateNodePoolComponentInstanceWithOptions(string clusterId, string nodepoolId, string name, UpdateNodePoolComponentInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableRolling))
+            {
+                body["disable_rolling"] = request.DisableRolling;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
+            {
+                body["node_names"] = request.NodeNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNodePoolComponentInstance",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNodePoolComponentInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNodePoolComponentInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodePoolComponentInstanceResponse
+        /// </returns>
+        public async Task<UpdateNodePoolComponentInstanceResponse> UpdateNodePoolComponentInstanceWithOptionsAsync(string clusterId, string nodepoolId, string name, UpdateNodePoolComponentInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableRolling))
+            {
+                body["disable_rolling"] = request.DisableRolling;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
+            {
+                body["node_names"] = request.NodeNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RollingPolicy))
+            {
+                body["rolling_policy"] = request.RollingPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNodePoolComponentInstance",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/component_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNodePoolComponentInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNodePoolComponentInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodePoolComponentInstanceResponse
+        /// </returns>
+        public UpdateNodePoolComponentInstanceResponse UpdateNodePoolComponentInstance(string clusterId, string nodepoolId, string name, UpdateNodePoolComponentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateNodePoolComponentInstanceWithOptions(clusterId, nodepoolId, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新节点组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNodePoolComponentInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodePoolComponentInstanceResponse
+        /// </returns>
+        public async Task<UpdateNodePoolComponentInstanceResponse> UpdateNodePoolComponentInstanceAsync(string clusterId, string nodepoolId, string name, UpdateNodePoolComponentInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateNodePoolComponentInstanceWithOptionsAsync(clusterId, nodepoolId, name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
