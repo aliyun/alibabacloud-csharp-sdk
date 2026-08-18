@@ -12,14 +12,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>IPv4</b>: IPv4.</para>
-        /// </description></item>
-        /// <item><description><para><b>DualStack</b>: dual-stack.</para>
+        /// <item><description><b>IPv4</b>: IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack.<remarks>
+        /// <para>To enable dual-stack for the endpoint, the endpoint service connected to the endpoint and the VPC in which the endpoint resides must both support dual-stack.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>To enable dual-stack for an endpoint, the associated endpoint service and the endpoint\&quot;s VPC must also support dual-stack.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -30,7 +28,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You must generate a unique value for this parameter. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>
@@ -40,16 +38,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cross-region bandwidth in Mbps. This parameter applies only when the endpoint and its associated endpoint service are in different regions. Valid values:</para>
+        /// <para>The cross-region bandwidth. This parameter is required only when the endpoint and the endpoint service are in different regions. Unit: Mbit/s. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Minimum value</b>: 100.</para>
-        /// </description></item>
-        /// <item><description><para><b>Maximum value</b>: The value is limited by your account quota. For more information, see <a href="https://help.aliyun.com/zh/privatelink/quotas-and-limits?spm=a2c4g.11174283.help-menu-search-120462.d_0">Quotas and limits</a>.</para>
+        /// <item><description><b>Minimum value</b>: 100.</description></item>
+        /// <item><description><b>Maximum value</b>: limited by the quota of the current account. For more information, see <a href="https://www.alibabacloud.com/help/en/privatelink/quotas-and-limits">Quotas and limits</a>.<remarks>
+        /// <para>Before you specify this parameter, make sure that the endpoint is a cross-region endpoint.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You can specify this parameter only for cross-region endpoints.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -59,12 +55,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? CrossRegionBandwidth { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the check, the system returns an error message. If the request passes the check, the system returns the <c>DryRunOperation</c> error code.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (Default): Sends a normal request. If the request passes the check, the system performs the operation and returns a 2xx HTTP status code.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: sends a check request without performing the update gateway endpoint attribute operation. The system checks the request for potential issues, including missing parameter values, incorrect request format, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +69,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The new description for the endpoint.</para>
+        /// <para>The description of the endpoint.</para>
         /// <para>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +80,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint to modify.</para>
+        /// <para>The ID of the endpoint that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,8 +91,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The new name for the endpoint.</para>
-        /// <para>The name must be 2 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, hyphens (-), and underscores (_).</para>
+        /// <para>The name of the endpoint.</para>
+        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or a Chinese character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -108,7 +102,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>The RAM access policy. For more information, see <a href="https://help.aliyun.com/document_detail/93738.html">Basic elements of a RAM policy</a>.</para>
+        /// <para>The RAM access policy. For more information about the policy definition, see <a href="https://help.aliyun.com/document_detail/93738.html">Policy elements</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -138,7 +132,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the endpoint that you want to modify. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,17 +142,21 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resets the policy to the default policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ResetPolicy")]
         [Validation(Required=false)]
         public bool? ResetPolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable zone affinity for domain name resolution of the endpoint service. Valid values:</para>
+        /// <para>Specifies whether to enable nearest access for the endpoint domain name of the connected service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables zone affinity.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disables zone affinity.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</para>

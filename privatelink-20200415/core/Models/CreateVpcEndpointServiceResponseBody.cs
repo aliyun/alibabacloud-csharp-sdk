@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class CreateVpcEndpointServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP version. Valid values:</para>
+        /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>IPv4</b>: IPv4.</description></item>
-        /// <item><description><b>DualStack</b>: dual stack.</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether endpoint connection requests are automatically accepted. Valid values:</para>
+        /// <para>Indicates whether the endpoint service is configured to automatically accept endpoint connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatically accepts endpoint connection requests.</description></item>
-        /// <item><description><b>false</b>: does not automatically accept endpoint connection requests.</description></item>
+        /// <item><description><b>true</b>: The endpoint service automatically accepts endpoint connections.</description></item>
+        /// <item><description><b>false</b>: The endpoint service does not automatically accept endpoint connections.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <list type="bullet">
         /// <item><description><para><b>Normal</b>: normal.</para>
         /// </description></item>
-        /// <item><description><para><b>FinancialLocked</b>: locked due to overdue payments.</para>
+        /// <item><description><para><b>FinancialLocked</b>: financial lock.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceDescription { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the endpoint service.</para>
+        /// <para>The service domain name of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint service.</para>
+        /// <para>The service name of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The state of the endpoint service. Valid values:</para>
+        /// <para>The endpoint service status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Creating</b>: being created.</para>
         /// </description></item>
@@ -148,9 +148,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>Indicates whether the endpoint service supports IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes.</para>
+        /// <item><description><para><b>true</b>: supported.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: no.</para>
+        /// <item><description><para><b>false</b>: not supported.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -163,17 +163,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? ServiceSupportIPv6 { get; set; }
 
         /// <summary>
-        /// <para>The list of regions in which the endpoint service is available. Service consumers can initiate endpoint connections from the regions in the list.</para>
+        /// <para>The list of regions supported by the endpoint service. Service consumers can initiate endpoint connections from the regions in the list.</para>
         /// </summary>
         [NameInMap("SupportedRegionSet")]
         [Validation(Required=false)]
         public List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> SupportedRegionSet { get; set; }
         public class CreateVpcEndpointServiceResponseBodySupportedRegionSet : TeaModel {
             /// <summary>
-            /// <para>The business status of the region in which the endpoint service is available. Valid values:</para>
+            /// <para>The business status of the region supported by the endpoint service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Normal</b>: normal.</description></item>
-            /// <item><description><b>FinancialLocked</b>: locked due to overdue payments.</description></item>
+            /// <item><description><b>FinancialLocked</b>: financial lock.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string RegionBusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The state of the region in which the endpoint service is available. Valid values:</para>
+            /// <para>The status of the region supported by the endpoint service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: changing.</description></item>
+            /// <item><description><b>Pending</b>: being modified.</description></item>
             /// <item><description><b>Available</b>: available.</description></item>
             /// <item><description><b>Deleting</b>: being deleted.</description></item>
             /// <item><description><b>Failed</b>: failed.</description></item>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of a region in which the endpoint service is available.</para>
+            /// <para>The ID of the region supported by the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -219,10 +219,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether zone affinity is enabled for endpoint domain name resolution. Valid values:</para>
+        /// <para>Indicates whether zone affinity is supported for the endpoint domain name of the endpoint service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes.</description></item>
-        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: supported.</description></item>
+        /// <item><description><b>false</b>: not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

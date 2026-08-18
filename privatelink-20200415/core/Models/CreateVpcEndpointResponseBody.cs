@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class CreateVpcEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP version of the endpoint. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>IPv4</b>: IPv4 (default).</para>
-        /// </description></item>
-        /// <item><description><para><b>DualStack</b>: Dual-stack.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The protocol version. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -26,7 +20,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth of the endpoint connection, in Mbps.</para>
+        /// <para>The connection bandwidth of the endpoint. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -36,21 +30,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The connection status of the endpoint. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>Pending</b>: The endpoint is being modified.</para>
-        /// </description></item>
-        /// <item><description><para><b>Connecting</b>: The endpoint is being connected.</para>
-        /// </description></item>
-        /// <item><description><para><b>Connected</b>: The endpoint is connected.</para>
-        /// </description></item>
-        /// <item><description><para><b>Disconnecting</b>: The endpoint is being disconnected.</para>
-        /// </description></item>
-        /// <item><description><para><b>Disconnected</b>: The endpoint is disconnected.</para>
-        /// </description></item>
-        /// <item><description><para><b>Deleting</b>: The endpoint is being deleted.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The endpoint connection status. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Disconnected</para>
@@ -60,7 +40,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ConnectionStatus { get; set; }
 
         /// <summary>
-        /// <para>The time the endpoint was created.</para>
+        /// <para>The time when the endpoint was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-02T19:11:12Z</para>
@@ -70,7 +50,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The cross-region bandwidth in Mbps. This parameter is returned only when the endpoint and the endpoint service are in different regions.</para>
+        /// <para>The cross-region bandwidth value of the endpoint. This parameter is applicable only when the endpoint and the endpoint service are in different regions. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -81,12 +61,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// <para>The business status of the endpoint. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: The endpoint is running as expected.</para>
-        /// </description></item>
-        /// <item><description><para><b>FinancialLocked</b>: The endpoint is locked due to overdue payments.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -116,7 +90,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointDomain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint.</para>
+        /// <para>The endpoint ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep-hp33b2e43fays7s8****</para>
@@ -136,17 +110,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>The status of the endpoint. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>Creating</b>: The endpoint is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>Active</b>: The endpoint is available.</para>
-        /// </description></item>
-        /// <item><description><para><b>Pending</b>: The endpoint is being modified.</para>
-        /// </description></item>
-        /// <item><description><para><b>Deleting</b>: The endpoint is being deleted.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The endpoint status. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -166,7 +130,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated endpoint service.</para>
+        /// <para>The ID of the endpoint service that is associated with the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epsrv-hp3vpx8yqxblby3i****</para>
@@ -176,7 +140,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated endpoint service.</para>
+        /// <para>The name of the endpoint service that is associated with the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</para>
@@ -196,7 +160,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC that contains the endpoint.</para>
+        /// <para>The VPC to which the endpoint belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-hp356stwkxg3fn2xe****</para>
@@ -206,13 +170,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether zone affinity is enabled. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Zone affinity is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Zone affinity is disabled.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Specifies whether to support zone affinity for the endpoint domain name when connecting to the service. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

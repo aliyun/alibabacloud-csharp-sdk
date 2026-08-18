@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointServiceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The remote regions to add to the list of supported regions.</para>
+        /// <para>The list of remote regions to add for the endpoint service.</para>
         /// </summary>
         [NameInMap("AddSupportedRegionSet")]
         [Validation(Required=false)]
         public List<string> AddSupportedRegionSet { get; set; }
 
         /// <summary>
-        /// <para>The IP version. Valid values:</para>
+        /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>IPv4</b>: IPv4.</para>
-        /// </description></item>
-        /// <item><description><para><b>DualStack</b>: dual-stack.</para>
+        /// <item><description><b>IPv4</b>: IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack.<remarks>
+        /// <para>Currently, only endpoint services whose backend resource type is NLB or GWLB support setting the IP address protocol to DualStack.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Only endpoint services that use an NLB or GWLB instance as the service resource support the <b>DualStack</b> IP version.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -52,8 +50,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? AutoAcceptEnabled { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures the idempotence of the request.</para>
-        /// <para>Your client must generate a unique token for each request. <b>ClientToken</b> can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> parameter supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -63,10 +61,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The default maximum connection bandwidth. The default value is <b>3072</b>. Unit: Mbps.</para>
+        /// <para>The default bandwidth limit. Default value: <b>3072</b>. Unit: Mbit/s.</para>
         /// <para>Valid values: <b>100</b> to <b>10240</b>.</para>
         /// <remarks>
-        /// <para>You can set this parameter only if the service resource is a CLB or ALB instance, but not an NLB instance.</para>
+        /// <para>Settings for the default bandwidth limit are supported when the service resource is a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance. When the service resource is a Network Load Balancer (NLB) instance, the connection bandwidth cannot be configured.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,18 +75,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? ConnectBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The remote regions to remove from the list of supported regions.</para>
+        /// <para>The list of remote regions to remove from the endpoint service.</para>
         /// </summary>
         [NameInMap("DeleteSupportedRegionSet")]
         [Validation(Required=false)]
         public List<string> DeleteSupportedRegionSet { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</para>
+        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the resource attributes are modified.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -101,7 +99,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// <para>The region ID of the endpoint service.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -135,11 +133,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6 for the endpoint service. Valid values:</para>
+        /// <para>Specifies whether the endpoint service supports IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables IPv6.</para>
+        /// <item><description><para><b>true</b>: yes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Disables IPv6.</para>
+        /// <item><description><para><b>false</b> (default): no.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -152,12 +150,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? ServiceSupportIPv6 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable zone affinity for the endpoint service. Valid values:</para>
+        /// <para>Specifies whether to resolve the domain name of the endpoint that is connected to the endpoint service to the nearest access point. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b> (default): Enables zone affinity.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disables zone affinity.</para>
-        /// </description></item>
+        /// <item><description><b>true</b> (default): yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class RemoveUserFromVpcEndpointServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned. The dry run checks whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required permissions (authorization), and whether the required parameters are specified.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the user account is removed from the service whitelist.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint service for which you want to remove the account ID from the whitelist. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the endpoint service from which you want to remove the service whitelist. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint service ID.</para>
+        /// <para>The ID of the endpoint service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The whitelist in the format of Aliyun Resource Name (ARN).</para>
+        /// <para>The user whitelist in ARN format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram:<em>:<account-id>:</em></para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string UserARN { get; set; }
 
         /// <summary>
-        /// <para>The account ID that you want to remove from the whitelist.</para>
+        /// <para>The ID of the account to remove from the service whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678</para>

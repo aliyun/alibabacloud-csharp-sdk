@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The regions in which PrivateLink is available vary based on the service resource type. When you query the regions in which PrivateLink is available, you can specify a service resource type. Valid values:</para>
+        /// <para>The EPS resource type supported by PrivateLink. The available regions vary based on the service resource type. You can specify a service resource type when querying the regions where PrivateLink is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>slb</b> (default): indicates that the service resource type is Classic Load Balancer (CLB).</para>
+        /// <item><description><para><b>slb</b> (default): the service resource type is Classic Load Balancer (CLB).</para>
         /// </description></item>
-        /// <item><description><para><b>alb</b>: indicates that the service resource type is Application Load Balancer (ALB).</para>
+        /// <item><description><para><b>alb</b>: the service resource type is Application Load Balancer (ALB).</para>
         /// </description></item>
-        /// <item><description><para><b>nlb</b>: indicates that the service resource type is Network Load Balancer (NLB).</para>
+        /// <item><description><para><b>nlb</b>: the service resource type is Network Load Balancer (NLB).</para>
         /// </description></item>
-        /// <item><description><para><b>gwlb</b>: indicates that the service resource type is Gateway Load Balancer (GWLB).</para>
+        /// <item><description><para><b>gwlb</b>: the service resource type is Gateway Load Balancer (GWLB).</para>
         /// </description></item>
-        /// <item><description><para><b>ALL</b>: indicates all of the preceding service resource types.</para>
+        /// <item><description><para><b>ALL</b>: all of the preceding types.</para>
         /// </description></item>
         /// </list>
         /// 
