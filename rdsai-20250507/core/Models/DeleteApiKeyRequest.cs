@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The API key to delete.</para>
+        /// <para>Api Key</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

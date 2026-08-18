@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InspectionItems { get; set; }
 
         /// <summary>
-        /// <para>The new list of associated instance IDs. Separate multiple values with commas (,).</para>
+        /// <para>The new list of associated instances. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze6mk259v322****,rm-2zef3b65430j0****</para>

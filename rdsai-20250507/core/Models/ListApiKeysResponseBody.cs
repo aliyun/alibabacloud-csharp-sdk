@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
+                /// <para>The daily throttling quota.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100000000</para>
                 /// </summary>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public bool? IsRateLimited { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API key.</para>
+                /// <para>The API key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The quota ratio.</para>
+                /// <para>The quota limit ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -82,11 +84,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota type. Valid values:</para>
+                /// <para>The quota limit method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>fixed</b>: fixed value.</description></item>
-                /// <item><description><b>ratio</b>: percentage.</description></item>
-                /// <item><description><b>auto</b>: automatic allocation.</description></item>
+                /// <item><description><b>fixed</b>: Fixed value.</description></item>
+                /// <item><description><b>ratio</b>: Percentage.</description></item>
+                /// <item><description><b>auto</b>: Automatic allocation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,8 +98,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string LimitType { get; set; }
 
+                [NameInMap("RoleArn")]
+                [Validation(Required=false)]
+                public string RoleArn { get; set; }
+
                 /// <summary>
-                /// <para>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
+                /// <para>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public int? ThresholdPercent { get; set; }
 
                 /// <summary>
-                /// <para>The quota of the current key.</para>
+                /// <para>The quota limit of the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -119,6 +125,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
+            /// <para>The daily throttling quota for the system API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000000</para>
             /// </summary>
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SystemApiKey { get; set; }
 
             /// <summary>
-            /// <para>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
+            /// <para>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert resets when the usage drops below this percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

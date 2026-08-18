@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateInspectionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the current time.</para>
+        /// <para>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the end time of the last 24 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-30T02:10:48Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ReportType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: 24 hours before the current time.</para>
+        /// <para>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the start time of the last 24 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-28T16:00:00Z</para>

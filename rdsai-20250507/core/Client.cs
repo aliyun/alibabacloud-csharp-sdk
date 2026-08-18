@@ -23,18 +23,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 {"cn-wulanchabu", "rdsai.aliyuncs.com"},
                 {"cn-shenzhen", "rdsai.aliyuncs.com"},
-                {"cn-shanghai", "rdsai.aliyuncs.com"},
-                {"cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "rdsai.aliyuncs.com"},
-                {"cn-guangzhou", "rdsai.aliyuncs.com"},
-                {"cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing", "rdsai.aliyuncs.com"},
-                {"ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"},
-                {"eu-central-1", "rdsai.eu-central-1.aliyuncs.com"},
+                {"cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"},
+                {"cn-shanghai", "rdsai.aliyuncs.com"},
+                {"cn-guangzhou", "rdsai.aliyuncs.com"},
+                {"cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"},
+                {"ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"},
+                {"cn-hangzhou", "rdsai.aliyuncs.com"},
                 {"us-west-1", "rdsai.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "rdsai.eu-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("rdsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -403,6 +403,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Quantity"] = request.Quantity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenQuota))
             {
                 query["TokenQuota"] = request.TokenQuota;
@@ -474,6 +482,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quantity))
             {
                 query["Quantity"] = request.Quantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenQuota))
             {
@@ -2079,9 +2095,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2176,9 +2192,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2273,9 +2289,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2302,9 +2318,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
+        /// <para>Warning: This API operation incurs fees. Read the related documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </remarks>
         /// </description>
@@ -2494,7 +2510,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2546,7 +2562,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2598,7 +2614,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2622,7 +2638,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Enterprise Edition</a></para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7760,7 +7776,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
+        /// <para>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7810,7 +7826,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
+        /// <para>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7860,7 +7876,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
+        /// <para>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7878,7 +7894,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
+        /// <para>Queries the list of all instance IDs included in a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7896,7 +7912,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</para>
+        /// <para>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7954,7 +7970,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</para>
+        /// <para>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8012,7 +8028,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</para>
+        /// <para>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8030,7 +8046,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</para>
+        /// <para>Queries all inspection reports under a specified scheduled task, with support for filtering by time range and pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8813,13 +8829,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
-        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
-        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
-        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
-        /// </list>
+        /// <para>列出上下文数据库工作空间</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8878,13 +8888,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
-        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
-        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
-        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
-        /// </list>
+        /// <para>列出上下文数据库工作空间</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8943,13 +8947,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
-        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
-        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
-        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
-        /// </list>
+        /// <para>列出上下文数据库工作空间</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8972,13 +8970,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于获取指定条件下的工作区列表。</description></item>
-        /// <item><description><c>workspaceId</c> 和 <c>status</c> 参数均为可选，可以根据需要进行过滤。</description></item>
-        /// <item><description>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</description></item>
-        /// <item><description>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</description></item>
-        /// </list>
+        /// <para>列出上下文数据库工作空间</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11876,13 +11868,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames an API key.</para>
+        /// <para>Renames a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11911,6 +11903,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["KeyName"] = request.KeyName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11932,13 +11932,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames an API key.</para>
+        /// <para>Renames a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11967,6 +11967,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["KeyName"] = request.KeyName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
+            {
+                query["RoleName"] = request.RoleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11988,13 +11996,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames an API key.</para>
+        /// <para>Renames a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12012,13 +12020,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames an API key.</para>
+        /// <para>Renames a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant (Ultimate Edition)</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">

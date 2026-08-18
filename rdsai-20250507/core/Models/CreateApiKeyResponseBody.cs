@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,12 +43,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string ApiKey { get; set; }
 
+                /// <summary>
+                /// <para>The daily quota of the API key.</para>
+                /// </summary>
                 [NameInMap("DailyTokenQuota")]
                 [Validation(Required=false)]
                 public long? DailyTokenQuota { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API key.</para>
+                /// <para>The API key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -68,13 +71,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota type. Valid values:</para>
+                /// <para>The quota allocation method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>fixed</b>: by fixed value.</para>
+                /// <item><description><para><b>fixed</b>: By fixed value.</para>
                 /// </description></item>
-                /// <item><description><para><b>ratio</b>: by percentage.</para>
+                /// <item><description><para><b>ratio</b>: By percentage.</para>
                 /// </description></item>
-                /// <item><description><para><b>auto</b>: automatic allocation.</para>
+                /// <item><description><para><b>auto</b>: Automatic allocation.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -85,8 +88,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string LimitType { get; set; }
 
+                [NameInMap("RoleArn")]
+                [Validation(Required=false)]
+                public string RoleArn { get; set; }
+
                 /// <summary>
-                /// <para>The quota for the current key.</para>
+                /// <para>The quota limit for the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -110,7 +117,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

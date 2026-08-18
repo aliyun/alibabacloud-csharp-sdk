@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateApiKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The daily quota of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000000000</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the API key.</para>
+        /// <para>The API key name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-*****</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public double? LimitRate { get; set; }
 
         /// <summary>
-        /// <para>The quota type. Valid values:</para>
+        /// <para>The quota allocation method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ratio: by percentage.</description></item>
         /// <item><description>fixed: by fixed value.</description></item>
@@ -72,8 +74,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
+        [NameInMap("RoleArn")]
+        [Validation(Required=false)]
+        public string RoleArn { get; set; }
+
+        [NameInMap("RoleName")]
+        [Validation(Required=false)]
+        public string RoleName { get; set; }
+
         /// <summary>
-        /// <para>The quota for the current key.</para>
+        /// <para>The quota limit for the current key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>

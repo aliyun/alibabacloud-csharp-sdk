@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The inspection end time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-23T08:20:31Z</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The inspection start time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-23T08:00:31Z</para>
