@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public List<AppendCasesRequestCases> Cases { get; set; }
         public class AppendCasesRequestCases : TeaModel {
             /// <summary>
-            /// <para>The custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. The name and value of each property are defined by the customer.</para>
+            /// <para>Custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. The name and value of each property are defined by the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;key1&quot;:&quot;value1&quot;]</para>

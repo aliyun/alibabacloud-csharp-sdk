@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of contacts that failed to be added.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<AppendCasesResponseBodyData> Data { get; set; }
         public class AppendCasesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The phone number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>133xxxxxxxx</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
+            /// <para>The business ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bizId-xxxxxx</para>
             /// </summary>

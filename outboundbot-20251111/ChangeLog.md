@@ -1,3 +1,9 @@
+2026-08-18 Version: 1.5.0
+- Support API GetCallDetailRecord.
+- Support API GetCaseDetail.
+- Support API ListCases.
+
+
 2026-08-17 Version: 1.4.1
 - Update API AppendCases: add response parameters Body.Data.
 
