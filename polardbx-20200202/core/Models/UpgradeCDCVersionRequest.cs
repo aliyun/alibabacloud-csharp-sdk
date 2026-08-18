@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpgradeCDCVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The target database engine version to which you want to upgrade. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBClusterVersion</a> operation to query the upgrade instructions for all database engine versions in a specific region.</para>
+        /// <para>The target database version to which you want to upgrade. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBClusterVersion</a> operation to query the upgrade instructions for all database versions in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.343</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CdcMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in a specific region, including instance IDs.</para>
+        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-hzrp****3p72fi</para>

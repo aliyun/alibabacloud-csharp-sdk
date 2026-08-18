@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The description of the account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试账号</para>
+        /// <para>Test account</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]

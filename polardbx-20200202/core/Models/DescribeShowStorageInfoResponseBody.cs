@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeShowStorageInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the request. This parameter is empty when the request is successful. When the request fails, exception information such as an error code is returned.</para>
+        /// <para>The return code of the request. &gt; This parameter is empty when the request is successful. When the request fails, exception information such as error codes is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -74,10 +74,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? GroupCount { get; set; }
 
                 /// <summary>
-                /// <para>The role type of the instance. Valid values:
-                /// MASTER: primary instance.
-                /// READONLY: read-only instance.
-                /// STANDBY: standby instance (high-availability scenario).</para>
+                /// <para>The role type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>MASTER: primary instance.</description></item>
+                /// <item><description>READONLY: read-only instance.</description></item>
+                /// <item><description>STANDBY: standby instance (high-availability scenario).</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MASTER</para>

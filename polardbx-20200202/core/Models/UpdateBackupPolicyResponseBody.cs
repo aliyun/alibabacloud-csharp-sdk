@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdateBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the backup policy.</para>
+        /// <para>The backup policy details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. The value success is returned if the request is successful. Otherwise, the corresponding error code is returned.</para>
+        /// <para>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

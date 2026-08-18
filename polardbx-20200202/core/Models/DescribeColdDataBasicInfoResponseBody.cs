@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public double? BackupSetSpaceSize { get; set; }
 
             /// <summary>
-            /// <para>The underlying storage cloud service.</para>
+            /// <para>The underlying storage cloud product.</para>
             /// </summary>
             [NameInMap("CloudProduct")]
             [Validation(Required=false)]

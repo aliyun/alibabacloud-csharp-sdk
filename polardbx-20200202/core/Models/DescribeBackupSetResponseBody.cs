@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BackupType { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup started.</para>
+            /// <para>The backup start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650250861754</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup ended.</para>
+            /// <para>The backup end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650251308000</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DownloadLink { get; set; }
 
                 /// <summary>
-                /// <para>The internal network download URL for the OSS file.</para>
+                /// <para>The internal network OSS download URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</para>

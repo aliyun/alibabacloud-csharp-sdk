@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxdds</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The label key.</para>
+            /// <para>The key of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The label value.</para>
+            /// <para>The value of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

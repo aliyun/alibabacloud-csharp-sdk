@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试数据库</para>
+        /// <para>Test database</para>
         /// </summary>
         [NameInMap("DbDescription")]
         [Validation(Required=false)]

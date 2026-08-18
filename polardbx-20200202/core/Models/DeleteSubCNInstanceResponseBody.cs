@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteSubCNInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteSubCNInstanceResponseBodyData Data { get; set; }
         public class DeleteSubCNInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The backend task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2209883</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</para>
         /// </summary>

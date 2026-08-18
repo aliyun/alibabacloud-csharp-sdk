@@ -134,8 +134,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The recall type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: exact match.</description></item>
-                /// <item><description><b>1</b>: fuzzy match.</description></item>
+                /// <item><description><b>0</b>: Exact match.</description></item>
+                /// <item><description><b>1</b>: Fuzzy match.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

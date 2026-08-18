@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>Specifies whether to delete all tags. This parameter is valid only when TagKey.N is empty. Valid values: true, false, True, and False. Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>是否全部删除</para>
+        /// <para>Specifies whether to delete all tags</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this parameter to PolarDBXInstance.</para>
+        /// <para>The resource type. The value must be PolarDBXInstance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

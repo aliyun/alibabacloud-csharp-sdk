@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Frows { get; set; }
 
             /// <summary>
-            /// <para>The name and address of the client that connects to the database.</para>
+            /// <para>The client name and address that connects to the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>[</b></b>] @ [1XX.XX.XX.XX]</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ParseRowCounts { get; set; }
 
             /// <summary>
-            /// <para>The timestamp in the YYYY-MM-ddTHH:mm.ss.SSSZ format (UTC).</para>
+            /// <para>The timestamp. Format: YYYY-MM-ddTHH:mm.ss.SSSZ (UTC).</para>
             /// <list type="bullet">
             /// <item><description>In CN slow logs, this field indicates the execution start time.</description></item>
             /// <item><description>In DN slow logs, this field indicates the execution end time.</description></item>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string QueryStartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the SQL statement. Unit: seconds.</para>
+            /// <para>The execution duration of the SQL statement. Unit: seconds (s).</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.000</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SCNT { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the SQL statement in slow query log statistics.</para>
+            /// <para>The unique identity of the SQL statement in slow query log statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8df07e5d45cd68da8b4771c2016e20b</para>

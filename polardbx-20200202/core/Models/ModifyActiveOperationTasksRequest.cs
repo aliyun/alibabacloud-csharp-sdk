@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether to immediately execute the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: immediately execute</description></item>
-        /// <item><description>0: execute at the specified time.</description></item>
+        /// <item><description>1: immediately executes the event.</description></item>
+        /// <item><description>0: executes the event at the specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The switchover start time in the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// <para>The time when the switchover starts. Specify the time in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-15T12:00:00Z</para>

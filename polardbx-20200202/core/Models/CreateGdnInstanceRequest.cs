@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance.</para>
+        /// <para>The description information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FASTJSON 2.0.x has been released, faster and more secure, recommend you upgrade.</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GdnMode { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

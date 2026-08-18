@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of this role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</para>
+        /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of the role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</para>
         /// <list type="bullet">
         /// <item><description>$accountID: the Alibaba Cloud account ID. To view the ID, logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and then click Security Settings.</description></item>
         /// <item><description>$roleName: the RAM role name. The value is fixed as AliyunRdsInstanceEncryptionDefaultRole.</description></item>

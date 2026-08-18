@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdateBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit indicates whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</para>
+        /// <para>The backup cycle. You must specify at least 2 days. The value is a 7-digit number. From left to right, each digit represents whether backup is enabled from Monday to Sunday. A value of 0 indicates that backup is disabled, and a value of 1 indicates that backup is enabled:</para>
         /// <list type="bullet">
         /// <item><description>First digit: Monday</description></item>
         /// <item><description>Second digit: Tuesday</description></item>
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>Fourth digit: Thursday</description></item>
         /// <item><description>Fifth digit: Friday</description></item>
         /// <item><description>Sixth digit: Saturday</description></item>
-        /// <item><description>Seventh digit: Sunday.</description></item>
+        /// <item><description>Seventh digit: Sunday</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string BackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The start time of the daily backup, in UTC.</para>
+        /// <para>The daily backup start time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03:00Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The backup method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>P</b>: physical backup</description></item>
+        /// <item><description><b>P</b>: physical backup.</description></item>
         /// <item><description><b>L</b>: logical backup.</description></item>
         /// </list>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string BackupWay { get; set; }
 
         /// <summary>
-        /// <para>The interval for cold data backups. Unit: days. Valid values: 1 to 59.</para>
+        /// <para>The interval of cold data backups. Unit: days. Valid values: 1 to 59.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? ColdDataBackupInterval { get; set; }
 
         /// <summary>
-        /// <para>The retention period for cold data backups. Unit: days. Valid values: 30 to 730.</para>
+        /// <para>The retention period of cold data backups. Unit: days. Valid values: 30 to 730.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? ColdDataBackupRetention { get; set; }
 
         /// <summary>
-        /// <para>The retention period for cross-region data backups. Unit: days.</para>
+        /// <para>The retention period of cross-region data backups. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CrossRegionFilterValue { get; set; }
 
         /// <summary>
-        /// <para>The retention period for cross-region log backups. Unit: days.</para>
+        /// <para>The retention period of cross-region log backups. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -140,8 +140,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether to forcibly clean up binary logs when the total space usage of the instance exceeds 80% or the remaining space is less than 50 GB. The cleanup starts from the earliest logs until the total space usage drops below 80% and the remaining space exceeds 50 GB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: Yes.</description></item>
+        /// <item><description><b>0</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? LocalLogRetention { get; set; }
 
         /// <summary>
-        /// <para>The number of binary logs retained locally. Default value: 60. Valid values: 6 to 100.</para>
+        /// <para>The number of local binary logs to retain. Default value: 60. Valid values: 6 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? LocalLogRetentionNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum space usage for binary logs, expressed as a percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</para>
+        /// <para>The maximum binary log space usage in percentage. Valid values: 0 to 50. This parameter specifies a loop space. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

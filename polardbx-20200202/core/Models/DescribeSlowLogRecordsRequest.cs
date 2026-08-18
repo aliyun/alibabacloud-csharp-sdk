@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can specify multiple node IDs separated by commas (<c>,</c>). This parameter is required when you query storage nodes.</para>
+        /// <para>The node IDs. You can specify multiple node IDs separated by commas (<c>,</c>). This parameter is required when you query storage nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-i-mezcj4ejdz</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
+        /// <para>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
+        /// <para>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

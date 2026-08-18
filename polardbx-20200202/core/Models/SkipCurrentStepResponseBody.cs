@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The return message. This parameter is empty when the request succeeds. When the request fails, exception information such as error codes is returned.</para>
+        /// <para>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
+        /// <para>The new resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

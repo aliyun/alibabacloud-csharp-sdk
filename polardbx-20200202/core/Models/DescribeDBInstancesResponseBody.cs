@@ -27,20 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CdcInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The CN node specifications. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
-            /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
-            /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB</description></item>
-            /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB</description></item>
-            /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB</description></item>
-            /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB</description></item>
-            /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB</description></item>
-            /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
-            /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
-            /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
-            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB.</description></item>
-            /// </list>
+            /// <para>The CN node specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx.x4.large.2e</para>
@@ -87,11 +74,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance contains the multi-stream log service. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: The instance contains the multi-stream log service.</description></item>
-            /// <item><description><b>false</b>: The instance does not contain the multi-stream log service.</description></item>
-            /// </list>
+            /// <para>Specifies whether the instance contains the multi-stream log service. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -135,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The database version.</para>
+            /// <para>The database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
@@ -148,31 +131,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The database description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The DN node specifications. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB</description></item>
-            /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB</description></item>
-            /// <item><description><b>mysql.x8.medium.25</b>: 2 cores, 16 GB</description></item>
-            /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB</description></item>
-            /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB</description></item>
-            /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB</description></item>
-            /// <item><description><b>mysql.n2.xlarge.25</b>: 8 cores, 16 GB</description></item>
-            /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB</description></item>
-            /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB</description></item>
-            /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB</description></item>
-            /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB</description></item>
-            /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB</description></item>
-            /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB</description></item>
-            /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB</description></item>
-            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB.</description></item>
-            /// </list>
+            /// <para>The DN node specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql.n4.medium.25</para>
@@ -249,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The lock reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>欠费</para>
+            /// <para>Overdue</para>
             /// </summary>
             [NameInMap("LockReason")]
             [Validation(Required=false)]
@@ -354,10 +320,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-            /// <item><description><b>Prepaid</b>: subscription.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Prepaid</para>
@@ -420,10 +382,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// <para>The instance edition. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>enterprise</b>: Enterprise Edition.</description></item>
-            /// <item><description><b>standard</b>: Standard Edition.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enterprise</para>
@@ -458,10 +416,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
             /// <summary>
             /// <para>Indicates whether the instance supports multi-stream. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -500,7 +454,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The third zone in the three-zone deployment.</para>
+            /// <para>The tertiary active zone for three-zone deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>
@@ -510,11 +464,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TertiaryZone { get; set; }
 
             /// <summary>
-            /// <para>The topology type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>3azones</b>: three-zone deployment.</description></item>
-            /// <item><description><b>1azone</b>: single-zone deployment.</description></item>
-            /// </list>
+            /// <para>The topology type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -525,11 +475,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TopologyType { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ReadWrite</b>: primary instance.</description></item>
-            /// <item><description><b>ReadOnly</b>: read-only instance.</description></item>
-            /// </list>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ReadWrite</para>

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. The value success is returned if the request succeeds. Otherwise, an error code is returned.</para>
+        /// <para>The additional information. The value success is returned if the request is successful. Otherwise, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

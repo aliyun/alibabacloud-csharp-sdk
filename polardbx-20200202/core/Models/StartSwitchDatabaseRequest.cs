@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the primary node of the source instance, which is typically the internal or public endpoint of the instance.</para>
+        /// <para>The endpoint of the primary node of the source instance. This is typically the internal or public endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-*********.mysql.rds.aliyuncs.com</para>

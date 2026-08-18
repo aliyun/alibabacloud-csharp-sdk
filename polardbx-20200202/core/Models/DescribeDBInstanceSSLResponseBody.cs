@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data structure.</para>
+        /// <para>The data struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CertCommonName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SSL is enabled for the instance:</para>
+            /// <para>Indicates whether SSL is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enabled</description></item>
-            /// <item><description><b>false</b>: disabled</description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? SSLEnabled { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the SSL certificate.</para>
+            /// <para>The certificate expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-04T09:39:07Z</para>

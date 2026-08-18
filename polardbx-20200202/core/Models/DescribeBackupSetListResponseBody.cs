@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BackupModel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup set.</para>
+            /// <para>The backup set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string BackupSetId { get; set; }
 
             /// <summary>
-            /// <para>The size of the backup set. Unit: bytes.</para>
+            /// <para>The size of the backup set, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88803195</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BackupType { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup started.</para>
+            /// <para>The backup start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1635706960956</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup ended.</para>
+            /// <para>The backup end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1635706960956</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The status of the backup set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Being backed up.</description></item>
+            /// <item><description><b>0</b>: Backing up.</description></item>
             /// <item><description><b>1</b>: Backup succeeded.</description></item>
             /// <item><description><b>2</b>: Backup failed.</description></item>
             /// </list>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The returned message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

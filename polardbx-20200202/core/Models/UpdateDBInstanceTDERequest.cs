@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor of the role, used to specify a specific role. For details, see RAM role overview.</para>
+        /// <para>The global resource descriptor of the role. This parameter specifies the role to assume. For details, see RAM role overview.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>

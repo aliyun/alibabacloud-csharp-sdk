@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The list of members.</para>
+                /// <para>The member list.</para>
                 /// </summary>
                 [NameInMap("MemberList")]
                 [Validation(Required=false)]
                 public List<DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList> MemberList { get; set; }
                 public class DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList : TeaModel {
                     /// <summary>
-                    /// <para>The instance type.</para>
+                    /// <para>The instance specifications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>polarx.x4.medium.2e</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The CN node specifications. Valid values:</para>
+                    /// <para>The CN node specifications.</para>
                     /// <list type="bullet">
                     /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
                     /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
                     /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
                     /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
-                    /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB.</description></item>
+                    /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string DataSyncStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The DN node specifications. Valid values:</para>
+                    /// <para>The DN node specifications.</para>
                     /// <list type="bullet">
                     /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB</description></item>
                     /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB</description></item>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB</description></item>
                     /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB</description></item>
                     /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB</description></item>
-                    /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB.</description></item>
+                    /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string SecondaryZone { get; set; }
 
                     /// <summary>
-                    /// <para>The data latency.</para>
+                    /// <para>The data replication lag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1s</para>
@@ -271,18 +271,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The switchover task status.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>prepared：参数初始化完毕
-                    /// set_old_primary_readonly：原主实例已禁写
-                    /// set_new_primary_read_write：已切换
-                    /// timeout：任务超时
-                    /// rollback：已回滚</para>
+                    /// <para>prepared: Parameter initialization is complete.
+                    /// set_old_primary_readonly: The original primary instance is set to read-only.
+                    /// set_new_primary_read_write: The switchover is complete.
+                    /// timeout: The task has timed out.
+                    /// rollback: The task has been rolled back</para>
                     /// </summary>
                     [NameInMap("TaskStatus")]
                     [Validation(Required=false)]
                     public string TaskStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The zone for Three-zone deployment. This zone is active only when three-zone deployment is enabled.</para>
+                    /// <para>The zone for three-zone deployment. This zone is active along with the primary and secondary zones.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-zhangjiakou-a</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The switchover log.</para>
+                /// <para>The switchover history.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The response message.</para>
         /// <remarks>
-        /// <para>This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCdcVersionListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-bjrl7****k2vp7</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdateCustinsParamResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateCustinsParamResponseBodyData Data { get; set; }
         public class UpdateCustinsParamResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>73559800-3c8c-****-bd40-99cfcff3fe1e</para>
         /// </summary>

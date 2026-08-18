@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstDb { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged account for the destination ApsaraDB RDS instance. &gt; * The password must be 8 to 32 characters in length. * The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include ! @ # $ &amp; % ^ * ( ) _ + - =.</para>
+        /// <para>The password of the privileged user for the destination ApsaraDB RDS instance. &gt; * The password must be 8 to 32 characters in length. * The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include ! @ # $ &amp; % ^ * ( ) _ + - =</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the endpoint resides.</para>
+        /// <para>The ID of the VPC in which the access endpoint resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1ndou****twoedlmru0</para>

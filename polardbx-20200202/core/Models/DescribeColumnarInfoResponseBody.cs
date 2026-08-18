@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The new column store version.</para>
+            /// <para>The new version of the column store.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes> PhysicalNodes { get; set; }
                 public class DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes : TeaModel {
                     /// <summary>
-                    /// <para>The zone in which the instance resides.</para>
+                    /// <para>The zone where the instance resides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-h</para>

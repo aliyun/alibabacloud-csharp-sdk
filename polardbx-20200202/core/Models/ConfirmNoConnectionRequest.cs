@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the short-link task that identifies the task to be rolled back.</para>
+        /// <para>The unique ID of the short-link task, which is used to identify the task to be rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

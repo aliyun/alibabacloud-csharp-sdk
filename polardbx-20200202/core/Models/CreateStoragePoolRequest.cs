@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string StoragePoolDNList { get; set; }
 
         /// <summary>
-        /// <para>The name of the storage pool.</para>
+        /// <para>The storage pool name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

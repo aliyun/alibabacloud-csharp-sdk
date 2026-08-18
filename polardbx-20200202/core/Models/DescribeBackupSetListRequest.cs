@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region where the backup sets reside. If you specify this parameter, backup sets in the specified region are returned. You can specify only one region at a time.</para>
+        /// <para>The region where the backup set resides. After you specify this parameter, backup sets in the specified region are returned. Only one region can be specified at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DestCrossRegion { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635707845000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1.</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635707845000</para>

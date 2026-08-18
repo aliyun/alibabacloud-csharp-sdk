@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class PreCheckSqlFlashbackTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result set.</para>
+        /// <para>The returned result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public PreCheckSqlFlashbackTaskResponseBodyDataCheckResult CheckResult { get; set; }
             public class PreCheckSqlFlashbackTaskResponseBodyDataCheckResult : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether valid binary log files exist. This value is used to determine whether operations such as flashback and synchronization can be performed.</para>
+                /// <para>Indicates whether valid binary log files exist. This is used to determine whether flashback or synchronization operations can be performed.</para>
                 /// </summary>
                 [NameInMap("BinlogExists")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successs</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ConfirmNoConnectionResponseBodyData Data { get; set; }
         public class ConfirmNoConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The original task ID, used to match the response with the request.</para>
+            /// <para>The original task ID, which is used to match the response with the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>

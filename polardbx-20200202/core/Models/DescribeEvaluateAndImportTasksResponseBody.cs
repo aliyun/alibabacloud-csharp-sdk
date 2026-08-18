@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEvaluateAndImportTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task details.</para>
+        /// <para>The details of the restoration tasks.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? Deleted { get; set; }
 
             /// <summary>
-            /// <para>The task creation timestamp, in milliseconds.</para>
+            /// <para>The timestamp when the task was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-08T15:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the metadata information.</para>
+            /// <para>The time when the metadata information was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-02T02:10:59Z</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information (such as error codes) is returned.</para>
+        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

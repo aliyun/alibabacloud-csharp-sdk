@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para>The filter value for querying resources.</para>
-        /// <para>This parameter is used together with FilterKey.</para>
+        /// <para>Used together with FilterKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-<em><b>、
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterValue { get; set; }
 
         /// <summary>
-        /// <para>The GDN ID.</para>
+        /// <para>GDN ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-***</para>

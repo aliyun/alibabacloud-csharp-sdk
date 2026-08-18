@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the most recent task update.</para>
+                /// <para>The timestamp when the task was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-23T03:25:21.000+0000</para>

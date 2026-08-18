@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ConfigName { get; set; }
 
             /// <summary>
-            /// <para>The configuration item. The following parameters are included:</para>
+            /// <para>The configuration item. Description:</para>
             /// <list type="bullet">
-            /// <item><description>attendHtapList: the list of instances for which HTAP is enabled.</description></item>
+            /// <item><description>attendHtapList: the list of instances with HTAP enabled.</description></item>
             /// <item><description>autoAttendHtap: specifies whether to automatically add newly created read-only instances to the HTAP list.</description></item>
-            /// <item><description>delayExecutionStrategy: when the read-only instance lag reaches the value specified by storageDelayThreshold, read-only traffic is routed back to the primary instance. Default value: 1. Valid values: 0 and 1.</description></item>
+            /// <item><description>delayExecutionStrategy: when the read-only instance lag reaches the value specified by storageDelayThreshold, read-only traffic is switched back to the primary instance. Default value: 1. Valid values: 0 and 1.</description></item>
             /// <item><description>enableConsistentReplicaRead: specifies whether to enable consistent reads.</description></item>
-            /// <item><description>storageDelayThreshold: the latency threshold for read-only instances. Default value: 3s. Valid values: 0 to 86400.</description></item>
+            /// <item><description>storageDelayThreshold: the latency threshold for read-only instances. Default value: 3s. Valid values: 0 to 3600*24.</description></item>
             /// <item><description>enableHtap: specifies whether to enable HTAP.</description></item>
             /// <item><description>masterReadWeight: the read weight of the primary node. A value of 100 indicates that 100% of traffic is routed to the primary node. Valid values: 0 to 100.</description></item>
             /// </list>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteSubCNInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceClusterName { get; set; }
 
         /// <summary>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

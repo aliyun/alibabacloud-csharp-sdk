@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <em><b>30</b></em><b>50</b>*<b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <em><b>30</b></em>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination task.</para>
+        /// <para>The ID of the target task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>etx-szr2rr6i*****</para>

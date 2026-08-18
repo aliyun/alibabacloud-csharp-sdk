@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBinaryLogListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of binlog files.</para>
+        /// <para>The list of binary log files.</para>
         /// </summary>
         [NameInMap("LogList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The download link for the file. The link is valid for 2 days.</para>
+            /// <para>The download link of the file. The link is valid for 2 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&OSSAccessKeyId=LT13fds12dsafddsf&Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D">http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&amp;OSSAccessKeyId=LT13fds12dsafddsf&amp;Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DownloadLink { get; set; }
 
             /// <summary>
-            /// <para>The end time of the current binlog.</para>
+            /// <para>The end time of the current binary log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09 10:27:46</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the binlog file.</para>
+            /// <para>The name of the binary log file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>binlog.000001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? LogSize { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09 10:27:46</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The purge status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Not deleted.</description></item>
-            /// <item><description>1: Deleted.</description></item>
+            /// <item><description>0: not deleted. </description></item>
+            /// <item><description>1: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,9 +123,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The backup status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Not backed up.</description></item>
-            /// <item><description>1: Backing up.</description></item>
-            /// <item><description>2: Backed up.</description></item>
+            /// <item><description>0: not backed up. </description></item>
+            /// <item><description>1: being backed up. </description></item>
+            /// <item><description>2: backed up.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of binlog entries displayed on the current page.</para>
+        /// <para>The number of binary logs displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of binlog files found.</para>
+        /// <para>The total number of binary log files returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

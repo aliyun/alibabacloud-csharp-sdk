@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of instance details.</para>
+        /// <para>The instance details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Class { get; set; }
 
                 /// <summary>
-                /// <para>The list of DN IDs.</para>
+                /// <para>The list of DNs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[pxc-xdb-s-pxcbj<b><b>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</b></b>p0wa1589\&quot;]</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DnIdString { get; set; }
 
                 /// <summary>
-                /// <para>The reserved field.</para>
+                /// <para>A reserved field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The list of idle DN IDs.</para>
+                /// <para>The list of idle DNs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>none</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The task progress, in percentage.</para>
+            /// <para>The task progress, in percentage (%).</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ProgressInfo { get; set; }
 
             /// <summary>
-            /// <para>The scale-out ID if the task is a scale-out task. This value serves as a unique key in the backend.</para>
+            /// <para>The scale-out ID if the task is a scale-out task. This is a unique key in the backend.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>RUNNING</b>: The task is running.</description></item>
-            /// <item><description><b>FAILED</b>: The task failed.</description></item>
+            /// <item><description><b>FAILED</b>: The task failed and was interrupted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task action, which serves as the unique key for the backend task type.</para>
+            /// <para>The task action, which is the unique key for the backend task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>multi_scale_out</para>

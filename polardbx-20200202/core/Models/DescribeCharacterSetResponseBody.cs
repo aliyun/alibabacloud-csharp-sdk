@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description>utf8mb4</description></item>
             /// <item><description>gbk</description></item>
             /// <item><description>latin1</description></item>
-            /// <item><description>utf8.</description></item>
+            /// <item><description>utf8</description></item>
             /// </list>
             /// </summary>
             [NameInMap("CharacterSet")]

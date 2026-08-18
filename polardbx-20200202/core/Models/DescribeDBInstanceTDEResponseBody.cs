@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether TDE is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: TDE is disabled.</description></item>
-            /// <item><description>1: TDE is enabled.</description></item>
+            /// <item><description>0: Not enabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

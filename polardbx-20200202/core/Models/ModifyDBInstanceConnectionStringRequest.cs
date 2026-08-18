@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NewPort { get; set; }
 
         /// <summary>
-        /// <para>The new connection string prefix.</para>
+        /// <para>The new address prefix.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

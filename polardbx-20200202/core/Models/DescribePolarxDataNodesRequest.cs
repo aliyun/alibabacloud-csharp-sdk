@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for filtering query results.</para>
+        /// <para>The keyword for filtering results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1c5w4fx****2274</para>

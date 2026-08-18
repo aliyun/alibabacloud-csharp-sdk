@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>存储节点私有协议开关(-1关闭，0开启)</para>
+                /// <para>Storage node private protocol switch (-1: disabled, 0: enabled)</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>存储节点私有协议开关(-1关闭，0开启)</para>
+                /// <para>Storage node private protocol switch (-1: disabled, 0: enabled)</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]

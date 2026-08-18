@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>compute</b>: compute layer parameters.</description></item>
-        /// <item><description><b>storage</b>: storage layer parameters.</description></item>
+        /// <item><description><b>compute</b>: compute layer parameter.</description></item>
+        /// <item><description><b>storage</b>: storage layer parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>A JSON-formatted string. MapKey specifies the parameter name, and MapValue specifies the parameter value. The modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to query the available parameters. You can specify multiple parameters in a single request.</para>
+        /// <para>A JSON-formatted string. MapKey specifies the parameter name, and MapValue specifies the parameter value. The modifiable parameters are dynamically added or removed. Call the <a href="https://help.aliyun.com/document_detail/196856.html">DescribeParameterTemplates</a> operation to query the available parameters. You can specify multiple parameters at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;CONN_POOL_BLOCK_TIMEOUT&quot;:6000}</para>

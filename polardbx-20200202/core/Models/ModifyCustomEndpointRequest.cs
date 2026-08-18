@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom endpoint.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>secondary-endpoint</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? NodeAutoEnter { get; set; }
 
         /// <summary>
-        /// <para>The node IDs.</para>
+        /// <para>node ids</para>
         /// 
         /// <b>Example:</b>
         /// <para>node3</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeRole { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>

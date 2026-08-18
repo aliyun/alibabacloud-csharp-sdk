@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class SubmitSqlFlashbackTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PolardbxInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The restoration type. Valid values:</para>
+        /// <para>The restore type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Image-based restoration.</description></item>
-        /// <item><description><b>0</b>: Reverse restoration.</description></item>
+        /// <item><description><b>1</b>: image-based restore.</description></item>
+        /// <item><description><b>0</b>: reverse restore.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RecallRestoreType { get; set; }
 
         /// <summary>
-        /// <para>The matching mode. Valid values:</para>
+        /// <para>The match type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: exact match.</description></item>
         /// <item><description><b>1</b>: fuzzy match.</description></item>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SqlPk { get; set; }
 
         /// <summary>
-        /// <para>The type of SQL. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</para>
+        /// <para>The type of SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSERT,UPDATE</para>

@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The cycle mode. Set this parameter to Week.</para>
+        /// <para>The cycle mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Week: weekly.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

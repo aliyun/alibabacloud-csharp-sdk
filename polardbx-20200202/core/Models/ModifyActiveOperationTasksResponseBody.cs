@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of O&amp;M event IDs, separated by commas.</para>
+        /// <para>The list of O&amp;M event IDs, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

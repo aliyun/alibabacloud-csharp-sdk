@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthorizationState { get; set; }
 
             /// <summary>
-            /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of this role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</para>
+            /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the authorized role. After the authorization of the role is complete, the related KMS can be used. Format: acs:ram::$accountID:role/$roleName.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</para>

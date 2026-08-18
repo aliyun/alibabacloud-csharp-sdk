@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the security administrator account.</para>
+        /// <para>The name of the cryptographic officer (CO) account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account_sec</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the security administrator account.</para>
+        /// <para>The password of the cryptographic officer (CO) account.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

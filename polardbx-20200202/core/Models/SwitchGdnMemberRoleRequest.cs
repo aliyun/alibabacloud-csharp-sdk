@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>常规切换：switch_over
-        /// 强制切换：fail_over</para>
+        /// <para>Regular switchover: switch_over
+        /// Forced switchover: fail_over</para>
         /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]

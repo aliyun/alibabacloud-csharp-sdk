@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BinlogPersistTime { get; set; }
 
             /// <summary>
-            /// <para>The size of the binlog.</para>
+            /// <para>The binlog size.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CdcNewVersion { get; set; }
 
             /// <summary>
-            /// <para>The checksum switch status.</para>
+            /// <para>The checksum switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? EnableCyclicReplication { get; set; }
 
             /// <summary>
-            /// <para>The list of instances.</para>
+            /// <para>The instance list.</para>
             /// </summary>
             [NameInMap("InstanceTopologyList")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
-                /// <para>The remarks on the instance type.</para>
+                /// <para>The instance type remarks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The name of the multi-stream group.</para>
+                /// <para>The multi-stream group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string HashLevel { get; set; }
 
                 /// <summary>
-                /// <para>The name of the instance.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-***</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The array of nodes.</para>
+                /// <para>The node array.</para>
                 /// </summary>
                 [NameInMap("PhysicalNodes")]
                 [Validation(Required=false)]
                 public List<DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes> PhysicalNodes { get; set; }
                 public class DescribeCdcInfoResponseBodyDataInstanceTopologyListPhysicalNodes : TeaModel {
                     /// <summary>
-                    /// <para>The zone in which the instance resides.</para>
+                    /// <para>The zone where the instance resides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-h</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string AZone { get; set; }
 
                     /// <summary>
-                    /// <para>The disk size. Unit: MB.</para>
+                    /// <para>The disk size, in MB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>204800</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the node.</para>
+                    /// <para>The node name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-c-***</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code of the request.</para>
+        /// <para>The HTTP status code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

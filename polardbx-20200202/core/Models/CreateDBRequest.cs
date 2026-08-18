@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The permissions granted to the account on the database. Valid values:</para>
+        /// <para>The permissions granted to the account on the new database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: read and write permissions.</description></item>
-        /// <item><description><b>ReadOnly</b>: read-only permissions.</description></item>
-        /// <item><description><b>DMLOnly</b>: DML-only permissions.</description></item>
-        /// <item><description><b>DDLOnly</b>: DDL-only permissions.</description></item>
+        /// <item><description><b>ReadWrite</b></description></item>
+        /// <item><description><b>ReadOnly</b></description></item>
+        /// <item><description><b>DMLOnly</b></description></item>
+        /// <item><description><b>DDLOnly</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The character set. Valid values:</para>
+        /// <para>The character set. The following character sets are supported:</para>
         /// <list type="bullet">
         /// <item><description><b>utf8</b></description></item>
         /// <item><description><b>gbk</b></description></item>
         /// <item><description><b>latin1</b></description></item>
-        /// <item><description><b>utf8mb4</b>.</description></item>
+        /// <item><description><b>utf8mb4</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The mode of the database. Valid values:</para>
+        /// <para>The mode selected when creating the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto</b>: The database supports automatic partitioning. You do not need to specify a partition key when you create a table.</description></item>
-        /// <item><description><b>drds</b>: The database does not support automatic partitioning. You must use the dedicated sharding syntax to specify sharding keys when you create a table.</description></item>
+        /// <item><description><b>auto</b>: The database supports automatic partitioning. You do not need to specify a partition key when creating a table.</description></item>
+        /// <item><description><b>drds</b>: The database does not support automatic partitioning. You must use dedicated table and database sharding syntax and specify sharding keys when creating a table.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The name of the security administrator account.</para>
         /// <remarks>
-        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The password of the security administrator account.</para>
         /// <remarks>
-        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

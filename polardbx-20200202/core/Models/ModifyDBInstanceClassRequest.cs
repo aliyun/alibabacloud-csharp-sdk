@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
         /// <summary>
-        /// <para>The client token. It can be any unique string.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use any unique string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>polarxro.x4.4xlarge.2e	32 cores, 128 GB (dedicated)</description></item>
         /// <item><description>polarxro.x8.4xlarge.2e	32 cores, 256 GB (dedicated)</description></item>
         /// <item><description>polarxro.st.8xlarge.2e	60 cores, 470 GB (dedicated physical machine)</description></item>
-        /// <item><description>polarxro.st.12xlarge.2e	90 cores, 720 GB (dedicated physical machine).</description></item>
+        /// <item><description>polarxro.st.12xlarge.2e	90 cores, 720 GB (dedicated physical machine)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>mysqlro.x4.4xlarge.1	32 cores, 128 GB (dedicated)</description></item>
         /// <item><description>mysqlro.x8.4xlarge.1	32 cores, 256 GB (dedicated)</description></item>
         /// <item><description>rds.mysql.st.h43	60 cores, 470 GB (dedicated physical machine)</description></item>
-        /// <item><description>rds.mysql.st.v52	90 cores, 720 GB (dedicated physical machine).</description></item>
+        /// <item><description>rds.mysql.st.v52	90 cores, 720 GB (dedicated physical machine)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change specifications for multiple DNs.</para>
+        /// <para>Specifies whether to perform a multi-specification change for DN nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? SpecifiedDNScale { get; set; }
 
         /// <summary>
-        /// <para>The target specifications for each DN when changing specifications for multiple DNs.</para>
+        /// <para>The target specification for each DN node when performing a multi-specification DN change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;pxc-xdb-s-htr3rh44ki3s6a4354&quot;:&quot;mysql.n4.medium.25&quot;,&quot;pxc-xdb-s-htr3rh44ki3s6a71c6&quot;:&quot;mysql.n4.medium.25&quot;}</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SpecifiedDNSpecMapJson { get; set; }
 
         /// <summary>
-        /// <para>The start time of the switch. The switch time range is [start time T, T+30m]. This parameter is not yet available.</para>
+        /// <para>The switch start time. The switch time range is [start time T, T+30m]. This parameter is not yet available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-11T17:10:00Z</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The switch time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: immediately</description></item>
+        /// <item><description>0: immediately.</description></item>
         /// <item><description>1: within the O&amp;M window.</description></item>
         /// </list>
         /// 
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>mysqlro.x8.xlarge.1 	8 cores, 64 GB (dedicated) </description></item>
         /// <item><description>mysqlro.x8.2xlarge.1 	16 cores, 128 GB (dedicated) </description></item>
         /// <item><description>mysqlro.x4.4xlarge.1 	32 cores, 128 GB (dedicated) </description></item>
-        /// <item><description>mysqlro.x8.4xlarge.1	32 cores, 256 GB (dedicated).</description></item>
+        /// <item><description>mysqlro.x8.4xlarge.1	32 cores, 256 GB (dedicated)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

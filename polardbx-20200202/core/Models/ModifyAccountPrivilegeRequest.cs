@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The account permissions. Valid values:</para>
+        /// <para>The account permission. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ReadWrite</b></description></item>
         /// <item><description><b>ReadOnly</b></description></item>
         /// <item><description><b>DMLOnly</b></description></item>
-        /// <item><description><b>DDLOnly</b>.</description></item>
+        /// <item><description><b>DDLOnly</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

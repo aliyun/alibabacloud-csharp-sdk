@@ -62,6 +62,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbPassword { get; set; }
 
         /// <summary>
+        /// <para>The node specifications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>polarx.supabase.x2.small</para>
+        /// </summary>
+        [NameInMap("NodeSpec")]
+        [Validation(Required=false)]
+        public string NodeSpec { get; set; }
+
+        /// <summary>
         /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PREPAY: subscription.</description></item>

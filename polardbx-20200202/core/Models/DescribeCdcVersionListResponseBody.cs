@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCdcVersionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

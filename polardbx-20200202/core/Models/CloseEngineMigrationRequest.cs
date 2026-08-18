@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// </list>
         /// <para>Default value: <b>true</b>.</para>
         /// <remarks>
-        /// <para>Disabling binlog restarts your PolarDB cluster.</para>
+        /// <para>Disabling binlog will restart your PolarDB cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ContinueEnableBinlog { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationTaskCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a pop-up notification is required. Valid values:</para>
+        /// <para>Indicates whether a pop-up window is required. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Required.</description></item>
         /// <item><description>0: Not required.</description></item>

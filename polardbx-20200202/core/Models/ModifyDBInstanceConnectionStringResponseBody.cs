@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. This is typically an error message.</para>
+        /// <para>The response message, which is typically an error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. It is a unique identifier.</para>
+        /// <para>The request ID, which is a unique identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c3cf535c-a585-11ea-8263-00163e04d3a7</para>

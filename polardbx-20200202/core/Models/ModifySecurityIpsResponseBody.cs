@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifySecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message. success is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDataImportTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of failed records.</para>
+        /// <para>The page number of the failed records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>The page number of successful records.</para>
+        /// <para>The page number of the successful records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

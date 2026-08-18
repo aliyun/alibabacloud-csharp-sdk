@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
+        /// <para>The token used to start the next query. An empty value of NextToken indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxdd</para>

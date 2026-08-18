@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDatabaseDescriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The additional information returned. The value success is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The additional information returned. The value is success if the request is successful, or an error code if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeStructureImportTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result set.</para>
+        /// <para>The result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. This parameter is empty if the request is successful. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public CreateSQLEvaluateTaskResponseBodyData Data { get; set; }
         public class CreateSQLEvaluateTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Slink task ID.</para>
+            /// <para>The slink task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>The response message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

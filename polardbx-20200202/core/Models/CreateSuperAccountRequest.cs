@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateSuperAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account.</para>
+        /// <para>The account description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdbadescription</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the account.</para>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account.</para>
+        /// <para>The account password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

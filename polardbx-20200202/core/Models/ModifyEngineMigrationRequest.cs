@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyEngineMigrationRequest : TeaModel {
         /// <summary>
-        /// <para>The specific endpoints to switch. Set this parameter to a JSON string that contains the pairs of endpoints to swap.</para>
+        /// <para>The specific endpoints to switch. The value is a JSON string that corresponds to the endpoint pairs to be swapped.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when SwapConnectionString is set to true.</para>
         /// </remarks>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether to automatically swap connection strings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The application does not need to modify its configuration. Connections are automatically directed to the new instance.</para>
+        /// <item><description><para>true: The application does not need to modify configurations. Connections are automatically directed to the new instance.</para>
         /// </description></item>
         /// <item><description><para>false: You must manually update the application endpoint.</para>
         /// </description></item>

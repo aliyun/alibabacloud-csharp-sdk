@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? CanDeleteCount { get; set; }
 
             /// <summary>
-            /// <para>The details of the endpoints.</para>
+            /// <para>The endpoint details.</para>
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the custom endpoint.</para>
+                /// <para>The custom endpoint ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxe-b6e****o4pfap1s</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DBInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom endpoint.</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Name</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</para>
+                /// <para>Specifies whether the node automatically joins the cluster and starts providing services after being added or restored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string NodeAutoEnter { get; set; }
 
                 /// <summary>
-                /// <para>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <b>READONLY</b> and specify the <b>NodeId</b> parameter.</para>
+                /// <para>If you want to query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <b>READONLY</b> along with the specific <b>NodeId</b>.</para>
                 /// <remarks>
-                /// <para> In other cases, you do not need to specify this parameter or you can set it to <b>MASTER</b>.</para>
+                /// <para> In other cases, you do not need to specify this parameter (or set it to <b>MASTER</b>).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string NodeRole { get; set; }
 
                 /// <summary>
-                /// <para>The port used to connect to the instance.</para>
+                /// <para>The connection port of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3306</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The status of the custom endpoint.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>created</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-8vbkw****5yh4nrd639ih</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC) in which the endpoint resides.</para>
+                /// <para>The ID of the VPC where the endpoint resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf61h****dj1zg5fqp5x7</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeColumnarClassListResponseBodyDataClassCodeList> ClassCodeList { get; set; }
             public class DescribeColumnarClassListResponseBodyDataClassCodeList : TeaModel {
                 /// <summary>
-                /// <para>The instance specification.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.n8.large.col</para>

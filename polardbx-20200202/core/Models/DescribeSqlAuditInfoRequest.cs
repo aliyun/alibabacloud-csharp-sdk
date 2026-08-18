@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides. &gt; You can call <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> to query the regions supported by PolarDB-X, including region IDs.</para>
+        /// <para>The ID of the region in which the instance resides. &gt; You can call <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> to query the regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

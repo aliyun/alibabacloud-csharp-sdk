@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The switch mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: immediately.</description></item>
-        /// <item><description>1: during the O&amp;M window.</description></item>
+        /// <item><description>0: immediately switches.</description></item>
+        /// <item><description>1: switches during the O&amp;M window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

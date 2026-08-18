@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// <para>If configName is set to ENABLE_CONSISTENT_REPLICA_READ, the valid values are &quot;true&quot; and &quot;false&quot;.</para>
+        /// <para>If configName is set to ENABLE_CONSISTENT_REPLICA_READ, valid values are &quot;true&quot; and &quot;false&quot;.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

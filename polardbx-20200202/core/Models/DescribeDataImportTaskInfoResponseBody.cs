@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDataImportTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. This parameter is empty when the request succeeds. When the request fails, an exception message such as an error code is returned.</para>
+        /// <para>The response code. This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result set.</para>
+        /// <para>The result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? FsmId { get; set; }
 
                 /// <summary>
-                /// <para>The state identifier in a data migration or synchronization task.</para>
+                /// <para>The state identifier in the data migration or synchronization task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RECON_FINISHED_CATCH_UP</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string FsmState { get; set; }
 
                 /// <summary>
-                /// <para>The status in a data migration, import, or synchronization system.</para>
+                /// <para>The status in the data migration, import, or synchronization system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IMPORT_NOT_BEGIN</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public long? Progress { get; set; }
 
                         /// <summary>
-                        /// <para>The performance and runtime metrics collected during the execution of the data migration or import task.</para>
+                        /// <para>The performance and runtime metrics recorded during the execution of the data migration or import task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     }
 
                     /// <summary>
-                    /// <para>Valid values:</para>
+                    /// <para>The replication type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>FULL_COPY: full replication.</description></item>
                     /// <item><description>INC_COPY: incremental replication.</description></item>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</para>
+        /// <para>The response message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>The description or remarks of the database.</para>
+        /// <para>The description of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? MustHasCdc { get; set; }
 
         /// <summary>
-        /// <para>The page number. Starts from 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,14 +55,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para>The page size. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>30</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description><ol start="100">
-        /// <item><description></description></item>
-        /// </ol>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -94,10 +86,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para>The instance edition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>enterprise</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>standard</b>: Standard Edition.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</para>
+        /// <para>The end time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T02:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</para>
+        /// <para>The start time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T00:00Z</para>

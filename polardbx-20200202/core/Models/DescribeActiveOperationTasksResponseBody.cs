@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether cancellation is allowed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Not allowed.</description></item>
-            /// <item><description><b>1</b>: Allowed.</description></item>
+            /// <item><description><b>0</b>: not allowed.</description></item>
+            /// <item><description><b>1</b>: allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether modification is allowed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Not allowed.</description></item>
-            /// <item><description><b>1</b>: Allowed.</description></item>
+            /// <item><description><b>0</b>: not allowed.</description></item>
+            /// <item><description><b>1</b>: allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The change level. This parameter can be ignored.</para>
+            /// <para>The change level (can be ignored).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Risk</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The impact. This parameter is not returned.</para>
+            /// <para>The impact (not output).</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Impact { get; set; }
 
             /// <summary>
-            /// <para>The impact description in English.</para>
+            /// <para>The impact in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Transient instance disconnection</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ImpactEn { get; set; }
 
             /// <summary>
-            /// <para>The impact description in Chinese.</para>
+            /// <para>The impact in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>中断</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The result information. This parameter can be ignored.</para>
+            /// <para>The result information (can be ignored).</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -237,8 +237,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>3</b>: Pending. </description></item>
-            /// <item><description><b>4</b>: Running.</description></item>
+            /// <item><description><b>3</b>: pending. </description></item>
+            /// <item><description><b>4</b>: running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The task type in English. This parameter can be ignored.</para>
+            /// <para>The task type in English (can be ignored).</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// <para>The task type in Chinese. This parameter can be ignored.</para>
+            /// <para>The task type in Chinese (can be ignored).</para>
             /// 
             /// <b>Example:</b>
             /// <para>--</para>

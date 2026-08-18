@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
             /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
             /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
-            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB.</description></item>
+            /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The internal cloud instance ID within the VPC. You can ignore this parameter.</para>
+                /// <para>The internal CloudInstanceId within the VPC. This parameter can be ignored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-zkralxpc5d****</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB</description></item>
             /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB</description></item>
             /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB</description></item>
-            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB.</description></item>
+            /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -341,8 +341,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether the instance has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The instance has expired.</description></item>
-            /// <item><description><b>false</b>: The instance is running normally.</description></item>
+            /// <item><description><b>true</b>: Expired.</description></item>
+            /// <item><description><b>false</b>: Not expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? KindCode { get; set; }
 
             /// <summary>
-            /// <para>The Long-Term Support (LTS) version number.</para>
+            /// <para>The LTS version numbers.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("LTSVersions")]
@@ -397,8 +397,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description><b>ManualLock</b>: Manually locked.</description></item>
             /// <item><description><b>LockByExpiration</b>: Automatically locked due to instance expiration.</description></item>
             /// <item><description><b>LockByRestoration</b>: Automatically locked before instance rollback.</description></item>
-            /// <item><description><b>LockByDiskQuota</b>: Automatically locked because the instance storage is full.</description></item>
-            /// <item><description><b>LockReadInstanceByDiskQuota</b>: Automatically locked because the read-only instance storage is full.</description></item>
+            /// <item><description><b>LockByDiskQuota</b>: Automatically locked due to insufficient disk space.</description></item>
+            /// <item><description><b>LockReadInstanceByDiskQuota</b>: Read-only instance automatically locked due to insufficient disk space.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The names of the read-only instances.</para>
+            /// <para>The names of read-only instances.</para>
             /// </summary>
             [NameInMap("ReadDBInstances")]
             [Validation(Required=false)]
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The three-role mode status. Valid values:</para>
+            /// <para>Indicates whether the three-role mode is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>false</b>: Disabled.</description></item>
             /// <item><description><b>true</b>: Enabled.</description></item>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description><b>disabled</b>: Disabled.</description></item>
             /// <item><description><b>enabled</b>: Enabled.</description></item>
             /// <item><description><b>processing</b>: Being processed.</description></item>
-            /// <item><description><b>unknown</b>: Unknown. The instance may be disconnected.</description></item>
+            /// <item><description><b>unknown</b>: Unknown. This may be caused by the instance being unreachable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

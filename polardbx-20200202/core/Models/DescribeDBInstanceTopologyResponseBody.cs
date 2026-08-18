@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DBInstanceConnType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The instance creation time, in the format of yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-10-21T10:30:45Z 04:00:00</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The description of the instance status.</para>
+                /// <para>The instance status description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TDE_MODIFYING</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// <para>The engine type. Default value: polarx.</para>
+                /// <para>The engine. Default value: polarx.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// <para>The list of historical nodes.</para>
+                /// <para>The historical node list.</para>
                 /// </summary>
                 [NameInMap("HistoryItems")]
                 [Validation(Required=false)]
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> HistoryItems { get; set; }
                 public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the node is activated. For the compute layer, only the node in the primary zone is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</para>
+                    /// <para>Indicates whether the node is activated. For the compute layer, only the primary zone node is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? Activated { get; set; }
 
                     /// <summary>
-                    /// <para>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated with a delimiter (,).</para>
+                    /// <para>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated by semicolons (;).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-a</para>
@@ -151,15 +151,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Azone { get; set; }
 
                     /// <summary>
-                    /// <para>The node type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>polarx_cn</b>: compute node.</description></item>
-                    /// <item><description><b>polarx_store</b>: data node.</description></item>
-                    /// <item><description><b>polarx_gms</b>: GMS node.</description></item>
-                    /// </list>
+                    /// <para>The node property. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>节点角色</para>
+                    /// <para>Node role</para>
                     /// </summary>
                     [NameInMap("CharacterType")]
                     [Validation(Required=false)]
@@ -196,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string PhyInstanceName { get; set; }
 
                     /// <summary>
-                    /// <para>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated with a delimiter (,).</para>
+                    /// <para>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated by semicolons (;).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -206,11 +201,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Region { get; set; }
 
                     /// <summary>
-                    /// <para>The role of the node. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>master</b>: primary node</description></item>
-                    /// <item><description><b>standby</b>: secondary node.</description></item>
-                    /// </list>
+                    /// <para>The node role. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>master</para>
@@ -222,14 +213,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 }
 
                 /// <summary>
-                /// <para>The list of nodes.</para>
+                /// <para>The node list.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> Items { get; set; }
                 public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the node is activated. For the compute layer, only the node in the primary zone is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</para>
+                    /// <para>Indicates whether the node is activated. For the compute layer, only the primary zone node is activated. After a primary/secondary switchover is performed on the instance, the standby compute node becomes the primary node. All storage layer nodes are activated.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -239,7 +230,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? Activated { get; set; }
 
                     /// <summary>
-                    /// <para>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated with a delimiter (,).</para>
+                    /// <para>The zone of the node. If the node is an RDS node, the zones of multiple child nodes are separated by semicolons (;).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-a</para>
@@ -267,11 +258,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
                         /// <summary>
                         /// <para>The role of a node in the RDS three-node cluster. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>leader</b>: primary node</description></item>
-                        /// <item><description><b>follower</b>: secondary node</description></item>
-                        /// <item><description><b>logger</b>: logger node.</description></item>
-                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>leader</para>
@@ -283,15 +269,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     }
 
                     /// <summary>
-                    /// <para>The node type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>polarx_cn</b>: compute node.</description></item>
-                    /// <item><description><b>polarx_store</b>: data node.</description></item>
-                    /// <item><description><b>polarx_gms</b>: GMS node.</description></item>
-                    /// </list>
+                    /// <para>The node property. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>节点角色</para>
+                    /// <para>Node role</para>
                     /// </summary>
                     [NameInMap("CharacterType")]
                     [Validation(Required=false)]
@@ -340,14 +321,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The connection type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("DBInstanceConnType")]
                     [Validation(Required=false)]
                     public int? DBInstanceConnType { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the instance was created.</para>
+                    /// <para>The instance creation time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2021-10-21T10:30:45Z</para>
@@ -360,7 +341,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The instance description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("DBInstanceDescription")]
                     [Validation(Required=false)]
@@ -397,10 +378,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? DBInstanceStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the instance status.</para>
+                    /// <para>The instance status description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("DBInstanceStatusDescription")]
                     [Validation(Required=false)]
@@ -417,12 +398,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public long? DiskSize { get; set; }
 
                     /// <summary>
-                    /// <para>The engine type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>mysql</b></description></item>
-                    /// <item><description><b>polarx_cdc</b></description></item>
-                    /// <item><description><b>polarx_dn</b></description></item>
-                    /// </list>
+                    /// <para>The engine version. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mysql</para>
@@ -441,16 +417,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string EngineVersion { get; set; }
 
+                    /// <summary>
+                    /// <para>The instance CN cluster name, such as default.</para>
+                    /// </summary>
                     [NameInMap("InstanceClusterName")]
                     [Validation(Required=false)]
                     public string InstanceClusterName { get; set; }
 
                     /// <summary>
                     /// <para>Indicates whether the node is locked. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>0</b>: Not locked.</description></item>
-                    /// <item><description><b>1</b>: Locked.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -460,30 +435,30 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? LockMode { get; set; }
 
                     /// <summary>
-                    /// <para>The reason why the instance is locked.</para>
+                    /// <para>The lock reason.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("LockReason")]
                     [Validation(Required=false)]
                     public string LockReason { get; set; }
 
                     /// <summary>
-                    /// <para>The end time of the O&amp;M window.</para>
+                    /// <para>The O&amp;M window end time.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("MaintainEndTime")]
                     [Validation(Required=false)]
                     public string MaintainEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the O&amp;M window.</para>
+                    /// <para>The O&amp;M window start time.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>不展示</para>
+                    /// <para>Not displayed</para>
                     /// </summary>
                     [NameInMap("MaintainStartTime")]
                     [Validation(Required=false)]
@@ -510,20 +485,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? MaxIops { get; set; }
 
                     /// <summary>
-                    /// <para>The node specifications. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB</description></item>
-                    /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB</description></item>
-                    /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB</description></item>
-                    /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB</description></item>
-                    /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB</description></item>
-                    /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB</description></item>
-                    /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB</description></item>
-                    /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB</description></item>
-                    /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB</description></item>
-                    /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB</description></item>
-                    /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB.</description></item>
-                    /// </list>
+                    /// <para>The node specifications:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>polarx.x4.large.2e</para>
@@ -542,12 +504,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string PhyInstanceName { get; set; }
 
+                    /// <summary>
+                    /// <para>The read/write type, such as ReadWrite.</para>
+                    /// </summary>
                     [NameInMap("ReadType")]
                     [Validation(Required=false)]
                     public string ReadType { get; set; }
 
                     /// <summary>
-                    /// <para>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated with a delimiter (,).</para>
+                    /// <para>The region of the node. If the node is an RDS node, the regions of multiple child nodes are separated by semicolons (;).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -557,11 +522,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Region { get; set; }
 
                     /// <summary>
-                    /// <para>The role of the node. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>master</b>: primary node</description></item>
-                    /// <item><description><b>standby</b>: secondary node.</description></item>
-                    /// </list>
+                    /// <para>The node role. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>master</para>
@@ -571,16 +532,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>The node status. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>0</b>: Running.</description></item>
-                    /// <item><description><b>1</b>: Creating.</description></item>
-                    /// <item><description><b>2</b>: Abnormal.</description></item>
-                    /// <item><description><b>3</b>: Expired.</description></item>
-                    /// <item><description><b>4</b>: Releasing.</description></item>
-                    /// <item><description><b>5</b>: Released.</description></item>
-                    /// <item><description><b>6</b>: Locked.</description></item>
-                    /// </list>
+                    /// <para>The node status:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -600,7 +552,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string StorageUsed { get; set; }
 
                     /// <summary>
-                    /// <para>The logger node version.</para>
+                    /// <para>The log node version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>polarx-cdc-kernel-2.0.0-3985896</para>
@@ -612,11 +564,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 }
 
                 /// <summary>
-                /// <para>The lock status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>0</b>: Not locked.</description></item>
-                /// <item><description><b>1</b>: Locked.</description></item>
-                /// </list>
+                /// <para>The lock status:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -626,17 +574,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? LockMode { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the instance is locked.</para>
+                /// <para>The lock reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>欠费</para>
+                /// <para>Overdue</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the O&amp;M window. Format: HH:mm:ss.</para>
+                /// <para>The O&amp;M window end time, in the format of HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>05:00:00</para>
@@ -646,7 +594,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string MaintainEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the O&amp;M window. Format: HH:mm:ss.</para>
+                /// <para>The O&amp;M window start time, in the format of HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>04:00:00</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ResetAccountPasswordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</para>
+        /// <para>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

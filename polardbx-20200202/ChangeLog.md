@@ -1,3 +1,24 @@
+2026-08-18 Version: 3.9.0
+- Support API AllocateContextDBPublicConnection.
+- Support API CreateContextDB.
+- Support API CreatePxfuse.
+- Support API CreateServiceAccount.
+- Support API DeleteContextDB.
+- Support API DeletePxfuse.
+- Support API DeleteServiceAccount.
+- Support API DescribeContextDBConfig.
+- Support API DescribeContextDBInfo.
+- Support API DescribeContextDBSecurityIps.
+- Support API DescribePxfuseInfo.
+- Support API DescribePxfuseSecurityIps.
+- Support API DescribeServiceAccount.
+- Support API ExecuteMetaQuery.
+- Support API ModifyContextDBSecurityIps.
+- Support API ModifyPxfuseSecurityIps.
+- Support API ReleaseContextDBPublicConnection.
+- Update API CreatePolardbxSupabaseInstance: add request parameters NodeSpec.
+
+
 2026-07-03 Version: 3.8.0
 - Support API CheckHealth.
 - Support API CreatePolardbxSupabaseInstance.

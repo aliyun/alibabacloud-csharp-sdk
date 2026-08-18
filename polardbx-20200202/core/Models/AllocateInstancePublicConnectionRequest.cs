@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance CN cluster, such as default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>

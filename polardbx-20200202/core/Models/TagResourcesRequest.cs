@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The resource IDs. You can specify up to 50 subkeys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this parameter to PolarDBXInstance.</para>
+        /// <para>The resource type. The value must be PolarDBXInstance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// <para>The list of labels. You can specify up to 20 subkeys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The label key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>

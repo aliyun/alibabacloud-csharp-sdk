@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteCustomEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom endpoint domain name.</para>
+        /// <para>The ID of the custom endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxe-8if3zrfsu****hgw</para>

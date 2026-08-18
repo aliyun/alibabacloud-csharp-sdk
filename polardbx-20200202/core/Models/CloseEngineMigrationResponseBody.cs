@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The new endpoint information.</para>
+        /// <para>The new endpoint connection string information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

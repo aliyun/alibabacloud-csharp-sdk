@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The enabling status of the SQL audit feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled: Enabled.</description></item>
-        /// <item><description>disabled: Not enabled.</description></item>
+        /// <item><description>enabled: The feature is enabled.</description></item>
+        /// <item><description>disabled: The feature is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

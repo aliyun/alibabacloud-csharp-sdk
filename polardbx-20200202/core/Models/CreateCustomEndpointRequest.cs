@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a node automatically joins the cluster and starts providing services after the node is added or recovered.</para>
+        /// <para>Specifies whether the node automatically joins the cluster and starts providing services after being added or recovered.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? NodeAutoEnter { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored per rule.</para>
+        /// <para>The IDs of the monitored nodes when RemindUnit (object type) is set to NODE (node). Separate multiple IDs with commas (,). A maximum of 50 nodes can be monitored by a single rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeIds { get; set; }
 
         /// <summary>
-        /// <para>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, set this parameter to <b>READONLY</b> and specify the <b>NodeId</b> parameter.</para>
+        /// <para>To query the metrics of a read-only node in a cloud-native read/write splitting architecture instance, specify <b>READONLY</b> for this parameter along with the specific <b>NodeId</b>.</para>
         /// <remarks>
-        /// <para> In other cases, you do not need to specify this parameter or you can set it to <b>MASTER</b>.</para>
+        /// <para> In other cases, you do not need to specify this parameter or you can specify <b>MASTER</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

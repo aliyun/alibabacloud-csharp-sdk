@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class SkipCurrentStepRequest : TeaModel {
         /// <summary>
-        /// <para>The current operation step of the task.</para>
+        /// <para>The current operation step number of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRE_CHECK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CurrentStep { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance is located.</para>
+        /// <para>The region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

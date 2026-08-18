@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyColumnarClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy details returned.</para>
+        /// <para>The returned policy details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

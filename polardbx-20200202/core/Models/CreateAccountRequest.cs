@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>ReadWrite</description></item>
         /// <item><description>ReadOnly</description></item>
         /// <item><description>DMLOnly</description></item>
-        /// <item><description>DDLOnly.</description></item>
+        /// <item><description>DDLOnly</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The name of the security administrator account.</para>
         /// <remarks>
-        /// <para>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</para>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The password of the security administrator account.</para>
         /// <remarks>
-        /// <para>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, this parameter is not required.</para>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

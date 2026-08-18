@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: *<b>enable</b>: enabled. *<b>disabled</b>: disabled.</para>
+        /// <para>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: <b>enable</b>: enables the source ApsaraDB RDS instance. <b>disabled</b>: disables the source ApsaraDB RDS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_test3</para>

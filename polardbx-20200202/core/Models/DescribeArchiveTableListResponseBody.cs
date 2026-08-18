@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeArchiveTableListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeArchiveTableListResponseBodyData Data { get; set; }
         public class DescribeArchiveTableListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page index.</para>
             /// </summary>
             [NameInMap("PageIndex")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ArchiveStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the table was created.</para>
+                /// <para>The creation time.</para>
                 /// </summary>
                 [NameInMap("CreatedDate")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// <para>The space occupied by the table.</para>
+                /// <para>The space size occupied by the table.</para>
                 /// </summary>
                 [NameInMap("SpaceSize")]
                 [Validation(Required=false)]

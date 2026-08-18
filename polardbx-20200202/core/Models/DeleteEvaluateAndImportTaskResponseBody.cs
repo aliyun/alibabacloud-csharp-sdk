@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>msg</para>

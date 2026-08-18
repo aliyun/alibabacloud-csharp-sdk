@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CycleType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the O&amp;M window.</para>
+            /// <para>The O&amp;M end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the O&amp;M window.</para>
+            /// <para>The O&amp;M start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Indicates whether the O&amp;M window has been configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: configured.</description></item>
-        /// <item><description>0: not configured.</description></item>
+        /// <item><description>1: Configured.</description></item>
+        /// <item><description>0: Not configured.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
