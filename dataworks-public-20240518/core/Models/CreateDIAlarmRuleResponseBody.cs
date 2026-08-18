@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated and is replaced by the Id parameter.</para>
+        /// <para><b>[Deprecated]</b> Use the Id parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C636A747-7E4E-594D-94CD-2B****</para>

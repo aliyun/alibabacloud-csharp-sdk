@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecuteAdhocWorkflowInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp.</para>
+        /// <para>The business date. The value is a timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? BizDate { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The name of the workflow instance.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The list of tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]

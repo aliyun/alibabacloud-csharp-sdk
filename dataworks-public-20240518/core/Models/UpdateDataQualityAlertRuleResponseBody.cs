@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert rule was updated.</para>
+        /// <para>Indicates whether the alert rule is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

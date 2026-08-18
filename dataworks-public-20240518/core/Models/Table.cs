@@ -238,7 +238,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>dlf-table::catalog_id:database_name::table_name</para>
+        /// <para>maxcompute-table:123456XXX::test_project::test_tbl
+        /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
+        /// hms-table:c-abc123xxx::test_db::test_tbl
+        /// holo-table:h-abc123xxx::test_db:test_schema:test_tbl</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -258,7 +261,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>table_name</para>
+        /// <para>test_tbl</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -290,7 +293,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>dlf-database::catalog_id:database_name</para>
+        /// <para>maxcompute-schema:123456XXX::test_project_with_schema:default
+        /// maxcompute-project:123456XXX::test_project_without_schema
+        /// dlf-database:123456XXX:test_catalog:test_db
+        /// hms-database:c-abc123xxx::test_db
+        /// holo-schema:h-abc123xxx::test_db:test_schema</para>
         /// </summary>
         [NameInMap("ParentMetaEntityId")]
         [Validation(Required=false)]

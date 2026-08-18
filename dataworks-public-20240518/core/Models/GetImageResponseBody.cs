@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetImageResponseBodyImage Image { get; set; }
         public class GetImageResponseBodyImage : TeaModel {
             /// <summary>
-            /// <para>The image visibility:</para>
+            /// <para>The image visibility. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Public: Visible to all users.</para>
-            /// </description></item>
-            /// <item><description><para>Private: Visible only to the creator.</para>
-            /// </description></item>
+            /// <item><description>Public: visible to all users.</description></item>
+            /// <item><description>Private: visible only to the creator.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<GetImageResponseBodyImageBuildConfigPackageInstallationScripts> PackageInstallationScripts { get; set; }
                 public class GetImageResponseBodyImageBuildConfigPackageInstallationScripts : TeaModel {
                     /// <summary>
-                    /// <para>The script content. If the content consists of package names, separate them with commas (,).</para>
+                    /// <para>The script content. If the content contains package names, separate them with commas (,).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>requests</para>
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether synchronization to MaxCompute is enabled.</para>
+            /// <para>Indicates whether synchronization with MaxCompute is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -251,7 +249,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Official { get; set; }
 
             /// <summary>
-            /// <para>The image ID assigned by the provider.</para>
+            /// <para>The image ID from the image provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acr_image_id</para>
@@ -261,12 +259,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProviderImageId { get; set; }
 
             /// <summary>
-            /// <para>The image provider type:</para>
+            /// <para>The image reference data type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ACR: ACR image repository.</para>
-            /// </description></item>
-            /// <item><description><para>DataWorks: DataWorks official image.</para>
-            /// </description></item>
+            /// <item><description>ACR: ACR image repository.</description></item>
+            /// <item><description>DataWorks: DataWorks official image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -277,34 +273,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProviderType { get; set; }
 
             /// <summary>
-            /// <para>The publish stage:</para>
+            /// <para>The publish status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Untest: Not tested.</para>
-            /// </description></item>
-            /// <item><description><para>Testing: Being tested.</para>
-            /// </description></item>
-            /// <item><description><para>TestFailed: Test failed.</para>
-            /// </description></item>
-            /// <item><description><para>Unpublished: Not published.</para>
-            /// </description></item>
-            /// <item><description><para>Publishing: Being published.</para>
-            /// </description></item>
-            /// <item><description><para>Published: Published.</para>
-            /// </description></item>
-            /// <item><description><para>PublishFailed: Publish failed.</para>
-            /// </description></item>
-            /// <item><description><para>Building: Being built.</para>
-            /// </description></item>
-            /// <item><description><para>BuildSuccess: Build succeeded.</para>
-            /// </description></item>
-            /// <item><description><para>BuildFailed: Build failed.</para>
-            /// </description></item>
-            /// <item><description><para>Accelerating: Being accelerated.</para>
-            /// </description></item>
-            /// <item><description><para>AccelerateSuccess: Acceleration succeeded.</para>
-            /// </description></item>
-            /// <item><description><para>AccelerateFailed: Acceleration failed.</para>
-            /// </description></item>
+            /// <item><description>Untest: not tested.</description></item>
+            /// <item><description>Testing: being tested.</description></item>
+            /// <item><description>TestFailed: test failed.</description></item>
+            /// <item><description>Unpublished: not published.</description></item>
+            /// <item><description>Publishing: being published.</description></item>
+            /// <item><description>Published: published.</description></item>
+            /// <item><description>PublishFailed: publish failed.</description></item>
+            /// <item><description>Building: being built.</description></item>
+            /// <item><description>BuildSuccess: build succeeded.</description></item>
+            /// <item><description>BuildFailed: build failed.</description></item>
+            /// <item><description>Accelerating: being accelerated.</description></item>
+            /// <item><description>AccelerateSuccess: acceleration succeeded.</description></item>
+            /// <item><description>AccelerateFailed: acceleration failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -335,16 +318,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Size { get; set; }
 
             /// <summary>
-            /// <para>The image status:</para>
+            /// <para>The image status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: The image is disabled.</para>
-            /// </description></item>
-            /// <item><description><para>Expired: The image has expired.</para>
-            /// </description></item>
-            /// <item><description><para>Available: The image is available.</para>
-            /// </description></item>
-            /// <item><description><para>ReadOnly: The image is read-only.</para>
-            /// </description></item>
+            /// <item><description>Disabled: disabled.</description></item>
+            /// <item><description>Expired: expired.</description></item>
+            /// <item><description>Available: active.</description></item>
+            /// <item><description>ReadOnly: read-only.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -362,9 +341,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetImageResponseBodyImageSupported Supported { get; set; }
             public class GetImageResponseBodyImageSupported : TeaModel {
                 /// <summary>
-                /// <para>The supported module:</para>
+                /// <para>The supported module. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: Scheduling.</description></item>
+                /// <item><description>Scheduler: scheduling.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

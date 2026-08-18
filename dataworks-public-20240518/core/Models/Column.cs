@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:::project_name:[schema_name]:table_name:column_name</para>
+        /// <para>maxcompute-column:123456::test_project:default:test_tbl:col1</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>column_name</para>
+        /// <para>col1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The table ID. For more information, see the <c>Table</c> object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
+        /// <para>maxcompute-table:123456::test_project:default:test_tbl</para>
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

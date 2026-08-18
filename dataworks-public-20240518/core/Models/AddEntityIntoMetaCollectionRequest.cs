@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class AddEntityIntoMetaCollectionRequest : TeaModel {
         /// <summary>
-        /// <para>The entity ID. Currently, only table entities are supported. You can call the ListTables operation to obtain the ID.</para>
+        /// <para>The ID of the entity. Currently, only the table type is supported. You can obtain the ID from the response of the ListTables operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The collection ID. You can refer to the return result of the ListMetaCollections operation.</para>
+        /// <para>The ID of the collection object. You can obtain the ID from the response of the ListMetaCollections operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MetaCollectionId { get; set; }
 
         /// <summary>
-        /// <para>Remarks added when adding the entity to a collection. This parameter is currently valid only for album collections.</para>
+        /// <para>The remarks when adding the entity to the collection. Currently, this parameter takes effect only for the album type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

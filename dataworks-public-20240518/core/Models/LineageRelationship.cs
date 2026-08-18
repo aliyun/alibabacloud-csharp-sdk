@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public LineageEntity DstEntity { get; set; }
 
         /// <summary>
-        /// <para>The ID.</para>
+        /// <para>ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public LineageEntity SrcEntity { get; set; }
 
         /// <summary>
-        /// <para>The task.</para>
+        /// <para>The node.</para>
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]

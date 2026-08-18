@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListRoutesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The routes of the network resource.</para>
+            /// <para>The list of network resource routes.</para>
             /// </summary>
             [NameInMap("RouteList")]
             [Validation(Required=false)]
             public List<ListRoutesResponseBodyPagingInfoRouteList> RouteList { get; set; }
             public class ListRoutesResponseBodyPagingInfoRouteList : TeaModel {
                 /// <summary>
-                /// <para>The creation time, which is a 64-bit timestamp.</para>
+                /// <para>The creation time, represented as a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The destination CIDR block of the route.</para>
+                /// <para>The destination CIDR of the route.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.0/16</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The network resource ID.</para>
+                /// <para>The ID of the network resource to which the route belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? NetworkId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
+                /// <para>The unique identifier of the resource group to which the route belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless_res_group_524257424564736_6831777003****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the network resource.</para>
+                /// <para>The unique identifier of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ns-679XXXXXX</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. It is used to locate logs and troubleshoot problems.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>

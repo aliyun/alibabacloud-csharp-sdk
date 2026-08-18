@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container. If you specify this parameter, only nodes in the specified container are returned. This parameter is independent of the resource group (ResourceGroupId).</para>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter is of the Long type in SDK versions earlier than 8.0.0 and of the String type in SDK 8.0.0 and later. <b>This change does not affect SDK usage. The parameter is returned in the type defined for your SDK version.</b> The type change may cause compilation errors only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</para>
+        /// <para>Leave this parameter empty if not specified. The filter condition: within the specified container. Specify the container ID. This parameter is not related to the resource group (ResourceGroupId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>860438872620113XXXX</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The node name. Fuzzy search is supported.</para>
+        /// <para>The node name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return.</para>
+        /// <para>The page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. To find this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,13 +61,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Filters nodes by their scheduling type. Valid values:</para>
+        /// <para>Filter condition: scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal: The node runs as scheduled.</para>
+        /// <item><description><para>Normal: The node is executed normally.</para>
         /// </description></item>
-        /// <item><description><para>Pause: The node is paused and blocks its dependent downstream nodes.</para>
+        /// <item><description><para>Pause: The node status is set to paused, and downstream nodes that depend on the current node are blocked from execution.</para>
         /// </description></item>
-        /// <item><description><para>Skip: The node is skipped, and the system immediately returns a success status with a 0-second execution time. This action does not block downstream nodes or consume resources.</para>
+        /// <item><description><para>Skip: The node status is set to dry run. The system directly returns a success result (with an execution duration of 0 seconds), does not block downstream node execution, and does not consume resources.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -83,13 +79,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Recurrence { get; set; }
 
         /// <summary>
-        /// <para>The rerun mode. Valid values:</para>
+        /// <para>The rerun property. If not specified, this parameter is left empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Allowed: The node can be rerun regardless of whether it succeeded or failed.</para>
+        /// <item><description><para>Allowed: The node can be rerun regardless of whether it runs successfully or fails.</para>
         /// </description></item>
-        /// <item><description><para>FailureAllowed: The node can be rerun only if its previous run failed.</para>
+        /// <item><description><para>FailureAllowed: The node can be rerun only after a failed run, not after a successful run.</para>
         /// </description></item>
-        /// <item><description><para>Denied: The node cannot be rerun regardless of whether it succeeded or failed.</para>
+        /// <item><description><para>Denied: The node cannot be rerun regardless of whether it runs successfully or fails.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -101,13 +97,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The context for filtering nodes. In data development, this corresponds to the sections in the directory tree on the left. If you omit this parameter, no filtering is applied. Valid values:</para>
+        /// <para>The scene in which the node resides. Leave this parameter empty if not specified. This parameter corresponds to the partition of the left-side navigation pane in DataStudio. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DataworksProject: Nodes in the project directory.</para>
+        /// <item><description><para>DataworksProject: project folder.</para>
         /// </description></item>
-        /// <item><description><para>DataworksManualWorkflow: manual workflow</para>
+        /// <item><description><para>DataworksManualWorkflow: manual workflow.</para>
         /// </description></item>
-        /// <item><description><para>DataworksManualTask: manual task</para>
+        /// <item><description><para>DataworksManualTask: manual node.</para>
         /// </description></item>
         /// </list>
         /// 

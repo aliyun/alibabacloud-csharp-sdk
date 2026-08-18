@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The new custom request headers, specified as key-value pairs.</para>
+        /// <para>The new custom request headers (key-value pairs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Transport { get; set; }
 
         /// <summary>
-        /// <para>The new service address. The address must start with<c>https://</c>.</para>
+        /// <para>The new service URL. The URL must start with <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></para>
@@ -61,21 +61,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The new visibility scope. The fields in this object depend on the value of the <c>Visibility</c> parameter.</para>
+        /// <para>The new visibility scope. Provide the corresponding field based on the Visibility setting.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]
         public UpdateMcpServerRequestVisibilityScope VisibilityScope { get; set; }
         public class UpdateMcpServerRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of workspace IDs that can access the MCP Server. This parameter takes effect only when <c>Visibility</c> is set to <c>PROJECT</c>.</para>
+            /// <para>The list of visible project IDs. This parameter takes effect only when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of user IDs that can access the MCP Server. This parameter takes effect only when <c>Visibility</c> is set to <c>USER</c>.</para>
+            /// <para>The list of visible user IDs. This parameter takes effect only when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

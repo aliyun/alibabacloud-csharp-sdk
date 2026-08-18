@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAlertRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the custom rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A6C6B486-E3A2-5D52-9E76-D9380485D946</para>

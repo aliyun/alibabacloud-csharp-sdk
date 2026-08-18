@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateProjectRoleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ModulePermissionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
-        /// <para>This parameter specifies the DataWorks workspace on which the API operation is performed.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API invocation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

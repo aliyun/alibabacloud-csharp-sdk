@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListRoutesRequest : TeaModel {
         /// <summary>
-        /// <para>The network ID.</para>
+        /// <para>The ID of the network resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The unique identifier of the general quota.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,14 +51,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The list of sort fields. Fields such as scheduled time and start time are supported. The format is &quot;sort field + sort order (Desc/Asc)&quot; (Asc is the default if omitted). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Id (Desc/Asc): the route ID</para>
-        /// </description></item>
-        /// <item><description><para>DestinationCidr (Desc/Asc): the destination CIDR block of the route</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime (Desc/Asc): the time when the route is created</para>
-        /// </description></item>
+        /// <item><description>Id (Desc/Asc): route ID</description></item>
+        /// <item><description>DestinationCidr (Desc/Asc): destination CIDR</description></item>
+        /// <item><description>CreateTime (Desc/Asc): creation time</description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCatalogResponseBody : TeaModel {
         /// <summary>
-        /// <para>Catalog information.</para>
+        /// <para>The data catalog information.</para>
         /// </summary>
         [NameInMap("Catalog")]
         [Validation(Required=false)]

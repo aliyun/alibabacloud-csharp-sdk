@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class BatchCreateMetaEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>9E0C8E7A-C6BE-5A73-9562-2A030A80E8C6</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of results for the batch creation operation. This list provides the success status and any error messages for each individual entity in the request.</para>
+        /// <para>The list of entity creation results. Each entry indicates whether the creation is successful and the failure reason.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<MetaEntityWriteResult> Results { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. This parameter returns <c>true</c> even if creating some entities fails. To determine the outcome for each entity, check the <c>Success</c> and <c>ErrorMessage</c> fields in the <c>Results</c> array.</para>
+        /// <para>Indicates whether the request is successful. If some entities fail, the value is still true. Check Results[].Success and Results[].ErrorMessage for individual results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

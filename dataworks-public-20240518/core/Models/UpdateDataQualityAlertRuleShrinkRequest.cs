@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityAlertRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The alert condition of the data quality monitoring rule.</para>
+        /// <para>The alert condition of the data quality monitoring alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule.</para>
+        /// <para>The alert rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105412</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Alert notification configurations.</para>
+        /// <para>The alert notification configuration.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The monitored target of the data quality monitoring rule.</para>
+        /// <para>The monitoring target of the data quality monitoring alert rule.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

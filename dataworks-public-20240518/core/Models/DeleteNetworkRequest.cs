@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the network that you want to delete.</para>
+        /// <para>The ID of the network resource to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

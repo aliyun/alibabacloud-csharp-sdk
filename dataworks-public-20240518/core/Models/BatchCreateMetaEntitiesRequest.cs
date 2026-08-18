@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class BatchCreateMetaEntitiesRequest : TeaModel {
         /// <summary>
-        /// <para>An entity list. You can create up to five entities in a batch. All entities in the batch must have the same <c>EntityType</c>.</para>
+        /// <para>The list of entities. A maximum of five entities are supported. All entities in the same batch must have the same entityType.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<BatchCreateMetaEntitiesRequestEntities> Entities { get; set; }
         public class BatchCreateMetaEntitiesRequestEntities : TeaModel {
             /// <summary>
-            /// <para>The entity attributes. Complex values must be serialized into a JSON string.</para>
+            /// <para>The entity attributes. Complex values must be serialized as JSON strings.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
-            /// <para>The comment for the entity.</para>
+            /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a comment</para>
@@ -38,22 +38,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The custom attribute values. The key is the identifier of the custom attribute, and the value is a single-element list.</para>
-            /// <remarks>
-            /// <para>Notice: The custom attributes used here must be created in advance by using the CreateCustomAttribute API. For example, after you create a custom attribute with the ID <c>custom-attribute:owner_name</c>, you can configure the custom attribute by setting this parameter to {\&quot;owner_name\&quot;: [\&quot;Bob\&quot;]}.</para>
-            /// </remarks>
+            /// <para>The custom attribute values. The key is the custom attribute identifier, and the value currently supports only a single value.
+            /// <notice>The custom attributes used here must be created in advance by calling the CreateCustomAttribute operation. For example, after you call the API to create a custom attribute with the ID <c>custom-attribute:owner_name</c>, you can configure {\&quot;owner_name\&quot;: [\&quot;Bob\&quot;]} here to complete the custom attribute configuration.</notice></para>
             /// </summary>
             [NameInMap("CustomAttributes")]
             [Validation(Required=false)]
             public Dictionary<string, List<string>> CustomAttributes { get; set; }
 
             /// <summary>
-            /// <para>The entity type. All entities in a batch must have the same type. The following types are supported:</para>
+            /// <para>The entity type. All entities in the same batch must have the same type. The following types are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Custom types, such as <c>custom_entity-biz_api</c>.</para>
-            /// </description></item>
-            /// <item><description><para>Extended table types. For example, if you have registered the <c>custom_dw-table</c> metadata entity type, you can create objects of the corresponding <c>custom_dw-database</c> (database) and <c>custom_dw-table</c> (table) types.</para>
-            /// </description></item>
+            /// <item><description>Custom entity types, such as custom_entity-biz_api.</description></item>
+            /// <item><description>Extension table types. If the metadata entity type custom_dw-table is registered, you can create objects of the corresponding database type custom_dw-database and table type custom_dw-table.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The entity name. The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter and not exceed 64 characters.</para>
+            /// <para>The entity name. The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with a letter and can be up to 64 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

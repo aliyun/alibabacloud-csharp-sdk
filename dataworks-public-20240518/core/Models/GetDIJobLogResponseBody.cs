@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDIJobLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log.</para>
+        /// <para>The task logs.</para>
         /// 
         /// <b>Example:</b>
         /// <remarks>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Log { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>

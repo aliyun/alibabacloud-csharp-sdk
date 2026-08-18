@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</para>
-        /// <para>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</para>
+        /// <para>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the resource group list page to obtain the ID.</para>
+        /// <para>This parameter is used to manage the DataWorks workspace that you create within the specified Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzbn7****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AliyunResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to enable the development environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</para>
+        /// <item><description><para>true: The development environment is enabled for the workspace, which supports isolation between the development and production environments.</para>
         /// </description></item>
-        /// <item><description><para>false: disables the development environment. In this case, only the production environment is used in the workspace.</para>
+        /// <item><description><para>false: Only the production environment is used.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? DevEnvironmentEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable the Develop role. Valid values:</para>
+        /// <para>Specifies whether to disable the development role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default)</para>
+        /// <item><description><para>false: The development role is enabled. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: The development role is disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
-        /// <para>Limits:</para>
+        /// <para>The workspace name.</para>
+        /// <para>Constraints:</para>
         /// <list type="bullet">
-        /// <item><description><para>The workspace name must be unqiue in a region.</para>
+        /// <item><description><para>The workspace name must be unique within the region.</para>
         /// </description></item>
-        /// <item><description><para>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</para>
+        /// <item><description><para>The name must start with a letter and can contain only letters, digits, and underscores (_).</para>
         /// </description></item>
-        /// <item><description><para>The workspace name must be 3 to 28 characters in length.</para>
+        /// <item><description><para>The name must be 3 to 28 characters in length.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -123,11 +123,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</para>
+        /// <para>Specifies whether to enable PAI task scheduling. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</para>
+        /// <item><description><para>true: You can create Machine Learning Platform for AI (PAI) nodes in the DataWorks workspace and run them on a periodic schedule based on the node configurations.</para>
         /// </description></item>
-        /// <item><description><para>false: disables scheduling of PAI tasks.</para>
+        /// <item><description><para>false: PAI task scheduling is disabled.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID, which is used for locating logs and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Information about the resource group creation order.</para>
+        /// <para>The order information of the created common resource group.</para>
         /// </summary>
         [NameInMap("ResourceGroupOrder")]
         [Validation(Required=false)]
         public CreateResourceGroupResponseBodyResourceGroupOrder ResourceGroupOrder { get; set; }
         public class CreateResourceGroupResponseBodyResourceGroupOrder : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the general-purpose resource group.</para>
+            /// <para>The unique identifier of the created common resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group creation order.</para>
+            /// <para>The order ID of the created common resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2391982058XXXXX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the resource group creation order.</para>
+            /// <para>The order instance ID of the created common resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>

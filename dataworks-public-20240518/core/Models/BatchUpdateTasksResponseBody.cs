@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class BatchUpdateTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the batch operation, which is in the MAP structure. The task ID serves as a key, and the result serves as a value.</para>
+        /// <para>The result information of the batch operation. The structure is a map in which the node ID is the key and the result information is the value.</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

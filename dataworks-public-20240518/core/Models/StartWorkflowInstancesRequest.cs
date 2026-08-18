@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The IDs of workflow instances.</para>
+        /// <para>The list of workflow instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]

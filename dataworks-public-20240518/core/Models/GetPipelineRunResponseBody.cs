@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetPipelineRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the pipeline run.</para>
+        /// <para>The information about the deployment process.</para>
         /// </summary>
         [NameInMap("Pipeline")]
         [Validation(Required=false)]
         public GetPipelineRunResponseBodyPipeline Pipeline { get; set; }
         public class GetPipelineRunResponseBodyPipeline : TeaModel {
             /// <summary>
-            /// <para>The time when the pipeline run was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the deployment package was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724984066000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the pipeline run.</para>
+            /// <para>The creator of the deployment process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137946317766XXXX</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description of the pipeline run.</para>
+            /// <para>The description of the deployment process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>发布流程描述信息</para>
+            /// <para>Deployment process description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the pipeline run.</para>
+            /// <para>The ID of the deployment process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the pipeline run fails.</para>
+            /// <para>The error message returned when the deployment fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Error message</para>
@@ -67,7 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The time when the pipeline run was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The modification time.</para>
+            /// <para>The value is a 13-digit number, such as <c>1724984066000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724984066000</para>
@@ -87,14 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The stages in the pipeline run.</para>
+            /// <para>The stage details.</para>
             /// </summary>
             [NameInMap("Stages")]
             [Validation(Required=false)]
             public List<GetPipelineRunResponseBodyPipelineStages> Stages { get; set; }
             public class GetPipelineRunResponseBodyPipelineStages : TeaModel {
                 /// <summary>
-                /// <para>The code that identifies the stage.</para>
+                /// <para>The code of the deployment stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEV_CHECK</para>
@@ -114,14 +115,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Detailed information about the stage.</para>
+                /// <para>The detailed information about the stage.</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Detail { get; set; }
 
                 /// <summary>
-                /// <para>The exception message returned if the stage fails.</para>
+                /// <para>The exception message of the deployment stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Exception information XXX</para>
@@ -141,21 +142,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The status of the stage.</para>
+                /// <para>The status of the deployment stage.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Init</c>: The stage is being initialized.</para>
-                /// </description></item>
-                /// <item><description><para><c>Running</c>: The stage is in progress.</para>
-                /// </description></item>
-                /// <item><description><para><c>Success</c>: The stage succeeded.</para>
-                /// </description></item>
-                /// <item><description><para><c>Fail</c>: The stage failed.</para>
-                /// </description></item>
-                /// <item><description><para><c>Terminated</c>: The stage was terminated.</para>
-                /// </description></item>
-                /// <item><description><para><c>Canceled</c>: The stage was canceled.</para>
-                /// </description></item>
+                /// <item><description>Init: Initialization.</description></item>
+                /// <item><description>Running: Running.</description></item>
+                /// <item><description>Success: Succeeded.</description></item>
+                /// <item><description>Fail: Failed.</description></item>
+                /// <item><description>Termination: Terminated.</description></item>
+                /// <item><description>Cancel: Canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The sequence number of the stage within the pipeline.</para>
+                /// <para>The step number of the deployment stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -176,19 +171,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Step { get; set; }
 
                 /// <summary>
-                /// <para>The type of the stage.</para>
+                /// <para>The type of the deployment stage.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Deploy</c>: A deployment operation.</para>
-                /// </description></item>
-                /// <item><description><para><c>Check</c>: A check operation.</para>
-                /// </description></item>
-                /// <item><description><para><c>Offline</c>: An offline operation.</para>
-                /// </description></item>
-                /// <item><description><para><c>Build</c>: A build operation.</para>
-                /// </description></item>
-                /// <item><description><para><c>Delete</c>: A delete operation.</para>
-                /// </description></item>
+                /// <item><description>Deploy: deploy operation</description></item>
+                /// <item><description>Check: check operation</description></item>
+                /// <item><description>Offline: offline operation</description></item>
+                /// <item><description>Build: build operation</description></item>
+                /// <item><description>Delete: delete operation</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -201,21 +191,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The status of the pipeline run.</para>
+            /// <para>The status of the deployment process.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Init</c>: The pipeline run is being initialized.</para>
-            /// </description></item>
-            /// <item><description><para><c>Running</c>: The pipeline run is in progress.</para>
-            /// </description></item>
-            /// <item><description><para><c>Success</c>: The pipeline run succeeded.</para>
-            /// </description></item>
-            /// <item><description><para><c>Fail</c>: The pipeline run failed.</para>
-            /// </description></item>
-            /// <item><description><para><c>Terminated</c>: The pipeline run was terminated.</para>
-            /// </description></item>
-            /// <item><description><para><c>Canceled</c>: The pipeline run was canceled.</para>
-            /// </description></item>
+            /// <item><description>Init: Initialization.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Success: Succeeded.</description></item>
+            /// <item><description>Fail: Failed.</description></item>
+            /// <item><description>Termination: Terminated.</description></item>
+            /// <item><description>Cancel: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08468352-032C-5262-AEDC-68C9FA05XXXX</para>

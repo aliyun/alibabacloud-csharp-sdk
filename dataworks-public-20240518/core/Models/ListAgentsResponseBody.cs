@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListAgentsResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ListAgentsResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The request ID passed in by the caller. The value is returned as-is in the response.</para>
+            /// <para>The ID passed in by the requester. The value is returned as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70623e38-a889-4192-930a-752ffdd75f48</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The paginated query result for agents.</para>
+            /// <para>The paging query result for agents.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string NextToken { get; set; }
 
                 /// <summary>
-                /// <para>The total number of agents that match the filter criteria.</para>
+                /// <para>The total number of matched agents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>27</para>

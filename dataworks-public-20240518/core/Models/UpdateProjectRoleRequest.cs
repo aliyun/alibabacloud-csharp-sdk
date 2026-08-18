@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateProjectRoleRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -41,42 +41,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The DataWorks module ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>2: HoloStudio</para>
-            /// </description></item>
-            /// <item><description><para>3: StreamStudio</para>
-            /// </description></item>
-            /// <item><description><para>4: Deployment Center</para>
-            /// </description></item>
-            /// <item><description><para>6: Data Security Guard</para>
-            /// </description></item>
-            /// <item><description><para>7: Data Map</para>
-            /// </description></item>
-            /// <item><description><para>8: Data Service</para>
-            /// </description></item>
-            /// <item><description><para>9: Data Integration</para>
-            /// </description></item>
-            /// <item><description><para>10: Data Modeling (DataBlau DDM)</para>
-            /// </description></item>
-            /// <item><description><para>11: Data Studio</para>
-            /// </description></item>
-            /// <item><description><para>12: Data Quality</para>
-            /// </description></item>
-            /// <item><description><para>13: Data Governance</para>
-            /// </description></item>
-            /// <item><description><para>14: Operation Center</para>
-            /// </description></item>
-            /// <item><description><para>15: Resource Optimization</para>
-            /// </description></item>
-            /// <item><description><para>16: Migration Assistant</para>
-            /// </description></item>
-            /// <item><description><para>17: Data Analysis</para>
-            /// </description></item>
-            /// <item><description><para>18: Approval Center</para>
-            /// </description></item>
-            /// <item><description><para>19: Security Center</para>
-            /// </description></item>
-            /// <item><description><para>20: Intelligent Data Modeling</para>
-            /// </description></item>
+            /// <item><description>2: HoloStudio</description></item>
+            /// <item><description>3: StreamStudio</description></item>
+            /// <item><description>4: Deploy Management</description></item>
+            /// <item><description>6: Data Protection Umbrella</description></item>
+            /// <item><description>7: Data Map</description></item>
+            /// <item><description>8: DataService Studio</description></item>
+            /// <item><description>9: Data Integration</description></item>
+            /// <item><description>10: Data Modeling (DataBlau DDM)</description></item>
+            /// <item><description>11: DataStudio</description></item>
+            /// <item><description>12: Data Quality</description></item>
+            /// <item><description>13: Data Governance Center</description></item>
+            /// <item><description>14: Operation Center</description></item>
+            /// <item><description>15: Resource Optimization</description></item>
+            /// <item><description>16: Migration Assistant</description></item>
+            /// <item><description>17: Data Analytics</description></item>
+            /// <item><description>18: Approval Center</description></item>
+            /// <item><description>19: Security Center</description></item>
+            /// <item><description>20: Intelligent Data Modeling</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,12 +71,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Write: Read-only</para>
-            /// </description></item>
-            /// <item><description><para>Read: Edit</para>
-            /// </description></item>
-            /// <item><description><para>NotSet: Not controlled</para>
-            /// </description></item>
+            /// <item><description>Write: Edit.</description></item>
+            /// <item><description>Read: Read-only.</description></item>
+            /// <item><description>NotSet: Not controlled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,8 +86,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
-        /// <para>This parameter specifies the DataWorks workspace on which the API operation is performed.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API invocation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityAlertRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The user-defined rule ID returned after the monitoring rule is successfully created.</para>
+        /// <para>The ID of the custom monitoring rule returned after the rule is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1010543619</para>

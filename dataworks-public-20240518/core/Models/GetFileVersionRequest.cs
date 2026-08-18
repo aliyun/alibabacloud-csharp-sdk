@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetFileVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file. You can obtain the ID of the desired file by calling <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a>.</para>
+        /// <para>The ID of the file. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? FileVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can click the wrench icon in the upper-right corner of the page to go to the Workspace Management page and view it.</para>
+        /// <para>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000011</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the Data Development page when you switch workspaces.</para>
-        /// <para>You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace for this API call.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed at the top of the DataStudio page for switching workspaces.</para>
+        /// <para>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>

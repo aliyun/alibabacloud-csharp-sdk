@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDeploymentPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deployment package details.</para>
+        /// <para>The details of the deployment package.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDeploymentPackageResponseBodyData Data { get; set; }
         public class GetDeploymentPackageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The deployment item details.</para>
+            /// <para>The details of the deployed items.</para>
             /// </summary>
             [NameInMap("DeployedItems")]
             [Validation(Required=false)]
             public List<GetDeploymentPackageResponseBodyDataDeployedItems> DeployedItems { get; set; }
             public class GetDeploymentPackageResponseBodyDataDeployedItems : TeaModel {
                 /// <summary>
-                /// <para>The file ID.</para>
+                /// <para>The ID of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5076****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>The file version.</para>
+                /// <para>The version of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -44,21 +44,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FileVersion { get; set; }
 
                 /// <summary>
+                /// <para>The status of the deployed item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>UNPUBLISHED(0)</para>
-                /// </description></item>
-                /// <item><description><para>SUCCESS(1)</para>
-                /// </description></item>
-                /// <item><description><para>ERROR(2)</para>
-                /// </description></item>
-                /// <item><description><para>CLONED(3)</para>
-                /// </description></item>
-                /// <item><description><para>DEPLOY_ERROR(4)</para>
-                /// </description></item>
-                /// <item><description><para>CLONING(5)</para>
-                /// </description></item>
-                /// <item><description><para>REJECT(6)</para>
-                /// </description></item>
+                /// <item><description>UNPUBLISHED(0): not published</description></item>
+                /// <item><description>SUCCESS(1): published successfully</description></item>
+                /// <item><description>ERROR(2): publishing failed</description></item>
+                /// <item><description>CLONED(3): cloned successfully</description></item>
+                /// <item><description>DEPLOY_ERROR(4): publishing failed</description></item>
+                /// <item><description>CLONING(5): cloning in progress</description></item>
+                /// <item><description>REJECT(6): publishing rejected</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,19 +65,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The deployment package details.</para>
+            /// <para>The details of the deployment package.</para>
             /// </summary>
             [NameInMap("Deployment")]
             [Validation(Required=false)]
             public GetDeploymentPackageResponseBodyDataDeployment Deployment { get; set; }
             public class GetDeploymentPackageResponseBodyDataDeployment : TeaModel {
                 /// <summary>
-                /// <para>The validation status of nodes in the deployment package. For packages deployed to the development environment (toEnviroment=1), you can only proceed to deploy to production if the package Status is 1 (succeeded) and CheckingStatus is empty (validation complete).</para>
+                /// <para>The check status of the nodes involved in the deployment package. When the target environment is the development environment (toEnvironment=1), you can publish the file to the production environment only when the Status of the deployment package is 1 and CheckingStatus is empty.</para>
                 /// <list type="bullet">
-                /// <item><description><para>7: Validation failed</para>
-                /// </description></item>
-                /// <item><description><para>8: Validation in progress</para>
-                /// </description></item>
+                /// <item><description>7: The check failed.</description></item>
+                /// <item><description>8: The check is in progress.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? CheckingStatus { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp (in milliseconds) when the deployment package was created.</para>
+                /// <para>The timestamp when the deployment package was generated, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593877765000</para>
@@ -104,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID of the user who created the deployment package.</para>
+                /// <para>The Alibaba Cloud user ID of the user who created the deployment package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20030****</para>
@@ -114,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The detailed error message when the deployment package fails (status is 2).</para>
+                /// <para>The error message recorded when the deployment package fails to run (status is 2).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -124,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp (in milliseconds) when the deployment started.</para>
+                /// <para>The timestamp when the deployment package started to run, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593877765000</para>
@@ -134,7 +126,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>The environment where the deployment is executed. Valid values: 0 (local) and 1 (development).</para>
+                /// <para>The environment from which the deployment is initiated. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: local</description></item>
+                /// <item><description>1: development environment</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -144,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? FromEnvironment { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID of the user who executed the deployment.</para>
+                /// <para>The Alibaba Cloud user ID of the user who executed the deployment package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2003****</para>
@@ -154,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string HandlerId { get; set; }
 
                 /// <summary>
-                /// <para>The deployment package name, displayed on the Deploy Center &gt; Deployment Packages page.</para>
+                /// <para>The name of the deployment package, which is displayed on the Task Publish &gt; Deployment Package List page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ods_user_info_d-2020-07-04_20030****</para>
@@ -164,7 +160,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The current status of the deployment package. Valid values: 0 (ready), 1 (succeeded), and 2 (failed).</para>
+                /// <para>The current status of the deployment package. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: ready</description></item>
+                /// <item><description>1: successful</description></item>
+                /// <item><description>2: failed</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -174,7 +175,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The target environment for the deployment. Valid values: 1 (development) and 2 (production).</para>
+                /// <para>The target environment to which the file information is published. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: development environment</description></item>
+                /// <item><description>2: production environment</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -218,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376****</para>
@@ -228,12 +233,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

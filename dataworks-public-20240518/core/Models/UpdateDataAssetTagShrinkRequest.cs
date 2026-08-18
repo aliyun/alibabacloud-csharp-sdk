@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataAssetTagShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the tag.</para>
+        /// <para>The label description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
+        /// <para>The label key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The tag administrators.</para>
+        /// <para>The list of label administrators.</para>
         /// </summary>
         [NameInMap("Managers")]
         [Validation(Required=false)]
         public string ManagersShrink { get; set; }
 
         /// <summary>
-        /// <para>The tag values.</para>
+        /// <para>The list of label values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

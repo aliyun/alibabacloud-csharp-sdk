@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This field is deprecated. Use the <c>Id</c> field instead.</para>
+        /// <para><b>[Deprecated]</b> Use the Id response parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11792</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The data integration job ID.</para>
+        /// <para>The ID of the data integration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11792</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</para>

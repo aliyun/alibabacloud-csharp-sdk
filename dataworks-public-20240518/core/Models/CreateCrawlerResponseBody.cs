@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateCrawlerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the newly created metadata crawler.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9252F32F-D855-549E-8898-61CF5A733050</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

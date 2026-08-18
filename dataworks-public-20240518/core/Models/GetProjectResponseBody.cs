@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the workspace.</para>
+        /// <para>The details of the workspace.</para>
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>Indicates whether the development environment is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</para>
+            /// <item><description><para>true: The development environment is enabled for the workspace, which supports isolation between the development and production environments.</para>
             /// </description></item>
-            /// <item><description><para>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</para>
+            /// <item><description><para>false: Only the production environment is used.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -82,11 +82,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? DevEnvironmentEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Develop role is disabled. Valid values:</para>
+            /// <para>Indicates whether the development role is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>false</para>
+            /// <item><description><para>false: The development role is enabled.</para>
             /// </description></item>
-            /// <item><description><para>true</para>
+            /// <item><description><para>true: The development role is disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sora_finance</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the workspace belongs.</para>
+            /// <para>The user ID of the workspace owner, which is the Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>207947397706614299</para>
@@ -138,11 +138,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scheduling of PAI tasks is enabled. Valid values:</para>
+            /// <para>Indicates whether PAI task scheduling is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</para>
+            /// <item><description><para>true: You can create Machine Learning Platform for AI (PAI) nodes in the DataWorks workspace and run them on a periodic schedule based on the node configurations.</para>
             /// </description></item>
-            /// <item><description><para>false: Scheduling of PAI tasks is disabled.</para>
+            /// <item><description><para>false: PAI task scheduling is disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -154,26 +154,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? PaiTaskEnabled { get; set; }
 
             /// <summary>
-            /// <para>The status of the workspace. Valid values:</para>
+            /// <para>The workspace status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Available</para>
-            /// </description></item>
-            /// <item><description><para>Initializing</para>
-            /// </description></item>
-            /// <item><description><para>InitFailed</para>
-            /// </description></item>
-            /// <item><description><para>Forbidden</para>
-            /// </description></item>
-            /// <item><description><para>Deleting</para>
-            /// </description></item>
-            /// <item><description><para>DeleteFailed</para>
-            /// </description></item>
-            /// <item><description><para>Frozen</para>
-            /// </description></item>
-            /// <item><description><para>Updating</para>
-            /// </description></item>
-            /// <item><description><para>UpdateFailed</para>
-            /// </description></item>
+            /// <item><description>Available: The workspace is running normally.</description></item>
+            /// <item><description>Initializing: The workspace is being initialized.</description></item>
+            /// <item><description>InitFailed: The workspace failed to be initialized.</description></item>
+            /// <item><description>Forbidden: The workspace is manually disabled.</description></item>
+            /// <item><description>Deleting: The workspace is being deleted.</description></item>
+            /// <item><description>DeleteFailed: The workspace failed to be deleted.</description></item>
+            /// <item><description>Frozen: The workspace is frozen due to overdue payment.</description></item>
+            /// <item><description>Updating: The workspace is being updated.</description></item>
+            /// <item><description>UpdateFailed: The workspace failed to be updated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A1****</para>

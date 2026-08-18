@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The specific file stream or OSS download link contained in the resource.</para>
+        /// <para>The file stream or Object Storage Service (OSS) download URL of the resource file.</para>
         /// <remarks>
-        /// <para>This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</para>
+        /// <para>Notice: This field allows you to specify a file stream or an OSS download URL. If you specify an OSS download URL, make sure that the URL is publicly accessible. A pre-signed URL is recommended.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceFile { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</para>
+        /// <para>The FlowSpec information that describes the resource file. For more information about the specification, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

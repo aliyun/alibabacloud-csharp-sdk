@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class BatchCreateMetaEntitiesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>An entity list. You can create up to five entities in a batch. All entities in the batch must have the same <c>EntityType</c>.</para>
+        /// <para>The list of entities. A maximum of five entities are supported. All entities in the same batch must have the same entityType.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

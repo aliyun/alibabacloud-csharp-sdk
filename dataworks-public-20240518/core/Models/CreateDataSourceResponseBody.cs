@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data source ID.</para>
+        /// <para>The ID of the created data source. This is the unique identifier of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22130</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B62EC203-B39E-5DC1-B5B8-EB3C6****</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the creation was successful.</para>
+        /// <para>Indicates whether the dataset is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

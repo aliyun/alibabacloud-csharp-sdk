@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityScanRunShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data quality scan ID.</para>
+        /// <para>The ID of the data quality monitoring task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityScanId { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the run. The <c>triggerTime</c> parameter is required.</para>
+        /// <para>The parameter settings used during the actual run. The <c>triggerTime</c> parameter is required.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the scheduling resource group used to run the data quality scan. This object uses the same data structure as the scheduling API.</para>
+        /// <para>The schedule resource group used when the data quality monitoring task runs. This shares the same data structure as the scheduling API.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]

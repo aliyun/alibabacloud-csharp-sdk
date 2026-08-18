@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityEvaluationTaskInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data quality evaluation task.</para>
+        /// <para>The ID of the data quality check task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityEvaluationTaskId { get; set; }
 
         /// <summary>
-        /// <para>The execution parameters of the data quality evaluation in the JSON format. The following keys are available:</para>
+        /// <para>The execution parameters of the data quality check in JSON format. The following keys are available:</para>
         /// <list type="bullet">
-        /// <item><description>triggerTime: the millisecond timestamp of the trigger time. This is the base time for the $[yyyymmdd] expression in the data range of data quality monitoring. This key is required.</description></item>
+        /// <item><description>triggerTime: the timestamp in milliseconds of the trigger time. This value is used as the base time for the $[yyyymmdd] expression in the data range of the data quality monitoring task. This key is required.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
-        /// <para>This parameter specifies the DataWorks workspace in which this API operation is performed.</para>
+        /// <para>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API invoke operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The resource group information. This parameter is required when you run a data quality evaluation on a non-MaxCompute data source.</para>
+        /// <para>The resource group information. This parameter is required when running data quality checks on non-MaxCompute data.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]

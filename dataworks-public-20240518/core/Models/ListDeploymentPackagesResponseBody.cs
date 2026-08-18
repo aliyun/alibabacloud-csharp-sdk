@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListDeploymentPackagesResponseBodyData Data { get; set; }
         public class ListDeploymentPackagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned list of deployment packages.</para>
+            /// <para>The list of deployment packages.</para>
             /// </summary>
             [NameInMap("Deployments")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID of the deployment package creator.</para>
+                /// <para>The Alibaba Cloud user ID of the deployment package creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2003****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>When the deployment package fails to execute, this parameter is used to record the error message.</para>
+                /// <para>The error message recorded when the deployment package fails to be executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OK</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID of the deployment package executor.</para>
+                /// <para>The Alibaba Cloud user ID of the deployment package executor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2003****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Executor { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to get the deployment package details.</para>
+                /// <para>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the details of the deployment package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11111</para>
@@ -94,16 +94,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The status of the deployment package. Valid values:</para>
+                /// <para>The current status of the deployment package. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: It is ready.</para>
-                /// </description></item>
-                /// <item><description><para>1: It was successfully deployed.</para>
-                /// </description></item>
-                /// <item><description><para>2: It failed to be deployed.</para>
-                /// </description></item>
-                /// <item><description><para>6: It was rejected.</para>
-                /// </description></item>
+                /// <item><description>0: The deployment package is ready.</description></item>
+                /// <item><description>1: The deployment package is published.</description></item>
+                /// <item><description>2: The deployment package failed to be published.</description></item>
+                /// <item><description>6: The deployment package is rejected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -136,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records that meet the conditions.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952795279527ab****</para>

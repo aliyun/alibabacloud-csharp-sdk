@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteCrawlerRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the metadata crawler. You can call ListCrawlers to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

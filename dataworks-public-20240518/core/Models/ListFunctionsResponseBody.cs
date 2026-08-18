@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListFunctionsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListFunctionsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The function list.</para>
+            /// <para>The list of functions.</para>
             /// </summary>
             [NameInMap("Functions")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ArmResource { get; set; }
 
                 /// <summary>
-                /// <para>The fully qualified class name of the UDF.</para>
+                /// <para>The fully qualified class name of the UDF function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.demo.Main</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommandDescription { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the UDF was created.</para>
+                /// <para>The timestamp when the UDF function was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1655953028000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Data source information of the UDF.</para>
+                /// <para>The data source information of the UDF function.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The database name. This parameter is used only when the function type is EMR Function.</para>
+                /// <para>The database name. This field is used only when the function type is EMR Function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EMR_lake</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// <para>The general description of the function.</para>
+                /// <para>The overall description of the function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Description</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Content of the nested function code</para>
+                /// <para>The embedded function code content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>print(\&quot;hello,world!\&quot;)</para>
@@ -123,19 +123,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EmbeddedCode { get; set; }
 
                 /// <summary>
-                /// <para>The nested code type.</para>
+                /// <para>The embedded code type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Python2</para>
-                /// </description></item>
-                /// <item><description><para>Python3</para>
-                /// </description></item>
-                /// <item><description><para>Java8</para>
-                /// </description></item>
-                /// <item><description><para>Java11</para>
-                /// </description></item>
-                /// <item><description><para>Java17</para>
-                /// </description></item>
+                /// <item><description>Python2</description></item>
+                /// <item><description>Python3</description></item>
+                /// <item><description>Java8</description></item>
+                /// <item><description>Java11</description></item>
+                /// <item><description>Java17</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,13 +141,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EmbeddedCodeType { get; set; }
 
                 /// <summary>
-                /// <para>The nested resource type.</para>
+                /// <para>The embedded resource type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>File: General resource file.</para>
-                /// </description></item>
-                /// <item><description><para>Embedded: Embedded resource.</para>
-                /// </description></item>
+                /// <item><description>File: common resource file</description></item>
+                /// <item><description>Embedded: embedded resource</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -174,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ExampleDescription { get; set; }
 
                 /// <summary>
-                /// <para>The implementation code of the function and the list of resource files.</para>
+                /// <para>The implementation code of the function. The list of resource files.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx.jar,yyy.jar</para>
@@ -184,9 +177,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FileResource { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the UDF.</para>
+                /// <para>The unique identifier of the UDF function.</para>
                 /// <remarks>
-                /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</b>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -198,6 +191,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The modification time.</para>
+                /// <para>The value is a 13-digit number, such as <c>1655953028000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1655953028000</para>
@@ -207,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The UDF name.</para>
+                /// <para>The name of the UDF function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Function name</para>
@@ -217,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the UDF.</para>
+                /// <para>The owner of the UDF function.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -238,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ParameterDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the project to which the UDF belongs.</para>
+                /// <para>The ID of the project to which the UDF function belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>307XXX</para>
@@ -265,7 +259,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource RuntimeResource { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>The runtime resource group ID.</para>
+                    /// <para>The ID of the runtime resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>S_resgrop_xxx</para>
@@ -277,16 +271,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>Script information of the UDF.</para>
+                /// <para>The script information of the UDF function.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public ListFunctionsResponseBodyPagingInfoFunctionsScript Script { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsScript : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the script.</para>
+                    /// <para>The script ID.</para>
                     /// <remarks>
-                    /// <para>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para>Notice: This field was of the Long type in SDK versions earlier than 8.0.0 and is of the String type in SDK 8.0.0 and later. <b>This change does not affect normal SDK usage. The parameter is still returned in the type defined in the SDK</b>. Only when you upgrade the SDK across version 8.0.0, the type change may cause project compilation failures, and you need to manually correct the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -307,14 +301,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>Runtime</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime Runtime { get; set; }
                     public class ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>Command</para>
+                        /// <para>The command.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ODPS_FUNCTION</para>
@@ -328,21 +322,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The UDF type.</para>
+                /// <para>The type of the UDF function.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Math: Mathematical operation functions</para>
-                /// </description></item>
-                /// <item><description><para>Aggregate: Aggregation functions</para>
-                /// </description></item>
-                /// <item><description><para>String: String processing functions</para>
-                /// </description></item>
-                /// <item><description><para>Date: Date functions</para>
-                /// </description></item>
-                /// <item><description><para>Analytic: Window functions</para>
-                /// </description></item>
-                /// <item><description><para>Other: Other functions</para>
-                /// </description></item>
+                /// <item><description>Math: mathematical operation function</description></item>
+                /// <item><description>Aggregate: aggregate functions</description></item>
+                /// <item><description>String: character string processing function</description></item>
+                /// <item><description>Date: date function</description></item>
+                /// <item><description>Analytic: window function</description></item>
+                /// <item><description>Other: other function</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -355,7 +343,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned data. Used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -375,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the filter conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>294</para>
@@ -387,7 +375,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for troubleshooting when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89FB2BF0-EB00-5D03-9C34-05931001XXXX</para>

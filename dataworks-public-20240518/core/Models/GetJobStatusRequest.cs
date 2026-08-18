@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asynchronous task that is generated after you call an asynchronous operation.</para>
+        /// <para>The task ID returned after calling an asynchronous API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

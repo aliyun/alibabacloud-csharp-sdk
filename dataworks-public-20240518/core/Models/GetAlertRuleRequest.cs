@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetAlertRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the custom alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28547072</para>

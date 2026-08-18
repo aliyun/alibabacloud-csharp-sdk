@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRulesRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the associated data quality evaluation task.</para>
+        /// <para>The ID of the associated quality check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityEvaluationTaskId { get; set; }
 
         /// <summary>
-        /// <para>Rule name for fuzzy matching.</para>
+        /// <para>The rule name for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unit_test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number for paginated query. Default value: 1.</para>
+        /// <para>The page number for paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page. Default value: 10. Maximum value: 200.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>DataWorks workspace ID.</para>
+        /// <para>The DataWorks workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10002</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the table to which the rule applies in Data Map.</para>
+        /// <para>The unique identifier of the table that the rule applies to in DataWorks Data Map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.unit_test.tb_unit_test</para>

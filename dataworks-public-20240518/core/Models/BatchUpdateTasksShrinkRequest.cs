@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]

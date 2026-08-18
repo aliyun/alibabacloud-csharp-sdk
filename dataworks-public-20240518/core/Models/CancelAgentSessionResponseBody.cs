@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CancelAgentSessionResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class CancelAgentSessionResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The ID passed by the requester. The value is returned as-is in the response.</para>
+            /// <para>The ID passed in by the requester, returned as-is in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7675839888324361477</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>7CD3D216-5876-5DB1-A34A-396806F4A413</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDeploymentPackageFilesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the workflow ID by name.</para>
+        /// <para>The ID of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID of the workflow by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001</para>
@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? BusinessId { get; set; }
 
         /// <summary>
-        /// <para>The change type. Valid values:</para>
+        /// <para>The change type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>0: addition</para>
-        /// </description></item>
-        /// <item><description><para>1: update</para>
-        /// </description></item>
-        /// <item><description><para>2: deletion</para>
-        /// </description></item>
+        /// <item><description>0: added.</description></item>
+        /// <item><description>1: updated.</description></item>
+        /// <item><description>2: deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? ChangeType { get; set; }
 
         /// <summary>
-        /// <para>The start date for committing. Specify the date in the yyyy-MM-dd format.</para>
+        /// <para>The start date for the commit, in the format yyyy-MM-dd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-01</para>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CommitFrom { get; set; }
 
         /// <summary>
-        /// <para>The end date (included) for committing. Specify the date in the yyyy-MM-dd format.</para>
+        /// <para>The end date for the commit (inclusive), in the format yyyy-MM-dd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-31</para>
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CommitTo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who commits the file.</para>
+        /// <para>The user ID of the committer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2003****</para>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CommitUserId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the files to be queried.</para>
+        /// <para>The list of file IDs to query.</para>
         /// </summary>
         [NameInMap("FileIds")]
         [Validation(Required=false)]
@@ -85,8 +82,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The type of the code for the file.</para>
-        /// <para>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</para>
+        /// <para>The code type of the file.</para>
+        /// <para>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.
+        /// You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code type of a file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -116,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The solution ID.</para>
+        /// <para>The Solutions ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8065</para>

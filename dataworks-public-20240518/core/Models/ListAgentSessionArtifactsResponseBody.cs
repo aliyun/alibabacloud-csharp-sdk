@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListAgentSessionArtifactsResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ListAgentSessionArtifactsResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The ID passed by the caller. The value is returned as-is in the response.</para>
+            /// <para>The ID passed in by the requester. The value is returned as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28477817</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The paginated information of artifacts.</para>
+            /// <para>The pagination information of model artifacts.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public ListAgentSessionArtifactsResponseBodyJsonRpcResponseResult Result { get; set; }
             public class ListAgentSessionArtifactsResponseBodyJsonRpcResponseResult : TeaModel {
                 /// <summary>
-                /// <para>The list of artifacts.</para>
+                /// <para>The list of model artifacts.</para>
                 /// </summary>
                 [NameInMap("Artifacts")]
                 [Validation(Required=false)]
                 public List<ListAgentSessionArtifactsResponseBodyJsonRpcResponseResultArtifacts> Artifacts { get; set; }
                 public class ListAgentSessionArtifactsResponseBodyJsonRpcResponseResultArtifacts : TeaModel {
                     /// <summary>
-                    /// <para>The name of the artifact.</para>
+                    /// <para>The name of the model artifact.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mock_report.md</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ArtifactName { get; set; }
 
                     /// <summary>
-                    /// <para>The path of the artifact.</para>
+                    /// <para>The path of the model artifact.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mock/mock_report.md</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ArtifactPath { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the artifact, which is typically the file extension.</para>
+                    /// <para>The type of the model artifact, typically a file extension.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>md</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The actual number of entries returned per page.</para>
+                /// <para>The actual number of entries per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? MaxResults { get; set; }
 
                 /// <summary>
-                /// <para>The token for the next page. The value is null if there are no more pages.</para>
+                /// <para>The token for the next page. The value is null for the last page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CAESExFsbyH...</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>

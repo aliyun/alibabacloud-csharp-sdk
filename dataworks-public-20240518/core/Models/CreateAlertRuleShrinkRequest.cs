@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAlertRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the rule is enabled.</para>
+        /// <para>Specifies whether the alert rule is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The name of the custom rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the alert notification.</para>
+        /// <para>The alert notification configuration.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the owner of the rule.</para>
+        /// <para>The Alibaba Cloud UID of the owner of the custom rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The alert triggering condition.</para>
+        /// <para>The condition that triggers the alert.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerCondition")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class LineageEntity : TeaModel {
         /// <summary>
-        /// <para>The additional properties.</para>
+        /// <para>The other properties.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -23,12 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456XXX::test_project::test_tbl
-        /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
-        /// hms-table:c-abc123xxx::test_db::test_tbl
-        /// holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-        /// custom-api:api123
-        /// custom-table:table456</para>
+        /// <para>maxcompute-table:123456::test_project::test_tbl</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

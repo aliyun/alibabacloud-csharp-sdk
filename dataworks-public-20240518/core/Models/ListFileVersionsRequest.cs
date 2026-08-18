@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFileVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</para>
+        /// <para>The ID of the file. You can call <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> to query the file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// <para>The page number for pagination.</para>
+        /// <para>The page number. Used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</para>
+        /// <para>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001</para>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</para>
-        /// <para>Either this parameter or ProjectId must be specified to identify the target DataWorks workspace for this API call.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</para>
+        /// <para>You must set either this parameter or ProjectId to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>

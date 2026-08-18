@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecPipelineRunStageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AFBB799F-8578-51C5-A766-E922EDB8XXXX</para>
@@ -20,13 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note:</b> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</para>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call failed.<remarks>
+        /// <para>Notice: This only indicates whether the stage is triggered, not the execution result of the publish stage.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 

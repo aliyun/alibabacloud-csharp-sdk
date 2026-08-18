@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The business date. This is generally 00:00:00 of the day before the scheduled instance trigger time, in millisecond-level timestamp format, such as 1743350400000.</para>
+        /// <para>The business date. This is typically 00:00:00 of the day before the scheduled time of the periodic instance. The value is a millisecond-level timestamp, such as 1743350400000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? BizDate { get; set; }
 
         /// <summary>
+        /// <para>The project environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
         /// </summary>
@@ -29,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The filter. In JSON format, multiple filter conditions have an AND relationship. Currently supported fields are: <c>status, executionDate</c>.</para>
+        /// <para>The filter. The value is in JSON format. Multiple filter conditions have an AND relationship. Currently supported fields: <c>status, executionDate</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{<br>    &quot;status&quot;: &quot;Success&quot;,
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The list of workflow instance IDs. You can use this parameter to query multiple workflow instances at a time.</para>
+        /// <para>The list of workflow instance IDs. You can use this parameter to query information about multiple workflow instances in a batch.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,20 +105,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The list of sort fields. Sorting by trigger time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot; (Asc can be omitted). Valid values of the sort field:</para>
+        /// <para>The list of sort fields. Sorting by scheduled time, start time, and other fields is supported. The format is &quot;sort field + sort order (Desc/Asc)&quot;. Asc is the default if omitted. Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description><para>TriggerTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>StartedTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>FinishedTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>CreateTime (Desc/Asc)</para>
-        /// </description></item>
-        /// <item><description><para>Id (Desc/Asc)</para>
-        /// </description></item>
+        /// <item><description>TriggerTime (Desc/Asc)</description></item>
+        /// <item><description>StartedTime (Desc/Asc)</description></item>
+        /// <item><description>FinishedTime (Desc/Asc)</description></item>
+        /// <item><description>CreateTime (Desc/Asc)</description></item>
+        /// <item><description>Id (Desc/Asc)</description></item>
         /// </list>
-        /// <para>Default value: Id Desc</para>
+        /// <para>Default value: Id Desc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id Desc</para>
@@ -122,27 +123,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. Results are returned if any one of the specified tags is matched.</para>
+        /// <para>The list of tags. Results are returned if any one of the specified tags matches.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance.</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal: Periodic scheduling</para>
-        /// </description></item>
-        /// <item><description><para>Manual: Manual task</para>
-        /// </description></item>
-        /// <item><description><para>SmokeTest: Testing</para>
-        /// </description></item>
-        /// <item><description><para>SupplementData: Backfill data</para>
-        /// </description></item>
-        /// <item><description><para>ManualWorkflow: Manual workflow</para>
-        /// </description></item>
-        /// <item><description><para>TriggerWorkflow: Trigger-based workflow</para>
-        /// </description></item>
+        /// <item><description>Normal: periodic scheduling</description></item>
+        /// <item><description>Manual: manual task</description></item>
+        /// <item><description>SmokeTest: test</description></item>
+        /// <item><description>SupplementData: data backfill</description></item>
+        /// <item><description>ManualWorkflow: manual workflow</description></item>
+        /// <item><description>TriggerWorkflow: trigger-based workflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The unified workflow instance ID. All workflow instances within the same business date of a single trigger share the same value for this field.</para>
+        /// <para>The unified workflow instance ID. All workflow instances within the same business date under a specific trigger share the same value for this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

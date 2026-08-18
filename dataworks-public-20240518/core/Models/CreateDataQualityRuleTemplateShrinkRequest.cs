@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityRuleTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The sample validation settings.</para>
+        /// <para>The sample verification settings.</para>
         /// </summary>
         [NameInMap("CheckingConfig")]
         [Validation(Required=false)]
         public string CheckingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</para>
+        /// <para>The directory path where the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ods/order_data</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</para>
+        /// <para>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be up to 512 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope of the template:</para>
+        /// <para>The visibility scope of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Tenant: available to the entire tenant</description></item>
-        /// <item><description>Project: available only in the current project</description></item>
+        /// <item><description>Tenant: available to the entire tenant.</description></item>
+        /// <item><description>Project: available only in the current project.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

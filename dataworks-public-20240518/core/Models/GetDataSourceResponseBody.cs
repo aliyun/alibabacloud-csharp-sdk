@@ -10,21 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the data source.</para>
+        /// <para>The data source details.</para>
         /// </summary>
         [NameInMap("DataSource")]
         [Validation(Required=false)]
         public GetDataSourceResponseBodyDataSource DataSource { get; set; }
         public class GetDataSourceResponseBodyDataSource : TeaModel {
             /// <summary>
-            /// <para>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</para>
+            /// <para>The connection configuration of the data source, including the endpoint, access identity, and environment context. The data source environment type (envType) is a member property of this object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Dev: development environment</para>
-            /// </description></item>
-            /// <item><description><para>Prod: production environment</para>
-            /// </description></item>
+            /// <item><description>Dev: development environment.</description></item>
+            /// <item><description>Prod: production environment.</description></item>
             /// </list>
-            /// <para>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</para>
+            /// <para>Different types of data sources have different property specifications under different configuration modes (ConnectionPropertiesMode). For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection properties (ConnectionProperties)</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -42,14 +40,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public object ConnectionProperties { get; set; }
 
             /// <summary>
-            /// <para>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</para>
+            /// <para>The category in which the data source is added. Different types have different subtypes with different parameter constraints. Examples:</para>
             /// <list type="bullet">
-            /// <item><description><para>InstanceMode: instance mode</para>
-            /// </description></item>
-            /// <item><description><para>UrlMode: connection string mode</para>
-            /// </description></item>
-            /// <item><description><para>CdhMode: CDH cluster mode</para>
-            /// </description></item>
+            /// <item><description>InstanceMode: instance mode.</description></item>
+            /// <item><description>UrlMode: connection string mode.</description></item>
+            /// <item><description>CdhMode: CDH mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ConnectionPropertiesMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the data source was added. This value is a UNIX timestamp.</para>
+            /// <para>The time when the data source was created (timestamp).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1698286929333</para>
@@ -70,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who adds the data source.</para>
+            /// <para>The ID of the user who created the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1107550004253538</para>
@@ -90,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738</para>
@@ -100,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the data source was last modified. This value is a UNIX timestamp.</para>
+            /// <para>The time when the data source was last modified (timestamp).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1698286929333</para>
@@ -110,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who modifies the data source.</para>
+            /// <para>The ID of the user who last modified the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1107550004253538</para>
@@ -130,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace with which the data source is associated.</para>
+            /// <para>The ID of the workspace to which the data source belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52660</para>
@@ -140,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The unique business key of the data source. For example, the unique business key of a Hologres data source is in the <c>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</c> format.</para>
+            /// <para>The business unique key of the data source. For example, the format for a Hologres data source is <c>${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</para>
@@ -162,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9252F32F-D855-549E-8898-61CF5A733050</para>

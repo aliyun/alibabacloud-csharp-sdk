@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetAlertRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the rule.</para>
+        /// <para>The details of the custom alert rule.</para>
         /// </summary>
         [NameInMap("AlertRule")]
         [Validation(Required=false)]
         public GetAlertRuleResponseBodyAlertRule AlertRule { get; set; }
         public class GetAlertRuleResponseBodyAlertRule : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the rule is enabled.</para>
+            /// <para>Indicates whether the alert rule is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The ID of the custom alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16035</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The name of the custom alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error_rule</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The configuration for the alert notification.</para>
+            /// <para>The alert notification configuration.</para>
             /// </summary>
             [NameInMap("Notification")]
             [Validation(Required=false)]
             public GetAlertRuleResponseBodyAlertRuleNotification Notification { get; set; }
             public class GetAlertRuleResponseBodyAlertRuleNotification : TeaModel {
                 /// <summary>
-                /// <para>The alert notification channels.</para>
+                /// <para>The list of alert channels.</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
                 public List<string> Channels { get; set; }
 
                 /// <summary>
-                /// <para>The interval at which an alert notification is sent. Unit: minutes. Valid values: [5,10000].</para>
+                /// <para>The alert interval, in minutes. Valid values: 5 to 10000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? IntervalInMinutes { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of times an alert notification can be sent within a calendar day. Valid values: [1, 10000].</para>
+                /// <para>The maximum number of alerts within a calendar day. Valid values: 1 to 10000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<GetAlertRuleResponseBodyAlertRuleNotificationReceivers> Receivers { get; set; }
                 public class GetAlertRuleResponseBodyAlertRuleNotificationReceivers : TeaModel {
                     /// <summary>
-                    /// <para>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</para>
+                    /// <para>The additional configuration required by the alert recipient. If ReceiverType is DingdingUrl, you can set {&quot;atAll&quot;:true} to @ all members.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;atAll&quot;:true}</para>
@@ -98,24 +98,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Extension { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the alert recipient. Valid valves:</para>
+                    /// <para>The type of the alert recipient. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>AliUid: Alibaba Cloud account ID.</para>
-                    /// </description></item>
-                    /// <item><description><para>Shift Schedules: the personnel in a shift schedule.</para>
-                    /// </description></item>
-                    /// <item><description><para>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</para>
-                    /// </description></item>
-                    /// <item><description><para>Owner: the baseline owner. The baseline owner can receive baseline alerts.</para>
-                    /// </description></item>
-                    /// <item><description><para>WebhookUrl: URL of a custom webhook.</para>
-                    /// </description></item>
-                    /// <item><description><para>DingdingUrl: DingTalk webhook URL.</para>
-                    /// </description></item>
-                    /// <item><description><para>FeishuUrl: Lark webhook URL.</para>
-                    /// </description></item>
-                    /// <item><description><para>WeixinUrl: WeCom webhook URL.</para>
-                    /// </description></item>
+                    /// <item><description>AliUid: Alibaba Cloud UID.</description></item>
+                    /// <item><description>ShiftSchedule: shift schedule.</description></item>
+                    /// <item><description>TaskOwner: node owner. Applicable to custom alerting and event alerting.</description></item>
+                    /// <item><description>Owner: owner. Applicable to baseline alerting.</description></item>
+                    /// <item><description>WebhookUrl: custom webhook URL.</description></item>
+                    /// <item><description>DingdingUrl: DingTalk webhook URL.</description></item>
+                    /// <item><description>FeishuUrl: Lark webhook URL.</description></item>
+                    /// <item><description>WeixinUrl: WeChat webhook URL.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -126,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ReceiverType { get; set; }
 
                     /// <summary>
-                    /// <para>The alert recipients.</para>
+                    /// <para>The values of the alert recipient.</para>
                     /// </summary>
                     [NameInMap("ReceiverValues")]
                     [Validation(Required=false)]
@@ -135,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The end time for silence. The time is in the HH:mm:ss format.</para>
+                /// <para>The end time of the mute period. Format: HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -145,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SilenceEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time for silence. The time is in the HH:mm:ss format.</para>
+                /// <para>The start time of the mute period. Format: HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -157,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the owner of the rule.</para>
+            /// <para>The Alibaba Cloud UID of the owner of the custom alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>279961421580845157</para>
@@ -167,35 +159,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The alert triggering condition.</para>
+            /// <para>The condition that triggers the alert.</para>
             /// </summary>
             [NameInMap("TriggerCondition")]
             [Validation(Required=false)]
             public GetAlertRuleResponseBodyAlertRuleTriggerCondition TriggerCondition { get; set; }
             public class GetAlertRuleResponseBodyAlertRuleTriggerCondition : TeaModel {
                 /// <summary>
-                /// <para>The extended information about the rule. This parameter is required for specific types of alerts.</para>
+                /// <para>The extension information. Required for certain trigger conditions.</para>
                 /// </summary>
                 [NameInMap("Extension")]
                 [Validation(Required=false)]
                 public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtension Extension { get; set; }
                 public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtension : TeaModel {
                     /// <summary>
-                    /// <para>The configuration for an alert of the CycleUnfinished type.</para>
+                    /// <para>The cycle-not-completed alert configuration.</para>
                     /// </summary>
                     [NameInMap("CycleUnfinished")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinished CycleUnfinished { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinished : TeaModel {
                         /// <summary>
-                        /// <para>The configurations of the scheduling cycle and timeout period of the instance.</para>
+                        /// <para>The list of cycle and time configurations.</para>
                         /// </summary>
                         [NameInMap("CycleAndTime")]
                         [Validation(Required=false)]
                         public List<GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinishedCycleAndTime> CycleAndTime { get; set; }
                         public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionCycleUnfinishedCycleAndTime : TeaModel {
                             /// <summary>
-                            /// <para>The ID of the scheduling cycle of the instance. Valid values: [1,288].</para>
+                            /// <para>The cycle ID. Valid values: 1 to 288.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1</para>
@@ -205,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public int? CycleId { get; set; }
 
                             /// <summary>
-                            /// <para>The latest completion time of the instance within the scheduling cycle. The time is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</para>
+                            /// <para>The timeout time. Format: hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>12:00</para>
@@ -219,14 +211,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the Error type.</para>
+                    /// <para>The error alert configuration.</para>
                     /// </summary>
                     [NameInMap("Error")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError Error { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError : TeaModel {
                         /// <summary>
-                        /// <para>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</para>
+                        /// <para>Specifies whether to generate an alert when a batch task is automatically rerun due to a failure.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -236,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public bool? AutoRerunAlertEnabled { get; set; }
 
                         /// <summary>
-                        /// <para>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</para>
+                        /// <para>The IDs of real-time computing nodes to monitor.</para>
                         /// </summary>
                         [NameInMap("StreamTaskIds")]
                         [Validation(Required=false)]
@@ -245,14 +237,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the InstanceErrorCount type.</para>
+                    /// <para>The instance error count alert configuration.</para>
                     /// </summary>
                     [NameInMap("InstanceErrorCount")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorCount InstanceErrorCount { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorCount : TeaModel {
                         /// <summary>
-                        /// <para>The maximum number of instances on which an error occurs. Valid values: [1,10000].</para>
+                        /// <para>The number of failed instances. Valid values: 1 to 10000.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -264,14 +256,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the InstanceErrorPercentage type.</para>
+                    /// <para>The instance error percentage alert configuration.</para>
                     /// </summary>
                     [NameInMap("InstanceErrorPercentage")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorPercentage InstanceErrorPercentage { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceErrorPercentage : TeaModel {
                         /// <summary>
-                        /// <para>The maximum percentage of instances on which an error occurs in the workspace to the total number of instances. Valid values: [1-100].</para>
+                        /// <para>The percentage of failed instances. Valid values: 1 to 100.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -283,14 +275,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the InstanceTransferFluctuate type.</para>
+                    /// <para>The instance count fluctuation alert configuration.</para>
                     /// </summary>
                     [NameInMap("InstanceTransferFluctuate")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceTransferFluctuate InstanceTransferFluctuate { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionInstanceTransferFluctuate : TeaModel {
                         /// <summary>
-                        /// <para>The maximum percentage of fluctuation in the number of auto triggered node instances that are generated in your workspace. Valid values: [1-100].</para>
+                        /// <para>The fluctuation percentage. Valid values: 1 to 100.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -300,14 +292,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public int? Percentage { get; set; }
 
                         /// <summary>
-                        /// <para>The way in which the number of auto triggered node instances that are generated in your workspace fluctuates. Valid values:</para>
+                        /// <para>The fluctuation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>abs: the absolute value. The number of instances increases or decreases.</para>
-                        /// </description></item>
-                        /// <item><description><para>increase: The number of instances increases.</para>
-                        /// </description></item>
-                        /// <item><description><para>decrease: The number of instances decreases.</para>
-                        /// </description></item>
+                        /// <item><description>abs: absolute value.</description></item>
+                        /// <item><description>increase: increase.</description></item>
+                        /// <item><description>decrease: decrease.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -320,14 +309,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the Timeout type.</para>
+                    /// <para>The timeout alert configuration.</para>
                     /// </summary>
                     [NameInMap("Timeout")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionTimeout Timeout { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionTimeout : TeaModel {
                         /// <summary>
-                        /// <para>The timeout period. Unit: minutes. Valid values: [1, 21600].</para>
+                        /// <para>The timeout duration, in minutes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -339,14 +328,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The configuration for an alert of the UnFinished type.</para>
+                    /// <para>The not-completed alert configuration.</para>
                     /// </summary>
                     [NameInMap("UnFinished")]
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionUnFinished UnFinished { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionUnFinished : TeaModel {
                         /// <summary>
-                        /// <para>The latest completion time of the instance. The period is in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</para>
+                        /// <para>The not-completed time. Format: hh:mm. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>12:00</para>
@@ -360,37 +349,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The monitored objects.</para>
+                /// <para>The monitored object.</para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public GetAlertRuleResponseBodyAlertRuleTriggerConditionTarget Target { get; set; }
                 public class GetAlertRuleResponseBodyAlertRuleTriggerConditionTarget : TeaModel {
                     /// <summary>
-                    /// <para>The nodes that are not to be monitored.</para>
+                    /// <para>The whitelist of monitored nodes.</para>
                     /// </summary>
                     [NameInMap("AllowTasks")]
                     [Validation(Required=false)]
                     public List<long?> AllowTasks { get; set; }
 
                     /// <summary>
-                    /// <para>The IDs of monitored objects.</para>
+                    /// <para>The list of monitored object IDs.</para>
                     /// </summary>
                     [NameInMap("Ids")]
                     [Validation(Required=false)]
                     public List<long?> Ids { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the monitored objects. Valid values:</para>
+                    /// <para>The monitored object type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Task: node</para>
-                    /// </description></item>
-                    /// <item><description><para>Baseline: baseline</para>
-                    /// </description></item>
-                    /// <item><description><para>project: workspace</para>
-                    /// </description></item>
-                    /// <item><description><para>BizProcess: workflow</para>
-                    /// </description></item>
+                    /// <item><description>Task: node.</description></item>
+                    /// <item><description>Baseline: baseline.</description></item>
+                    /// <item><description>Project: workspace.</description></item>
+                    /// <item><description>BizProcess: business process flow.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -403,34 +388,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The alert type. Valid values:</para>
+                /// <para>The type of the alert trigger. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Finished: An instance is successfully run.</para>
-                /// </description></item>
-                /// <item><description><para>UnFinished: An instance does not finish running before a specified point in time.</para>
-                /// </description></item>
-                /// <item><description><para>Error: An error occurs on an instance.</para>
-                /// </description></item>
-                /// <item><description><para>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</para>
-                /// </description></item>
-                /// <item><description><para>Timeout: An instance times out.</para>
-                /// </description></item>
-                /// <item><description><para>InstanceTransferComplete: An instance is generated by the auto triggered node.</para>
-                /// </description></item>
-                /// <item><description><para>InstanceTransferFluctuate: The number of generated instances fluctuates.</para>
-                /// </description></item>
-                /// <item><description><para>ExhaustedError: An error persists after an instance is automatically rerun.</para>
-                /// </description></item>
-                /// <item><description><para>InstanceKeyword: An instance with errors contains specified keywords.</para>
-                /// </description></item>
-                /// <item><description><para>InstanceErrorCount: The number of instances on which an error occurs reaches a specified threshold.</para>
-                /// </description></item>
-                /// <item><description><para>InstanceErrorPercentage: The proportion of instances on which an error occurs in the workspace to the total number of instances reaches a specified threshold.</para>
-                /// </description></item>
-                /// <item><description><para>ResourceGroupPercentage: The usage rate of the resource group reaches a specified threshold.</para>
-                /// </description></item>
-                /// <item><description><para>ResourceGroupWaitCount: The number of instances that are waiting for resources in the resource group reaches a specified threshold.</para>
-                /// </description></item>
+                /// <item><description>Finished: instance completed.</description></item>
+                /// <item><description>UnFinished: instance not completed.</description></item>
+                /// <item><description>Error: instance failed.</description></item>
+                /// <item><description>CycleUnfinished: instance cycle not completed.</description></item>
+                /// <item><description>Timeout: instance timed out.</description></item>
+                /// <item><description>InstanceTransferComplete: node-to-instance conversion completed.</description></item>
+                /// <item><description>InstanceTransferFluctuate: instance count fluctuation.</description></item>
+                /// <item><description>ExhaustedError: instance still failed after automatic reruns.</description></item>
+                /// <item><description>InstanceKeyword: failed instance contains keyword.</description></item>
+                /// <item><description>InstanceErrorCount: number of failed instances.</description></item>
+                /// <item><description>InstanceErrorPercentage: percentage of failed instances.</description></item>
+                /// <item><description>ResourceGroupPercentage: schedule resource utilization.</description></item>
+                /// <item><description>ResourceGroupWaitCount: number of instances waiting for schedule resources.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -445,7 +417,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8abcb91f-d266-4073-b907-2ed****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityAlertRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The alert condition of the data quality monitoring rule.</para>
+        /// <para>The alert condition of the data quality monitoring alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule.</para>
+        /// <para>The alert rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105412</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Alert notification configurations.</para>
+        /// <para>The alert notification configuration.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public UpdateDataQualityAlertRuleRequestNotification Notification { get; set; }
         public class UpdateDataQualityAlertRuleRequestNotification : TeaModel {
             /// <summary>
-            /// <para>The list of alert channels. You can set both Email and Sms at the same time. In other cases, only one channel can be set.</para>
+            /// <para>The list of notification channels. You can set both Email and Sms at the same time. In other cases, only one channel can be specified.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Channels")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateDataQualityAlertRuleRequestNotificationReceivers> Receivers { get; set; }
             public class UpdateDataQualityAlertRuleRequestNotificationReceivers : TeaModel {
                 /// <summary>
-                /// <para>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <c>{&quot;atAll&quot;:true}</c> to mention all members.</para>
+                /// <para>The additional configuration required for the alert recipient. When ReceiverType is set to DingdingUrl, you can set <c>{&quot;atAll&quot;:true}</c> to @ all members.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;atAll&quot;:true}</para>
@@ -62,24 +62,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Extension { get; set; }
 
                 /// <summary>
-                /// <para>The type of alert recipients.</para>
+                /// <para>The alerting accept object type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>AliUid</para>
-                /// </description></item>
-                /// <item><description><para>WebhookUrl</para>
-                /// </description></item>
-                /// <item><description><para>DingdingUrl</para>
-                /// </description></item>
-                /// <item><description><para>WeixinUrl</para>
-                /// </description></item>
-                /// <item><description><para>FeishuUrl</para>
-                /// </description></item>
-                /// <item><description><para>TaskOwner</para>
-                /// </description></item>
-                /// <item><description><para>DataQualityScanOwner</para>
-                /// </description></item>
-                /// <item><description><para>ShiftSchedule</para>
-                /// </description></item>
+                /// <item><description>AliUid</description></item>
+                /// <item><description>WebhookUrl</description></item>
+                /// <item><description>DingdingUrl</description></item>
+                /// <item><description>WeixinUrl</description></item>
+                /// <item><description>FeishuUrl</description></item>
+                /// <item><description>TaskOwner</description></item>
+                /// <item><description>DataQualityScanOwner</description></item>
+                /// <item><description>ShiftSchedule</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -91,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ReceiverType { get; set; }
 
                 /// <summary>
-                /// <para>The value of alert recipients.</para>
+                /// <para>The values of the alert recipients.</para>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
                 [Validation(Required=false)]
@@ -112,21 +104,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The monitored target of the data quality monitoring rule.</para>
+        /// <para>The monitoring target of the data quality monitoring alert rule.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public UpdateDataQualityAlertRuleRequestTarget Target { get; set; }
         public class UpdateDataQualityAlertRuleRequestTarget : TeaModel {
             /// <summary>
-            /// <para>The list of monitored target IDs. Currently, only one ID can be set.</para>
+            /// <para>The list of monitoring target IDs. Currently, only one ID can be specified.</para>
             /// </summary>
             [NameInMap("Ids")]
             [Validation(Required=false)]
             public List<long?> Ids { get; set; }
 
             /// <summary>
-            /// <para>The type of the monitored target. Only DataQualityScan is supported.</para>
+            /// <para>The type of the monitored object. Only DataQualityScan is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataQualityScan</para>

@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The source entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</para>
-        /// <para>To obtain the table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain data catalog levels, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</para>
+        /// <para>To obtain a table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain a data catalog level, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

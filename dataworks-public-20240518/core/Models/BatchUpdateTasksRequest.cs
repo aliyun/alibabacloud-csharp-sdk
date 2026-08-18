@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<BatchUpdateTasksRequestTasks> Tasks { get; set; }
         public class BatchUpdateTasksRequestTasks : TeaModel {
             /// <summary>
-            /// <para>Associated data source information.</para>
+            /// <para>The associated data source information.</para>
             /// </summary>
             [NameInMap("DataSource")]
             [Validation(Required=false)]
@@ -56,12 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The project environment.</para>
+            /// <para>The project environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Prod: Production</para>
-            /// </description></item>
-            /// <item><description><para>Dev: Development</para>
-            /// </description></item>
+            /// <item><description>Prod: production</description></item>
+            /// <item><description>Dev: development</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The node ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the task owner.</para>
+            /// <para>The account ID of the node owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The retry interval in seconds.</para>
+            /// <para>The retry time interval, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -113,14 +111,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? RerunInterval { get; set; }
 
             /// <summary>
-            /// <para>The rerun mode. Valid values:</para>
+            /// <para>Specifies whether the node can be rerun. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AllDenied: The task cannot be rerun.</para>
-            /// </description></item>
-            /// <item><description><para>FailureAllowed: The task can be rerun only after it fails.</para>
-            /// </description></item>
-            /// <item><description><para>AllAllowed: The task can always be rerun.</para>
-            /// </description></item>
+            /// <item><description>AllDenied: The node cannot be rerun regardless of whether it succeeds or fails.</description></item>
+            /// <item><description>FailureAllowed: The node can be rerun only after it fails.</description></item>
+            /// <item><description>AllAllowed: The node can be rerun regardless of whether it succeeds or fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RerunMode { get; set; }
 
             /// <summary>
-            /// <para>The number of retry attempts. Takes effect when the task is configured to allow reruns.</para>
+            /// <para>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -141,14 +136,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? RerunTimes { get; set; }
 
             /// <summary>
-            /// <para>Runtime environment configurations, such as resource group information.</para>
+            /// <para>The runtime environment configuration, such as resource group information.</para>
             /// </summary>
             [NameInMap("RuntimeResource")]
             [Validation(Required=false)]
             public BatchUpdateTasksRequestTasksRuntimeResource RuntimeResource { get; set; }
             public class BatchUpdateTasksRequestTasksRuntimeResource : TeaModel {
                 /// <summary>
-                /// <para>The default number of compute units (CUs) configured for task running.</para>
+                /// <para>The compute unit (CU) consumption configured for node execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.25</para>
@@ -158,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cu { get; set; }
 
                 /// <summary>
-                /// <para>The image ID used in the task runtime configuration.</para>
+                /// <para>The image ID configured for node execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxx</para>
@@ -168,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the scheduling resource group used in the task runtime configuration.</para>
+                /// <para>The identifier of the schedule resource group configured for node execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -180,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The list of task tags.</para>
+            /// <para>The list of node tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -210,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The task execution timeout in seconds. The value should be greater than 3600.</para>
+            /// <para>The timeout period for node execution, in seconds. The value must be greater than 3600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -220,14 +215,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The task trigger configurations.</para>
+            /// <para>The trigger configuration of the node.</para>
             /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
             public BatchUpdateTasksRequestTasksTrigger Trigger { get; set; }
             public class BatchUpdateTasksRequestTasksTrigger : TeaModel {
                 /// <summary>
-                /// <para>The cron expression. Takes effect when type=Scheduler.</para>
+                /// <para>The cron expression. This parameter takes effect only when type is set to Scheduler.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 00 * * ?</para>
@@ -237,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cron { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<c>yyyy-mm-dd hh:mm:ss</c> format.</para>
+                /// <para>The time when the periodic trigger expires. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9999-01-01 00:00:00</para>
@@ -247,14 +242,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
+                /// <para>The running mode when the node is triggered. This parameter takes effect only when type is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pause</para>
-                /// </description></item>
-                /// <item><description><para>Skip</para>
-                /// </description></item>
-                /// <item><description><para>Normal</para>
-                /// </description></item>
+                /// <item><description>Pause: paused</description></item>
+                /// <item><description>Skip: dry run</description></item>
+                /// <item><description>Normal: normal execution</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -265,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c> format.</para>
+                /// <para>The effective period of the epoch trigger. This parameter takes effect only when type is set to Scheduler. Format: <c>yyyy-mm-dd hh:mm:ss</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1970-01-01 00:00:00</para>
@@ -277,10 +269,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Scheduler: periodically triggered</para>
-                /// </description></item>
-                /// <item><description><para>Manual</para>
-                /// </description></item>
+                /// <item><description>Scheduler: triggered by scheduling cycle</description></item>
+                /// <item><description>Manual: manually triggered</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

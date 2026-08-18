@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListAgentsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID passed in by the caller. The value is returned as-is in the response.</para>
+        /// <para>The ID passed in by the requester. The value is returned as-is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4as3dasf654a</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The parameters for this request.</para>
+        /// <para>The specific parameter content for this request.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFoldersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of folders that meet the conditions.</para>
+        /// <para>The list of folders that meet the specified conditions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListFoldersResponseBodyDataFolders> Folders { get; set; }
             public class ListFoldersResponseBodyDataFolders : TeaModel {
                 /// <summary>
-                /// <para>The folder ID.</para>
+                /// <para>The ID of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2735c2****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// <para>The folder path.</para>
+                /// <para>The path of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records that meet the query conditions.</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to troubleshoot errors.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-****</para>
@@ -118,12 +118,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: success.</para>
-        /// </description></item>
-        /// <item><description><para>false: failure.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

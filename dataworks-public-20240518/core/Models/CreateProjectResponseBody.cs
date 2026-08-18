@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace created by this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -22,7 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The workspace ID. Note: This parameter is deprecated and is replaced by the Id parameter.</para>
+        /// <para>The ID of the DataWorks workspace created by this operation.
+        /// Note: This field is deprecated. Use the Id field instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AFBB799F-8578-51C5-A766-E922EDB8XXXX</para>

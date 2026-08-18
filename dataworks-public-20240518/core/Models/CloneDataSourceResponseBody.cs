@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CloneDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloned data source.</para>
+        /// <para>The ID of the cloned data source. This is the unique identifier of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19715</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FCD583B9-346B-5E75-82C1-4A7C192C48DB</para>

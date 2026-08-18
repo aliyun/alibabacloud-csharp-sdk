@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecuteAdhocWorkflowInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp.</para>
+        /// <para>The business date. The value is a timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? BizDate { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The name of the workflow instance.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The list of tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<ExecuteAdhocWorkflowInstanceRequestTasks> Tasks { get; set; }
         public class ExecuteAdhocWorkflowInstanceRequestTasks : TeaModel {
             /// <summary>
-            /// <para>The unique code of the client. This code uniquely identifies a task.</para>
+            /// <para>The client unique code of the task, which is used to uniquely identify a task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,14 +86,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ClientUniqueCode { get; set; }
 
             /// <summary>
-            /// <para>The information about the associated data source.</para>
+            /// <para>The associated data source information.</para>
             /// </summary>
             [NameInMap("DataSource")]
             [Validation(Required=false)]
             public ExecuteAdhocWorkflowInstanceRequestTasksDataSource DataSource { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksDataSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the data source.</para>
+                /// <para>The data source name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql_test</para>
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ExecuteAdhocWorkflowInstanceRequestTasksDependencies> Dependencies { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksDependencies : TeaModel {
                 /// <summary>
-                /// <para>The identifier of the output of the ancestor task.</para>
+                /// <para>The output identifier of the dependent task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pre.odps_sql_demo_0</para>
@@ -133,14 +131,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ExecuteAdhocWorkflowInstanceRequestTasksInputs Inputs { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksInputs : TeaModel {
                 /// <summary>
-                /// <para>The variables.</para>
+                /// <para>The list of variable definitions.</para>
                 /// </summary>
                 [NameInMap("Variables")]
                 [Validation(Required=false)]
                 public List<ExecuteAdhocWorkflowInstanceRequestTasksInputsVariables> Variables { get; set; }
                 public class ExecuteAdhocWorkflowInstanceRequestTasksInputsVariables : TeaModel {
                     /// <summary>
-                    /// <para>The name of the variable.</para>
+                    /// <para>The variable name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key1</para>
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the variable. You must configure this parameter in the <c>The ancestor output: The output variable name of the ancestor task</c> format.</para>
+                    /// <para>The variable value. Specify the value in the format of <c>Upstream task Output:Upstream task output variable name</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>upstream_task_output:key1</para>
@@ -182,14 +180,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ExecuteAdhocWorkflowInstanceRequestTasksOutputs Outputs { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksOutputs : TeaModel {
                 /// <summary>
-                /// <para>The task outputs.</para>
+                /// <para>The list of task output definitions.</para>
                 /// </summary>
                 [NameInMap("TaskOutputs")]
                 [Validation(Required=false)]
                 public List<ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs> TaskOutputs { get; set; }
                 public class ExecuteAdhocWorkflowInstanceRequestTasksOutputsTaskOutputs : TeaModel {
                     /// <summary>
-                    /// <para>The identifier of the output.</para>
+                    /// <para>The output identifier.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pre.odps_sql_demo_0</para>
@@ -201,14 +199,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The variables.</para>
+                /// <para>The list of variable definitions.</para>
                 /// </summary>
                 [NameInMap("Variables")]
                 [Validation(Required=false)]
                 public List<ExecuteAdhocWorkflowInstanceRequestTasksOutputsVariables> Variables { get; set; }
                 public class ExecuteAdhocWorkflowInstanceRequestTasksOutputsVariables : TeaModel {
                     /// <summary>
-                    /// <para>The name of the variable.</para>
+                    /// <para>The variable name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key1</para>
@@ -220,14 +218,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>System</para>
-                    /// </description></item>
-                    /// <item><description><para>Constant</para>
-                    /// </description></item>
-                    /// <item><description><para>NodeOutput</para>
-                    /// </description></item>
-                    /// <item><description><para>PassThrough</para>
-                    /// </description></item>
+                    /// <item><description>System</description></item>
+                    /// <item><description>Constant</description></item>
+                    /// <item><description>NodeOutput</description></item>
+                    /// <item><description>PassThrough</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -238,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the variable.</para>
+                    /// <para>The variable value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value1</para>
@@ -263,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the runtime environment, such as the resource group information.</para>
+            /// <para>The runtime environment configuration, such as resource group information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RuntimeResource")]
@@ -271,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource RuntimeResource { get; set; }
             public class ExecuteAdhocWorkflowInstanceRequestTasksRuntimeResource : TeaModel {
                 /// <summary>
-                /// <para>The default number of compute units (CUs) configured for task running.</para>
+                /// <para>The compute unit (CU) consumption configured for the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.25</para>
@@ -281,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cu { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image configured for task running.</para>
+                /// <para>The image ID configured for the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxx</para>
@@ -291,7 +285,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group for scheduling configured for task running.</para>
+                /// <para>The identifier of the schedule resource group configured for the task.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -304,7 +298,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The script information.</para>
+            /// <para>The script information for running the task.</para>
             /// </summary>
             [NameInMap("Script")]
             [Validation(Required=false)]
@@ -321,7 +315,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The script parameters.</para>
+                /// <para>The list of script parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>para1=$bizdate</para>
@@ -333,7 +327,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The timeout period of task running. Unit: seconds.</para>
+            /// <para>The timeout period for task execution. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -343,7 +337,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

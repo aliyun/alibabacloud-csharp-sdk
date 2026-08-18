@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The image version. If you do not specify this parameter, the latest version is returned.</para>
+        /// <para>The image version. If this parameter is not specified, the latest version is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

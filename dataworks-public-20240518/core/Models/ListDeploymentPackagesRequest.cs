@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDeploymentPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the deployment package creator.</para>
+        /// <para>The Alibaba Cloud account UID of the deployment package creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110755000425****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The maximum millisecond timestamp for when the deployment package was created.</para>
+        /// <para>The maximum timestamp in milliseconds for the creation time of the deployment package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1593877765000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum millisecond timestamp for when the deployment package started executing.</para>
+        /// <para>The maximum timestamp in milliseconds for the execution start time of the deployment package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1593877765000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndExecuteTime { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the deployment package executor.</para>
+        /// <para>The Alibaba Cloud account UID of the deployment package executor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2003****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Executor { get; set; }
 
         /// <summary>
-        /// <para>The keyword in the deployment package name. DataWorks supports fuzzy matching, meaning you can enter a keyword to query for deployment packages that contain it.</para>
+        /// <para>The keyword in the deployment package name. DataWorks supports fuzzy match. You can enter a keyword to query deployment packages whose names contain the keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the workspace configuration page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. You must specify either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10003</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces. Either this parameter or ProjectId must be specified to determine which DataWorks workspace this API call operates on.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -100,16 +100,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The status of the deployment package. Valid values:</para>
+        /// <para>The current status of the deployment package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: It is ready.</para>
-        /// </description></item>
-        /// <item><description><para>1: It was successfully deployed.</para>
-        /// </description></item>
-        /// <item><description><para>2: It failed to be deployed.</para>
-        /// </description></item>
-        /// <item><description><para>6: It was rejected.</para>
-        /// </description></item>
+        /// <item><description>0: The deployment package is ready.</description></item>
+        /// <item><description>1: The deployment package is published.</description></item>
+        /// <item><description>2: The deployment package failed to be published.</description></item>
+        /// <item><description>6: The deployment package is rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

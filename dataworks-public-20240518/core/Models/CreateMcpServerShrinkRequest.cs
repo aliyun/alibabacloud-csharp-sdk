@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMcpServerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The connection configuration for the MCP Server.</para>
+        /// <para>The connection configuration of the MCP Server.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and contain only characters from <c>a-z</c>, <c>0-9</c>, <c>_</c>, and <c>-</c>.</para>
+        /// <para>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <c>a-z</c>, <c>0-9</c>, <c>_</c>, and <c>-</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The required fields depend on the value of the <c>Visibility</c> parameter.</para>
+        /// <para>The visibility scope. The corresponding field is used based on the Visibility value.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

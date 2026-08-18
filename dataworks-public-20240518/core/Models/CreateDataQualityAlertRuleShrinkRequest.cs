@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityAlertRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The alert condition of the data quality monitoring rule.</para>
+        /// <para>The alert condition of the data quality monitoring alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The monitored target of the data quality monitoring rule.</para>
+        /// <para>The monitored target of the data quality monitoring alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Target")]

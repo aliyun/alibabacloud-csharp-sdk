@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The approval action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Agree: Approved.</para>
+        /// <item><description><para>Agree: approves the request.</para>
         /// </description></item>
-        /// <item><description><para>Deny: Rejected.</para>
+        /// <item><description><para>Deny: rejects the request.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>同意授权</para>
+        /// <para>Approve authorization</para>
         /// </summary>
         [NameInMap("ApprovalComment")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new authorization expiration time. Unit: milliseconds (UNIX timestamp).</para>
+        /// <para>The modified authorization expiration time. The value is a millisecond-level timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782541464000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? NewExpiration { get; set; }
 
         /// <summary>
-        /// <para>The process instance ID. Both new and legacy Security Center approval forms are supported.</para>
+        /// <para>The flow instance ID. Both new and legacy Security Center approval orders are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

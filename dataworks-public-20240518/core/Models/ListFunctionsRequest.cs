@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFunctionsRequest : TeaModel {
         /// <summary>
-        /// <para>Filter criteria: UDF name. Supports fuzzy search.</para>
+        /// <para>The filter condition: the UDF function name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner of the UDF. This parameter specifies a filter condition.</para>
+        /// <para>The filter condition: the ID of the UDF function owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110755000425XXXX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Minimum value: 1.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API call operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,21 +62,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The user-defined function (UDF) type. This parameter specifies a filter condition.</para>
+        /// <para>The filter condition: the function type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Math: mathematical operation function</para>
-        /// </description></item>
-        /// <item><description><para>Aggregate: aggregate function</para>
-        /// </description></item>
-        /// <item><description><para>String: string processing function</para>
-        /// </description></item>
-        /// <item><description><para>Date: date function</para>
-        /// </description></item>
-        /// <item><description><para>Analytic: window function</para>
-        /// </description></item>
-        /// <item><description><para>Other: other functions</para>
-        /// </description></item>
+        /// <item><description>Math: mathematical operation function</description></item>
+        /// <item><description>Aggregate: aggregate functions</description></item>
+        /// <item><description>String: character string processing function</description></item>
+        /// <item><description>Date: date function</description></item>
+        /// <item><description>Analytic: window function</description></item>
+        /// <item><description>Other: other function</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about the resource group.</para>
+        /// <para>The detailed information of the resource group.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public GetResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class GetResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud resource group.</para>
+            /// <para>The ID of the Alibaba Cloud resource group to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2kqofrgXXXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AliyunResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of Alibaba Cloud tags.</para>
             /// </summary>
             [NameInMap("AliyunResourceTags")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The value is a 64-bit timestamp.</para>
+            /// <para>The creation time, represented as a 64-bit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1727055811000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that is used to create the resource group.</para>
+            /// <para>The ID of the user who created the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11075500042XXXXX</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) with which the resource group is associated by default.</para>
+            /// <para>The ID of the default VPC bound to the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefaultVpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch with which the resource group is associated by default.</para>
+            /// <para>The ID of the default vSwitch bound to the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefaultVswitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The unique identifier of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the order that is used to create the resource group.</para>
+            /// <para>The order instance ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>
@@ -136,7 +136,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string OrderInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</para>
+            /// <para>The billing method of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrePaid: subscription.</description></item>
+            /// <item><description>PostPaid: pay-as-you-go.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The description of the resource group.</para>
+            /// <para>The remarks of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create a common resource group for common tasks</para>
@@ -158,14 +162,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CommonV2: Serverless resource group.</para>
-            /// </description></item>
-            /// <item><description><para>ExclusiveDataIntegration: Exclusive resource group for Data Integration.</para>
-            /// </description></item>
-            /// <item><description><para>ExclusiveScheduler: Exclusive resource group for scheduling.</para>
-            /// </description></item>
-            /// <item><description><para>ExclusiveDataService: Exclusive resource group for DataService Studio.</para>
-            /// </description></item>
+            /// <item><description>CommonV2: new-version resource group.</description></item>
+            /// <item><description>ExclusiveDataIntegration: exclusive data integration resource group.</description></item>
+            /// <item><description>ExclusiveScheduler: exclusive scheduling resource group.</description></item>
+            /// <item><description>ExclusiveDataService: exclusive data service resource group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetResourceGroupResponseBodyResourceGroupSpec Spec { get; set; }
             public class GetResourceGroupResponseBodyResourceGroupSpec : TeaModel {
                 /// <summary>
-                /// <para>The number of resources in the resource group.</para>
+                /// <para>The resource count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The number of compute units (CUs) in the resource group.</para>
+                /// <para>The specification details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2CU</para>
@@ -207,30 +207,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Normal: The resource group is running or in use.</para>
-            /// </description></item>
-            /// <item><description><para>Stop: The resource group is expired.</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: The resource group is released or destroyed.</para>
-            /// </description></item>
-            /// <item><description><para>Creating: The resource group is being created.</para>
-            /// </description></item>
-            /// <item><description><para>CreateFailed: The resource group fails to be created.</para>
-            /// </description></item>
-            /// <item><description><para>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</para>
-            /// </description></item>
-            /// <item><description><para>UpdateFailed: The resource group fails to be scaled out or upgraded.</para>
-            /// </description></item>
-            /// <item><description><para>Deleting: The resource group is being released or destroyed.</para>
-            /// </description></item>
-            /// <item><description><para>DeleteFailed: The resource group fails to be released or destroyed.</para>
-            /// </description></item>
-            /// <item><description><para>Timeout: The operations that are performed on the resource group time out.</para>
-            /// </description></item>
-            /// <item><description><para>Freezed: The resource group is frozen.</para>
-            /// </description></item>
-            /// <item><description><para>Starting: The resource group is being started.</para>
-            /// </description></item>
+            /// <item><description>Normal: normal (running/in service).</description></item>
+            /// <item><description>Stop: frozen (expired).</description></item>
+            /// <item><description>Deleted: deleted (released/destroyed).</description></item>
+            /// <item><description>Creating: being created.</description></item>
+            /// <item><description>CreateFailed: creation failed.</description></item>
+            /// <item><description>Updating: being updated (scaling out/scaling in/specification change in progress).</description></item>
+            /// <item><description>UpdateFailed: update failed (scale-out failed/upgrade failed).</description></item>
+            /// <item><description>Deleting: being deleted (being released/being destroyed).</description></item>
+            /// <item><description>DeleteFailed: deletion failed (release failed/destruction failed).</description></item>
+            /// <item><description>Timeout: operation timed out.</description></item>
+            /// <item><description>Freezed: frozen.</description></item>
+            /// <item><description>Starting: starting.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

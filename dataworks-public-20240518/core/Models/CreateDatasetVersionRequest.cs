@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDatasetVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The description for this dataset version. Maximum length: 1,024 characters.</para>
+        /// <para>The description of the dataset version. The description can be up to 1024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The dataset ID. Currently supports DataWorks datasets only.</para>
+        /// <para>The dataset ID. Currently, only DataWorks datasets are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,22 +31,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The storage import configuration for the dataset. Required configuration varies by storage type.</para>
-        /// <para><b>NAS</b></para>
-        /// <para>For valid values, see the response from the file storage API DescribeFileSystems.</para>
+        /// <para>The storage import configuration for the dataset. The required configuration varies depending on the storage type.</para>
+        /// <details>
+        /// <summary>NAS</summary>
+        /// The values can be obtained from the response of the File Storage API DescribeFileSystems operation.
+        /// 
         /// <pre><code class="language-JSON">{
-        /// &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-        /// &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
-        /// &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID for the mount point.
+        ///   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+        ///   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The storage specification of the file system.
+        ///   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount target.
         /// }
         /// </c></pre>
+        /// </details>
         /// </summary>
         [NameInMap("ImportInfo")]
         [Validation(Required=false)]
         public Dictionary<string, string> ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>The mount path, which must start with /mnt/. Default value: /mnt/data.</para>
+        /// <para>The mount path. The path must start with /mnt/. Default value: /mnt/data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/mnt/data</para>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MountPath { get; set; }
 
         /// <summary>
-        /// <para>URL</para>
+        /// <para>The URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

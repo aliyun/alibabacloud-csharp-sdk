@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDIAlarmRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The idempotency parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task with which the alert rule is associated.</para>
+        /// <para>The task ID associated with the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,18 +51,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The metric type in the alert rule. Valid values:</para>
+        /// <para>The alert metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Heartbeat</para>
-        /// </description></item>
-        /// <item><description><para>FailoverCount</para>
-        /// </description></item>
-        /// <item><description><para>Delay</para>
-        /// </description></item>
-        /// <item><description><para>DdlReport</para>
-        /// </description></item>
-        /// <item><description><para>ResourceUtilization</para>
-        /// </description></item>
+        /// <item><description>Heartbeat: task status alert.</description></item>
+        /// <item><description>FailoverCount: failover count alert.</description></item>
+        /// <item><description>Delay: task latency alert.</description></item>
+        /// <item><description>DdlReport: DDL notification.</description></item>
+        /// <item><description>ResourceUtilization: resource group utilization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NotificationSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>The list of alert trigger conditions. Multiple conditions are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]

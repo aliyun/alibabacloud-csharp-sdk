@@ -1,3 +1,8 @@
+2026-08-18 Version: 6.2.0
+- Support API GetSnapshot.
+- Support API ListSnapshots.
+
+
 2026-08-07 Version: 6.1.1
 - Update API ListLineages: add request parameters RecentDays.
 

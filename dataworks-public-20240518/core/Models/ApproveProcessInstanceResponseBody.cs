@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ApproveProcessInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc5df3a17***903790e8e8a</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The connection configuration for the MCP Server.</para>
+        /// <para>The connection configuration of the MCP Server.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateMcpServerRequestConfig Config { get; set; }
         public class CreateMcpServerRequestConfig : TeaModel {
             /// <summary>
-            /// <para>The custom request headers, specified as key-value pairs. You cannot override reserved headers.</para>
+            /// <para>The custom request headers (key-value pairs). Reserved headers cannot be overwritten.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Transport { get; set; }
 
             /// <summary>
-            /// <para>The service address of the MCP Server. It must start with <c>https://</c>.</para>
+            /// <para>The service URL of the MCP Server. The URL must start with <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and contain only characters from <c>a-z</c>, <c>0-9</c>, <c>_</c>, and <c>-</c>.</para>
+        /// <para>The name of the MCP Server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only <c>a-z</c>, <c>0-9</c>, <c>_</c>, and <c>-</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,21 +75,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The required fields depend on the value of the <c>Visibility</c> parameter.</para>
+        /// <para>The visibility scope. The corresponding field is used based on the Visibility value.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]
         public CreateMcpServerRequestVisibilityScope VisibilityScope { get; set; }
         public class CreateMcpServerRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The project IDs to which the MCP Server is visible. This parameter is required only when <c>Visibility</c> is set to <c>PROJECT</c>.</para>
+            /// <para>The list of project IDs that are visible. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The user IDs to which the MCP Server is visible. This parameter is required only when <c>Visibility</c> is set to <c>USER</c>.</para>
+            /// <para>The list of user IDs that are visible. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

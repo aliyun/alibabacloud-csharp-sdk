@@ -55,6 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances : TeaModel {
                 /// <summary>
                 /// <para>The business date.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -65,6 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -84,12 +86,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The project environment.</para>
+                /// <para>The project environment. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Prod (production)</para>
-                /// </description></item>
-                /// <item><description><para>Dev (development)</para>
-                /// </description></item>
+                /// <item><description>Prod (production)</description></item>
+                /// <item><description>Dev (development)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +100,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EnvType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance finished running.</para>
+                /// <para>The finish time.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -121,6 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The modification time.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -170,7 +172,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance started running.</para>
+                /// <para>The start time.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -180,24 +183,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? StartedTime { get; set; }
 
                 /// <summary>
-                /// <para>The running status of the workflow instance.</para>
+                /// <para>The running status of the workflow instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>NotRun: Not run</para>
-                /// </description></item>
-                /// <item><description><para>Running: Running</para>
-                /// </description></item>
-                /// <item><description><para>WaitTime: Waiting for TriggerTime</para>
-                /// </description></item>
-                /// <item><description><para>CheckingCondition: Checking branch conditions</para>
-                /// </description></item>
-                /// <item><description><para>WaitResource: Waiting for resources</para>
-                /// </description></item>
-                /// <item><description><para>Failure: Failed</para>
-                /// </description></item>
-                /// <item><description><para>Success: Succeeded</para>
-                /// </description></item>
-                /// <item><description><para>Checking: Submitted for Data Quality check</para>
-                /// </description></item>
+                /// <item><description>NotRun: not run</description></item>
+                /// <item><description>Running: running</description></item>
+                /// <item><description>WaitTime: waiting for TriggerTime</description></item>
+                /// <item><description>CheckingCondition: checking branch conditions</description></item>
+                /// <item><description>WaitResource: waiting for resources</description></item>
+                /// <item><description>Failure: failed</description></item>
+                /// <item><description>Success: succeeded</description></item>
+                /// <item><description>Checking: submitted for data quality check</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -208,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The task tags.</para>
+                /// <para>The node tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -237,20 +232,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the workflow instance.</para>
+                /// <para>The type of the workflow instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Normal: Periodic scheduling</para>
-                /// </description></item>
-                /// <item><description><para>Manual: Manual task</para>
-                /// </description></item>
-                /// <item><description><para>SmokeTest: Testing</para>
-                /// </description></item>
-                /// <item><description><para>SupplementData: Backfill data</para>
-                /// </description></item>
-                /// <item><description><para>ManualWorkflow: Manual workflow</para>
-                /// </description></item>
-                /// <item><description><para>TriggerWorkflow: Trigger-based workflow</para>
-                /// </description></item>
+                /// <item><description>Normal: periodic scheduling</description></item>
+                /// <item><description>Manual: manual task</description></item>
+                /// <item><description>SmokeTest: test</description></item>
+                /// <item><description>SupplementData: data backfill</description></item>
+                /// <item><description>ManualWorkflow: manual workflow</description></item>
+                /// <item><description>TriggerWorkflow: trigger-based workflow</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -261,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The unified workflow instance ID. All workflow instances within the same business date of a single trigger share the same value for this field.</para>
+                /// <para>The unified workflow instance ID. All workflow instances within the same business date under a specific trigger share the same value for this field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -284,9 +273,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The workflow parameters.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>周期工作流：
+                /// <para>Periodic workflow:
                 /// key1=value1 key2=value2
-                /// 手动业务流程：
+                /// Manual workflow:
                 /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
                 /// </summary>
                 [NameInMap("WorkflowParameters")]

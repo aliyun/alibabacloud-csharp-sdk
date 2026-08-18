@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityScanRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The run ID.</para>
+        /// <para>The run ID of the successfully triggered task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>248840</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion succeeded.</para>
+        /// <para>Indicates whether the dataset is deleted successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteAlertRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the custom rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>105412</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDIJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the job.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DI Job Demo</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Settings for the destination data sources.</para>
+        /// <para>The list of destination data source settings.</para>
         /// </summary>
         [NameInMap("DestinationDataSourceSettings")]
         [Validation(Required=false)]
         public string DestinationDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination data source. Valid values: <c>Hologres</c>, <c>OSS-HDFS</c>, <c>OSS</c>, <c>MaxCompute</c>, <c>LogHub</c>, <c>StarRocks</c>, <c>DataHub</c>, <c>AnalyticDB for MySQL</c>, <c>Kafka</c>, and <c>Hive</c>.</para>
+        /// <para>The type of the destination data source. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DestinationDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The code for a job created in script mode.</para>
+        /// <para>The code content in script mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the <c>Name</c> parameter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the Name parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql_to_holo_sync_8772</para>
@@ -241,20 +241,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The settings for the synchronization job, including DDL processing policies, data type mappings between source and destination columns, and runtime parameters.</para>
+        /// <para>The task-level settings, including DDL handling policies, source-to-destination column data type mapping policies, and task runtime parameters.</para>
         /// </summary>
         [NameInMap("JobSettings")]
         [Validation(Required=false)]
         public string JobSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The job type. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>DatabaseRealtimeMigration</c>: Synchronizes multiple tables from multiple source databases in real time (stream synchronization). This type supports full, incremental, or both full and incremental synchronization.</para>
+        /// <item><description><para>DatabaseRealtimeMigration: real-time migration of entire databases. Performs streaming synchronization of multiple tables from multiple source databases. Supports full-only, incremental-only, or full and incremental synchronization.</para>
         /// </description></item>
-        /// <item><description><para><c>DatabaseOfflineMigration</c>: Synchronizes multiple tables from multiple source databases in batches. This type supports full, incremental, or both full and incremental synchronization.</para>
+        /// <item><description><para>DatabaseOfflineMigration: offline migration of entire databases. Performs batch synchronization of multiple tables from multiple source databases. Supports full-only, incremental-only, or full and incremental synchronization.</para>
         /// </description></item>
-        /// <item><description><para><c>SingleTableRealtimeMigration</c>: Synchronizes a single source table in real time (stream synchronization).</para>
+        /// <item><description><para>SingleTableRealtimeMigration: real-time migration of a single table. Performs streaming synchronization of a single source table.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -268,16 +268,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>FullAndRealtimeIncremental</c>: Full and real-time incremental synchronization for an entire database.</para>
-        /// </description></item>
-        /// <item><description><para><c>RealtimeIncremental</c>: Real-time incremental synchronization for a single table.</para>
-        /// </description></item>
-        /// <item><description><para><c>Full</c>: Full batch synchronization for an entire database.</para>
-        /// </description></item>
-        /// <item><description><para><c>OfflineIncremental</c>: Incremental synchronization in batch mode.</para>
-        /// </description></item>
-        /// <item><description><para><c>FullAndOfflineIncremental</c>: Full and incremental batch synchronization for an entire database.</para>
-        /// </description></item>
+        /// <item><description>FullAndRealtimeIncremental: full and real-time incremental synchronization for entire databases in real time.</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization for single tables in real time.</description></item>
+        /// <item><description>Full: full synchronization for entire databases offline.</description></item>
+        /// <item><description>OfflineIncremental: offline incremental synchronization for entire databases offline.</description></item>
+        /// <item><description>FullAndOfflineIncremental: full and offline incremental synchronization for entire databases offline.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -288,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql_to_holo_sync_8772</para>
@@ -298,7 +293,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The job owner.</para>
+        /// <para>The owner of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3726346</para>
@@ -308,7 +303,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace for this API call. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -325,14 +321,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>Settings for the source data sources.</para>
+        /// <para>The list of source data source settings.</para>
         /// </summary>
         [NameInMap("SourceDataSourceSettings")]
         [Validation(Required=false)]
         public string SourceDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the source data source. Valid values: <c>PolarDB</c>, <c>MySQL</c>, <c>Kafka</c>, <c>LogHub</c>, <c>Hologres</c>, <c>Oracle</c>, <c>OceanBase</c>, <c>MongoDB</c>, <c>Redshift</c>, <c>Hive</c>, <c>SQL Server</c>, <c>Doris</c>, and <c>ClickHouse</c>.</para>
+        /// <para>The type of the source data source. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, ClickHouse.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -342,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SourceDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>Transformation mappings for the objects to be synchronized. Each mapping defines selection rules for a group of source objects and the transformation rules to apply to them.</para>
+        /// <para>The list of synchronization object transformation mappings. Each element describes a group of source object selection rules and the transformation rules applied to that group.</para>
         /// <remarks>
         /// <para>[ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</para>
         /// </remarks>
@@ -352,9 +348,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TableMappingsShrink { get; set; }
 
         /// <summary>
-        /// <para>A list of transformation rules for the objects to be synchronized.</para>
+        /// <para>The list of synchronization object transformation rule definitions.</para>
         /// <remarks>
-        /// <para>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{\\&quot;expression\\&quot;:\\&quot;${srcDatasoureName}_${srcDatabaseName}\\&quot;}&quot; } ]</para>
+        /// <para>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransformationRules")]

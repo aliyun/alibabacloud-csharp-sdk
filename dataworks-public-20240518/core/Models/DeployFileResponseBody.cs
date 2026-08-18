@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeployFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deployment package ID. You must specify this ID as a parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment.</para>
+        /// <para>The ID of the deployment package. You must pass this ID as a parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the details of this deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000001</para>
@@ -62,10 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: success.</para>
-        /// </description></item>
-        /// <item><description><para>false: failure.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CancelAgentSessionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID passed by the requester. The value is returned as-is in the response.</para>
+        /// <para>The ID passed in by the requester, returned as-is in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676303114031776</para>

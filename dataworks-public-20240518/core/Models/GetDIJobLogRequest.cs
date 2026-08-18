@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Use the Id parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? FailoverId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task.</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -53,12 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</para>
+        /// <para>The node type. This parameter is applicable only to tasks that run on resource group 2.0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MASTER</b>: the master node, which is used to query the logs of JobManagers.</para>
-        /// </description></item>
-        /// <item><description><para><b>WORKER</b>: the worker node, which is used to query the logs of TaskManagers.</para>
-        /// </description></item>
+        /// <item><description><b>MASTER</b>: retrieves the JobManager logs.</description></item>
+        /// <item><description><b>WORKER</b>: retrieves the TaskManager logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the pagination query. The value is a positive integer greater than or equal to 1.</para>
+        /// <para>The page number for paging. The value must be a positive integer greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

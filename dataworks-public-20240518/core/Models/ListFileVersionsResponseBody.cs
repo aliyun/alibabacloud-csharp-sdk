@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFileVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of file versions.</para>
+        /// <para>The version list of the file.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListFileVersionsResponseBodyDataFileVersions> FileVersions { get; set; }
             public class ListFileVersionsResponseBodyDataFileVersions : TeaModel {
                 /// <summary>
-                /// <para>The change type for this file version. Valid values: CREATE, UPDATE, and DELETE.</para>
+                /// <para>The change type of this file version. Valid values: CREATE, UPDATE, and DELETE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UPDATE</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp (in milliseconds) when the file version was created.</para>
+                /// <para>The timestamp in milliseconds when the file version was generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593881265000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CommitTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID of the user who created this file version.</para>
+                /// <para>The Alibaba Cloud user ID that generated this file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>73842342****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommitUser { get; set; }
 
                 /// <summary>
-                /// <para>The file code for this version.</para>
+                /// <para>The file code that generated this file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SHOW TABLES;</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FileContent { get; set; }
 
                 /// <summary>
-                /// <para>The file name for this file version.</para>
+                /// <para>The file name that generated this file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ods_user_info_d</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The text information for this file version.</para>
+                /// <para>The basic text information that generated this file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FilePropertyContent { get; set; }
 
                 /// <summary>
-                /// <para>The file version.</para>
+                /// <para>The version of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -106,10 +106,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>Indicates whether this file version is the latest version in the production environment.</para>
                 /// <list type="bullet">
-                /// <item><description><para>true</para>
-                /// </description></item>
-                /// <item><description><para>false</para>
-                /// </description></item>
+                /// <item><description>true: The version is the latest version.</description></item>
+                /// <item><description>false: The version is not the latest version.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -120,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? IsCurrentProd { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling configuration for this file version.</para>
+                /// <para>The scheduling configuration that generated this file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</para>
@@ -130,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string NodeContent { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling task ID associated with this file version.</para>
+                /// <para>The ID of the scheduling node associated with the file version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The functional module to which the file belongs. Valid values: NORMAL (Data Studio), MANUAL (manual task), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in Data Studio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</para>
+                /// <para>The functional module to which the file belongs. Valid values: NORMAL (DataStudio), MANUAL (manual node), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in DataStudio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -172,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The size of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -182,7 +180,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -234,12 +232,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
