@@ -320,6 +320,342 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Inserts domain name entries into a domain name list in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDomainItemsResponse
+        /// </returns>
+        public BatchCreateDomainItemsResponse BatchCreateDomainItemsWithOptions(BatchCreateDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainItems))
+            {
+                bodyFlat["DomainItems"] = request.DomainItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                body["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                body["ListType"] = request.ListType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateDomainItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Inserts domain name entries into a domain name list in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDomainItemsResponse
+        /// </returns>
+        public async Task<BatchCreateDomainItemsResponse> BatchCreateDomainItemsWithOptionsAsync(BatchCreateDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainItems))
+            {
+                bodyFlat["DomainItems"] = request.DomainItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                body["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                body["ListType"] = request.ListType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateDomainItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Inserts domain name entries into a domain name list in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDomainItemsResponse
+        /// </returns>
+        public BatchCreateDomainItemsResponse BatchCreateDomainItems(BatchCreateDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchCreateDomainItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Inserts domain name entries into a domain name list in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDomainItemsResponse
+        /// </returns>
+        public async Task<BatchCreateDomainItemsResponse> BatchCreateDomainItemsAsync(BatchCreateDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchCreateDomainItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteDomainItemsResponse
+        /// </returns>
+        public BatchDeleteDomainItemsResponse BatchDeleteDomainItemsWithOptions(BatchDeleteDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIds))
+            {
+                bodyFlat["ItemIds"] = request.ItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                body["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                body["ListType"] = request.ListType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteDomainItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteDomainItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteDomainItemsResponse
+        /// </returns>
+        public async Task<BatchDeleteDomainItemsResponse> BatchDeleteDomainItemsWithOptionsAsync(BatchDeleteDomainItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIds))
+            {
+                bodyFlat["ItemIds"] = request.ItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListId))
+            {
+                body["ListId"] = request.ListId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListType))
+            {
+                body["ListType"] = request.ListType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteDomainItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteDomainItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteDomainItemsResponse
+        /// </returns>
+        public BatchDeleteDomainItemsResponse BatchDeleteDomainItems(BatchDeleteDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchDeleteDomainItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteDomainItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteDomainItemsResponse
+        /// </returns>
+        public async Task<BatchDeleteDomainItemsResponse> BatchDeleteDomainItemsAsync(BatchDeleteDomainItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchDeleteDomainItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an approval process under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -6448,7 +6784,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an approval instance for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of an approval instance under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6486,7 +6822,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an approval instance for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of an approval instance under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6524,7 +6860,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an approval instance for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of an approval instance under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6542,7 +6878,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an approval instance for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of an approval instance under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9028,7 +9364,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists approval instances for your Alibaba Cloud account.</para>
+        /// <para>Queries the list of approval instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9066,7 +9402,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists approval instances for your Alibaba Cloud account.</para>
+        /// <para>Queries the list of approval instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9104,7 +9440,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists approval instances for your Alibaba Cloud account.</para>
+        /// <para>Queries the list of approval instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9122,7 +9458,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists approval instances for your Alibaba Cloud account.</para>
+        /// <para>Queries the list of approval instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9364,12 +9700,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询域名条目</para>
+        /// <para>Queries domain name entries in a domain name list by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// <para>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <c>ListId</c>, and then use this operation to perform paging through the domain names in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9427,12 +9763,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询域名条目</para>
+        /// <para>Queries domain name entries in a domain name list by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// <para>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <c>ListId</c>, and then use this operation to perform paging through the domain names in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9490,12 +9826,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询域名条目</para>
+        /// <para>Queries domain name entries in a domain name list by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// <para>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <c>ListId</c>, and then use this operation to perform paging through the domain names in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9513,12 +9849,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询域名条目</para>
+        /// <para>Queries domain name entries in a domain name list by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定域名名单下的域名条目明细。与 ListDomainMetas配套使用：先拿到 <c>ListId</c>，再用本接口翻页查看该名单里的域名。</para>
+        /// <para>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <c>ListId</c>, and then use this operation to perform paging through the domain names in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
