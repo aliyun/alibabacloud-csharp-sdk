@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class StartDisposalToolServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The authorization type.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DisposalTool</b>: one-click disposal authorization type</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>DisposalTool</para>
         /// </summary>

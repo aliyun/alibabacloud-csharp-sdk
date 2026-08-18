@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetNotificationContactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: Success.</description></item>
+        /// <item><description><b>Other (400, 500)</b>: Failure.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The query result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetNotificationContactsResponseBodyData> Data { get; set; }
         public class GetNotificationContactsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Alibaba Cloud account ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1355290655619147</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public long? AliUid { get; set; }
 
             /// <summary>
+            /// <para>The message category code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod_edu_content</para>
             /// </summary>
@@ -38,14 +51,18 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string CategoryCode { get; set; }
 
             /// <summary>
+            /// <para>The message category description.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>产品的使用场景、技术分享的相关内容</para>
+            /// <para>Product usage scenarios and technical sharing content.</para>
             /// </summary>
             [NameInMap("CategoryDesc")]
             [Validation(Required=false)]
             public string CategoryDesc { get; set; }
 
             /// <summary>
+            /// <para>The category group code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod_msg</para>
             /// </summary>
@@ -54,26 +71,35 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string CategoryGroupCode { get; set; }
 
             /// <summary>
+            /// <para>The category group name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>产品消息</para>
+            /// <para>Product messages.</para>
             /// </summary>
             [NameInMap("CategoryGroupName")]
             [Validation(Required=false)]
             public string CategoryGroupName { get; set; }
 
             /// <summary>
+            /// <para>The message category name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>产品教育内容</para>
+            /// <para>Product educational content.</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
+            /// <summary>
+            /// <para>The channel list.</para>
+            /// </summary>
             [NameInMap("ChannelConfigs")]
             [Validation(Required=false)]
             public List<GetNotificationContactsResponseBodyDataChannelConfigs> ChannelConfigs { get; set; }
             public class GetNotificationContactsResponseBodyDataChannelConfigs : TeaModel {
                 /// <summary>
+                /// <para>The channel type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>email</para>
                 /// </summary>
@@ -82,6 +108,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ChannelType { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the subscription is configured.</para>
+                /// <list type="bullet">
+                /// <item><description><b>NO</b></description></item>
+                /// <item><description><b>YES</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NO</para>
                 /// </summary>
@@ -90,6 +122,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string CheckedState { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the channel is selected by default.</para>
+                /// <list type="bullet">
+                /// <item><description><b>NO</b></description></item>
+                /// <item><description><b>YES</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NO</para>
                 /// </summary>
@@ -98,6 +136,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string DefaultChecked { get; set; }
 
                 /// <summary>
+                /// <para>The fatigue limit.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
                 /// </summary>
@@ -106,6 +146,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public int? FatigueDayLimit { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the channel is modifiable.</para>
+                /// <list type="bullet">
+                /// <item><description><b>NO</b></description></item>
+                /// <item><description><b>YES</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NO</para>
                 /// </summary>
@@ -116,6 +162,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether all notification methods are selected.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -123,11 +175,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             [Validation(Required=false)]
             public bool? ChooseAllChannel { get; set; }
 
+            /// <summary>
+            /// <para>The general contact list.</para>
+            /// </summary>
             [NameInMap("ContactInfoList")]
             [Validation(Required=false)]
             public List<GetNotificationContactsResponseBodyDataContactInfoList> ContactInfoList { get; set; }
             public class GetNotificationContactsResponseBodyDataContactInfoList : TeaModel {
                 /// <summary>
+                /// <para>The Alibaba Cloud account ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1492387044070147</para>
                 /// </summary>
@@ -136,6 +193,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the contact is bound.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>fasle</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -144,6 +207,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public bool? BindContact { get; set; }
 
                 /// <summary>
+                /// <para>The contact email address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>t*@qq.*</para>
                 /// </summary>
@@ -152,6 +217,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ContactEmail { get; set; }
 
                 /// <summary>
+                /// <para>The Account Center contact ID. A value of 0 indicates the account contact.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -160,6 +227,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public long? ContactId { get; set; }
 
                 /// <summary>
+                /// <para>The Account Center contact mobile number (masked).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>13580xxx136</para>
                 /// </summary>
@@ -168,6 +237,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ContactMobile { get; set; }
 
                 /// <summary>
+                /// <para>The Account Center contact name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>shianyu</para>
                 /// </summary>
@@ -176,6 +247,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ContactName { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the email address is verified.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -184,6 +261,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public bool? EmailConfirmed { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the Account Center contact mobile number is verified.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -192,6 +275,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public bool? MobileConfirmed { get; set; }
 
                 /// <summary>
+                /// <para>The Account Center contact position.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CEO</para>
                 /// </summary>
@@ -204,6 +289,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The prompt message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -212,6 +299,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2FBDD713-00A5-5C98-B661-3FD31A349B6E</para>
         /// </summary>
@@ -220,6 +309,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Success.</description></item>
+        /// <item><description><b>false</b>: Failure.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

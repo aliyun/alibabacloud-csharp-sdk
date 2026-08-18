@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetValidDeductInstancesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-fuzhou</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Security Center SDK request parameters.</para>
+        /// </summary>
         [NameInMap("SdkRequest")]
         [Validation(Required=false)]
         public string SdkRequestShrink { get; set; }

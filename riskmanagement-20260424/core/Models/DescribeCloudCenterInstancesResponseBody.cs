@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class DescribeCloudCenterInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status of the API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,19 +19,30 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of instance details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCloudCenterInstancesResponseBodyData Data { get; set; }
         public class DescribeCloudCenterInstancesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The string of the message body content encoded by using the Base64 algorithm.</para>
+            /// </summary>
             [NameInMap("Body")]
             [Validation(Required=false)]
             public DescribeCloudCenterInstancesResponseBodyDataBody Body { get; set; }
             public class DescribeCloudCenterInstancesResponseBodyDataBody : TeaModel {
+                /// <summary>
+                /// <para>The list of asset details.</para>
+                /// </summary>
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
                 public List<DescribeCloudCenterInstancesResponseBodyDataBodyInstances> Instances { get; set; }
                 public class DescribeCloudCenterInstancesResponseBodyDataBodyInstances : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the image has security alerts. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>NO</para>
                     /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlarmStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The application ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>FC2U0JVHWS49S2OT</para>
                     /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AppId { get; set; }
 
                     /// <summary>
+                    /// <para>The application name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>guokent</para>
                     /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AppName { get; set; }
 
                     /// <summary>
+                    /// <para>The type of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AssetType { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the asset type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>xxxxxx</para>
                     /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AssetTypeName { get; set; }
 
                     /// <summary>
+                    /// <para>The timestamp when the asset was bound for authorization. Unit: milliseconds.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1627974044000</para>
                     /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public long? AuthModifyTime { get; set; }
 
                     /// <summary>
+                    /// <para>The authorization version of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
                     /// </summary>
@@ -86,14 +111,18 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? AuthVersion { get; set; }
 
                     /// <summary>
+                    /// <para>The authorization version name of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
-                    /// <para>免费版</para>
+                    /// <para>Free Edition.</para>
                     /// </summary>
                     [NameInMap("AuthVersionName")]
                     [Validation(Required=false)]
                     public string AuthVersionName { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the asset is bound with authorization. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -102,6 +131,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public bool? Bind { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether web tamper-proofing authorization is bound. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>none</para>
                     /// </summary>
@@ -110,6 +141,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string BindFileProtectType { get; set; }
 
                     /// <summary>
+                    /// <para>The online status of the client on the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>online</para>
                     /// </summary>
@@ -118,6 +151,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ClientStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The sub-status of the client on the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>online</para>
                     /// </summary>
@@ -126,6 +161,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ClientSubStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the cluster where the resource group resides.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cb703cb0ba6bd40d4a6d8de5bff050fb9</para>
                     /// </summary>
@@ -134,6 +171,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ClusterId { get; set; }
 
                     /// <summary>
+                    /// <para>The cluster name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>auto-cn-heyuan</para>
                     /// </summary>
@@ -142,6 +181,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ClusterName { get; set; }
 
                     /// <summary>
+                    /// <para>The number of CPU cores of the asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>9</para>
                     /// </summary>
@@ -150,6 +191,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? Cores { get; set; }
 
                     /// <summary>
+                    /// <para>The CPU information of the asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Intel(R) Xeon(R) Platinum 8269CY CPU @ 2.50GHz</para>
                     /// </summary>
@@ -158,6 +201,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string CpuInfo { get; set; }
 
                     /// <summary>
+                    /// <para>The timestamp when the cluster was created. Unit: milliseconds.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1607365213000</para>
                     /// </summary>
@@ -166,6 +211,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public long? CreatedTime { get; set; }
 
                     /// <summary>
+                    /// <para>The exposure status of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -174,6 +221,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? ExposedStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0,1,2</para>
                     /// </summary>
@@ -182,6 +231,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? Flag { get; set; }
 
                     /// <summary>
+                    /// <para>The vendor of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ALIYUN</para>
                     /// </summary>
@@ -190,6 +241,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string FlagName { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the group to which the instance belongs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>86d30f8b0e124aadb7ef3197f9dbd1f5</para>
                     /// </summary>
@@ -198,6 +251,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public long? GroupId { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the group to which the asset belongs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
                     /// </summary>
@@ -206,6 +261,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string GroupTrace { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the asset contains containers. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>YES</para>
                     /// </summary>
@@ -214,6 +271,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string HasContainer { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether baseline risks are detected on the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>YES</para>
                     /// </summary>
@@ -222,6 +281,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string HcStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The number of baseline risks on the instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -230,6 +291,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? HealthCheckCount { get; set; }
 
                     /// <summary>
+                    /// <para>The importance level of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -238,6 +301,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? Importance { get; set; }
 
                     /// <summary>
+                    /// <para>The instance ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ls-cn-tl32rf**008</para>
                     /// </summary>
@@ -246,6 +311,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
+                    /// <para>The instance name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ra-supabase-22u1iv3hr**5v9</para>
                     /// </summary>
@@ -254,6 +321,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string InstanceName { get; set; }
 
                     /// <summary>
+                    /// <para>The public IP address of the associated instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>47.1**.52.125</para>
                     /// </summary>
@@ -262,6 +331,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string InternetIp { get; set; }
 
                     /// <summary>
+                    /// <para>The private IP address of the current server.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>172.16.1**.245</para>
                     /// </summary>
@@ -270,6 +341,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string IntranetIp { get; set; }
 
                     /// <summary>
+                    /// <para>The management IP address.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>114.55.*4.*6</para>
                     /// </summary>
@@ -278,6 +351,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Ip { get; set; }
 
                     /// <summary>
+                    /// <para>The list of IP addresses of the system.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>172.31.XX.XX,172.171.XX.XX</para>
                     /// </summary>
@@ -286,6 +361,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string IpListString { get; set; }
 
                     /// <summary>
+                    /// <para>The kernel version information.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>3.10.0-1127.19.1.el7.x86_64</para>
                     /// </summary>
@@ -294,6 +371,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Kernel { get; set; }
 
                     /// <summary>
+                    /// <para>The timestamp when the client last went online. Unit: milliseconds.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1637592907000</para>
                     /// </summary>
@@ -302,6 +381,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public long? LastLoginTimestamp { get; set; }
 
                     /// <summary>
+                    /// <para>The MAC address of the system.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>00:13:3e:31:13:39,02:12:67:b8:<b>:</b></para>
                     /// </summary>
@@ -310,6 +391,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string MacListString { get; set; }
 
                     /// <summary>
+                    /// <para>The total memory. Unit: MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1024</para>
                     /// </summary>
@@ -318,6 +401,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Mem { get; set; }
 
                     /// <summary>
+                    /// <para>The namespace.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>slsshpcorlsmetrics</para>
                     /// </summary>
@@ -326,6 +411,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
+                    /// <para>The operating system of the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>linux</para>
                     /// </summary>
@@ -334,6 +421,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Os { get; set; }
 
                     /// <summary>
+                    /// <para>The kernel version of the instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AliOS7U2-x86-64</para>
                     /// </summary>
@@ -342,6 +431,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string OsName { get; set; }
 
                     /// <summary>
+                    /// <para>The number of pods.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
                     /// </summary>
@@ -350,6 +441,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? PodCount { get; set; }
 
                     /// <summary>
+                    /// <para>The billing method of the protection edition bound to the current asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -358,6 +451,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? PostPaidFlag { get; set; }
 
                     /// <summary>
+                    /// <para>The region ID of the instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhouxxxx</para>
                     /// </summary>
@@ -366,6 +461,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Region { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the region where the asset resides.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-zhangjiakou</para>
                     /// </summary>
@@ -374,6 +471,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
+                    /// <para>The region name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
                     /// </summary>
@@ -382,6 +481,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RegionName { get; set; }
 
                     /// <summary>
+                    /// <para>The statistics of risk items on the asset. The value is in JSON format and contains the following fields:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>{
                     ///       &quot;account&quot;: 0,
@@ -431,6 +532,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RiskCount { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether risks exist. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>NO</para>
                     /// </summary>
@@ -439,6 +542,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string RiskStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The number of security alerts on the asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
                     /// </summary>
@@ -447,6 +552,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string SafeEventCount { get; set; }
 
                     /// <summary>
+                    /// <para>The service ID. This parameter has a value only when the instance is a serverless instance that belongs to the PAI platform.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>dsw-76jlywunsif09bp15p</para>
                     /// </summary>
@@ -455,6 +562,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string ServiceId { get; set; }
 
                     /// <summary>
+                    /// <para>The running status of the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Running</para>
                     /// </summary>
@@ -463,6 +572,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Status { get; set; }
 
                     /// <summary>
+                    /// <para>The tag name of the asset instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>pre_20250714_idpt_adjust</para>
                     /// </summary>
@@ -471,6 +582,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Tag { get; set; }
 
                     /// <summary>
+                    /// <para>The tag ID of the asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>d8586ab8be4549e3815995858d277763</para>
                     /// </summary>
@@ -479,6 +592,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string TagId { get; set; }
 
                     /// <summary>
+                    /// <para>The custom tags of the Lingjun node. This parameter is returned only when the machine is a Lingjun machine.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>app:test,type:lingjun</para>
                     /// </summary>
@@ -487,6 +602,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string TagResources { get; set; }
 
                     /// <summary>
+                    /// <para>The UUID of the terminal device.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1f0459ee-ed49-6484-8958-4f10f61e6362</para>
                     /// </summary>
@@ -495,6 +612,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string Uuid { get; set; }
 
                     /// <summary>
+                    /// <para>The vendor of the asset. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -503,6 +622,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? Vendor { get; set; }
 
                     /// <summary>
+                    /// <para>The service provider name of the asset.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>IDC</para>
                     /// </summary>
@@ -511,6 +632,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string VendorName { get; set; }
 
                     /// <summary>
+                    /// <para>The account ID of the multi-cloud instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
                     /// </summary>
@@ -519,6 +642,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string VendorUid { get; set; }
 
                     /// <summary>
+                    /// <para>The account name of the multi-cloud instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>VendorUserName</para>
                     /// </summary>
@@ -527,6 +652,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string VendorUserName { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the VPC to which the instance belongs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>vpc-2zek7v0z4r6lbp02xckei</para>
                     /// </summary>
@@ -535,6 +662,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string VpcInstanceId { get; set; }
 
                     /// <summary>
+                    /// <para>The number of vulnerabilities on the instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -543,6 +672,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? VulCount { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether vulnerabilities exist on the instance. Valid values:</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>YES</para>
                     /// </summary>
@@ -552,11 +683,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
                 }
 
+                /// <summary>
+                /// <para>The pagination information.</para>
+                /// </summary>
                 [NameInMap("PageInfo")]
                 [Validation(Required=false)]
                 public DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo PageInfo { get; set; }
                 public class DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo : TeaModel {
                     /// <summary>
+                    /// <para>The total count.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
                     /// </summary>
@@ -565,6 +701,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? Count { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of rows per page in a paged query.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -573,6 +711,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? CurrentPage { get; set; }
 
                     /// <summary>
+                    /// <para>The NextToken value returned when the NextToken method is used.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>m1NGAAAAAABzLzIwMjQwMg==</para>
                     /// </summary>
@@ -581,6 +721,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string NextToken { get; set; }
 
                     /// <summary>
+                    /// <para>The number of records per page.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
                     /// </summary>
@@ -589,6 +731,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public int? PageSize { get; set; }
 
                     /// <summary>
+                    /// <para>The total number of records.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -599,6 +743,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 }
 
                 /// <summary>
+                /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20EBDE7B-AA36-5D60-9DCA-151C48EDB9F8</para>
                 /// </summary>
@@ -607,6 +753,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string RequestId { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the call was successful. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The call was successful.</description></item>
+                /// <item><description>false: The call failed.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -619,6 +771,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -627,6 +781,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1B4C9A14-94E6-5EEB-BF39-7DACCE9AC0D6</para>
         /// </summary>
@@ -635,6 +791,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

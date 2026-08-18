@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class QueryAccountSafetyIncidentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>200: The request was successful. Other values (such as 500 or 400): An error occurred.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +22,23 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAccountSafetyIncidentResponseBodyData Data { get; set; }
         public class QueryAccountSafetyIncidentResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The event data.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryAccountSafetyIncidentResponseBodyDataList> List { get; set; }
             public class QueryAccountSafetyIncidentResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The control action name code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success_service</para>
                 /// </summary>
@@ -34,14 +47,21 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ActionCode { get; set; }
 
                 /// <summary>
+                /// <para>The control action name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>处罚直接成功</para>
+                /// <para>Penalty executed successfully.</para>
                 /// </summary>
                 [NameInMap("ActionName")]
                 [Validation(Required=false)]
                 public string ActionName { get; set; }
 
                 /// <summary>
+                /// <para>The time when the control action was removed.</para>
+                /// <remarks>
+                /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-16 15:15:00</para>
                 /// </summary>
@@ -49,11 +69,23 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 [Validation(Required=false)]
                 public string AntiPunishTime { get; set; }
 
+                [NameInMap("CallApi")]
+                [Validation(Required=false)]
+                public string CallApi { get; set; }
+
+                /// <summary>
+                /// <para>The control action time information.</para>
+                /// </summary>
                 [NameInMap("DateExtras")]
                 [Validation(Required=false)]
                 public QueryAccountSafetyIncidentResponseBodyDataListDateExtras DateExtras { get; set; }
                 public class QueryAccountSafetyIncidentResponseBodyDataListDateExtras : TeaModel {
                     /// <summary>
+                    /// <para>The time when the alert ended.</para>
+                    /// <remarks>
+                    /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+                    /// </remarks>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-16 15:15:00</para>
                     /// </summary>
@@ -62,6 +94,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertEndTime { get; set; }
 
                     /// <summary>
+                    /// <para>The time when the first alert was triggered.</para>
+                    /// <remarks>
+                    /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+                    /// </remarks>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-16 15:15:00</para>
                     /// </summary>
@@ -70,6 +107,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertStartTime { get; set; }
 
                     /// <summary>
+                    /// <para>The time of the latest detection.</para>
+                    /// <remarks>
+                    /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+                    /// </remarks>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-16 15:15:00</para>
                     /// </summary>
@@ -80,6 +122,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 }
 
                 /// <summary>
+                /// <para>The event ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4ba4065e0b2206c05f86d5eaa00ae520</para>
                 /// </summary>
@@ -88,6 +132,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string EventId { get; set; }
 
                 /// <summary>
+                /// <para>The event impact.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ak leak.</para>
                 /// </summary>
@@ -96,6 +142,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string EventImpact { get; set; }
 
                 /// <summary>
+                /// <para>The control event name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ak leak.</para>
                 /// </summary>
@@ -104,6 +152,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string EventName { get; set; }
 
                 /// <summary>
+                /// <para>The event reason.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ak leak.</para>
                 /// </summary>
@@ -111,7 +161,24 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 [Validation(Required=false)]
                 public string EventReason { get; set; }
 
+                [NameInMap("EventType")]
+                [Validation(Required=false)]
+                public string EventType { get; set; }
+
+                [NameInMap("ExceptionCallTime")]
+                [Validation(Required=false)]
+                public string ExceptionCallTime { get; set; }
+
+                [NameInMap("ExceptionIp")]
+                [Validation(Required=false)]
+                public string ExceptionIp { get; set; }
+
                 /// <summary>
+                /// <para>The start time of the control action.</para>
+                /// <remarks>
+                /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-16 15:15:00</para>
                 /// </summary>
@@ -120,6 +187,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string PunishTime { get; set; }
 
                 /// <summary>
+                /// <para>The hardening suggestion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>suggestion</para>
                 /// </summary>
@@ -128,6 +197,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Reinforcement { get; set; }
 
                 /// <summary>
+                /// <para>The cloud resource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-2zeanc2b2vgfpbvp60cs</para>
                 /// </summary>
@@ -136,6 +207,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The control object type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>customer</para>
                 /// </summary>
@@ -144,6 +217,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
+                /// <para>The event status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Executing</b>: In progress.</description></item>
+                /// <item><description><b>Removed</b>: Removed.</description></item>
+                /// <item><description><b>Alerting</b>: Alerting.</description></item>
+                /// <item><description><b>Ended</b>: Ended.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Executing</para>
                 /// </summary>
@@ -152,6 +233,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The handling suggestion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>suggestion</para>
                 /// </summary>
@@ -160,6 +243,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Tip { get; set; }
 
                 /// <summary>
+                /// <para>The help topic name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>help</para>
                 /// </summary>
@@ -168,6 +253,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string UserGuideName { get; set; }
 
                 /// <summary>
+                /// <para>The help topic URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxx.aliyun.com/">https://xxx.aliyun.com/</a></para>
                 /// </summary>
@@ -177,11 +264,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
             }
 
+            /// <summary>
+            /// <para>The pagination information.</para>
+            /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
             public QueryAccountSafetyIncidentResponseBodyDataPageInfo PageInfo { get; set; }
             public class QueryAccountSafetyIncidentResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
+                /// <para>The current page number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -190,6 +282,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Current { get; set; }
 
                 /// <summary>
+                /// <para>The number of assets displayed per page when you perform a paging query.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -198,6 +292,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string PageSize { get; set; }
 
                 /// <summary>
+                /// <para>The total number of events.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -210,6 +306,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The message returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful‌</para>
         /// </summary>
@@ -218,6 +316,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2FBDD713-00A5-5C98-B661-3FD31A349B6E</para>
         /// </summary>
@@ -226,6 +326,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetDisposalToolStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +19,20 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDisposalToolStatusResponseBodyData Data { get; set; }
         public class GetDisposalToolStatusResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The authorization status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Authorized.</description></item>
+            /// <item><description><b>false</b>: Not authorized.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -32,6 +43,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The prompt message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful‌</para>
         /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6D462855-7835-5F91-835E-A62E44EC01CC</para>
         /// </summary>
@@ -48,6 +63,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.                               </description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

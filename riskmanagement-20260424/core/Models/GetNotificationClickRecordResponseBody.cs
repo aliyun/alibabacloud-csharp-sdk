@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetNotificationClickRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// <list type="bullet">
+        /// <item><description><b>200</b>: Succeeded.</description></item>
+        /// <item><description><b>Others (400, 500)</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +23,20 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The metadata.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNotificationClickRecordResponseBodyData Data { get; set; }
         public class GetNotificationClickRecordResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the user clicked cancel.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Canceled.</description></item>
+            /// <item><description><b>false</b>: Not canceled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -30,6 +45,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string UserCancel { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the user clicked confirm.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Confirmed.</description></item>
+            /// <item><description><b>false</b>: Not confirmed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +61,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// <remarks>
+        /// <para>If the request was successful, a success message is returned. If the request failed, the failure reason is returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -48,6 +74,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</para>
         /// </summary>
@@ -56,6 +84,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.         </description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

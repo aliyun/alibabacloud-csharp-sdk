@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class CreateVirusScanOnceTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-0iw73ro05vcwn6ntq</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The public IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12.3*.22.11</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Ip { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>
         /// </summary>

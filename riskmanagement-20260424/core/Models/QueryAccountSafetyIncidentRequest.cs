@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class QueryAccountSafetyIncidentRequest : TeaModel {
         /// <summary>
+        /// <para>The language. Default value: zh.</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// <para>The event name code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RISKCONTROL_IMS_IMS_BAN_SUBUSER</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string CaseCode { get; set; }
 
         /// <summary>
+        /// <para>The current page number. The value must be greater than 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Current { get; set; }
 
         /// <summary>
+        /// <para>The event ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string EventId { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page. Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -50,6 +64,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The end time of the control action.</para>
+        /// <remarks>
+        /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-03-16 15:15:00</para>
         /// </summary>
@@ -58,6 +77,11 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string PunishEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the control action.</para>
+        /// <remarks>
+        /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-03-16 15:15:00</para>
         /// </summary>
@@ -66,6 +90,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string PunishStartTime { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RES001</para>
         /// </summary>
@@ -74,6 +100,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The event status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Executing</b>: In progress.</description></item>
+        /// <item><description><b>Removed</b>: Removed.</description></item>
+        /// <item><description><b>Alerting</b>: Alerting.</description></item>
+        /// <item><description><b>Ended</b>: Ended.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Executing</para>
         /// </summary>

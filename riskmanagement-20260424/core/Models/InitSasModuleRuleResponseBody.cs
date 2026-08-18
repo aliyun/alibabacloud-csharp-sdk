@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class InitSasModuleRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned if the call fails. For more information, refer to error codes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The approval result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InitSasModuleRuleResponseBodyData Data { get; set; }
         public class InitSasModuleRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Security Center request ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>14492571-0707-5130-85B4-4DDABB6BDF76</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The error message. The value is the same as the Code parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2E130B0F-9E69-52FA-84FC-187FE1BA9489</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful. true: The call is successful. false: The call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

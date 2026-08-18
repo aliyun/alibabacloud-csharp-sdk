@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"public", "riskmanagement.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("riskmanagement", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-绑定授权到机器</para>
+        /// <para>Bindss authorization to machines in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-绑定授权到机器</para>
+        /// <para>Bindss authorization to machines in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-绑定授权到机器</para>
+        /// <para>Bindss authorization to machines in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-绑定授权到机器</para>
+        /// <para>Bindss authorization to machines in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes Security Center module rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -231,7 +235,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes Security Center module rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -283,7 +287,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes Security Center module rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -301,7 +305,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes Security Center module rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,7 +323,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-创建服务关联角色</para>
+        /// <para>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -371,7 +375,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-创建服务关联角色</para>
+        /// <para>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -423,7 +427,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-创建服务关联角色</para>
+        /// <para>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +445,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-创建服务关联角色</para>
+        /// <para>Creates a service-linked role for Security Center and authorizes Security Center to access cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -459,7 +463,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全盘扫描任务</para>
+        /// <para>Creates a full disk scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -509,7 +513,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全盘扫描任务</para>
+        /// <para>Creates a full disk scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -559,7 +563,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全盘扫描任务</para>
+        /// <para>Creates a full disk scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -577,7 +581,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全盘扫描任务</para>
+        /// <para>Creates a full disk scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -595,7 +599,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询云安全中心实例列表</para>
+        /// <para>Queries the list of Security Center instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -647,7 +651,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询云安全中心实例列表</para>
+        /// <para>Queries the list of Security Center instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -699,7 +703,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询云安全中心实例列表</para>
+        /// <para>Queries the list of Security Center instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -717,7 +721,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询云安全中心实例列表</para>
+        /// <para>Queries the list of Security Center instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -735,7 +739,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询服务关联角色状态</para>
+        /// <para>Queries the status of a service-linked role for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -787,7 +791,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询服务关联角色状态</para>
+        /// <para>Queries the status of a service-linked role for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -839,7 +843,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询服务关联角色状态</para>
+        /// <para>Queries the status of a service-linked role for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -857,7 +861,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询服务关联角色状态</para>
+        /// <para>Queries the status of a service-linked role for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -875,7 +879,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询安全告警事件</para>
+        /// <para>Queries security alert events in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -927,7 +931,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询安全告警事件</para>
+        /// <para>Queries security alert events in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -979,7 +983,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询安全告警事件</para>
+        /// <para>Queries security alert events in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -997,7 +1001,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查询安全告警事件</para>
+        /// <para>Queries security alert events in Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1015,7 +1019,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查看已购买的云安全中心实例的版本详情</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1067,7 +1071,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查看已购买的云安全中心实例的版本详情</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1119,7 +1123,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查看已购买的云安全中心实例的版本详情</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1137,7 +1141,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-查看已购买的云安全中心实例的版本详情</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1155,7 +1159,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警记录分析结果</para>
+        /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1219,7 +1223,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警记录分析结果</para>
+        /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1283,7 +1287,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警记录分析结果</para>
+        /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1301,7 +1305,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警记录分析结果</para>
+        /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1319,7 +1323,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用云安全中心部分接口</para>
+        /// <para>Calls specific Security Center API operations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1431,7 +1435,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用云安全中心部分接口</para>
+        /// <para>Calls specific Security Center API operations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1543,7 +1547,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用云安全中心部分接口</para>
+        /// <para>Calls specific Security Center API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1565,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用云安全中心部分接口</para>
+        /// <para>Calls specific Security Center API operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1579,7 +1583,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取能否试用</para>
+        /// <para>Queries whether a user is eligible for a Security Center free trial.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1631,7 +1635,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取能否试用</para>
+        /// <para>Queries whether a user is eligible for a Security Center free trial.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1683,7 +1687,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取能否试用</para>
+        /// <para>Queries whether a user is eligible for a Security Center free trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1705,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取能否试用</para>
+        /// <para>Queries whether a user is eligible for a Security Center free trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1719,7 +1723,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全合规包id</para>
+        /// <para>Retrieves the security compliance package ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1753,7 +1757,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全合规包id</para>
+        /// <para>Retrieves the security compliance package ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1787,7 +1791,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全合规包id</para>
+        /// <para>Retrieves the security compliance package ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1805,7 +1809,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全合规包id</para>
+        /// <para>Retrieves the security compliance package ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1823,7 +1827,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键处置赋权状态</para>
+        /// <para>Retrieves the authorization status for one-click disposal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1865,7 +1869,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键处置赋权状态</para>
+        /// <para>Retrieves the authorization status for one-click disposal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1907,7 +1911,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键处置赋权状态</para>
+        /// <para>Retrieves the authorization status for one-click disposal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1925,7 +1929,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键处置赋权状态</para>
+        /// <para>Retrieves the authorization status for one-click disposal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1943,7 +1947,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户确认安全联系人记录</para>
+        /// <para>Retrieves the record of a user confirming a security contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1977,7 +1981,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户确认安全联系人记录</para>
+        /// <para>Retrieves the record of a user confirming a security contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2011,7 +2015,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户确认安全联系人记录</para>
+        /// <para>Retrieves the record of a user confirming a security contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2029,7 +2033,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户确认安全联系人记录</para>
+        /// <para>Retrieves the record of a user confirming a security contact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2047,7 +2051,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人全部信息</para>
+        /// <para>Retrieves all information about security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2081,7 +2085,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人全部信息</para>
+        /// <para>Retrieves all information about security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2115,7 +2119,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人全部信息</para>
+        /// <para>Retrieves all information about security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2133,7 +2137,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人全部信息</para>
+        /// <para>Retrieves all information about security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2151,7 +2155,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人待处理数</para>
+        /// <para>Retrieves the number of pending items for security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2185,7 +2189,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人待处理数</para>
+        /// <para>Retrieves the number of pending items for security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,7 +2223,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人待处理数</para>
+        /// <para>Retrieves the number of pending items for security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2237,7 +2241,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全联系人待处理数</para>
+        /// <para>Retrieves the number of pending items for security contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2255,7 +2259,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件详情</para>
+        /// <para>Queries the details of cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2311,7 +2315,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件详情</para>
+        /// <para>Queries the details of cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2367,7 +2371,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件详情</para>
+        /// <para>Queries the details of cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2385,7 +2389,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件详情</para>
+        /// <para>Queries the details of cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2403,7 +2407,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全体检基础信息</para>
+        /// <para>Retrieves the basic information of a security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2441,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全体检基础信息</para>
+        /// <para>Retrieves the basic information of a security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2471,7 +2475,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全体检基础信息</para>
+        /// <para>Retrieves the basic information of a security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2489,7 +2493,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全体检基础信息</para>
+        /// <para>Retrieves the basic information of a security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2507,7 +2511,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全检查结果基础信息</para>
+        /// <para>Retrieves the basic information of security check results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2541,7 +2545,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全检查结果基础信息</para>
+        /// <para>Retrieves the basic information of security check results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2575,7 +2579,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全检查结果基础信息</para>
+        /// <para>Retrieves the basic information of security check results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2593,7 +2597,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全检查结果基础信息</para>
+        /// <para>Retrieves the basic information of security check results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2611,7 +2615,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议列表</para>
+        /// <para>Retrieves a list of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2659,7 +2663,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议列表</para>
+        /// <para>Retrieves a list of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2707,7 +2711,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议列表</para>
+        /// <para>Retrieves a list of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2725,7 +2729,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议列表</para>
+        /// <para>Retrieves a list of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +2747,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议条数</para>
+        /// <para>Retrieves the number of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2777,7 +2781,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议条数</para>
+        /// <para>Retrieves the number of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,7 +2815,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议条数</para>
+        /// <para>Retrieves the number of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2829,7 +2833,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安全优化建议条数</para>
+        /// <para>Retrieves the number of security optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2847,7 +2851,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务关联角色状态</para>
+        /// <para>Retrieves the status of a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2889,7 +2893,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务关联角色状态</para>
+        /// <para>Retrieves the status of a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2931,7 +2935,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务关联角色状态</para>
+        /// <para>Retrieves the status of a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2949,7 +2953,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务关联角色状态</para>
+        /// <para>Retrieves the status of a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2967,7 +2971,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取有效抵扣实例</para>
+        /// <para>Retrieves valid deductible instances for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3019,7 +3023,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取有效抵扣实例</para>
+        /// <para>Retrieves valid deductible instances for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3071,7 +3075,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取有效抵扣实例</para>
+        /// <para>Retrieves valid deductible instances for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3093,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-获取有效抵扣实例</para>
+        /// <para>Retrieves valid deductible instances for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3111,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes module rules for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3167,7 +3171,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes module rules for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3227,7 +3231,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes module rules for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3245,7 +3249,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-初始化云安全中心模块规则</para>
+        /// <para>Initializes module rules for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3263,7 +3267,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全盘扫描结果</para>
+        /// <para>Queries the results of a full disk scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3329,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全盘扫描结果</para>
+        /// <para>Queries the results of a full disk scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3387,7 +3391,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全盘扫描结果</para>
+        /// <para>Queries the results of a full disk scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3405,7 +3409,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全盘扫描结果</para>
+        /// <para>Queries the results of a full disk scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3423,7 +3427,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-开启试用套餐</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3469,7 +3473,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-开启试用套餐</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3515,7 +3519,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-开启试用套餐</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3533,7 +3537,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-开启试用套餐</para>
+        /// <para>Starts a free trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3555,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号安全事件</para>
+        /// <para>Queries account security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3625,7 +3629,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号安全事件</para>
+        /// <para>Queries account security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3699,7 +3703,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号安全事件</para>
+        /// <para>Queries account security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,7 +3721,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号安全事件</para>
+        /// <para>Queries account security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,7 +3739,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云上安全指南的订阅状态</para>
+        /// <para>Queries the subscription status of the cloud security guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3769,7 +3773,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云上安全指南的订阅状态</para>
+        /// <para>Queries the subscription status of the cloud security guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,7 +3807,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云上安全指南的订阅状态</para>
+        /// <para>Queries the subscription status of the cloud security guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +3825,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云上安全指南的订阅状态</para>
+        /// <para>Queries the subscription status of the cloud security guide.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3839,7 +3843,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件</para>
+        /// <para>Queries cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3860,6 +3864,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
             {
                 request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessCodes))
+            {
+                request.BusinessCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessCodes, "BusinessCodes", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodesPrefix))
             {
@@ -3913,6 +3921,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCode))
             {
                 query["BusinessCode"] = request.BusinessCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCodesShrink))
+            {
+                query["BusinessCodes"] = request.BusinessCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesPrefixShrink))
             {
@@ -4019,7 +4031,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件</para>
+        /// <para>Queries cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4040,6 +4052,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
             {
                 request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessCodes))
+            {
+                request.BusinessCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessCodes, "BusinessCodes", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodesPrefix))
             {
@@ -4093,6 +4109,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCode))
             {
                 query["BusinessCode"] = request.BusinessCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCodesShrink))
+            {
+                query["BusinessCodes"] = request.BusinessCodesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesPrefixShrink))
             {
@@ -4199,7 +4219,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件</para>
+        /// <para>Queries cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4217,7 +4237,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源管控事件</para>
+        /// <para>Queries cloud resource control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4235,7 +4255,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安全体检简报</para>
+        /// <para>Queries the security check brief.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4269,7 +4289,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安全体检简报</para>
+        /// <para>Queries the security check brief.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4303,7 +4323,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安全体检简报</para>
+        /// <para>Queries the security check brief.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4321,7 +4341,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安全体检简报</para>
+        /// <para>Queries the security check brief.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4339,7 +4359,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启处置工具授权</para>
+        /// <para>Enables disposal tool authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4381,7 +4401,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启处置工具授权</para>
+        /// <para>Enables disposal tool authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4423,7 +4443,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启处置工具授权</para>
+        /// <para>Enables disposal tool authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4461,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启处置工具授权</para>
+        /// <para>Enables disposal tool authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4459,7 +4479,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启安全体检</para>
+        /// <para>Enables security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4493,7 +4513,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启安全体检</para>
+        /// <para>Enables security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4527,7 +4547,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启安全体检</para>
+        /// <para>Enables security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4545,7 +4565,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启安全体检</para>
+        /// <para>Enables security check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4563,7 +4583,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请解封</para>
+        /// <para>Submits an unblocking request.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4631,7 +4651,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请解封</para>
+        /// <para>Submits an unblocking request.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4699,7 +4719,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请解封</para>
+        /// <para>Submits an unblocking request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4717,7 +4737,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请解封</para>
+        /// <para>Submits an unblocking request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4735,7 +4755,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-更新后付费绑定关系</para>
+        /// <para>Updates the pay-as-you-go binding relationship for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4787,7 +4807,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-更新后付费绑定关系</para>
+        /// <para>Updates the pay-as-you-go binding relationship for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4839,7 +4859,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-更新后付费绑定关系</para>
+        /// <para>Updates the pay-as-you-go binding relationship for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4857,7 +4877,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>sas-更新后付费绑定关系</para>
+        /// <para>Updates the pay-as-you-go binding relationship for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4875,7 +4895,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新体检结果</para>
+        /// <para>Updates the health check result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4909,7 +4929,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新体检结果</para>
+        /// <para>Updates the health check result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4943,7 +4963,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新体检结果</para>
+        /// <para>Updates the health check result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4961,7 +4981,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新体检结果</para>
+        /// <para>Updates the health check result.</para>
         /// </summary>
         /// 
         /// <param name="request">

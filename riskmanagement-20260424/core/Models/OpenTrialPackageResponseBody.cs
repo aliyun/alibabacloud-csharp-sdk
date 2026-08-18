@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class OpenTrialPackageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The operation result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OpenTrialPackageResponseBodyData Data { get; set; }
         public class OpenTrialPackageResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Security Center request ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5F4B631D-0358-5B7B-8B84-FB924138ED91</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>855FCC89-0B13-5FC0-AAD2-120878081C1C</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

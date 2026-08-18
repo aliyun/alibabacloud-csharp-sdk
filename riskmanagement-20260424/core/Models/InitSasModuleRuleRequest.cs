@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class InitSasModuleRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable automatic binding. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public int? AutoBind { get; set; }
 
+        /// <summary>
+        /// <para>The list of instances.</para>
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<InitSasModuleRuleRequestInstances> Instances { get; set; }
         public class InitSasModuleRuleRequestInstances : TeaModel {
             /// <summary>
+            /// <para>The number of CPU cores of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string Cores { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-gw85zjrhsg2sgex7ovfx</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The region of the cloud phone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The UUID of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>168d374e-f449-4d0b-9556-14f233fa7171</para>
             /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to use the trial version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public bool? IsTrial { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the access control instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-guangzhou</para>
         /// </summary>

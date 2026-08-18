@@ -1,3 +1,10 @@
+2026-08-18 Version: 1.1.2
+- Update API QueryAccountSafetyIncident: add response parameters Body.Data.List.$.CallApi.
+- Update API QueryAccountSafetyIncident: add response parameters Body.Data.List.$.EventType.
+- Update API QueryAccountSafetyIncident: add response parameters Body.Data.List.$.ExceptionCallTime.
+- Update API QueryAccountSafetyIncident: add response parameters Body.Data.List.$.ExceptionIp.
+
+
 2026-07-20 Version: 1.0.1
 - Generated csharp 2026-04-24 for RiskManagement.
 

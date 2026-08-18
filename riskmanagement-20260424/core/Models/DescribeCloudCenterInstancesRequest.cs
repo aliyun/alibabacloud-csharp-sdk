@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class DescribeCloudCenterInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Security Center SDK request.</para>
+        /// </summary>
         [NameInMap("SdkRequest")]
         [Validation(Required=false)]
         public DescribeCloudCenterInstancesRequestSdkRequest SdkRequest { get; set; }
         public class DescribeCloudCenterInstancesRequestSdkRequest : TeaModel {
             /// <summary>
+            /// <para>The search conditions for assets. This parameter is in JSON format. Note that the parameter names are case-sensitive.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;contactIds\&quot;:[\&quot;job-658854766790086656\&quot;,\&quot;job-658854801112113152\&quot;]}</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string Criteria { get; set; }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0,10,13</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string Flags { get; set; }
 
             /// <summary>
+            /// <para>The importance level of the asset. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public int? Importance { get; set; }
 
             /// <summary>
+            /// <para>The language of the response. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>zh</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string Lang { get; set; }
 
             /// <summary>
+            /// <para>The logical relationship between multiple search conditions. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AND</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string LogicalExp { get; set; }
 
             /// <summary>
+            /// <para>The type of asset to query. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string MachineTypes { get; set; }
 
             /// <summary>
+            /// <para>The pagination token used to retrieve the next page of results. If no more results are available, this field is not returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AAAAAZak7VOTMl2OSt/xmc4J6gbg4Z5eXuWnrvKgOsGARL76TVbKERXHXKNFurqjtfDdRw==</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to internationalize the default group name <b>Ungrouped</b>. Default value: <b>false</b>. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public bool? NoGroupTrace { get; set; }
 
             /// <summary>
+            /// <para>The number of assets to display per page in a paged query. Default value: 20, which indicates that 20 asset records are displayed per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>99</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string PageSize { get; set; }
 
             /// <summary>
+            /// <para>The ID of the member accounts in the resource folder.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1587359978118481</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public string ResourceDirectoryAccountId { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
