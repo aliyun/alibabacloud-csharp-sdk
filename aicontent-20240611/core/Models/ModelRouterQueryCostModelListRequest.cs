@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryCostModelListRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Filters results by API key ID. This parameter works in conjunction with the department and requires clientId to be specified first.</para>
+        /// <para>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The end time, as a UNIX timestamp in seconds.</para>
+        /// <para>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("clientIds")]
+        [Validation(Required=false)]
+        public string ClientIds { get; set; }
+
+        /// <summary>
+        /// <para>The end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Automatic aggregation. You do not need to pass this parameter. Granularity: hourly/daily. Default value: hourly.</para>
+        /// <para>Automatically aggregated. No input required. Granularity: hourly/daily. Default value: hourly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hourly</para>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</para>
+        /// <para>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>
@@ -91,7 +101,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy match on the model name or code.</para>
+        /// <para>Fuzzy search by model name or code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen</para>
@@ -101,7 +111,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>The start time, as a UNIX timestamp in seconds.</para>
+        /// <para>The start time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

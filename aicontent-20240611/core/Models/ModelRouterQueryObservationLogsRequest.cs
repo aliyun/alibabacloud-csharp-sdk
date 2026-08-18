@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryObservationLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The API key ID used to filter the results.</para>
+        /// <para>The API key ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The client ID used to filter the results.</para>
+        /// <para>The client ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("clientId")]
         [Validation(Required=false)]
         public long? ClientId { get; set; }
+
+        /// <summary>
+        /// <para>The list of department IDs, separated by commas. You can query data for multiple departments. This parameter is mutually exclusive with client_id.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("clientIds")]
+        [Validation(Required=false)]
+        public string ClientIds { get; set; }
 
         /// <summary>
         /// <para>The custom end time.</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters results by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, results for the department and all its members are returned. If an empty value is specified, results for only the department are returned, excluding members.</para>
+        /// <para>Optional. Filters results by member user IDs, separated by commas. If not specified, data for the department and all its members is returned. If an empty value is specified, only department data without member data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MemberUserIds { get; set; }
 
         /// <summary>
-        /// <para>The model ID used to filter the results.</para>
+        /// <para>The model ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -150,7 +160,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, 30d.</para>
+        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24h</para>

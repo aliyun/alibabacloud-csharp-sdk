@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("clientIds")]
+        [Validation(Required=false)]
+        public string ClientIds { get; set; }
+
+        /// <summary>
         /// <para>The end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +61,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// <para>Optional. Filters by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>

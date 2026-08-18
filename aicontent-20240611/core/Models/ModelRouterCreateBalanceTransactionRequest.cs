@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? Amount { get; set; }
 
         /// <summary>
-        /// <para>The target balance pool type. If not specified, the default value is permanent. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>permanent: permanent balance pool (the amount never expires).</description></item>
-        /// <item><description>monthly: monthly balance pool (automatically reset to zero at the beginning of each month).</description></item>
-        /// </list>
+        /// <para>The target balance pool type. If not specified, the default value is permanent. Valid values: permanent: permanent balance pool (the balance never expires). monthly: monthly balance pool (the balance is automatically cleared at the beginning of each month).</para>
         /// 
         /// <b>Example:</b>
         /// <para>amount</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BalanceType { get; set; }
 
         /// <summary>
-        /// <para>The idempotency key. UUID v4 format is recommended. Maximum length: 32 characters. Repeated submissions with the same key are not executed again.</para>
+        /// <para>The idempotency key. UUID v4 format is recommended. The maximum length is 32 characters. Duplicate submissions with the same key are not executed more than once.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a716446655440000</para>
@@ -44,10 +40,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string IdempotencyKey { get; set; }
 
         /// <summary>
-        /// <para>The remark.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Top-up</para>
+        /// <para>Recharge</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]

@@ -7408,7 +7408,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a balance transaction for customer management.</para>
+        /// <para>Manages customers or creates a balance transaction.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7470,7 +7470,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a balance transaction for customer management.</para>
+        /// <para>Manages customers or creates a balance transaction.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7532,7 +7532,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a balance transaction for customer management.</para>
+        /// <para>Manages customers or creates a balance transaction.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7551,7 +7551,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a balance transaction for customer management.</para>
+        /// <para>Manages customers or creates a balance transaction.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10032,6 +10032,208 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetBillingBillSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetBillingBillSummaryResponse
+        /// </returns>
+        public ModelRouterGetBillingBillSummaryResponse ModelRouterGetBillingBillSummaryWithOptions(ModelRouterGetBillingBillSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["apiKeyId"] = request.ApiKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUserIds))
+            {
+                query["memberUserIds"] = request.MemberUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetBillingBillSummary",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/bills/summary",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetBillingBillSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetBillingBillSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetBillingBillSummaryResponse
+        /// </returns>
+        public async Task<ModelRouterGetBillingBillSummaryResponse> ModelRouterGetBillingBillSummaryWithOptionsAsync(ModelRouterGetBillingBillSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["apiKeyId"] = request.ApiKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUserIds))
+            {
+                query["memberUserIds"] = request.MemberUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetBillingBillSummary",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/bills/summary",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetBillingBillSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetBillingBillSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetBillingBillSummaryResponse
+        /// </returns>
+        public ModelRouterGetBillingBillSummaryResponse ModelRouterGetBillingBillSummary(ModelRouterGetBillingBillSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterGetBillingBillSummaryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetBillingBillSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetBillingBillSummaryResponse
+        /// </returns>
+        public async Task<ModelRouterGetBillingBillSummaryResponse> ModelRouterGetBillingBillSummaryAsync(ModelRouterGetBillingBillSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterGetBillingBillSummaryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Client Management/Get department balance</para>
         /// </summary>
         /// 
@@ -12172,6 +12374,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["clientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -12261,6 +12467,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13346,7 +13556,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage details of a model for billing management.</para>
+        /// <para>Retrieves model usage details for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13373,6 +13583,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13432,7 +13646,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage details of a model for billing management.</para>
+        /// <para>Retrieves model usage details for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13459,6 +13673,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13518,7 +13736,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage details of a model for billing management.</para>
+        /// <para>Retrieves model usage details for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13537,7 +13755,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage details of a model for billing management.</para>
+        /// <para>Retrieves model usage details for billing management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13583,6 +13801,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13665,6 +13887,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13786,6 +14012,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["clientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -13863,6 +14093,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -13980,6 +14214,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["clientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -14057,6 +14295,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -15862,6 +16104,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["clientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -15931,6 +16177,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16012,7 +16262,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model observation logs.</para>
+        /// <para>Retrieves a list of observation logs for model monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16039,6 +16289,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16114,7 +16368,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model observation logs.</para>
+        /// <para>Retrieves a list of observation logs for model monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16141,6 +16395,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16216,7 +16474,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model observation logs.</para>
+        /// <para>Retrieves a list of observation logs for model monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16235,7 +16493,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model observation logs.</para>
+        /// <para>Retrieves a list of observation logs for model monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16254,7 +16512,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observability metric data for models.</para>
+        /// <para>Retrieves observability metric data for model API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16281,6 +16539,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16356,7 +16618,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observability metric data for models.</para>
+        /// <para>Retrieves observability metric data for model API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16383,6 +16645,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16458,7 +16724,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observability metric data for models.</para>
+        /// <para>Retrieves observability metric data for model API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16477,7 +16743,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observability metric data for models.</para>
+        /// <para>Retrieves observability metric data for model API calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16523,6 +16789,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -16605,6 +16875,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {

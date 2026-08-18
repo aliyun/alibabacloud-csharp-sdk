@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryUsageBreakdownRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
+        /// <para>Optional. Filters results by API key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The query end time, in UNIX timestamp format (seconds).</para>
+        /// <para>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("clientIds")]
+        [Validation(Required=false)]
+        public string ClientIds { get; set; }
+
+        /// <summary>
+        /// <para>The query end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// <para>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>
@@ -102,7 +112,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query start time, in UNIX timestamp format (seconds).</para>
+        /// <para>The query start time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

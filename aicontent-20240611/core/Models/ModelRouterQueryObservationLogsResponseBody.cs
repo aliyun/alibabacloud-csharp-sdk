@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public ModelRouterQueryObservationLogsResponseBodyData Data { get; set; }
         public class ModelRouterQueryObservationLogsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of log data.</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<RequestLogDTO> List { get; set; }
 
             /// <summary>
+            /// <para>maxResults</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
+            /// <para>The token for the next query.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? NextToken { get; set; }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>The number of entries returned per page. Default value: 10. Maximum value: 50.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>

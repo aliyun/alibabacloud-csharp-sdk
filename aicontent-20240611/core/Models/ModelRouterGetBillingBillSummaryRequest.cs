@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterQueryCostOverviewMetricsRequest : TeaModel {
+    public class ModelRouterGetBillingBillSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
+        /// <para>The API key ID used to filter results. This parameter is optional and linked to the department. You must specify clientId first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by department ID.</para>
+        /// <para>The department ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ClientIds { get; set; }
 
         /// <summary>
-        /// <para>The end time, in UNIX timestamp (seconds).</para>
+        /// <para>The end time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,28 +50,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        /// <summary>
-        /// <para>Automatically aggregated. No input required. The granularity. Valid values: hourly and daily. Default value: hourly.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>hourly</para>
-        /// </summary>
-        [NameInMap("granularity")]
-        [Validation(Required=false)]
-        public string Granularity { get; set; }
-
-        /// <summary>
-        /// <para>The maximum number of results to return.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// <para>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the query returns data for the department and all its members. If an empty value is specified, the query returns data for the department only, excluding members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>
@@ -81,27 +65,31 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MemberUserIds { get; set; }
 
         /// <summary>
+        /// <para>The model ID. This parameter is optional and used to filter by model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("modelId")]
+        [Validation(Required=false)]
+        public long? ModelId { get; set; }
+
+        /// <summary>
         /// <para>The model types, separated by commas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LLM,VL</para>
+        /// <para>Chat,ChatMultimodal</para>
         /// </summary>
         [NameInMap("modelTypes")]
         [Validation(Required=false)]
         public string ModelTypes { get; set; }
 
-        /// <summary>
-        /// <para>nextToken</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx-xxx-xxxxx</para>
-        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The start time, in UNIX timestamp (seconds).</para>
+        /// <para>The start time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
