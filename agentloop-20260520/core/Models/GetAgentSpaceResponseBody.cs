@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CmsWorkspaceBindType { get; set; }
 
         /// <summary>
-        /// <para>The time when the AgentSpace was created.</para>
+        /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -61,12 +61,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Microservices Engine (MSE) namespace.</para>
+        /// <para>The MSE namespace.</para>
         /// </summary>
         [NameInMap("mseNamespace")]
         [Validation(Required=false)]
         public GetAgentSpaceResponseBodyMseNamespace MseNamespace { get; set; }
         public class GetAgentSpaceResponseBodyMseNamespace : TeaModel {
+            [NameInMap("bindType")]
+            [Validation(Required=false)]
+            public string BindType { get; set; }
+
             /// <summary>
             /// <para>The ID of the MSE namespace.</para>
             /// 
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string SlsProject { get; set; }
 
         /// <summary>
-        /// <para>The time when the AgentSpace was last updated.</para>
+        /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>

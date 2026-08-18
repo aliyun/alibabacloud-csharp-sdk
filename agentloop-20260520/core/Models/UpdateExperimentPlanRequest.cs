@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The evaluator list. Omitting this field means no modification. Passing an empty array clears the list.</para>
+        /// <para>The evaluator list. Omitting this field indicates no modification. Passing an empty array clears the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The experiment configuration list. When passed, the entire list is replaced. The number of items must be 1 to 5.</para>
+        /// <para>The experiment configuration list. When specified, the entire list is replaced. The number of items must be 1 to 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</para>

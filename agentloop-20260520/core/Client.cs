@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing", "agentloop.cn-beijing.aliyuncs.com"},
+                {"cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"},
+                {"cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"},
+                {"cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"},
                 {"ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -348,6 +348,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseNamespaceId))
+            {
+                body["mseNamespaceId"] = request.MseNamespaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryStoreEnabled))
             {
                 body["trajectoryStoreEnabled"] = request.TrajectoryStoreEnabled;
@@ -411,6 +415,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseNamespaceId))
+            {
+                body["mseNamespaceId"] = request.MseNamespaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryStoreEnabled))
             {
@@ -5563,7 +5571,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AgentSpaces.</para>
+        /// <para>Queries the list of AgentSpaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5621,7 +5629,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AgentSpaces.</para>
+        /// <para>Queries the list of AgentSpaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5679,7 +5687,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AgentSpaces.</para>
+        /// <para>Queries the list of AgentSpaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5698,7 +5706,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AgentSpaces.</para>
+        /// <para>Queries the list of AgentSpaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9610,7 +9618,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9701,7 +9709,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9792,7 +9800,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9816,7 +9824,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">

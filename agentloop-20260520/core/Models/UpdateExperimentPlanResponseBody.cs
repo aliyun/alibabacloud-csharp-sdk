@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The update result. The value is updated if successful.</para>
+        /// <para>The update result. The value is updated if the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>updated</para>

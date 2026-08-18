@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public ListAgentSpacesResponseBodyAgentSpacesMseNamespace MseNamespace { get; set; }
             public class ListAgentSpacesResponseBodyAgentSpacesMseNamespace : TeaModel {
+                [NameInMap("bindType")]
+                [Validation(Required=false)]
+                public string BindType { get; set; }
+
                 /// <summary>
                 /// <para>The MSE namespace ID.</para>
                 /// 
