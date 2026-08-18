@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class HTTPTriggerConfig : TeaModel {
         /// <summary>
-        /// <para>Authentication configuration</para>
+        /// <para>The authentication configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The authentication type. Valid values are:</para>
+        /// <para>The authentication type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>function</b>: Authentication is required.</para>
         /// </description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default type is <b>function</b>.</para>
+        /// <para>The default value is <b>function</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,12 +38,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        /// <summary>
+        /// <para>The CORS configuration.</para>
+        /// </summary>
         [NameInMap("corsConfig")]
         [Validation(Required=false)]
         public CORSConfig CorsConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable access from the default public domain name. If set to true, accessing the function\&quot;s default public URL returns a 403 error. If set to false, this parameter has no effect.</para>
+        /// <para>Specifies whether to disable access through the default public domain name. If set to true, accessing the default public URL of the function returns a 403 error. If set to false, access is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? DisableURLInternet { get; set; }
 
         /// <summary>
-        /// <para>The list of request methods. Multiple methods are supported.</para>
+        /// <para>The list of request methods. Multiple methods can be supported simultaneously.</para>
         /// </summary>
         [NameInMap("methods")]
         [Validation(Required=false)]

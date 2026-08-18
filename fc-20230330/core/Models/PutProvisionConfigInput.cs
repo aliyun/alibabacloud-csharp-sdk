@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutProvisionConfigInput : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to always allocate CPU. Default value: true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateCPU { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to always allocate GPU. Default value: true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,7 +30,13 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateGPU { get; set; }
 
         /// <summary>
-        /// <para>The number of target provisioned instances. Valid values: [0,10000].</para>
+        /// <para>The default minimum number of provisioned instances. Valid values: 0 to 10000.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If no metric-based auto elastic policy or scheduled elastic policy is configured, the current minimum number of instances equals the minimum number of instances you configured.</description></item>
+        /// <item><description>If you configured multiple elastic policies for the minimum number of instances, the system calculates the minimum number of instances triggered by each policy and uses the maximum value among the elastic policies that are effective at the current time as the current minimum number of instances.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -39,7 +49,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? DefaultTarget { get; set; }
 
         /// <summary>
-        /// <para>public</para>
+        /// <para>The scheduled scaling configuration.</para>
         /// </summary>
         [NameInMap("scheduledActions")]
         [Validation(Required=false)]
@@ -48,6 +58,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <remarks>
+        /// <para>Notice: This parameter is no longer recommended. Use the defaultTarget parameter instead.</notice>
+        /// The target number of provisioned resources. Valid values: 0 to 10000.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +75,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Obsolete]
         public long? Target { get; set; }
 
+        /// <summary>
+        /// <para>The metric-based scaling policy configuration.</para>
+        /// </summary>
         [NameInMap("targetTrackingPolicies")]
         [Validation(Required=false)]
         public List<TargetTrackingPolicy> TargetTrackingPolicies { get; set; }

@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? SessionTTLInSeconds { get; set; }
 
+        [NameInMap("snapshotId")]
+        [Validation(Required=false)]
+        public string SnapshotId { get; set; }
+
     }
 
 }

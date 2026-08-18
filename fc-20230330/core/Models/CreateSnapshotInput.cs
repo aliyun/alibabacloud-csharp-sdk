@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class GetFunctionRequest : TeaModel {
-        /// <summary>
-        /// <para>The function version or alias.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>LATEST</para>
-        /// </summary>
-        [NameInMap("qualifier")]
+    public class CreateSnapshotInput : TeaModel {
+        [NameInMap("description")]
         [Validation(Required=false)]
-        public string Qualifier { get; set; }
+        public string Description { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>custom-test-session-id</para>
+        /// </summary>
+        [NameInMap("sessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
     }
 

@@ -8,14 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class UpdateFunctionRequest : TeaModel {
+    public class ListSnapshotsOutput : TeaModel {
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
-        /// <para>The function information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("body")]
+        [NameInMap("snapshots")]
         [Validation(Required=false)]
-        public UpdateFunctionInput Body { get; set; }
+        public List<Snapshot> Snapshots { get; set; }
 
     }
 

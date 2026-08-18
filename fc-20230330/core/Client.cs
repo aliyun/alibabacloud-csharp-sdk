@@ -21,32 +21,32 @@ namespace AlibabaCloud.SDK.FC20230330
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
+                {"ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"},
+                {"ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"},
+                {"cn-beijing", "fcv3.cn-beijing.aliyuncs.com"},
+                {"cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"},
+                {"cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"},
+                {"cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"},
+                {"cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"},
+                {"cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"},
+                {"cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"},
+                {"cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"},
                 {"us-west-1", "fcv3.us-west-1.aliyuncs.com"},
                 {"us-east-1", "fcv3.us-east-1.aliyuncs.com"},
-                {"me-central-1", "me-central-1.fc.aliyuncs.com"},
                 {"eu-west-1", "fcv3.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "fcv3.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"},
+                {"me-central-1", "me-central-1.fc.aliyuncs.com"},
+                {"ap-south-1", "fcv3.ap-south-1.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"},
-                {"cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"},
-                {"cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"},
                 {"cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"},
                 {"cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com"},
-                {"cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"},
-                {"cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "fcv3.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"},
-                {"ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "fcv3.ap-south-1.aliyuncs.com"},
-                {"ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("fc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -565,7 +565,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity such as authorization for oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3392,7 +3392,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a function.</para>
+        /// <para>Retrieves function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3438,7 +3438,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a function.</para>
+        /// <para>Retrieves function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3484,7 +3484,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a function.</para>
+        /// <para>Retrieves function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,7 +3503,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a function.</para>
+        /// <para>Retrieves function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5479,7 +5479,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5572,7 +5572,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5665,7 +5665,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5689,7 +5689,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of function attribute fields. To retrieve more attribute fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8844,7 +8844,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a function\&quot;s configuration.</para>
+        /// <para>Updates function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8885,7 +8885,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a function\&quot;s configuration.</para>
+        /// <para>Updates function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8926,7 +8926,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a function\&quot;s configuration.</para>
+        /// <para>Updates function information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8945,7 +8945,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a function\&quot;s configuration.</para>
+        /// <para>Updates function information.</para>
         /// </summary>
         /// 
         /// <param name="request">

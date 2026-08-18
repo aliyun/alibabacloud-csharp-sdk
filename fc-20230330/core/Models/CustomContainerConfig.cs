@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>Specifies whether to enable image acceleration. Valid values: Default: enables image acceleration. None: disables image acceleration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Default</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("accelerationType")]
         [Validation(Required=false)]

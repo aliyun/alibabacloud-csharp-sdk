@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class LogConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable instance-level metrics. When this feature is enabled, you can view core metrics for each instance, such as CPU usage, memory usage, network conditions, and the number of requests. The default value is \<c>false\\</c>, which disables instance-level metrics. Set the value to \<c>true\\</c> to enable them.</para>
+        /// <para>Specifies whether to enable instance-level metrics. After you enable this feature, you can view core metrics such as CPU usage, memory usage, network status, and request count at the instance level. Valid values: false: disables instance-level metrics. This is the default value. true: enables instance-level metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? EnableInstanceMetrics { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable LLM metrics. After you enable this feature, you can view LLM metrics. We recommend that you enable this feature only for LLM inference services. Valid values: false: disables LLM metrics. This is the default value. true: enables LLM metrics.</para>
+        /// </summary>
         [NameInMap("enableLlmMetrics")]
         [Validation(Required=false)]
         public bool? EnableLlmMetrics { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable request-level metrics. When this feature is enabled, you can view the time and memory consumed by each function invocation in the service. The default value is \<c>true\\</c>, which enables request-level metrics. Set the value to \<c>false\\</c> to disable them.</para>
+        /// <para>Specifies whether to enable request-level metrics. After you enable this feature, you can view the time and memory consumed by each invocation of all functions in the service. Valid values: false: disables request-level metrics. true: enables request-level metrics. This is the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? EnableRequestMetrics { get; set; }
 
         /// <summary>
-        /// <para>The rule for matching the first line of a log entry.</para>
+        /// <para>The log line beginning matching rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DefaultRegex</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LogBeginRule { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore in Simple Log Service.</para>
+        /// <para>The Logstore name in Simple Log Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-logstore</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The name of the Project in Simple Log Service.</para>
+        /// <para>The project name in Simple Log Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-project</para>

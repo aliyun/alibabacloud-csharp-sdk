@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class MCPSSESessionAffinityConfig : TeaModel {
         /// <summary>
+        /// <para>The maximum number of sessions that a single instance can handle through simultaneous processing. Valid values: 1 to 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? SessionConcurrencyPerInstance { get; set; }
 
         /// <summary>
+        /// <para>The SSE path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/sse</para>
         /// </summary>

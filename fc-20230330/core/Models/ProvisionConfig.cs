@@ -10,17 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ProvisionConfig : TeaModel {
         /// <summary>
-        /// <para>The target number of provisioned instances at the current time. If a metric-based or scheduled auto scaling policy is in effect, the value of this parameter is the number of provisioned instances as calculated by the policy. Otherwise, the value is the default number of provisioned instances when all auto scaling policies become invalid.</para>
-        /// <remarks>
-        /// <para> Comparison between this parameter and defaultTarget\
-        /// Assume that after the number of provisioned instances is set to 1, a scheduled auto scaling policy is added, and this auto scaling policy increases the number of provisioned instances during a specified time period to 5.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>During the time period when the scheduled policy <b>takes effect</b>, the value of the target parameter is 5, while the value of the defaultTarget parameter is 1.</para>
-        /// </description></item>
-        /// <item><description><para>When the scheduled policy <b>is ineffective</b>, both the target value and defaultTarget value are 1.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Specifies whether to always allocate CPU to function instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateCPU { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to always allocate GPU to function instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -38,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateGPU { get; set; }
 
         /// <summary>
-        /// <para>public</para>
+        /// <para>The actual number of resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>public</para>
+        /// <para>The error message when provisioned instance creation fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image not found</para>
@@ -58,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CurrentError { get; set; }
 
         /// <summary>
-        /// <para>public</para>
+        /// <para>The default number of resources when all metric-based scaling policies and scheduled scaling policies are inactive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -68,6 +60,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? DefaultTarget { get; set; }
 
         /// <summary>
+        /// <para>The resource descriptor of the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:124:functions/myFunction/prod</para>
         /// </summary>
@@ -76,13 +70,23 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionArn { get; set; }
 
         /// <summary>
-        /// <para>public</para>
+        /// <para>The scheduled scaling policy configurations.</para>
         /// </summary>
         [NameInMap("scheduledActions")]
         [Validation(Required=false)]
         public List<ScheduledAction> ScheduledActions { get; set; }
 
         /// <summary>
+        /// <para>The current target number of resources. If a metric-based scaling policy or scheduled scaling policy exists, this value is the number of resources calculated by the policy. Otherwise, it is the default number of provisioned instances.</para>
+        /// <remarks>
+        /// <para>What is the difference between target and defaultTarget?\
+        /// Assume that the number of provisioned instances is configured as 1, and then a scheduled scaling policy is added to set the number of provisioned instances to 5 during a specific time period.</para>
+        /// <list type="bullet">
+        /// <item><description>During the <b>active period</b> of the scheduled scaling policy, target and defaultTarget are 5 and 1, respectively.</description></item>
+        /// <item><description>During the <b>inactive period</b> of the scheduled scaling policy, both target and defaultTarget are 1.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -90,6 +94,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? Target { get; set; }
 
+        /// <summary>
+        /// <para>The metric-based scaling policy configurations.</para>
+        /// </summary>
         [NameInMap("targetTrackingPolicies")]
         [Validation(Required=false)]
         public List<TargetTrackingPolicy> TargetTrackingPolicies { get; set; }
