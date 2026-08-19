@@ -24,8 +24,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> IncludeOrgIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 1 to 100.<br>
-        /// Default value: 100.<br></para>
+        /// <para>Specifies whether to query all subordinate organizations when a parent organization is specified.</para>
+        /// </summary>
+        [NameInMap("IsQueryAllSubOrgs")]
+        [Validation(Required=false)]
+        public bool? IsQueryAllSubOrgs { get; set; }
+
+        /// <summary>
+        /// <para>The maximum number of results to return. Valid values: 1 to 100.<br>Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. To retrieve the next page of results, set this parameter to the <c>NextToken</c> value that was returned from a previous request.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The organization name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>产品部</para>
+        /// <para>ProductDepartment</para>
         /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]

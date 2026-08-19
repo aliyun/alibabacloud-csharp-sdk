@@ -2380,12 +2380,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of organizations.</para>
+        /// <para>Queries the list of organizations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2415,6 +2415,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeOrgIds))
             {
                 query["IncludeOrgIds"] = request.IncludeOrgIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                query["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2457,12 +2461,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of organizations.</para>
+        /// <para>Queries the list of organizations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2492,6 +2496,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeOrgIds))
             {
                 query["IncludeOrgIds"] = request.IncludeOrgIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                query["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2534,12 +2542,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of organizations.</para>
+        /// <para>Queries the list of organizations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2557,12 +2565,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of organizations.</para>
+        /// <para>Queries the list of organizations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Organizations are arranged in a tree-like structure. The root organization ID is org-aliyun-wy-org-id.</para>
+        /// <para>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2908,7 +2916,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves directory account information, including the username, email address, and display name.</para>
+        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3034,7 +3042,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves directory account information, including the username, email address, and display name.</para>
+        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3160,7 +3168,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves directory account information, including the username, email address, and display name.</para>
+        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3178,7 +3186,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves directory account information, including the username, email address, and display name.</para>
+        /// <para>Queries convenience account information, such as usernames, email addresses, and remarks.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If this parameter is not empty, more results are available. To retrieve the next page, pass this value in the <c>NextToken</c> parameter of a subsequent request.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -20,12 +20,23 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The organization list.</para>
+        /// <para>The list of organizations.</para>
         /// </summary>
         [NameInMap("Orgs")]
         [Validation(Required=false)]
         public List<DescribeOrgsResponseBodyOrgs> Orgs { get; set; }
         public class DescribeOrgsResponseBodyOrgs : TeaModel {
+            /// <summary>
+            /// <para>The access type of the organization node. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MANAGEABLE: indicates a manageable node.</description></item>
+            /// <item><description>PATH_ONLY: indicates a node used only to display the full path to the root organization.</description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("AccessType")]
+            [Validation(Required=false)]
+            public string AccessType { get; set; }
+
             /// <summary>
             /// <para>The organization ID.</para>
             /// 
@@ -40,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The organization name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>设计部****</para>
+            /// <para>DesignDepartment****</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]
