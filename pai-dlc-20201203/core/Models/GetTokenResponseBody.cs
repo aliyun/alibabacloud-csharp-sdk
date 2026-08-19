@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to troubleshoot issues.</para>
+        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sharing token, used to view the information about the shared job.</para>
+        /// <para>The task sharing token, which can be used to view information about the shared task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</para>

@@ -3949,7 +3949,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
+        /// <para>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3981,6 +3981,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["TargetType"] = request.TargetType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenSettings))
+            {
+                query["TokenSettings"] = request.TokenSettings;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4003,7 +4007,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
+        /// <para>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4035,6 +4039,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["TargetType"] = request.TargetType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenSettings))
+            {
+                query["TokenSettings"] = request.TokenSettings;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4057,7 +4065,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
+        /// <para>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4076,7 +4084,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
+        /// <para>Retrieves a sharing token for a DLC job, which is used to view information about the shared task.</para>
         /// </summary>
         /// 
         /// <param name="request">
