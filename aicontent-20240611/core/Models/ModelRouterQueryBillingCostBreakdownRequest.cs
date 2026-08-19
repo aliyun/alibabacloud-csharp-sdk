@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryBillingCostBreakdownRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
+        /// <para>Optional. Filters results by API Key ID. This parameter is linked with the department, and clientId must be specified first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Filters results by member IDs, separated by commas. If not specified, the query returns data for the department and all its members. If an empty value is specified, the query returns data for the department only, excluding members.</para>
+        /// <para>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001,30002</para>

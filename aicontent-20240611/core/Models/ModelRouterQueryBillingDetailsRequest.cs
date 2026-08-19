@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterGetBillingBillSummaryRequest : TeaModel {
+    public class ModelRouterQueryBillingDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The API Key ID used to filter results. This parameter is optional and linked with the department. You must specify clientId first.</para>
+        /// <para>Optional. Filters results by API Key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The department ID used to filter results.</para>
+        /// <para>Optional. Filters results by department ID (single value).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ClientIds { get; set; }
 
         /// <summary>
-        /// <para>The end time, in UNIX timestamp (seconds).</para>
+        /// <para>The query end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,27 +51,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return.</para>
+        /// <para>Optional. Filters results by model code. Separate multiple values with commas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>qwen-plus,qwen-max</para>
         /// </summary>
-        [NameInMap("maxResults")]
+        [NameInMap("modelCodes")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string ModelCodes { get; set; }
 
         /// <summary>
-        /// <para>The member IDs used to filter results, separated by commas. This parameter is optional. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30001,30002</para>
-        /// </summary>
-        [NameInMap("memberUserIds")]
-        [Validation(Required=false)]
-        public string MemberUserIds { get; set; }
-
-        /// <summary>
-        /// <para>The model ID. This parameter is optional and used to filter by model.</para>
+        /// <para>Optional. Filters results by model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,27 +71,47 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>The model types, separated by commas.</para>
+        /// <para>Optional. Filters results by model type. Separate multiple values with commas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Chat,ChatMultimodal</para>
+        /// <para>Chat</para>
         /// </summary>
         [NameInMap("modelTypes")]
         [Validation(Required=false)]
         public string ModelTypes { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx-xxx-xxxxx</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("nextToken")]
+        [NameInMap("page")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The start time, in UNIX timestamp (seconds).</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 500.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>Optional. Filters results by exact match of the request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>chatcmpl-abc123def456</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The query start time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

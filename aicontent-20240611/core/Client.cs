@@ -10032,8 +10032,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// <para>Billing Center/Queries the total cost trend of bills.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterGetBillingBillSummaryRequest
@@ -10114,8 +10119,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// <para>Billing Center/Queries the total cost trend of bills.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterGetBillingBillSummaryRequest
@@ -10196,8 +10206,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// <para>Billing Center/Queries the total cost trend of bills.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterGetBillingBillSummaryRequest
@@ -10215,8 +10230,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total cost trend of bills in the Billing Center.</para>
+        /// <para>Billing Center/Queries the total cost trend of bills.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterGetBillingBillSummaryRequest
@@ -12349,6 +12369,11 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Queries billing details in batches.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModelRouterQueryBillingCostBreakdownRequest
         /// </param>
@@ -12442,6 +12467,11 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <summary>
         /// <para>Queries billing details in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryBillingCostBreakdownRequest
@@ -12537,6 +12567,11 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Queries billing details in batches.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModelRouterQueryBillingCostBreakdownRequest
         /// </param>
@@ -12556,6 +12591,11 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Queries billing details in batches.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModelRouterQueryBillingCostBreakdownRequest
         /// </param>
@@ -12568,6 +12608,236 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryBillingCostBreakdownWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries request-granularity billing details from the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingDetailsResponse
+        /// </returns>
+        public ModelRouterQueryBillingDetailsResponse ModelRouterQueryBillingDetailsWithOptions(ModelRouterQueryBillingDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["apiKeyId"] = request.ApiKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCodes))
+            {
+                query["modelCodes"] = request.ModelCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                query["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryBillingDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryBillingDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries request-granularity billing details from the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingDetailsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryBillingDetailsResponse> ModelRouterQueryBillingDetailsWithOptionsAsync(ModelRouterQueryBillingDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["apiKeyId"] = request.ApiKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIds))
+            {
+                query["clientIds"] = request.ClientIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCodes))
+            {
+                query["modelCodes"] = request.ModelCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                query["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryBillingDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryBillingDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries request-granularity billing details from the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingDetailsResponse
+        /// </returns>
+        public ModelRouterQueryBillingDetailsResponse ModelRouterQueryBillingDetails(ModelRouterQueryBillingDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryBillingDetailsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries request-granularity billing details from the Billing Center.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the user list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingDetailsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryBillingDetailsResponse> ModelRouterQueryBillingDetailsAsync(ModelRouterQueryBillingDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryBillingDetailsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16076,8 +16346,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observation chart data for model monitoring.</para>
+        /// <para>Retrieves monitoring chart data for model observation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryObservationChartsRequest
@@ -16150,8 +16425,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observation chart data for model monitoring.</para>
+        /// <para>Retrieves monitoring chart data for model observation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryObservationChartsRequest
@@ -16224,8 +16504,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observation chart data for model monitoring.</para>
+        /// <para>Retrieves monitoring chart data for model observation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryObservationChartsRequest
@@ -16243,8 +16528,13 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves observation chart data for model monitoring.</para>
+        /// <para>Retrieves monitoring chart data for model observation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryObservationChartsRequest

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with client_id.</para>
+        /// <para>The list of department IDs, separated by commas. Supports querying data for multiple departments. This parameter is mutually exclusive with clientId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</para>
+        /// <para>The time range. Valid values: 1h, 6h, 24h, 7d, 30d.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24h</para>

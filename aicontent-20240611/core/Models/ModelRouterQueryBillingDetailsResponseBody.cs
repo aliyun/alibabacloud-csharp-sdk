@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterGetBillingBillSummaryResponseBody : TeaModel {
+    public class ModelRouterQueryBillingDetailsResponseBody : TeaModel {
         /// <summary>
         /// <para>The data object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public BillingBillSummaryRespDTO Data { get; set; }
+        public BillingDetailListRespDTO Data { get; set; }
 
         /// <summary>
-        /// <para>The error message code.</para>
+        /// <para>The fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -48,26 +48,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
-
-        /// <summary>
-        /// <para>The maximum number of results returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("maxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// <para>The pagination token.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx-xxx-xxxxx</para>
-        /// </summary>
-        [NameInMap("nextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>
