@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The status of the client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MISS</b>: The client is disconnected.</description></item>
-            /// <item><description><b>UNKNOWN</b>: The client is in an unknown state.</description></item>
-            /// <item><description><b>READY</b>: The client is ready.</description></item>
+            /// <item><description><para><b>MISS</b>: The client is disconnected.</para>
+            /// </description></item>
+            /// <item><description><para><b>UNKNOWN</b>: The client is in an unknown state.</para>
+            /// </description></item>
+            /// <item><description><para><b>READY</b>: The client is ready.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Identifier { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack_pv_backup_location</para>
@@ -84,8 +87,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The network type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLASSIC</b>: the classic network</description></item>
-            /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+            /// <item><description><para><b>CLASSIC</b>: the classic network</para>
+            /// </description></item>
+            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,8 +165,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description><para>true: The call is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The call fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

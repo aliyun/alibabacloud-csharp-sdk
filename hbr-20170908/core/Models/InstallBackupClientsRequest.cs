@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class InstallBackupClientsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The name of the RAM role that is created in the source account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BackupRole</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountRoleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
+        /// <para>The type of cross-account backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</description></item>
-        /// <item><description>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</description></item>
+        /// <item><description><para>SELF_ACCOUNT: Backs up data within the current account.</para>
+        /// </description></item>
+        /// <item><description><para>CROSS_ACCOUNT: Backs up data across accounts.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The ID of the source account that is used for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16392782xxxxxx</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CrossAccountUserId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ECS instances. You can specify up to 20 IDs.</para>
+        /// <para>The IDs of the ECS instances. You can specify a maximum of 20 instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

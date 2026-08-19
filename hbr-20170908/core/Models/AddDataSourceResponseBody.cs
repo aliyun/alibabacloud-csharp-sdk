@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class AddDataSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ds-000*******xzj</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>53167AD3-<b><b>-</b></b>-92C7-CF69A000BA45</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

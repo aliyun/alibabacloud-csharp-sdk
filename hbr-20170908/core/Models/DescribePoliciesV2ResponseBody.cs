@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribePoliciesV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The response code. 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The number of results per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to obtain the next page of backup policies.</para>
+        /// <para>The token required to retrieve the next page of policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a</para>
@@ -51,18 +51,24 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The backup policies.</para>
+        /// <para>The list of policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public List<DescribePoliciesV2ResponseBodyPolicies> Policies { get; set; }
         public class DescribePoliciesV2ResponseBodyPolicies : TeaModel {
+            /// <summary>
+            /// <para>The user business status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACTIVE</para>
+            /// </summary>
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The creation time. UNIX timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650248136</para>
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The number of data sources that are bound to the backup policy.</para>
+            /// <para>The number of data sources bound to the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -82,17 +88,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? PolicyBindingCount { get; set; }
 
             /// <summary>
-            /// <para>The description of the backup policy.</para>
+            /// <para>The policy description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</para>
+            /// <para>Back up every day at 10:00 AM and replicate to Shanghai</para>
             /// </summary>
             [NameInMap("PolicyDescription")]
             [Validation(Required=false)]
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup policy.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>po-000************bkz</para>
@@ -102,10 +108,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the backup policy.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Daily Local Backup + Remote Backup</para>
+            /// <para>Daily backup + geo-redundancy backup</para>
             /// </summary>
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
@@ -114,8 +120,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The policy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>STANDARD</b>: the general backup policy. This type of policy applies to backups other than Elastic Compute Service (ECS) instance backup.</description></item>
-            /// <item><description><b>UDM_ECS_ONLY</b>: the ECS instance backup policy. This type of policy applies only to ECS instance backup.</description></item>
+            /// <item><description><b>STANDARD</b>: general backup policy. Supports backing up data sources other than ECS instance backup.</description></item>
+            /// <item><description><b>UDM_ECS_ONLY</b>: ECS instance backup policy. Supports backing up only ECS instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,14 +132,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The rules in the backup policy.</para>
+            /// <para>The list of policy rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribePoliciesV2ResponseBodyPoliciesRules> Rules { get; set; }
             public class DescribePoliciesV2ResponseBodyPoliciesRules : TeaModel {
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>TRANSITION</b>. This parameter indicates the time when data is dumped from a backup vault to an archive vault. Unit: days.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The number of days after which the backup is converted to archive storage. Unit: days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? ArchiveDays { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>BACKUP</b>. This parameter indicates the backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>BACKUP</b>. The backup type. The value is <b>COMPLETE</b>, which indicates a full backup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMPLETE</para>
@@ -153,27 +159,30 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. It defines the data source filtering rule.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. The data source filter rules.</para>
                 /// </summary>
                 [NameInMap("DataSourceFilters")]
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> DataSourceFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters : TeaModel {
+                    /// <term><b>Obsolete</b></term>
+                    /// 
                     /// <summary>
                     /// <para>Deprecated.</para>
                     /// </summary>
                     [NameInMap("DataSourceIds")]
                     [Validation(Required=false)]
+                    [Obsolete]
                     public List<string> DataSourceIds { get; set; }
 
                     /// <summary>
-                    /// <para>Data source type. The value range is as follows: </para>
+                    /// <para>The data source type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>UDM_ECS</b>: Indicates ECS server backup. </description></item>
-                    /// <item><description><b>OSS</b>: Indicates OSS backup. </description></item>
-                    /// <item><description><b>NAS</b>: Indicates Alibaba Cloud NAS backup. </description></item>
-                    /// <item><description><b>ECS_FILE</b>: Indicates ECS file backup. </description></item>
-                    /// <item><description><b>OTS</b>: Indicates Tablestore backup.</description></item>
+                    /// <item><description><b>UDM_ECS</b>: ECS instance backup.</description></item>
+                    /// <item><description><b>OSS</b>: OSS backup.</description></item>
+                    /// <item><description><b>NAS</b>: Alibaba Cloud NAS backup.</description></item>
+                    /// <item><description><b>ECS_FILE</b>: ECS File Backup Essential Edition.</description></item>
+                    /// <item><description><b>OTS</b>: Tablestore backup.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -186,7 +195,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the <b>PolicyType</b> is <b>UDM_ECS_ONLY</b>. This parameter indicates whether the immutable backup feature is enabled.</para>
+                /// <para>This parameter is valid only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b>. Specifies whether to enable backup locking.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -196,10 +205,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public bool? Immutable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</para>
+                /// <para>Specifies whether to retain at least one backup version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The feature is disabled.</description></item>
-                /// <item><description><b>1</b>: The feature is enabled.</description></item>
+                /// <item><description><b>0</b>: Do not retain.</description></item>
+                /// <item><description><b>1</b>: Retain.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -210,7 +219,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? KeepLatestSnapshots { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>REPLICATION</b>. This parameter indicates the ID of the destination region.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>REPLICATION</b>. The destination region ID for replication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -220,10 +229,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ReplicationRegionId { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>TRANSITION</b> or <b>REPLICATION</b>.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b> or <b>REPLICATION</b>.</para>
                 /// <list type="bullet">
-                /// <item><description>If the value of the <b>RuleType</b> parameter is <b>TRANSITION</b>, this parameter indicates the retention period of the backup data. Minimum value: 1. Unit: days.</description></item>
-                /// <item><description>If the value of the <b>RuleType</b> parameter is <b>REPLICATION</b>, this parameter indicates the retention period of remote backups. Minimum value: 1. Unit: days.</description></item>
+                /// <item><description><b>RuleType</b> is set to <b>TRANSITION</b>: the retention period of the backup. Minimum value: 1. Unit: days.</description></item>
+                /// <item><description><b>RuleType</b> is set to <b>REPLICATION</b>: the retention period of the geo-redundancy backup. Minimum value: 1. Unit: days.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -234,7 +243,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? Retention { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>TRANSITION</b>. This parameter indicates the special retention rules.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The list of special retention rules.</para>
                 /// </summary>
                 [NameInMap("RetentionRules")]
                 [Validation(Required=false)]
@@ -243,9 +252,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     /// <summary>
                     /// <para>The type of the special retention rule. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>WEEKLY</b>: weekly backups</description></item>
-                    /// <item><description><b>MONTHLY</b>: monthly backups</description></item>
-                    /// <item><description><b>YEARLY</b>: yearly backups</description></item>
+                    /// <item><description><b>WEEKLY</b>: weekly backup.</description></item>
+                    /// <item><description><b>MONTHLY</b>: monthly backup.</description></item>
+                    /// <item><description><b>YEARLY</b>: yearly backup.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -256,7 +265,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string AdvancedRetentionType { get; set; }
 
                     /// <summary>
-                    /// <para>The special retention period of backups. Minimum value: 1. Unit: days.</para>
+                    /// <para>The special retention period of the backup. Minimum value: 1. Unit: days.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>730</para>
@@ -266,7 +275,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? Retention { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates which backup is retained based on the special retention rule. Only the first backup can be retained.</para>
+                    /// <para>The backup to which the rule applies. Currently, only the first backup is supported. The value is 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -288,11 +297,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the rule. Each backup policy must have at least one rule of the <b>BACKUP</b> type and only one rule of the <b>TRANSITION</b> type. Valid values:</para>
+                /// <para>The rule type. Each policy must have at least one <b>BACKUP</b> rule and exactly one <b>TRANSITION</b> rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>BACKUP</b>: backup rule</description></item>
-                /// <item><description><b>TRANSITION</b>: lifecycle rule</description></item>
-                /// <item><description><b>REPLICATION</b>: replication rule</description></item>
+                /// <item><description><b>BACKUP</b>: backup rule.</description></item>
+                /// <item><description><b>TRANSITION</b>: lifecycle rule.</description></item>
+                /// <item><description><b>REPLICATION</b>: replication rule.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -303,10 +312,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the <b>RuleType</b> parameter is <b>BACKUP</b>. This parameter indicates the backup schedule settings. Format: <c>I|{startTime}|{interval}</c>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <c>I|1631685600|P1D</c> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>BACKUP</b>. The backup schedule. Optional format: <c>I|{startTime}|{interval}</c>. This indicates that a backup job is executed at every {interval} starting from {startTime}. Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered. For example, <c>I|1631685600|P1D</c> indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</para>
                 /// <list type="bullet">
-                /// <item><description>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</description></item>
-                /// <item><description>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</description></item>
+                /// <item><description>startTime: the start time of the backup. UNIX timestamp, in seconds.</description></item>
+                /// <item><description>interval: the ISO 8601 time interval. For example, PT1H indicates an interval of one hour. P1D indicates an interval of one day.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -317,14 +326,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Schedule { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. It defines the resource tag filtering rule.</para>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. The resource tag filter rules.</para>
                 /// </summary>
                 [NameInMap("TagFilters")]
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters> TagFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters : TeaModel {
                     /// <summary>
-                    /// <para>Tag key</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>env</para>
@@ -334,7 +343,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Tag matching rules, supporting: - <b>EQUAL</b>: Matches both the tag key and tag value. - <b>NOT</b>: Matches the tag key but not the tag value.</para>
+                    /// <para>The tag matching rule. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>EQUAL</b>: matches both the tag key and the tag value.</description></item>
+                    /// <item><description><b>NOT</b>: matches the tag key but not the tag value.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>EQUAL</para>
@@ -344,7 +357,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>Tag value.</para>
+                    /// <para>The tag value. An empty value indicates any value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prod</para>
@@ -356,7 +369,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>This parameter is returned only if the value of the RuleType parameter is BACKUP. The ID of the backup vault.</para>
+                /// <para>This parameter is required only when RuleType is set to BACKUP. The backup vault ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v-000**************kgm</para>
@@ -368,7 +381,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The update time. UNIX timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1662080404</para>
@@ -380,7 +393,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -390,10 +403,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -404,7 +417,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

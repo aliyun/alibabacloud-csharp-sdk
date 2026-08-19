@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteBackupPlanRequest : TeaModel {
         /// <summary>
+        /// <para>The edition type. Valid values are BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether no running jobs are required.</para>
+        /// <para>Specifies whether to prevent the deletion of the backup plan if backup jobs are running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,11 +43,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
-        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
-        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
+        /// <item><description><para><b>ECS_FILE</b>: Backs up Elastic Compute Service (ECS) files.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSS</b>: Backs up Object Storage Service (OSS) buckets.</para>
+        /// </description></item>
+        /// <item><description><para><b>NAS</b>: Backs up Network Attached Storage (NAS) file systems.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_ECS</b>: Backs up entire ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>OTS</b>: Backs up Tablestore instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

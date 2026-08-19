@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribePoliciesV2Request : TeaModel {
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The number of results per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to obtain the next page of backup policies.</para>
+        /// <para>The token required to retrieve the next page of policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>po-000************2l6</para>

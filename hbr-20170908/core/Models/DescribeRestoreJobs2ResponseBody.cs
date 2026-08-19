@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeRestoreJobs2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// <para>The response message. If the request is successful, &quot;successful&quot; is returned. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the returned page. Pages start from 1. Default: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 99. Default: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A container for the restore job details.</para>
+        /// </summary>
         [NameInMap("RestoreJobs")]
         [Validation(Required=false)]
         public DescribeRestoreJobs2ResponseBodyRestoreJobs RestoreJobs { get; set; }
@@ -308,10 +311,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -322,7 +327,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that match the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

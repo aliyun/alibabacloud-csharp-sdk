@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class GetBasicStatisticsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The Backup statistics for all regions.</para>
+        /// </summary>
         [NameInMap("GlobalStatistics")]
         [Validation(Required=false)]
         public GetBasicStatisticsResponseBodyGlobalStatistics GlobalStatistics { get; set; }
         public class GetBasicStatisticsResponseBodyGlobalStatistics : TeaModel {
             /// <summary>
+            /// <para>The backed-up data size, in bytes.</para>
+            /// <list type="bullet">
+            /// <item><description>When <c>SourceType</c> is set to <c>ECS_FILE</c>, this parameter represents the total capacity of backed-up Cloud Disks.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>42949672960</para>
             /// </summary>
@@ -30,6 +40,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ProtectedDataSize { get; set; }
 
             /// <summary>
+            /// <para>The number of backed-up resources.</para>
+            /// <list type="bullet">
+            /// <item><description>When <c>SourceType</c> is set to <c>ECS_FILE</c>, this parameter represents the number of backed-up ECS instances.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -40,6 +55,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
+        /// <para>The response message. If the request is successful, <c>successful</c> is returned. If the request fails, an error message is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -47,11 +64,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The Backup statistics for each region.</para>
+        /// </summary>
         [NameInMap("RegionStatistics")]
         [Validation(Required=false)]
         public List<GetBasicStatisticsResponseBodyRegionStatistics> RegionStatistics { get; set; }
         public class GetBasicStatisticsResponseBodyRegionStatistics : TeaModel {
             /// <summary>
+            /// <para>The backed-up data size, in bytes.</para>
+            /// <list type="bullet">
+            /// <item><description>When <c>SourceType</c> is set to <c>ECS_FILE</c>, this parameter represents the total capacity of backed-up Cloud Disks.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>42949672960</para>
             /// </summary>
@@ -60,6 +85,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? ProtectedDataSize { get; set; }
 
             /// <summary>
+            /// <para>The number of backed-up resources.</para>
+            /// <list type="bullet">
+            /// <item><description>When <c>SourceType</c> is set to <c>ECS_FILE</c>, this parameter represents the number of backed-up ECS instances.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -68,6 +98,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public int? ProtectedResourceCount { get; set; }
 
             /// <summary>
+            /// <para>The Region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
             /// </summary>
@@ -78,6 +110,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
+        /// <para>The Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EB526A5D-1FE2-51C1-B790-1732C1DBA969</para>
         /// </summary>
@@ -86,6 +120,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The data source type. The valid value is:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECS_FILE</b>: ECS File Backup.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ECS_FILE</para>
         /// </summary>
@@ -94,6 +133,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

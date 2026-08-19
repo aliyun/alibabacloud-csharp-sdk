@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreateRestoreJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code, 200 indicates success.</para>
+        /// <para>The response code. The value 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Description of the return message, usually \&quot;successful\&quot; when successful, and corresponding error messages when there is an error.</para>
+        /// <para>The response message. The value &quot;successful&quot; is returned for a success. An error message is returned for a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Restore job ID.</para>
+        /// <para>The ID of the restore job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-*********************</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RestoreId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: Success</description></item>
-        /// <item><description>false: Failure</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

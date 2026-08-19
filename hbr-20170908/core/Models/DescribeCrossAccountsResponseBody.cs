@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeCrossAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// <para>A description of the response. Successful requests return &quot;successful&quot;. Failed requests return an error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for paging. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,10 +108,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: succeeded</para>
+        /// </description></item>
+        /// <item><description><para>false: failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>

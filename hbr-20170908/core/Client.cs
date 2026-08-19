@@ -52,6 +52,39 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 {"cn-zhengzhou-nebula-1", "hbr.aliyuncs.com"},
                 {"eu-west-1-oxs", "hbr.aliyuncs.com"},
                 {"rus-west-1-pop", "hbr.aliyuncs.com"},
+                {"cn-wulanchabu", "hbr.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "hbr.cn-beijing.aliyuncs.com"},
+                {"cn-qingdao", "hbr.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai", "hbr.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "hbr.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "hbr.cn-heyuan.aliyuncs.com"},
+                {"cn-zhangjiakou", "hbr.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "hbr.cn-shenzhen.aliyuncs.com"},
+                {"ap-northeast-2", "hbr.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "hbr.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "hbr.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "hbr.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "hbr.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "hbr.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "hbr.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "hbr.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "hbr.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "hbr.ap-southeast-7.aliyuncs.com"},
+                {"cn-hangzhou", "hbr.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-8", "hbr.ap-southeast-8.aliyuncs.com"},
+                {"cn-zhongwei", "hbr.cn-zhongwei.aliyuncs.com"},
+                {"us-southeast-1", "hbr.us-southeast-1.aliyuncs.com"},
+                {"na-south-1", "hbr.na-south-1.aliyuncs.com"},
+                {"eu-central-1", "hbr.eu-central-1.aliyuncs.com"},
+                {"us-west-1", "hbr.us-west-1.aliyuncs.com"},
+                {"eu-west-1", "hbr.eu-west-1.aliyuncs.com"},
+                {"us-east-1", "hbr.us-east-1.aliyuncs.com"},
+                {"me-central-1", "hbr.me-central-1.aliyuncs.com"},
+                {"me-east-1", "hbr.me-east-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "hbr.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "hbr.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "hbr.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "hbr.cn-hangzhou-finance.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("hbr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -225,7 +258,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加跨账号信息</para>
+        /// <para>Create a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -279,7 +312,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加跨账号信息</para>
+        /// <para>Create a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -333,7 +366,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加跨账号信息</para>
+        /// <para>Create a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -351,7 +384,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加跨账号信息</para>
+        /// <para>Create a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -367,6 +400,20 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await AddCrossAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The local NAS backup feature supports the local NAS (<c>COMMON_NAS</c>) data source type.</description></item>
+        /// <item><description>The CPFS backup feature supports the following data source types: CPFS (<c>CPFS</c>), CPFS AI-Computing Edition (<c>BMCPFS</c>), and other large-scale file system (<c>COMMON_FILE_SYSTEM</c>).</description></item>
+        /// <item><description>The archive feature supports the following data source types: local NAS (<c>COMMON_NAS</c>), HDFS (<c>HDFS</c>), and S3 (<c>S3</c>).</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDataSourceRequest
         /// </param>
@@ -448,6 +495,20 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<AddDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The local NAS backup feature supports the local NAS (<c>COMMON_NAS</c>) data source type.</description></item>
+        /// <item><description>The CPFS backup feature supports the following data source types: CPFS (<c>CPFS</c>), CPFS AI-Computing Edition (<c>BMCPFS</c>), and other large-scale file system (<c>COMMON_FILE_SYSTEM</c>).</description></item>
+        /// <item><description>The archive feature supports the following data source types: local NAS (<c>COMMON_NAS</c>), HDFS (<c>HDFS</c>), and S3 (<c>S3</c>).</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDataSourceRequest
         /// </param>
@@ -529,6 +590,20 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<AddDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The local NAS backup feature supports the local NAS (<c>COMMON_NAS</c>) data source type.</description></item>
+        /// <item><description>The CPFS backup feature supports the following data source types: CPFS (<c>CPFS</c>), CPFS AI-Computing Edition (<c>BMCPFS</c>), and other large-scale file system (<c>COMMON_FILE_SYSTEM</c>).</description></item>
+        /// <item><description>The archive feature supports the following data source types: local NAS (<c>COMMON_NAS</c>), HDFS (<c>HDFS</c>), and S3 (<c>S3</c>).</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDataSourceRequest
         /// </param>
@@ -542,6 +617,20 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return AddDataSourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The local NAS backup feature supports the local NAS (<c>COMMON_NAS</c>) data source type.</description></item>
+        /// <item><description>The CPFS backup feature supports the following data source types: CPFS (<c>CPFS</c>), CPFS AI-Computing Edition (<c>BMCPFS</c>), and other large-scale file system (<c>COMMON_FILE_SYSTEM</c>).</description></item>
+        /// <item><description>The archive feature supports the following data source types: local NAS (<c>COMMON_NAS</c>), HDFS (<c>HDFS</c>), and S3 (<c>S3</c>).</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDataSourceRequest
         /// </param>
@@ -557,7 +646,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>浏览备份文件</para>
+        /// <para>Browses the list of backup files in a specified backup snapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -651,7 +740,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>浏览备份文件</para>
+        /// <para>Browses the list of backup files in a specified backup snapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,7 +834,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>浏览备份文件</para>
+        /// <para>Browses the list of backup files in a specified backup snapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,7 +852,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>浏览备份文件</para>
+        /// <para>Browses the list of backup files in a specified backup snapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1225,7 +1314,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the user has permissions to access the current resource or page.</para>
+        /// <para>Checks whether the current user has permissions to access a specific resource or page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1275,7 +1364,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the user has permissions to access the current resource or page.</para>
+        /// <para>Checks whether the current user has permissions to access a specific resource or page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1414,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the user has permissions to access the current resource or page.</para>
+        /// <para>Checks whether the current user has permissions to access a specific resource or page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1343,7 +1432,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the user has permissions to access the current resource or page.</para>
+        /// <para>Checks whether the current user has permissions to access a specific resource or page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1629,16 +1718,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a backup plan.</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</description></item>
-        /// <item><description>A backup plan supports only one type of data source.</description></item>
-        /// <item><description>A backup plan supports only a single fixed interval backup cycle strategy.</description></item>
-        /// <item><description>A backup plan can back up to only one backup vault.</description></item>
+        /// <item><description>To use features such as ECS File Backup Essential Edition, cloud disk backup, container backup, Tablestore backup free trial, archiving, or data synchronization, call this operation.</description></item>
+        /// <item><description>To use the 30-day free trial of NAS backup or OSS backup, call the CreateTrialBackupPlan operation.</description></item>
+        /// <item><description>To use standard capabilities of ECS File Backup Standard Edition, local file backup, ECS full-copy backup, NAS backup, OSS backup, or CPFS backup, call the CreatePolicyV2 and CreatePolicyBindings operations.</description></item>
+        /// <item><description>A backup plan associates a data source with a backup policy and other information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</description></item>
+        /// <item><description>A backup plan supports only one data source.</description></item>
+        /// <item><description>A backup plan supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup plan can back up data to only one vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1825,16 +1920,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a backup plan.</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</description></item>
-        /// <item><description>A backup plan supports only one type of data source.</description></item>
-        /// <item><description>A backup plan supports only a single fixed interval backup cycle strategy.</description></item>
-        /// <item><description>A backup plan can back up to only one backup vault.</description></item>
+        /// <item><description>To use features such as ECS File Backup Essential Edition, cloud disk backup, container backup, Tablestore backup free trial, archiving, or data synchronization, call this operation.</description></item>
+        /// <item><description>To use the 30-day free trial of NAS backup or OSS backup, call the CreateTrialBackupPlan operation.</description></item>
+        /// <item><description>To use standard capabilities of ECS File Backup Standard Edition, local file backup, ECS full-copy backup, NAS backup, OSS backup, or CPFS backup, call the CreatePolicyV2 and CreatePolicyBindings operations.</description></item>
+        /// <item><description>A backup plan associates a data source with a backup policy and other information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</description></item>
+        /// <item><description>A backup plan supports only one data source.</description></item>
+        /// <item><description>A backup plan supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup plan can back up data to only one vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2021,16 +2122,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a backup plan.</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</description></item>
-        /// <item><description>A backup plan supports only one type of data source.</description></item>
-        /// <item><description>A backup plan supports only a single fixed interval backup cycle strategy.</description></item>
-        /// <item><description>A backup plan can back up to only one backup vault.</description></item>
+        /// <item><description>To use features such as ECS File Backup Essential Edition, cloud disk backup, container backup, Tablestore backup free trial, archiving, or data synchronization, call this operation.</description></item>
+        /// <item><description>To use the 30-day free trial of NAS backup or OSS backup, call the CreateTrialBackupPlan operation.</description></item>
+        /// <item><description>To use standard capabilities of ECS File Backup Standard Edition, local file backup, ECS full-copy backup, NAS backup, OSS backup, or CPFS backup, call the CreatePolicyV2 and CreatePolicyBindings operations.</description></item>
+        /// <item><description>A backup plan associates a data source with a backup policy and other information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</description></item>
+        /// <item><description>A backup plan supports only one data source.</description></item>
+        /// <item><description>A backup plan supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup plan can back up data to only one vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2049,16 +2156,22 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a backup plan.</para>
+        /// <para>Creates a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</description></item>
-        /// <item><description>A backup plan supports only one type of data source.</description></item>
-        /// <item><description>A backup plan supports only a single fixed interval backup cycle strategy.</description></item>
-        /// <item><description>A backup plan can back up to only one backup vault.</description></item>
+        /// <item><description>To use features such as ECS File Backup Essential Edition, cloud disk backup, container backup, Tablestore backup free trial, archiving, or data synchronization, call this operation.</description></item>
+        /// <item><description>To use the 30-day free trial of NAS backup or OSS backup, call the CreateTrialBackupPlan operation.</description></item>
+        /// <item><description>To use standard capabilities of ECS File Backup Standard Edition, local file backup, ECS full-copy backup, NAS backup, OSS backup, or CPFS backup, call the CreatePolicyV2 and CreatePolicyBindings operations.</description></item>
+        /// <item><description>A backup plan associates a data source with a backup policy and other information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</description></item>
+        /// <item><description>A backup plan supports only one data source.</description></item>
+        /// <item><description>A backup plan supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup plan can back up data to only one vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3017,14 +3130,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds one or more data sources to a backup policy.</para>
+        /// <para>Binds one or more data sources to a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can bind data sources to only one policy in each request.</para>
         /// <list type="bullet">
-        /// <item><description>Elastic Compute Service (ECS) instances can be bound to only one policy.</description></item>
+        /// <item><description>Each call supports binding only data sources of the same type to a single policy.</description></item>
+        /// <item><description>ECS instances (full server backup) can be bound to only one policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3079,14 +3192,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds one or more data sources to a backup policy.</para>
+        /// <para>Binds one or more data sources to a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can bind data sources to only one policy in each request.</para>
         /// <list type="bullet">
-        /// <item><description>Elastic Compute Service (ECS) instances can be bound to only one policy.</description></item>
+        /// <item><description>Each call supports binding only data sources of the same type to a single policy.</description></item>
+        /// <item><description>ECS instances (full server backup) can be bound to only one policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3141,14 +3254,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds one or more data sources to a backup policy.</para>
+        /// <para>Binds one or more data sources to a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can bind data sources to only one policy in each request.</para>
         /// <list type="bullet">
-        /// <item><description>Elastic Compute Service (ECS) instances can be bound to only one policy.</description></item>
+        /// <item><description>Each call supports binding only data sources of the same type to a single policy.</description></item>
+        /// <item><description>ECS instances (full server backup) can be bound to only one policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3167,14 +3280,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds one or more data sources to a backup policy.</para>
+        /// <para>Binds one or more data sources to a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can bind data sources to only one policy in each request.</para>
         /// <list type="bullet">
-        /// <item><description>Elastic Compute Service (ECS) instances can be bound to only one policy.</description></item>
+        /// <item><description>Each call supports binding only data sources of the same type to a single policy.</description></item>
+        /// <item><description>ECS instances (full server backup) can be bound to only one policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3193,16 +3306,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy.</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</para>
+        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description>You can specify only one interval as a backup cycle in a backup policy.</description></item>
-        /// <item><description>Each backup policy allows you to back up data to only one backup vault.</description></item>
+        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
+        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3263,16 +3376,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy.</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</para>
+        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description>You can specify only one interval as a backup cycle in a backup policy.</description></item>
-        /// <item><description>Each backup policy allows you to back up data to only one backup vault.</description></item>
+        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
+        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3333,16 +3446,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy.</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</para>
+        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description>You can specify only one interval as a backup cycle in a backup policy.</description></item>
-        /// <item><description>Each backup policy allows you to back up data to only one backup vault.</description></item>
+        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
+        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3361,16 +3474,16 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy.</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</para>
+        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description>You can specify only one interval as a backup cycle in a backup policy.</description></item>
-        /// <item><description>Each backup policy allows you to back up data to only one backup vault.</description></item>
+        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
+        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3389,12 +3502,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mirror vault.</para>
+        /// <para><em>[Deprecated]</em>* Creates a replication target vault and configures cross-region replication. This API operation does not support cross-account replication and is deprecated. Use CreateVault and CreateVaultReplication instead for full capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</para>
+        /// <para>After the backup vault is created, its status is INITIALIZING, and an initialization task is automatically initiated. After the task succeeds, the vault status changes to CREATED.
+        /// Call this operation in the region where the replication target vault resides (VaultRegionId).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3468,12 +3582,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mirror vault.</para>
+        /// <para><em>[Deprecated]</em>* Creates a replication target vault and configures cross-region replication. This API operation does not support cross-account replication and is deprecated. Use CreateVault and CreateVaultReplication instead for full capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</para>
+        /// <para>After the backup vault is created, its status is INITIALIZING, and an initialization task is automatically initiated. After the task succeeds, the vault status changes to CREATED.
+        /// Call this operation in the region where the replication target vault resides (VaultRegionId).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3547,12 +3662,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mirror vault.</para>
+        /// <para><em>[Deprecated]</em>* Creates a replication target vault and configures cross-region replication. This API operation does not support cross-account replication and is deprecated. Use CreateVault and CreateVaultReplication instead for full capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</para>
+        /// <para>After the backup vault is created, its status is INITIALIZING, and an initialization task is automatically initiated. After the task succeeds, the vault status changes to CREATED.
+        /// Call this operation in the region where the replication target vault resides (VaultRegionId).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3570,12 +3686,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mirror vault.</para>
+        /// <para><em>[Deprecated]</em>* Creates a replication target vault and configures cross-region replication. This API operation does not support cross-account replication and is deprecated. Use CreateVault and CreateVaultReplication instead for full capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</para>
+        /// <para>After the backup vault is created, its status is INITIALIZING, and an initialization task is automatically initiated. After the task succeeds, the vault status changes to CREATED.
+        /// Call this operation in the region where the replication target vault resides (VaultRegionId).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3593,14 +3710,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a restore job.</para>
+        /// <para>Creates a restore job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Create a restore job based on the selected snapshot and the restore destination.</description></item>
-        /// <item><description>Currently, the data source type must match the restore destination data source type.</description></item>
+        /// <item><description>Creates a restore job based on the selected snapshot and restore destination.</description></item>
+        /// <item><description>The data source type and the restore destination data source type must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3767,14 +3884,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a restore job.</para>
+        /// <para>Creates a restore job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Create a restore job based on the selected snapshot and the restore destination.</description></item>
-        /// <item><description>Currently, the data source type must match the restore destination data source type.</description></item>
+        /// <item><description>Creates a restore job based on the selected snapshot and restore destination.</description></item>
+        /// <item><description>The data source type and the restore destination data source type must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3941,14 +4058,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a restore job.</para>
+        /// <para>Creates a restore job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Create a restore job based on the selected snapshot and the restore destination.</description></item>
-        /// <item><description>Currently, the data source type must match the restore destination data source type.</description></item>
+        /// <item><description>Creates a restore job based on the selected snapshot and restore destination.</description></item>
+        /// <item><description>The data source type and the restore destination data source type must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3967,14 +4084,14 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a restore job.</para>
+        /// <para>Creates a restore job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Create a restore job based on the selected snapshot and the restore destination.</description></item>
-        /// <item><description>Currently, the data source type must match the restore destination data source type.</description></item>
+        /// <item><description>Creates a restore job based on the selected snapshot and restore destination.</description></item>
+        /// <item><description>The data source type and the restore destination data source type must be the same.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4154,11 +4271,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each Alibaba Cloud account can create up to 100 backup vaults.</para>
         /// <list type="bullet">
-        /// <item><description>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-        /// **
-        /// <b>Note</b> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</description></item>
+        /// <item><description>Each Alibaba Cloud account can create a maximum of 100 backup vaults.</description></item>
+        /// <item><description>After a backup vault is created, its status is INITIALIZING and an initialization task automatically starts. After the task is successfully completed, the status changes to CREATED. The backup vault can be used for backup jobs only when its status is CREATED.<remarks>
+        /// <para>Notice: 
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/detail/hbr?">pricing</a> of Cloud Backup.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -4238,11 +4357,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each Alibaba Cloud account can create up to 100 backup vaults.</para>
         /// <list type="bullet">
-        /// <item><description>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-        /// **
-        /// <b>Note</b> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</description></item>
+        /// <item><description>Each Alibaba Cloud account can create a maximum of 100 backup vaults.</description></item>
+        /// <item><description>After a backup vault is created, its status is INITIALIZING and an initialization task automatically starts. After the task is successfully completed, the status changes to CREATED. The backup vault can be used for backup jobs only when its status is CREATED.<remarks>
+        /// <para>Notice: 
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/detail/hbr?">pricing</a> of Cloud Backup.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -4322,11 +4443,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each Alibaba Cloud account can create up to 100 backup vaults.</para>
         /// <list type="bullet">
-        /// <item><description>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-        /// **
-        /// <b>Note</b> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</description></item>
+        /// <item><description>Each Alibaba Cloud account can create a maximum of 100 backup vaults.</description></item>
+        /// <item><description>After a backup vault is created, its status is INITIALIZING and an initialization task automatically starts. After the task is successfully completed, the status changes to CREATED. The backup vault can be used for backup jobs only when its status is CREATED.<remarks>
+        /// <para>Notice: 
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/detail/hbr?">pricing</a> of Cloud Backup.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -4350,11 +4473,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each Alibaba Cloud account can create up to 100 backup vaults.</para>
         /// <list type="bullet">
-        /// <item><description>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-        /// **
-        /// <b>Note</b> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</description></item>
+        /// <item><description>Each Alibaba Cloud account can create a maximum of 100 backup vaults.</description></item>
+        /// <item><description>After a backup vault is created, its status is INITIALIZING and an initialization task automatically starts. After the task is successfully completed, the status changes to CREATED. The backup vault can be used for backup jobs only when its status is CREATED.<remarks>
+        /// <para>Notice: 
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/detail/hbr?">pricing</a> of Cloud Backup.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -4373,8 +4498,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份库复制</para>
+        /// <para>Configures backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this method in the region where the destination backup vault is located. Before you use this API, review the billing methods and pricing of Cloud Backup.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVaultReplicationRequest
@@ -4423,8 +4553,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份库复制</para>
+        /// <para>Configures backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this method in the region where the destination backup vault is located. Before you use this API, review the billing methods and pricing of Cloud Backup.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVaultReplicationRequest
@@ -4473,8 +4608,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份库复制</para>
+        /// <para>Configures backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this method in the region where the destination backup vault is located. Before you use this API, review the billing methods and pricing of Cloud Backup.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVaultReplicationRequest
@@ -4491,8 +4631,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份库复制</para>
+        /// <para>Configures backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this method in the region where the destination backup vault is located. Before you use this API, review the billing methods and pricing of Cloud Backup.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVaultReplicationRequest
@@ -4507,9 +4652,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await CreateVaultReplicationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteAirEcsInstance is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</para>
+        /// <para>Removes a restore-only ECS instance from ECS Backup Essential Edition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4522,6 +4671,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DeleteAirEcsInstanceResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteAirEcsInstance is deprecated")]
+        // Deprecated
         public DeleteAirEcsInstanceResponse DeleteAirEcsInstanceWithOptions(DeleteAirEcsInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4559,9 +4710,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteAirEcsInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteAirEcsInstance is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</para>
+        /// <para>Removes a restore-only ECS instance from ECS Backup Essential Edition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4574,6 +4729,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DeleteAirEcsInstanceResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteAirEcsInstance is deprecated")]
+        // Deprecated
         public async Task<DeleteAirEcsInstanceResponse> DeleteAirEcsInstanceWithOptionsAsync(DeleteAirEcsInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4611,9 +4768,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteAirEcsInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteAirEcsInstance is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</para>
+        /// <para>Removes a restore-only ECS instance from ECS Backup Essential Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4623,15 +4784,21 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DeleteAirEcsInstanceResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteAirEcsInstance is deprecated")]
+        // Deprecated
         public DeleteAirEcsInstanceResponse DeleteAirEcsInstance(DeleteAirEcsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAirEcsInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteAirEcsInstance is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the Elastic Compute Service (ECS) instance that is used for restoration only in ECS Backup Essential Edition.</para>
+        /// <para>Removes a restore-only ECS instance from ECS Backup Essential Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4641,6 +4808,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DeleteAirEcsInstanceResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteAirEcsInstance is deprecated")]
+        // Deprecated
         public async Task<DeleteAirEcsInstanceResponse> DeleteAirEcsInstanceAsync(DeleteAirEcsInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4654,8 +4823,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</para>
         /// <list type="bullet">
+        /// <item><description>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</description></item>
         /// <item><description>When you perform this operation, resources that are associated with the client are also deleted, including:<list type="bullet">
         /// <item><description>Backup plans</description></item>
         /// <item><description>Backup jobs</description></item>
@@ -4709,8 +4878,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</para>
         /// <list type="bullet">
+        /// <item><description>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</description></item>
         /// <item><description>When you perform this operation, resources that are associated with the client are also deleted, including:<list type="bullet">
         /// <item><description>Backup plans</description></item>
         /// <item><description>Backup jobs</description></item>
@@ -4764,8 +4933,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</para>
         /// <list type="bullet">
+        /// <item><description>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</description></item>
         /// <item><description>When you perform this operation, resources that are associated with the client are also deleted, including:<list type="bullet">
         /// <item><description>Backup plans</description></item>
         /// <item><description>Backup jobs</description></item>
@@ -4795,8 +4964,8 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</para>
         /// <list type="bullet">
+        /// <item><description>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</description></item>
         /// <item><description>When you perform this operation, resources that are associated with the client are also deleted, including:<list type="bullet">
         /// <item><description>Backup plans</description></item>
         /// <item><description>Backup jobs</description></item>
@@ -4821,12 +4990,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the resources that are related to one or more HBR clients.</para>
+        /// <para>Deletes the resources of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</para>
+        /// <para>This operation does not delete the backup client. It only deletes the resources of the backup client, such as backup plans, backup jobs, and snapshots.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4874,12 +5043,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the resources that are related to one or more HBR clients.</para>
+        /// <para>Deletes the resources of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</para>
+        /// <para>This operation does not delete the backup client. It only deletes the resources of the backup client, such as backup plans, backup jobs, and snapshots.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4927,12 +5096,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the resources that are related to one or more HBR clients.</para>
+        /// <para>Deletes the resources of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</para>
+        /// <para>This operation does not delete the backup client. It only deletes the resources of the backup client, such as backup plans, backup jobs, and snapshots.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4950,12 +5119,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the resources that are related to one or more HBR clients.</para>
+        /// <para>Deletes the resources of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</para>
+        /// <para>This operation does not delete the backup client. It only deletes the resources of the backup client, such as backup plans, backup jobs, and snapshots.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4978,9 +5147,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you delete a backup plan, the backup jobs are also deleted.</para>
         /// <list type="bullet">
-        /// <item><description>If you delete a backup plan, the created snapshot files are not deleted.</description></item>
+        /// <item><description>Deleting a backup plan also deletes the associated backup jobs.</description></item>
+        /// <item><description>Deleting a backup plan does not delete existing snapshots.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5044,9 +5213,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you delete a backup plan, the backup jobs are also deleted.</para>
         /// <list type="bullet">
-        /// <item><description>If you delete a backup plan, the created snapshot files are not deleted.</description></item>
+        /// <item><description>Deleting a backup plan also deletes the associated backup jobs.</description></item>
+        /// <item><description>Deleting a backup plan does not delete existing snapshots.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5110,9 +5279,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you delete a backup plan, the backup jobs are also deleted.</para>
         /// <list type="bullet">
-        /// <item><description>If you delete a backup plan, the created snapshot files are not deleted.</description></item>
+        /// <item><description>Deleting a backup plan also deletes the associated backup jobs.</description></item>
+        /// <item><description>Deleting a backup plan does not delete existing snapshots.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5136,9 +5305,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you delete a backup plan, the backup jobs are also deleted.</para>
         /// <list type="bullet">
-        /// <item><description>If you delete a backup plan, the created snapshot files are not deleted.</description></item>
+        /// <item><description>Deleting a backup plan also deletes the associated backup jobs.</description></item>
+        /// <item><description>Deleting a backup plan does not delete existing snapshots.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5157,7 +5326,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除客户端</para>
+        /// <para>Deletes a client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5207,7 +5376,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除客户端</para>
+        /// <para>Deletes a client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5257,7 +5426,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除客户端</para>
+        /// <para>Deletes a client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5275,7 +5444,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除客户端</para>
+        /// <para>Deletes a client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5291,6 +5460,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DeleteClientWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unregisters a container cluster record in Cloud Backup. After you unregister the cluster, you cannot recover backups of the cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContainerClusterRequest
         /// </param>
@@ -5332,6 +5506,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteContainerClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unregisters a container cluster record in Cloud Backup. After you unregister the cluster, you cannot recover backups of the cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContainerClusterRequest
         /// </param>
@@ -5373,6 +5552,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteContainerClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unregisters a container cluster record in Cloud Backup. After you unregister the cluster, you cannot recover backups of the cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContainerClusterRequest
         /// </param>
@@ -5386,6 +5570,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return DeleteContainerClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unregisters a container cluster record in Cloud Backup. After you unregister the cluster, you cannot recover backups of the cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContainerClusterRequest
         /// </param>
@@ -5401,7 +5590,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除跨账号信息</para>
+        /// <para>Deletes a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5451,7 +5640,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除跨账号信息</para>
+        /// <para>Deletes a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5501,7 +5690,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除跨账号信息</para>
+        /// <para>Deletes a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5519,7 +5708,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除跨账号信息</para>
+        /// <para>Deletes a cross-account management relationship.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5845,7 +6034,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</para>
+        /// <para>Dissociates a data source from a policy. After the dissociation, the policy can no longer protect the data source. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5903,7 +6092,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</para>
+        /// <para>Dissociates a data source from a policy. After the dissociation, the policy can no longer protect the data source. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5961,7 +6150,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</para>
+        /// <para>Dissociates a data source from a policy. After the dissociation, the policy can no longer protect the data source. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5979,7 +6168,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates one or more data sources from a backup policy. After you disassociate the data sources from the backup policy, the backup policy no longer protects the data sources. Proceed with caution.</para>
+        /// <para>Dissociates a data source from a policy. After the dissociation, the policy can no longer protect the data source. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5997,12 +6186,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a backup policy.</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</para>
+        /// <para>When you delete a policy, it is detached from all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6044,12 +6233,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a backup policy.</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</para>
+        /// <para>When you delete a policy, it is detached from all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6091,12 +6280,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a backup policy.</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</para>
+        /// <para>When you delete a policy, it is detached from all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6114,12 +6303,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a backup policy.</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</para>
+        /// <para>When you delete a policy, it is detached from all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6713,8 +6902,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭备份库复制</para>
+        /// <para>Stops backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this method in the region of the destination backup vault.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVaultReplicationRequest
@@ -6763,8 +6957,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭备份库复制</para>
+        /// <para>Stops backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this method in the region of the destination backup vault.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVaultReplicationRequest
@@ -6813,8 +7012,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭备份库复制</para>
+        /// <para>Stops backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this method in the region of the destination backup vault.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVaultReplicationRequest
@@ -6831,8 +7035,13 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭备份库复制</para>
+        /// <para>Stops backup vault replication.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this method in the region of the destination backup vault.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVaultReplicationRequest
@@ -6849,7 +7058,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more HBR clients that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup clients that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6943,7 +7152,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more HBR clients that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup clients that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7037,7 +7246,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more HBR clients that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup clients that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7055,7 +7264,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more HBR clients that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup clients that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7073,7 +7282,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup jobs that meet the specified conditions.</para>
+        /// <para>Queries backup jobs that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7135,7 +7344,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup jobs that meet the specified conditions.</para>
+        /// <para>Queries backup jobs that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +7406,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup jobs that meet the specified conditions.</para>
+        /// <para>Queries backup jobs that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7215,7 +7424,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup jobs that meet the specified conditions.</para>
+        /// <para>Queries backup jobs that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7233,7 +7442,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup plans that meet the specified conditions.</para>
+        /// <para>Retrieves one or more backup plans that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7291,7 +7500,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup plans that meet the specified conditions.</para>
+        /// <para>Retrieves one or more backup plans that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7349,7 +7558,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup plans that meet the specified conditions.</para>
+        /// <para>Retrieves one or more backup plans that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7367,7 +7576,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup plans that meet the specified conditions.</para>
+        /// <para>Retrieves one or more backup plans that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7586,7 +7795,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>Supported only for Container Service for Kubernetes (ACK) integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7645,7 +7854,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>Supported only for Container Service for Kubernetes (ACK) integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7704,7 +7913,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>Supported only for Container Service for Kubernetes (ACK) integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7727,7 +7936,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>Supported only for Container Service for Kubernetes (ACK) integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7743,6 +7952,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeContainerClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of container cluster resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeContainerResourceRequest
         /// </param>
@@ -7796,6 +8010,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeContainerResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of container cluster resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeContainerResourceRequest
         /// </param>
@@ -7849,6 +8068,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeContainerResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of container cluster resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeContainerResourceRequest
         /// </param>
@@ -7862,6 +8086,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return DescribeContainerResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of container cluster resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeContainerResourceRequest
         /// </param>
@@ -7877,7 +8106,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the accounts used in cross-account backup.</para>
+        /// <para>Queries cross-account management relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7923,7 +8152,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the accounts used in cross-account backup.</para>
+        /// <para>Queries cross-account management relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7969,7 +8198,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the accounts used in cross-account backup.</para>
+        /// <para>Queries cross-account management relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7987,7 +8216,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the accounts used in cross-account backup.</para>
+        /// <para>Queries cross-account management relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8003,6 +8232,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DescribeCrossAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data sources. Filter results by data source type, data source ID, data source name, or client group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataSourcesRequest
         /// </param>
@@ -8060,6 +8294,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeDataSourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data sources. Filter results by data source type, data source ID, data source name, or client group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataSourcesRequest
         /// </param>
@@ -8117,6 +8356,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DescribeDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data sources. Filter results by data source type, data source ID, data source name, or client group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataSourcesRequest
         /// </param>
@@ -8130,6 +8374,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return DescribeDataSourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data sources. Filter results by data source type, data source ID, data source name, or client group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataSourcesRequest
         /// </param>
@@ -8145,7 +8394,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more SAP HANA backup plans that meet the specified conditions.</para>
+        /// <para>Queries for one or more SAP HANA backup plans that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8207,7 +8456,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more SAP HANA backup plans that meet the specified conditions.</para>
+        /// <para>Queries for one or more SAP HANA backup plans that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8269,7 +8518,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more SAP HANA backup plans that meet the specified conditions.</para>
+        /// <para>Queries for one or more SAP HANA backup plans that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8287,7 +8536,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more SAP HANA backup plans that meet the specified conditions.</para>
+        /// <para>Queries for one or more SAP HANA backup plans that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9617,7 +9866,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more backup policies.</para>
+        /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9667,7 +9916,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more backup policies.</para>
+        /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9717,7 +9966,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more backup policies.</para>
+        /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9735,7 +9984,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more backup policies.</para>
+        /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9753,7 +10002,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</para>
+        /// <para>Queries one or more data sources bound to a policy, or queries one or more policies bound to a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9823,7 +10072,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</para>
+        /// <para>Queries one or more data sources bound to a policy, or queries one or more policies bound to a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9893,7 +10142,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</para>
+        /// <para>Queries one or more data sources bound to a policy, or queries one or more policies bound to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9911,7 +10160,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query one or more data sources bound to a policy, or query one or more policies bound to a data source.</para>
+        /// <para>Queries one or more data sources bound to a policy, or queries one or more policies bound to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10153,7 +10402,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more restore jobs that meet the specified conditions.</para>
+        /// <para>Queries restore jobs that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10211,7 +10460,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more restore jobs that meet the specified conditions.</para>
+        /// <para>Queries restore jobs that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10269,7 +10518,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more restore jobs that meet the specified conditions.</para>
+        /// <para>Queries restore jobs that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10287,7 +10536,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more restore jobs that meet the specified conditions.</para>
+        /// <para>Queries restore jobs that match specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10441,7 +10690,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</para>
+        /// <para>Queries the snapshots of full backups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10519,7 +10768,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</para>
+        /// <para>Queries the snapshots of full backups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10597,7 +10846,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</para>
+        /// <para>Queries the snapshots of full backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10615,7 +10864,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup snapshots of an Elastic Compute Service (ECS) instance.</para>
+        /// <para>Queries the snapshots of full backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10761,7 +11010,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10845,7 +11094,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10929,7 +11178,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10947,7 +11196,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup vaults that meet the specified conditions.</para>
+        /// <para>Retrieves information about one or more backup vaults that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10970,9 +11219,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If the request is successful, the mount target is deleted.</para>
         /// <list type="bullet">
-        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
+        /// <item><description>If the request is successful, the mount target is deleted.</description></item>
+        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. Call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11036,9 +11285,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If the request is successful, the mount target is deleted.</para>
         /// <list type="bullet">
-        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
+        /// <item><description>If the request is successful, the mount target is deleted.</description></item>
+        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. Call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11102,9 +11351,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If the request is successful, the mount target is deleted.</para>
         /// <list type="bullet">
-        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
+        /// <item><description>If the request is successful, the mount target is deleted.</description></item>
+        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. Call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11128,9 +11377,9 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If the request is successful, the mount target is deleted.</para>
         /// <list type="bullet">
-        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
+        /// <item><description>If the request is successful, the mount target is deleted.</description></item>
+        /// <item><description>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. Call this operation to delete the mount target. In the <b>Status</b> column of the mount target of the NAS file system, the following information is displayed: <b>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</b>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11154,7 +11403,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</para>
+        /// <para>If the call is successful, the backup plan is disabled. The value of the Disabled parameter is then returned as true in the response of the DescribeBackupPlans operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11213,7 +11462,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</para>
+        /// <para>If the call is successful, the backup plan is disabled. The value of the Disabled parameter is then returned as true in the response of the DescribeBackupPlans operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11272,7 +11521,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</para>
+        /// <para>If the call is successful, the backup plan is disabled. The value of the Disabled parameter is then returned as true in the response of the DescribeBackupPlans operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11295,7 +11544,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</para>
+        /// <para>If the call is successful, the backup plan is disabled. The value of the Disabled parameter is then returned as true in the response of the DescribeBackupPlans operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11477,12 +11726,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a backup plan.</para>
+        /// <para>Resumes a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</para>
+        /// <para>If the call is successful, the backup plan is enabled. The plan then executes backups according to its policy. In the response of the DescribeBackupPlans operation, the value of the Disabled parameter is false.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11536,12 +11785,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a backup plan.</para>
+        /// <para>Resumes a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</para>
+        /// <para>If the call is successful, the backup plan is enabled. The plan then executes backups according to its policy. In the response of the DescribeBackupPlans operation, the value of the Disabled parameter is false.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11595,12 +11844,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a backup plan.</para>
+        /// <para>Resumes a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</para>
+        /// <para>If the call is successful, the backup plan is enabled. The plan then executes backups according to its policy. In the response of the DescribeBackupPlans operation, the value of the Disabled parameter is false.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11618,12 +11867,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a backup plan.</para>
+        /// <para>Resumes a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</para>
+        /// <para>If the call is successful, the backup plan is enabled. The plan then executes backups according to its policy. In the response of the DescribeBackupPlans operation, the value of the Disabled parameter is false.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12249,7 +12498,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic backup statistics.</para>
+        /// <para>Retrieves basic statistics for Backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12291,7 +12540,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic backup statistics.</para>
+        /// <para>Retrieves basic statistics for Backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12333,7 +12582,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic backup statistics.</para>
+        /// <para>Retrieves basic statistics for Backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12351,7 +12600,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains basic backup statistics.</para>
+        /// <para>Retrieves basic statistics for Backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12489,15 +12738,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</para>
+        /// <para>Installs backup clients on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</description></item>
-        /// <item><description>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</description></item>
+        /// <item><description>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to get the task result.</description></item>
+        /// <item><description>The task timeout is 15 minutes. After the task is created, wait 60 seconds before making the first query. Then, query the result every 30 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12558,15 +12807,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</para>
+        /// <para>Installs backup clients on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</description></item>
-        /// <item><description>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</description></item>
+        /// <item><description>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to get the task result.</description></item>
+        /// <item><description>The task timeout is 15 minutes. After the task is created, wait 60 seconds before making the first query. Then, query the result every 30 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12627,15 +12876,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</para>
+        /// <para>Installs backup clients on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</description></item>
-        /// <item><description>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</description></item>
+        /// <item><description>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to get the task result.</description></item>
+        /// <item><description>The task timeout is 15 minutes. After the task is created, wait 60 seconds before making the first query. Then, query the result every 30 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12654,15 +12903,15 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs an HBR client on one or more Elastic Compute Service (ECS) instances.</para>
+        /// <para>Installs backup clients on one or more ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to query the execution result of an asynchronous job.</description></item>
-        /// <item><description>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</description></item>
+        /// <item><description>This operation creates a background asynchronous task. The task uses Cloud Assistant to install backup clients on ECS instances.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/431265.html">DescribeTask</a> operation to get the task result.</description></item>
+        /// <item><description>The task timeout is 15 minutes. After the task is created, wait 60 seconds before making the first query. Then, query the result every 30 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12681,7 +12930,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已保护的资源列表</para>
+        /// <para>Queries the list of protected resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12747,7 +12996,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已保护的资源列表</para>
+        /// <para>Queries the list of protected resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12813,7 +13062,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已保护的资源列表</para>
+        /// <para>Queries the list of protected resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12831,7 +13080,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询已保护的资源列表</para>
+        /// <para>Queries the list of protected resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12935,6 +13184,19 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await OpenHbrServiceWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Deleting a data source can cause data loss or render related data unqueryable. Before you delete the data source, ensure that you have removed all associated backup data and backup plans.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveDataSourceRequest
         /// </param>
@@ -12972,6 +13234,19 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<RemoveDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Deleting a data source can cause data loss or render related data unqueryable. Before you delete the data source, ensure that you have removed all associated backup data and backup plans.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveDataSourceRequest
         /// </param>
@@ -13009,6 +13284,19 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<RemoveDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Deleting a data source can cause data loss or render related data unqueryable. Before you delete the data source, ensure that you have removed all associated backup data and backup plans.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveDataSourceRequest
         /// </param>
@@ -13022,6 +13310,19 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return RemoveDataSourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Deleting a data source can cause data loss or render related data unqueryable. Before you delete the data source, ensure that you have removed all associated backup data and backup plans.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveDataSourceRequest
         /// </param>
@@ -13037,7 +13338,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup snapshots that meet the specified conditions.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13109,7 +13410,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup snapshots that meet the specified conditions.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13181,7 +13482,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup snapshots that meet the specified conditions.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13199,7 +13500,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more backup snapshots that meet the specified conditions.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14181,12 +14482,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of an HBR client.</para>
+        /// <para>Updates the configuration of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to update the configurations of both the old and new HBR clients.</para>
+        /// <para>Applies to updating both legacy and new clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14280,12 +14581,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of an HBR client.</para>
+        /// <para>Updates the configuration of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to update the configurations of both the old and new HBR clients.</para>
+        /// <para>Applies to updating both legacy and new clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14379,12 +14680,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of an HBR client.</para>
+        /// <para>Updates the configuration of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to update the configurations of both the old and new HBR clients.</para>
+        /// <para>Applies to updating both legacy and new clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14402,12 +14703,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of an HBR client.</para>
+        /// <para>Updates the configuration of a backup client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to update the configurations of both the old and new HBR clients.</para>
+        /// <para>Applies to updating both legacy and new clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14575,6 +14876,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await UpdateContainerClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the data source configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
         /// </param>
@@ -14656,6 +14962,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the data source configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
         /// </param>
@@ -14737,6 +15048,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<UpdateDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the data source configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
         /// </param>
@@ -14750,6 +15066,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return UpdateDataSourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the data source configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
         /// </param>
@@ -15577,7 +15898,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the association between a backup policy and a data source.</para>
+        /// <para>Modifies the association between a policy and a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15663,7 +15984,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the association between a backup policy and a data source.</para>
+        /// <para>Modifies the association between a policy and a data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15749,7 +16070,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the association between a backup policy and a data source.</para>
+        /// <para>Modifies the association between a policy and a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15767,7 +16088,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the association between a backup policy and a data source.</para>
+        /// <para>Modifies the association between a policy and a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15785,12 +16106,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a backup policy.</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</para>
+        /// <para>Modifications to a policy take effect on all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15850,12 +16171,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a backup policy.</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</para>
+        /// <para>Modifications to a policy take effect on all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15915,12 +16236,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a backup policy.</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</para>
+        /// <para>Modifications to a policy take effect on all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15938,12 +16259,12 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a backup policy.</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</para>
+        /// <para>Modifications to a policy take effect on all associated data sources. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16326,7 +16647,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</para>
+        /// <para>Upgrades a Cloud Backup client to the latest version. After the upgrade succeeds, the client version cannot be rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16381,7 +16702,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</para>
+        /// <para>Upgrades a Cloud Backup client to the latest version. After the upgrade succeeds, the client version cannot be rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16436,7 +16757,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</para>
+        /// <para>Upgrades a Cloud Backup client to the latest version. After the upgrade succeeds, the client version cannot be rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16459,7 +16780,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</para>
+        /// <para>Upgrades a Cloud Backup client to the latest version. After the upgrade succeeds, the client version cannot be rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">

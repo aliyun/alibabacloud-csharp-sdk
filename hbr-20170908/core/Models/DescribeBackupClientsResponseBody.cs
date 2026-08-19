@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupClientsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried backup clients.</para>
+        /// <para>The list of backup clients.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Client\&quot;: []}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public List<DescribeBackupClientsResponseBodyClients> Clients { get; set; }
         public class DescribeBackupClientsResponseBodyClients : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:</para>
+            /// <para>Indicates whether the client is a hardware monitoring appliance client.</para>
             /// <list type="bullet">
-            /// <item><description>true: The client is installed on an all-in-one PC that integrates hardware and monitoring program.</description></item>
-            /// <item><description>false: The client is not installed on an all-in-one PC that integrates hardware and monitoring program.</description></item>
+            /// <item><description>true: The client is a hardware monitoring appliance client.</description></item>
+            /// <item><description>false: The client is not a hardware monitoring appliance client.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? Appliance { get; set; }
 
             /// <summary>
-            /// <para>This parameter is valid only if the <b>ClientType</b> parameter is set to <b>ECS_CLIENT</b>. This parameter indicates the system architecture where the backup client resides. Valid values:</para>
+            /// <para>This parameter is valid only when <b>ClientType</b> is set to <b>ECS_CLIENT</b>. The system architecture of the backup client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>amd64</b></description></item>
             /// <item><description><b>386</b></description></item>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The protection status of the backup client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UNPROTECTED</b>: The backup client is not protected.</description></item>
-            /// <item><description><b>PROTECTED</b>: The backup client is protected.</description></item>
+            /// <item><description><b>UNPROTECTED</b>: The server is not protected.</description></item>
+            /// <item><description><b>PROTECTED</b>: The server is protected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The type of the backup client. Valid value: <b>ECS_CLIENT</b>, which indicates a client for ECS file backup.</para>
+            /// <para>The type of the backup client. The value <b>ECS_CLIENT</b> indicates an ECS File Backup client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS_CLIENT</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup client was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the backup client was created. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554347313</para>
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The instance ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the client is used to back up ECS files, this parameter indicates the ID of an ECS instance.</description></item>
-            /// <item><description>If the client is used to back up on-premises files, this parameter indicates the hardware fingerprint that is generated based on the system information.</description></item>
+            /// <item><description>If the client type is ECS File Backup client, this parameter indicates the ECS instance ID.</description></item>
+            /// <item><description>If the client type is local file backup client, this parameter indicates the hardware fingerprint generated based on system information.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is valid only if the <b>ClientType</b> parameter is set to <b>ECS_CLIENT</b>. This parameter indicates the name of the ECS instance.</para>
+            /// <para>This parameter is valid only when <b>ClientType</b> is set to <b>ECS_CLIENT</b>. The name of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instancename</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The last heartbeat time of the backup client. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time of the last heartbeat of the backup client. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554347313</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string MaxClientVersion { get; set; }
 
             /// <summary>
-            /// <para>This parameter is valid only if the <b>ClientType</b> parameter is set to <b>ECS_CLIENT</b>. This parameter indicates the operating system type of the backup client. Valid values:</para>
+            /// <para>This parameter is valid only when <b>ClientType</b> is set to <b>ECS_CLIENT</b>. The operating system type of the client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>windows</b></description></item>
             /// <item><description><b>linux</b></description></item>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is valid only if the <b>ClientType</b> parameter is set to <b>ECS_CLIENT</b>. This parameter indicates the internal IP address of the ECS instance.</para>
+            /// <para>This parameter is valid only when <b>ClientType</b> is set to <b>ECS_CLIENT</b>. The internal IP address of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public DescribeBackupClientsResponseBodyClientsSettings Settings { get; set; }
             public class DescribeBackupClientsResponseBodyClientsSettings : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether alerts are generated for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</para>
+                /// <para>Specifies whether to send alerts for partially completed jobs. This setting applies only to File Backup and ECS File Backup Essential Edition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -197,11 +197,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public bool? AlertOnPartialComplete { get; set; }
 
                 /// <summary>
-                /// <para>The type of the endpoint on the data plane. Valid values:</para>
+                /// <para>The type of the data plane endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>PUBLIC</b>: Internet</description></item>
-                /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-                /// <item><description><b>CLASSIC</b>: classic network</description></item>
+                /// <item><description><b>PUBLIC</b>: public network.</description></item>
+                /// <item><description><b>VPC</b>: VPC network.</description></item>
+                /// <item><description><b>CLASSIC</b>: classic network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,11 +212,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DataNetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The proxy configuration on the data plane. Valid values:</para>
+                /// <para>The data plane proxy setting. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>DISABLE</b>: The proxy is not used.</description></item>
-                /// <item><description><b>USE_CONTROL_PROXY</b> (default): The configuration is the same as that on the control plane.</description></item>
-                /// <item><description><b>CUSTOM</b>: The configuration is customized (HTTP).</description></item>
+                /// <item><description><b>DISABLE</b>: No proxy is used.</description></item>
+                /// <item><description><b>USE_CONTROL_PROXY</b> (default): The same configuration as the control plane is used.</description></item>
+                /// <item><description><b>CUSTOM</b>: A custom configuration is used (HTTP protocol).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DataProxySetting { get; set; }
 
                 /// <summary>
-                /// <para>The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.</para>
+                /// <para>The number of CPU cores used by a single backup job. A value of 0 indicates no limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string MaxCpuCore { get; set; }
 
                 /// <summary>
-                /// <para>The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.</para>
+                /// <para>The maximum memory that the client can use. Unit: bytes. Only versions 2.13.0 and later are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? MaxMemory { get; set; }
 
                 /// <summary>
-                /// <para>The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.</para>
+                /// <para>The number of concurrent workers for a single backup job. A value of 0 indicates no limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string MaxWorker { get; set; }
 
                 /// <summary>
-                /// <para>The custom host IP address of the proxy server on the data plane.</para>
+                /// <para>The IP address of the custom data plane proxy server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.11.100</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ProxyHost { get; set; }
 
                 /// <summary>
-                /// <para>The custom password of the proxy server on the data plane.</para>
+                /// <para>The password of the custom data plane proxy server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ProxyPassword { get; set; }
 
                 /// <summary>
-                /// <para>The custom host port of the proxy server on the data plane.</para>
+                /// <para>The port of the custom data plane proxy server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3128</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public int? ProxyPort { get; set; }
 
                 /// <summary>
-                /// <para>The custom username of the proxy server on the data plane.</para>
+                /// <para>The username of the custom data plane proxy server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -297,10 +297,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ProxyUser { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether data on the data plane is transmitted over HTTPS. Valid values:</para>
+                /// <para>Indicates whether HTTPS is used to transmit data plane data.</para>
                 /// <list type="bullet">
-                /// <item><description>true: Data is transmitted over HTTPS.</description></item>
-                /// <item><description>false: Data is transmitted over HTTP.</description></item>
+                /// <item><description>true: HTTPS is used for transmission.</description></item>
+                /// <item><description>false: HTTP is used for transmission.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -315,18 +315,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The status of the backup client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>REGISTERED</b>: The backup client is registered.</description></item>
-            /// <item><description><b>ACTIVATED</b>: The backup client is activated.</description></item>
-            /// <item><description><b>DEACTIVATED</b>: The backup client fails to be activated.</description></item>
-            /// <item><description><b>INSTALLING</b>: The backup client is being installed.</description></item>
-            /// <item><description><b>INSTALL_FAILED</b>: The backup client fails to be installed.</description></item>
-            /// <item><description><b>NOT_INSTALLED</b>: The backup client is not installed.</description></item>
-            /// <item><description><b>UPGRADING</b>: The backup client is being upgraded.</description></item>
-            /// <item><description><b>UPGRADE_FAILED</b>: The backup client fails to be upgraded.</description></item>
-            /// <item><description><b>UNINSTALLING</b>: The backup client is being uninstalled.</description></item>
-            /// <item><description><b>UNINSTALL_FAILED</b>: The backup client fails to be uninstalled.</description></item>
-            /// <item><description><b>STOPPED</b>: The backup client is out of service.</description></item>
-            /// <item><description><b>UNKNOWN</b>: The backup client is disconnected.</description></item>
+            /// <item><description><b>REGISTERED</b>: The client is registered.</description></item>
+            /// <item><description><b>ACTIVATED</b>: The client is activated.</description></item>
+            /// <item><description><b>DEACTIVATED</b>: The client activation has expired.</description></item>
+            /// <item><description><b>INSTALLING</b>: The client is being installed.</description></item>
+            /// <item><description><b>INSTALL_FAILED</b>: The client installation failed.</description></item>
+            /// <item><description><b>NOT_INSTALLED</b>: The client is not installed.</description></item>
+            /// <item><description><b>UPGRADING</b>: The client is being upgraded.</description></item>
+            /// <item><description><b>UPGRADE_FAILED</b>: The client upgrade failed.</description></item>
+            /// <item><description><b>UNINSTALLING</b>: The client is being uninstalled.</description></item>
+            /// <item><description><b>UNINSTALL_FAILED</b>: The client uninstallation failed.</description></item>
+            /// <item><description><b>STOPPED</b>: The client service is stopped.</description></item>
+            /// <item><description><b>UNKNOWN</b>: The client is disconnected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -344,9 +344,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<DescribeBackupClientsResponseBodyClientsTags> Tags { get; set; }
             public class DescribeBackupClientsResponseBodyClientsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the backup vault. Valid values of N: 1 to 20</para>
+                /// <para>The tag key of the backup vault. Valid values of N: 1 to 20.</para>
                 /// <list type="bullet">
-                /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+                /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. </description></item>
                 /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
                 /// <item><description>The tag key cannot be an empty string.</description></item>
                 /// </list>
@@ -359,9 +359,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the backup vault. Valid values of N: 1 to 20</para>
+                /// <para>The tag value of the backup vault. Valid values of N: 1 to 20.</para>
                 /// <list type="bullet">
-                /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+                /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>. </description></item>
                 /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
                 /// <item><description>The tag value cannot be an empty string.</description></item>
                 /// </list>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>The time when the backup client was updated. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the backup client was last updated. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554347313</para>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>This parameter is valid only if the <b>ClientType</b> parameter is set to <b>ECS_CLIENT</b>. This parameter indicates the zone of the backup client.</para>
+            /// <para>This parameter is valid only when <b>ClientType</b> is set to <b>ECS_CLIENT</b>. The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-f</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The response code. 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The returned message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -448,10 +448,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned HBR clients that meet the specified conditions.</para>
+        /// <para>The total number of backup clients that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

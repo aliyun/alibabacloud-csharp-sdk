@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteVaultReplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the source region. If you leave this parameter empty, the region where you call the API is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ReplicationSourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the source backup vault.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ReplicationSourceVaultId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination backup vault.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

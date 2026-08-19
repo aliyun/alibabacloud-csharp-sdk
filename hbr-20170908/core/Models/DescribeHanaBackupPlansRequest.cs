@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEMDB</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be a number that starts from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

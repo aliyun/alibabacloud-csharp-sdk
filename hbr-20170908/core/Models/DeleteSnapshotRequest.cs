@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Backup client. If you delete a backup snapshot for Elastic Compute Service (ECS) instances, you must specify one of the ClientId and <b>InstanceId</b> parameters.</para>
+        /// <para>The client ID. When deleting a backup snapshot of ECS File Backup Essential Edition, you must specify either this parameter or <b>InstanceId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-*********************</para>
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>Deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Deprected.</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance. If you delete a backup snapshot for ECS instances, you must specify one of the InstanceId and <b>ClientId</b> parameters.</para>
+        /// <para>The ECS instance ID. When deleting a backup snapshot of ECS File Backup Essential Edition, you must specify either this parameter or <b>ClientId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-*********************</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup snapshot.</para>
+        /// <para>The backup snapshot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,11 +54,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup source. Valid values:</para>
+        /// <para>The backup source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: backup snapshots for ECS files</description></item>
-        /// <item><description><b>OSS</b>: backup snapshots for Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: backup snapshots for Apsara File Storage NAS (NAS) file systems</description></item>
+        /// <item><description><b>ECS_FILE</b>: backup snapshot of ECS File Backup Essential Edition.</description></item>
+        /// <item><description><b>OSS</b>: backup snapshot of Alibaba Cloud OSS.</description></item>
+        /// <item><description><b>NAS</b>: backup snapshot of Alibaba Cloud NAS.</description></item>
+        /// <item><description><b>UDM_ECS</b>: backup snapshot of an entire ECS instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The token that you want to delete.</para>
+        /// <para>The token for the deletion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02WJDOE7</para>
@@ -79,7 +80,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>The backup vault ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>

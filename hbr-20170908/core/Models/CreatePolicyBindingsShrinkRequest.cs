@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreatePolicyBindingsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data sources that you want to bind to the backup policy.</para>
+        /// <para>The list of policy bindings.</para>
         /// </summary>
         [NameInMap("PolicyBindingList")]
         [Validation(Required=false)]
         public string PolicyBindingListShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>po-000************8ep</para>

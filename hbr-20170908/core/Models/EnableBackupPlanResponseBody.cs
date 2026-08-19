@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class EnableBackupPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// <para>The response message. If the call is successful, \<c>successful\\</c> is returned. If the call fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

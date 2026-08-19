@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteAirEcsInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Elastic Compute Service (ECS) instance.</para>
+        /// <para>The instance ID of the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf6ir9y******hvisj</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string EcsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The data sources for which the client needs to be uninstalled.</para>
+        /// <para>The list of data sources for which the client needs to be uninstalled.</para>
         /// </summary>
         [NameInMap("UninstallClientSourceTypes")]
         [Validation(Required=false)]

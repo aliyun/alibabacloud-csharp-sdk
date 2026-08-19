@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class SearchHistoricalSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of historical backup snapshots that are displayed on the current page.</para>
+        /// <para>The number of historical snapshots displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The returned message. If the request is successful, \<c>successful\\</c> is returned. If the request fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token that is required to obtain the next page of backup snapshots.</para>
+        /// <para>The token that is required to obtain the next page of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -246,10 +246,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -260,7 +262,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned backup snapshots that meet the specified conditions.</para>
+        /// <para>The total number of snapshots that meet the specified criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

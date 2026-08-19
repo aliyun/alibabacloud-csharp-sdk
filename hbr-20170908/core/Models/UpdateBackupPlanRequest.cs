@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class UpdateBackupPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the incremental file synchronization. This parameter is required for data synchronization only.</para>
+        /// <para>The configuration for the incremental file synchronization list. (This parameter is required only for file synchronization.)</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</para>
@@ -20,12 +20,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ChangeListPath { get; set; }
 
         /// <summary>
-        /// <para>The details about ECS instance backup. The value is a JSON string.</para>
+        /// <para>The details of the ECS instance backup. This is a JSON string.</para>
         /// <list type="bullet">
-        /// <item><description>snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are enhanced SSDs (ESSDs).</description></item>
-        /// <item><description>appConsistent: specifies whether to enable application consistency. If you set this parameter to true, you must also specify the preScriptPath and postScriptPath parameters.</description></item>
-        /// <item><description>preScriptPath: the path to the pre-freeze scripts.</description></item>
-        /// <item><description>postScriptPath: the path to the post-thaw scripts.</description></item>
+        /// <item><description><para>snapshotGroup: Specifies whether to use a snapshot-consistent group. This feature is available only when all disks of the instance are Enhanced Solid-State Drives (ESSDs).</para>
+        /// </description></item>
+        /// <item><description><para>appConsistent: Specifies whether to enable application consistency. You must also configure the preScriptPath and postScriptPath parameters.</para>
+        /// </description></item>
+        /// <item><description><para>preScriptPath: The path to the pre-freeze script.</para>
+        /// </description></item>
+        /// <item><description><para>postScriptPath: The path to the post-thaw script.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public Dictionary<string, object> Detail { get; set; }
 
         /// <summary>
+        /// <para>The edition. Valid values are BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. This parameter specifies the paths to the files to exclude from the backup. All files in the specified paths are not backed up. The value can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/var&quot;, &quot;/proc&quot;]</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Exclude { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. This parameter specifies the paths to the files to back up. All files in the specified paths are backed up. The value can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</para>
@@ -64,10 +70,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Include { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</para>
+        /// <para>Specifies whether to permanently retain the latest backup version.</para>
         /// <list type="bullet">
-        /// <item><description>0: The feature is disabled.</description></item>
-        /// <item><description>1: The feature is enabled.</description></item>
+        /// <item><description><para>0: No</para>
+        /// </description></item>
+        /// <item><description><para>1: Yes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,11 +86,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? KeepLatestSnapshots { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. This parameter specifies whether to use Volume Shadow Copy Service (VSS) to define the backup path.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only for Windows ECS instances.</description></item>
-        /// <item><description>If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to <c>[&quot;UseVSS&quot;:true]</c>.</description></item>
-        /// <item><description>If you use VSS, you cannot back up data from multiple directories.</description></item>
+        /// <item><description><para>This feature is available only for Windows ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para>If data changes occur in the backup source, set this parameter to <c>[&quot;UseVSS&quot;:true]</c> to ensure data consistency.</para>
+        /// </description></item>
+        /// <item><description><para>If you enable VSS, you cannot back up multiple file directories at the same time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,14 +104,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The details about the Tablestore instance.</para>
+        /// <para>The details of the Tablestore instance.</para>
         /// </summary>
         [NameInMap("OtsDetail")]
         [Validation(Required=false)]
         public OtsDetail OtsDetail { get; set; }
 
         /// <summary>
-        /// <para>The source paths.</para>
+        /// <para>The backup paths.</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
@@ -128,7 +139,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>SourceType</b> parameter is set to <b>OSS</b>. This parameter specifies the prefix of objects that you want to back up. After a prefix is specified, only objects whose names start with the prefix are backed up.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>OSS</b>. This parameter specifies the prefix of objects to back up. After you specify a prefix, only objects that match the prefix are backed up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-prefix</para>
@@ -138,7 +149,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the backup data. Minimum value: 1. Unit: days.</para>
+        /// <para>The number of days to retain backups. The minimum value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -148,14 +159,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? Retention { get; set; }
 
         /// <summary>
-        /// <para>The rule of the backup plan.</para>
+        /// <para>The rules of the backup plan.</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public List<UpdateBackupPlanRequestRule> Rule { get; set; }
         public class UpdateBackupPlanRequestRule : TeaModel {
             /// <summary>
-            /// <para>The backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
+            /// <para>The backup type. Set the value to <b>COMPLETE</b>. This indicates a full backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETE</para>
@@ -165,7 +176,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the remote backup vault resides.</para>
+            /// <para>The ID of the destination region for the geo-redundant backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -175,7 +186,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DestinationRegionId { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the backup data. Unit: days.</para>
+            /// <para>The number of days to retain the geo-redundant backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -195,7 +206,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable remote replication.</para>
+            /// <para>Specifies whether to enable geo-redundant replication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -205,7 +216,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? DoCopy { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the backup data. Minimum value: 1. Unit: days.</para>
+            /// <para>The number of days to retain backups. The minimum value is 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -215,7 +226,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? Retention { get; set; }
 
             /// <summary>
-            /// <para>The name of the backup policy.</para>
+            /// <para>The name of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule-test-name</para>
@@ -225,8 +236,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The backup policy. Format: I|{startTime}|{interval}. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, I|1631685600|P1D specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
-            /// <para>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds. interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</para>
+            /// <para>The backup policy. Use the I|{startTime}|{interval} format. This specifies that a backup job runs at a recurring interval. The {startTime} is when the backup starts. The {interval} is the time between jobs. HBR does not run overdue backup jobs. If the previous backup job is not finished, the next one does not start. For example, I|1631685600|P1D means the backup runs once a day, starting at 14:00:00 on September 15, 2021.</para>
+            /// <para>startTime: The start time of the backup. This is a UNIX timestamp in seconds. interval: The time interval. Use the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I|1631685600|P1D</para>
@@ -238,10 +249,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The backup policy. Format: <c>I|{startTime}|{interval}</c>. The system runs the first backup job at a point in time that is specified in the <c>{startTime}</c> parameter and the subsequent backup jobs at an interval that is specified in the <c>{interval}</c> parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <c>I|1631685600|P1D</c> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
+        /// <para>The backup policy. Use the <c>I|{startTime}|{interval}</c> format. This specifies that a backup job runs at a recurring interval. The <c>{startTime}</c> is when the backup starts. The <c>{interval}</c> is the time between jobs. HBR does not run overdue backup jobs. If the previous backup job is not finished, the next one does not start. For example, <c>I|1631685600|P1D</c> means the backup runs once a day, starting at 14:00:00 on September 15, 2021.</para>
         /// <list type="bullet">
-        /// <item><description><b>startTime</b>: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</description></item>
-        /// <item><description><b>interval</b>: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</description></item>
+        /// <item><description><para><b>startTime</b>: The start time of the backup. This is a UNIX timestamp in seconds.</para>
+        /// </description></item>
+        /// <item><description><para><b>interval</b>: The time interval. Use the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -254,11 +267,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
-        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
-        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+        /// <item><description><para><b>ECS_FILE</b>: Backs up ECS files.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSS</b>: Backs up Alibaba Cloud OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>NAS</b>: Backs up Alibaba Cloud NAS.</para>
+        /// </description></item>
+        /// <item><description><para><b>OTS</b>: Backs up Alibaba Cloud Tablestore.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_ECS</b>: Backs up an entire ECS instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -269,11 +287,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies the throttling rules. To ensure business continuity, you can limit the bandwidth that is used for file backup during peak hours. Format: <c>{start}|{end}|{bandwidth}</c>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. This parameter specifies traffic shaping for backups. Traffic shaping helps you control backup traffic during peak business hours to avoid affecting your services. The format is <c>{start}|{end}|{bandwidth}</c>. You can specify multiple traffic shaping rules. Separate them with vertical bars (|). The time ranges of the rules cannot overlap.</para>
         /// <list type="bullet">
-        /// <item><description><b>start</b>: the start hour</description></item>
-        /// <item><description><b>end</b>: the end hour.</description></item>
-        /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
+        /// <item><description><para><b>start</b>: The start hour.</para>
+        /// </description></item>
+        /// <item><description><para><b>end</b>: The end hour.</para>
+        /// </description></item>
+        /// <item><description><para><b>bandwidth</b>: The maximum speed. Unit: KB/s.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -284,10 +305,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SpeedLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update the source path if the backup source is empty. Valid values:</para>
+        /// <para>Specifies whether to update the backup paths if the Path parameter is empty.</para>
         /// <list type="bullet">
-        /// <item><description>true: The system replaces the original source path with the specified source path.</description></item>
-        /// <item><description>false: The system does not update the original source path. The system backs up data based on the source path that you specified when you created the backup plan.</description></item>
+        /// <item><description><para>true: Updates the backup paths based on the paths specified in this call.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not update the backup paths. The backup paths that were configured when the backup plan was created are used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -298,7 +321,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? UpdatePaths { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>The ID of the backup repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-0006******q</para>

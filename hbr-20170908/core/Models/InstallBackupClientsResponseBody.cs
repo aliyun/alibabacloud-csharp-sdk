@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class InstallBackupClientsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The return code. A value of 200 indicates that the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,19 +20,23 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status of the ECS instance.</para>
+        /// <para>The status of the ECS instances.</para>
         /// </summary>
         [NameInMap("InstanceStatuses")]
         [Validation(Required=false)]
         public List<InstallBackupClientsResponseBodyInstanceStatuses> InstanceStatuses { get; set; }
         public class InstallBackupClientsResponseBodyInstanceStatuses : TeaModel {
             /// <summary>
-            /// <para>The error code that is returned. Valid values:</para>
+            /// <para>The error code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the value is empty, the call is successful.</description></item>
-            /// <item><description><b>InstanceNotExists</b>: The ECS instance does not exist.</description></item>
-            /// <item><description><b>InstanceNotRunning</b>: The ECS instance is not running.</description></item>
-            /// <item><description><b>CloudAssistNotRunningOnInstance</b>: Cloud Assistant is unavailable.</description></item>
+            /// <item><description><para>An empty value indicates that the operation is successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>InstanceNotExists</b>: The ECS instance does not exist.</para>
+            /// </description></item>
+            /// <item><description><para><b>InstanceNotRunning</b>: The ECS instance is not in the Running state.</para>
+            /// </description></item>
+            /// <item><description><para><b>CloudAssistNotRunningOnInstance</b>: Cloud Assistant is not available.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,10 +57,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</para>
+            /// <para>Indicates whether a backup client can be installed on the ECS instance.</para>
             /// <list type="bullet">
-            /// <item><description>true: An HBR client can be installed on the ECS instance.</description></item>
-            /// <item><description>false: An HBR client cannot be installed on the ECS instance.</description></item>
+            /// <item><description><para>true: The backup client can be installed.</para>
+            /// </description></item>
+            /// <item><description><para>false: The backup client cannot be installed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The message that is returned. If the request is successful, successful is returned. If the request fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -79,7 +85,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -89,10 +95,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</para>
+        /// <para>The ID of the asynchronous task. Call the DescribeTask operation to query the task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-*********************</para>

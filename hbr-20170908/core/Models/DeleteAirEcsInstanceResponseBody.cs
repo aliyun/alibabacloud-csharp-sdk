@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteAirEcsInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
+        /// <para>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</para>
+        /// <para>The asynchronous task ID. You can call DescribeTask to obtain the task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-*********************</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteContainerClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to forcibly delete active container backup clients.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

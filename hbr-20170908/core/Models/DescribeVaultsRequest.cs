@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeVaultsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -29,12 +29,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query replication target vaults.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Replication")]
         [Validation(Required=false)]
         public bool? Replication { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-*********************</para>
@@ -46,10 +52,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The status of the backup vault. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UNKNOWN</b>: The backup vault is in an unknown state.</description></item>
-        /// <item><description><b>INITIALIZING</b>: The backup vault is being initialized.</description></item>
-        /// <item><description><b>CREATED</b>: The backup vault is created.</description></item>
-        /// <item><description><b>ERROR</b>: An error occurs on the backup vault.</description></item>
+        /// <item><description><b>UNKNOWN</b>: unknown</description></item>
+        /// <item><description><b>INITIALIZING</b>: initializing</description></item>
+        /// <item><description><b>CREATED</b>: created</description></item>
+        /// <item><description><b>ERROR</b>: error</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Tag information. Supports up to 20 tags.</para>
+        /// <para>The tag information. A maximum of 20 tags are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6a745bceffb042959b3b5206d6f12ad1</para>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The Value of the tag.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Backup vault ID.</para>
+        /// <para>The backup vault ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>
@@ -111,12 +117,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string VaultName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the account to which the backup vault belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>144******732</para>
+        /// </summary>
         [NameInMap("VaultOwnerId")]
         [Validation(Required=false)]
         public long? VaultOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID to which the backup vault belongs.</para>
+        /// <para>The region ID of the backup vault.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -126,11 +138,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>Backup repository type. The values are as follows: </para>
-        /// <list type="bullet">
-        /// <item><description><b>STANDARD</b>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </description></item>
-        /// <item><description><b>OTS_BACKUP</b>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</description></item>
-        /// </list>
+        /// <para>The type of the backup vault. Valid values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>

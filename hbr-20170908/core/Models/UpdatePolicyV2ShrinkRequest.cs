@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class UpdatePolicyV2ShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the backup policy.</para>
+        /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Data is backed up at 10:00:00 every day and replicated to the China (Shanghai) region for geo-redundancy.</para>
+        /// <para>Back up once every day at 10:00 AM, with cross-region backup to Shanghai.</para>
         /// </summary>
         [NameInMap("PolicyDescription")]
         [Validation(Required=false)]
         public string PolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>po-000************viy</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the backup policy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Daily Local Backup + Remote Backup</para>
+        /// <para>Daily backup + cross-region backup</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The rules in the backup policy.</para>
+        /// <para>The list of policy rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

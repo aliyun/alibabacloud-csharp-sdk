@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cc-000*************hg9</para>
+        /// <para>cc-000**************hg9</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cca*******************************87a</para>
+        /// <para>cca***************************87a</para>
         /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]

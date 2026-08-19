@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteBackupClientResourceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).</para>
+        /// <para>A list of client IDs. The list can contain up to 100 client IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;c-0007kyu045r0********&quot;, &quot;c-000b6818umvo********&quot;]</para>
+        /// <para>[&quot;c-*********************&quot;]</para>
         /// </summary>
         [NameInMap("ClientIds")]
         [Validation(Required=false)]

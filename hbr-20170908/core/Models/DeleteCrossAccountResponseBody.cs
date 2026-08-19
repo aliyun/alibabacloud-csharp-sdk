@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteCrossAccountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code. A value of 200 indicates that the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The message returned. If the request is successful, \<c>successful\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>921E9989-735C-5254-A29F-6B8A5DDC1ED1</para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request fails.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

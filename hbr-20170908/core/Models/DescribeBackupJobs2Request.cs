@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupJobs2Request : TeaModel {
         /// <summary>
+        /// <para>The edition. Valid values: BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -18,26 +20,41 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The keys that you want to match in the filter.</para>
+        /// <para>The key-value pairs of the filter.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeBackupJobs2RequestFilters> Filters { get; set; }
         public class DescribeBackupJobs2RequestFilters : TeaModel {
             /// <summary>
-            /// <para>The keys in the filter. Valid values:</para>
+            /// <para>The key of the filter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RegionId</b>: the ID of a region</description></item>
-            /// <item><description><b>PlanId</b>: the ID of a backup plan</description></item>
-            /// <item><description><b>JobId</b>: the ID of a backup job</description></item>
-            /// <item><description><b>VaultId</b>: the ID of a backup vault</description></item>
-            /// <item><description><b>InstanceId</b>: the ID of an ECS instance</description></item>
-            /// <item><description><b>Bucket</b>: the name of an OSS bucket</description></item>
-            /// <item><description><b>FileSystemId</b>: the ID of a file system</description></item>
-            /// <item><description><b>Status</b>: the status of a backup job</description></item>
-            /// <item><description><b>CreatedTime</b>: the start time of a backup job</description></item>
-            /// <item><description><b>CompleteTime</b>: the end time of a backup job</description></item>
-            /// <item><description><b>instanceName</b>: the name of a Tablestore instance</description></item>
+            /// <item><description><para><b>RegionId</b>: The region ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>PlanId</b>: The backup plan ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>JobId</b>: The backup job ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>VaultId</b>: The repository ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>InstanceId</b>: The ECS instance ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>Bucket</b>: The name of the OSS bucket.</para>
+            /// </description></item>
+            /// <item><description><para><b>FileSystemId</b>: The file system ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>Status</b>: The job status.</para>
+            /// </description></item>
+            /// <item><description><para><b>CreatedTime</b>: The start time of the job.</para>
+            /// </description></item>
+            /// <item><description><para><b>CompleteTime</b>: The end time of the job.</para>
+            /// </description></item>
+            /// <item><description><para><b>InstanceName</b>: The name of the Tablestore instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>BackupType</b>: The backup job. This parameter is required only when SourceType is set to COMMON_NAS.</para>
+            /// </description></item>
+            /// <item><description><para><b>ParentId</b>: The ID of the parent job. This parameter is required when you query sub-tasks. For example, if you set SourceType to UDM_ECS_DISK, you must specify the ID of the UDM_ECS job.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,19 +65,27 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The matching method. Default value: IN. This parameter specifies the operator that you want to use to match a key and a value in the filter. Valid values:</para>
+            /// <para>The matching operator. The default value is IN. This parameter specifies the operator to use for matching the Key and Value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>EQUAL</b>: equal to</description></item>
-            /// <item><description><b>NOT_EQUAL</b>: not equal to</description></item>
-            /// <item><description><b>GREATER_THAN</b>: greater than</description></item>
-            /// <item><description><b>GREATER_THAN_OR_EQUAL</b>: greater than or equal to</description></item>
-            /// <item><description><b>LESS_THAN</b>: less than</description></item>
-            /// <item><description><b>LESS_THAN_OR_EQUAL</b>: less than or equal to</description></item>
-            /// <item><description><b>BETWEEN</b>: specifies a JSON array as a range. The results must fall within the range in the <c>[Minimum value,maximum value]</c> format.</description></item>
-            /// <item><description><b>IN</b>: specifies an array as a collection. The results must fall within the collection.</description></item>
+            /// <item><description><para><b>EQUAL</b>: Equal to.</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_EQUAL</b>: Not equal to.</para>
+            /// </description></item>
+            /// <item><description><para><b>GREATER_THAN</b>: Greater than.</para>
+            /// </description></item>
+            /// <item><description><para><b>GREATER_THAN_OR_EQUAL</b>: Greater than or equal to.</para>
+            /// </description></item>
+            /// <item><description><para><b>LESS_THAN</b>: Less than.</para>
+            /// </description></item>
+            /// <item><description><para><b>LESS_THAN_OR_EQUAL</b>: Less than or equal to.</para>
+            /// </description></item>
+            /// <item><description><para><b>BETWEEN</b>: The value is a JSON array in the format of <c>[start,end]</c>.</para>
+            /// </description></item>
+            /// <item><description><para><b>IN</b>: The value is an array.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you specify <b>CompleteTime</b> as a key to query backup jobs, you cannot use the IN operator to perform a match.</para>
+            /// <para>The IN operator is not supported when you use <b>CompleteTime</b> as the key for a query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -71,7 +96,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The values that you want to match in the filter.</para>
+            /// <para>The value of the filter.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -80,7 +105,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +115,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 99. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,10 +125,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the results. Valid values:</para>
+        /// <para>The sort direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASCEND</b>: sorts the results in ascending order</description></item>
-        /// <item><description><b>DESCEND</b> (default value): sorts the results in descending order</description></item>
+        /// <item><description><para><b>ASCEND</b>: Ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>DESCEND</b> (Default): Descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,12 +143,24 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
-        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
-        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
-        /// <item><description><b>UDM_ECS_DISK</b>: ECS disks</description></item>
+        /// <item><description><para><b>ECS_FILE</b>: Backs up Elastic Compute Service (ECS) files.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSS</b>: Backs up Alibaba Cloud Object Storage Service (OSS) buckets.</para>
+        /// </description></item>
+        /// <item><description><para><b>NAS</b>: Backs up Alibaba Cloud Apsara File Storage NAS (NAS) file systems.</para>
+        /// </description></item>
+        /// <item><description><para><b>OTS</b>: Backs up Alibaba Cloud Tablestore instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_ECS</b>: Backs up entire ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_ECS_DISK</b>: A sub-task for disk backup in an ECS instance backup job.</para>
+        /// </description></item>
+        /// <item><description><para><b>COMMON_NAS</b>: A generic NAS data source. This includes archive NAS and on-premises NAS data sources. Use the Values parameter of Filters to specify the data source type.</para>
+        /// </description></item>
+        /// <item><description><para><b>File</b>: Backs up on-premises files.</para>
+        /// </description></item>
+        /// <item><description><para><b>SYNC</b>: Data synchronization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

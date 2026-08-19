@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class GetBasicStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The data source type. The valid value is:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECS_FILE</b>: ECS File Backup.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

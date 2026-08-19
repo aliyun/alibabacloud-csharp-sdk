@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, the corresponding error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -372,11 +372,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -386,7 +382,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned backup plans that meet the specified conditions.</para>
+        /// <para>The total number of backup plans that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

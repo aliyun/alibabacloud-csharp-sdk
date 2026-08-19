@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The list of backup snapshots.</para>
+        /// <para>The list of snapshot IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;s-000e3vhhu62xsm6v92r0\&quot;]</para>
@@ -63,9 +63,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UDM_ECS</b>: ECS instance backup</description></item>
-        /// <item><description><b>UDM_ECS_DISK</b>: disk backup subtask of ECS instance backup</description></item>
-        /// <item><description><b>UDM_DISK</b>: disk backup</description></item>
+        /// <item><description><para><b>UDM_ECS</b>: ECS instance backup</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_ECS_DISK</b>: a disk backup subtask of an ECS instance backup</para>
+        /// </description></item>
+        /// <item><description><para><b>UDM_DISK</b>: disk backup</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The beginning of the time range to query. This value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the ECS instance resides.</para>
+        /// <para>The region ID of the ECS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

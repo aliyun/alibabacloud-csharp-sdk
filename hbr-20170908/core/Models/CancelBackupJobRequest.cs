@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CancelBackupJobRequest : TeaModel {
         /// <summary>
+        /// <para>The edition type. Valid values are BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>The ID of the backup repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*****************************</para>

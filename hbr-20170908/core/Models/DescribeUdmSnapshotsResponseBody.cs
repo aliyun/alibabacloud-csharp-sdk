@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeUdmSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The message that is returned. If the request was successful, <b>successful</b> is returned. If the request failed, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51CDEECB-7001-51CC-94AC-2A0F2A4B71D2</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about snapshots.</para>
+        /// <para>The details of the snapshots.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeUdmSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeUdmSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// <para>The size of the backup snapshot. Unit: bytes.</para>
+            /// <para>The actual size of the snapshot. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -57,11 +57,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ActualBytes { get; set; }
 
             /// <summary>
-            /// <para>The special retention type, which is valid only for special backups. Valid values:</para>
+            /// <para>The special retention type. This parameter is valid only for special retention backups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>WEEKLY</b>: weekly backups</description></item>
-            /// <item><description><b>MONTHLY</b>: monthly backups</description></item>
-            /// <item><description><b>YEARLY</b>: yearly backups</description></item>
+            /// <item><description><para><b>WEEKLY</b>: weekly special retention backup</para>
+            /// </description></item>
+            /// <item><description><para><b>MONTHLY</b>: monthly special retention backup</para>
+            /// </description></item>
+            /// <item><description><para><b>YEARLY</b>: yearly special retention backup</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,20 +74,38 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string AdvancedRetentionType { get; set; }
 
+            /// <summary>
+            /// <para>The error message that is returned if the archiving fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InternalError</para>
+            /// </summary>
             [NameInMap("ArchiveErrorMessage")]
             [Validation(Required=false)]
             public string ArchiveErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>The archiving status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ARCHIVED</para>
+            /// </summary>
             [NameInMap("ArchiveStatus")]
             [Validation(Required=false)]
             public string ArchiveStatus { get; set; }
 
+            /// <summary>
+            /// <para>The time when the archiving was triggered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1763373304</para>
+            /// </summary>
             [NameInMap("ArchiveTriggerTime")]
             [Validation(Required=false)]
             public long? ArchiveTriggerTime { get; set; }
 
             /// <summary>
-            /// <para>The backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
+            /// <para>The backup type. The value <b>COMPLETE</b> indicates a full backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETE</para>
@@ -94,7 +115,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>The total amount of data. Unit: bytes.</para>
+            /// <para>The total size of the data source. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -104,7 +125,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? BytesTotal { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the disk backup point can be deleted. This parameter is valid only if the value of SourceType is UDM_ECS_DISK.</para>
+            /// <para>Indicates whether the disk backup point can be deleted. This parameter is valid only if <b>SourceType</b> is set to <b>UDM_ECS_DISK</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -117,7 +138,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? CanBeDeleted { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the backup snapshot was completed. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1646895666</para>
@@ -137,7 +158,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the backup snapshot was created. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642496679</para>
@@ -147,7 +168,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The snapshot details.</para>
+            /// <para>The details of the snapshot.</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
@@ -184,7 +205,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The name of the disk.</para>
+                /// <para>The name of the disk device.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dev/xvdb</para>
@@ -194,7 +215,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DiskDevName { get; set; }
 
                 /// <summary>
-                /// <para>The mapping between the device and the recovery point ID.</para>
+                /// <para>The mapping between devices and backup point IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -207,7 +228,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public Dictionary<string, object> DiskHbrSnapshotIdWithDeviceMap { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the disks that are backed up at the recovery point.</para>
+                /// <para>The list of disk IDs that are included in the backup point.</para>
                 /// </summary>
                 [NameInMap("DiskIdList")]
                 [Validation(Required=false)]
@@ -234,7 +255,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string HostName { get; set; }
 
                 /// <summary>
-                /// <para>The mapping between the instance ID and the disk ID.</para>
+                /// <para>The mapping between instance IDs and disk IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -257,7 +278,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The specifications of the source instance.</para>
+                /// <para>The instance type of the source instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.c6.xlarge</para>
@@ -267,7 +288,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the backup is created by the instant clone feature.</para>
+                /// <para>Indicates whether the backup is created for the instant clone feature.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -277,7 +298,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public bool? InstantAccess { get; set; }
 
                 /// <summary>
-                /// <para>The list of snapshot IDs, corresponding to DiskIdList.</para>
+                /// <para>The list of native snapshot IDs. The native snapshot IDs in this list have a one-to-one correspondence with the disk IDs in the DiskIdList.</para>
                 /// </summary>
                 [NameInMap("NativeSnapshotIdList")]
                 [Validation(Required=false)]
@@ -314,7 +335,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string OsNameEn { get; set; }
 
                 /// <summary>
-                /// <para>The type of the operating system. Valid values: linux and windows.</para>
+                /// <para>The type of the operating system. Valid values: linux, windows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>windows</para>
@@ -334,7 +355,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The system platform.</para>
+                /// <para>The operating system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CentOS</para>
@@ -376,7 +397,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud disk or local disk.</para>
+            /// <para>The ID of the disk. The disk can be a cloud disk or a local disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-2ze86h5fga5rfwxxa8ef</para>
@@ -386,7 +407,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the backup.</para>
+            /// <para>The time when the backup expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640334062</para>
@@ -416,7 +437,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup snapshot.</para>
+            /// <para>The ID of the native snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-00047mg17p26x*****b</para>
@@ -426,7 +447,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string NativeSnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The snapshot information.</para>
+            /// <para>The information about the native snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -462,7 +483,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string NativeSnapshotInfo { get; set; }
 
             /// <summary>
-            /// <para>The hash value of the parent backup snapshot.</para>
+            /// <para>The hash value of the parent snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f2fe..</para>
@@ -472,7 +493,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ParentSnapshotHash { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the backup snapshot.</para>
+            /// <para>The prefix of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example/</para>
@@ -482,7 +503,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Prefix { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the backup snapshot. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The timestamp of the snapshot. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642496679</para>
@@ -492,7 +513,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? RealSnapshotTime { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the backup snapshot. Unit: days.</para>
+            /// <para>The retention period of the snapshot in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -502,7 +523,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? Retention { get; set; }
 
             /// <summary>
-            /// <para>The hash value of the backup snapshot.</para>
+            /// <para>The hash value of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f2fe...</para>
@@ -524,9 +545,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UDM_ECS</b>: ECS instance backup</description></item>
-            /// <item><description><b>UDM_ECS_DISK</b>: disk backup subtask of ECS instance backup</description></item>
-            /// <item><description><b>UDM_DISK</b>: disk backup</description></item>
+            /// <item><description><para><b>UDM_ECS</b>: ECS instance backup</para>
+            /// </description></item>
+            /// <item><description><para><b>UDM_ECS_DISK</b>: a disk backup subtask of an ECS instance backup</para>
+            /// </description></item>
+            /// <item><description><para><b>UDM_DISK</b>: disk backup</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -537,7 +561,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the snapshot was started. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554347313</para>
@@ -547,11 +571,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup job. Valid values:</para>
+            /// <para>The status of the backup snapshot. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>COMPLETE</b>: The backup job is completed.</description></item>
-            /// <item><description><b>PARTIAL_COMPLETE</b>: The backup job is partially completed.</description></item>
-            /// <item><description><b>FAILED</b>: The backup job has failed.</description></item>
+            /// <item><description><para><b>COMPLETE</b>: The backup is successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>PARTIAL_COMPLETE</b>: The backup is partially successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: The backup failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -562,7 +589,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the backup snapshot was updated. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1642496679</para>
@@ -574,10 +601,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -588,7 +617,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of backup snapshots.</para>
+        /// <para>The total number of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class SearchHistoricalSnapshotsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The edition. Valid values are BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BASIC</para>
         /// </summary>
@@ -18,7 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows that you want the current query to return. To query only the number of matched rows without the need to return specific data, you can set the Limit parameter to <c>0</c>. Then, the operation returns only the number of matched rows.</para>
+        /// <para>The maximum number of results to return.
+        /// To retrieve only the number of rows without any data, set Limit to <c>0</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token that is required to obtain the next page of backup snapshots.</para>
+        /// <para>The token that is required to obtain the next page of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -38,10 +41,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ordering mode. Valid values:</para>
+        /// <para>The sort order. The default value is ASC.</para>
         /// <list type="bullet">
-        /// <item><description>ASC (default): ascending order</description></item>
-        /// <item><description>DESC: descending order</description></item>
+        /// <item><description><para>ASC: ascending</para>
+        /// </description></item>
+        /// <item><description><para>DESC: descending</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The query conditions. Example:</para>
+        /// <para>The query conditions. For example:</para>
         /// <pre><c>[
         ///   {
         ///     &quot;field&quot;: &quot;VaultId&quot;,
@@ -77,27 +82,42 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// ]
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description><para>The following fields are supported:</para>
+        /// <item><description><para>Supported fields:</para>
         /// <list type="bullet">
-        /// <item><description>VaultId: specifies the ID of the backup vault. This field is required.</description></item>
-        /// <item><description>InstanceId: specifies the ID of the Elastic Compute Service (ECS) instance. If the SourceType parameter is set to ECS_FILE, this field is required.</description></item>
-        /// <item><description>Bucket: specifies the name of the Object Storage Service (OSS) bucket. If the SourceType parameter is set to OSS, this field is required.</description></item>
-        /// <item><description>FileSystemId: specifies the ID of the File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</description></item>
-        /// <item><description>CreateTime: specifies the time when the NAS file system was created. If the SourceType parameter is set to NAS, this field is required.</description></item>
-        /// <item><description>CompleteTime: specifies the time when the backup snapshot was completed.</description></item>
-        /// <item><description>PlanId: the ID of a backup plan.</description></item>
+        /// <item><description><para>VaultId: This parameter is required. The ID of the backup vault.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceId: This parameter is required only when SourceType is set to ECS_FILE. The ID of the ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para>Bucket: This parameter is required only when SourceType is set to OSS. The name of the OSS bucket.</para>
+        /// </description></item>
+        /// <item><description><para>FileSystemId: This parameter is required only when SourceType is set to NAS. The ID of the NAS file system.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime: This parameter is required only when SourceType is set to NAS. The time when the NAS file system was created.</para>
+        /// </description></item>
+        /// <item><description><para>CompleteTime: The time when the snapshot was completed.</para>
+        /// </description></item>
+        /// <item><description><para>PlanId: The ID of the backup plan.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>The following operations are supported:</para>
+        /// <item><description><para>Supported operations:</para>
         /// <list type="bullet">
-        /// <item><description>MATCH_TERM: exact match.</description></item>
-        /// <item><description>GREATER_THAN: greater than.</description></item>
-        /// <item><description>GREATER_THAN_OR_EQUAL: greater than or equal to.</description></item>
-        /// <item><description>LESS_THAN: less than.</description></item>
-        /// <item><description>LESS_THAN_OR_EQUAL: less than or equal to.</description></item>
-        /// <item><description>BETWEEN: specifies a JSON array as a range. The results must fall within the range in the <c>[Minimum value,Maximum value]</c> format.</description></item>
-        /// <item><description>IN: specifies an array as a collection. The results must fall within the collection.</description></item>
-        /// <item><description>NOT_IN: specifies an array as a collection. The results cannot fall within the collection.</description></item>
+        /// <item><description><para>MATCH_TERM: exact match.</para>
+        /// </description></item>
+        /// <item><description><para>GREATER_THAN: greater than.</para>
+        /// </description></item>
+        /// <item><description><para>GREATER_THAN_OR_EQUAL: greater than or equal to.</para>
+        /// </description></item>
+        /// <item><description><para>LESS_THAN: less than.</para>
+        /// </description></item>
+        /// <item><description><para>LESS_THAN_OR_EQUAL: less than or equal to.</para>
+        /// </description></item>
+        /// <item><description><para>BETWEEN: a range. The value is a JSON array in the <c>[lower bound,upper bound]</c> format.</para>
+        /// </description></item>
+        /// <item><description><para>IN: in a collection. The value is an array.</para>
+        /// </description></item>
+        /// <item><description><para>NOT_IN: not in a collection. The value is an array.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -110,7 +130,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string QueryShrink { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort data.</para>
+        /// <para>The field to sort by.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreatedTime</para>
@@ -122,9 +142,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: backup snapshots for Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: backup snapshots for Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: backup snapshots for Apsara File Storage NAS file systems</description></item>
+        /// <item><description><para><b>ECS_FILE</b>: a backup snapshot of ECS files.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSS</b>: a backup snapshot of Alibaba Cloud OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>NAS</b>: a backup snapshot of Alibaba Cloud NAS.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

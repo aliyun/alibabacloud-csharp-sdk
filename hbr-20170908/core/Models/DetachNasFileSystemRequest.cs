@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</description></item>
-        /// <item><description>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</description></item>
+        /// <item><description><para>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

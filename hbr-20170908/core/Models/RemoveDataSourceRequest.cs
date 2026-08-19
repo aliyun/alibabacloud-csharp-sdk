@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class RemoveDataSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

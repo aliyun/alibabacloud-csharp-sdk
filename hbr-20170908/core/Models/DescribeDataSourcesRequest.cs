@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeDataSourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The client group ID used to access the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cl-0003jyv******fsku5m</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ds-000******2nqeo</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>The data source name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyLocalNas</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
+        /// <para>The data source type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>COMMON_NAS</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of data sources to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

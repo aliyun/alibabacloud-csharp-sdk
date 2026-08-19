@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeVaultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</para>
+        /// <para>The returned message. The value &quot;successful&quot; is returned for a successful request. An error message is returned for a failed request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Page number for pagination, starting from 1. The default value is 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a minimum value of 1, a maximum value of 99, and a default value of 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -60,10 +60,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
-        /// <list type="bullet">
-        /// <item><description>true: Success - false: Failure</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -73,7 +70,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Returns the total number of backup repositories.</para>
+        /// <para>The total number of backup vaults returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -82,6 +79,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;Vault\&quot;: []}</para>
+        /// </summary>
         [NameInMap("Vaults")]
         [Validation(Required=false)]
         public DescribeVaultsResponseBodyVaults Vaults { get; set; }

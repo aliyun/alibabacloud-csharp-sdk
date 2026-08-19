@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupClientsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of HBR clients.</para>
+        /// <para>The list of backup client IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;c-*********************&quot;]</para>
@@ -20,10 +20,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClientIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the HBR client. Valid values:</para>
+        /// <para>The type of the backup client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_CLIENT</b>: HBR client for Elastic Compute Service (ECS) file backup</description></item>
-        /// <item><description><b>CONTAINER_CLIENT</b>: HBR client for container backup</description></item>
+        /// <item><description><b>ECS_CLIENT</b>: ECS File Backup client.</description></item>
+        /// <item><description><b>CONTAINER_CLIENT</b>: container backup client.</description></item>
+        /// <item><description><b>LOCAL_CLIENT</b>: local NAS backup, CPFS backup, archive, or data synchronization client.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClientType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster for the backup.</para>
+        /// <para>The ID of the backup cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cl-000ge4wa61b4d337xblq</para>
@@ -45,7 +46,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The name of the RAM role created in the source account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hbrcrossrole</para>
@@ -55,10 +56,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountRoleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
+        /// <para>The type of cross-account backup. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</description></item>
-        /// <item><description>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</description></item>
+        /// <item><description>SELF_ACCOUNT: backup within the current account. </description></item>
+        /// <item><description>CROSS_ACCOUNT: cross-account backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The ID of the source account used for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>129374672382xxxx</para>
@@ -78,14 +79,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public long? CrossAccountUserId { get; set; }
 
+        /// <summary>
+        /// <para>The query filters.</para>
+        /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeBackupClientsShrinkRequestFilters> Filters { get; set; }
         public class DescribeBackupClientsShrinkRequestFilters : TeaModel {
+            /// <summary>
+            /// <para>The key of the query filter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InstanceId</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The values to match in the query filter.</para>
+            /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<string> Values { get; set; }
@@ -93,7 +106,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>The IDs of ECS instances.</para>
+        /// <para>The list of ECS instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-*********************&quot;]</para>
@@ -103,7 +116,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +126,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -123,7 +136,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag information to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33738719#</para>
@@ -135,7 +148,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The tag key of the backup vault. Valid values of N: 1 to 20.</para>
             /// <list type="bullet">
-            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. </description></item>
             /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// <item><description>The tag key cannot be an empty string.</description></item>
             /// </list>
@@ -150,7 +163,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>The tag value of the backup vault. Valid values of N: 1 to 20.</para>
             /// <list type="bullet">
-            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>. </description></item>
             /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// <item><description>The tag value cannot be an empty string.</description></item>
             /// </list>

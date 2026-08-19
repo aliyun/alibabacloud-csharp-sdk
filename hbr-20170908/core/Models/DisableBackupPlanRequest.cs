@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DisableBackupPlanRequest : TeaModel {
         /// <summary>
+        /// <para>The edition. Valid values: BASIC and STANDARD. The default value is STANDARD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>
@@ -31,9 +33,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS (NAS) file systems</description></item>
+        /// <item><description><para><b>ECS_FILE</b>: Backs up ECS files.</para>
+        /// </description></item>
+        /// <item><description><para><b>OSS</b>: Backs up Alibaba Cloud OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>NAS</b>: Backs up Alibaba Cloud NAS.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>The ID of the backup repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-000************gs3</para>

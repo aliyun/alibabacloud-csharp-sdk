@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreateBackupPlanShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Backup type. Value: <b>COMPLETE</b>, indicating a full backup.</para>
+        /// <para>The backup type. Set the value to <b>COMPLETE</b>, which indicates full backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>OSS</b>. It represents the OSS bucket name.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>OSS</b>. The name of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hbr-backup-oss</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>Configuration for the incremental file synchronization list. (Required only for synchronization)</para>
+        /// <para>The configuration of the incremental file synchronization list. This parameter is required only for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>NAS</b>. It represents the creation time of the file system, in UNIX timestamp, in seconds.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>NAS</b>. The time when the file system was created. The value is a UNIX timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1607436917</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The role name created in the RAM of the original account for cross-account backup.</para>
+        /// <para>The name of the RAM role created in the source account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BackupRole</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountRoleName { get; set; }
 
         /// <summary>
-        /// <para>Cross-account backup type. Supported values:</para>
+        /// <para>The cross-account backup type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SELF_ACCOUNT: Backup within the same account</description></item>
-        /// <item><description>CROSS_ACCOUNT: Cross-account backup</description></item>
+        /// <item><description>SELF_ACCOUNT: backup within the same account.</description></item>
+        /// <item><description>CROSS_ACCOUNT: cross-account backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountType { get; set; }
 
         /// <summary>
-        /// <para>The original account ID used for cross-account backup.</para>
+        /// <para>The ID of the source account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15897534xxxx4625</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CrossAccountUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source. This parameter is required only for data synchronization.</para>
+        /// <para>The ID of the source data source. This parameter is required only for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-****************</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>Destination data source details. (Required only for synchronization)</para>
+        /// <para>The details of the destination data source. This parameter is required only for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;prefix\&quot;:\&quot;/\&quot;}</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DestDataSourceDetailShrink { get; set; }
 
         /// <summary>
-        /// <para>Destination data source ID. (Required only for synchronization)</para>
+        /// <para>The ID of the destination data source. This parameter is required only for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-*********************</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DestDataSourceId { get; set; }
 
         /// <summary>
-        /// <para>Destination data source type. (Required only for synchronization)</para>
+        /// <para>The type of the destination data source. This parameter is required only for data synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -134,12 +134,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DestSourceType { get; set; }
 
         /// <summary>
-        /// <para>Details of the whole machine backup, in JSON string format.</para>
+        /// <para>The details of the full-copy backup. The value is a JSON string.</para>
         /// <list type="bullet">
-        /// <item><description>snapshotGroup: Whether to use a consistent snapshot group (only valid if all instance disks are ESSD).</description></item>
-        /// <item><description>appConsistent: Whether to use application consistency (requires the use of preScriptPath and postScriptPath parameters).</description></item>
-        /// <item><description>preScriptPath: Path to the freeze script.</description></item>
-        /// <item><description>postScriptPath: Path to the thaw script.</description></item>
+        /// <item><description>snapshotGroup: specifies whether to use a consistent snapshot group. This parameter is valid only when all cloud disks of the instance are ESSDs.</description></item>
+        /// <item><description>appConsistent: specifies whether to use application consistency. This parameter must be used together with the preScriptPath and postScriptPath parameters.</description></item>
+        /// <item><description>preScriptPath: the path of the pre-freeze script.</description></item>
+        /// <item><description>postScriptPath: the path of the post-thaw script.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DetailShrink { get; set; }
 
         /// <summary>
-        /// <para>Is the plan disabled by default</para>
+        /// <para>Specifies whether the plan is disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -159,12 +159,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public bool? Disabled { get; set; }
 
+        /// <summary>
+        /// <para>The edition type. Valid values: BASIC and STANDARD. Default value: STANDARD.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
         [NameInMap("Edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. It specifies the path that should not be backed up, meaning all files under this path will not be included in the backup. The maximum length is 255 characters.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. The path to exclude from the backup. All files in this path are not backed up. The value can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/var&quot;, &quot;/proc&quot;]</para>
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Exclude { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>NAS</b>. It represents the file system ID.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>NAS</b>. The file system ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>005494</para>
@@ -184,7 +190,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>ECS_FILE</b>. It represents the path to be backed up, and all files under this path will be backed up. Supports up to 255 characters.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. The path to include in the backup. All files in this path are backed up. The value can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</para>
@@ -194,7 +200,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Include { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>ECS_FILE</b>. It represents the ECS instance ID.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. The ECS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-m5e*****6q</para>
@@ -204,7 +210,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Table store instance name.</para>
+        /// <para>The name of the Tablestore instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instancename</para>
@@ -214,10 +220,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable retaining at least one backup version.</para>
+        /// <para>Specifies whether to retain at least one backup version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 - Do not retain</description></item>
-        /// <item><description>1 - Retain</description></item>
+        /// <item><description>0: does not retain.</description></item>
+        /// <item><description>1: retains.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -228,11 +234,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? KeepLatestSnapshots { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>ECS_FILE</b>. It indicates whether to use the Windows system VSS to define the backup path.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. Specifies whether to use Windows Volume Shadow Copy Service (VSS) to define the source path.</para>
         /// <list type="bullet">
-        /// <item><description>This feature only supports Windows type ECS instances.</description></item>
-        /// <item><description>If there are data changes in the backup source and you need to ensure consistency between the backup data and the source data, you can configure it as <c>[&quot;UseVSS&quot;:true]</c>.</description></item>
-        /// <item><description>After choosing to use VSS, multiple file directories cannot be backed up simultaneously.</description></item>
+        /// <item><description>This feature is supported only for Windows ECS instances.</description></item>
+        /// <item><description>If the backup source contains data changes and you need to ensure consistency between the backup data and the source data, set this parameter to <c>[&quot;UseVSS&quot;:true]</c>.</description></item>
+        /// <item><description>After VSS is enabled, multiple file folders cannot be backed up simultaneously.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,21 +249,21 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The details about the Tablestore instance.</para>
+        /// <para>The details of the Tablestore instance.</para>
         /// </summary>
         [NameInMap("OtsDetail")]
         [Validation(Required=false)]
         public string OtsDetailShrink { get; set; }
 
         /// <summary>
-        /// <para>Backup paths.</para>
+        /// <para>The source paths.</para>
         /// </summary>
         [NameInMap("Path")]
         [Validation(Required=false)]
         public List<string> Path { get; set; }
 
         /// <summary>
-        /// <para>Name of the backup plan. 1 to 64 characters. The name must be unique for each data source type within a single backup vault.</para>
+        /// <para>The name of the backup plan. The name must be 1 to 64 characters in length. The backup plan name must be unique for each data source type within a single vault.</para>
         /// 
         /// <b>Example:</b>
         /// <para>planname</para>
@@ -267,7 +273,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>OSS</b>. It represents the backup prefix. When specified, only objects matching the prefix are backed up.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>OSS</b>. The backup prefix. If specified, only objects that match the prefix are backed up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-prefix</para>
@@ -277,7 +283,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>Number of days to retain the backup, with a minimum value of 1, in days.</para>
+        /// <para>The retention period of the backup data. Minimum value: 1. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -287,14 +293,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? Retention { get; set; }
 
         /// <summary>
-        /// <para>Backup plan rules.</para>
+        /// <para>The backup plan rules.</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public List<CreateBackupPlanShrinkRequestRule> Rule { get; set; }
         public class CreateBackupPlanShrinkRequestRule : TeaModel {
             /// <summary>
-            /// <para>Backup type.</para>
+            /// <para>The backup type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETE</para>
@@ -304,7 +310,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>ID of the region for offsite replication.</para>
+            /// <para>The ID of the destination region for cross-region replication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -314,7 +320,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DestinationRegionId { get; set; }
 
             /// <summary>
-            /// <para>Number of days to retain offsite backups.</para>
+            /// <para>The retention period of the geo-redundancy backup. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -324,27 +330,27 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? DestinationRetention { get; set; }
 
             /// <summary>
-            /// <para>Whether the rule is enabled.</para>
+            /// <para>Specifies whether the rule is disabled.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable offsite replication.</para>
+            /// <para>Specifies whether to enable cross-region replication.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("DoCopy")]
             [Validation(Required=false)]
             public bool? DoCopy { get; set; }
 
             /// <summary>
-            /// <para>Backup retention period.</para>
+            /// <para>The retention period of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -354,7 +360,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? Retention { get; set; }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule-test-name</para>
@@ -364,11 +370,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>Backup strategy. Optional format: I|{startTime}|{interval}. This means that a backup task is executed every {interval} starting from {startTime}. Backup tasks for past times will not be executed. If the previous backup task has not been completed, the next backup task will not be triggered. For example, I|1631685600|P1D means a backup is performed every day starting from 2021-09-15 14:00:00.</para>
-            /// <list type="bullet">
-            /// <item><description>startTime: The start time of the backup, in UNIX time, in seconds.</description></item>
-            /// <item><description>interval: ISO8601 time interval. For example, PT1H means an interval of one hour. P1D means an interval of one day.</description></item>
-            /// </list>
+            /// <para>The backup policy. Format: I|{startTime}|{interval}. This indicates that a backup job is executed at every {interval} starting from {startTime}. Backup jobs for past time periods are not executed. If the previous backup job is not completed, the next backup job is not triggered. Example: I|1631685600|P1D indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</para>
+            /// <para>startTime: the start time of the backup. The value is a UNIX timestamp. Unit: seconds.
+            /// interval: the ISO 8601 time interval. Example: PT1H indicates an interval of one hour. P1D indicates an interval of one day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I|1602673264|P1D</para>
@@ -380,10 +384,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
-        /// <para>Backup policy. Optional format: <c>I|{startTime}|{interval}</c>. This indicates that a backup task will be executed every <c>{interval}</c> starting from <c>{startTime}</c>. It does not compensate for missed backup tasks due to past time. If the previous backup task has not been completed, the next backup task will not be triggered. For example, <c>I|1631685600|P1D</c> means a backup is performed every day starting from 2021-09-15 14:00:00.</para>
+        /// <para>The backup policy. Format: <c>I|{startTime}|{interval}</c>. This indicates that a backup job is executed at every <c>{interval}</c> starting from <c>{startTime}</c>. Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered. Example: <c>I|1631685600|P1D</c> indicates that a backup is performed once a day starting from 2021-09-15 14:00:00.</para>
         /// <list type="bullet">
-        /// <item><description><b>startTime</b>: Start time of the backup, in UNIX timestamp, in seconds.</description></item>
-        /// <item><description><b>interval</b>: ISO8601 time interval. For example, PT1H indicates an interval of one hour, and P1D indicates an interval of one day.</description></item>
+        /// <item><description><b>startTime</b>: the start time of the backup. The value is a UNIX timestamp. Unit: seconds.</description></item>
+        /// <item><description><b>interval</b>: the ISO 8601 time interval. Example: PT1H indicates an interval of one hour. P1D indicates an interval of one day.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -396,12 +400,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
-        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: File Storage NAS (NAS) file systems</description></item>
-        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
-        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
-        /// <item><description><b>SYNC</b>: data synchronization</description></item>
+        /// <item><description><b>ECS_FILE</b>: backs up ECS files.</description></item>
+        /// <item><description><b>OSS</b>: backs up Alibaba Cloud OSS.</description></item>
+        /// <item><description><b>NAS</b>: backs up Alibaba Cloud NAS.</description></item>
+        /// <item><description><b>OTS</b>: backs up Alibaba Cloud OTS.</description></item>
+        /// <item><description><b>UDM_ECS</b>: backs up an entire ECS instance.</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -413,11 +417,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>SourceType</b> is set to <b>ECS_FILE</b>. It represents the backup traffic control. Format: <c>{start}:{end}:{bandwidth}</c>. Multiple traffic control configurations are separated by |, and the configured times should not overlap.</para>
+        /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. The backup traffic control. Format: <c>{start}:{end}:{bandwidth}</c>. Separate multiple traffic control configurations with vertical bars (|). The time ranges of the configurations cannot overlap.</para>
         /// <list type="bullet">
-        /// <item><description><b>start</b>: Start hour.</description></item>
-        /// <item><description><b>end</b>: End hour.</description></item>
-        /// <item><description><b>bandwidth</b>: Limit rate, in KB/s.</description></item>
+        /// <item><description><b>start</b>: the start hour.</description></item>
+        /// <item><description><b>end</b>: the end hour.</description></item>
+        /// <item><description><b>bandwidth</b>: the rate limit. Unit: KB/s.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -428,7 +432,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SpeedLimit { get; set; }
 
         /// <summary>
-        /// <para>Region where the whole machine backup instance is located.</para>
+        /// <para>The region where the ECS instance for full-copy backup resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -438,7 +442,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string UdmRegionId { get; set; }
 
         /// <summary>
-        /// <para>Backup vault ID.</para>
+        /// <para>The vault ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-0006******q</para>
