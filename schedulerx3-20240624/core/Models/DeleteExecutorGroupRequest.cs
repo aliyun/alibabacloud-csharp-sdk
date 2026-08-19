@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("DeleteJobs")]
+        [Validation(Required=false)]
+        public bool? DeleteJobs { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -2579,6 +2579,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -2628,6 +2632,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
