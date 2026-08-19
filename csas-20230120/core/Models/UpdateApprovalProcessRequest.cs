@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? ApprovalType { get; set; }
 
         /// <summary>
-        /// <para>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
+        /// <para>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The ID of the approval flow.</para>
+        /// <para>The ID of the approval process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>The name of the approval flow. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
+        /// <para>The name of the approval process. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>

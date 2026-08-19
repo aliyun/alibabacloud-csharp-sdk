@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of software applications.</para>
+        /// <para>The list of software installed on the endpoint device.</para>
         /// </summary>
         [NameInMap("Software")]
         [Validation(Required=false)]
         public List<ListSoftwareForUserDeviceResponseBodySoftware> Software { get; set; }
         public class ListSoftwareForUserDeviceResponseBodySoftware : TeaModel {
             /// <summary>
-            /// <para>The publisher of the software.</para>
+            /// <para>The software publisher.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba (China) Network Technology Co.,Ltd.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Inc { get; set; }
 
             /// <summary>
-            /// <para>The time when the software was installed.</para>
+            /// <para>The software installation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-18 02:43:02</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string InstallTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the software.</para>
+            /// <para>The software name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>钉钉</para>
+            /// <para>DingTalk</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The versions of the software.</para>
+            /// <para>The collection of software versions.</para>
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The total number of software applications.</para>
+        /// <para>The total number of software installed on the endpoint device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

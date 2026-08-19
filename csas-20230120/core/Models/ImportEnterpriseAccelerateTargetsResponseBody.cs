@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ImportEnterpriseAccelerateTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the import task.</para>
+        /// <para>The ID of the import task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1648723859058501</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>305508BD-8A31-5E15-86CE-52D57967C45E</para>

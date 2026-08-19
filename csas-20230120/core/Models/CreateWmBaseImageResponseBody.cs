@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmBaseImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Transparent image information.</para>
+        /// <para>The transparent image information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateWmBaseImageResponseBodyData Data { get; set; }
         public class CreateWmBaseImageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>ID of the transparent image. Images with the same ID have identical content.</para>
+            /// <para>The transparent image ID. The same ID indicates that the image content is identical.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fafb432cdede9b20640e12105845386e-496883833-8242409229217337*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>Temporary URL for downloading the image.</para>
+            /// <para>The temporary URL for downloading the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/test-*****.png">https://example.com/test-*****.png</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Expiration time of the temporary image URL, in seconds as a UNIX timestamp.</para>
+            /// <para>The expiration time of the temporary image URL, in UNIX timestamp format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17185*****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>ID of the current request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>58D6B23E-E5DA-5418-8F61-51A3B5A30049</para>

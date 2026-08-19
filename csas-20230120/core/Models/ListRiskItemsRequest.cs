@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListRiskItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number in a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the risk analysis policy. Fuzzy matching is supported.</para>
+        /// <para>The name of the risk analysis policy. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Remote logon risk analysis policy</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The risk event ID. If specified, the system performs an exact query for the specified risk event.</para>
+        /// <para>The risk event ID. If specified, the exact risk event is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69ef648034cf53d7bac7a9c9c912****</para>
@@ -89,8 +89,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <item><description><c>account_share</c>: account sharing.</description></item>
         /// <item><description><c>account_stolen</c>: account theft.</description></item>
         /// <item><description><c>device_share</c>: device sharing.</description></item>
-        /// <item><description><c>remote_logon</c>: remote logon.</description></item>
+        /// <item><description><c>remote_logon</c>: remote logon from an unusual location.</description></item>
         /// <item><description><c>sensitive_data_leakage</c>: sensitive data exfiltration.</description></item>
+        /// <item><description><c>compressed_archive_exfil</c>: compressed data exfiltration from the internal network.</description></item>
         /// <item><description><c>lateral_scanning</c>: lateral scanning.</description></item>
         /// <item><description><c>ai_skill_malware</c>: malicious Skill.</description></item>
         /// <item><description><c>ai_config_check</c>: AI configuration check.</description></item>
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RiskScene { get; set; }
 
         /// <summary>
-        /// <para>The disposition status of the risk event. This parameter cannot be used together with <c>StatusList</c>.</para>
+        /// <para>The disposition status of the risk event. This parameter cannot be set together with <c>StatusList</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unprocess</para>
@@ -115,14 +116,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of disposition statuses of risk events, in Flat serialization format. This parameter cannot be used together with Status.</para>
+        /// <para>The list of disposition statuses of risk events, in Flat serialization format. This parameter cannot be set together with Status.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The username associated with the risk event. Fuzzy matching is supported. Maximum length: 128 characters.</para>
+        /// <para>The username associated with the risk event. Fuzzy match is supported. Maximum length: 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhang***</para>

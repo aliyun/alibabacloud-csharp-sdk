@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateUninstallApplicationsStatusRequest : TeaModel {
         /// <summary>
-        /// <para>List of uninstall request IDs.</para>
+        /// <para>The list of uninstall application IDs.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>Status of the uninstall request. Valid values:</para>
+        /// <para>The status of the uninstall application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Approved</b>: Approved.</para>
-        /// </description></item>
-        /// <item><description><para><b>Rejected</b>: Rejected.</para>
-        /// </description></item>
+        /// <item><description><b>Approved</b>: Approved.</description></item>
+        /// <item><description><b>Rejected</b>: Rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

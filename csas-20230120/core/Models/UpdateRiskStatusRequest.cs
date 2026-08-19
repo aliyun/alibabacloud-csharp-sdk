@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RiskConfirm { get; set; }
 
         /// <summary>
-        /// <para>The description of the risk event handling. The length must be 1 to 128 characters.</para>
+        /// <para>The description of the risk event processing decision. The value must be 1 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>After verification, this risk event is a real risk</para>
@@ -55,6 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <item><description>device_share: Device sharing.</description></item>
         /// <item><description>remote_logon: Remote logon.</description></item>
         /// <item><description>sensitive_data_leakage: Sensitive data leakage.</description></item>
+        /// <item><description><c>compressed_archive_exfil</c>: Internal network data compression and exfiltration.</description></item>
         /// <item><description>lateral_scanning: Lateral scanning.</description></item>
         /// <item><description>ai_skill_malware: Malicious skill.</description></item>
         /// <item><description>ai_config_check: AI configuration check.</description></item>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RiskScene { get; set; }
 
         /// <summary>
-        /// <para>The handling status of the risk event. Valid values:</para>
+        /// <para>The processing status of the risk event. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Unprocess</c>: Unprocessed.</description></item>
         /// <item><description><c>Processing</c>: Being processed.</description></item>

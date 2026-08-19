@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EapId { get; set; }
 
         /// <summary>
-        /// <para>A list of enterprise acceleration addresses.</para>
+        /// <para>The list of enterprise acceleration addresses.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Target")]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The private access tag ID.</para>
+        /// <para>The ID of the internal-facing access tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tag-d3f64e8bdd4a****</para>

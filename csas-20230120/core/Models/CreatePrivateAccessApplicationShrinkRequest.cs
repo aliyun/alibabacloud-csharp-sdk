@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessApplicationShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The application address groups. Required when ConfigMode is set to Precise. Not allowed when ConfigMode is an empty string.</para>
+        /// </summary>
         [NameInMap("AddressGroups")]
         [Validation(Required=false)]
         public List<AddressGroup> AddressGroups { get; set; }
 
         /// <summary>
-        /// <para>The addresses of the internal-facing access application. You can specify up to 1,000 addresses.</para>
+        /// <para>The collection of internal-facing access application addresses. You can specify up to 1000 addresses.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications without a client. Default value: <b>Disabled</b>. Valid values:</para>
+        /// <para>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications in a clientless manner. Default value: <b>Disabled</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: enabled.</description></item>
         /// <item><description><b>Disabled</b>: disabled.</description></item>
@@ -34,6 +37,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string BrowserAccessStatus { get; set; }
 
+        /// <summary>
+        /// <para>The configuration mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Empty string: default mode.</description></item>
+        /// <item><description>Precise: precise mode.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ConfigMode")]
         [Validation(Required=false)]
         public string ConfigMode { get; set; }
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一条内网访问应用</para>
+        /// <para>This is an internal-facing access application</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port ranges of the internal-facing access application. You can specify up to 65,535 port ranges. Port ranges cannot be duplicate or overlapping.</para>
+        /// <para>The collection of port ranges for the internal-facing access application. You can specify up to 65535 port ranges. Port ranges cannot overlap or be duplicated.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
@@ -122,7 +132,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <list type="bullet">
         /// <item><description><b>All</b>: all protocols.</description></item>
         /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b>.</description></item>
+        /// <item><description><b>UDP</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</para>
+        /// <para>The collection of internal-facing access tag IDs. You can associate up to 6 custom-type internal-facing access tags with each application.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]

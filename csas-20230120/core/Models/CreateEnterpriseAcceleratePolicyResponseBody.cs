@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EapId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2CABFEBB-0CE7-575E-833A-266F75D46713</para>

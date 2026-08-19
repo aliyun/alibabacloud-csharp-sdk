@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<long?> ItemIds { get; set; }
 
         /// <summary>
-        /// <para>The list ID. This is the unique business identifier used for policy references and add, delete, and modify operations.</para>
+        /// <para>The list ID. This is the unique business identifier used for policy references and CRUD operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ladl-61aae0c0ba715e3b</para>

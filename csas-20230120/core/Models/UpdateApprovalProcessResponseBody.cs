@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateApprovalProcessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The approval flow.</para>
+        /// <para>The approval process.</para>
         /// </summary>
         [NameInMap("Process")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? ApprovalType { get; set; }
 
             /// <summary>
-            /// <para>The time when the approval flow was created.</para>
+            /// <para>The time when the approval process was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-11 15:31:39</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the approval flow.</para>
+            /// <para>The description of the approval process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a test</para>
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The ID of the approval flow.</para>
+            /// <para>The ID of the approval process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-process-2677fcf063f5****</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The name of the approval flow.</para>
+            /// <para>The name of the approval process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The approver username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Wang</para>
+                /// <para>Mr. Wang</para>
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]

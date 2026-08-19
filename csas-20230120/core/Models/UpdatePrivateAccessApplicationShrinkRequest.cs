@@ -9,22 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdatePrivateAccessApplicationShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The application address groups. This parameter can be specified when ConfigMode is set to Precise. This parameter cannot be specified when ConfigMode is an empty string.</para>
+        /// </summary>
         [NameInMap("AddressGroups")]
         [Validation(Required=false)]
         public List<AddressGroup> AddressGroups { get; set; }
 
         /// <summary>
-        /// <para>The addresses of the internal-facing access application. You can specify up to 1000 addresses.</para>
+        /// <para>The addresses of the private access application. You can specify up to 1000 addresses.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The ID of the internal-facing access application. You can obtain the value from the following operations:</para>
+        /// <para>The ID of the private access application. You can obtain the value from:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: lists internal-facing access applications.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an internal-facing access application.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,15 +38,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>The configuration mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Empty string: default mode.</description></item>
+        /// <item><description>Precise: precise mode.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ConfigMode")]
         [Validation(Required=false)]
         public string ConfigMode { get; set; }
 
         /// <summary>
-        /// <para>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
+        /// <para>The description of the private access application. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一条内网访问应用</para>
+        /// <para>This is a private access application</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -93,10 +103,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string L7ProxyDomainPrivate { get; set; }
 
         /// <summary>
-        /// <para>The modification type of the internal-facing access application. Valid values:</para>
+        /// <para>The modification type of the private access application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Cover</b> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters.</description></item>
-        /// <item><description><b>Append</b>: adds the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters to the original addresses, port ranges, and tag IDs.</description></item>
+        /// <item><description><b>Append</b>: appends the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters to the original addresses, port ranges, and tag IDs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,12 +116,15 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string ModifyType { get; set; }
 
+        /// <summary>
+        /// <para>The application name.</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port ranges of the internal-facing access application. You can specify up to 65535 port ranges. Multiple port ranges cannot be duplicate or overlap.</para>
+        /// <para>The port ranges of the private access application. You can specify up to 65535 port ranges. Multiple port ranges cannot overlap.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
@@ -140,7 +153,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The protocol of the internal-facing access application. Valid values:</para>
+        /// <para>The protocol of the private access application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>All</b>: all protocols.</description></item>
         /// <item><description><b>TCP</b></description></item>
@@ -155,7 +168,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The status of the internal-facing access application. Valid values:</para>
+        /// <para>The status of the private access application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: enabled.</description></item>
         /// <item><description><b>Disabled</b>: disabled.</description></item>
@@ -169,7 +182,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</para>
+        /// <para>The IDs of private access tags. A private access application can be associated with up to 6 custom private access tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -178,6 +191,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }
 
+        /// <summary>
+        /// <para>The configuration for unauthorized application access requests.</para>
+        /// </summary>
         [NameInMap("UnauthorizedAccessConfig")]
         [Validation(Required=false)]
         public string UnauthorizedAccessConfigShrink { get; set; }

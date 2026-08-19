@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateEnterpriseAcceleratePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Acceleration pattern:</para>
+        /// <para>The acceleration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>whitelist</b>: Whitelist acceleration</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: Global acceleration</para>
-        /// </description></item>
-        /// <item><description><para><b>build-in-list</b>: Built-in application acceleration</para>
-        /// </description></item>
+        /// <item><description><b>whiltelist</b>: whitelist-based acceleration.</description></item>
+        /// <item><description><b>global</b>: global acceleration.</description></item>
+        /// <item><description><b>build-in-list</b>: built-in application acceleration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,27 +25,27 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AccelerationType { get; set; }
 
         /// <summary>
-        /// <para>Policy description. Length: 1 to 512 characters.</para>
+        /// <para>The description of the enterprise management policy. The description must be 1 to 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于全局网络访问的加速策略</para>
+        /// <para>Acceleration policy for global network access</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Policy Name.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>全局加速策略</para>
+        /// <para>GlobalAccelerationPolicy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Priority.</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99</para>
@@ -58,12 +55,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>Whether to display this policy in the client:</para>
+        /// <para>Specifies whether to display the policy in the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Do not display</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Display</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: not displayed.</description></item>
+        /// <item><description><b>1</b>: displayed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? ShowInClient { get; set; }
 
         /// <summary>
-        /// <para>The IP address or domain name of the acceleration instance.</para>
+        /// <para>The address (IP address or domain name) of the acceleration instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string UpstreamHost { get; set; }
 
         /// <summary>
-        /// <para>Port for the accelerated instance. The port must be between 1000 and 60000.</para>
+        /// <para>The port of the acceleration instance. Valid values: 1000 to 60000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? UpstreamPort { get; set; }
 
         /// <summary>
-        /// <para>Accelerated instance.</para>
+        /// <para>The acceleration instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,11 +102,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string UpstreamType { get; set; }
 
         /// <summary>
-        /// <para>User group for acceleration.</para>
+        /// <para>The acceleration user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试用户组</para>
+        /// <para>TestUserGroup</para>
         /// </summary>
         [NameInMap("UserAttributeGroup")]
         [Validation(Required=false)]

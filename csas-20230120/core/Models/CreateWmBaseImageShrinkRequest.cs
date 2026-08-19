@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmBaseImageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Height of the watermark image, in pixels. Valid values: 100 to 5000.</para>
+        /// <para>The height of the watermark image, in pixels. Valid values: 100 to 5000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>Image watermark control parameters.</para>
+        /// <para>The image watermark control parameters.</para>
         /// </summary>
         [NameInMap("ImageControl")]
         [Validation(Required=false)]
         public string ImageControlShrink { get; set; }
 
         /// <summary>
-        /// <para>Opacity of the watermark image. Valid values: 1 to 255. Higher values mean lower transparency.</para>
+        /// <para>The opacity of the watermark image. Valid values: 1 to 255. A larger value indicates lower transparency.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Opacity { get; set; }
 
         /// <summary>
-        /// <para>Scaling factor of the watermark image.</para>
+        /// <para>The scaling ratio of the watermark image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Scale { get; set; }
 
         /// <summary>
-        /// <para>Width of the watermark image, in pixels. Valid values: 100 to 5000.</para>
+        /// <para>The width of the watermark image, in pixels. Valid values: 100 to 5000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Width { get; set; }
 
         /// <summary>
-        /// <para>Base64-encoded watermark information. Length: 1 to 300 characters. Do not set this parameter if you set WmInfoUint.</para>
+        /// <para>The watermark information in Base64-encoded string format. The length is 1 to 300 characters. If this parameter is set, the WmInfoUint parameter cannot be set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aGVsbG8gc2F*****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string WmInfoBytesB64 { get; set; }
 
         /// <summary>
-        /// <para>Bit width of the watermark information. Default value: 32. This value must be the same during embedding and extraction. For example, if you use a 40-bit SDK to embed the watermark, set this value to 40 when extracting it.</para>
+        /// <para>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the SDK used for embedding is 40-bit, set this parameter to 40 during extraction as well.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? WmInfoSize { get; set; }
 
         /// <summary>
-        /// <para>Decimal-form watermark information. Do not set this parameter if you set WmInfoBytesB64.</para>
-        /// <para>The valid range depends on the WmInfoSize value:</para>
+        /// <para>The watermark information in decimal number format. If this parameter is set, WmInfoBytesB64 cannot be set.</para>
+        /// <para>The valid range depends on the WmInfoSize parameter:</para>
         /// <list type="bullet">
         /// <item><description><para>If WmInfoSize is <b>32</b>, the valid range is 1 to 4294967295.</para>
         /// </description></item>
@@ -100,20 +100,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string WmInfoUint { get; set; }
 
         /// <summary>
-        /// <para>Watermark type. Valid values:</para>
+        /// <para>The watermark type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PureWebappInvisible</b>: Web watermark.</para>
-        /// </description></item>
-        /// <item><description><para><b>PureAppInvisible</b>: App watermark.</para>
-        /// </description></item>
-        /// <item><description><para><b>PureScreenInvisible</b>: Screen watermark.</para>
-        /// </description></item>
-        /// <item><description><para><b>AigcWebappInvisible</b>: AIGC web watermark.</para>
-        /// </description></item>
-        /// <item><description><para><b>AigcAppInvisible</b>: AIGC app watermark.</para>
-        /// </description></item>
-        /// <item><description><para><b>AigcScreenInvisible</b>: AIGC screen watermark.</para>
-        /// </description></item>
+        /// <item><description><b>PureWebappInvisible</b>: web watermark.</description></item>
+        /// <item><description><b>PureAppInvisible</b>: App watermark.</description></item>
+        /// <item><description><b>PureScreenInvisible</b>: screen watermark.</description></item>
+        /// <item><description><b>AigcWebappInvisible</b>: AIGC web watermark.</description></item>
+        /// <item><description><b>AigcAppInvisible</b>: AIGC App watermark.</description></item>
+        /// <item><description><b>AigcScreenInvisible</b>: AIGC screen watermark.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -125,10 +119,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string WmType { get; set; }
 
         /// <summary>
-        /// <para>Comments.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>备注</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]

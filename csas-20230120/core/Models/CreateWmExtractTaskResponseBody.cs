@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmExtractTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the watermark extraction task.</para>
+        /// <para>The watermark extraction task information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateWmExtractTaskResponseBodyData Data { get; set; }
         public class CreateWmExtractTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID. You can use task IDs to query task results.</para>
+            /// <para>The task ID, which is used to query the task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wmt-9648c22d2eb2cb57bb855dcae7898464********</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AiConclusion { get; set; }
 
             /// <summary>
-            /// <para>The risk judgment provided by AI. An empty string is returned if no AI analysis result exists. Valid values:</para>
+            /// <para>The risk judgment provided by AI. An empty string is returned if no AI analysis results exist. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>Risk</c>: determined as risky.</description></item>
             /// <item><description><c>Ignore</c>: determined as not risky.</description></item>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string RiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The manually confirmed risk conclusion. An empty string is returned if the event has not been confirmed. Valid values:</para>
+            /// <para>The manually confirmed risk conclusion. An empty string is returned if not confirmed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>Risk</c>: confirmed as risky.</description></item>
             /// <item><description><c>Ignore</c>: confirmed as not risky.</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the risk event disposition.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Upon investigation, the logon was not authorized by the user</para>
+            /// <para>After verification, the logon was not authorized by the user</para>
             /// </summary>
             [NameInMap("RiskConfirmDesc")]
             [Validation(Required=false)]
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <item><description><c>account_share</c>: account sharing.</description></item>
             /// <item><description><c>account_stolen</c>: account theft.</description></item>
             /// <item><description><c>device_share</c>: device sharing.</description></item>
-            /// <item><description><c>remote_logon</c>: remote logon.</description></item>
+            /// <item><description><c>remote_logon</c>: remote logon from an unusual location.</description></item>
             /// <item><description><c>sensitive_data_leakage</c>: sensitive data exfiltration.</description></item>
             /// <item><description><c>lateral_scanning</c>: lateral scanning.</description></item>
             /// <item><description><c>ai_skill_malware</c>: malicious Skill.</description></item>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The recommended remediation action for the risk event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Verify the account user and freeze the account or reset credentials based on the investigation results</para>
+            /// <para>Verify the account user and freeze the account or reset credentials based on the verification result</para>
             /// </summary>
             [NameInMap("Solution")]
             [Validation(Required=false)]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The total number of risk events that match the query conditions.</para>
+        /// <para>The total number of risk events that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

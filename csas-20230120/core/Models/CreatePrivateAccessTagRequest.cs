@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessTagRequest : TeaModel {
         /// <summary>
-        /// <para>Private access tag description. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), hyphens (-), and spaces.</para>
+        /// <para>The description of the internal-facing access tag. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一条内网访问标签</para>
+        /// <para>This is an internal-facing access tag</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Private access tag name. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the internal-facing access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateApprovalProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
+        /// <para>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个审批流程</para>
+        /// <para>This is an approval flow</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceRegistrationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file outbound transfer approval template.</para>
+            /// <para>The ID of the file outbound approval template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The process name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
+        /// <para>The flow name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
