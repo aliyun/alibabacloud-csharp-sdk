@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>

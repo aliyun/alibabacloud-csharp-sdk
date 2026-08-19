@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class MassPushV2ShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>AppKey value.</para>
+        /// <para>The AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// <para>An idempotency token to prevent duplicate pushes caused by API retries. If you call this API with the same IdempotentToken within 15 minutes, only one push is sent. Subsequent calls return the result of the first successful push.</para>
+        /// <para>An idempotent parameter used to prevent duplicate pushes caused by API call retries on the client side. If the same IdempotentToken is used for calls within 15 minutes, only one push is performed, and subsequent calls return the result of the first successful push.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The token must be a standard 36-character UUID in 8-4-4-4-12 format. Valid characters are hexadecimal digits 0–9 and a–f. Case does not matter.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter prevents duplicates only from retries. It does not prevent duplicates from concurrent calls.</para>
-        /// </description></item>
+        /// <item><description>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</description></item>
+        /// <item><description>This parameter only prevents duplicate pushes caused by retries. It cannot prevent duplicate pushes caused by concurrent calls.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string IdempotentToken { get; set; }
 
         /// <summary>
-        /// <para>Batch push tasks.</para>
+        /// <para>The batch push tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PushTasks")]

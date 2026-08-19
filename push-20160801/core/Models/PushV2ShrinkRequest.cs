@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class PushV2ShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>AppKey value.</para>
+        /// <para>The AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// <para>An idempotency token to prevent duplicate pushes caused by client-side retries. If you call this API with the same IdempotentToken within 15 minutes, only one push is sent. Subsequent calls return the result of the first successful push.</para>
+        /// <para>An idempotence parameter that prevents duplicate push notifications caused by retries from the API caller. If you use the same IdempotentToken within 15 minutes, only one push notification is sent, and subsequent calls return the result of the first successful push.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Format the token as a standard 36-character UUID (8-4-4-4-12). Valid characters are hexadecimal digits 0–9 and a–f. Case-insensitive.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter prevents duplicates only from retries. It does not prevent duplicates from concurrent calls.</para>
-        /// </description></item>
+        /// <item><description>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</description></item>
+        /// <item><description>This parameter only prevents duplicate push notifications caused by retries. It cannot prevent duplicate push notifications caused by concurrent calls.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string IdempotentToken { get; set; }
 
         /// <summary>
-        /// <para>Push task definition.</para>
+        /// <para>The push task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PushTask")]

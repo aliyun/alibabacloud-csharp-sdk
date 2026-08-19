@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class MassPushRequest : TeaModel {
         /// <summary>
-        /// <para>The AppKey of the application.</para>
+        /// <para>AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// <para>An idempotency parameter that prevents duplicate pushes caused by API client retries. If you make a call with the same IdempotentToken within 15 minutes, only one push is performed, and subsequent calls return the result of the first successful push.</para>
+        /// <para>An idempotency parameter used to prevent duplicate pushes caused by API caller retries. When calls are made with the same IdempotentToken within 15 minutes, only one push is performed, and subsequent calls return the result of the first successful push.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit from 0-9 or a-f, case-insensitive.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter only prevents duplicate pushes caused by retries. It cannot prevent duplicate pushes caused by concurrent calls.</para>
-        /// </description></item>
+        /// <item><description>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</description></item>
+        /// <item><description>This parameter is only used to prevent duplicate pushes caused by retries and cannot prevent duplicate pushes caused by concurrent calls.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -47,8 +45,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public List<MassPushRequestPushTask> PushTask { get; set; }
         public class MassPushRequestPushTask : TeaModel {
             /// <summary>
-            /// <para>Specifies the activity to open when the notification is tapped.</para>
-            /// <para>This is required only when PushTask.N.AndroidOpenType is set to &quot;Activity&quot;. For example: <c>com.alibaba.cloudpushdemo.bizactivity</c>.</para>
+            /// <para>Specify the Activity to open from the notification.</para>
+            /// <para>Only applicable when PushTask.N.AndroidOpenType=&quot;Activity&quot;, e.g., <c>com.alibaba.cloudpushdemo.bizactivity</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.alibaba.cloudpushdemo.bizactivity</para>
@@ -58,9 +56,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidActivity { get; set; }
 
             /// <summary>
-            /// <para>Sets the value to add to the badge number. The value is added to the original badge number. The value range is [1, 99].</para>
+            /// <para>Set the badge increment value. The value is added to the existing badge count. Value range: [1-99].</para>
             /// <remarks>
-            /// <para>This is effective only for pushes through Huawei or Honor vendor channels. If both AndroidBadgeAddNum and AndroidBadgeSetNum are present, AndroidBadgeSetNum takes precedence.</para>
+            /// <para>Only valid for Huawei/Honor vendor channel pushes. When both AndroidBadgeAddNum and AndroidBadgeSetNum are present, AndroidBadgeSetNum takes precedence.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -71,9 +69,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidBadgeAddNum { get; set; }
 
             /// <summary>
-            /// <para>The full class name of the entry Activity of the application for badge settings.</para>
+            /// <para>Full class name of the app entry Activity for badge settings.</para>
             /// <remarks>
-            /// <para>This is effective only for pushes through Huawei or Honor vendor channels.</para>
+            /// <para>Only valid for Huawei/Honor vendor channel pushes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -84,9 +82,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidBadgeClass { get; set; }
 
             /// <summary>
-            /// <para>Sets a fixed number for the badge. The value range is [0, 99].</para>
+            /// <para>Set the badge to a fixed number. Value range: [0-99].</para>
             /// <remarks>
-            /// <para>For vendor channel pushes, this is effective only for Huawei and Honor channels. For pushes through Alibaba Cloud\&quot;s proprietary channel, this is effective only on Huawei, Honor, and vivo models.</para>
+            /// <para>For vendor channel pushes, this only takes effect on Huawei and Honor channels. For Alibaba Cloud proprietary channel pushes, this only takes effect on Huawei, Honor, and vivo devices.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,23 +95,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidBadgeSetNum { get; set; }
 
             /// <summary>
-            /// <para>The body in long text mode. Length limit: 1,000 bytes (one Chinese character is counted as 3 bytes). The actual limit depends on the specific vendor channel.</para>
-            /// <para>Currently supported on:</para>
+            /// <para>Body in long text mode. Length limit: 1,000 bytes (1 Chinese character counts as 3 bytes). Subject to specific vendor channel restrictions when sending.</para>
+            /// <para>Currently supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Huawei: EMUI 10 and later</para>
-            /// </description></item>
-            /// <item><description><para>Honor: Magic UI 4.0 and later</para>
-            /// </description></item>
-            /// <item><description><para>Xiaomi: MIUI 10 and later</para>
-            /// </description></item>
-            /// <item><description><para>OPPO: ColorOS 5.0 and later</para>
-            /// </description></item>
-            /// <item><description><para>Meizu: Flyme</para>
-            /// </description></item>
-            /// <item><description><para>Alibaba Cloud\&quot;s proprietary channel: Android SDK 3.6.0 and later</para>
-            /// </description></item>
+            /// <item><description>Huawei: EMUI 10 and later</description></item>
+            /// <item><description>Honor: Magic UI 4.0 and later</description></item>
+            /// <item><description>Xiaomi: MIUI 10 and later</description></item>
+            /// <item><description>OPPO: ColorOS 5.0 and later</description></item>
+            /// <item><description>Meizu: Flyme</description></item>
+            /// <item><description>Proprietary channel: Android SDK 3.6.0 and later</description></item>
             /// </list>
-            /// <para>If this parameter is not provided in long text mode, the first non-empty value from Body or AndroidPopupBody is used.</para>
+            /// <para>If this parameter is not provided in long text mode, the first non-empty value from Body and AndroidPopupBody is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>示例长文本</para>
@@ -123,7 +115,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidBigBody { get; set; }
 
             /// <summary>
-            /// <para>The image URL in big picture mode. Currently supported on: Alibaba Cloud\&quot;s proprietary channel with Android SDK 3.6.0 or later.</para>
+            /// <para>Image URL in big picture mode. Currently supported: Proprietary channel: Android SDK 3.6.0 and later.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></para>
@@ -133,11 +125,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidBigPictureUrl { get; set; }
 
             /// <summary>
-            /// <para>The title in long text mode. Length limit: 200 bytes (one Chinese character is counted as 3 bytes).</para>
+            /// <para>Title in long text mode. Length limit: 200 bytes (1 Chinese character counts as 3 bytes).</para>
             /// <list type="bullet">
-            /// <item><description><para>Currently, this is only supported by Honor channels and Huawei channels on EMUI 11 and later.</para>
+            /// <item><description><para>Currently only supported by the Honor channel and Huawei channel EMUI 11 and later.</para>
             /// </description></item>
-            /// <item><description><para>If this parameter is not provided in long text mode, the first non-empty value from Title or AndroidPopupTitle is used.</para>
+            /// <item><description><para>If this parameter is not provided in long text mode, the first non-empty value from Title and AndroidPopupTitle is used.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -149,8 +141,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidBigTitle { get; set; }
 
             /// <summary>
-            /// <para>Sets the extended properties of the notification. This parameter does not take effect when the push type PushType is set to MESSAGE.</para>
-            /// <para>This parameter must be passed in JSON map format, or it will fail to parse.</para>
+            /// <para>Set notification extended properties. This property does not take effect when the push type PushType is set to MESSAGE.</para>
+            /// <para>This parameter must be passed in JSON map format; otherwise, parsing errors will occur.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;api_name&quot;:&quot;PushNoticeToAndroidRequest&quot;}</para>
@@ -160,15 +152,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidExtParameters { get; set; }
 
             /// <summary>
-            /// <para>Sets the Honor channel notification type:</para>
+            /// <para>Set the Honor channel notification type:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Formal notification (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Test notification.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Production notification (default).</description></item>
+            /// <item><description><b>1</b>: Test notification.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Each application can send 1,000 test notifications per day, and these are not subject to the daily push limit per device.</para>
+            /// <para>Each application can send up to 1,000 test notifications per day, and this is not subject to the daily per-device push limit.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -179,12 +169,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidHonorTargetUserType { get; set; }
 
             /// <summary>
-            /// <para>Sets the parameters for Huawei quick notifications</para>
+            /// <para>Set the Huawei instant notification parameter:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Send a normal Huawei notification (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Send a Huawei quick notification.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Send a regular Huawei notification (default).</description></item>
+            /// <item><description><b>1</b>: Send a Huawei instant notification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,7 +183,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidHuaweiBusinessType { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the Huawei Android Live Notification data structure <a href="https://developer.huawei.com/consumer/cn/doc/HMSCore-References/rest-live-0000001562939968#ZH-CN_TOPIC_0000001700850537__p195121620102511">LiveNotificationPayload</a>. For development and integration, see the <a href="https://help.aliyun.com/document_detail/2983768.html">Huawei Live Notification Push Guide</a>.</para>
+            /// <para>JSON string of the Huawei Android Live Notification data structure <a href="https://developer.huawei.com/consumer/cn/doc/HMSCore-References/rest-live-0000001562939968#ZH-CN_TOPIC_0000001700850537__p195121620102511">LiveNotificationPayload</a>. For development integration, see <a href="https://help.aliyun.com/document_detail/2983768.html">Huawei Live Notification Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -214,9 +202,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidHuaweiLiveNotificationPayload { get; set; }
 
             /// <summary>
-            /// <para>The receipt ID for the Huawei channel. View this receipt ID in the receipt parameter configuration on the Huawei Push operations platform.</para>
+            /// <para>Huawei channel receipt ID. This receipt ID can be found in the receipt parameter configuration on the Huawei channel push operations platform.</para>
             /// <remarks>
-            /// <para>If the default receipt configuration on the Huawei Push operations platform is the Alibaba Cloud receipt, you do not need to provide this. If not, we recommend that you first configure the default receipt ID for the Huawei channel in the Alibaba Cloud EMAS Mobile Push console.</para>
+            /// <para>If the default receipt configuration on the Huawei channel push operations platform is set to Alibaba Cloud receipt, this is not required. If not, we recommend configuring the default Huawei channel receipt ID in the Alibaba Cloud EMAS Mobile Push console first.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -227,15 +215,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidHuaweiReceiptId { get; set; }
 
             /// <summary>
-            /// <para>Sets the Huawei channel notification type:</para>
+            /// <para>Set the Huawei channel notification type:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Formal notification (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Test notification.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Production notification (default).</description></item>
+            /// <item><description><b>1</b>: Test notification.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Each application can send 500 test notifications per day, and these are not subject to the daily push limit per device.</para>
+            /// <para>Each application can send up to 500 test notifications per day, and this is not subject to the daily per-device push limit.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -246,14 +232,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidHuaweiTargetUserType { get; set; }
 
             /// <summary>
-            /// <para>The URL for the right-side icon. Currently supported on:</para>
+            /// <para>Right-side icon URL. Currently supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Huawei EMUI (applicable only in long text mode and inbox mode)</para>
-            /// </description></item>
-            /// <item><description><para>Honor Magic UI (applicable only in long text mode)</para>
-            /// </description></item>
-            /// <item><description><para>Alibaba Cloud\&quot;s proprietary channel: Android SDK 3.5.0 and later</para>
-            /// </description></item>
+            /// <item><description>Huawei EMUI (only applicable in long text mode and Inbox mode)</description></item>
+            /// <item><description>Honor Magic UI (only applicable in long text mode)</description></item>
+            /// <item><description>Proprietary channel: Android SDK 3.5.0 and later</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -264,18 +247,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The body in inbox mode. The content must be a valid JSON array with no more than 5 elements. Currently supported on:</para>
+            /// <para>Body content in Inbox mode. The content must be a valid JSON Array with no more than 5 elements. Currently supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Huawei: EMUI 9 and later</para>
-            /// </description></item>
-            /// <item><description><para>Honor: Magic UI 4.0 and later</para>
-            /// </description></item>
-            /// <item><description><para>Xiaomi: MIUI 10 and later</para>
-            /// </description></item>
-            /// <item><description><para>OPPO: ColorOS 5.0 and later</para>
-            /// </description></item>
-            /// <item><description><para>Alibaba Cloud\&quot;s proprietary channel: Android SDK 3.6.0 and later</para>
-            /// </description></item>
+            /// <item><description>Huawei: EMUI 9 and later</description></item>
+            /// <item><description>Honor: Magic UI 4.0 and later</description></item>
+            /// <item><description>Xiaomi: MIUI 10 and later</description></item>
+            /// <item><description>OPPO: ColorOS 5.0 and later</description></item>
+            /// <item><description>Proprietary channel: Android SDK 3.6.0 and later</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -288,10 +266,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <summary>
             /// <para>Meizu message type</para>
             /// <list type="bullet">
-            /// <item><description><para>0 Public message (default)</para>
-            /// </description></item>
-            /// <item><description><para>1 Private message</para>
-            /// </description></item>
+            /// <item><description>0: Public message (default)</description></item>
+            /// <item><description>1: Private message</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -305,16 +281,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidMeizuNoticeMsgType { get; set; }
 
             /// <summary>
-            /// <para>Function 1: After applying for <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835?#section3410731125514">self-classification permissions</a>, use this parameter to identify the message type, determine the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#ZH-CN_TOPIC_0000001149358835__p3850133955718">message reminder method</a>, and expedite the sending of specific message types. For valid values, see the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section1076611477914">message classification standards</a> in the official Huawei Push documentation. Fill in the &quot;Cloud-side notification category value&quot; or &quot;Local notification category value&quot; from the documentation table.</para>
-            /// <para>Function 2: After applying for <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">special permissions</a>, use this parameter to identify high-priority pass-through scenarios. Valid values:</para>
+            /// <para>Purpose 1: After completing the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835?#section3410731125514">self-classification privilege application</a>, this is used to identify the message type, determine the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#ZH-CN_TOPIC_0000001149358835__p3850133955718">notification alert method</a>, and speed up delivery for specific message types. For valid values, refer to the Huawei Push official documentation\&quot;s <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section1076611477914">Message Classification Standard</a>. Use the &quot;Cloud notification category value&quot; or &quot;Local notification category value&quot; from the documentation table.</para>
+            /// <para>Purpose 2: After <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">applying for special permissions</a>, this is used to identify high-priority pass-through scenarios. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>VOIP: Video calls</para>
-            /// </description></item>
-            /// <item><description><para>PLAY_VOICE: Voice playback</para>
-            /// </description></item>
+            /// <item><description>VOIP: Audio/video calls</description></item>
+            /// <item><description>PLAY_VOICE: Voice playback</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For &quot;Cloud-side notification category values&quot; that are &quot;Not applicable&quot;, all pushes go through Alibaba Cloud\&quot;s proprietary channel. For &quot;Local notification category values&quot; that are &quot;Not applicable&quot;, all pushes go through the Huawei channel.</para>
+            /// <para>For &quot;Cloud notification category values&quot; marked as &quot;Not applicable&quot;, the Alibaba Cloud proprietary channel is used. For &quot;Local notification category values&quot; marked as &quot;Not applicable&quot;, the Huawei channel is used.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -325,14 +299,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidMessageHuaweiCategory { get; set; }
 
             /// <summary>
-            /// <para>The delivery priority for Huawei channel notifications. Valid values:</para>
+            /// <para>Huawei channel notification delivery priority. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>HIGH</para>
             /// </description></item>
             /// <item><description><para>NORMAL</para>
             /// </description></item>
             /// </list>
-            /// <para>You must apply for permissions. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">Application Link</a>.</para>
+            /// <para>Permission application is required. See: <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">Application link</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HIGH</para>
@@ -342,34 +316,24 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidMessageHuaweiUrgency { get; set; }
 
             /// <summary>
-            /// <para>OPPO manages messages in two categories: Communication and Services, and Content and Marketing.</para>
-            /// <para>Communication and Services (requires permission application):</para>
+            /// <para>OPPO classifies messages into two categories: Communication &amp; Service, and Content &amp; Marketing.</para>
+            /// <para>Communication &amp; Service (permission application required):</para>
             /// <list type="bullet">
-            /// <item><description><para>IM: Instant messaging, audio, and video calls</para>
-            /// </description></item>
-            /// <item><description><para>ACCOUNT: Changes in personal accounts and assets</para>
-            /// </description></item>
-            /// <item><description><para>DEVICE_REMINDER: Personal device reminders</para>
-            /// </description></item>
-            /// <item><description><para>ORDER: Changes in personal order or logistics status</para>
-            /// </description></item>
-            /// <item><description><para>TODO: Personal schedules or to-do items</para>
-            /// </description></item>
-            /// <item><description><para>SUBSCRIPTION: Personal subscriptions</para>
-            /// </description></item>
+            /// <item><description>IM: Instant messaging, audio, and video calls</description></item>
+            /// <item><description>ACCOUNT: Personal account and asset changes</description></item>
+            /// <item><description>DEVICE_REMINDER: Personal device reminders</description></item>
+            /// <item><description>ORDER: Personal order/logistics status changes</description></item>
+            /// <item><description>TODO: Personal schedule/to-do items</description></item>
+            /// <item><description>SUBSCRIPTION: Personal subscriptions</description></item>
             /// </list>
-            /// <para>Content and Marketing:</para>
+            /// <para>Content &amp; Marketing:</para>
             /// <list type="bullet">
-            /// <item><description><para>NEWS: News and information</para>
-            /// </description></item>
-            /// <item><description><para>CONTENT: Content recommendations</para>
-            /// </description></item>
-            /// <item><description><para>MARKETING: Platform activities</para>
-            /// </description></item>
-            /// <item><description><para>SOCIAL: Social updates</para>
-            /// </description></item>
+            /// <item><description>NEWS: News and information</description></item>
+            /// <item><description>CONTENT: Content recommendations</description></item>
+            /// <item><description>MARKETING: Platform promotions</description></item>
+            /// <item><description>SOCIAL: Social updates</description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://open.oppomobile.com/new/developmentDoc/info?id=13189">OPUSH Message Classification Rules</a></para>
+            /// <para>For details, see <a href="https://open.oppomobile.com/new/developmentDoc/info?id=13189">OPUSH Message Classification Rules</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>MARKETING</para>
@@ -379,17 +343,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidMessageOppoCategory { get; set; }
 
             /// <summary>
-            /// <para>The reminder level for OPPO channel notification bar messages. Valid values:</para>
+            /// <para>OPPO channel notification bar message alert level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: Notification bar</para>
-            /// </description></item>
-            /// <item><description><para>2: Notification bar, lock screen, ringtone, vibration (default notification level for Communication and Services messages)</para>
-            /// </description></item>
-            /// <item><description><para>16: Notification bar, lock screen, ringtone, vibration, banner (requires permission application)</para>
-            /// </description></item>
+            /// <item><description>1: Notification bar</description></item>
+            /// <item><description>2: Notification bar, lock screen, ringtone, and vibration (default notification level for Communication &amp; Service messages)</description></item>
+            /// <item><description>16: Notification bar, lock screen, ringtone, vibration, and banner (permission application required)</description></item>
             /// </list>
             /// <remarks>
-            /// <para>When using the AndroidMessageOppoNotifyLevel parameter, you must also pass the AndroidMessageOppoCategory parameter.</para>
+            /// <para>When using the AndroidMessageOppoNotifyLevel parameter, the AndroidMessageOppoCategory parameter must also be provided.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -400,36 +361,26 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidMessageOppoNotifyLevel { get; set; }
 
             /// <summary>
-            /// <para>vivo manages messages in two categories: system messages and operational messages.</para>
+            /// <para>vivo classifies messages into two categories: System messages and Operational messages.</para>
             /// <para>System messages:</para>
             /// <list type="bullet">
-            /// <item><description><para>IM: Instant messages</para>
-            /// </description></item>
-            /// <item><description><para>ACCOUNT: Account and asset</para>
-            /// </description></item>
-            /// <item><description><para>TODO: Schedule and to-do</para>
-            /// </description></item>
-            /// <item><description><para>DEVICE_REMINDER: Device information</para>
-            /// </description></item>
-            /// <item><description><para>ORDER: Order and logistics</para>
-            /// </description></item>
-            /// <item><description><para>SUBSCRIPTION: Subscription reminder</para>
-            /// </description></item>
+            /// <item><description>IM: Instant messages</description></item>
+            /// <item><description>ACCOUNT: Account and assets</description></item>
+            /// <item><description>TODO: Schedule and to-do items</description></item>
+            /// <item><description>DEVICE_REMINDER: Device information</description></item>
+            /// <item><description>ORDER: Orders and logistics</description></item>
+            /// <item><description>SUBSCRIPTION: Subscription reminders</description></item>
             /// </list>
             /// <para>Operational messages:</para>
             /// <list type="bullet">
-            /// <item><description><para>NEWS: News</para>
-            /// </description></item>
-            /// <item><description><para>CONTENT: Content recommendation</para>
-            /// </description></item>
-            /// <item><description><para>MARKETING: Operational activity</para>
-            /// </description></item>
-            /// <item><description><para>SOCIAL: Social updates</para>
+            /// <item><description>NEWS: News</description></item>
+            /// <item><description>CONTENT: Content recommendations</description></item>
+            /// <item><description>MARKETING: Operational campaigns</description></item>
+            /// <item><description>SOCIAL: Social updates<remarks>
+            /// <para>For details, see <a href="https://dev.vivo.com.cn/documentCenter/doc/359#s-ef3qugc3">Classification Description</a></para>
+            /// </remarks>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>For more information, see <a href="https://dev.vivo.com.cn/documentCenter/doc/359#s-ef3qugc3">Classification Description</a></para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>TODO</para>
@@ -439,8 +390,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidMessageVivoCategory { get; set; }
 
             /// <summary>
-            /// <para>The notification sound for the Huawei vendor channel. Specify the name of the audio file stored in the app/src/main/res/raw/ directory of the client project. Do not include the file format suffix.</para>
-            /// <para>If you do not set this parameter, the default ringtone is used.</para>
+            /// <para>Huawei vendor channel notification sound. Specify the name of an audio file stored in the client project\&quot;s app/src/main/res/raw/ directory. The file extension is not required.</para>
+            /// <para>If not set, the default ringtone is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alicloud_notification_sound</para>
@@ -450,7 +401,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidMusic { get; set; }
 
             /// <summary>
-            /// <para>The priority that determines the position of the Android notification in the notification bar. Valid values: -2, -1, 0, 1, and 2.</para>
+            /// <para>Priority of the notification position in the Android notification bar. Valid values: -2, -1, 0, 1, 2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -460,7 +411,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidNotificationBarPriority { get; set; }
 
             /// <summary>
-            /// <para>The custom Android notification bar style. Valid values: 1 to 100.</para>
+            /// <para>Android custom notification bar style. Value range: 1-100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -470,14 +421,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidNotificationBarType { get; set; }
 
             /// <summary>
-            /// <para>The channel ID for the Android app. It must correspond to a channel ID in the app.</para>
+            /// <para>The channelId of the Android app. Must match the channelId configured in the app.</para>
             /// <list type="bullet">
-            /// <item><description><para>Set the NotificationChannel parameter. For more information about its use, see <a href="https://help.aliyun.com/document_detail/67398.html">FAQ: Why are notifications not received on devices with Android 8.0 or later?</a>.</para>
-            /// </description></item>
-            /// <item><description><para>Because the channel_id for the OPPO private message channel is the same as the app\&quot;s channelId, this value is used for the channel_id when pushing through the OPPO channel.</para>
-            /// </description></item>
-            /// <item><description><para>For pushes through Huawei, FCM, and Alibaba Cloud\&quot;s proprietary channels, this value is used for the channel_id.</para>
-            /// </description></item>
+            /// <item><description>Set the NotificationChannel parameter. For specific usage, see <a href="https://help.aliyun.com/document_detail/67398.html">FAQ: Notifications not received on Android 8.0+ devices</a>.</description></item>
+            /// <item><description>Since the OPPO notification private channel\&quot;s channel_id is the same as the app\&quot;s channelId, the channel_id takes this value when pushing through the OPPO channel.</description></item>
+            /// <item><description>For Huawei, FCM, and Alibaba Cloud proprietary channel pushes, the channel_id takes this value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -488,17 +436,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationChannel { get; set; }
 
             /// <summary>
-            /// <para>Message grouping. For messages in the same group, the notification bar displays only the latest message and the total number of messages received for that group. It does not display all messages and cannot be expanded. Currently supported on:</para>
+            /// <para>Message grouping. Messages in the same group display only the latest one and the total count of messages received in that group in the notification bar. All messages are not displayed and cannot be expanded. Currently supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Huawei vendor channel</para>
-            /// </description></item>
-            /// <item><description><para>Honor vendor channel</para>
-            /// </description></item>
-            /// <item><description><para>Alibaba Cloud\&quot;s proprietary channel with Android SDK 3.9.1 and earlier</para>
-            /// </description></item>
+            /// <item><description>Huawei vendor channel</description></item>
+            /// <item><description>Honor vendor channel</description></item>
+            /// <item><description>Proprietary channel: Android SDK 3.9.1 and earlier</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is not supported by Alibaba Cloud\&quot;s proprietary channel on Android SDK 3.9.2 and later.</para>
+            /// <para>The proprietary channel no longer supports this parameter on Android SDK 3.9.2 and later.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -509,14 +454,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationGroup { get; set; }
 
             /// <summary>
-            /// <para>Sets the importance parameter for Honor notification message classification, which determines the notification behavior on the user\&quot;s device. Valid values:</para>
+            /// <para>Set the Honor notification message classification importance parameter, which determines the notification behavior on user devices. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>LOW: Marketing messages</para>
+            /// <item><description><para>LOW: Information and marketing messages</para>
             /// </description></item>
             /// <item><description><para>NORMAL: Service and communication messages</para>
             /// </description></item>
             /// </list>
-            /// <para>Apply for this on the Honor platform. <a href="https://developer.honor.com/cn/docs/11002/guides/notification-class#%E8%87%AA%E5%88%86%E7%B1%BB%E6%9D%83%E7%9B%8A%E7%94%B3%E8%AF%B7">Application Link</a>.</para>
+            /// <para>Application is required on the Honor platform. <a href="https://developer.honor.com/cn/docs/11002/guides/notification-class#%E8%87%AA%E5%88%86%E7%B1%BB%E6%9D%83%E7%9B%8A%E7%94%B3%E8%AF%B7">Application link</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LOW</para>
@@ -526,19 +471,15 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationHonorChannel { get; set; }
 
             /// <summary>
-            /// <para>Sets the importance parameter for Huawei notification message classification, which determines the notification behavior on the user\&quot;s device. Valid values:</para>
+            /// <para>Set the Huawei notification message classification importance parameter, which determines the notification behavior on user devices. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>LOW: Marketing messages</para>
-            /// </description></item>
-            /// <item><description><para>NORMAL: Service and communication messages</para>
-            /// </description></item>
+            /// <item><description>LOW: Information and marketing messages</description></item>
+            /// <item><description>NORMAL: Service and communication messages</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>For the Huawei channel, use AndroidMessageHuaweiCategory for notification classification. AndroidNotificationHuaweiChannel is no longer required.</para>
-            /// </description></item>
-            /// <item><description><para>You must apply for this on the Huawei platform. <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section893184112272">Application Link</a>.</para>
-            /// </description></item>
+            /// <item><description>The Huawei channel now recommends using AndroidMessageHuaweiCategory for notification classification. AndroidNotificationHuaweiChannel is no longer required.</description></item>
+            /// <item><description>Application is required on the Huawei platform. <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section893184112272">Application link</a>.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -550,7 +491,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationHuaweiChannel { get; set; }
 
             /// <summary>
-            /// <para>The unique ID for each message when it is displayed as a notification. Different notification messages can have the same NotifyId to allow new notifications to overwrite old ones.</para>
+            /// <para>Unique identifier for each message displayed in the notification bar. Different notification bar messages can share the same NotifyId, allowing new notifications to replace old ones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100001</para>
@@ -560,9 +501,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidNotificationNotifyId { get; set; }
 
             /// <summary>
-            /// <para>Message grouping. Messages in the same group are displayed collapsed in the notification bar and can be expanded. Notifications from different groups are displayed separately. Currently supported on:</para>
+            /// <para>Message grouping. Messages in the same group are displayed collapsed in the notification bar and can be expanded. Notifications from different groups are displayed separately. Currently supported:</para>
             /// <list type="bullet">
-            /// <item><description>Alibaba Cloud\&quot;s proprietary channel with Android SDK 3.9.2 and later</description></item>
+            /// <item><description>Proprietary channel: Android SDK 3.9.2 and later</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -573,19 +514,15 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationThreadId { get; set; }
 
             /// <summary>
-            /// <para>Sets the vivo notification message classification. Valid values:</para>
+            /// <para>Set the vivo notification message classification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: Operational messages (default)</para>
-            /// </description></item>
-            /// <item><description><para>1: System messages</para>
-            /// </description></item>
+            /// <item><description>0: Operational messages (default)</description></item>
+            /// <item><description>1: System messages</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>For the vivo channel, use AndroidMessageVivoCategory for notification classification. AndroidNotificationVivoChannel is no longer required.</para>
-            /// </description></item>
-            /// <item><description><para>Apply for this on the vivo platform. For more information, see <a href="https://dev.vivo.com.cn/documentCenter/doc/359">Application Link</a>.</para>
-            /// </description></item>
+            /// <item><description>The vivo channel now recommends using AndroidMessageVivoCategory for notification classification. AndroidNotificationVivoChannel is no longer required.</description></item>
+            /// <item><description>Application is required on the vivo platform. See: <a href="https://dev.vivo.com.cn/documentCenter/doc/359">Application link</a>.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -597,10 +534,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationVivoChannel { get; set; }
 
             /// <summary>
-            /// <para>Sets the channel ID for the Xiaomi notification type. Apply for it on the Xiaomi platform. For more information, see <a href="https://dev.mi.com/console/doc/detail?pId=2422#_4">Application Link</a>.</para>
+            /// <para>Set the channelId for Xiaomi notification types. Application is required on the Xiaomi platform. See: <a href="https://dev.mi.com/console/doc/detail?pId=2422#_4">Application link</a>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>A single application can apply for a maximum of 8 channels on the Xiaomi platform. Plan accordingly.</description></item>
+            /// <item><description>A single application on the Xiaomi channel can apply for up to 8 channels. Please plan ahead.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -612,16 +549,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotificationXiaomiChannel { get; set; }
 
             /// <summary>
-            /// <para>The notification reminder method. Valid values:</para>
+            /// <para>Notification alert type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VIBRATE</b>: Vibrate (default)</para>
-            /// </description></item>
-            /// <item><description><para><b>SOUND</b>: Sound</para>
-            /// </description></item>
-            /// <item><description><para><b>BOTH</b>: Sound and vibrate</para>
-            /// </description></item>
-            /// <item><description><para><b>NONE</b>: Silent</para>
-            /// </description></item>
+            /// <item><description><b>VIBRATE</b>: Vibration (default)</description></item>
+            /// <item><description><b>SOUND</b>: Sound</description></item>
+            /// <item><description><b>BOTH</b>: Sound and vibration</description></item>
+            /// <item><description><b>NONE</b>: Silent</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -632,16 +565,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidNotifyType { get; set; }
 
             /// <summary>
-            /// <para>The action to take after a notification is tapped. Valid values:</para>
+            /// <para>Action after clicking the notification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>APPLICATION: Open the application (default)</para>
-            /// </description></item>
-            /// <item><description><para>ACTIVITY: Open the application\&quot;s AndroidActivity</para>
-            /// </description></item>
-            /// <item><description><para>URL: Open a URL</para>
-            /// </description></item>
-            /// <item><description><para>NONE: No action</para>
-            /// </description></item>
+            /// <item><description>APPLICATION: Open the app (default)</description></item>
+            /// <item><description>ACTIVITY: Open an Android Activity</description></item>
+            /// <item><description>URL: Open a URL</description></item>
+            /// <item><description>NONE: No navigation</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -652,7 +581,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidOpenType { get; set; }
 
             /// <summary>
-            /// <para>The URL to open after the Android device receives the push. This is required only when PushTask.N.AndroidOpenType is set to &quot;URL&quot;.</para>
+            /// <para>The URL to open after Android receives the push. Only applicable when PushTask.N.AndroidOpenType=&quot;URL&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.xxx">https://xxxx.xxx</a></para>
@@ -662,7 +591,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidOpenUrl { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the OPPO Fluid Cloud intent deletion data structure <a href="https://open.oppomobile.com/documentation/page/info?id=13578">data</a>. This parameter is invalid if the AndroidOppoIntelligentIntent parameter is already filled. For development and integration, see the <a href="https://help.aliyun.com/document_detail/2997310.html">OPPO Fluid Cloud Push Guide</a>.</para>
+            /// <para>JSON string of the OPPO Fluid Cloud intent deletion data structure <a href="https://open.oppomobile.com/documentation/page/info?id=13578">data</a>. This parameter is ignored when the AndroidOppoIntelligentIntent parameter is already provided. For development integration, see <a href="https://help.aliyun.com/document_detail/2997310.html">OPPO Fluid Cloud Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -681,7 +610,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidOppoDeleteIntentData { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the OPPO Fluid Cloud intent sharing data structure <a href="https://open.oppomobile.com/documentation/page/info?id=13565">IntelligentIntent</a>. For development and integration, see the <a href="https://help.aliyun.com/document_detail/2997310.html">OPPO Fluid Cloud Push Guide</a>.</para>
+            /// <para>JSON string of the OPPO Fluid Cloud intent sharing data structure <a href="https://open.oppomobile.com/documentation/page/info?id=13565">IntelligentIntent</a>. For development integration, see <a href="https://help.aliyun.com/document_detail/2997310.html">OPPO Fluid Cloud Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -705,15 +634,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidOppoIntelligentIntent { get; set; }
 
             /// <summary>
-            /// <para>Sets the OPPO Fluid Cloud push environment</para>
+            /// <para>Set the OPPO Fluid Cloud push environment:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Production environment (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Staging environment.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Production environment (default).</description></item>
+            /// <item><description><b>1</b>: Test environment.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The OPPO Fluid Cloud staging environment needs to be set up on the client side. For more information, see <a href="https://open.oppomobile.com/documentation/page/info?id=13590">Environment Setup</a>.</para>
+            /// <para>The OPPO Fluid Cloud test environment requires client-side setup. See <a href="https://open.oppomobile.com/documentation/page/info?id=13590">Environment Setup</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -738,9 +665,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <summary>
             /// <para>OPPO private message template ID</para>
             /// <remarks>
-            /// <para>Warning: </para>
+            /// <para>Warning: The OPPO private message template feature is no longer supported by MaasPush. To use this feature, please use the Push, PushV2, or MassPushV2 API instead.</para>
             /// </remarks>
-            /// <para>The OPPO private message template feature is no longer supported by MaasPush. To use this feature, use the Push, PushV2, or MassPushV2 API instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>687557242b1634hzef3zd5013</para>
@@ -761,7 +687,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public Dictionary<string, string> AndroidOppoPrivateTitleParameters { get; set; }
 
             /// <summary>
-            /// <para>Specifies the Activity to which the user is redirected after tapping the notification.</para>
+            /// <para>Specify the Activity to navigate to when the notification is clicked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.alibaba.cloudpushdemo.bizactivity</para>
@@ -771,9 +697,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidPopupActivity { get; set; }
 
             /// <summary>
-            /// <para>The body content in auxiliary pop-up mode. This parameter is required if the AndroidPopupActivity parameter is not empty.</para>
-            /// <para>Length limit: 200 characters. Both Chinese and English characters count as one.</para>
-            /// <para>If you use a vendor channel, comply with the vendor channel\&quot;s restrictions. For more information, see <a href="https://help.aliyun.com/document_detail/165253.html">Limits on auxiliary channel pushes for Android</a>.</para>
+            /// <para>Body content in auxiliary popup mode. Required when the AndroidPopupActivity parameter is not empty.</para>
+            /// <para>Length limit: 200 characters (both Chinese and English characters count as one character each).</para>
+            /// <para>When using vendor channels, you must also comply with the vendor channel restrictions. For details, see <a href="https://help.aliyun.com/document_detail/165253.html">Android Auxiliary Channel Push Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -783,9 +709,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidPopupBody { get; set; }
 
             /// <summary>
-            /// <para>The title content in auxiliary pop-up mode. This parameter is required if the AndroidPopupActivity parameter is not empty.</para>
-            /// <para>Length limit: 50 characters. Both Chinese and English characters count as one.</para>
-            /// <para>If you use a vendor channel, comply with the vendor channel\&quot;s restrictions. For more information, see <a href="https://help.aliyun.com/document_detail/165253.html">Limits on auxiliary channel pushes for Android</a>.</para>
+            /// <para>Title content in auxiliary popup mode. Required when the AndroidPopupActivity parameter is not empty.</para>
+            /// <para>Length limit: 50 characters (both Chinese and English characters count as one character each).</para>
+            /// <para>When using vendor channels, you must also comply with the vendor channel restrictions. For details, see <a href="https://help.aliyun.com/document_detail/165253.html">Android Auxiliary Channel Push Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -795,8 +721,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidPopupTitle { get; set; }
 
             /// <summary>
-            /// <para>If the push type is MESSAGE and the device is offline, this push uses the auxiliary pop-up feature. The default value is false. This parameter takes effect only when PushType is MESSAGE.</para>
-            /// <para>If a message is successfully converted to a notification, the displayed notification uses the values of the AndroidPopupTitle and AndroidPopupBody parameters. When the user taps the notification, the data retrieved by the onSysNoticeOpened method of the auxiliary pop-up uses the values of the Title and Body parameters.</para>
+            /// <para>When the push type is message and the device is offline, this push will use the auxiliary popup feature. Defaults to false. Only takes effect when PushType=MESSAGE.</para>
+            /// <para>If the message-to-notification conversion push is successful, the notification displays the data set by the server\&quot;s AndroidPopupTitle and AndroidPopupBody parameter values. The data obtained when clicking the notification in the auxiliary popup\&quot;s onSysNoticeOpened method is the server-set Title and Body parameter values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -806,20 +732,16 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? AndroidRemind { get; set; }
 
             /// <summary>
-            /// <para>The notification style. Valid values:</para>
+            /// <para>Notification style. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Standard mode (default)</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Long text mode (supported by Huawei, Honor, Xiaomi, OPPO, Meizu, and Alibaba Cloud\&quot;s proprietary channel)</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Big picture mode (supported by Alibaba Cloud\&quot;s proprietary channel, not supported on Xiaomi models)</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: List mode (supported by Huawei, Honor, Xiaomi, OPPO, and Alibaba Cloud\&quot;s proprietary channel)</para>
+            /// <item><description><b>0</b>: Standard mode (default)</description></item>
+            /// <item><description><b>1</b>: Long text mode (supported by Huawei, Honor, Xiaomi, OPPO, Meizu, and proprietary channels)</description></item>
+            /// <item><description><b>2</b>: Big picture mode (supported by proprietary channel, not supported on Xiaomi devices)</description></item>
+            /// <item><description><b>3</b>: List mode (supported by Huawei, Honor, Xiaomi, OPPO, and proprietary channels)<remarks>
+            /// <para>This parameter is required when using non-standard modes.</para>
+            /// </remarks>
             /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para>This parameter is required for non-standard modes.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -829,19 +751,15 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidRenderStyle { get; set; }
 
             /// <summary>
-            /// <para>Sets the vendor channel notification type:</para>
+            /// <para>Set the vendor channel notification type:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Formal notification (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Test notification.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Production notification (default).</description></item>
+            /// <item><description><b>1</b>: Test notification.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>Configuring this parameter is equivalent to configuring the AndroidHuaweiTargetUserType, AndroidHonorTargetUserType, AndroidVivoPushMode, and AndroidOppoIntentEnv parameters at the same time. A specific vendor channel parameter can override this parameter.</para>
-            /// </description></item>
-            /// <item><description><para>Currently supported: Huawei channel, Honor channel, vivo channel, OPPO Fluid Cloud.</para>
-            /// </description></item>
+            /// <item><description>Configuring this parameter is equivalent to simultaneously configuring the AndroidHuaweiTargetUserType, AndroidHonorTargetUserType, AndroidVivoPushMode, and AndroidOppoIntentEnv parameters. The corresponding parameter for a specific vendor channel can override this parameter.</description></item>
+            /// <item><description>Currently supported: Huawei channel, Honor channel, vivo channel, and OPPO Fluid Cloud.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -853,7 +771,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidTargetUserType { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the vivo Atomic Island data structure <a href="https://dev.vivo.com.cn/documentCenter/doc/896#s-fdagzbd4">liveMessage</a>. For development and integration, see the <a href="https://help.aliyun.com/zh/document_detail/3030718.html">vivo Atomic Island Push Guide</a>.</para>
+            /// <para>JSON string of the vivo Atomic Island data structure <a href="https://dev.vivo.com.cn/documentCenter/doc/896#s-fdagzbd4">liveMessage</a>. For development integration, see <a href="https://help.aliyun.com/zh/document_detail/3030718.html">vivo Atomic Island Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -872,15 +790,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidVivoLiveMessage { get; set; }
 
             /// <summary>
-            /// <para>Sets the vivo channel notification type:</para>
+            /// <para>Set the vivo channel notification type:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Formal push (default).</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Test push.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Production push (default).</description></item>
+            /// <item><description><b>1</b>: Test push.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For test pushes, configure the test devices in the vivo console beforehand. You can obtain the test device\&quot;s RegId by searching for &quot;onReceiveRegId regId&quot; in the device startup logs.</para>
+            /// <para>For test pushes, configure test devices in the vivo console in advance. The test device RegId can be obtained by searching for &quot;onReceiveRegId regId&quot; in the device startup logs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -891,9 +807,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? AndroidVivoPushMode { get; set; }
 
             /// <summary>
-            /// <para>The receipt ID for the vivo channel. View this receipt ID in the application information of the push service on the vivo open platform.</para>
+            /// <para>vivo channel receipt ID. This receipt ID can be found in the app information section of the push service on the vivo open platform.</para>
             /// <remarks>
-            /// <para>If the default receipt configuration on the vivo open platform is the Alibaba Cloud receipt, you do not need to provide this. If not, we recommend that you first configure the default receipt ID for the vivo channel in the Alibaba Cloud EMAS Mobile Push console.</para>
+            /// <para>If the default receipt configuration on the vivo open platform is set to Alibaba Cloud receipt, this is not required. If not, we recommend configuring the default vivo channel receipt ID in the Alibaba Cloud EMAS Mobile Push console first.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -906,7 +822,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. All third-party auxiliary pop-ups are now supported by the new <b>AndroidPopupActivity</b> parameter.</para>
+            /// <para>This parameter has been deprecated. All third-party auxiliary popups are now supported by the new parameter <b>AndroidPopupActivity</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>无</para>
@@ -919,7 +835,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. All third-party auxiliary pop-ups are now supported by the new <b>AndroidPopupBody</b> parameter.</para>
+            /// <para>This parameter has been deprecated. All third-party auxiliary popups are now supported by the new parameter <b>AndroidPopupBody</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>无</para>
@@ -932,7 +848,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. All third-party auxiliary pop-ups are now supported by the new <b>AndroidPopupTitle</b> parameter.</para>
+            /// <para>This parameter has been deprecated. All third-party auxiliary popups are now supported by the new parameter <b>AndroidPopupTitle</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>无</para>
@@ -945,7 +861,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. Since August 2023, Xiaomi no longer supports dynamically setting small icons, right-side icons, or large pictures during pushes on new devices or systems.</para>
+            /// <para>This parameter has been deprecated. Since August 2023, Xiaomi has officially discontinued support for dynamically setting small icons, right-side icons, and big pictures during push on new devices/systems.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png">https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png</a></para>
@@ -956,7 +872,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidXiaomiBigPictureUrl { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the Xiaomi HyperOS Island data structure <a href="https://dev.mi.com/xiaomihyperos/documentation/detail?pId=2131">miui.focus.param</a>. For development and integration, see the <a href="https://help.aliyun.com/zh/document_detail/3037956.html">Xiaomi HyperOS Island Push Guide</a>.</para>
+            /// <para>JSON string of the Xiaomi Super Island data structure <a href="https://dev.mi.com/xiaomihyperos/documentation/detail?pId=2131">miui.focus.param</a>. For development integration, see <a href="https://help.aliyun.com/zh/document_detail/3037956.html">Xiaomi Super Island Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -980,7 +896,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string AndroidXiaomiFocusParam { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the Xiaomi HyperOS Island data image <a href="https://dev.mi.com/xiaomihyperos/documentation/detail?pId=2131">miui.focus.pic_xxx</a>. For development and integration, see the <a href="https://help.aliyun.com/zh/document_detail/3037956.html">Xiaomi HyperOS Island Push Guide</a>.</para>
+            /// <para>JSON string of the Xiaomi Super Island images <a href="https://dev.mi.com/xiaomihyperos/documentation/detail?pId=2131">miui.focus.pic_xxx</a>. For development integration, see <a href="https://help.aliyun.com/zh/document_detail/3037956.html">Xiaomi Super Island Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -996,7 +912,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. Since August 2023, Xiaomi no longer supports dynamically setting small icons, right-side icons, or large pictures during pushes on new devices or systems.</para>
+            /// <para>This parameter has been deprecated. Since August 2023, Xiaomi has officially discontinued support for dynamically setting small icons, right-side icons, and big pictures during push on new devices/systems.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></para>
@@ -1006,16 +922,28 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Obsolete]
             public string AndroidXiaomiImageUrl { get; set; }
 
+            /// <summary>
+            /// <para>Xiaomi private message template ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>P10645</para>
+            /// </summary>
             [NameInMap("AndroidXiaomiTemplateId")]
             [Validation(Required=false)]
             public string AndroidXiaomiTemplateId { get; set; }
 
+            /// <summary>
+            /// <para>Xiaomi private message template parameters, JSON string</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;keywords1&quot;:&quot;Tom&quot;,&quot;keywords2&quot;:&quot;phone&quot;}</para>
+            /// </summary>
             [NameInMap("AndroidXiaomiTemplateParams")]
             [Validation(Required=false)]
             public string AndroidXiaomiTemplateParams { get; set; }
 
             /// <summary>
-            /// <para>The content of the notification or message for Android and HarmonyOS pushes. The content of the message or notification for iOS. The content size is limited. For more information, see <a href="https://help.aliyun.com/document_detail/92832.html">Product limits</a>.</para>
+            /// <para>Content of the notification/message for Android and HarmonyOS pushes; iOS message/notification content. The push content size is limited. See <a href="https://help.aliyun.com/document_detail/92832.html">Product Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -1025,16 +953,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string Body { get; set; }
 
             /// <summary>
-            /// <para>The device type. Valid values:</para>
+            /// <para>Device type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>HARMONY: HarmonyOS devices</para>
-            /// </description></item>
-            /// <item><description><para>iOS: iOS devices</para>
-            /// </description></item>
-            /// <item><description><para>ANDROID: Android devices</para>
-            /// </description></item>
-            /// <item><description><para>ALL: If the AppKey is for an old version of a dual-platform application, this value indicates that pushes are sent to both Android and iOS devices. If the AppKey is for a new version of a single-platform application, the effect is the same as specifying the device type corresponding to that application type.</para>
-            /// </description></item>
+            /// <item><description>HARMONY: HarmonyOS device</description></item>
+            /// <item><description>iOS: iOS device</description></item>
+            /// <item><description>ANDROID: Android device</description></item>
+            /// <item><description>ALL: When the AppKey is for a legacy dual-platform app, this pushes to both Android and iOS devices simultaneously. When the AppKey is for a new single-platform app, the effect is the same as specifying the device type corresponding to the app type.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -1046,8 +970,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// <para>The time-to-live (TTL) for offline messages or notifications. Use this with StoreOffline. After the TTL expires, the message or notification is no longer sent. The maximum TTL is 72 hours. The default is 72 hours.</para>
-            /// <para>The time must be in ISO 8601 format and in UTC: YYYY-MM-DDThh:mm:ssZ. The expiration time must be at least 3 seconds later than the current time or the scheduled push time (<c>ExpireTime &gt; PushTime + 3 seconds</c>). The 3-second buffer accounts for potential network and system latency. Set the TTL to at least 1 minute for individual pushes and at least 10 minutes for full or batch pushes.</para>
+            /// <para>Expiration time of offline messages/notifications. Used together with StoreOffline. Expired messages will no longer be sent. The maximum retention period is 72 hours. The default is 72 hours.</para>
+            /// <para>The time format follows the ISO 8601 standard and must use UTC time in the format YYYY-MM-DDThh:mm:ssZ. The expiration time cannot be earlier than the current time or the scheduled push time plus 3 seconds (<c>ExpireTime &gt; PushTime + 3 seconds</c>). The 3-second buffer accounts for network and system latency. We recommend at least 1 minute for unicast pushes and at least 10 minutes for broadcast and batch pushes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-20T00:00:00Z</para>
@@ -1057,12 +981,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The action corresponding to the in-app page ability.</para>
+            /// <para>The action corresponding to the built-in page ability of the app.</para>
             /// <remarks>
-            /// <para>Notice: </para>
+            /// <para>Notice: When HarmonyActionType is APP_CUSTOM_PAGE, at least one of HarmonyUri and HarmonyAction must be provided.</para>
             /// </remarks>
-            /// <para>When HarmonyActionType is APP_CUSTOM_PAGE, at least one of HarmonyUri and HarmonyAction must be filled in.</para>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section152462191216">ClickAction.action</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section152462191216">ClickAction.action</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>com.example.action</para>
@@ -1072,12 +995,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyAction { get; set; }
 
             /// <summary>
-            /// <para>The action to take after a notification is tapped. Valid values:</para>
+            /// <para>Action after clicking the notification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>APP_HOME_PAGE: Open the application home page</para>
-            /// </description></item>
-            /// <item><description><para>APP_CUSTOM_PAGE: Open a custom application page</para>
-            /// </description></item>
+            /// <item><description>APP_HOME_PAGE: Open the app home page</description></item>
+            /// <item><description>APP_CUSTOM_PAGE: Open a custom app page</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1088,8 +1009,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyActionType { get; set; }
 
             /// <summary>
-            /// <para>The number to add to the HarmonyOS application badge. See the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">HarmonyOS badge addNum field description</a>.<br>
-            /// Supported starting from HarmonyOS SDK version 1.2.0.<br></para>
+            /// <para>HarmonyOS app badge increment number. See <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">HarmonyOS badge addNum field description</a>.</br>
+            /// Supported from HarmonyOS SDK 1.2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1099,8 +1020,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? HarmonyBadgeAddNum { get; set; }
 
             /// <summary>
-            /// <para>The number to set for the HarmonyOS application badge. See the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">HarmonyOS badge setNum field description</a>.<br>
-            /// Supported starting from HarmonyOS SDK version 1.2.0.<br></para>
+            /// <para>HarmonyOS app badge set number. See <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">HarmonyOS badge setNum field description</a>.</br>
+            /// Supported from HarmonyOS SDK 1.2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1110,36 +1031,23 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? HarmonyBadgeSetNum { get; set; }
 
             /// <summary>
-            /// <para>The notification message category. After applying for notification message self-classification permissions, use this to identify the message type. Different notification message types affect how messages are displayed and reminded. Valid values:</para>
+            /// <para>Notification message category. After completing the notification message self-classification privilege application, this is used to identify the message type. Different notification message types affect the display and alert methods. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>IM: Instant messaging</para>
-            /// </description></item>
-            /// <item><description><para>VOIP: Video call</para>
-            /// </description></item>
-            /// <item><description><para>SUBSCRIPTION: Subscription</para>
-            /// </description></item>
-            /// <item><description><para>TRAVEL: Travel</para>
-            /// </description></item>
-            /// <item><description><para>HEALTH: Health</para>
-            /// </description></item>
-            /// <item><description><para>WORK: Work item reminder</para>
-            /// </description></item>
-            /// <item><description><para>ACCOUNT: Account updates</para>
-            /// </description></item>
-            /// <item><description><para>EXPRESS: Order &amp; logistics</para>
-            /// </description></item>
-            /// <item><description><para>FINANCE: Finance</para>
-            /// </description></item>
-            /// <item><description><para>DEVICE_REMINDER: Device reminder</para>
-            /// </description></item>
-            /// <item><description><para>MAIL: Email</para>
-            /// </description></item>
-            /// <item><description><para>CUSTOMER_SERVICE: Customer service message</para>
-            /// </description></item>
-            /// <item><description><para>MARKETING: News, content recommendations, social updates, product promotions, financial updates, lifestyle information, surveys, feature recommendations, and operational activities (only identifies content, does not expedite message sending), collectively referred to as marketing messages.</para>
-            /// </description></item>
+            /// <item><description>IM: Instant messaging</description></item>
+            /// <item><description>VOIP: Audio/video calls</description></item>
+            /// <item><description>SUBSCRIPTION: Subscriptions</description></item>
+            /// <item><description>TRAVEL: Travel</description></item>
+            /// <item><description>HEALTH: Health</description></item>
+            /// <item><description>WORK: Work task reminders</description></item>
+            /// <item><description>ACCOUNT: Account updates</description></item>
+            /// <item><description>EXPRESS: Orders &amp; logistics</description></item>
+            /// <item><description>FINANCE: Finance</description></item>
+            /// <item><description>DEVICE_REMINDER: Device reminders</description></item>
+            /// <item><description>MAIL: Email</description></item>
+            /// <item><description>CUSTOMER_SERVICE: Customer service messages</description></item>
+            /// <item><description>MARKETING: News, content recommendations, social updates, product promotions, financial updates, lifestyle information, surveys, feature recommendations, and operational campaigns (only marks the content, does not speed up message delivery), collectively referred to as information and marketing messages</description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.category</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.category</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>IM</para>
@@ -1149,8 +1057,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyCategory { get; set; }
 
             /// <summary>
-            /// <para>Sets the extended properties of the notification. This parameter does not take effect when the push type PushType is set to MESSAGE.</para>
-            /// <para>This parameter must be passed in JSON map format, or it will fail to parse.</para>
+            /// <para>Set notification extended properties. This property does not take effect when the push type PushType is set to MESSAGE.</para>
+            /// <para>This parameter must be passed in JSON map format; otherwise, parsing errors will occur.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;api_name&quot;:&quot;PushNoticeToAndroidRequest&quot;}</para>
@@ -1160,10 +1068,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyExtParameters { get; set; }
 
             /// <summary>
-            /// <para>Extra data for the extended notification message.<br>
-            /// Effective when sending HarmonyOS extended notification messages.<br>
-            /// Conceptually equivalent to the extraData field of a HarmonyOS extended notification message. For a detailed definition, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section161192514234">HarmonyOS ExtensionPayload Description</a>.<br>
-            /// Supported starting from HarmonyOS SDK version 1.2.0.<br><br><br></para>
+            /// <para>Extra data for notification extension messages.</br>
+            /// Valid when sending HarmonyOS notification extension messages.</br>
+            /// Conceptually equivalent to the extraData field of HarmonyOS notification extension messages. For the specific definition, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section161192514234">HarmonyOS ExtensionPayload Description</a>.</br>
+            /// Supported from HarmonyOS SDK 1.2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>示例额外数据</para>
@@ -1173,15 +1081,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyExtensionExtraData { get; set; }
 
             /// <summary>
-            /// <para>When PushType is NOTICE, specifies whether it is a HarmonyOS extended notification message.</para>
+            /// <para>When PushType is NOTICE, whether this is a HarmonyOS notification extension message.</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Send an extended notification message</para>
-            /// </description></item>
-            /// <item><description><para>false: Send a normal notification (default)</para>
-            /// </description></item>
+            /// <item><description>true: Send a notification extension message</description></item>
+            /// <item><description>false: Send a regular notification (default)</description></item>
             /// </list>
-            /// <para>You must apply for permission on the HarmonyOS side before sending extended notification messages. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/push-send-extend-noti-V5">Send Extended Notification Messages</a> in the HarmonyOS documentation.<br>
-            /// Supported starting from HarmonyOS SDK version 1.2.0.<br></para>
+            /// <para>Notification extension messages require permission to be applied for on the HarmonyOS side before sending. For details, see the HarmonyOS documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/push-send-extend-noti-V5">Send Notification Extension Messages</a>.</br>
+            /// Supported from HarmonyOS SDK 1.2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1191,11 +1097,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? HarmonyExtensionPush { get; set; }
 
             /// <summary>
-            /// <para>The URL for the large icon on the right of the notification. The URL must use the HTTPS protocol.</para>
+            /// <para>URL for the large icon on the right side of the notification. The URL must use the HTTPS protocol.</para>
             /// <remarks>
-            /// <para>Supported image formats are png, jpg, jpeg, heif, gif, and bmp. The image length × width must be less than 25,000 pixels.</para>
+            /// <para>Supported image formats: png, jpg, jpeg, heif, gif, bmp. Image dimensions must satisfy height × width &lt; 25,000 pixels.</para>
             /// </remarks>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.image</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.image</a></para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/xxx.png">https://example.com/xxx.png</a></para>
@@ -1205,7 +1111,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The content for the multi-line text style. This field is required when HarmonyRenderStyle is MULTI_LINE. A maximum of 3 content entries are supported.</para>
+            /// <para>Content for multi-line text style. Required when HarmonyRenderStyle is MULTI_LINE. Up to 3 content items are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;1.content1&quot;,&quot;2.content2&quot;,&quot;3.content3&quot;]</para>
@@ -1215,7 +1121,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyInboxContent { get; set; }
 
             /// <summary>
-            /// <para>A JSON string of the HarmonyOS Live Window data structure <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/push-scenariozed-api-request-param-V13#section66881469306">LiveViewPayload</a>. For development and integration, see the <a href="https://help.aliyun.com/document_detail/2982112.html">HarmonyOS Live Window Push Guide</a>.</para>
+            /// <para>JSON string of the HarmonyOS Live View data structure <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/push-scenariozed-api-request-param-V13#section66881469306">LiveViewPayload</a>. For development integration, see <a href="https://help.aliyun.com/document_detail/2982112.html">HarmonyOS Live View Push Guide</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -1235,20 +1141,15 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyLiveViewPayload { get; set; }
 
             /// <summary>
-            /// <para>Uses the specified type of notification channel. This is effective only when the Alibaba Cloud proprietary channel is online.</para>
+            /// <para>Use the specified type of notification slot. Only valid when the Alibaba Cloud proprietary channel is online.</para>
             /// <list type="bullet">
-            /// <item><description><para>SOCIAL_COMMUNICATION: Social communication.</para>
-            /// </description></item>
-            /// <item><description><para>SERVICE_INFORMATION: Service reminder.</para>
-            /// </description></item>
-            /// <item><description><para>CONTENT_INFORMATION: Content information.</para>
-            /// </description></item>
-            /// <item><description><para>CUSTOMER_SERVICE: Customer service message. This type is used for customer service messages between users and businesses and must be initiated by the user.</para>
-            /// </description></item>
-            /// <item><description><para>OTHER_TYPES: Other.</para>
-            /// </description></item>
+            /// <item><description>SOCIAL_COMMUNICATION: Social communication.</description></item>
+            /// <item><description>SERVICE_INFORMATION: Service reminders.</description></item>
+            /// <item><description>CONTENT_INFORMATION: Content information.</description></item>
+            /// <item><description>CUSTOMER_SERVICE: Customer service messages. This type is used for customer service messages between users and merchants, and must be initiated by the user.</description></item>
+            /// <item><description>OTHER_TYPES: Others.</description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-notificationmanager-V5#slottype">SlotType</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-notificationmanager-V5#slottype">SlotType</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>SOCIAL_COMMUNICATION</para>
@@ -1258,8 +1159,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyNotificationSlotType { get; set; }
 
             /// <summary>
-            /// <para>The unique ID for each message when it is displayed as a notification. If not included, the push service automatically generates a unique ID for each message. Different notification messages can have the same notifyId to allow new messages to overwrite old ones.</para>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.notifyId</a> on the HarmonyOS website.</para>
+            /// <para>Unique identifier for each message displayed in the notification. When not provided, the push service automatically generates a unique identifier for each message. Different notification messages can share the same notifyId, enabling new messages to replace old ones.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.notifyId</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1269,11 +1170,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? HarmonyNotifyId { get; set; }
 
             /// <summary>
-            /// <para>The receipt ID for the HarmonyOS channel. View this receipt ID in the receipt parameter configuration on the HarmonyOS Push operations platform.</para>
+            /// <para>HarmonyOS channel receipt ID. This receipt ID can be found in the receipt parameter configuration on the HarmonyOS channel push operations platform.</para>
             /// <remarks>
-            /// <para>If the default receipt configuration on the HarmonyOS Push operations platform is the Alibaba Cloud receipt, you do not need to provide this. If not, we recommend that you first configure the default receipt ID for the HarmonyOS channel in the Alibaba Cloud EMAS Mobile Push console.</para>
+            /// <para>If the default receipt configuration on the HarmonyOS channel push operations platform is set to Alibaba Cloud receipt, this is not required. If not, we recommend configuring the default HarmonyOS channel receipt ID in the Alibaba Cloud EMAS Mobile Push console first.</para>
             /// </remarks>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">pushOptions.receiptId</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">pushOptions.receiptId</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>RCPB***DFD5</para>
@@ -1283,8 +1184,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyReceiptId { get; set; }
 
             /// <summary>
-            /// <para>If the push type is MESSAGE and the device is offline, this push uses the auxiliary pop-up feature. The default value is false. This parameter is effective only when PushType is set to MESSAGE.</para>
-            /// <para>If a message is successfully converted to a notification, the data displayed in the notification is the value of the server-side HarmonyRemindTitle and HarmonyRemindBody parameters.</para>
+            /// <para>When the push type is message and the device is offline, this push will use the auxiliary popup feature. Defaults to false. Only takes effect when PushType=MESSAGE.</para>
+            /// <para>If the message-to-notification conversion push is successful, the notification displays the data set by the server\&quot;s HarmonyRemindTitle and HarmonyRemindBody parameter values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1294,7 +1195,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? HarmonyRemind { get; set; }
 
             /// <summary>
-            /// <para>The HarmonyOS notification content used when a message is converted to a notification. This is effective only when HarmonyRemind is set to true.</para>
+            /// <para>HarmonyOS notification content used when converting HarmonyOS messages to notifications. Only valid when HarmonyRemind is true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>您有一条新消息，请查收</para>
@@ -1304,7 +1205,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyRemindBody { get; set; }
 
             /// <summary>
-            /// <para>The HarmonyOS notification title used when a message is converted to a notification. This is effective only when HarmonyRemind is set to true.</para>
+            /// <para>HarmonyOS notification title used when converting HarmonyOS messages to notifications. Only valid when HarmonyRemind is true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>新消息</para>
@@ -1314,12 +1215,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyRemindTitle { get; set; }
 
             /// <summary>
-            /// <para>The notification message style:</para>
+            /// <para>Notification message style:</para>
             /// <list type="bullet">
-            /// <item><description><para>NORMAL: Normal notification (default)</para>
-            /// </description></item>
-            /// <item><description><para>MULTI_LINE: Multi-line text style</para>
-            /// </description></item>
+            /// <item><description>NORMAL: Standard notification (default)</description></item>
+            /// <item><description>MULTI_LINE: Multi-line text style</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1330,14 +1229,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyRenderStyle { get; set; }
 
             /// <summary>
-            /// <para>The test message flag:</para>
+            /// <para>Test message flag:</para>
             /// <list type="bullet">
-            /// <item><description><para>false: Normal message (default)</para>
-            /// </description></item>
-            /// <item><description><para>true: Test message</para>
-            /// </description></item>
+            /// <item><description>false: Normal message (default)</description></item>
+            /// <item><description>true: Test message</description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">pushOptions.testMessage</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">pushOptions.testMessage</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1347,11 +1244,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? HarmonyTestMessage { get; set; }
 
             /// <summary>
-            /// <para>The URI corresponding to the in-app page ability.</para>
+            /// <para>The URI corresponding to the built-in page ability of the app.</para>
             /// <remarks>
-            /// <para>Notice: When HarmonyActionType is APP_CUSTOM_PAGE, at least one of HarmonyUri and HarmonyAction must be filled in. When there are multiple Abilities, fill in the action and URI for each Ability separately. The action is used with priority to find the corresponding in-app page.</para>
+            /// <para>Notice: When HarmonyActionType is APP_CUSTOM_PAGE, at least one of HarmonyUri and HarmonyAction must be provided. When multiple Abilities exist, provide different action and URI values for each Ability. The action is prioritized when looking up the corresponding built-in app page.</para>
             /// </remarks>
-            /// <para>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section152462191216">ClickAction.uri</a> on the HarmonyOS website.</para>
+            /// <para>For details, see HarmonyOS official documentation <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section152462191216">ClickAction.uri</a></para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com:8080/push/example">https://www.example.com:8080/push/example</a></para>
@@ -1361,7 +1258,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string HarmonyUri { get; set; }
 
             /// <summary>
-            /// <para>A custom ID for the push task. If JobKey is not empty, this field is included in the receipt logs. For more information about how to view receipt logs, see <a href="https://help.aliyun.com/document_detail/434651.html">Receipt logs</a>.</para>
+            /// <para>Custom identifier for the push task. When JobKey is not empty, this field will be included in the receipt logs. For receipt log details, see <a href="https://help.aliyun.com/document_detail/434651.html">Receipt Logs</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -1371,8 +1268,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string JobKey { get; set; }
 
             /// <summary>
-            /// <para>Specifies the time for a scheduled push. If you do not set this parameter, the push is sent immediately.</para>
-            /// <para>The time must be in ISO 8601 format and in UTC: YYYY-MM-DDThh:mm:ssZ.</para>
+            /// <para>Used for scheduled sending. If not set, the default is immediate sending.</para>
+            /// <para>The time format follows the ISO 8601 standard and must use UTC time in the format YYYY-MM-DDThh:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-20T00:00:00Z</para>
@@ -1382,12 +1279,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string PushTime { get; set; }
 
             /// <summary>
-            /// <para>The push type. Valid values:</para>
+            /// <para>Push type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>MESSAGE: a message.</para>
-            /// </description></item>
-            /// <item><description><para>NOTICE: a notification.</para>
-            /// </description></item>
+            /// <item><description>MESSAGE: indicates a message.</description></item>
+            /// <item><description>NOTICE: indicates a notification.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -1399,41 +1294,26 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string PushType { get; set; }
 
             /// <summary>
-            /// <para>Specifies the sending channels. Valid values:</para>
+            /// <para>Specify sending channels. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>accs: Alibaba Cloud\&quot;s proprietary channel</para>
-            /// </description></item>
-            /// <item><description><para>huawei: Huawei channel</para>
-            /// </description></item>
-            /// <item><description><para>honor: Honor channel</para>
-            /// </description></item>
-            /// <item><description><para>xiaomi: Xiaomi channel</para>
-            /// </description></item>
-            /// <item><description><para>oppo: OPPO channel</para>
-            /// </description></item>
-            /// <item><description><para>vivo: vivo channel</para>
-            /// </description></item>
-            /// <item><description><para>meizu: Meizu channel</para>
-            /// </description></item>
-            /// <item><description><para>gcm: Google GCM channel (legacy HTTP)</para>
-            /// </description></item>
-            /// <item><description><para>fcm: Google Firebase channel (HTTP v1 API)</para>
-            /// </description></item>
-            /// <item><description><para>apns: APNs channel</para>
-            /// </description></item>
-            /// <item><description><para>harmony: HarmonyOS channel</para>
-            /// </description></item>
+            /// <item><description>accs: Alibaba Cloud proprietary channel</description></item>
+            /// <item><description>huawei: Huawei channel</description></item>
+            /// <item><description>honor: Honor channel</description></item>
+            /// <item><description>xiaomi: Xiaomi channel</description></item>
+            /// <item><description>oppo: OPPO channel</description></item>
+            /// <item><description>vivo: vivo channel</description></item>
+            /// <item><description>meizu: Meizu channel</description></item>
+            /// <item><description>gcm: Google GCM channel (legacy HTTP)</description></item>
+            /// <item><description>fcm: Google Firebase channel (HTTP v1 API)</description></item>
+            /// <item><description>apns: APNs channel</description></item>
+            /// <item><description>harmony: HarmonyOS channel</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>If you do not configure this parameter, all channels can be used.</para>
-            /// </description></item>
-            /// <item><description><para>If you configure this parameter, only the specified channels are used.</para>
-            /// </description></item>
-            /// <item><description><para>If the configured channels conflict with the sending policy (for example, iOS notifications are sent only through the APNs channel, but this parameter does not include apns), the push is not sent.</para>
-            /// </description></item>
-            /// <item><description><para>If you configure gcm, both Google GCM and FCM channels can be used. If you configure fcm, only the Google FCM channel can be used.</para>
-            /// </description></item>
+            /// <item><description>If this parameter is not configured, all channels are available.</description></item>
+            /// <item><description>If this parameter is configured, only the specified channels are used.</description></item>
+            /// <item><description>If the configured channels conflict with the sending strategy (e.g., iOS notifications only go through the APNs channel, but this parameter does not include apns), the push will not be sent.</description></item>
+            /// <item><description>If gcm is configured, both Google GCM and FCM channels can be used. If fcm is configured, only the Google FCM channel can be used.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -1447,7 +1327,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>This parameter has been deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1458,8 +1338,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? SendSpeed { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to save offline messages or notifications. The default value is false.</para>
-            /// <para>If you save them, and a user is offline, the message or notification is resent when the user comes online before the time-to-live (TTL) specified by ExpireTime expires. The default TTL is 72 hours. iOS notifications are sent through the APNs channel and are not affected by this parameter.</para>
+            /// <para>Whether to store offline messages/notifications. StoreOffline defaults to false.</para>
+            /// <para>If stored, when the user is offline during push, the message will be resent when the user comes online within the expiration time (ExpireTime). ExpireTime defaults to 72 hours. iOS notifications are delivered through the APNs channel and are not affected by StoreOffline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1469,14 +1349,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? StoreOffline { get; set; }
 
             /// <summary>
-            /// <para>The push target. Valid values:</para>
+            /// <para>Push target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DEVICE: Push by device.</para>
-            /// </description></item>
-            /// <item><description><para>ACCOUNT: Push by account.</para>
-            /// </description></item>
-            /// <item><description><para>ALIAS: Push by alias.</para>
-            /// </description></item>
+            /// <item><description>DEVICE: push by device.</description></item>
+            /// <item><description>ACCOUNT: push by account.</description></item>
+            /// <item><description>ALIAS: push by alias.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -1488,14 +1365,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>Set this parameter based on the value of Target. To specify multiple values, separate them with commas. If you exceed the limit, send multiple pushes.</para>
+            /// <para>Set based on Target. Multiple values are separated by commas. If the limit is exceeded, you need to split the push into multiple calls.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set Target to DEVICE, specify device IDs, such as <c>deviceid1,deviceid2</c>. You can specify up to 1,000 device IDs.</para>
-            /// </description></item>
-            /// <item><description><para>If you set Target to ACCOUNT, specify accounts, such as <c>account1,account2</c>. You can specify up to 1,000 accounts.</para>
-            /// </description></item>
-            /// <item><description><para>If you set Target to ALIAS, specify aliases, such as <c>alias1,alias2</c>. You can specify up to 1,000 aliases.</para>
-            /// </description></item>
+            /// <item><description>Target=DEVICE: values such as <c>deviceid1,deviceid2</c> (up to 1,000 supported).</description></item>
+            /// <item><description>Target=ACCOUNT: values such as <c>account1,account2</c> (up to 1,000 supported).</description></item>
+            /// <item><description>Target=ALIAS: values such as <c>alias1,alias2</c> (up to 1,000 supported).</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -1507,13 +1381,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string TargetValue { get; set; }
 
             /// <summary>
-            /// <para>The title of the notification or message. The length is limited to 200 bytes.
-            /// This parameter is required for Android and HarmonyOS pushes. It is optional for iOS notification pushes. If you specify it for iOS:</para>
+            /// <para>Title of the notification/message during push. Length limit: 200 bytes.
+            /// Required for Android and HarmonyOS pushes. Optional for iOS push notifications. If provided:</para>
             /// <list type="bullet">
-            /// <item><description><para>For iOS 10 and later, the notification title is displayed.</para>
-            /// </description></item>
-            /// <item><description><para>For iOS versions from 8.2 to 10, it replaces the application name in the notification.</para>
-            /// </description></item>
+            /// <item><description>iOS 10+: the notification displays the title.</description></item>
+            /// <item><description>iOS 8.2 &lt;= iOS version &lt; iOS 10: replaces the notification app name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1524,8 +1396,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to automatically truncate titles and content that are too long.
-            /// Note: This applies only to vendor channels that have explicit limits on title and content length. It does not apply to channels such as APNs, Huawei, and Honor, which limit the total request body size instead of the title and content length.</para>
+            /// <para>Whether to automatically truncate titles and content that are too long.
+            /// Note: This only applies to vendor channels that explicitly limit title and content length. It does not apply to channels like APNs, Huawei, and Honor that do not limit title and content individually but only limit the total request body size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1535,12 +1407,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? Trim { get; set; }
 
             /// <summary>
-            /// <para>iOS notifications are sent through APNs. Specify the environment information.</para>
+            /// <para>iOS notifications are sent through the APNs center. You need to specify the corresponding environment information.</para>
             /// <list type="bullet">
-            /// <item><description><para>DEV: The development environment. This applies to applications installed and debugged directly from Xcode.</para>
-            /// </description></item>
-            /// <item><description><para>PRODUCT: The production environment. This applies to applications distributed through the App Store, TestFlight, Ad Hoc, or enterprise distribution.</para>
-            /// </description></item>
+            /// <item><description>DEV: Development environment, applicable to apps installed and debugged directly via Xcode.</description></item>
+            /// <item><description>PRODUCT: Production environment, applicable to apps distributed through App Store, TestFlight, Ad Hoc, and enterprise distribution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1551,9 +1421,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSApnsEnv { get; set; }
 
             /// <summary>
-            /// <para>The badge number on the top-right corner of the iOS application icon.</para>
+            /// <para>iOS app icon badge number in the upper-right corner.</para>
             /// <remarks>
-            /// <para>If iOSBadgeAutoIncrement is set to true, this parameter must be empty.</para>
+            /// <para>If iOSBadgeAutoIncrement is set to True, this field must be empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1564,11 +1434,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public int? IOSBadge { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the auto-increment badge feature. The default value is false.</para>
+            /// <para>Whether to enable badge auto-increment. Defaults to false.</para>
             /// <remarks>
             /// <para>When this is set to true, iOSBadge must be empty.</para>
             /// </remarks>
-            /// <para>The auto-increment badge feature is maintained by the push server, which keeps a badge count for each device. To use this feature, use SDK version 1.9.5 or later and actively sync the badge number to the server.</para>
+            /// <para>The badge auto-increment feature is maintained by the push server for each device\&quot;s badge count. Users must use SDK version V1.9.5 or later and actively sync the badge number to the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1578,8 +1448,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? IOSBadgeAutoIncrement { get; set; }
 
             /// <summary>
-            /// <para>The extended properties for iOS notifications.</para>
-            /// <para>For iOS 10 and later, specify the resource URL for a rich push notification, such as <c>{&quot;attachment&quot;: &quot;https://xxxx.xxx/notification_pic.png&quot;}</c>. This parameter must be passed in JSON map format, or it will fail to parse.</para>
+            /// <para>Extended properties of iOS notifications.</para>
+            /// <para>On iOS 10+, you can specify the resource URL for rich media push notifications here: <c>{&quot;attachment&quot;: &quot;https://xxxx.xxx/notification_pic.png&quot;} </c>. This parameter must be passed in JSON map format; otherwise, parsing errors will occur.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;attachment&quot;: &quot;<a href="https://xxxx.xxx/notification_pic.png%22%7D">https://xxxx.xxx/notification_pic.png&quot;}</a></para>
@@ -1589,15 +1459,15 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSExtParameters { get; set; }
 
             /// <summary>
-            /// <para>The interruption level. Valid values:</para>
+            /// <para>Interruption level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>passive: The system adds the notification to the notification list without lighting up the screen or playing a sound.</para>
+            /// <item><description><para>passive: The system adds the notification to the notification list without lighting up the screen or playing sound.</para>
             /// </description></item>
-            /// <item><description><para>active: The system immediately displays the notification, lights up the screen, and can play a sound.</para>
+            /// <item><description><para>active: The system immediately displays the notification, lights up the screen, and can play sound.</para>
             /// </description></item>
-            /// <item><description><para>time-sensitive: The system immediately presents the notification, lights up the screen, and can play a sound, but does not break through system notification controls.</para>
+            /// <item><description><para>time-sensitive: The system immediately presents the notification, lights up the screen, and can play sound, but does not break through system notification controls.</para>
             /// </description></item>
-            /// <item><description><para>critical: The system immediately displays the notification, lights up the screen, and plays a sound, bypassing the mute switch.</para>
+            /// <item><description><para>critical: The system immediately displays the notification, lights up the screen, and plays sound bypassing the mute switch.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -1609,9 +1479,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSInterruptionLevel { get; set; }
 
             /// <summary>
-            /// <para>A JSON string for the static pass-through parameters of a Dynamic Island push. It contains static, user-defined information, such as product numbers and order information.</para>
+            /// <para>JSON string. Static pass-through parameters for Dynamic Island push. Contains static user-defined information such as product ID and order information.</para>
             /// <remarks>
-            /// <para>Required when iOSLiveActivityEvent is set to start.</para>
+            /// <para>Required when iOSLiveActivityEvent is start.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1624,7 +1494,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             /// <summary>
             /// <para>The type of Live Activity to start.</para>
             /// <remarks>
-            /// <para>Required when iOSLiveActivityEvent is set to start.</para>
+            /// <para>Required when iOSLiveActivityEvent is start.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1635,7 +1505,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSLiveActivityAttributesType { get; set; }
 
             /// <summary>
-            /// <para>The dynamic pass-through parameters for a Dynamic Island push. It contains real-time updated information, such as price or inventory changes.</para>
+            /// <para>Dynamic pass-through parameters for Dynamic Island push. Contains real-time update information such as price and inventory changes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;status&quot;: &quot;delivered&quot;, &quot;estimatedArrival&quot;: &quot;2023-12-31T12:00:00Z&quot;}</para>
@@ -1645,7 +1515,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSLiveActivityContentState { get; set; }
 
             /// <summary>
-            /// <para>The time until which an ended Live Activity remains on the lock screen. The maximum duration is 4 hours.</para>
+            /// <para>The ended Live Activity will remain on the lock screen until the specified time, up to a maximum of 4 hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1743131967</para>
@@ -1655,9 +1525,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public long? IOSLiveActivityDismissalDate { get; set; }
 
             /// <summary>
-            /// <para>Starts, updates, or ends a Live Activity.</para>
+            /// <para>Start, update, or end a Live Activity.</para>
             /// <list type="bullet">
-            /// <item><description>Enumeration: start | update | end</description></item>
+            /// <item><description>Enum: start | update | end</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1668,7 +1538,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSLiveActivityEvent { get; set; }
 
             /// <summary>
-            /// <para>The Live Activity ID reported by the device to your server. This is the unique identifier for a Live Activity.</para>
+            /// <para>The Live Activity ID reported by the device to the user\&quot;s server. A unique identifier for the Live Activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66B94673-B32E-4CA7-863C-3E523054FD46</para>
@@ -1678,7 +1548,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSLiveActivityId { get; set; }
 
             /// <summary>
-            /// <para>A UNIX timestamp in seconds that marks the content of the activity as outdated.</para>
+            /// <para>Timestamp in seconds, marking the expiration time of the activity content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1743131967</para>
@@ -1688,8 +1558,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public long? IOSLiveActivityStaleDate { get; set; }
 
             /// <summary>
-            /// <para>The sound for the iOS notification. Specify the name of the audio file stored in the app bundle or the Library/Sounds directory of the sandbox. For more information, see How to set notification sounds for iOS pushes.</para>
-            /// <para>If you specify an empty string (&quot;&quot;), the notification is silent. If you do not set this parameter, the default value is \&quot;default\&quot;, which is the system alert sound.</para>
+            /// <para>iOS notification sound. Specify the name of an audio file stored in the app bundle or the sandbox Library/Sounds directory. See: How to set notification sound for iOS push.</para>
+            /// <para>If set to an empty string (&quot;&quot;), the notification is silent. If not set, the default system alert sound is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>””</para>
@@ -1699,7 +1569,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSMusic { get; set; }
 
             /// <summary>
-            /// <para>The mutable content flag for iOS notifications (for iOS 10 and later). If set to true, notifications pushed through APNs can be processed by an extension before being displayed. For silent notifications, this must be set to true.</para>
+            /// <para>iOS notification processing extension flag (iOS 10+). If set to true, APNs push notifications can reach the Extension for processing before being displayed. Must be set to true for silent notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1709,7 +1579,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? IOSMutableContent { get; set; }
 
             /// <summary>
-            /// <para>Specifies the iOS notification category (for iOS 10 and later).</para>
+            /// <para>Specify the iOS notification Category (iOS 10+).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ios</para>
@@ -1719,7 +1589,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSNotificationCategory { get; set; }
 
             /// <summary>
-            /// <para>If a device receives messages with the same CollapseId, they are merged into one. If the device is offline and receives multiple messages with the same CollapseId, only one is displayed in the notification bar. This parameter is supported on iOS 10 and later.</para>
+            /// <para>When a device receives messages with the same CollapseId, they are merged into one. When the device is offline, consecutive messages with the same CollapseId will show only one notification in the notification bar. Supported on iOS 10+.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZD2011</para>
@@ -1729,7 +1599,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSNotificationCollapseId { get; set; }
 
             /// <summary>
-            /// <para>Groups iOS remote notifications using this property. It marks the identifier for a collapsed group. This is supported only on iOS 12.0 and later.</para>
+            /// <para>Groups iOS remote notifications using this property, marking the group identifier for collapsed notifications. Only supported on iOS 12.0+.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -1739,7 +1609,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSNotificationThreadId { get; set; }
 
             /// <summary>
-            /// <para>The score for highlighting the summary. The value must be a floating-point number from 0 to 1.</para>
+            /// <para>Summary highlight score. Value range: a floating-point number in [0,1\].</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
@@ -1749,9 +1619,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public double? IOSRelevanceScore { get; set; }
 
             /// <summary>
-            /// <para>If a device is offline when a message is pushed (meaning the persistent connection to the Mobile Push server is unavailable), this push is sent once as a notification through the Apple APNs channel.</para>
+            /// <para>When the device is offline during message push (i.e., the persistent connection channel to the Mobile Push server is disconnected), this push will be delivered as a notification through Apple\&quot;s APNs channel once.</para>
             /// <remarks>
-            /// <para>Converting offline messages to notifications is only applicable to the production environment.</para>
+            /// <para>Offline message-to-notification conversion only applies to the production environment.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1762,7 +1632,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? IOSRemind { get; set; }
 
             /// <summary>
-            /// <para>The content of the iOS notification when an iOS message is converted to a notification. This parameter is valid only when iOSApnsEnv is set to PRODUCT and iOSRemind is set to true.</para>
+            /// <para>iOS notification content used when converting iOS messages to notifications. Only valid when iOSApnsEnv=PRODUCT and iOSRemind is true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ios通知body</para>
@@ -1772,7 +1642,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public string IOSRemindBody { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable iOS silent notifications.</para>
+            /// <para>Whether to enable iOS silent notification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1782,7 +1652,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public bool? IOSSilentNotification { get; set; }
 
             /// <summary>
-            /// <para>The subtitle of the iOS notification (for iOS 10 and later).</para>
+            /// <para>iOS notification subtitle content (iOS 10+).</para>
             /// 
             /// <b>Example:</b>
             /// <para>subtitle</para>

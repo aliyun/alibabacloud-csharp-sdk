@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class PushV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the push message.</para>
+        /// <para>The message ID that identifies a push notification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11747540****88320</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159E4422-6624-****-8943-DFD98D34858C</para>
