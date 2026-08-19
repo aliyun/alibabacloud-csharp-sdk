@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainSrcTrafficDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time interval between the entries returned. Unit: seconds.</para>
+        /// <para>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-23T15:59:59Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The beginning of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-29T16:00:00Z</para>

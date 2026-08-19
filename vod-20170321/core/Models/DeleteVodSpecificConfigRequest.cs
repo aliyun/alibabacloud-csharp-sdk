@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodSpecificConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration.</para>
+        /// <para>The configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name.</para>
+        /// <para>The accelerated domain name for ApsaraVideo VOD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The environment from which the domain name configurations are deleted. Valid values:</para>
+        /// <para>The environment from which you want to delete the configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>online: production environment</description></item>
-        /// <item><description>gray: simulation environment</description></item>
+        /// <item><description>gray: canary release environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

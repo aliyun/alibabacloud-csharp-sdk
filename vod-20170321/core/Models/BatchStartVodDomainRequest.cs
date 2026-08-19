@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class BatchStartVodDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name. Separate multiple domain names with commas (,).</para>
+        /// <para>The accelerated domain names for ApsaraVideo VOD. Separate multiple domain names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

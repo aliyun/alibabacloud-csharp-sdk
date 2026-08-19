@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class VerifyVodDomainOwnerRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</para>
+        /// <para>The domain name to verify. Only a single domain name can be verified at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The verification method. Valid values:</para>
+        /// <para>The domain name ownership verification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dnsCheck</b>: uses a Domain Name System (DNS) record</description></item>
-        /// <item><description><b>fileCheck</b>: uses a verification file</description></item>
+        /// <item><description><b>dnsCheck</b>: DNS resolution verification.</description></item>
+        /// <item><description><b>fileCheck</b>: File verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAuditHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting rule of the results. Valid values:</para>
+        /// <para>The sorting method for results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreationTime:Desc</b>: sorts the results based on the creation time in descending order. This is the default value.</description></item>
-        /// <item><description><b>CreationTime:Asc</b>: sorts the results based on the creation time in ascending order.</description></item>
+        /// <item><description><b>CreationTime:Desc</b> (default): sorts results by creation time in descending order.</description></item>
+        /// <item><description><b>CreationTime:Asc</b>: sorts results by creation time in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video.</para>
+        /// <para>The video ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the target resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AppInfo</para>

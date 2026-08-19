@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainRealTimeDetailDataRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name. You can specify a maximum of 20 accelerated domain names in each call. Separate domain names with commas (,).</para>
+        /// <para>The accelerated domain name to query.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 20 domain names at a time.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and in the left-side navigation pane, choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b> to view the accelerated domain names that you have added to ApsaraVideo VOD. Alternatively, call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</para>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time, and the difference between the end time and the start time cannot exceed 10 minutes.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,19 +39,23 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:</para>
-        /// <para>qps: the number of queries per second bps: bandwidth data http_code: HTTP status codes</para>
+        /// <para>The type of access data to query. You can specify multiple types. Separate multiple types with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>qps</b>: queries per second (QPS).</description></item>
+        /// <item><description><b>bps</b>: bandwidth data.</description></item>
+        /// <item><description><b>http_code</b>: HTTP status codes.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>bps</para>
+        /// <para>qps</para>
         /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The name of the Internet service provider (ISP).</para>
+        /// <para>The Internet service provider (ISP) name in English. If you do not specify this parameter, data for all ISPs is queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unicom</para>
@@ -55,7 +65,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. If you do not specify a region, data in all regions is queried.</para>
+        /// <para>The region name in English. If you do not specify this parameter, data for all regions is queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shanghai</para>
@@ -65,8 +75,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string LocationNameEn { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return a summary value. Valid values:</para>
-        /// <para>true false (default)</para>
+        /// <para>Specifies whether to return aggregated data by domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Returns aggregated data across all domain names.</description></item>
+        /// <item><description><b>false</b> (default): Returns data grouped by domain name.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -76,12 +89,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Merge { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return a summary value. Valid values:</para>
+        /// <para>Specifies whether to return aggregated data by region and ISP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: groups the results by domain name and merges the results by region and ISP.</description></item>
-        /// <item><description><b>false</b>: groups the results by domain name.</description></item>
+        /// <item><description><b>true</b>: Returns data grouped only by domain name, with region and ISP values aggregated.</description></item>
+        /// <item><description><b>false</b> (default): Returns data grouped by domain name, region, and ISP.</description></item>
         /// </list>
-        /// <para>Default value: <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,8 +107,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

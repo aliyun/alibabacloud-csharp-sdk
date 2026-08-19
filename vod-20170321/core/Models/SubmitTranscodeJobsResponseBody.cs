@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitTranscodeJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the transcoding task that was submitted.</para>
+        /// <para>The ID of the submitted transcoding task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9f4a0df7da2c8a81c8c0408c84****</para>

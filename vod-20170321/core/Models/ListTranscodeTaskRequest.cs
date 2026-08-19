@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListTranscodeTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time, which must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-23T12:40:12Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. You can specify a page number to return data from the specified page. Default value: <b>1</b>.</para>
+        /// <para>The page number. Specify this parameter to return data starting from the specified page. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-23T12:35:12Z</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the audio or video file. You can use one of the following methods to obtain the ID of the file:</para>
+        /// <para>The audio or video ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</description></item>
-        /// <item><description>Obtain the value of VideoId by calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</description></item>
+        /// <item><description>For audio or video files uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the ID.</description></item>
+        /// <item><description>Obtain the video ID from the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</description></item>
+        /// <item><description>After the audio or video file is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the VideoId value in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

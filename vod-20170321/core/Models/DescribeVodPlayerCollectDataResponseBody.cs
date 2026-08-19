@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodPlayerCollectDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data list.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVodPlayerCollectDataResponseBodyDataList> DataList { get; set; }
         public class DescribeVodPlayerCollectDataResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The returned data metric.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Vv</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Metric { get; set; }
 
             /// <summary>
+            /// <para>The value of the returned data metric.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100.0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? Value { get; set; }
 
             /// <summary>
+            /// <para>The period-over-period percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? ValueRatio { get; set; }
 
             /// <summary>
+            /// <para>The period-over-period value of the returned data metric.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200.0</para>
             /// </summary>

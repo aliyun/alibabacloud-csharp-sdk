@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application. The application name must be unique.</para>
+        /// <para>The application name. The name must be unique.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description>The name can be up to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), hyphens (-), and at signs (@).</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// <list type="bullet">
-        /// <item><description>The description can contain up to 512 characters in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description>The description can be up to 512 characters in length.</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

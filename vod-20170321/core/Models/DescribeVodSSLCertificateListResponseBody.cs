@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodSSLCertificateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about certificates.</para>
+        /// <para>The certificate list information.</para>
         /// </summary>
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The number of certificates that are returned.</para>
+            /// <para>The number of certificates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+            /// <para>The current page number. The start value is 1. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Valid values: integers from 1 to 1000.</para>
+            /// <para>The page size. Valid values: any integer from 1 to 1000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>

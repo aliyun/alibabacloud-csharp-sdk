@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainBpsDataRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name to be queried. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).</para>
+        /// <para>The accelerated domain name to query.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, the pooled data of all accelerated domain names is returned by default.</description></item>
+        /// <item><description>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 500 domain names at a time.</description></item>
+        /// <item><description>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also invoke the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -20,7 +25,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T14:00:00Z</para>
@@ -30,11 +39,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The query interval. Unit: seconds. Valid values: <b>300</b>, <b>3600</b>, and <b>86400</b>.</para>
+        /// <para>The time granularity of the data. Unit: seconds. Valid values: <b>300</b>, <b>3600</b>, and <b>86400</b>. If you do not specify this parameter or specify an unsupported value, the default value is used. The supported time granularity varies based on the time span specified by <c>StartTime</c> and <c>EndTime</c>:</para>
         /// <list type="bullet">
-        /// <item><description>If the time range to query is less than 3 days, valid values are <b>300</b>, <b>3600</b>, and <b>86400</b>. The default value is 300.</description></item>
-        /// <item><description>If the time range to query is from 3 to less than 31 days, valid values are <b>3600</b> and <b>86400</b>. The default value is 3600.</description></item>
-        /// <item><description>If the time range to query is from 31 to 90 days, the valid value is <b>86400</b>.</description></item>
+        /// <item><description>Less than 3 days (excluding exactly 3 days): <b>300</b> (default), <b>3600</b>, and <b>86400</b>.</description></item>
+        /// <item><description>3 to 31 days (excluding exactly 31 days): <b>3600</b> (default) and <b>86400</b>.</description></item>
+        /// <item><description>31 days or more: <b>86400</b> (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,20 +54,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.</para>
+        /// <para>The name of the Internet service provider (ISP) in English. If you do not specify this parameter, data of all ISPs is queried by default.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba</para>
+        /// <para>unicom</para>
         /// </summary>
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. If you do not specify this parameter, the data in all regions is returned. Only data in the China (Shanghai) region can be queried.</para>
+        /// <para>The name of the region in English. If you do not specify this parameter, data of all regions is queried by default. Currently, only the Shanghai region is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>shanghai</para>
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
@@ -69,10 +78,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <remarks>
-        /// <para>The minimum query interval is 5 minutes. If you do not specify this parameter, the data in the last 24 hours is queried.</para>
-        /// </remarks>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T13:00:00Z</para>

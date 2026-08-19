@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class BatchGetMediaInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the media asset. The ID can be the video ID or audio ID. Separate IDs with commas (,). You can specify a maximum of 20 IDs. You can use one of the following methods to obtain the ID of the media asset:</para>
+        /// <para>The media asset IDs, which are audio/video IDs (VideoId). Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the IDs by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Media Files &gt; Audio/Video. On the Video and Audio page, view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the CreateUploadVideo operation that you call to upload media assets.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the SearchMedia operation that you call to query the media ID after the media asset is uploaded.</description></item>
+        /// <item><description>For audio/video files uploaded through the console, log on to the ApsaraVideo VOD console and choose Media Files &gt; Audio/Video to view the audio/video IDs.</description></item>
+        /// <item><description>When you call the operation to obtain the upload URL and credential for audio/video files, the VideoId value is returned as a response parameter.</description></item>
+        /// <item><description>After an audio/video file is uploaded, you can call the SearchMedia operation to query the VideoId value in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaIds { get; set; }
 
         /// <summary>
+        /// <para>The list of custom IDs. Separate multiple custom IDs with commas (,). You can specify up to 20 IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-123,1234-1234</para>
         /// </summary>

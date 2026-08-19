@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B0BCF9F-2FD5-4817-****-7BEBBE3AF90B&quot;</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries that were collected in playback statistics on top videos.</para>
+        /// <para>The total number of top videos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

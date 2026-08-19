@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: integers from 1 to 1000.</para>
+        /// <para>The page size. Valid values: any integer from 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query certificates.</para>
+        /// <para>The certificate name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>certabc</para>

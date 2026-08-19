@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodStorageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time granularity at which the data was queried. Valid values:</para>
+        /// <para>The time granularity of the returned data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>hour</b></description></item>
-        /// <item><description><b>day</b></description></item>
+        /// <item><description><b>hour</b>: hourly data.</description></item>
+        /// <item><description><b>day</b>: daily data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C370DAF1-C838-4288-****-9A87633D248E</para>

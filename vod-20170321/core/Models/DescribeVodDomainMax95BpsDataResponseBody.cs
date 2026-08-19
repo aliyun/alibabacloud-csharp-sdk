@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The domain name for CDN.</para>
+        /// <para>The accelerated domain name information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -58,11 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomesticMax95Bps { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
-        /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
-        /// </remarks>
+        /// <para>The end time of the data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T13:00:00Z</para>
@@ -102,8 +98,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>

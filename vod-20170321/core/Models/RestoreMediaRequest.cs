@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RestoreMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the media asset (VideoId). Separate multiple IDs with commas (,). You can specify a maximum of 20 IDs. You can use one of the following methods to obtain the ID of the media asset:</para>
+        /// <para>The media IDs, which are audio or video IDs (VideoId). Separate multiple IDs with commas (,). A maximum of 20 IDs are supported. You can obtain the IDs by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Media Files &gt; Audio/Video. On the Video and Audio page, view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the CreateUploadVideo operation that you call to upload media assets.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the SearchMedia operation that you call to query the media ID after the media asset is uploaded.</description></item>
+        /// <item><description>For audio or video files uploaded in the console, log on to the ApsaraVideo VOD console and choose Media Files &gt; Audio/Video to view the audio or video ID.</description></item>
+        /// <item><description>When you call the CreateUploadVideo operation to obtain the upload URL and credential, the video ID is the value of the VideoId parameter in the response.</description></item>
+        /// <item><description>After the audio or video file is uploaded, you can call the SearchMedia operation to query the video ID, which is the value of the VideoId parameter in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaIds { get; set; }
 
         /// <summary>
-        /// <para>The number of days during which media assets remain in the restored state. Default value: 1. The maximum validity period of a restored Archive media asset is 7 days and the maximum validity period of a restored Cold Archive media asset is 365 days.</para>
+        /// <para>The restoration duration. Default value: 1 day. Maximum value for Archive media assets: 7 days. Maximum value for Cold Archive media assets: 365 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RestoreDays { get; set; }
 
         /// <summary>
-        /// <para>The restoration priority. This parameter is required only when you restore a Cold Archive media file. Valid values:</para>
+        /// <para>The restoration priority. This parameter is required only for Cold Archive media assets. If this parameter is not specified, the default value <b>Standard</b> is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Expedited</b>: The file is restored within 1 hour.</description></item>
-        /// <item><description><b>Standard</b>: The file is restored within 2 to 5 hours.</description></item>
-        /// <item><description><b>Bulk</b>: The file is restored within 5 to 12 hours.</description></item>
+        /// <item><description><b>Expedited</b>: High priority. The restoration is completed within 1 hour.</description></item>
+        /// <item><description><b>Standard</b> (default): Standard priority. The restoration is completed within 2 to 5 hours.</description></item>
+        /// <item><description><b>Bulk</b>: Batch priority. The restoration is completed within 5 to 12 hours.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RestoreTier { get; set; }
 
         /// <summary>
-        /// <para>The modification range. Valid values:</para>
+        /// <para>The scope of the change. If this parameter is not specified, the default value <b>All</b> is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: restores all resources, including the source files and transcoded streams.</description></item>
-        /// <item><description><b>SourceFile</b>: restores only the source files.</description></item>
+        /// <item><description><b>All</b> (default): Applies tiered storage to all resources (source files and transcoded streams) of the media asset.</description></item>
+        /// <item><description><b>SourceFile</b>: Applies tiered storage only to the video source file of the media asset ID. Resources other than the source file use Standard storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

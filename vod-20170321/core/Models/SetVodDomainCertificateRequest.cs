@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetVodDomainCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the certificate.</para>
+        /// <para>The certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert_name</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</para>
+        /// <para>The accelerated domain name to which the certificate belongs. The domain name must be of the HTTPS acceleration type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private key. This parameter is required only if you enable the SSL certificate.</para>
+        /// <para>The content of the private key. If you do not enable the certificate, you do not need to enter this parameter. If you configure a certificate, enter the private key content.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</para>
+        /// <para>Specifies whether to enable the HTTPS certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b> (default): disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate. This parameter is required only if you enable the SSL certificate.</para>
+        /// <para>The content of the security certificate. If you do not enable the certificate, you do not need to enter this parameter. If you configure a certificate, enter the certificate content.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

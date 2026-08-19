@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIImageAuditJobRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration information about the review job.</para>
+        /// <para>The review node configuration.</para>
         /// <list type="bullet">
-        /// <item><description>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</description></item>
-        /// <item><description>The value of ResourceType can contain only letters, digits, and underscores (_).</description></item>
+        /// <item><description>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type and adjust the review standards and rules for the specified type.</description></item>
+        /// <item><description>Usage notes for ResourceType: only letters, digits, and underscores are allowed.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a>. The value takes effect after Alibaba Cloud processes your ticket.</description></item>
-        /// <item><description>If you want to change moderation policies and rules based on ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a> to contact technical support.</description></item>
+        /// <item><description>You can customize the ResourceType field as described in the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</description></item>
+        /// <item><description>To adjust the review standards and rules for a specific ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to request technical support.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaAuditConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
-        /// <para>The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.</para>
+        /// <para>The image ID.</para>
+        /// <para>The unique identifier of the image returned after the image is uploaded to ApsaraVideo VOD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,15 +58,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AI template. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The AI template ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</description></item>
-        /// <item><description>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template, the AI template ID is the value of TemplateId in the response.</description></item>
+        /// <item><description>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to obtain the AI template ID, which is the value of TemplateId in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VOD-0003-00****</para>
+        /// <para>a07a7f7d7d10eb9fd999e56ecc****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

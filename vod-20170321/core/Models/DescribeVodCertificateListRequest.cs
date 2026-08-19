@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodCertificateListRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for CDN.</para>
+        /// <para>The accelerated domain name for ApsaraVideo VOD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

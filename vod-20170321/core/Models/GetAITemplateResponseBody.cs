@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAITemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>080DA371-8AC0-4CD4-4476-33E64282****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetAITemplateResponseBodyTemplateInfo TemplateInfo { get; set; }
         public class GetAITemplateResponseBodyTemplateInfo : TeaModel {
             /// <summary>
-            /// <para>The time when the AI template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the AI template was created. The time is displayed in ISO 8601 format in UTC. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-08T06:50:45Z</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the template is the default AI template. Valid values:</para>
+            /// <para>Indicates whether the AI template is the default template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b></description></item>
-            /// <item><description><b>NotDefault</b></description></item>
+            /// <item><description><b>Default</b>: The template is the default template.</description></item>
+            /// <item><description><b>NotDefault</b>: The template is not the default template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The time when the AI template was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the AI template was last modified. The time is displayed in ISO 8601 format in UTC. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-08T06:58:45Z</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The source of the AI template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>System</b></description></item>
-            /// <item><description><b>Custom</b></description></item>
+            /// <item><description><b>System</b>: system.</description></item>
+            /// <item><description><b>Custom</b>: custom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The detailed configurations of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</para>
+            /// <para>The detailed configuration of the AI template. The value is a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AuditRange&quot;:[&quot;text-title&quot;,&quot;video&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditAutoBlock&quot;:&quot;yes&quot;}</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TemplateConfig { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AI template.</para>
+            /// <para>The AI template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706a0063dd733f6a823ef32e0a5****</para>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The type of the AI template. Valid values:</para>
+            /// <para>The templatetype of the AI template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AIMediaAudit</b>: automated review</description></item>
-            /// <item><description><b>AIImage</b>: smart thumbnail</description></item>
+            /// <item><description><b>AIMediaAudit</b>: automated review.</description></item>
+            /// <item><description><b>AIImage</b>: smart thumbnail.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,89 +10,44 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the media assets.</para>
+        /// <para>The list of media asset information.</para>
         /// </summary>
         [NameInMap("MediaList")]
         [Validation(Required=false)]
         public List<SearchMediaResponseBodyMediaList> MediaList { get; set; }
         public class SearchMediaResponseBodyMediaList : TeaModel {
-            /// <summary>
-            /// <para>Details about AI data.</para>
-            /// </summary>
             [NameInMap("AiData")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListAiData AiData { get; set; }
             public class SearchMediaResponseBodyMediaListAiData : TeaModel {
-                /// <summary>
-                /// <para>The AI tags.</para>
-                /// </summary>
                 [NameInMap("AiLabelInfo")]
                 [Validation(Required=false)]
                 public List<SearchMediaResponseBodyMediaListAiDataAiLabelInfo> AiLabelInfo { get; set; }
                 public class SearchMediaResponseBodyMediaListAiDataAiLabelInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The category.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Transportation</para>
-                    /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the tag.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10310250338</para>
-                    /// </summary>
                     [NameInMap("LabelId")]
                     [Validation(Required=false)]
                     public string LabelId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the tag.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Vehicles</para>
-                    /// </summary>
                     [NameInMap("LabelName")]
                     [Validation(Required=false)]
                     public string LabelName { get; set; }
 
-                    /// <summary>
-                    /// <para>The clips.</para>
-                    /// </summary>
                     [NameInMap("Occurrences")]
                     [Validation(Required=false)]
                     public List<SearchMediaResponseBodyMediaListAiDataAiLabelInfoOccurrences> Occurrences { get; set; }
                     public class SearchMediaResponseBodyMediaListAiDataAiLabelInfoOccurrences : TeaModel {
-                        /// <summary>
-                        /// <para>The start time of the clip.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1.4</para>
-                        /// </summary>
                         [NameInMap("From")]
                         [Validation(Required=false)]
                         public double? From { get; set; }
 
-                        /// <summary>
-                        /// <para>The score.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0.75287705</para>
-                        /// </summary>
                         [NameInMap("Score")]
                         [Validation(Required=false)]
                         public double? Score { get; set; }
 
-                        /// <summary>
-                        /// <para>The end time of the clip.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2.5</para>
-                        /// </summary>
                         [NameInMap("To")]
                         [Validation(Required=false)]
                         public double? To { get; set; }
@@ -101,39 +56,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 }
 
-                /// <summary>
-                /// <para>The information about subtitles.</para>
-                /// </summary>
                 [NameInMap("OcrInfo")]
                 [Validation(Required=false)]
                 public List<SearchMediaResponseBodyMediaListAiDataOcrInfo> OcrInfo { get; set; }
                 public class SearchMediaResponseBodyMediaListAiDataOcrInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The text content.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>I\&quot;m Jane.</para>
-                    /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
-                    /// <summary>
-                    /// <para>The start time of the subtitle.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1.4</para>
-                    /// </summary>
                     [NameInMap("From")]
                     [Validation(Required=false)]
                     public double? From { get; set; }
 
-                    /// <summary>
-                    /// <para>The end time of the subtitle.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2.5</para>
-                    /// </summary>
                     [NameInMap("To")]
                     [Validation(Required=false)]
                     public double? To { get; set; }
@@ -142,49 +76,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             }
 
-            /// <summary>
-            /// <para>The basic information about AI data.</para>
-            /// </summary>
             [NameInMap("AiRoughData")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListAiRoughData AiRoughData { get; set; }
             public class SearchMediaResponseBodyMediaListAiRoughData : TeaModel {
-                /// <summary>
-                /// <para>The AI category.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TV series</para>
-                /// </summary>
                 [NameInMap("AiCategory")]
                 [Validation(Required=false)]
                 public string AiCategory { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the AI task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cd35b0b0025f71edbfcb472190a9xxxx</para>
-                /// </summary>
                 [NameInMap("AiJobId")]
                 [Validation(Required=false)]
                 public string AiJobId { get; set; }
 
-                /// <summary>
-                /// <para>The save type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TEXT</para>
-                /// </summary>
                 [NameInMap("SaveType")]
                 [Validation(Required=false)]
                 public string SaveType { get; set; }
 
-                /// <summary>
-                /// <para>The data status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SaveSuccess</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -192,14 +99,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">The information about the auxiliary media asset</a>.</para>
+            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">Auxiliary media asset information</a>.</para>
             /// </summary>
             [NameInMap("AttachedMedia")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListAttachedMedia AttachedMedia { get; set; }
             public class SearchMediaResponseBodyMediaListAttachedMedia : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app-****</para>
@@ -209,11 +116,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the auxiliary media asset. Valid values:</para>
+                /// <para>The business type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>watermark</b></description></item>
-                /// <item><description><b>subtitle</b></description></item>
-                /// <item><description><b>material</b></description></item>
+                /// <item><description><b>watermark</b>: watermark.</description></item>
+                /// <item><description><b>subtitle</b>: subtitle.</description></item>
+                /// <item><description><b>material</b>: material.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -231,7 +138,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public List<SearchMediaResponseBodyMediaListAttachedMediaCategories> Categories { get; set; }
                 public class SearchMediaResponseBodyMediaListAttachedMediaCategories : TeaModel {
                     /// <summary>
-                    /// <para>The category ID of the auxiliary media asset.</para>
+                    /// <para>The category ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10027394</para>
@@ -241,17 +148,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? CateId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the category.</para>
+                    /// <para>The category name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test1</para>
+                    /// <para>cate1</para>
                     /// </summary>
                     [NameInMap("CateName")]
                     [Validation(Required=false)]
                     public string CateName { get; set; }
 
                     /// <summary>
-                    /// <para>The level of the category.</para>
+                    /// <para>The category level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -261,7 +168,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? Level { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the parent node.</para>
+                    /// <para>The parent node ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-1</para>
@@ -273,7 +180,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:45:25Z</para>
@@ -283,17 +190,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the auxiliary media asset.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test3</para>
+                /// <para>Alibaba Cloud VOD-assisted media asset description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the auxiliary media asset.</para>
+                /// <para>The auxiliary media asset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a82a2cd7d4e147ba0ed6c1ee372****</para>
@@ -303,7 +210,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:48:25Z</para>
@@ -313,11 +220,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ModificationTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the auxiliary media asset. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Uploading</b></description></item>
-                /// <item><description><b>Normal</b></description></item>
-                /// <item><description><b>UploadFail</b></description></item>
+                /// <item><description><b>Uploading</b> (uploading): the initial state. The auxiliary media asset is being uploaded.</description></item>
+                /// <item><description><b>Normal</b> (normal): the auxiliary media asset is uploaded.</description></item>
+                /// <item><description><b>UploadFail</b> (failed): the auxiliary media asset failed to be uploaded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -328,7 +235,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the auxiliary media asset is stored.</para>
+                /// <para>The storage region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outin-bfefbb90a47c11*****7426.oss-cn-shanghai.aliyuncs.com</para>
@@ -338,27 +245,27 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the auxiliary media asset.</para>
+                /// <para>The tags.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test2</para>
+                /// <para>tag1</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The title of the auxiliary media asset.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>Alibaba Cloud VOD-assisted media asset Title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the auxiliary media asset.</para>
+                /// <para>The auxiliary media asset URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/****.png">https://example.com/****.png</a></para>
@@ -370,14 +277,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">The information about the audio</a>.</para>
+            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">Audio information</a>.</para>
             /// </summary>
             [NameInMap("Audio")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListAudio Audio { get; set; }
             public class SearchMediaResponseBodyMediaListAudio : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app-****</para>
@@ -387,7 +294,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the audio file.</para>
+                /// <para>The audio ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a82a2cd7d4e147bbed6c1ee372****</para>
@@ -397,7 +304,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AudioId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the category.</para>
+                /// <para>The category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000123</para>
@@ -407,17 +314,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the category.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ceshi</para>
+                /// <para>cate1</para>
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the thumbnail.</para>
+                /// <para>The thumbnail URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://example.com/image04.jpg">http://example.com/image04.jpg</a></para>
@@ -427,7 +334,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time when the audio stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:45:25Z</para>
@@ -437,20 +344,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the audio file.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>audio description</para>
+                /// <para>Alibaba Cloud VOD Audio Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</para>
+                /// <para>The download switch. Offline download is allowed only when the switch is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>on</b></description></item>
-                /// <item><description><b>off</b></description></item>
+                /// <item><description><b>on</b> (enabled): the initial state. Offline download is allowed.</description></item>
+                /// <item><description><b>off</b> (disabled): offline download is disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -461,7 +368,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string DownloadSwitch { get; set; }
 
                 /// <summary>
-                /// <para>The duration of the audio file.</para>
+                /// <para>The duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -471,12 +378,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The source of the audio file. Valid values:</para>
+                /// <para>The source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>general</b>: The audio file is uploaded by using ApsaraVideo VOD.</description></item>
-                /// <item><description><b>short_video</b>: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see <a href="https://help.aliyun.com/document_detail/53407.html">Introduction</a>.</description></item>
-                /// <item><description><b>editing</b>: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/68536.html">ProduceEditingProjectVideo</a>.</description></item>
-                /// <item><description><b>live</b>: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.</description></item>
+                /// <item><description><b>general</b> (ApsaraVideo VOD upload): standard upload.</description></item>
+                /// <item><description><b>short_video</b> (the short video SDK): files uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see <a href="https://help.aliyun.com/document_detail/53407.html">Short video SDK</a>.</description></item>
+                /// <item><description><b>editing</b> (online editing): files uploaded to ApsaraVideo VOD by using online editing. For more information, see <a href="https://help.aliyun.com/document_detail/68536.html">Produce videos</a>.</description></item>
+                /// <item><description><b>live</b> (live recording): files uploaded to ApsaraVideo VOD through live recording.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -487,7 +394,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MediaSource { get; set; }
 
                 /// <summary>
-                /// <para>The time when the audio file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:48:25Z</para>
@@ -497,12 +404,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ModificationTime { get; set; }
 
                 /// <summary>
-                /// <para>The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:</para>
+                /// <para>The preprocessing status. Only preprocessed videos can be used for live streaming. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UnPreprocess</b></description></item>
-                /// <item><description><b>Preprocessing</b></description></item>
-                /// <item><description><b>PreprocessSucceed</b></description></item>
-                /// <item><description><b>PreprocessFailed</b></description></item>
+                /// <item><description><b>UnPreprocess</b>: not preprocessed.</description></item>
+                /// <item><description><b>Preprocessing</b>: preprocessing.</description></item>
+                /// <item><description><b>PreprocessSucceed</b>: preprocessing complete.</description></item>
+                /// <item><description><b>PreprocessFailed</b>: preprocessing failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -513,6 +420,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PreprocessStatus { get; set; }
 
                 /// <summary>
+                /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123-123</para>
                 /// </summary>
@@ -521,7 +430,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ReferenceId { get; set; }
 
                 /// <summary>
-                /// <para>The period of time in which the audio file remains in the restored state.</para>
+                /// <para>The expiration time of the media asset restoration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-30T10:14:14Z</para>
@@ -531,11 +440,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string RestoreExpiration { get; set; }
 
                 /// <summary>
-                /// <para>The restoration status of the audio file. Valid values:</para>
+                /// <para>The media asset restoration status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Processing</b></description></item>
-                /// <item><description><b>Success</b></description></item>
-                /// <item><description><b>Failed</b></description></item>
+                /// <item><description><b>Processing</b>: restoring.</description></item>
+                /// <item><description><b>Success</b>: restoration successful.</description></item>
+                /// <item><description><b>Failed</b>: restoration failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -546,7 +455,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string RestoreStatus { get; set; }
 
                 /// <summary>
-                /// <para>The size of the audio file.</para>
+                /// <para>The size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -556,26 +465,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>The automatic snapshots.</para>
+                /// <para>The list of automatic snapshots.</para>
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
 
                 /// <summary>
-                /// <para>The sprite snapshots.</para>
+                /// <para>The list of sprites.</para>
                 /// </summary>
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
                 public List<string> SpriteSnapshots { get; set; }
 
                 /// <summary>
-                /// <para>The status of the audio file. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Uploading</b></description></item>
-                /// <item><description><b>Normal</b></description></item>
-                /// <item><description><b>UploadFail</b></description></item>
-                /// <item><description><b>Deleted</b></description></item>
+                /// <item><description><b>Uploading</b>: uploading.</description></item>
+                /// <item><description><b>Normal</b>: normal.	</description></item>
+                /// <item><description><b>UploadFail</b>: upload failed.</description></item>
+                /// <item><description><b>Deleted</b>: deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -586,16 +495,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The storage class of the audio file. Valid values:</para>
+                /// <para>The storage class of the media asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Standard</b>: All media resources are stored as Standard objects.</description></item>
-                /// <item><description><b>IA</b>: All media resources are stored as IA objects.</description></item>
-                /// <item><description><b>Archive</b>: All media resources are stored as Archive objects.</description></item>
-                /// <item><description><b>ColdArchive</b>: All media resources are stored as Cold Archive objects.</description></item>
-                /// <item><description><b>SourceIA</b>: Only the source file is stored as an IA object.</description></item>
-                /// <item><description><b>SourceArchive</b>: Only the source file is stored as an Archive object.</description></item>
-                /// <item><description><b>SourceColdArchive</b>: Only the source file is stored as a Cold Archive object.</description></item>
-                /// <item><description><b>Changing</b>: The storage class is being modified.</description></item>
+                /// <item><description><b>Standard</b>: standard.</description></item>
+                /// <item><description><b>IA</b>: Infrequent Access (media asset).</description></item>
+                /// <item><description><b>Archive</b>: Archive (media asset).</description></item>
+                /// <item><description><b>ColdArchive</b>: Cold Archive (media asset).</description></item>
+                /// <item><description><b>SourceIA</b>: Infrequent Access (source file).</description></item>
+                /// <item><description><b>SourceArchive</b>: Archive (source file).</description></item>
+                /// <item><description><b>SourceColdArchive</b>: Cold Archive (source file).</description></item>
+                /// <item><description><b>Changing</b>: the storage class is being changed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -606,7 +515,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the audio is stored.</para>
+                /// <para>The storage region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outin-aaa*****aa.oss-cn-shanghai.aliyuncs.com</para>
@@ -616,7 +525,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the audio file.</para>
+                /// <para>The tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag1,tag2</para>
@@ -626,10 +535,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The title of the audio file</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>audio</para>
+                /// <para>Alibaba Cloud VOD Audio Title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -638,9 +547,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// <para>The transcoding mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>FastTranscode</b>: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</description></item>
-                /// <item><description><b>NoTranscode</b>: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</description></item>
-                /// <item><description><b>AsyncTranscode</b>: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</description></item>
+                /// <item><description><b>FastTranscode</b> (standard transcoding, default): transcoding starts after the upload is complete, and the audio can be played only after transcoding is complete.</description></item>
+                /// <item><description><b>NoTranscode</b> (distribution without transcoding): the audio can be played immediately after the upload is complete without transcoding.</description></item>
+                /// <item><description><b>AsyncTranscode</b> (distribution and transcoding upon upload): the audio can be played immediately after the upload is complete, and transcoding is performed asynchronously.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -653,7 +562,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The time when the media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the media asset was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-19T03:45:25Z</para>
@@ -663,14 +572,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">The information about the image</a>.</para>
+            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">Image information</a>.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListImage Image { get; set; }
             public class SearchMediaResponseBodyMediaListImage : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app-****</para>
@@ -680,7 +589,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the category.</para>
+                /// <para>The category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000123</para>
@@ -690,17 +599,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the category.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>beauty</para>
+                /// <para>cate1</para>
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:45:25Z</para>
@@ -710,17 +619,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the image file.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>image test</para>
+                /// <para>Alibaba Cloud VOD Image Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image file.</para>
+                /// <para>The image ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11130843741se99wqmoes****</para>
@@ -730,7 +639,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the image file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The last modification time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:48:25Z</para>
@@ -740,11 +649,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ModificationTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the image file.</para>
+                /// <para>The image status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Uploading</b></description></item>
-                /// <item><description><b>Normal</b></description></item>
-                /// <item><description><b>UploadFail</b></description></item>
+                /// <item><description><b>Uploading</b> (uploading): the initial state. The image is being uploaded.</description></item>
+                /// <item><description><b>Normal</b> (normal): the image is uploaded.</description></item>
+                /// <item><description><b>UploadFail</b> (failed): the image failed to be uploaded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -755,7 +664,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the image is stored.</para>
+                /// <para>The storage region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</para>
@@ -765,7 +674,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the image file.</para>
+                /// <para>The tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag1</para>
@@ -775,17 +684,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The title of the image file.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>image1</para>
+                /// <para>Alibaba Cloud VOD Image Title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the image file.</para>
+                /// <para>The image URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/****.png">https://example.com/****.png</a></para>
@@ -797,7 +706,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The ID of the file.</para>
+            /// <para>The media ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a82a2cd7d4e147bbed6c1ee372****</para>
@@ -807,12 +716,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The type of the media asset. Valid values:</para>
+            /// <para>The media type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>video</b></description></item>
-            /// <item><description><b>audio</b></description></item>
-            /// <item><description><b>image</b></description></item>
-            /// <item><description><b>attached</b></description></item>
+            /// <item><description><b>video</b>: video.</description></item>
+            /// <item><description><b>audio</b>: audio.</description></item>
+            /// <item><description><b>image</b>: image.</description></item>
+            /// <item><description><b>attached</b>: auxiliary media asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -823,14 +732,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">The information about the video</a>.</para>
+            /// <para><a href="https://help.aliyun.com/document_detail/86991.html">Video information</a>.</para>
             /// </summary>
             [NameInMap("Video")]
             [Validation(Required=false)]
             public SearchMediaResponseBodyMediaListVideo Video { get; set; }
             public class SearchMediaResponseBodyMediaListVideo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app-****</para>
@@ -840,7 +749,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the category.</para>
+                /// <para>The category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000123</para>
@@ -850,7 +759,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the category.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>video1</para>
@@ -860,7 +769,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the thumbnail.</para>
+                /// <para>The thumbnail URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.aliyundoc.com/image01.png">https://example.aliyundoc.com/image01.png</a></para>
@@ -870,7 +779,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time when the video file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The time when the video information was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:45:25Z</para>
@@ -880,20 +789,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the video file.</para>
+                /// <para>The video description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Video test</para>
+                /// <para>Alibaba Cloud VOD video description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</para>
+                /// <para>The download switch. Offline download is allowed only when the switch is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>on</b></description></item>
-                /// <item><description><b>off</b></description></item>
+                /// <item><description><b>on</b> (enabled): the initial state. Offline download is allowed.</description></item>
+                /// <item><description><b>off</b> (disabled): offline download is disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -904,7 +813,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string DownloadSwitch { get; set; }
 
                 /// <summary>
-                /// <para>The duration of the video file. Unit: seconds.</para>
+                /// <para>The video duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -914,12 +823,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public float? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The source of the video file. Valid values:</para>
+                /// <para>The source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>general</b>: The video file is uploaded by using ApsaraVideo VOD.</description></item>
-                /// <item><description><b>short_video</b>: The video file is uploaded by using the short video SDK.</description></item>
-                /// <item><description><b>editing</b>: The video file is produced after online editing.</description></item>
-                /// <item><description><b>live</b>: The video stream is recorded and uploaded as a file.</description></item>
+                /// <item><description><b>general</b>: ApsaraVideo VOD upload.</description></item>
+                /// <item><description><b>short_video</b>: the short video SDK.</description></item>
+                /// <item><description><b>editing</b>: online editing.</description></item>
+                /// <item><description><b>live</b>: live recording.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -930,7 +839,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MediaSource { get; set; }
 
                 /// <summary>
-                /// <para>The time when the video file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The time when the video information was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-07-19T03:48:25Z</para>
@@ -942,10 +851,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// <para>The preprocessing status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UnPreprocess</b></description></item>
-                /// <item><description><b>Preprocessing</b></description></item>
-                /// <item><description><b>PreprocessSucceed</b></description></item>
-                /// <item><description><b>PreprocessFailed</b></description></item>
+                /// <item><description><b>UnPreprocess</b>: not preprocessed.</description></item>
+                /// <item><description><b>Preprocessing</b>: preprocessing.</description></item>
+                /// <item><description><b>PreprocessSucceed</b>: preprocessing complete.</description></item>
+                /// <item><description><b>PreprocessFailed</b>: preprocessing failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -956,6 +865,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PreprocessStatus { get; set; }
 
                 /// <summary>
+                /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The value must be 6 to 64 characters in length and is unique at the user level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123-123</para>
                 /// </summary>
@@ -964,7 +875,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ReferenceId { get; set; }
 
                 /// <summary>
-                /// <para>The period of time in which the video file remains in the restored state.</para>
+                /// <para>The expiration time of the media asset restoration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-30T10:14:14Z</para>
@@ -974,11 +885,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string RestoreExpiration { get; set; }
 
                 /// <summary>
-                /// <para>The restoration status of the video file. Valid values:</para>
+                /// <para>The media asset restoration status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Processing</b></description></item>
-                /// <item><description><b>Success</b></description></item>
-                /// <item><description><b>Failed</b></description></item>
+                /// <item><description><b>Processing</b>: restoring.</description></item>
+                /// <item><description><b>Success</b>: restoration successful.</description></item>
+                /// <item><description><b>Failed</b>: restoration failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -989,7 +900,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string RestoreStatus { get; set; }
 
                 /// <summary>
-                /// <para>The size of the video file.</para>
+                /// <para>The video size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -999,29 +910,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>The automatic snapshots.</para>
+                /// <para>The list of automatic snapshots.</para>
                 /// </summary>
                 [NameInMap("Snapshots")]
                 [Validation(Required=false)]
                 public List<string> Snapshots { get; set; }
 
                 /// <summary>
-                /// <para>The sprite snapshots.</para>
+                /// <para>The list of sprites.</para>
                 /// </summary>
                 [NameInMap("SpriteSnapshots")]
                 [Validation(Required=false)]
                 public List<string> SpriteSnapshots { get; set; }
 
                 /// <summary>
-                /// <para>The status of the file. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Uploading</b></description></item>
-                /// <item><description><b>UploadFail</b></description></item>
-                /// <item><description><b>UploadSucc</b></description></item>
-                /// <item><description><b>Transcoding</b></description></item>
-                /// <item><description><b>TranscodeFail</b></description></item>
-                /// <item><description><b>Blocked</b></description></item>
-                /// <item><description><b>Normal</b></description></item>
+                /// <item><description><b>Uploading</b>: uploading.</description></item>
+                /// <item><description><b>UploadFail</b>: upload failed.</description></item>
+                /// <item><description><b>UploadSucc</b>: upload complete.</description></item>
+                /// <item><description><b>Transcoding</b>: transcoding.</description></item>
+                /// <item><description><b>TranscodeFail</b>: transcoding failed.</description></item>
+                /// <item><description><b>Blocked</b>: blocked.</description></item>
+                /// <item><description><b>Normal</b>: normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1032,17 +943,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The storage class of the video file. Valid values:</para>
+                /// <para>The storage class of the media asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Standard</b>: All media resources are stored as Standard objects.</description></item>
-                /// <item><description><b>IA</b>: All media resources are stored as IA objects.</description></item>
-                /// <item><description><b>Archive</b>: All media resources are stored as Archive objects.</description></item>
-                /// <item><description><b>ColdArchive</b>: All media resources are stored as Cold Archive objects.</description></item>
-                /// <item><description><b>SourceIA</b>: Only the source file is stored as an IA object.</description></item>
-                /// <item><description><b>SourceArchive</b>: Only the source file is stored as an Archive object.</description></item>
-                /// <item><description><b>SourceColdArchive</b>: Only the source file is stored as a Cold Archive object.</description></item>
-                /// <item><description><b>Changing</b>: The storage class of the video file is being changed.</description></item>
-                /// <item><description><b>SourceChanging</b>: The storage class of the source file is being changed.</description></item>
+                /// <item><description><b>Standard</b>: standard.</description></item>
+                /// <item><description><b>IA</b>: Infrequent Access (media asset).</description></item>
+                /// <item><description><b>Archive</b>: Archive (media asset).</description></item>
+                /// <item><description><b>ColdArchive</b>: Cold Archive (media asset).</description></item>
+                /// <item><description><b>SourceIA</b>: Infrequent Access (source file).</description></item>
+                /// <item><description><b>SourceArchive</b>: Archive (source file).</description></item>
+                /// <item><description><b>SourceColdArchive</b>: Cold Archive (source file).</description></item>
+                /// <item><description><b>Changing</b>: the storage class of the media asset is being changed.</description></item>
+                /// <item><description><b>SourceChanging</b>: the storage class of the source file is being changed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1053,7 +964,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageClass { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the video is stored.</para>
+                /// <para>The storage region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</para>
@@ -1063,7 +974,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string StorageLocation { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the video file.</para>
+                /// <para>The video tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag1</para>
@@ -1073,10 +984,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The title of the video.</para>
+                /// <para>The video title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ceshi</para>
+                /// <para>Alibaba Cloud VOD Video Title</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -1085,9 +996,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// <para>The transcoding mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>FastTranscode</b>: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</description></item>
-                /// <item><description><b>NoTranscode</b>: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</description></item>
-                /// <item><description><b>AsyncTranscode</b>: The video file can be immediately played and asynchronously transcoded after it is uploaded.</description></item>
+                /// <item><description><b>FastTranscode</b> (standard transcoding): the default mode. Transcoding starts after the upload is complete, and the video can be played only after transcoding is complete.</description></item>
+                /// <item><description><b>NoTranscode</b> (distribution without transcoding): the video can be played immediately after the upload is complete without transcoding.</description></item>
+                /// <item><description><b>AsyncTranscode</b> (distribution and transcoding upon upload): the video can be played immediately after the upload is complete, and transcoding is performed asynchronously.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1098,7 +1009,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TranscodeMode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the video file.</para>
+                /// <para>The video ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a82a2asdasqadaf3faa0ed6c1ee372****</para>
@@ -1112,7 +1023,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E0CEF83-FB09-4E34-BA1451814B03****</para>
@@ -1122,7 +1033,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The pagination identifier.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24e0fba7188fae707e146esa54****</para>
@@ -1132,7 +1043,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ScrollToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of data records that meet the specified filter criteria.</para>
+        /// <para>The total number of media assets that match the search conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

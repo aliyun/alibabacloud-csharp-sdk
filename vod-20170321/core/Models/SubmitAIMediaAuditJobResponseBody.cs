@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the job.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bdbc266af6893943a70176d92e99****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media file.</para>
+        /// <para>The audio or video ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fe028d09441afffb138cd7ee****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F4631053-8D9F-42B2-4A67281DB88E****</para>

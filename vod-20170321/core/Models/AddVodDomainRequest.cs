@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The URL that is used for health checks.</para>
+        /// <para>The health check URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com/test.html">www.example.com/test.html</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CheckUrl { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.</para>
+        /// <para>The accelerated domain name to be added to ApsaraVideo VOD. Wildcard domain names are supported, starting with a period (.), such as .example.com.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is applicable to users of level 3 or higher in the Chinese mainland and users outside the Chinese mainland. Default value: domestic. Valid values:</para>
+        /// <para>This parameter is valid for international users and Chinese mainland users of L3 or higher. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
-        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
-        /// <item><description><b>global</b>: regions in and outside the Chinese mainland</description></item>
+        /// <item><description><b>domestic</b> (default): the Chinese mainland.</description></item>
+        /// <item><description><b>overseas</b>: Hong Kong (China), Macao (China), Taiwan (China), and regions outside China.</description></item>
+        /// <item><description><b>global</b>: global acceleration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the addresses of origin servers. For more information, see the <b>Sources</b> table in this topic.</para>
+        /// <para>The list of origin addresses. For more information about the parameters, see the <b>Sources</b> table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Sources { get; set; }
 
         /// <summary>
-        /// <para>The top-level domain.</para>
+        /// <para>The top-level domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

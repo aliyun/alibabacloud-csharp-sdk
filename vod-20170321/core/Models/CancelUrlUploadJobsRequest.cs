@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CancelUrlUploadJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the upload jobs. You can obtain the job IDs from PlayInfo in the response to the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</para>
+        /// <para>The list of task IDs. You can obtain the task ID (JobId) from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a maximum of 10 IDs.</description></item>
+        /// <item><description>A maximum of 10 IDs are supported.</description></item>
         /// <item><description>Separate multiple IDs with commas (,).</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify either JobIds or UploadUrls. If you specify both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</para>
+        /// <para>You must specify either JobIds or UploadUrls. If both are specified, only JobIds is processed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobIds { get; set; }
 
         /// <summary>
-        /// <para>The upload URLs of source video files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.</para>
+        /// <para>The list of source video upload URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must encode the URLs before you use the URLs.</description></item>
-        /// <item><description>You must specify either JobIds or UploadUrls. If you specify both the JobIds and UploadUrls parameters, only the value of the JobIds parameter takes effect.</description></item>
+        /// <item><description>URL-encode the URLs before use.</description></item>
+        /// <item><description>You must specify either JobIds or UploadUrls. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>

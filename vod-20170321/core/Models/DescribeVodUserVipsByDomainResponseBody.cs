@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodUserVipsByDomainResponseBody : TeaModel {
         /// <summary>
+        /// <para>The accelerated domain name for ApsaraVideo VOD.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6730AC93-7B12-4B*****7F-49EE1FE8BC49</para>
         /// </summary>

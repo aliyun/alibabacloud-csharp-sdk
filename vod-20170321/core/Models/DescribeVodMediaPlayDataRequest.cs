@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodMediaPlayDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The media ID, which is the audio or video ID (VideoId). Specify this parameter filtered query playback data for a specific media file. Only one media ID can be specified. You can obtain the media ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the page that appears, view the media ID.</description></item>
-        /// <item><description>Obtain the value of the VideoId parameter in the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you called to upload the audio or video file.</description></item>
-        /// <item><description>Obtain the value of VideoId by calling the <a href="~~SearchMedia~~">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</description></item>
+        /// <item><description>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the audio or video ID.</description></item>
+        /// <item><description>When you upload an audio or video file by calling the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation, the audio or video ID is the value of the VideoId response parameter.</description></item>
+        /// <item><description>After the audio or video file is uploaded, you can call the <a href="~~SearchMedia~~">SearchMedia</a> operation filtered query the audio or video ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,12 +25,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric. This parameter must be specified together with the <c>OrderType</c> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</para>
+        /// <para>The metric name. This parameter is used together with the <c>OrderType</c> parameter. Specify this parameter to sort the returned data in ascending or descending order by a specified metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PlaySuccessVv</b>: the total number of views.</description></item>
-        /// <item><description><b>PlayPerVv</b>: the average views per viewer.</description></item>
-        /// <item><description><b>PlayDuration</b>: the total playback duration.</description></item>
-        /// <item><description><b>PlayDurationPerUv</b>: the average playback duration per viewer.</description></item>
+        /// <item><description><b>PlaySuccessVv</b>: total plays.</description></item>
+        /// <item><description><b>PlayPerVv</b>: average plays per user.</description></item>
+        /// <item><description><b>PlayDuration</b>: total play duration.</description></item>
+        /// <item><description><b>PlayDurationPerUv</b>: average play duration per user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OrderName { get; set; }
 
         /// <summary>
-        /// <para>The sort type. This parameter must be specified together with the <c>OrderName</c> parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:</para>
+        /// <para>The sort order. This parameter is used together with the <c>OrderName</c> parameter. Specify this parameter to sort the returned data in ascending or descending order by a specified metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASC</b>: The returned data is sorted in ascending order.</description></item>
-        /// <item><description><b>DESC</b>: The returned data is sorted in descending order.</description></item>
+        /// <item><description><b>ASC</b>: ascending order. The returned data is sorted from smallest to largest.</description></item>
+        /// <item><description><b>DESC</b>: descending order. The returned data is sorted from largest to smallest.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:</para>
+        /// <para>The operating system of the playback device. Specify this parameter to perform a filtered query for playback data of all audio and video files by operating system. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Android</b></description></item>
         /// <item><description><b>iOS</b></description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Os { get; set; }
 
         /// <summary>
-        /// <para>The number of the page. You can specify a page number to return data from the specified page.</para>
+        /// <para>The page number of the data to return. Specify this parameter to set the page from which data starts to be returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Specify this parameter to set the number of entries displayed on each page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The playback time. Specify the value in the yyyyMMdd format.</para>
+        /// <para>The playback date. Unit: day. Format: yyyyMMdd.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can query data only by day.</description></item>
-        /// <item><description>You can query only data within the last 30 days.</description></item>
+        /// <item><description>Only daily queries are supported.</description></item>
+        /// <item><description>Only data within the last 30 days can be queried.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PlayDate { get; set; }
 
         /// <summary>
-        /// <para>The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:</para>
+        /// <para>The service region. Specify this parameter to perform a filtered query for playback data of all audio and video files by service region. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
         /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
@@ -129,10 +129,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:</para>
+        /// <para>The terminal type of the Player SDK. Specify this parameter to perform a filtered query for playback data of all audio and video files by terminal type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Native</b>: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS</description></item>
-        /// <item><description><b>Web</b>: ApsaraVideo Player SDK for Web</description></item>
+        /// <item><description><b>Native</b>: Android Player SDK or iOS Player SDK.</description></item>
+        /// <item><description><b>Web</b>: Web Player SDK.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

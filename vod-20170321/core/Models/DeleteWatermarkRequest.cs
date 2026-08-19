@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteWatermarkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of watermark template that you want to delete. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:</para>
+        /// <para>The ID of the watermark template to delete. Only a single watermark template ID can be specified. You can obtain the ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Obtain the watermark template ID from the response to the <a href="~~AddWatermark~~">AddWatermark</a> operation that you call to create a watermark template.</description></item>
-        /// <item><description>Obtain the watermark template ID from the response to the <a href="~~ListWatermark~~">ListWatermark</a> operation that you call to query all watermark templates within your account.</description></item>
+        /// <item><description>The ID is returned after you call the <a href="~~AddWatermark~~">AddWatermark</a> operation to add a watermark template.</description></item>
+        /// <item><description>The ID is returned after you call the <a href="~~ListWatermark~~">ListWatermark</a> operation to query the list of watermark templates.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

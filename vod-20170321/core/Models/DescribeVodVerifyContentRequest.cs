@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodVerifyContentRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for which you want to verify the ownership. You can specify only one domain name in each call.</para>
+        /// <para>The domain name to be verified. Only a single domain name is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

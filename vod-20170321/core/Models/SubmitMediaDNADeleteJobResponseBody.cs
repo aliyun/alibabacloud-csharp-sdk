@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitMediaDNADeleteJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the job.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6805B2EC-CE87-****-8FF6-9C0E97719A26</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e5b1a2e7bee******b632c2710b9423f</para>

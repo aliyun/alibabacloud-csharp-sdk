@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetImageInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the image.</para>
+        /// <para>The image information.</para>
         /// </summary>
         [NameInMap("ImageInfo")]
         [Validation(Required=false)]
         public GetImageInfoResponseBodyImageInfo ImageInfo { get; set; }
         public class GetImageInfoResponseBodyImageInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the category.</para>
+            /// <para>The category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>254766071</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? CateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the category.</para>
+            /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test name</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the image was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-11-21T02:37:23Z</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the image.</para>
+            /// <para>The image description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test description</para>
+            /// <para>Test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbc65bba53f9*****ed90de118a7849</para>
@@ -77,31 +77,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The type of the image. Valid values:</para>
+            /// <para>The image type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CoverSnapshot</b>: thumbnail snapshot.</description></item>
-            /// <item><description><b>NormalSnapshot</b>: normal snapshot.</description></item>
-            /// <item><description><b>SpriteSnapshot</b>: sprite snapshot.</description></item>
-            /// <item><description><b>SpriteOriginSnapshot</b>: sprite source snapshot.</description></item>
-            /// <item><description><b>All</b>: images of all the preceding types. Multiple types other than All can return for this parameter. Multiple types are separated by commas (,).</description></item>
+            /// <item><description><b>default</b>: regular image.</description></item>
+            /// <item><description><b>cover</b>: video thumbnail.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>NormalSnapshot</para>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("ImageType")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The source information about the image.</para>
+            /// <para>The mezzanine information of the image.</para>
             /// </summary>
             [NameInMap("Mezzanine")]
             [Validation(Required=false)]
             public GetImageInfoResponseBodyImageInfoMezzanine Mezzanine { get; set; }
             public class GetImageInfoResponseBodyImageInfoMezzanine : TeaModel {
                 /// <summary>
-                /// <para>The size of the image. Unit: bytes.</para>
+                /// <para>The file size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8932</para>
@@ -121,7 +118,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string FileURL { get; set; }
 
                 /// <summary>
-                /// <para>The height of the image. Unit: pixels.</para>
+                /// <para>The image height. Unit: pixel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -131,7 +128,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public int? Height { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the source file.</para>
+                /// <para>The address of the uploaded source image file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>****.gif</para>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string OriginalFileName { get; set; }
 
                 /// <summary>
-                /// <para>The width of the image. Unit: pixels.</para>
+                /// <para>The image width. Unit: pixel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -153,11 +150,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The status of the image. Valid values:</para>
+            /// <para>The image status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Uploading</b>: The image is being uploaded. This is the initial status.</description></item>
             /// <item><description><b>Normal</b>: The image is uploaded.</description></item>
-            /// <item><description><b>UploadFail</b>: The image fails to be uploaded.</description></item>
+            /// <item><description><b>UploadFail</b>: The image failed to be uploaded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +165,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The bucket in which the image is stored.</para>
+            /// <para>The storage address of the image file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>outin-****..oss-cn-shanghai.aliyuncs.com</para>
@@ -178,7 +175,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// <para>The tags of the image. Multiple tags are separated by commas (,).</para>
+            /// <para>The image tags. Multiple tags are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1,tag2,tag3</para>
@@ -188,7 +185,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The title of the image.</para>
+            /// <para>The image title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a sample</para>
@@ -198,7 +195,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</para>
+            /// <para>The image access URL. If a CDN domain name is configured, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.aliyundoc.com/image/default/****.gif?auth_key=">http://example.aliyundoc.com/image/default/****.gif?auth_key=</a>****</para>
@@ -210,7 +207,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AB99D4DF-FAFA-49DC-9C548C1E261E****</para>

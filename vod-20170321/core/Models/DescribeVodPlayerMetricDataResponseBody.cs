@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodPlayerMetricDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of returned data.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVodPlayerMetricDataResponseBodyDataList> DataList { get; set; }
         public class DescribeVodPlayerMetricDataResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The average completion plays per user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgPerCompletionVv { get; set; }
 
             /// <summary>
+            /// <para>The average play duration per user, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgPerPlayDuration { get; set; }
 
             /// <summary>
+            /// <para>The average plays per user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgPerVv { get; set; }
 
             /// <summary>
+            /// <para>The average playback bitrate, in bps.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgPlayBitrate { get; set; }
 
             /// <summary>
+            /// <para>The average play duration, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgPlayDuration { get; set; }
 
             /// <summary>
+            /// <para>The average start bitrate, in bps.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgStartBitrate { get; set; }
 
             /// <summary>
+            /// <para>The average video duration, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? AvgVideoDuration { get; set; }
 
             /// <summary>
+            /// <para>The completion rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.8</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? CompletionRate { get; set; }
 
             /// <summary>
+            /// <para>The completion count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? CompletionVv { get; set; }
 
             /// <summary>
+            /// <para>The dimension.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>H265_MP4_WIFI</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Dimension { get; set; }
 
             /// <summary>
+            /// <para>The error count per 100 seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? ErrorCount100s { get; set; }
 
             /// <summary>
+            /// <para>The first frame time, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? FirstFrame { get; set; }
 
             /// <summary>
+            /// <para>The 5-second bounce rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? JumpRate5s { get; set; }
 
             /// <summary>
+            /// <para>The play failure rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? PlayFailRate { get; set; }
 
             /// <summary>
+            /// <para>The actual play count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -134,6 +167,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? RealVv { get; set; }
 
             /// <summary>
+            /// <para>The instant play rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.8</para>
             /// </summary>
@@ -142,6 +177,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? SecondPlayRate { get; set; }
 
             /// <summary>
+            /// <para>The non-play rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
             /// </summary>
@@ -150,6 +187,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? SeedFailRate { get; set; }
 
             /// <summary>
+            /// <para>The seek duration, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -158,6 +197,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? SeekDuration { get; set; }
 
             /// <summary>
+            /// <para>The slow play rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2</para>
             /// </summary>
@@ -166,6 +207,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? SlowPlayRate { get; set; }
 
             /// <summary>
+            /// <para>The stuttering count per 100 seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -174,6 +217,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StuckCount100s { get; set; }
 
             /// <summary>
+            /// <para>The stuttering rate by count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
             /// </summary>
@@ -182,6 +227,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? StuckCountRate { get; set; }
 
             /// <summary>
+            /// <para>The stuttering duration per 100 seconds, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -190,6 +237,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? StuckDuration100s { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the data. Format: yyyy-mm-ddthh:mm:ssz (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-24T00:55:06Z</para>
             /// </summary>
@@ -198,6 +247,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TimeStamp { get; set; }
 
             /// <summary>
+            /// <para>The total play duration, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000</para>
             /// </summary>
@@ -206,6 +257,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? TotalPlayDuration { get; set; }
 
             /// <summary>
+            /// <para>The number of playback users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -214,6 +267,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public double? Uv { get; set; }
 
             /// <summary>
+            /// <para>The play count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>800</para>
             /// </summary>
@@ -223,11 +278,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        /// <summary>
+        /// <para>The extended information.</para>
+        /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public DescribeVodPlayerMetricDataResponseBodyExtend Extend { get; set; }
         public class DescribeVodPlayerMetricDataResponseBodyExtend : TeaModel {
             /// <summary>
+            /// <para>The latest time with data points within the specified time range. Format: yyyy-mm-ddthh:mm:ssz (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-05T15:59:59Z</para>
             /// </summary>
@@ -236,6 +296,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ActualEndTime { get; set; }
 
             /// <summary>
+            /// <para>The earliest time with data points within the specified time range. Format: yyyy-mm-ddthh:mm:ssz (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-06-24T00:55:06Z</para>
             /// </summary>
@@ -244,6 +306,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ActualStartTime { get; set; }
 
             /// <summary>
+            /// <para>The time granularity of the queried data, in seconds (s).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3600</para>
             /// </summary>
@@ -254,6 +318,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -262,6 +328,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5000</para>
         /// </summary>
@@ -280,6 +348,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of data points.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>

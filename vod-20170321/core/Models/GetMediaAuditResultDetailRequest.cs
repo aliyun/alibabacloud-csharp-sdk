@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the video.</para>
+        /// <para>The video ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is <b>1</b>. A maximum of <b>20</b> records can be returned on each page.</para>
+        /// <para>The page number of the video content review results. Default value: <b>1</b>. A maximum of <b>20</b> records are returned per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

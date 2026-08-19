@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetCategoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the category.</para>
+        /// <para>The details of the category.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public GetCategoriesResponseBodyCategory Category { get; set; }
         public class GetCategoriesResponseBodyCategory : TeaModel {
             /// <summary>
-            /// <para>The ID of the category.</para>
+            /// <para>The category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? CateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the category.</para>
+            /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>film</para>
+            /// <para>Movie</para>
             /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
 
             /// <summary>
-            /// <para>The level of the category. Valid values:</para>
+            /// <para>The category level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: level 1 category</description></item>
-            /// <item><description><b>1</b>: level 2 category</description></item>
-            /// <item><description><b>2</b>: level 3 category</description></item>
+            /// <item><description><b>0</b>: level-1 category.</description></item>
+            /// <item><description><b>1</b>: level-2 category.</description></item>
+            /// <item><description><b>2</b>: level-3 category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? ParentId { get; set; }
 
             /// <summary>
-            /// <para>The type of the category. Valid values:</para>
+            /// <para>The category type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: audio, video, and image files</description></item>
-            /// <item><description><b>material</b>: short video materials</description></item>
+            /// <item><description><b>default</b>: audio, video, and image category.</description></item>
+            /// <item><description><b>material</b>: short video material category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The total number of subcategories.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3795</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("SubTotal")]
         [Validation(Required=false)]

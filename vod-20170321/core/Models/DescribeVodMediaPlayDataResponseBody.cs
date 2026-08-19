@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodMediaPlayDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("QoeInfoList")]
         [Validation(Required=false)]
         public List<DescribeVodMediaPlayDataResponseBodyQoeInfoList> QoeInfoList { get; set; }
         public class DescribeVodMediaPlayDataResponseBodyQoeInfoList : TeaModel {
             /// <summary>
-            /// <para>The number of visits to the audio or video per day.</para>
+            /// <para>The number of unique visitors for the audio or video file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? DAU { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media file (VideoId).</para>
+            /// <para>The media ID, which is the audio or video ID (VideoId).</para>
             /// 
             /// <b>Example:</b>
             /// <para>9ae2af636ca6c10412f44891fc****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The total playback duration of the audio or video. Unit: seconds.</para>
+            /// <para>The total play duration for the audio or video file. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2400</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? PlayDuration { get; set; }
 
             /// <summary>
-            /// <para>The average playback duration of the audio or video per viewer. Unit: seconds.</para>
+            /// <para>The average play duration per user for the audio or video file. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? PlayDurationPerUv { get; set; }
 
             /// <summary>
-            /// <para>The average number of times that the audio or video was played per viewer.</para>
+            /// <para>The average number of plays per user for the audio or video file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? PlayPerVv { get; set; }
 
             /// <summary>
-            /// <para>The total number of times the audio or video has been played.</para>
+            /// <para>The total number of plays for the audio or video file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? VideoDuration { get; set; }
 
             /// <summary>
-            /// <para>The name of the audio or video file.</para>
+            /// <para>The title of the audio or video file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>title</para>
+            /// <para>Alibaba Cloud VOD video title</para>
             /// </summary>
             [NameInMap("VideoTitle")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>

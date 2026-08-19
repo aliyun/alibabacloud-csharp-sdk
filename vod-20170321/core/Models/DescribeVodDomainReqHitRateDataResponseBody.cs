@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The time interval at which data is returned, which is the time granularity. Unit: seconds.</para>
+        /// <para>The time interval between data entries, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range.</para>
+        /// <para>The end of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-22T08:00:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D94E471F-1A27-442E-552D-D4D2000C****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range.</para>
+        /// <para>The beginning of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-21T08:00:00Z</para>

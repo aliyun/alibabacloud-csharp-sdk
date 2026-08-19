@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppPoliciesForIdentityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of each policy.</para>
+        /// <para>The list of access policy names.</para>
         /// <remarks>
-        /// <para>A maximum of 100 entries can be returned.</para>
+        /// <para>A maximum of 100 entries are returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AppPolicyList")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> AppPolicyList { get; set; }
         public class ListAppPoliciesForIdentityResponseBodyAppPolicyList : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application policy was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the application policy was granted to the role. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:01:01Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the policy.</para>
+            /// <para>The policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>App full access permission</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The last time when the application policy was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the application policy granted to the role was last modified. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:08:01Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VODAppFullAccess</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy. Valid values:</para>
+            /// <para>The policy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>System</b></description></item>
-            /// <item><description><b>Custom</b></description></item>
+            /// <item><description><b>System</b>: system policy.</description></item>
+            /// <item><description><b>Custom</b>: user-defined policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The content of the policy.</para>
+            /// <para>The policy value.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C9F3E715-B3B8-4D*****27-3A70346F0E04</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTieringStorageRetrievalDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A13-BEF6-D73936****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data retrieval information.</para>
+        /// <para>The retrieval data.</para>
         /// </summary>
         [NameInMap("RetrievalData")]
         [Validation(Required=false)]
         public List<DescribeVodTieringStorageRetrievalDataResponseBodyRetrievalData> RetrievalData { get; set; }
         public class DescribeVodTieringStorageRetrievalDataResponseBodyRetrievalData : TeaModel {
             /// <summary>
-            /// <para>The retrieved Cold Archive data in the bulk mode.</para>
+            /// <para>The Cold Archive bulk retrieval data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? CABulkRetrievalData { get; set; }
 
             /// <summary>
-            /// <para>The retrieved Cold Archive data in the expedited mode.</para>
+            /// <para>The Cold Archive high-priority retrieval data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? CAHighPriorRetrievalData { get; set; }
 
             /// <summary>
-            /// <para>The retrieved Cold Archive data in the standard mode.</para>
+            /// <para>The Cold Archive standard retrieval data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The data retrieval information.</para>
+            /// <para>The retrieval data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? RetrievalData { get; set; }
 
             /// <summary>
-            /// <para>The storage type.</para>
+            /// <para>The media asset storage class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IA</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageClass { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time of the time interval. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-06-02T10:20:00Z</para>

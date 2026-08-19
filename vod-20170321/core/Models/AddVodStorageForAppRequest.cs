@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodStorageForAppRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of applications. You can obtain the application ID from the <c>AppId</c> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</para>
+        /// <para>The application ID. The application ID is the value of the <c>AppId</c> parameter returned by the <a href="~~CreateAppInfo~~">CreateAppInfo</a> or <a href="~~ListAppInfo~~">ListAppInfo</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.</para>
+        /// <para>The OSS bucket address. This parameter is required when StorageType is set to user_oss_bucket.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>out-****.oss-cn-shanghai.aliyuncs.com</para>
+        /// <para>example-bucket.oss-cn-shanghai.aliyuncs.com</para>
         /// </summary>
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]
         public string StorageLocation { get; set; }
 
         /// <summary>
-        /// <para>The storage class. Default value: <b>vod_oss_bucket</b>.</para>
+        /// <para>The storage type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>vod_oss_bucket</description></item>
+        /// <item><description>user_oss_bucket</description></item>
+        /// </list>
+        /// <para>Default value: <b>vod_oss_bucket</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vod_oss_bucket</para>

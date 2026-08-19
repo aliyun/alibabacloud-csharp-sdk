@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribePlayTopVideosRequest : TeaModel {
         /// <summary>
-        /// <para>The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The date to query. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The default value is <b>100</b>. The maximum value is <b>1000</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>100</b>. Maximum value: <b>1000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

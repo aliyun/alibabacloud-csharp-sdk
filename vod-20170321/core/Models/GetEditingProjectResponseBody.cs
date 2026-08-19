@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetEditingProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the online editing project.</para>
+        /// <para>The online editing project.</para>
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the online editing project was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-10-23T13:33:40Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the online editing project was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-10-23T14:27:26Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the online editing project.</para>
+            /// <para>The online editing project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fb2101bf24b27*****54cb318787dc</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The region where the online editing project was created.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</para>
+            /// <para>The status of the online editing project. Multiple statuses are separated by commas (,). By default, all online editing projects are returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: indicates that the online editing project is in draft.</description></item>
-            /// <item><description><b>Producing</b>: indicates that the video is being produced.</description></item>
-            /// <item><description><b>Produced</b>: indicates that the video was produced.</description></item>
-            /// <item><description><b>ProduceFailed</b>: indicates that the video failed to be produced.</description></item>
+            /// <item><description><b>Normal</b>: draft.</description></item>
+            /// <item><description><b>Producing</b>: being produced.</description></item>
+            /// <item><description><b>Produced</b>: produced.</description></item>
+            /// <item><description><b>ProduceFailed</b>: failed to be produced.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The path of the Object Storage Service (OSS) bucket where the online editing project is stored.</para>
+            /// <para>The storage address.</para>
             /// <remarks>
-            /// <para>To view the path of the OSS bucket, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>, and choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Storage</b>. On the Storage page, you can view the path of the OSS bucket.</para>
+            /// <para>You can log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Storage Management</b> to view the storage address.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The title of the online editing project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>video_1508736815000</para>
+            /// <para>Video_1508736815000</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63E8B7C7-4812-46*****AD-0FA56029AC86</para>

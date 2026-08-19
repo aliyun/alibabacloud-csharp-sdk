@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainMax95BpsDataRequest : TeaModel {
         /// <summary>
-        /// <para>The cycle to query the 95th percentile bandwidth data. Valid values:</para>
+        /// <para>The cycle for the 95th percentile bandwidth. Default value: day. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>day (default)</description></item>
-        /// <item><description>month</description></item>
+        /// <item><description><para>day: queries the 95th percentile bandwidth by day.</para>
+        /// </description></item>
+        /// <item><description><para>month: queries the 95th percentile bandwidth by month.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Cycle { get; set; }
 
         /// <summary>
-        /// <para>The domain name to be queried for acceleration. If the parameter is empty, the data merged from all accelerated domain names will be returned by default.</para>
+        /// <para>The accelerated domain name to query. If this parameter is left empty, the merged data of all accelerated domain names is returned by default.</para>
         /// <remarks>
         /// <para>Batch domain name queries are not supported.</para>
         /// </remarks>
@@ -37,7 +39,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>End time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</para>
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-12T13:00:00Z</para>
@@ -51,7 +56,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Start time point. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>
@@ -61,7 +66,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The start time point for getting the data. The date format follows the ISO8601 representation and uses UTC time, in the format yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ.</para>
+        /// <para>The start time point for data retrieval. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-21T10:00:00Z</para>

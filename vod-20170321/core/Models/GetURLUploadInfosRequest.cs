@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The one or more IDs of upload jobs. You can obtain the job IDs in the response parameter JobId of the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</para>
+        /// <para>The list of upload task IDs (JobId). The list consists of one or more JobId values. A JobId is the value of the JobId parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a maximum of 10 IDs.</description></item>
+        /// <item><description>A maximum of 10 IDs are supported.</description></item>
         /// <item><description>Separate multiple IDs with commas (,).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must set one of the JobIds and the UploadURLs parameters. If you set both the JobIds and UploadURLs parameters, only the value of the JobIds parameter takes effect.</para>
+        /// <para>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobIds { get; set; }
 
         /// <summary>
-        /// <para>The one or more upload URLs of the source files. Separate multiple URLs with commas (,). You can specify a maximum of 10 URLs.</para>
+        /// <para>The list of source video file URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must encode the URLs before you use the URLs.</description></item>
-        /// <item><description>If a media file is uploaded multiple times, pass the URL of the media file to this parameter only once.</description></item>
-        /// <item><description>You must set one of the JobIds and the UploadURLs parameters. If you set both the JobIds and UploadURLs parameters, only the value of the JobIds parameter takes effect.</description></item>
+        /// <item><description>URL-encode the URLs before use.</description></item>
+        /// <item><description>If the same URL video is uploaded multiple times, pass in a single URL for the query.</description></item>
+        /// <item><description>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</description></item>
         /// </list>
         /// </remarks>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-01T12:30:20Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The path of the object. The path is used as a condition for exact matching.</para>
+        /// <para>The path used to query. Exact match is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/***.txt">http://example.com/***.txt</a></para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ObjectPath { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b>: refreshes one or more files.</description></item>
-        /// <item><description><b>directory</b>: refreshes files in the specified directories.</description></item>
-        /// <item><description><b>preload</b>: prefetches one or more files.</description></item>
+        /// <item><description><b>file</b>: file purge.</description></item>
+        /// <item><description><b>directory</b>: directory purge.</description></item>
+        /// <item><description><b>preload</b>: file prefetch.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify the DomainName or Status parameter, you must also specify the ObjectType parameter.</para>
+        /// <para>When DomainName or Status is specified, ObjectType is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>. Maximum value: <b>50</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>. Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>You can query data that is collected in the last three days.</para>
+        /// <para>Only data within the last 3 days can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: The task is complete.</description></item>
-        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
+        /// <item><description><b>Complete</b>: completed.</description></item>
+        /// <item><description><b>Refreshing</b>: in progress.</description></item>
+        /// <item><description><b>Failed</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task that you want to query.</para>
+        /// <para>The task ID used to query the purge status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70422****</para>

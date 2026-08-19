@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodCertificateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about each certificate.</para>
+        /// <para>The certificate list information.</para>
         /// </summary>
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The number of certificates that are returned.</para>
+            /// <para>The number of certificates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC0E34AC-0239-44A7-****-800DE522C8DA</para>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the material. Valid values:</para>
+        /// <para>The material type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b></description></item>
-        /// <item><description><b>audio</b></description></item>
-        /// <item><description><b>image</b></description></item>
+        /// <item><description><b>video</b>: video</description></item>
+        /// <item><description><b>audio</b>: audio-only</description></item>
+        /// <item><description><b>image</b>: image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</para>
+        /// <para>The online editing project ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Production Center</b> &gt; <b>Video Editing</b> to obtain the ID of the specified online editing project.</description></item>
-        /// <item><description>Call the <b>AddEditingProject</b> operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <b>Production Center</b> &gt; <b>Video Editing</b> to view the ID.</description></item>
+        /// <item><description>Obtain the value of the ProjectId response parameter when you create a project by calling the <b>CreateEditingProject</b> operation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the material. Valid values:</para>
+        /// <para>The material type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b></description></item>
-        /// <item><description><b>audio</b></description></item>
+        /// <item><description><b>video</b>: video</description></item>
+        /// <item><description><b>audio</b>: audio-only</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

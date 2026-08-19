@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddWatermarkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. Default value: <b>app-1000000</b>. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. If you have activated the multi-application service, specify the application ID to add the watermark template to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the watermark file. The URL must be an Object Storage Service (OSS) URL and cannot contain the information used for URL signing.</para>
+        /// <para>The Object Storage Service (OSS) URL of the watermark image file (without authentication).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required if you set <c>Type</c> to <c>Image</c>.</description></item>
-        /// <item><description>You can obtain the URL from the <c>FileURL</c> parameter in the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to upload the watermark image to ApsaraVideo VOD.</description></item>
+        /// <item><description>Request parameter is required when you set an image watermark template (<c>Type</c> is <c>Image</c>).</description></item>
+        /// <item><description>You can call <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> to upload the watermark image to ApsaraVideo VOD. The value of the <c>FileURL</c> parameter returned after the upload can be used as the value of request parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -38,40 +38,46 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The name of the watermark template.</para>
         /// <list type="bullet">
-        /// <item><description>Only letters and digits are supported.</description></item>
-        /// <item><description>The name cannot exceed 128 bytes.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description>Only Chinese characters, letters, and digits are supported.</description></item>
+        /// <item><description>The name can be up to 128 bytes in length.</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>watermark</para>
+        /// <para>Image watermark template</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The type of the watermark template. Valid values:</para>
+        /// <para>The templatetype of the watermark. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Image</b> (default): image watermark template</description></item>
-        /// <item><description><b>Text</b>: text watermark template</description></item>
+        /// <item><description><b>Image</b> (default): image watermark template.</description></item>
+        /// <item><description><b>Text</b>: text watermark template.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Text</para>
+        /// <para>Image</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
+        /// <para>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters differ between image watermarks and text watermarks. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;}</para>
+        /// <para>{
+        ///       &quot;Width&quot;: &quot;55&quot;,
+        ///       &quot;Height&quot;: &quot;55&quot;,
+        ///       &quot;Dx&quot;: &quot;9&quot;,
+        ///       &quot;Dy&quot;: &quot;9&quot;,
+        ///       &quot;ReferPos&quot;: &quot;BottomLeft&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("WatermarkConfig")]
         [Validation(Required=false)]

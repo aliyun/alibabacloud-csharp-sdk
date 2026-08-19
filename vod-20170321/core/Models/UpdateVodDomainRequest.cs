@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVodDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the addresses of origin servers.</para>
+        /// <para>The addresses of the origin server. For more information about the Sources parameter, see the <b>Sources</b> section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</para>

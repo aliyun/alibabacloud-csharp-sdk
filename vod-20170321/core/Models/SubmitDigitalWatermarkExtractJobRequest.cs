@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDigitalWatermarkExtractJobRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the watermark that you want to extract. Valid values:</para>
+        /// <para>The type of watermark extraction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TraceMark</b>: user-tracing watermark</description></item>
-        /// <item><description><b>CopyrightMark</b>: copyright watermark</description></item>
+        /// <item><description><b>TraceMark</b>: tracing watermark.</description></item>
+        /// <item><description><b>CopyrightMark</b>: copyright watermark.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ExtractType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video from which you want to extract the watermark. You can specify only one ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The video ID of the video from which you want to extract the watermark. Only a single video ID is supported. You can obtain the video ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
-        /// <item><description>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/436559.html">SearchMedia</a> operation. The video ID (VideoId) is returned in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

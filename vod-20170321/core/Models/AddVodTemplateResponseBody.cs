@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot template. You can call the <a href="https://help.aliyun.com/document_detail/72213.html">SubmitSnapshotJob</a> operation to submit snapshot jobs.</para>
+        /// <para>The snapshot or animated image template ID. This ID can be used as a request parameter of the <a href="~~SubmitSnapshotJob~~">SubmitSnapshotJob</a> or <a href="~~SubmitDynamicImageJob~~">SubmitDynamicImageJob</a> operation to initiate snapshot or animated image processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f5b228fe6930e*****0d6bf55bd87789</para>

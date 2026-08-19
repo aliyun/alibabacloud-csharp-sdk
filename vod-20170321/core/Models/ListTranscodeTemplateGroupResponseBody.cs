@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListTranscodeTemplateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The transcoding template groups.</para>
+        /// <para>The list of transcoding template group data.</para>
         /// </summary>
         [NameInMap("TranscodeTemplateGroupList")]
         [Validation(Required=false)]
         public List<ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList> TranscodeTemplateGroupList { get; set; }
         public class ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the template group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the template group was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-05T10:20:09Z</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The lock status of the transcoding template group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Disabled</b>: The template group is not locked.</description></item>
-            /// <item><description><b>Enabled</b>: The template group is locked.</description></item>
+            /// <item><description><b>Disabled</b>: unlocked</description></item>
+            /// <item><description><b>Enabled</b>: locked</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Locked { get; set; }
 
             /// <summary>
-            /// <para>The time when the template group was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the template group was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-05T10:22:09Z</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transcoding template group.</para>
+            /// <para>The transcoding template group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17a9889fc66852*****d791c886700932</para>

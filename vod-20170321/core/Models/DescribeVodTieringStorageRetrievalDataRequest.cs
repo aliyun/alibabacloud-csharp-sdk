@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTieringStorageRetrievalDataRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app-1000000</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. The maximum time range is 31 days. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-02T11:20:00Z</para>
@@ -28,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,).</para>
+        /// <para>The storage region. By default, data of all regions is returned. You can specify multiple regions separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The minimum time range is 5 minutes. If you leave this parameter empty, data in the last 24 hours is queried.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. The minimum data granularity is 5 minutes. If you leave this parameter empty, data of the last 24 hours is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-02T10:20:00Z</para>
@@ -48,11 +54,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Valid values:</para>
+        /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IA</b></description></item>
-        /// <item><description><b>Archive</b></description></item>
-        /// <item><description><b>ColdArchive</b></description></item>
+        /// <item><description><b>IA</b>: Infrequent Access.</description></item>
+        /// <item><description><b>Archive</b>: Archive.</description></item>
+        /// <item><description><b>ColdArchive</b>: Cold Archive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DecryptKMSDataKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</para>
+        /// <para>The ID of the master key used to decrypt the ciphertext.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202b9877-5a25-46e3-a763-e20791b5****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The plaintext that is generated after decryption.</para>
+        /// <para>The decrypted plaintext.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</para>

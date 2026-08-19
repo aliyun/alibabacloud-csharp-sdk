@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GenerateDownloadSecretKeyRequest : TeaModel {
         /// <summary>
-        /// <para>A custom string of 16 to 32 characters in length. The string must contain uppercase letters, lowercase letters, and digits.</para>
+        /// <para>The custom encryption private key string. The string is 16 to 32 characters in length and consists of letters and digits. The string must contain uppercase letters, lowercase letters, and digits.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppDecryptKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the app.</para>
+        /// <para>The unique identity of the app.</para>
         /// <list type="bullet">
-        /// <item><description>Android: the SHA-1 fingerprint of the keystore. The value is a string that contains a colon (:).</description></item>
-        /// <item><description>iOS: the bundle ID of the app.</description></item>
-        /// <item><description>Windows: the serial number in the digital signature certificate.</description></item>
+        /// <item><description>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value is a character string with colons.</description></item>
+        /// <item><description>iOS: the App Bundle ID value.</description></item>
+        /// <item><description>Windows: the serial number of the digital signing certificate.</description></item>
         /// </list>
-        /// <para>For more information about how to obtain the unique identifier of an app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</para>
+        /// <para>For information about how to obtain the unique identity of the app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique identity of the app</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

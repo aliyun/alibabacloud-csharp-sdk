@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UploadMediaByURLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the upload job.</para>
+        /// <para>The list of upload jobs.</para>
         /// </summary>
         [NameInMap("UploadJobs")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the source file that is uploaded in the upload job.</para>
+            /// <para>The source file URL of the upload job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example****.mp4">http://example****.mp4</a></para>

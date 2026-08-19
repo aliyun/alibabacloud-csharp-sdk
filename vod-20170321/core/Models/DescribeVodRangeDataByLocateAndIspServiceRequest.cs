@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodRangeDataByLocateAndIspServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name.</para>
+        /// <para>The accelerated domain name to query.</para>
+        /// <para>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time. The maximum time range between the start time and end time is 1 hour.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the ISP. If you leave this parameter empty, all ISPs are queried.</para>
+        /// <para>The ISP name in English. If you do not specify this parameter, data of all ISPs is queried. You can specify only one ISP for each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unicom</para>
@@ -42,10 +46,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. If you leave this parameter empty, data in all regions is queried.</para>
+        /// <para>The region name in English. If you do not specify this parameter, data of all regions is queried. Separate multiple region names with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>beijing</para>
+        /// <para>shanghai</para>
         /// </summary>
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

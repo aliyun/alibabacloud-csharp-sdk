@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitWorkflowJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the media file. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The media asset ID, which is the video ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of the VideoId parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to upload media files.</description></item>
-        /// <item><description>Obtain the value of the VideoId parameter when you call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</description></item>
+        /// <item><description>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId parameter in the response.</description></item>
+        /// <item><description>After the video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow. To view the ID of the workflow, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Configuration Management</b> &gt; <b>Media Processing</b> &gt; <b>Workflows</b>.</para>
+        /// <para>The workflow ID. Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Processing</b> &gt; <b>Workflow</b> to view the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

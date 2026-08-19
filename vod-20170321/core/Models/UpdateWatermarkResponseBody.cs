@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateWatermarkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the watermark template.</para>
+        /// <para>The watermark template information.</para>
         /// </summary>
         [NameInMap("WatermarkInfo")]
         [Validation(Required=false)]
         public UpdateWatermarkResponseBodyWatermarkInfo WatermarkInfo { get; set; }
         public class UpdateWatermarkResponseBodyWatermarkInfo : TeaModel {
             /// <summary>
-            /// <para>The time when the watermark template was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-11-06T08:03:17Z</para>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.</para>
+            /// <para>The URL of the watermark file (OSS address or CDN address).</para>
             /// <remarks>
-            /// <para> This parameter is returned only for image watermark templates.</para>
+            /// <para>This parameter is returned only for image watermark templates.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the watermark template is the default one.</para>
+            /// <para>Indicates whether the template is the default image and text watermark template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b></description></item>
-            /// <item><description><b>NotDefault</b></description></item>
+            /// <item><description><b>Default</b>: the default image and text watermark template.</description></item>
+            /// <item><description><b>NotDefault</b>: not the default image and text watermark template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,31 +67,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The name of the watermark template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>image watermark test</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the watermark template.</para>
+            /// <para>The type of the watermark template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Image</b>: image watermark template</description></item>
-            /// <item><description><b>Text</b>: text watermark template</description></item>
+            /// <item><description><b>Image</b>: image watermark template.</description></item>
+            /// <item><description><b>Text</b>: text watermark template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Text</para>
+            /// <para>Image</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
+            /// <para>The configuration information of the image and text watermark (JSON string), including the watermark display position and watermark effect. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;,&quot;Type&quot;:&quot;Image&quot;}</para>
+            /// <para>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottomLeft&quot;}</para>
             /// </summary>
             [NameInMap("WatermarkConfig")]
             [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The job IDs for deleting media streams.</para>
+        /// <para>The list of job IDs for media stream transcoding, which consists of one or more job IDs.</para>
         /// <list type="bullet">
-        /// <item><description>Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.</description></item>
-        /// <item><description>You can obtain job IDs from the PlayInfo parameter that is returned after you call the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a unique job ID.</description></item>
+        /// <item><description>Separate multiple IDs with commas (,). A maximum of 20 job IDs under the same video are supported.</description></item>
+        /// <item><description>You can obtain the JobId from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a different JobId.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobIds { get; set; }
 
         /// <summary>
+        /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_) are supported. The value must be 6 to 64 characters in length. The value is unique per user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-123</para>
         /// </summary>
@@ -33,7 +35,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video.</para>
+        /// <para>The video ID. You can obtain the video ID by using one of the following methods:</para>
+        /// <list type="bullet">
+        /// <item><description>For videos uploaded by using the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId parameter in the response.</description></item>
+        /// <item><description>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>95948ddba24446b6aed5db985e78****</para>

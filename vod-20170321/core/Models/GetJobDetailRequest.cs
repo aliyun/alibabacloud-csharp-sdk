@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetJobDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID. Note: To query a transcoding task by TaskId, see <a href="https://www.alibabacloud.com/help/en/vod/developer-reference/api-vod-2017-03-21-gettranscodetask">GetTranscodeTask</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>transcode</description></item>
-        /// <item><description>snapshot</description></item>
-        /// <item><description>ai</description></item>
+        /// <item><description><para>transcode</para>
+        /// </description></item>
+        /// <item><description><para>snapshot</para>
+        /// </description></item>
+        /// <item><description><para>ai</para>
+        /// </description></item>
+        /// <item><description><para>workflow</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

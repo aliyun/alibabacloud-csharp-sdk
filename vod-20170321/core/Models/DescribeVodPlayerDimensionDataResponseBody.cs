@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodPlayerDimensionDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data list.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<string> DataList { get; set; }

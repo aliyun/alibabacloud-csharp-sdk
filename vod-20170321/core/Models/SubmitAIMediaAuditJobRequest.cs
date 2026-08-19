@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration information about the review job.</para>
+        /// <para>The configuration of the review job.</para>
         /// <list type="bullet">
-        /// <item><description>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</description></item>
-        /// <item><description>If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
-        /// <item><description>The value of ResourceType can contain only letters, digits, and underscores (_).</description></item>
+        /// <item><description>Other configuration items of the review job. Currently, only the ResourceType field is supported, which is used to specify the media file type. You can adjust the review standards and rules for this type.</description></item>
+        /// <item><description>To adjust the review standards and rules for ResourceType, submit a ticket for technical support. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
+        /// <item><description>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaAuditConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video file. To obtain the file ID, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Review Management</b> &gt; <b>Content Moderation</b> in the left-side navigation pane.</para>
+        /// <para>The audio or video ID. Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Review Management</b> &gt; <b>Video Review</b> to view the audio or video ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The type of the media file. Only <b>video</b> is supported.</para>
+        /// <para>The media type. Currently, only <b>video</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>video</para>
@@ -46,13 +46,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</para>
+        /// <para>The AI template ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</description></item>
-        /// <item><description>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, the AI template ID is the value of the TemplateId response parameter.</description></item>
+        /// <item><description>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI template ID, which is the value of the TemplateId response parameter.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify an ID, the ID of the default AI template is used.</para>
+        /// <para>If you do not specify an AI template ID, the default AI template ID for automated review is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The custom settings. The value must be a JSON string. You can configure settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
+        /// <para>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
-        /// <para> To use the callback configurations specified by this parameter, you must configure an HTTP callback URL and specify the types of the callback events in the ApsaraVideo VOD console. Otherwise, the callback configurations do not take effect. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</para>
+        /// <para>To use the message callback in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

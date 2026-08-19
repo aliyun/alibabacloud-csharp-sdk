@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoPlayAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The credential for media playback.</para>
+        /// <para>The playback credential for the audio or video file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sstyYuew6789000000xtt7TYUh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PlayAuth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetVideoPlayAuthResponseBodyVideoMeta VideoMeta { get; set; }
         public class GetVideoPlayAuthResponseBodyVideoMeta : TeaModel {
             /// <summary>
-            /// <para>The thumbnail URL of the media file.</para>
+            /// <para>The thumbnail URL of the audio or video file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The duration of the media file. Unit: seconds.</para>
+            /// <para>The duration of the audio or video file. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The status of the media file. For more information about the value range and description, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: the status of a video</a>.</para>
+            /// <para>The status of the audio or video file. For valid values and descriptions, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: audio and video status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The title of the media file.</para>
+            /// <para>The title of the audio or video file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>VOD</para>
+            /// <para>Alibaba Cloud VOD Video Title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media file.</para>
+            /// <para>The audio or video ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dfde02284a5c46622a097adaf44a****</para>

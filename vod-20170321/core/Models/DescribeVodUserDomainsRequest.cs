@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodUserDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</para>
+        /// <para>The accelerated domain name for ApsaraVideo VOD. Fuzzy match filtering is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The search method. Valid values:</para>
+        /// <para>The domain name query type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>fuzzy_match</b> (default): fuzzy match.</description></item>
-        /// <item><description><b>pre_match</b>: prefix match</description></item>
-        /// <item><description><b>suf_match</b>: suffix match</description></item>
-        /// <item><description><b>full_match</b>: exact match</description></item>
+        /// <item><description><b>pre_match</b>: prefix match.</description></item>
+        /// <item><description><b>suf_match</b>: suffix match.</description></item>
+        /// <item><description><b>full_match</b>: exact match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainSearchType { get; set; }
 
         /// <summary>
-        /// <para>The status of the domain name. Value values:</para>
+        /// <para>The domain name status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: indicates that the domain name is enabled.</description></item>
-        /// <item><description><b>offline</b>: indicates that the domain name is disabled.</description></item>
-        /// <item><description><b>configuring</b>: indicates that the domain name is being configured.</description></item>
-        /// <item><description><b>configure_failed</b>: indicates that the domain name failed to be configured.</description></item>
-        /// <item><description><b>checking</b>: indicates that the domain name is under review.</description></item>
-        /// <item><description><b>check_failed</b>: indicates that the domain name failed the review.</description></item>
+        /// <item><description><b>online</b>: Enabled.</description></item>
+        /// <item><description><b>offline</b>: Disabled.</description></item>
+        /// <item><description><b>configuring</b>: Being configured.</description></item>
+        /// <item><description><b>configure_failed</b>: Configuration failed.</description></item>
+        /// <item><description><b>checking</b>: Being reviewed.</description></item>
+        /// <item><description><b>check_failed</b>: Review failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>. Maximum value: <b>50</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>. Maximum value: <b>50</b>. Valid values: any integer from <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<DescribeVodUserDomainsRequestTag> Tag { get; set; }
         public class DescribeVodUserDomainsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag key. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <para>By default, all tag keys are queried.</para>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag value. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <para>By default, all tag values are queried.</para>
             /// 
             /// <b>Example:</b>

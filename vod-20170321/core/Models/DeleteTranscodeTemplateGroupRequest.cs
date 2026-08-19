@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteTranscodeTemplateGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcibly delete the transcoding template group. Valid values:</para>
+        /// <para>Indicates whether to force delete the entire transcoding template group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: deletes the transcoding template group and all the transcoding templates in the group.</description></item>
-        /// <item><description><b>false</b> (default): deletes only the specified transcoding templates from the transcoding template group.</description></item>
+        /// <item><description><b>true</b>: Force deletes the entire template group and all its transcoding templates.</description></item>
+        /// <item><description><b>false</b> (default): Deletes only the specified transcoding templates.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The IDs of the transcoding templates that you want to delete.</para>
         /// <list type="bullet">
         /// <item><description>Separate multiple IDs with commas (,).</description></item>
-        /// <item><description>You can specify a maximum of 10 IDs.</description></item>
-        /// <item><description>This parameter is required if you set ForceDelGroup to false or leave ForceDelGroup empty.</description></item>
+        /// <item><description>A maximum of 10 template IDs are supported.</description></item>
+        /// <item><description>This parameter is required if the ForceDelGroup parameter is empty or set to false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

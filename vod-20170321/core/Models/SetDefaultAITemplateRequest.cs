@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetDefaultAITemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI template.</para>
+        /// <para>The AI template ID. You can obtain the ID by using one of the following methods:</para>
+        /// <list type="bullet">
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation to add an AI template, the AI template ID is the value of the TemplateId response parameter.</description></item>
+        /// <item><description>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation to query the AI template ID, which is the value of the TemplateId response parameter.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

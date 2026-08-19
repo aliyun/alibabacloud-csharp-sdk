@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The basic information about the domain name for CDN.</para>
+        /// <para>The basic configuration information of the domain name.</para>
         /// </summary>
         [NameInMap("DomainDetail")]
         [Validation(Required=false)]
         public DescribeVodDomainDetailResponseBodyDomainDetail DomainDetail { get; set; }
         public class DescribeVodDomainDetailResponseBodyDomainDetail : TeaModel {
             /// <summary>
-            /// <para>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</para>
+            /// <para>The name of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testCertName</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CertName { get; set; }
 
             /// <summary>
-            /// <para>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</para>
+            /// <para>The CNAME assigned to the accelerated domain name. You must add a CNAME record with your DNS provider to map the accelerated domain name to this CNAME. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure a CNAME record</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com.w.alikunlun.net</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The description of the domain name for CDN.</para>
+            /// <para>The description of the VOD acceleration domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The domain name for CDN.</para>
+            /// <para>The VOD acceleration domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The status of the domain name for CDN. Value values:</para>
+            /// <para>The status of the accelerated domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: indicates that the domain name is enabled.</description></item>
-            /// <item><description><b>offline</b>: indicates that the domain name is disabled.</description></item>
-            /// <item><description><b>configuring</b>: indicates that the domain name is being configured.</description></item>
-            /// <item><description><b>configure_failed</b>: indicates that the domain name failed to be configured.</description></item>
-            /// <item><description><b>checking</b>: indicates that the domain name is under review.</description></item>
-            /// <item><description><b>check_failed</b>: indicates that the domain name failed the review.</description></item>
+            /// <item><description><b>online</b>: enabled.</description></item>
+            /// <item><description><b>offline</b>: disabled.</description></item>
+            /// <item><description><b>configuring</b>: being configured.</description></item>
+            /// <item><description><b>configure_failed</b>: configuration failed.</description></item>
+            /// <item><description><b>checking</b>: being reviewed.</description></item>
+            /// <item><description><b>check_failed</b>: review failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DomainStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain name was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-27T06:51:26Z</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain name was last modified. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-27T06:55:26Z</para>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</para>
+            /// <para>Indicates whether the SSL certificate is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: indicates that the SSL certificate is enabled.</description></item>
-            /// <item><description><b>off</b>: indicates that the SSL certificate is disabled.</description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SSLProtocol { get; set; }
 
             /// <summary>
-            /// <para>The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.</para>
+            /// <para>The public key of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourSSLPub</para>
@@ -119,11 +119,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SSLPub { get; set; }
 
             /// <summary>
-            /// <para>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</para>
+            /// <para>The acceleration region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: mainland China. This is the default value.</description></item>
-            /// <item><description><b>overseas</b>: outside mainland China.</description></item>
-            /// <item><description><b>global</b>: regions in and outside mainland China.</description></item>
+            /// <item><description><b>domestic</b> (default): the Chinese mainland only.</description></item>
+            /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
+            /// <item><description><b>global</b>: global.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The weight of the origin server.</para>
+            /// <para>The back-to-origin weight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09ABE829-6CD3-4FE0-556113E2****</para>

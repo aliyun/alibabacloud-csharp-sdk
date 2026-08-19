@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the media assets.</para>
+        /// <para>The information about the auxiliary media assets.</para>
         /// </summary>
         [NameInMap("AttachedMediaList")]
         [Validation(Required=false)]
         public List<GetAttachedMediaInfoResponseBodyAttachedMediaList> AttachedMediaList { get; set; }
         public class GetAttachedMediaInfoResponseBodyAttachedMediaList : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-*****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The categories.</para>
+            /// <para>The list of categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> Categories { get; set; }
             public class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories : TeaModel {
                 /// <summary>
-                /// <para>The ID of the category.</para>
+                /// <para>The category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000224338</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public long? CateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the category.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>category test</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("CateName")]
                 [Validation(Required=false)]
                 public string CateName { get; set; }
 
                 /// <summary>
-                /// <para>The level of the category.</para>
+                /// <para>The category level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the auxiliary media asset was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T10:00:00Z</para>
@@ -86,20 +86,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the auxiliary media asset.</para>
+            /// <para>The description.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when a description is specified for the auxiliary media asset.</para>
+            /// <para>This parameter is returned only if the auxiliary media asset has a description.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>description test</para>
+            /// <para>Description test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the auxiliary media asset.</para>
+            /// <para>The auxiliary media asset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0222e203cf80f9c22870a4d2c****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The time when the auxiliary media asset was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the auxiliary media asset was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-31T11:42:20Z</para>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The status of the auxiliary media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Uploading</b></description></item>
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>UploadFail</b></description></item>
+            /// <item><description><b>Uploading</b>: uploading.</description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
+            /// <item><description><b>UploadFail</b>: upload failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,9 +144,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string StorageLocation { get; set; }
 
             /// <summary>
-            /// <para>The tags of the auxiliary media asset.</para>
+            /// <para>The tags.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when tags are specified for the auxiliary media asset.</para>
+            /// <para>This parameter is returned only if the auxiliary media asset has tag information.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -157,21 +157,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The title of the auxiliary media asset.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>subtitle test</para>
+            /// <para>Subtitle test</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The type of the auxiliary media asset.</para>
+            /// <para>The type of the auxiliary media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>watermark</b></description></item>
-            /// <item><description><b>subtitle</b></description></item>
-            /// <item><description><b>material</b></description></item>
+            /// <item><description><b>watermark</b>: watermark.</description></item>
+            /// <item><description><b>subtitle</b>: subtitle.</description></item>
+            /// <item><description><b>material</b>: material.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,9 +182,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The URL of the auxiliary media asset.</para>
+            /// <para>The access URL of the auxiliary media asset.</para>
             /// <remarks>
-            /// <para> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</para>
+            /// <para>If a CDN domain name is configured in ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<string> NonExistMediaIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>221BCB57-B217-42BF-619BD13378F9****</para>

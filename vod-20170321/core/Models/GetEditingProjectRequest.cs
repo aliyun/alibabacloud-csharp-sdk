@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the online editing project.</para>
+        /// <para>The online editing project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

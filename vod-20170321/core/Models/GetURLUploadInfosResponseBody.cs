@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetURLUploadInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job IDs or upload URLs that do not exist.</para>
+        /// <para>The list of upload task IDs or URLs that do not exist.</para>
         /// </summary>
         [NameInMap("NonExists")]
         [Validation(Required=false)]
         public List<string> NonExists { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about URL-based upload jobs. For more information, see the &quot;URLUploadInfo: the information about a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
+        /// <para>The list of URL upload information. For more information about the fields and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo</a>.</para>
         /// </summary>
         [NameInMap("URLUploadInfoList")]
         [Validation(Required=false)]
         public List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList { get; set; }
         public class GetURLUploadInfosResponseBodyURLUploadInfoList : TeaModel {
             /// <summary>
-            /// <para>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:11:01Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01T01:01:01Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error_message</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The size of the uploaded media file. Unit: byte.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the upload job.</para>
+            /// <para>The upload task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86c1925fba0****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the uploaded media file.</para>
+            /// <para>The media ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>93ab850b4f6f54b6e91d24d81d4****</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string RegisteredMediaId { get; set; }
 
             /// <summary>
-            /// <para>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
+            /// <para>The status of the URL-based upload task. For more information about the status values and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">Status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The upload URL of the source file.</para>
+            /// <para>The URL of the source video file.</para>
             /// <remarks>
-            /// <para>A maximum of 100 URLs can be returned.</para>
+            /// <para>A maximum of 100 records can be returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string UploadURL { get; set; }
 
             /// <summary>
-            /// <para>The custom configurations. The value is a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</para>
+            /// <para>The custom settings. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</para>

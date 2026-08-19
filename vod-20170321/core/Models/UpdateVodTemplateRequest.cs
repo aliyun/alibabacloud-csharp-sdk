@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The name of the template.</para>
         /// <list type="bullet">
         /// <item><description>The name can be up to 128 bytes in length.</description></item>
-        /// <item><description>The value must be encoded in UTF-8.</description></item>
+        /// <item><description>The name must be encoded in UTF-8.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the &quot;SnapshotTemplateConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/98618.html">Media processing parameters</a> topic.</para>
+        /// <para>The configurations of the snapshot template in JSON format. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/98618.html">SnapshotTemplateConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;SnapshotConfig&quot;:{&quot;Count&quot;:10,&quot;SpecifiedOffsetTime&quot;:0,&quot;Interval&quot;:1}</para>

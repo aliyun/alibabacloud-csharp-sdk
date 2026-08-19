@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTranscodeDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the <c>AppId</c> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation.</para>
+        /// <para>The application ID. If you specify this parameter, transcoding usage data for the specified application is returned. By default, transcoding usage data for all applications is returned. You can obtain the value of this parameter from the AppId response parameter of the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-1000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The interval at which you want to query data. Valid values:</para>
+        /// <para>The time granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>day</b>: days</description></item>
-        /// <item><description><b>hour</b>: hours</description></item>
+        /// <item><description><b>day</b>: day.</description></item>
+        /// <item><description><b>hour</b>: hour.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,12 +49,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</para>
+        /// <para>The storage region. By default, data for all regions is returned. You can specify multiple regions separated by commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
-        /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
-        /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+        /// <item><description><b>cn-shanghai</b>: Shanghai.</description></item>
+        /// <item><description><b>cn-beijing</b>: Beijing.</description></item>
+        /// <item><description><b>eu-central-1</b>: Germany.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,11 +65,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The transcoding specification. If you leave this parameter empty, data of all transcoding specifications is returned. Separate multiple transcoding specifications with commas (,). Valid values:</para>
+        /// <para>The transcoding specification. By default, data for all transcoding specifications is returned. You can specify multiple specifications separated by commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Audio</b>: audio transcoding</description></item>
-        /// <item><description><b>Segmentation</b>: container format conversion</description></item>
-        /// <item><description><b>H264.LD</b>, <b>H264.SD</b>, <b>H264.HD</b>, <b>H264.2K</b>, <b>H264.4K</b>, and more</description></item>
+        /// <item><description><b>Audio</b>: audio-only.</description></item>
+        /// <item><description><b>Segmentation</b>: container format conversion.</description></item>
+        /// <item><description><b>H264.LD</b>, <b>H264.SD</b>, <b>H264.HD</b>, <b>H264.2K</b>, <b>H264.4K</b>, and more.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Specification { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</para>
+        /// <para>The storage name (Alibaba Cloud OSS bucket name). By default, data for all storage locations is returned. You can specify multiple storage names separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>bucket01</para>

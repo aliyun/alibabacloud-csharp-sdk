@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainLogRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for CDN.</para>
+        /// <para>The accelerated domain name for ApsaraVideo VOD.</para>
         /// <remarks>
-        /// <para> You can specify only one domain name in each query.</para>
+        /// <para>Only a single domain name is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. The maximum time range that can be specified is one year. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. The interval between the start time and end time cannot exceed one year. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-10-20T05:00:00Z</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>300</b>.</description></item>
-        /// <item><description>Valid values: <b>1 to 1000</b>.</description></item>
+        /// <item><description>Default value: <b>300</b></description></item>
+        /// <item><description>Maximum value: <b>1000</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-10-20T04:00:00Z</para>

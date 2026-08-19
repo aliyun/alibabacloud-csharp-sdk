@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The OSS URL of the file. The URL does not contain the information used for URL signing. You can specify FileUrl when you call the <a href="https://help.aliyun.com/document_detail/98617.html">AddWatermark</a> operation.</para>
+        /// <para>The OSS URL of the image file (without authentication).</para>
+        /// <para>When you add an image watermark template, this URL can be used as the <c>FileUrl</c> request parameter of the <a href="~~AddWatermark~~">AddWatermark</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png</a></para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string FileURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image file.</para>
+        /// <para>The image ID. This ID can be used as a request parameter for operations such as <a href="~~GetImageInfo~~">GetImageInfo</a>, <a href="~~GetImageInfos~~">GetImageInfos</a>, <a href="~~UpdateImageInfos~~">UpdateImageInfos</a>, and <a href="~~DeleteImage~~">DeleteImage</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>93ab850b4f6f46e91d24d81d4****</para>
@@ -30,9 +31,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image.</para>
+        /// <para>The access URL of the image.</para>
         /// <remarks>
-        /// <para>If the returned URL is inaccessible from a browser and the HTTP 403 status code is returned, the URL signing feature in ApsaraVideo VOD is enabled. To resolve this issue, you can disable the <a href="https://help.aliyun.com/document_detail/86090.html">URL signing</a> feature or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</para>
+        /// <para>If the returned ImageURL is inaccessible in a browser (403 error), URL authentication is enabled for your VOD domain name. Disable <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a> or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ImageURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-AEF6-D7393642****</para>
@@ -55,7 +56,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload URL.</para>
         /// <remarks>
-        /// <para>The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</para>
+        /// <para>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, decode the value in Base64 before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAddress.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload credential.</para>
         /// <remarks>
-        /// <para>The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</para>
+        /// <para>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, decode the value in Base64 before use. Only uploads by using the OSS native SDK or OSS API require you to parse UploadAuth.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDynamicImageJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the frame animation template.</para>
+        /// <para>The ID of the animated image template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DynamicImageTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The override parameter. Specify the value in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/98618.html">Parameters for media processing</a>. You can use this parameter to override configurations in the animated image template. For more information, see the &quot;DynamicImageTemplateConfig: the configurations of an animated sticker template&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types</a> topic.</para>
+        /// <para>The override parameters in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/98618.html">OverrideParams</a>. You can use this parameter to override the parameters in the animated image template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">DynamicImageTemplateConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Watermarks&quot;:[{&quot;Content&quot;:&quot;UserID: 666**&quot;,&quot;WatermarkId&quot;:&quot;8ca03c884944bd05efccc312367****&quot;}]}</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OverrideParams { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The video ID. You can obtain the video ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Assets</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>Obtain the video ID from the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation when you obtain the upload URL and credential.</description></item>
+        /// <item><description>After the video is uploaded, obtain the video ID from the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

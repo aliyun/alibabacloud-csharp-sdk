@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9262E3DA-07FA-48*****62-FCBB6BC61D08</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of online editing projects returned.</para>
+        /// <para>The total number of online editing projects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

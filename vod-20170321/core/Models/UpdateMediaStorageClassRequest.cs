@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:</para>
+        /// <para>Specifies whether to allow storage class modification for media assets that have not met the minimum storage duration requirement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Allowed.</description></item>
+        /// <item><description><b>false (default)</b>: Not allowed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.</para>
+        /// <para>If the storage duration of a media asset is insufficient and you force a storage class modification, additional retrieval fees are incurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public bool? AllowUpdateWithoutTimeLimit { get; set; }
 
         /// <summary>
-        /// <para>The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</para>
+        /// <para>The media IDs, which are audio or video IDs (VideoId). Separate multiple IDs with commas (,). A maximum of 20 IDs are supported. You can obtain the IDs by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media assets.</description></item>
-        /// <item><description>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media asset is uploaded.</description></item>
+        /// <item><description>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the audio or video ID.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</description></item>
+        /// <item><description>After the audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaIds { get; set; }
 
         /// <summary>
-        /// <para>The restoration priority. This parameter is required only when you restore a Cold Archive media asset. Valid values:</para>
+        /// <para>The restore priority (required only for ColdArchive media assets). If this parameter is not specified, the default value <b>Standard</b> is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Expedited</b></description></item>
-        /// <item><description><b>Standard</b></description></item>
-        /// <item><description><b>Bulk</b></description></item>
+        /// <item><description><b>Expedited</b>: Expedited</description></item>
+        /// <item><description><b>Standard</b> (default): Standard</description></item>
+        /// <item><description><b>Bulk</b>: Bulk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RestoreTier { get; set; }
 
         /// <summary>
-        /// <para>The modification range. Valid values:</para>
+        /// <para>The scope of the modification. If this parameter is not specified, the default value <b>All</b> is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: modifies the storage classes of all resources including the source files and transcoded streams.</description></item>
-        /// <item><description><b>SourceFile</b>: modifies the storage classes of only the source files. The storage class of other resources is Standard.</description></item>
+        /// <item><description><b>All</b> (default): Applies tiered storage to all resources (source files and transcoded streams) of the media asset.</description></item>
+        /// <item><description><b>SourceFile</b>: Applies tiered storage only to the source file of the media asset. Resources other than the source file use Standard storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b></description></item>
-        /// <item><description><b>IA</b></description></item>
-        /// <item><description><b>Archive</b></description></item>
-        /// <item><description><b>ColdArchive</b></description></item>
+        /// <item><description><b>Standard</b>: Standard</description></item>
+        /// <item><description><b>IA</b>: Infrequent Access</description></item>
+        /// <item><description><b>Archive</b>: Archive</description></item>
+        /// <item><description><b>ColdArchive</b>: Cold Archive</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

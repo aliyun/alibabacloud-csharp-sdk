@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The preprocessing type. Set the value to <b>LivePreprocess</b>. LivePreprocess specifies that the video is preprocessed in the production studio.</para>
+        /// <para>The preprocessing type. Set the value to <b>LivePreprocess</b> (video preprocessing for the China Production Studio).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PreprocessType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The video ID. You can obtain the video ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the ID of the video.</description></item>
-        /// <item><description>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload videos.</description></item>
-        /// <item><description>Obtain the VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query videos.</description></item>
+        /// <item><description>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>When you upload a video by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the video ID is the value of the VideoId parameter in the response.</description></item>
+        /// <item><description>After the video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId parameter in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

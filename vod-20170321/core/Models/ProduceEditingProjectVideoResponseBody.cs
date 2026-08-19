@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The ID of the produced video.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is returned for each request.</description></item>
-        /// <item><description>If a value is returned for this parameter, the video production task is being asynchronously processed.</description></item>
+        /// <item><description>The video production operation synchronously returns the ID of the produced video.</description></item>
+        /// <item><description>When MediaId is returned, the video production has entered the asynchronous processing phase.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the online editing project.</para>
+        /// <para>The online editing project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fb2101bf24b4cb318787dc****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>

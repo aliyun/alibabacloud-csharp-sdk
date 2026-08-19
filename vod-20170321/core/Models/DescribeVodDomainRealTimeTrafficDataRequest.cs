@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainRealTimeTrafficDataRequest : TeaModel {
         /// <summary>
-        /// <para>You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.</para>
+        /// <para>The accelerated domain name to query.</para>
+        /// <list type="bullet">
+        /// <item><description>Separate multiple domain names with commas (,). You can specify up to 100 domain names at a time. </description></item>
+        /// <item><description>When you query multiple domain names, the returned data is the aggregated data of all specified domain names.</description></item>
+        /// <item><description>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +29,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The end of the time range to query.</para>
         /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the ISP. If you do not set this parameter, all ISPs are queried.</para>
+        /// <para>The name of the Internet service provider (ISP). If you do not specify this parameter, data of all ISPs is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>telecom</para>
@@ -45,7 +50,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. If you do not set this parameter, data in all regions is queried.</para>
+        /// <para>The name of the region. If you do not specify this parameter, data of all regions is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shanghai</para>

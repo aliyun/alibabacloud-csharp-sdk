@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIImageJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image AI processing job. You can obtain the value of JobId from the response to the <a href="~~SubmitAIImageJob~~">SubmitAIImageJob</a> operation.</para>
+        /// <para>The IDs of AI image processing tasks. The value consists of one or more job IDs. A job ID is the value of the JobId parameter returned by the <a href="https://help.aliyun.com/document_detail/186922.html">SubmitAIImageJob</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a maximum of 10 IDs.</description></item>
+        /// <item><description>A maximum of 10 IDs are supported.</description></item>
         /// <item><description>Separate multiple IDs with commas (,).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

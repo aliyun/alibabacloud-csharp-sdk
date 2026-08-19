@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for CDN that you want to delete.</para>
+        /// <para>The accelerated domain name for ApsaraVideo VOD that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The time interval between the entries returned. Unit: seconds.</para>
+        /// <para>The time interval between each record, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>

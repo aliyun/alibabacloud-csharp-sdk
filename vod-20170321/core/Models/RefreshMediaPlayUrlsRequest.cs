@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RefreshMediaPlayUrlsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the resolutions of the media streams you want to refresh or prefetch. You can specify multiple resolutions. Separate multiple resolutions with commas (,). If you leave this parameter empty, media streams in all resolutions are refreshed or prefetched by default.</para>
+        /// <para>Specifies the definitions of the streams that you want to purge or prefetch. You can specify multiple definitions. Separate multiple definitions with commas (,). If you do not specify this parameter, <b>streams in all definitions are purged or prefetched by default</b>.</para>
         /// <remarks>
-        /// <para> The value must be supported in the <b>Definition</b> section in <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</para>
+        /// <para>The value must be one of the values defined in <b>Definition</b> in <a href="https://help.aliyun.com/document_detail/124671.html">Metric description for media assets</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Definitions { get; set; }
 
         /// <summary>
-        /// <para>The formats of the media streams you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you leave this parameter empty, media streams in all formats are refreshed or prefetched by default. Valid values:</para>
+        /// <para>The streaming formats that you want to refresh or prefetch. You can specify multiple formats. Separate multiple formats with commas (,). If you do not specify this parameter, <b>streams in all formats are refreshed or prefetched by default</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>mp4</b></description></item>
         /// <item><description><b>m3u8</b></description></item>
@@ -41,11 +41,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Formats { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the media files that you want to refresh or prefetch. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</para>
+        /// <para>The IDs of the audio or video files that you want to refresh or prefetch. You can specify one or more IDs. Separate multiple IDs with commas (,). You can specify up to 20 IDs.
+        /// You can obtain audio or video IDs by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media file is uploaded.</description></item>
+        /// <item><description>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the audio or video ID.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the audio or video ID is the value of the VideoId response parameter.</description></item>
+        /// <item><description>After the audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,10 +58,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of the refresh or prefetch operation. Default value: Single. Valid values:</para>
+        /// <para>The result type of the refresh or prefetch task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Single</b>: Only one latest transcoded stream is refreshed or prefetched for each resolution and format.</description></item>
-        /// <item><description><b>Multiple</b>: All transcoded streams are refreshed or prefetched for each resolution and format.</description></item>
+        /// <item><description><b>Single</b> (default): Only the latest transcoded stream for each definition and format is refreshed or prefetched.</description></item>
+        /// <item><description><b>Multiple</b>: All transcoded streams for each definition and format are refreshed or prefetched.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResultType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of the playback URLs of the TS files for the M3U8 media stream you want to refresh or prefetch. After you set this parameter, only the playback URLs of the first N TS files will be refreshed or prefetched. Valid values: 1 to 20. Default value: 5.</para>
+        /// <para>The number of TS file playback URLs to refresh or prefetch for M3U8 streams. Only the first N TS file playback URLs of each M3U8 stream are refreshed or prefetched. Valid values: 1 to 20. <b>Default value: 5</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -81,10 +82,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? SliceCount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to refresh or prefetch the playback URLs of the TS files of the M3U8 media stream. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to refresh or prefetch the playback URLs of TS files in M3U8 streams. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,10 +96,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public bool? SliceFlag { get; set; }
 
         /// <summary>
-        /// <para>Specifies the types of media streams you want to refresh or prefetch. You can specify multiple types. Separate multiple types with commas (,). If you leave this parameter empty, media streams in all types are refreshed or prefetched by default. Valid values:</para>
+        /// <para>The types of the streams that you want to refresh or prefetch. You can specify multiple stream types. Separate multiple stream types with commas (,). If you do not specify this parameter, <b>all stream types are refreshed or prefetched by default</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b></description></item>
-        /// <item><description><b>audio</b></description></item>
+        /// <item><description><b>video</b>: video.</description></item>
+        /// <item><description><b>audio</b>: audio.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,10 +110,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StreamType { get; set; }
 
         /// <summary>
-        /// <para>The type of the task that you want to create. Valid values:</para>
+        /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Refresh</b></description></item>
-        /// <item><description><b>Preload</b></description></item>
+        /// <item><description><b>Refresh</b>: purge.</description></item>
+        /// <item><description><b>Preload</b>: prefetch.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -124,11 +125,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section in the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameter</a> topic.</para>
+        /// <para>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</description></item>
-        /// <item><description>To enable the upload acceleration feature, submit a ticket. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>. For more information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
+        /// <item><description>To use message callbacks in this parameter, configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</description></item>
+        /// <item><description>To use the upload acceleration feature, submit a ticket to activate it. For more information, see <a href="https://help.aliyun.com/document_detail/55396.html">Upload instructions</a>. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 

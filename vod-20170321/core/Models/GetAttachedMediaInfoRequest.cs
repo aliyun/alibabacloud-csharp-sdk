@@ -10,22 +10,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the URL. Unit: seconds.</para>
+        /// <para>The validity period of the auxiliary media asset URL. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the OutputType parameter to <b>cdn</b>:</para>
-        /// <list type="bullet">
-        /// <item><description>The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.</description></item>
+        /// <item><description>If OutputType is set to <b>cdn</b>:<list type="bullet">
+        /// <item><description>The URL expires only if URL authentication is enabled. Otherwise, the URL is permanently valid.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
         /// <item><description>Maximum value: unlimited.</description></item>
-        /// <item><description>Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</description></item>
+        /// <item><description>Default value: If you do not specify this parameter, the default validity period specified in URL authentication is used.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If you set the OutputType parameter to <b>oss</b>:</para>
-        /// <list type="bullet">
-        /// <item><description>The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.</description></item>
+        /// <item><description>If OutputType is set to <b>oss</b>:<list type="bullet">
+        /// <item><description>The URL expires only if the storage permission is set to private. Otherwise, the URL is permanently valid.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
-        /// <item><description>The maximum value for a media asset stored in the VOD bucket is <b>2592000</b> (30 days) and the maximum value for a media asset stored in an OSS bucket is <b>129600</b> (36 hours). The maximum value is limited to reduce security risks of the origin.</description></item>
-        /// <item><description>Default value: If you do not set this parameter, the default value <b>3600</b> is used.</description></item>
+        /// <item><description>Maximum value: To reduce security risks to the origin server, the maximum value is <b>2592000</b> (30 days) if the auxiliary media asset is stored in a bucket managed by ApsaraVideo VOD, and <b>129600</b> (36 hours) if the auxiliary media asset is stored in your own OSS bucket.</description></item>
+        /// <item><description>Default value: If you do not specify this parameter, the value is <b>3600</b>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -38,10 +36,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? AuthTimeout { get; set; }
 
         /// <summary>
-        /// <para>The ID of the auxiliary media asset.</para>
+        /// <para>The auxiliary media asset IDs.</para>
         /// <list type="bullet">
         /// <item><description>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</description></item>
-        /// <item><description>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</description></item>
+        /// <item><description>The IDs are returned after you call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to obtain the upload URL and credential for the auxiliary media asset.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,10 +51,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the media asset URL. Valid values:</para>
+        /// <para>The type of the output URL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>oss</b></description></item>
-        /// <item><description><b>cdn</b> (default)</description></item>
+        /// <item><description><b>oss</b>: the back-to-origin URL.</description></item>
+        /// <item><description><b>cdn</b> (default): the CDN-accelerated URL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

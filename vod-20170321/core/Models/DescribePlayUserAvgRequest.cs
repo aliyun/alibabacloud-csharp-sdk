@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribePlayUserAvgRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time. The maximum time range between the start time and end time is 180 days.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

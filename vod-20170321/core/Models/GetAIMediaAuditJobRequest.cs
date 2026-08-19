@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIMediaAuditJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the intelligent review job.</para>
+        /// <para>The ID of the automated review job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

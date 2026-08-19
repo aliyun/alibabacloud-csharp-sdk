@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppPoliciesForIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multiple applications</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the identity.</para>
+        /// <para>The identity name.</para>
         /// <list type="bullet">
-        /// <item><description>Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</description></item>
-        /// <item><description>Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</description></item>
+        /// <item><description>If IdentityType is set to RamUser, specify the Resource Access Management (RAM) user ID.</description></item>
+        /// <item><description>If IdentityType is set to RamRole, specify the role name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityName { get; set; }
 
         /// <summary>
-        /// <para>The type of the identity. Valid values:</para>
+        /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RamUser</b>: a RAM user.</description></item>
-        /// <item><description><b>RamRole</b>: a RAM role.</description></item>
+        /// <item><description><b>RamUser</b>: Resource Access Management (RAM) user.</description></item>
+        /// <item><description><b>RamRole</b>: RAM role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

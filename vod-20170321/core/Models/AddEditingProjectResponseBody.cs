@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddEditingProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</para>
+        /// <para>The online editing project. For the specific structure definition, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</para>
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
         public AddEditingProjectResponseBodyProject Project { get; set; }
         public class AddEditingProjectResponseBodyProject : TeaModel {
             /// <summary>
-            /// <para>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the online editing project was created. The time follows the format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-01-11T12:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the online editing project was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The last time when the online editing project was modified. The time follows the format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-01-11T13:00:00Z</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The status of the online editing project. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: the online editing project is in draft.</description></item>
-            /// <item><description><b>Producing</b>: the video is being produced.</description></item>
-            /// <item><description><b>Produced</b>: the video is produced.</description></item>
-            /// <item><description><b>ProduceFailed</b>: the video failed to be produced.</description></item>
+            /// <item><description><b>Normal</b>: draft.</description></item>
+            /// <item><description><b>Producing</b>: being produced.</description></item>
+            /// <item><description><b>Produced</b>: produced.</description></item>
+            /// <item><description><b>ProduceFailed</b>: failed to be produced.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</para>

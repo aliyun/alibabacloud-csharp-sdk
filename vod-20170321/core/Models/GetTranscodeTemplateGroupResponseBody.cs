@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the transcoding template group.</para>
+        /// <para>The transcoding template group data.</para>
         /// </summary>
         [NameInMap("TranscodeTemplateGroup")]
         [Validation(Required=false)]
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup TranscodeTemplateGroup { get; set; }
         public class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the transcoding template group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the template group was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-12T10:20:51Z</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>Indicates whether the template group is the default one. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Default</b></description></item>
-            /// <item><description><b>NotDefault</b></description></item>
+            /// <item><description><b>Default</b>: The template group is the default one.</description></item>
+            /// <item><description><b>NotDefault</b>: The template group is not the default one.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string IsDefault { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the transcoding template group is locked. Valid values:</para>
+            /// <para>Indicates whether the template group is locked. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Disabled</b>: The template group is not locked.</description></item>
-            /// <item><description><b>Enabled</b>: The template group is locked.</description></item>
+            /// <item><description><b>Disabled</b>: Not locked.</description></item>
+            /// <item><description><b>Enabled</b>: Locked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Locked { get; set; }
 
             /// <summary>
-            /// <para>The time when the transcoding template group was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the template group was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-12T11:20:51Z</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the transcoding template group.</para>
+            /// <para>The name of the template group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transcoding template group.</para>
+            /// <para>The transcoding template group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a59b11f697c716*****6ae1502142d0</para>
@@ -105,34 +105,34 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TranscodeTemplateGroupId { get; set; }
 
             /// <summary>
-            /// <para>The information about the transcoding templates.</para>
+            /// <para>The list of transcoding template configurations.</para>
             /// </summary>
             [NameInMap("TranscodeTemplateList")]
             [Validation(Required=false)]
             public List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> TranscodeTemplateList { get; set; }
             public class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList : TeaModel {
                 /// <summary>
-                /// <para>The transcoding configurations of the audio stream. The value is a JSON string.</para>
+                /// <para>The audio stream transcoding configuration parameters (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Codec\&quot;:\&quot;AAC\&quot;,\&quot;Remove\&quot;:\&quot;false\&quot;,\&quot;Bitrate\&quot;:\&quot;44\&quot;,\&quot;Samplerate\&quot;:\&quot;32000\&quot;,\&quot;Channels\&quot;:\&quot;2\&quot;,\&quot;Profile\&quot;:\&quot;aac_low\&quot;}</para>
+                /// <para>{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Remove&quot;:&quot;false&quot;,&quot;Bitrate&quot;:&quot;44&quot;,&quot;Samplerate&quot;:&quot;32000&quot;,&quot;Channels&quot;:&quot;2&quot;,&quot;Profile&quot;:&quot;aac_low&quot;}</para>
                 /// </summary>
                 [NameInMap("Audio")]
                 [Validation(Required=false)]
                 public string Audio { get; set; }
 
                 /// <summary>
-                /// <para>The clipping configurations of the video. The value is a JSON string. For example, this parameter is returned if you extract 5 seconds of content from a video to generate a new video.</para>
+                /// <para>The video clipping configuration (JSON string). For example, set this parameter if you want to extract 5 seconds of content from a video to generate a new video.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;TimeSpan\&quot;:{\&quot;Seek\&quot;:\&quot;1\&quot;,\&quot;Duration\&quot;:\&quot;5\&quot;}</para>
+                /// <para>{&quot;TimeSpan&quot;:{&quot;Seek&quot;:&quot;1&quot;,&quot;Duration&quot;:&quot;5&quot;}</para>
                 /// </summary>
                 [NameInMap("Clip")]
                 [Validation(Required=false)]
                 public string Clip { get; set; }
 
                 /// <summary>
-                /// <para>The format of the container used to encapsulate audio and video streams. The value is a JSON string.</para>
+                /// <para>The container format for encapsulating audio and video streams (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;Format&quot;:&quot;m3u8&quot;</para>
@@ -142,11 +142,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Container { get; set; }
 
                 /// <summary>
-                /// <para>The content of the copyright watermark.</para>
+                /// <para>The copyright watermark information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
-                ///     &quot;Content&quot;: &quot;test&quot;
+                /// &quot;Content&quot;: &quot;Test copyright watermark text&quot;
                 /// }</para>
                 /// </summary>
                 [NameInMap("CopyrightMark")]
@@ -154,32 +154,32 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string CopyrightMark { get; set; }
 
                 /// <summary>
-                /// <para>Valid values for the definition of a common transcoding template:</para>
+                /// <para>The definition mark for normal transcoding templates:</para>
                 /// <list type="bullet">
-                /// <item><description><b>LD</b>: low definition.</description></item>
-                /// <item><description><b>SD</b>: standard definition.</description></item>
-                /// <item><description><b>HD</b>: high definition.</description></item>
-                /// <item><description><b>FHD</b>: ultra high definition.</description></item>
-                /// <item><description><b>OD</b>: original quality.</description></item>
+                /// <item><description><b>LD</b> (low definition)</description></item>
+                /// <item><description><b>SD</b> (standard definition)</description></item>
+                /// <item><description><b>HD</b> (high definition)</description></item>
+                /// <item><description><b>FHD</b> (full high definition)</description></item>
+                /// <item><description><b>OD</b> (original definition, container format conversion)</description></item>
                 /// <item><description><b>2K</b></description></item>
                 /// <item><description><b>4K</b></description></item>
-                /// <item><description><b>SQ</b>: standard sound quality.</description></item>
-                /// <item><description><b>HQ</b>: high sound quality.</description></item>
+                /// <item><description><b>SQ</b> (standard audio quality)</description></item>
+                /// <item><description><b>HQ</b> (high audio quality)</description></item>
                 /// </list>
-                /// <para>Valid values for the definition of a Narrowband HD™ 1.0 transcoding template:</para>
+                /// <para>The definition mark for Narrowband HD 1.0 built-in transcoding templates:</para>
                 /// <list type="bullet">
-                /// <item><description><b>LD-NBV1</b>: low definition.</description></item>
-                /// <item><description><b>SD-NBV1</b>: standard definition.</description></item>
-                /// <item><description><b>HD-NBV1</b>: high definition.</description></item>
-                /// <item><description><b>FHD-NBV1</b>: ultra high definition.</description></item>
+                /// <item><description><b>LD-NBV1</b> (low definition)</description></item>
+                /// <item><description><b>SD-NBV1</b> (standard definition)</description></item>
+                /// <item><description><b>HD-NBV1</b> (high definition)</description></item>
+                /// <item><description><b>FHD-NBV1</b> (full high definition)</description></item>
                 /// <item><description><b>2K-NBV1</b></description></item>
                 /// <item><description><b>4K-NBV1</b></description></item>
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>You cannot change the definition of a transcoding template.</description></item>
-                /// <item><description>You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.</description></item>
-                /// <item><description>You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.</description></item>
+                /// <item><description>The definition mark of transcoding templates cannot be modified.</description></item>
+                /// <item><description>The audio and video resolution, bitrate, and other parameters of Narrowband HD 1.0 transcoding templates are built into the system and cannot be modified.</description></item>
+                /// <item><description>Narrowband HD 1.0 transcoding templates can only be created in FLV, M3U8 (HLS), or MP4 format.</description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Definition { get; set; }
 
                 /// <summary>
-                /// <para>The encryption configuration for transcoding.</para>
+                /// <para>The transcoding encryption configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;EncryptType&quot;:&quot;Private&quot;</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string EncryptSetting { get; set; }
 
                 /// <summary>
-                /// <para>The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON string.</para>
+                /// <para>The segment setting parameters for transcoding. Required for HLS (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;Segment&quot;: { &quot;Duration&quot;:&quot;6&quot; }</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string MuxConfig { get; set; }
 
                 /// <summary>
-                /// <para>The packaging configuration. Only HLS packaging and DASH packaging are supported. The value is a JSON string.</para>
+                /// <para>The packaging configuration. Only HLS adaptive bitrate streaming packaging and DASH packaging are supported (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;PackageType&quot;:&quot;HLSPackage&quot;,&quot;PackageConfig&quot;:{   &quot;BandWidth&quot;:&quot;900000&quot;  }</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PackageSetting { get; set; }
 
                 /// <summary>
-                /// <para>The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: <c>[0,360]</c>.</para>
+                /// <para>The video rotation parameter. Controls the rotation angle of the video. For example, if set to 180, the video is flipped upside down. Value range: <c>[0,360]</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Rotate { get; set; }
 
                 /// <summary>
-                /// <para>The subtitle configurations. The value is a JSON string.</para>
+                /// <para>The subtitle configuration (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;SubtitleUrl&quot;:&quot;<a href="http://outin-test.oss-cn-shanghai.aliyuncs.com/subtitles/c737fece-14f1-4364-b107-d5f7f8edde0e.ass%22,%22CharEncode%22:%22utf-8%22%7D%5D">http://outin-test.oss-cn-shanghai.aliyuncs.com/subtitles/c737fece-14f1-4364-b107-d5f7f8edde0e.ass&quot;,&quot;CharEncode&quot;:&quot;utf-8&quot;}]</a></para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string SubtitleList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the transcoding template.</para>
+                /// <para>The transcoding template name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The content of the tracing watermark.</para>
+                /// <para>The tracing watermark information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TraceMark { get; set; }
 
                 /// <summary>
-                /// <para>The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the source file before the video is transcoded. The value is a JSON-formatted string.</para>
+                /// <para>The conditional transcoding parameters. Set this parameter if you want to perform basic logic checks based on the bitrate or resolution of the source file before outputting the transcoded video (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;IsCheckReso&quot;:&quot;true&quot;,&quot;IsCheckResoFail&quot;:&quot;false&quot;,&quot;IsCheckVideoBitrate&quot;:&quot;false&quot;,&quot;IsCheckVideoBitrateFail&quot;:&quot;false&quot;,&quot;IsCheckAudioBitrate&quot;:&quot;false&quot;,&quot;IsCheckAudioBitrateFail&quot;:&quot;false&quot;}</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TransConfig { get; set; }
 
                 /// <summary>
-                /// <para>The custom path used to store the output files.</para>
+                /// <para>The custom transcoding output path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{MediaId}/transcoce_1</para>
@@ -293,11 +293,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TranscodeTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the transcoding template. Valid values:</para>
+                /// <para>The templatetype. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b> (default): a common transcoding template. The PackageSetting parameter cannot be set for this type of template.</description></item>
-                /// <item><description><b>VideoPackage</b>: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and packages these video streams with a file. The PackageSetting parameter must be set for this type of template.</description></item>
-                /// <item><description><b>SubtitlePackage</b>: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file generated by packaging the multi-bitrate video streams of the corresponding video without transcoding. You must set the PackageSetting parameter for a subtitle package template and associate the subtitle package template with a video stream package template. A template group can contain only one subtitle package template.</description></item>
+                /// <item><description><b>Normal</b> (default): a normal transcoding template. The PackageSetting parameter cannot be configured in Settings for this type of template.</description></item>
+                /// <item><description><b>VideoPackage</b>: a video stream packaging template. This type of template first transcodes and then builds adaptive bitrate streaming. The PackageSetting parameter must be configured in Settings for this type of template.</description></item>
+                /// <item><description><b>SubtitlePackage</b>: a subtitle packaging template. This type of template does not transcode but only builds the corresponding subtitle information into the adaptive bitrate streaming output file. The PackageSetting parameter must be configured in Settings for this type of template. This type of template cannot exist alone in a template group and must be configured together with a VideoPackage type template. Only one SubtitlePackage template can be configured in a template group.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The transcoding configurations of the video stream. The value is a JSON string.</para>
+                /// <para>The video stream transcoding configuration parameters (JSON string).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Bitrate&quot;:&quot;900&quot;,&quot;Width&quot;:&quot;960&quot;,&quot;Remove&quot;:&quot;false&quot;,&quot;Fps&quot;:&quot;30&quot;}</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Video { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the associated watermarks.</para>
+                /// <para>The IDs of associated image and text watermark templates.</para>
                 /// </summary>
                 [NameInMap("WatermarkIds")]
                 [Validation(Required=false)]

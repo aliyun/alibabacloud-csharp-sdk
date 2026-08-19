@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteEditingProjectMaterialsRequest : TeaModel {
         /// <summary>
-        /// <para>The material ID. Separate multiple material IDs with commas (,).</para>
+        /// <para>The material IDs. These are media asset IDs, such as VideoId for videos, ImageId for images, and MediaId for auxiliary media assets. Separate multiple material IDs with commas (,).</para>
+        /// <para>To obtain material IDs, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +22,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MaterialIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the material. Valid values:</para>
+        /// <para>The material type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b></description></item>
-        /// <item><description><b>audio</b></description></item>
-        /// <item><description><b>image</b></description></item>
+        /// <item><description><b>video</b>: video.</description></item>
+        /// <item><description><b>audio</b>: audio-only.</description></item>
+        /// <item><description><b>image</b>: image.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

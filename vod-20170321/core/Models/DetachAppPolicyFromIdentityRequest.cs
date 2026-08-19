@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DetachAppPolicyFromIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.</para>
+        /// <para>The application ID. If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>app-1000000</b>.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</description></item>
+        /// <item><description>Value (default): <b>app-1000000</b>.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user or the name of the RAM role.</para>
+        /// <para>The identity name.</para>
         /// <list type="bullet">
-        /// <item><description>Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.</description></item>
-        /// <item><description>Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.</description></item>
+        /// <item><description>If the type is RamUser, specify the Resource Access Management (RAM) user ID.</description></item>
+        /// <item><description>If the type is RamRole, specify the role name.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityName { get; set; }
 
         /// <summary>
-        /// <para>The type of the identity. Valid values:</para>
+        /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RamUser</b>: RAM user</description></item>
-        /// <item><description><b>RamRole</b>: RAM role</description></item>
+        /// <item><description><b>RamUser</b>: Resource Access Management (RAM) user.</description></item>
+        /// <item><description><b>RamRole</b>: RAM role.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy. Separate multiple names with commas (,). Only system policies are supported.</para>
+        /// <para>The policy names. Separate multiple names with commas (,). Only system policies are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VODAppFullAccess</b>: permissions to manage all resources in an application</description></item>
-        /// <item><description><b>VODAppReadOnlyAccess</b>: permissions to read all resources in an application</description></item>
-        /// <item><description><b>VODAppAdministratorAccess</b>: permissions of the application administrator</description></item>
+        /// <item><description><b>VODAppFullAccess</b>: permissions to manage and operate all resources in the application.</description></item>
+        /// <item><description><b>VODAppReadOnlyAccess</b>: read-only permissions for all resources in the application.</description></item>
+        /// <item><description><b>VODAppAdministratorAccess</b>: application administrator permissions.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

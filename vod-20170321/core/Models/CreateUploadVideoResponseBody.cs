@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadVideoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-04D5-D7393642****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload URL.</para>
         /// <remarks>
-        /// <para>The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the Object Storage Service (OSS) SDK or call an OSS API operation to upload media files.</para>
+        /// <para>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAddress.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The upload credential.</para>
         /// <remarks>
-        /// <para>The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</para>
+        /// <para>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAuth.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UploadAuth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the audio or video file. VideoId can be used as a request parameter when you call an operation for media asset management, media processing, or media review.</para>
+        /// <para>The audio or video ID. This ID can be used as a request parameter for media asset management, media processing, and content moderation operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>93ab850b4f6f54b6e91d24d81d44****</para>

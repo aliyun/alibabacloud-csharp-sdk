@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListJobInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>transcode</description></item>
-        /// <item><description>snapshot</description></item>
-        /// <item><description>ai</description></item>
+        /// <item><description><para>transcode</para>
+        /// </description></item>
+        /// <item><description><para>snapshot</para>
+        /// </description></item>
+        /// <item><description><para>ai</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the media asset.</para>
+        /// <para>The media asset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

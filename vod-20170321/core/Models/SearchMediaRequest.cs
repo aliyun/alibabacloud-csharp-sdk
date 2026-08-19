@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The media asset fields to return in the query results.</para>
-        /// <para>By default, only the basic media asset fields are returned. You can specify additional media asset fields that need to be returned in the request. For more information, see the &quot;API examples&quot; section of the <a href="https://help.aliyun.com/document_detail/99179.html">Search for media asset information</a> topic.</para>
+        /// <para>The media asset fields to return in the search results.</para>
+        /// <para>By default, only basic media asset fields are returned. You can specify additional media asset fields to return. For more information, see <a href="https://help.aliyun.com/document_detail/99179.html">Usage examples</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Title,CoverURL</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Fields { get; set; }
 
         /// <summary>
-        /// <para>The filter condition. For more information about the syntax, see <a href="https://help.aliyun.com/document_detail/86991.html">Protocol for media asset search</a>.</para>
+        /// <para>The filter conditions. For syntax rules, see <a href="https://help.aliyun.com/document_detail/86991.html">Search protocol syntax</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>field = value</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Match { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para>If the value of this parameter exceeds <b>200</b>, we recommend that you set the ScrollToken parameter as well.</para>
+        /// <para>If this parameter exceeds <b>200</b>, set the ScrollToken parameter as well.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The number of records per page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,10 +54,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The pagination identifier. The password must be 32 characters in length The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:</para>
+        /// <para>The pagination token. The value is a 32-character string.
+        /// You do not need to set this parameter for the first search request. When the search request matches data, the server returns this parameter value, which records the current position of the search data. Record the returned value and set this parameter in the next search request based on the following requirements or recommendations:</para>
         /// <list type="bullet">
-        /// <item><description>If SearchType is set to <b>video</b> or <b>audio</b> and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</description></item>
-        /// <item><description>If the value of the PageNo parameter exceeds <b>200</b>, we recommend that you set this parameter to optimize search performance.</description></item>
+        /// <item><description>If SearchType is set to <b>video</b> or <b>audio</b> and you need to traverse all data that matches the search conditions, this parameter is required.</description></item>
+        /// <item><description>If PageNo exceeds <b>200</b>, set this parameter to optimize search performance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,15 +69,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ScrollToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the media asset that you want to query. Default value: video. Valid values:</para>
+        /// <para>The type of media asset to search. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b></description></item>
-        /// <item><description><b>audio</b></description></item>
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>attached</b></description></item>
+        /// <item><description><b>video</b> (default): video.</description></item>
+        /// <item><description><b>audio</b>: audio.</description></item>
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>attached</b>: auxiliary media asset.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is set to <b>video</b> or <b>audio</b> and you want to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</para>
+        /// <para>If this parameter is set to <b>video</b> or <b>audio</b> and you need to traverse all data that matches the search conditions, you must set the ScrollToken parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,16 +88,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SearchType { get; set; }
 
         /// <summary>
-        /// <para>The sort field and order. Separate multiple values with commas (,). Default value: CreationTime:Desc. Valid values:</para>
+        /// <para>The sort field and sort order. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreationTime:Desc</b>: The results are sorted in reverse chronological order based on the creation time.</description></item>
-        /// <item><description><b>CreationTime:Asc</b>: The results are sorted in chronological order based on the creation time.</description></item>
+        /// <item><description><b>CreationTime:Desc</b> (default): sorts by creation time in descending order.</description></item>
+        /// <item><description><b>CreationTime:Asc</b>: sorts by creation time in ascending order.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the sort field, see &quot;Sort field&quot; in the <a href="https://help.aliyun.com/document_detail/99179.html">Search for media asset information</a> topic.</description></item>
-        /// <item><description>To obtain the first 5,000 data records that meet the specified filter criteria, you can specify a maximum of three sort fields.</description></item>
-        /// <item><description>To obtain all the data records that meet the specified filter criteria, you can specify only one sort field.</description></item>
+        /// <item><description>For sort field examples, see <a href="https://help.aliyun.com/document_detail/99179.html">Sort fields</a>.</description></item>
+        /// <item><description>When retrieving the first 5,000 records of search results, up to three sort fields are supported.</description></item>
+        /// <item><description>When retrieving all data that matches the search conditions, only one sort field is supported.</description></item>
         /// </list>
         /// </remarks>
         /// 

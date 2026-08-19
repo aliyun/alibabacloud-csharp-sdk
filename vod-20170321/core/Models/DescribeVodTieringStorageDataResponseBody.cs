@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTieringStorageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The storage usage data returned.</para>
+        /// <para>The storage usage data.</para>
         /// </summary>
         [NameInMap("StorageData")]
         [Validation(Required=false)]
         public List<DescribeVodTieringStorageDataResponseBodyStorageData> StorageData { get; set; }
         public class DescribeVodTieringStorageDataResponseBodyStorageData : TeaModel {
             /// <summary>
-            /// <para>The data that is stored less than a month. Unit: bytes.</para>
+            /// <para>The size of data stored for less than one month. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? LessthanMonthDatasize { get; set; }
 
             /// <summary>
-            /// <para>The region in which data is queried.</para>
+            /// <para>The storage region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The storage type.</para>
+            /// <para>The storage class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IA</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? StorageUtilization { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time of the time interval. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-29T01:00:00Z</para>

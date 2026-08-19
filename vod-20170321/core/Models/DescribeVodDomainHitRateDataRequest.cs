@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainHitRateDataRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name.</para>
+        /// <para>The accelerated domain name to query.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, the merged data of all your accelerated domain names is returned.</description></item>
-        /// <item><description>You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.</description></item>
-        /// <item><description>To obtain the accelerated domain name, perform the following steps: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b>. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the accelerated domain names.</description></item>
+        /// <item><description>If you do not specify this parameter, the pooled data of all accelerated domain names is returned by default.</description></item>
+        /// <item><description>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 500 domain names at a time.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <b>Configuration Management &gt; CDN Configuration &gt; Domain Names</b> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The end of the time range to query.</para>
         /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time granularity. Unit: seconds. Valid values: <b>300</b>, <b>3600</b>, and <b>86400</b>. If you leave this parameter empty or specify an invalid value, the default value is used. The supported time granularity varies based on the time range specified by <c>EndTime</c> and <c>StartTime</c>. The following content describes the supported time granularity.</para>
+        /// <para>The time granularity of the data to query. Unit: seconds. Valid values: <b>300</b>, <b>3600</b>, and <b>86400</b>. If you do not specify this parameter or specify an unsupported value, the default value is used. The supported time granularity varies based on the time span specified by <c>StartTime</c> and <c>EndTime</c>:</para>
         /// <list type="bullet">
-        /// <item><description>Time range per query &lt; 3 days: <b>300</b> (default), <b>3600</b>, and <b>86400</b></description></item>
-        /// <item><description>3 days ≤ Time range per query &lt; 31 days: <b>3600</b> (default) and <b>86400</b></description></item>
-        /// <item><description>31 days ≤ Time range per query ≤ 90 days: <b>86400</b> (default)</description></item>
+        /// <item><description>Less than 3 days (exclusive): <b>300</b> (default), <b>3600</b>, and <b>86400</b>.</description></item>
+        /// <item><description>3 to 31 days (exclusive): <b>3600</b> (default) and <b>86400</b>.</description></item>
+        /// <item><description>31 days or more: <b>86400</b> (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

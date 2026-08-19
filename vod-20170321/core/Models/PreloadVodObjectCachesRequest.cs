@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesRequest : TeaModel {
         /// <summary>
-        /// <para>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</para>
-        /// <list type="bullet">
-        /// <item><description><b>domestic</b>: Chinese mainland</description></item>
-        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
-        /// </list>
+        /// <para>The prefetch region. Valid values: <b>domestic</b>, <b>overseas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>domestic</para>
@@ -24,10 +20,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to prefetch content to POPs. Valid values:</para>
+        /// <para>Specifies whether to directly prefetch content to L2 nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prefetches content to nodes that include L2 DCDN nodes.</description></item>
-        /// <item><description><b>false</b>: prefetches content to L2 POPs or L3 POPs.</description></item>
+        /// <item><description><para><b>true</b>: The prefetch node level must include L2 nodes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Only back-to-origin layer nodes are prefetched. This is the <b>default value</b>. The back-to-origin layer node may be an L2 node or an L3 node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +36,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public bool? L2Preload { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</para>
+        /// <para>The URL of the file to prefetch. Separate multiple URLs with line breaks (
+        ///  or 
+        /// ).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The custom header for prefetch in the JSON format.</para>
+        /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetch, use this parameter to customize prefetch headers. Submit the value in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

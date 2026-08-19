@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID to which the instance belongs.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzko7fsuj****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <b>Normal</b> state. Valid values:</para>
+        /// <para>The application status. You can query applications in a specified status. After an application is created, the status is <b>Normal</b> by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b></description></item>
         /// <item><description><b>Disable</b></description></item>

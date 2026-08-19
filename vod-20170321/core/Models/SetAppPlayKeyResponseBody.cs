@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetAppPlayKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>
         /// </summary>

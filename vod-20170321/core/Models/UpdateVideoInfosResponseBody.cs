@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</para>
+        /// <para>The IDs of the audio and video files that cannot be operated on. This is typically caused by insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</para>
         /// </summary>
         [NameInMap("ForbiddenVideoIds")]
         [Validation(Required=false)]
         public List<string> ForbiddenVideoIds { get; set; }
 
+        /// <summary>
+        /// <para>The list of custom IDs that do not exist.</para>
+        /// </summary>
         [NameInMap("NonExistReferenceIds")]
         [Validation(Required=false)]
         public List<string> NonExistReferenceIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the videos that do not exist.</para>
+        /// <para>The IDs of the audio and video files that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistVideoIds")]
         [Validation(Required=false)]
         public List<string> NonExistVideoIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>

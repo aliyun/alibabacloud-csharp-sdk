@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitMediaDNADeleteJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the video.</para>
+        /// <para>The video ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

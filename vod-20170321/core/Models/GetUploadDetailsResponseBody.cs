@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetUploadDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the media files that cannot be accessed.</para>
+        /// <para>The IDs of media files that cannot be accessed.</para>
         /// </summary>
         [NameInMap("ForbiddenMediaIds")]
         [Validation(Required=false)]
         public List<string> ForbiddenMediaIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the media files that do not exist.</para>
+        /// <para>The IDs of media files that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistMediaIds")]
         [Validation(Required=false)]
         public List<string> NonExistMediaIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9E290613-04F4-47F4-795D30732077****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public List<GetUploadDetailsResponseBodyUploadDetails> UploadDetails { get; set; }
         public class GetUploadDetailsResponseBodyUploadDetails : TeaModel {
             /// <summary>
-            /// <para>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:45:07Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompletionTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:42:07Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DeviceModel { get; set; }
 
             /// <summary>
-            /// <para>The size of the uploaded file. Unit: byte.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>46</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the uploaded audio or video.</para>
+            /// <para>The ID of the uploaded audio or video file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>61ccbdb06fa83012be4d8083f6****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The modification time. The time is in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-04-28T09:43:12Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the video. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
+            /// <para>The video status. For the valid values and descriptions of video statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: video status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>
@@ -111,17 +111,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The title of the media file.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test details</para>
+            /// <para>Test file upload details</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the server that uploads the media file.</para>
+            /// <para>The upload IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? UploadRatio { get; set; }
 
             /// <summary>
-            /// <para>The upload size. Unit: byte.</para>
+            /// <para>The upload size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>346</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? UploadSize { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to upload the media file.</para>
+            /// <para>The upload source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebSDK</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string UploadSource { get; set; }
 
             /// <summary>
-            /// <para>The status of the upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
+            /// <para>The upload task status. For the valid values and descriptions of upload statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>

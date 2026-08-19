@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddAITemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The detailed configurations of the AI template. The value must be a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</para>
+        /// <para>The detailed configuration of the AI template. The value is a JSON string.
+        /// For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TemplateConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the AI template. The name can be up to 128 bytes in length.</para>
+        /// <para>The name of the AI template. Maximum length: 128 bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +33,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The type of the AI template. Valid values:</para>
+        /// <para>The templatetype of the AI template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AIMediaAudit</b>: automated review</description></item>
-        /// <item><description><b>AIImage</b>: smart thumbnail</description></item>
+        /// <item><description><b>AIMediaAudit</b>: automated review.</description></item>
+        /// <item><description><b>AIImage</b>: smart thumbnail.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

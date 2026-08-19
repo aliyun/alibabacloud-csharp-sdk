@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class MoveAppResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The resource ID. You can specify a maximum of 20 IDs at a time. Separate multiple IDs with commas (,).</para>
+        /// <para>The resource IDs. Separate multiple IDs with commas (,). You can specify a maximum of 20 IDs at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>video</b>: video files.</description></item>
-        /// <item><description><b>image</b>: image files.</description></item>
-        /// <item><description><b>attached</b>: auxiliary media assets.</description></item>
+        /// <item><description><b>video</b>: video.</description></item>
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>attached</b>: auxiliary media asset.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application to which resources are migrated. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Use the multi-application service</a>.</para>
+        /// <para>The ID of the destination application. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

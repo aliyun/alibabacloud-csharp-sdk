@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIImageAuditJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image review job.</para>
+        /// <para>The image review task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b1aa3024aee64*****6dc8ca20dbc328</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6F42D500-1956-4B*****30-C09E755F4F4B</para>

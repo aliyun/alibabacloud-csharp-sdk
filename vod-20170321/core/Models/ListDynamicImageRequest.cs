@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListDynamicImageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the video.</para>
+        /// <para>The video ID. You can obtain the video ID by using one of the following methods:</para>
+        /// <list type="bullet">
+        /// <item><description>For videos uploaded by using the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>Obtain the video ID from the value of the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</description></item>
+        /// <item><description>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID. The video ID is the value of the VideoId response parameter.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

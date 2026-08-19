@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAppPlayKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-1000000</para>
         /// </summary>

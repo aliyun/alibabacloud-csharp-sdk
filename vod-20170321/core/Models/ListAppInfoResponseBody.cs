@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of applications.</para>
+        /// <para>The list of application information.</para>
         /// </summary>
         [NameInMap("AppInfoList")]
         [Validation(Required=false)]
         public List<ListAppInfoResponseBodyAppInfoList> AppInfoList { get; set; }
         public class ListAppInfoResponseBodyAppInfoList : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the application was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-03-01T08:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the application.</para>
+            /// <para>The application description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my first app.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The last time when the application was modified. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the application was last modified. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-03-01T09:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzko7fsuj****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the application. Valid values:</para>
+            /// <para>The application status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Normal</b></description></item>
             /// <item><description><b>Disable</b></description></item>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the application. Valid values:</para>
+            /// <para>The application type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>System</b></description></item>
-            /// <item><description><b>Custom</b></description></item>
+            /// <item><description><b>System</b>: system default.</description></item>
+            /// <item><description><b>Custom</b>: user-created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A13-4D5C-D7393642****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

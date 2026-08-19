@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListDynamicImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of animated stickers.</para>
+        /// <para>The animated image results.</para>
         /// </summary>
         [NameInMap("DynamicImageList")]
         [Validation(Required=false)]
         public List<ListDynamicImageResponseBodyDynamicImageList> DynamicImageList { get; set; }
         public class ListDynamicImageResponseBodyDynamicImageList : TeaModel {
             /// <summary>
-            /// <para>The time when the animated sticker was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the animated image was created. The time follows the format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-28T02:01:06Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The duration of the animated sticker. Unit: seconds.</para>
+            /// <para>The duration of the animated image. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Duration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the animated sticker.</para>
+            /// <para>The animated image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2b4e51df60323ef43d6e336ecf****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string DynamicImageId { get; set; }
 
             /// <summary>
-            /// <para>The size of the animated sticker file. Unit: byte.</para>
+            /// <para>The size of the animated image file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>119866</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileSize { get; set; }
 
             /// <summary>
-            /// <para>The URL of the animated sticker file.</para>
+            /// <para>The URL of the animated image file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.aliyundoc.com/2e114f110059*****0c3193918fd449a/image/dynamic/2b4e51df60*****323ef43d6e336ecf.webp?auth_key=1597296785-0-0-4a48e85*****bd2bb358e0b3cade">https://example.aliyundoc.com/2e114f110059*****0c3193918fd449a/image/dynamic/2b4e51df60*****323ef43d6e336ecf.webp?auth_key=1597296785-0-0-4a48e85*****bd2bb358e0b3cade</a></para>
@@ -67,7 +67,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileURL { get; set; }
 
             /// <summary>
-            /// <para>The format of the animated sticker. Valid values: gif and webp.</para>
+            /// <para>The format of the animated image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>gif</b></description></item>
+            /// <item><description><b>webp</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>webp</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The frame rate of the animated sticker. Unit: frames per second.</para>
+            /// <para>The frame rate of the animated image. Unit: frames per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Fps { get; set; }
 
             /// <summary>
-            /// <para>The height of the animated sticker. Unit: pixel.</para>
+            /// <para>The height of the animated image. Unit: px.</para>
             /// 
             /// <b>Example:</b>
             /// <para>360</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Height { get; set; }
 
             /// <summary>
-            /// <para>The job ID for creating the animated sticker.</para>
+            /// <para>The animated image job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2bf4390af9e5491c09cc720ad****</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the video.</para>
+            /// <para>The video ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2e114f1100590c3193918fd449a****</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string VideoId { get; set; }
 
             /// <summary>
-            /// <para>The width of the animated sticker. Unit: pixel.</para>
+            /// <para>The width of the animated image. Unit: px.</para>
             /// 
             /// <b>Example:</b>
             /// <para>640</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>570189B6-572E-4953-13B4278EE0D8****</para>

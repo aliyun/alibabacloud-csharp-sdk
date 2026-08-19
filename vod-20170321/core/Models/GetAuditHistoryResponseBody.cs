@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAuditHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The review records.</para>
+        /// <para>The list of review history records.</para>
         /// </summary>
         [NameInMap("Histories")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Auditor { get; set; }
 
             /// <summary>
-            /// <para>The review comments, which are provided by the reviewer.</para>
+            /// <para>The review details, which are the specific comments provided by the reviewer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Contains nudity</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the review record was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the record was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-01-11T12:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The reason why the video failed the review. If the video failed the review, specify the reason.</para>
+            /// <para>The reason for rejection. If the review result is rejection, the reason must be provided.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pornographic video</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The manual review result. Valid values:</para>
+            /// <para>The review result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: The video can be played.</description></item>
-            /// <item><description><b>Blocked</b>: The video is blocked.</description></item>
+            /// <item><description><b>Normal</b></description></item>
+            /// <item><description><b>Blocked</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-43*****D7-6C044FE73368</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The manual review result. Valid values:</para>
+        /// <para>The review result. Indicates the result of the current manual review. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: The video can be played.</description></item>
-        /// <item><description><b>Blocked</b>: The video is blocked.</description></item>
+        /// <item><description><b>Normal</b>: the content is normal.</description></item>
+        /// <item><description><b>Blocked</b>: the content is blocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of review records.</para>
+        /// <para>The total number of review history records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

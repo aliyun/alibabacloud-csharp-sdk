@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class MoveAppResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the resources that failed to be migrated.</para>
+        /// <para>The IDs of resources that failed to be migrated.</para>
         /// </summary>
         [NameInMap("FailedResourceIds")]
         [Validation(Required=false)]
         public List<string> FailedResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources that were not found.</para>
+        /// <para>The IDs of resources that do not exist.</para>
         /// </summary>
         [NameInMap("NonExistResourceIds")]
         [Validation(Required=false)]

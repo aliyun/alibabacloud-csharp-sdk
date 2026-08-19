@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListTranscodeTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about transcoding tasks.</para>
+        /// <para>The list of transcoding task information.</para>
         /// </summary>
         [NameInMap("TranscodeTaskList")]
         [Validation(Required=false)]
         public List<ListTranscodeTaskResponseBodyTranscodeTaskList> TranscodeTaskList { get; set; }
         public class ListTranscodeTaskResponseBodyTranscodeTaskList : TeaModel {
             /// <summary>
-            /// <para>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the transcoding task was complete. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-23T12:40:12Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the transcoding task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the transcoding task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-23T12:35:12Z</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the transcoding task. Valid values:</para>
+            /// <para>The status of the transcoding task.</para>
             /// <list type="bullet">
-            /// <item><description><b>Processing</b>: In progress.</description></item>
-            /// <item><description><b>Partial</b>: Some transcoding jobs were complete.</description></item>
-            /// <item><description><b>CompleteAllSucc</b>: All transcoding jobs were successful.</description></item>
-            /// <item><description><b>CompleteAllFail</b>: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</description></item>
-            /// <item><description><b>CompletePartialSucc</b>: All transcoding jobs were complete but only some were successful.</description></item>
+            /// <item><description><b>Processing</b>: in progress.</description></item>
+            /// <item><description><b>Partial</b>: partially completed.</description></item>
+            /// <item><description><b>CompleteAllSucc</b>: all transcoding jobs are complete and successful.</description></item>
+            /// <item><description><b>CompleteAllFail</b>: all transcoding jobs are complete but all failed. If the source file has issues, no transcoding jobs are initiated and the entire transcoding task fails.</description></item>
+            /// <item><description><b>CompletePartialSucc</b>: all transcoding jobs are complete but only some are successful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transcoding task.</para>
+            /// <para>The transcoding task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b1b65ab107*****ba3dbb900f6c1fe0</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TranscodeTaskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transcoding template group.</para>
+            /// <para>The ID of the transcoding template group used for transcoding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b500c7094bd24*****f3e9900752d7c3</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TranscodeTemplateGroupId { get; set; }
 
             /// <summary>
-            /// <para>The mode in which the transcoding task is triggered. Valid values:</para>
+            /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Auto</b>: The transcoding task is automatically triggered when the video is uploaded.</description></item>
-            /// <item><description><b>Manual</b>: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.</description></item>
+            /// <item><description><b>Auto</b>: automatically triggered after a video is uploaded.</description></item>
+            /// <item><description><b>Manual</b>: triggered by calling the SubmitTranscodeJobs operation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Trigger { get; set; }
 
             /// <summary>
-            /// <para>The ID of the audio or video file.</para>
+            /// <para>The audio or video ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d4860fcc6a5*****bce9fed52e893824</para>

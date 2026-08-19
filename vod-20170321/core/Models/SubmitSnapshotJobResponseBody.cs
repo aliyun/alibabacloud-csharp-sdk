@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitSnapshotJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-5EB0-4AF6-D7393642****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the snapshot job.</para>
+        /// <para>The snapshot job information.</para>
         /// </summary>
         [NameInMap("SnapshotJob")]
         [Validation(Required=false)]
         public SubmitSnapshotJobResponseBodySnapshotJob SnapshotJob { get; set; }
         public class SubmitSnapshotJobResponseBodySnapshotJob : TeaModel {
             /// <summary>
-            /// <para>The ID of the snapshot job.</para>
+            /// <para>The snapshot job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad90a501b1b94b72374ad0050464****</para>

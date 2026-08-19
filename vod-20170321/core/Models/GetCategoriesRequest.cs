@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetCategoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the category. If you specify this parameter, the system queries the category based on the ID. You can specify only one category ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The category ID. If you specify this parameter, the information about the specified category is returned. Only a single category ID is supported. You can obtain the category ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Categories</b>. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.</description></item>
-        /// <item><description>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
+        /// <item><description>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? CateId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page where the subcategories to be returned are listed. Default value: <b>1</b>.</para>
+        /// <para>The page number of the subcategory list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page of the subcategory list. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The number of entries per page of the subcategory list. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting method of the results. Valid values:</para>
+        /// <para>The method for sorting the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreationTime:Desc</b> (default): The results are sorted in reverse chronological order based on the creation time.</description></item>
-        /// <item><description><b>CreationTime:Asc</b>: The results are sorted in chronological order based on the creation time.</description></item>
+        /// <item><description><b>CreationTime:Desc</b> (default): sorts the results by creation time in descending order.</description></item>
+        /// <item><description><b>CreationTime:Asc</b>: sorts the results by creation time in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The type of the category. If you specify this parameter, the system queries the category based on the type. Valid values:</para>
+        /// <para>The categorization type. If you specify this parameter, a filtered query is performed to return categories of the specified type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> (default): audio, video, and image files</description></item>
-        /// <item><description><b>material</b>: short video materials</description></item>
+        /// <item><description><b>default</b>: audio, video, and image categorization.</description></item>
+        /// <item><description><b>material</b>: short video material categorization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

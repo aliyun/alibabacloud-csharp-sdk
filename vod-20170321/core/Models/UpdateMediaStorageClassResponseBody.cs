@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30FA0B7C-3A81-5449-93CD-ACA149E6****</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Processing</b></description></item>
-        /// <item><description><b>Failed</b></description></item>
+        /// <item><description><b>Processing</b>: Processing.</description></item>
+        /// <item><description><b>Failed</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

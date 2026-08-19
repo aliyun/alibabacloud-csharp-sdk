@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UploadStreamByURLRequest : TeaModel {
         /// <summary>
-        /// <para>The quality of the video stream.</para>
-        /// <para>For more information about valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</para>
+        /// <para>The definition of the video stream.</para>
+        /// <para>For valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>The file name extension of the transcoded stream.</para>
-        /// <para>For more information, see the Supported media file formats section in <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</para>
-        /// <para>If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.</para>
+        /// <para>The file name extension of the transcoded stream file.</para>
+        /// <para>For supported audio and video file formats, see <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</para>
+        /// <para>If this parameter is not empty, it overwrites the file name extension in the StreamURL.</para>
         /// <remarks>
-        /// <para> This parameter is required if you do not specify a file name extension in StreamURL.</para>
+        /// <para>Notice: This parameter is required if the StreamURL does not contain a file name extension.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,14 +44,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <item><description>HLG</description></item>
         /// <item><description>DolbyVision</description></item>
         /// <item><description>HDRVivid</description></item>
-        /// <item><description>SDR+</description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
+        /// <item><description>SDR+<remarks>
         /// <list type="bullet">
-        /// <item><description><para>The HDR type of the transcoded stream is not case-sensitive.</para>
-        /// </description></item>
-        /// <item><description><para>You can leave this parameter empty for non-HDR streams.</para>
+        /// <item><description>Case-insensitive.</description></item>
+        /// <item><description>Leave this parameter empty for non-HDR videos.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string HDRType { get; set; }
 
         /// <summary>
-        /// <para>The media ID in ApsaraVideo VOD.</para>
+        /// <para>The ID of the ApsaraVideo VOD media asset that corresponds to the transcoded stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,8 +72,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the transcoded stream.</para>
-        /// <para>If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.</para>
+        /// <para>The URL of the transcoded stream file.</para>
+        /// <para>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure the URL is accessible through public network access.</para>
+        /// <remarks>
+        /// <para>You can obtain the audio or video URL from the console or by invoking the GetPlayInfo operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,8 +87,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StreamURL { get; set; }
 
         /// <summary>
-        /// <para>Metadata information for uploading media files, in JSON string format.</para>
-        /// <para>For more information, please refer to the table below for UploadMetadata.</para>
+        /// <para>The metadata of the media file to upload. The value is a JSON string.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information, see the <b>UploadMetadata</b> table below.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AddressMapping&quot;:&quot;1&quot;,&quot;CustomPath&quot;:&quot;test/xxx&quot;,&quot;CustomFileName&quot;:&quot;xxx.mp4&quot;,&quot;isOverwritePath&quot;:&quot;0&quot;}</para>
@@ -97,9 +100,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UploadMetadata { get; set; }
 
         /// <summary>
-        /// <para>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</para>
+        /// <para>The custom parameter. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
-        /// <para> The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</para>
+        /// <para>To use the message callback in this parameter, configure the HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

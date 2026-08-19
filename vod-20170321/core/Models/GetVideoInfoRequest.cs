@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The length is 6 to 64 characters. The ID is unique at the user level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-123</para>
         /// </summary>
@@ -18,11 +20,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the audio or video file. You can specify only one ID in each call. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The audio or video ID. Only one audio or video ID is supported. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</description></item>
-        /// <item><description>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query the media ID after the media file is uploaded.</description></item>
+        /// <item><description>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the audio or video ID.</description></item>
+        /// <item><description>Obtain the audio or video ID from the value of the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</description></item>
+        /// <item><description>After the audio or video file is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

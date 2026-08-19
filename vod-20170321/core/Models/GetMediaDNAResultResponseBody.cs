@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaDNAResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The media fingerprinting results.</para>
+        /// <para>The media fingerprint result.</para>
         /// </summary>
         [NameInMap("DNAResult")]
         [Validation(Required=false)]
         public GetMediaDNAResultResponseBodyDNAResult DNAResult { get; set; }
         public class GetMediaDNAResultResponseBodyDNAResult : TeaModel {
             /// <summary>
-            /// <para>The video fingerprint recognition result.</para>
+            /// <para>The media fingerprint recognition results.</para>
             /// </summary>
             [NameInMap("VideoDNA")]
             [Validation(Required=false)]
             public List<GetMediaDNAResultResponseBodyDNAResultVideoDNA> VideoDNA { get; set; }
             public class GetMediaDNAResultResponseBodyDNAResultVideoDNA : TeaModel {
                 /// <summary>
-                /// <para>The details of the matched video. Information such as the location and duration of the video is returned.</para>
+                /// <para>The details of the similar video, including the position and duration.</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> Detail { get; set; }
                 public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail : TeaModel {
                     /// <summary>
-                    /// <para>The start time and duration of the matched video.</para>
+                    /// <para>The start time and duration of the video in the library.</para>
                     /// </summary>
                     [NameInMap("Duplication")]
                     [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the video that has a similar fingerprint.</para>
+                /// <para>The ID of the similar video.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6ad8987da46f4b*****490ce2873745</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PrimaryKey { get; set; }
 
                 /// <summary>
-                /// <para>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</para>
+                /// <para>The similarity of the video. A similarity value of 1 indicates 100% similarity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.98</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63FC4896-E956-4B*****7D-134FF1BC597A</para>

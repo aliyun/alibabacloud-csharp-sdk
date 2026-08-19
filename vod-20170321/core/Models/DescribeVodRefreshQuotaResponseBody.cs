@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodRefreshQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</para>
+        /// <para>The maximum number of storage purge operations per day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string BlockQuota { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of directories of files that can be refreshed each day.</para>
+        /// <para>The maximum number of directory purge operations per day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DirQuota { get; set; }
 
         /// <summary>
-        /// <para>The remaining number of directories of files that can be refreshed on the current day.</para>
+        /// <para>The remaining number of directory purge operations for the current day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DirRemain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of URLs of files that can be prefetched each day.</para>
+        /// <para>The maximum number of prefetch operations per day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PreloadQuota { get; set; }
 
         /// <summary>
-        /// <para>The remaining number of URLs of files that can be prefetched on the current day.</para>
+        /// <para>The remaining number of prefetch operations for the current day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PreloadRemain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42E0554B-80F4-4921-****-ACFB22CAAAD0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of URLs of files that can be refreshed each day.</para>
+        /// <para>The maximum number of URL purge operations per day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UrlQuota { get; set; }
 
         /// <summary>
-        /// <para>The remaining number of URLs of files that can be refreshed on the current day.</para>
+        /// <para>The remaining number of URL purge operations for the current day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1996</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UrlRemain { get; set; }
 
         /// <summary>
-        /// <para>The remaining number of OSS buckets that can be refreshed on the current day.</para>
+        /// <para>The remaining number of storage purge operations for the current day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>

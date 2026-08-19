@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetDigitalWatermarkExtractResultRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the watermark. Valid values:</para>
+        /// <para>The type of watermark extraction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TraceMark</b>: user-tracing watermark</description></item>
-        /// <item><description><b>CopyrightMark</b>: copyright watermark</description></item>
+        /// <item><description><b>TraceMark</b>: tracing watermark.</description></item>
+        /// <item><description><b>CopyrightMark</b>: copyright watermark.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The ID of the watermark extraction job.</para>
         /// <list type="bullet">
-        /// <item><description>You can obtain the ID from the response to the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</description></item>
-        /// <item><description>If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.</description></item>
+        /// <item><description>The job ID is returned after you call the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</description></item>
+        /// <item><description>If you specify this parameter, the result of the specified watermark extraction job is returned. If you do not specify this parameter, the results of all historical watermark extraction jobs for the video are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The ID of the video to query. Only a single video ID is supported. You can obtain the video ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
-        /// <item><description>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation. The video ID (VideoId) is returned in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

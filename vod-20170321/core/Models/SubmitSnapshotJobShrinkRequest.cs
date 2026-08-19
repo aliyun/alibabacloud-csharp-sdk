@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The height of each snapshot. Valid values: <c>[8,4096]</c>. By default, the height of the video source is used. Unit: pixels.</para>
+        /// <para>The snapshot height. Valid values: <c>[8,4096]</c>. Default value: the source video height. Unit: px.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <list type="bullet">
         /// <item><description>Unit: seconds.</description></item>
         /// <item><description>Default value: <b>1</b>.</description></item>
-        /// <item><description>If you set this parameter to <b>0</b>, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</description></item>
+        /// <item><description>If Interval is set to <b>0</b>, snapshots are evenly captured based on the value of Count and the video duration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? Interval { get; set; }
 
         /// <summary>
+        /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. Length: 6 to 64 characters. The value must be unique at the user level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-123</para>
         /// </summary>
@@ -53,10 +55,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ReferenceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot template.</para>
+        /// <para>The snapshot template ID.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</description></item>
-        /// <item><description>If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</description></item>
+        /// <item><description>We recommend that you create a snapshot template first and then pass the snapshot template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">Add a snapshot template</a>.</description></item>
+        /// <item><description>If you pass the snapshot template ID, all request parameters except Action and VideoId are ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SnapshotTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The point in time when the first snapshot is captured.</para>
+        /// <para>The start time for the snapshot.</para>
         /// <list type="bullet">
         /// <item><description>Unit: milliseconds.</description></item>
         /// <item><description>Default value: <b>0</b>.</description></item>
@@ -81,14 +83,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? SpecifiedOffsetTime { get; set; }
 
         /// <summary>
-        /// <para>The playback positions at which you want to capture snapshots. Unit: milliseconds. You can specify up to 30 playback positions in a request.</para>
+        /// <para>The points in time at which snapshots are captured. Unit: milliseconds. You can specify up to 30 points in time at a time.</para>
         /// </summary>
         [NameInMap("SpecifiedOffsetTimes")]
         [Validation(Required=false)]
         public string SpecifiedOffsetTimesShrink { get; set; }
 
         /// <summary>
-        /// <para>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</para>
+        /// <para>The sprite configuration. If this parameter is not empty, a sprite is generated. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;CellWidth\&quot;: 120, \&quot;CellHeight\&quot;: 68, \&quot;Columns\&quot;: 3,\&quot;Lines\&quot;: 10, \&quot;Padding\&quot;: 20, \&quot;Margin\&quot;: 50}</para>
@@ -98,9 +100,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SpriteSnapshotConfig { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
+        /// <para>The custom settings. Only JSON strings are supported. You can use this parameter to pass through custom data and specify callback URL settings. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
-        /// <para> To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</para>
+        /// <para>To use the message callback in this parameter, configure the HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,11 +113,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The video ID. You can obtain the video ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the ID of the video.</description></item>
-        /// <item><description>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</description></item>
-        /// <item><description>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</description></item>
+        /// <item><description>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Files</b> &gt; <b>Audio/Video</b> to view the video ID.</description></item>
+        /// <item><description>Obtain the video ID from the value of the VideoId response parameter when you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential.</description></item>
+        /// <item><description>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string VideoId { get; set; }
 
         /// <summary>
-        /// <para>The width of each snapshot. Valid values: <c>[8,4096]</c>. By default, the width of the video source is used. Unit: pixels.</para>
+        /// <para>The snapshot width. Valid values: <c>[8,4096]</c>. Default value: the source video width. Unit: px.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>

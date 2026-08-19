@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetMessageCallbackRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. If you leave this parameter empty, the default value <b>app-1000000</b> is used.</para>
+        /// <para>The application ID. If this parameter is not specified, the ID of the default application is used, which is the fixed value: <b>app-1000000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-1000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter takes effect only when you set CallbackType to <b>HTTP</b>.</para>
+        /// <para>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter can be set when the callback method is <b>HTTP</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dsf346dvet</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AuthKey { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable callback authentication. This parameter takes effect only when you set CallbackType to <b>HTTP</b>. Valid values:</para>
+        /// <para>The authentication switch for HTTP callbacks. This parameter takes effect only when the callback method is set to <b>HTTP</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The callback method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>HTTP</b></description></item>
-        /// <item><description><b>Simple Message Queue(formerly MNS)</b></description></item>
+        /// <item><description><b>Simple Message Queue (formerly MNS)</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CallbackType { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. This parameter is required if you set CallbackType to <b>HTTP</b>. The callback URL cannot exceed 256 bytes in length. You can specify only one callback URL.</para>
+        /// <para>The callback URL. This parameter is required when the callback method is set to <b>HTTP</b>.
+        /// The callback URL cannot exceed 256 bytes in length. Multiple callback URLs are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://developer.aliyundoc.com">http://developer.aliyundoc.com</a></para>
@@ -68,7 +69,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string CallbackURL { get; set; }
 
         /// <summary>
-        /// <para>The type of the callback event. If you do not set this parameter, notifications for all types of events are disabled. If you set this parameter to <b>ALL</b>, notifications for all types of events are enabled. You can specify the event types for which notifications are enabled. Separate multiple event types with commas (,). For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/55627.html">Overview</a>.</para>
+        /// <para>The event types for callbacks. If this parameter is left empty, all notifications are disabled. If this parameter is set to <b>ALL</b>, all notifications are enabled. You can also specify specific event types, separated by commas (,). For the valid event types, see <a href="https://help.aliyun.com/document_detail/55627.html">Event types</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>All AI-related events such as AIMediaAuditComplete and AIMediaDNAComplete use the value <b>AIComplete</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>FileUploadComplete</para>
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EventTypeList { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint of Message Service (MNS). This parameter only takes effect when the CallbackType parameter is set to <b>Simple Message Queue(formerly MNS)</b>. To obtain the public endpoint, log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a> and click <b>Get Endpoint</b> in the upper-right corner of the Topics page. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</para>
+        /// <para>The public endpoint of Simple Message Queue (formerly MNS). This parameter is required when the callback method is set to <b>Simple Message Queue (formerly MNS)</b>. Log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue (formerly MNS) console</a> and click the <b>Get Endpoint</b> button in the upper-right corner to obtain the endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http://****.mns.cn-shanghai.aliyuncs.com/</para>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string MnsEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Message Queue(formerly MNS). You can obtain the name of the Simple Message Queue(formerly MNS) on the <b>Queues</b> page in the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue(formerly MNS) console</a>. This parameter is required when you set CallbackType to <b>Simple Message Queue(formerly MNS)</b>.</para>
+        /// <para>The name of the message queue. Log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue (formerly MNS) console</a> and view the queue in the <b>Queue List</b>. This parameter is required when the callback method is set to <b>Simple Message Queue (formerly MNS)</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quene_name</para>

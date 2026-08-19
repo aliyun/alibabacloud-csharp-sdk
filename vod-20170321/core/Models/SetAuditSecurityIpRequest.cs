@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetAuditSecurityIpRequest : TeaModel {
         /// <summary>
-        /// <para>The IP addresses that you want to add to the review security group. You can add a maximum of 100 IP addresses to a review security group. Separate multiple IP addresses with commas (,). You can add IP addresses in the following formats to review security groups:</para>
+        /// <para>The list of security IP addresses for review. Each group supports a maximum of 100 IP addresses. Separate multiple IP addresses with commas (,). The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>IP address: 192.168.0.1</description></item>
-        /// <item><description>CIDR block: 192.168.0.1/24. /24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges <c>from 1 to 32</c>.</description></item>
+        /// <item><description>Exact IP address: 192.168.0.1</description></item>
+        /// <item><description>CIDR block: 192.168.0.1/24 (Classless Inter-Domain Routing. /24 specifies the length of the prefix in the address. Valid values: <c>[1,32]</c>.)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,15 +25,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Ips { get; set; }
 
         /// <summary>
-        /// <para>The operation type. Valid values:</para>
+        /// <para>The operation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Append</b> (default): adds the IP addresses to the original whitelist.</description></item>
-        /// <item><description><b>Cover</b>: overwrites the original whitelist.</description></item>
-        /// <item><description><b>Delete</b>: removes the IP addresses from the original whitelist.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If the value that you specify is invalid, the default value is used.</para>
+        /// <item><description><b>Append</b>: default value. Appends IP addresses to the IP address whitelist.</description></item>
+        /// <item><description><b>Cover</b>: overwrites the existing IP address whitelist.</description></item>
+        /// <item><description><b>Delete</b>: deletes IP addresses from the IP address whitelist.<remarks>
+        /// <para>If the specified value is not within the valid values, the default value (Append) is used.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Cover</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OperateMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the review security group. Default value: <b>Default</b>. You can specify a maximum of 10 review security groups.</para>
+        /// <para>The name of the security group for review. Default value: <b>Default</b>. A maximum of 10 security groups are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainSrcBpsDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time interval at which data is returned, which is the time granularity. Unit: seconds.</para>
+        /// <para>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name whose ICP filing status you want to update.</para>
+        /// <para>The accelerated domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range.</para>
+        /// <para>The end of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-23T02:02:57Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A13-BEF6-****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The beginning of the time range.</para>
+        /// <para>The beginning of the time range for the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-12T16:00:00Z</para>

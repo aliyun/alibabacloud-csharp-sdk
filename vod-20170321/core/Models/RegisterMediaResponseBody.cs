@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RegisterMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URLs of the media files that failed to be registered.</para>
+        /// <para>The list of file URLs that failed to be registered.</para>
         /// </summary>
         [NameInMap("FailedFileURLs")]
         [Validation(Required=false)]
         public List<string> FailedFileURLs { get; set; }
 
         /// <summary>
-        /// <para>The media files that are registered, including newly registered and repeatedly registered media files.</para>
+        /// <para>The list of media assets that are successfully registered, including both newly registered files and previously registered files.</para>
         /// </summary>
         [NameInMap("RegisteredMediaList")]
         [Validation(Required=false)]
         public List<RegisterMediaResponseBodyRegisteredMediaList> RegisteredMediaList { get; set; }
         public class RegisterMediaResponseBodyRegisteredMediaList : TeaModel {
             /// <summary>
-            /// <para>The URL of the media file.</para>
+            /// <para>The OSS file URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http://****.oss-cn-shanghai.aliyuncs.com/vod_sample_01.mp4</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string FileURL { get; set; }
 
             /// <summary>
-            /// <para>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.</para>
+            /// <para>The VOD media ID. If the registered media file is an audio or video file, this value corresponds to the VideoId in ApsaraVideo VOD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d97af32828084d1896683b1aa38****</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the media file is newly registered or repeatedly registered. Valid values:</para>
+            /// <para>Indicates whether the media asset is newly registered or repeatedly registered.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The media file is newly registered.</description></item>
-            /// <item><description><b>false</b>: The media file is repeatedly registered.</description></item>
+            /// <item><description><b>true</b>: newly registered.</description></item>
+            /// <item><description><b>false</b>: repeatedly registered.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14F43C5C-8033-448B-AD04F64E5098****</para>

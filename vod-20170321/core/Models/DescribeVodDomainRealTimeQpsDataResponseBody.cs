@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</para>

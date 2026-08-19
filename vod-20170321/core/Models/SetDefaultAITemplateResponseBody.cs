@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AI template.</para>
+        /// <para>The AI template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1706a0063dd733f6a823ef32e0a5****</para>

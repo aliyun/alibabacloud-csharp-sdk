@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
-        /// <list type="bullet">
-        /// <item><description>Default value: <b>app-1000000</b>.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</description></item>
-        /// </list>
+        /// <para>The application ID. This is the value of the AppId parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateApp</a> or <a href="https://help.aliyun.com/document_detail/114000.html">GetAppInfos</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,10 +21,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The new application name.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).</description></item>
-        /// <item><description>The name can contain only UTF-8 characters.</description></item>
+        /// <item><description>The name can be up to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), hyphens (-), and at signs (@).</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,10 +35,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The new application description.</para>
         /// <list type="bullet">
-        /// <item><description>The description can contain up to 512 characters in length.</description></item>
-        /// <item><description>The description can contain only UTF-8 characters.</description></item>
+        /// <item><description>The description can be up to 512 characters in length.</description></item>
+        /// <item><description>UTF-8 encoding.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +49,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The status of the application. Valid values:</para>
+        /// <para>The new application status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

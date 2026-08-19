@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteTranscodeTemplateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of transcoding templates that were not found.</para>
+        /// <para>The IDs of transcoding templates that do not exist when you delete transcoding templates by specifying template IDs.</para>
         /// </summary>
         [NameInMap("NonExistTranscodeTemplateIds")]
         [Validation(Required=false)]
         public List<string> NonExistTranscodeTemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4A*****F6-D7393642CA58</para>

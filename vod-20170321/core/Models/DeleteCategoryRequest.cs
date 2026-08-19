@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</para>
+        /// <para>The category ID. Only a single category ID is supported. You can obtain the category ID by using the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Categories</b>. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.</description></item>
-        /// <item><description>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
+        /// <item><description>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify the ID of a parent category, all subcategories under the parent category are deleted at the same time.</para>
+        /// <para>If the specified category ID is the ID of a parent category, the parent category and all its subcategories are deleted. Proceed with caution.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

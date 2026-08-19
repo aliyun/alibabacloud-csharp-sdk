@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AttachAppPolicyToIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</para>
+        /// <para>The application ID. Default value: <b>app-1000000</b>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</para>
         /// <remarks>
-        /// <para>This parameter is optional only if you set the policy name to VODAppAdministratorAccess.</para>
+        /// <para>If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user or the name of the RAM role.</para>
+        /// <para>The identity name.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the ID of the RAM user when the IdentityType parameter is set to RamUser.</description></item>
-        /// <item><description>Specify the name of the RAM role when the IdentityType parameter is set to RamRole.</description></item>
+        /// <item><description>If the type is RamUser, specify the Resource Access Management (RAM) user ID.</description></item>
+        /// <item><description>If the type is RamRole, specify the role name.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityName { get; set; }
 
         /// <summary>
-        /// <para>The type of the identity. Valid values:</para>
+        /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RamUser</b>: a RAM user</description></item>
-        /// <item><description><b>RamRole</b>: a RAM role</description></item>
+        /// <item><description><b>RamUser</b>: Resource Access Management (RAM) user.</description></item>
+        /// <item><description><b>RamRole</b>: RAM role.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy. Only system policies are supported. Separate multiple policy names with commas (,). Valid values:</para>
+        /// <para>The policy names. Separate multiple names with commas (,). Only system policies are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VODAppFullAccess</b>: permissions to manage all resources in an application.</description></item>
-        /// <item><description><b>VODAppReadOnlyAccess</b>: permissions to read all resources in an application.</description></item>
-        /// <item><description><b>VODAppAdministratorAccess</b>: permissions of the application administrator.</description></item>
+        /// <item><description><b>VODAppFullAccess</b>: permissions to manage and operate all resources in the application.</description></item>
+        /// <item><description><b>VODAppReadOnlyAccess</b>: read-only permissions on all resources in the application.</description></item>
+        /// <item><description><b>VODAppAdministratorAccess</b>: application administrator permissions.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

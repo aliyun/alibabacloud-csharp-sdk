@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the snapshot.</para>
+        /// <para>The video snapshot data.</para>
         /// </summary>
         [NameInMap("MediaSnapshot")]
         [Validation(Required=false)]
         public ListSnapshotsResponseBodyMediaSnapshot MediaSnapshot { get; set; }
         public class ListSnapshotsResponseBodyMediaSnapshot : TeaModel {
             /// <summary>
-            /// <para>The time when the snapshot job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the snapshot job was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-20T12:23:45Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot job.</para>
+            /// <para>The snapshot job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad90a501b1b9472374ad005046****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The rule used to generate snapshot URLs.</para>
+            /// <para>The rule for generating snapshot URLs.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.aliyundoc.com/snapshot/sample%7BSnapshotCount%7D.jpg">http://example.aliyundoc.com/snapshot/sample{SnapshotCount}.jpg</a></para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>

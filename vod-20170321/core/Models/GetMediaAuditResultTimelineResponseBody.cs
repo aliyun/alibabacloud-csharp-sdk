@@ -10,33 +10,33 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultTimelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of review result timelines.</para>
+        /// <para>The collection of automated review result timelines.</para>
         /// </summary>
         [NameInMap("MediaAuditResultTimeline")]
         [Validation(Required=false)]
         public GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline MediaAuditResultTimeline { get; set; }
         public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline : TeaModel {
             /// <summary>
-            /// <para>The collection of ad timelines.</para>
+            /// <para>The collection of advertisement detection timelines.</para>
             /// </summary>
             [NameInMap("Ad")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd> Ad { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd : TeaModel {
                 /// <summary>
-                /// <para>The category of the review result. Valid values:</para>
+                /// <para>The classification of the advertisement detection result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>ad</b>: other ads.</description></item>
-                /// <item><description><b>politics</b>: political content in text.</description></item>
-                /// <item><description><b>porn</b>: pornographic content in text.</description></item>
-                /// <item><description><b>abuse</b>: abuse in text.</description></item>
-                /// <item><description><b>terrorism</b>: terrorist content in text.</description></item>
-                /// <item><description><b>contraband</b>: prohibited content in text.</description></item>
-                /// <item><description><b>spam</b>: spam content.</description></item>
-                /// <item><description><b>npx</b>: illegal ad.</description></item>
-                /// <item><description><b>qrcode</b>: QR code.</description></item>
-                /// <item><description><b>programCode</b>: mini program code.</description></item>
+                /// <item><description><b>normal</b>: normal.</description></item>
+                /// <item><description><b>ad</b>: other advertisements.</description></item>
+                /// <item><description><b>politics</b>: text contains political content.</description></item>
+                /// <item><description><b>porn</b>: text contains pornographic content.</description></item>
+                /// <item><description><b>abuse</b>: text contains abusive content.</description></item>
+                /// <item><description><b>terrorism</b>: text contains terrorism-related content.</description></item>
+                /// <item><description><b>contraband</b>: text contains prohibited content.</description></item>
+                /// <item><description><b>spam</b>: text contains other spam content.</description></item>
+                /// <item><description><b>npx</b>: psoriasis advertisements.</description></item>
+                /// <item><description><b>qrcode</b>: contains a QR code.</description></item>
+                /// <item><description><b>programCode</b>: contains a mini program code.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The score of the video snapshot in the ad review result. Valid values: <c>[0,100]</c>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</para>
+                /// <para>The hit score of the video screenshot for the advertisement detection result. Value range: <c>[0-100]</c>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Score { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the snapshot in the video. Unit: milliseconds.</para>
+                /// <para>The position of the video screenshot in the video. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -69,31 +69,31 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of undesirable content timelines.</para>
+            /// <para>The collection of undesirable scene timelines.</para>
             /// </summary>
             [NameInMap("Live")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive> Live { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive : TeaModel {
                 /// <summary>
-                /// <para>The categories of undesired content review results. Valid values:</para>
+                /// <para>The classification of the undesirable content detection result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>meaningless</b>: meaningless content, such as a black or white screen.</description></item>
-                /// <item><description><b>PIP</b>: picture-in-picture.</description></item>
+                /// <item><description><b>normal</b>: normal.</description></item>
+                /// <item><description><b>meaningless</b>: no content in the image (such as a black screen or white screen).</description></item>
+                /// <item><description><b>PIP</b>: Picture-in-Picture (PiP).</description></item>
                 /// <item><description><b>smoking</b>: smoking.</description></item>
-                /// <item><description><b>drivelive</b>: live broadcasting in a running vehicle.</description></item>
+                /// <item><description><b>drivelive</b>: in-car live streaming.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>pip</para>
+                /// <para>smoking</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The score of the video snapshot in the undesirable content review result. Valid values: <c>[0,100]</c>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</para>
+                /// <para>The hit score of the video screenshot for the undesirable content detection result. Value range: <c>[0-100]</c>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Score { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the snapshot in the video. Unit: milliseconds.</para>
+                /// <para>The position of the video screenshot in the video. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -115,29 +115,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of logo timelines.</para>
+            /// <para>The collection of logo detection timelines.</para>
             /// </summary>
             [NameInMap("Logo")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo> Logo { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo : TeaModel {
                 /// <summary>
-                /// <para>The category of the review result. Valid values:</para>
+                /// <para>The classification of the logo detection result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: normal content.</description></item>
-                /// <item><description><b>TV</b>: controlled TV station logo.</description></item>
-                /// <item><description><b>trademark</b>: trademark.</description></item>
+                /// <item><description><b>normal</b>: normal.</description></item>
+                /// <item><description><b>TV</b>: contains a regulated logo.</description></item>
+                /// <item><description><b>trademark</b>: contains a trademark.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>logo</para>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The score of the video snapshot in the logo review result. Valid values: <c>[0,100]</c>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</para>
+                /// <para>The hit score of the video screenshot for the logo detection result. Value range: <c>[0-100]</c>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Score { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the snapshot in the video. Unit: milliseconds.</para>
+                /// <para>The position of the video screenshot in the video. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
@@ -159,18 +159,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of pornographic content timelines.</para>
+            /// <para>The collection of pornography detection timelines.</para>
             /// </summary>
             [NameInMap("Porn")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn> Porn { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn : TeaModel {
                 /// <summary>
-                /// <para>The category of the review result. Valid values:</para>
+                /// <para>The classification of the pornography detection result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>porn</b></description></item>
-                /// <item><description><b>sexy</b></description></item>
-                /// <item><description><b>normal</b></description></item>
+                /// <item><description><b>porn</b>: pornographic content.</description></item>
+                /// <item><description><b>sexy</b>: sexually suggestive content.</description></item>
+                /// <item><description><b>normal</b>: normal content.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The score of the video snapshot in the pornographic content review result. Valid values: <c>[0,100]</c>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</para>
+                /// <para>The hit score of the video screenshot for the pornography detection result. Value range: <c>[0-100]</c>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100.00</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Score { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the snapshot in the video. Unit: milliseconds.</para>
+                /// <para>The position of the video screenshot in the video. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3005</para>
@@ -203,29 +203,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The collection of terrorist content timelines.</para>
+            /// <para>The collection of terrorism detection timelines.</para>
             /// </summary>
             [NameInMap("Terrorism")]
             [Validation(Required=false)]
             public List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism> Terrorism { get; set; }
             public class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism : TeaModel {
                 /// <summary>
-                /// <para>The category of the review result. Valid values:</para>
+                /// <para>The terrorism and political content detection result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b></description></item>
-                /// <item><description><b>bloody</b></description></item>
-                /// <item><description><b>explosion</b></description></item>
-                /// <item><description><b>outfit</b></description></item>
-                /// <item><description><b>logo</b></description></item>
-                /// <item><description><b>weapon</b></description></item>
-                /// <item><description><b>politics</b></description></item>
-                /// <item><description><b>violence</b></description></item>
-                /// <item><description><b>crowd</b></description></item>
-                /// <item><description><b>parade</b></description></item>
-                /// <item><description><b>carcrash</b></description></item>
-                /// <item><description><b>flag</b></description></item>
-                /// <item><description><b>location</b></description></item>
-                /// <item><description><b>others</b></description></item>
+                /// <item><description><b>normal</b>: normal.</description></item>
+                /// <item><description><b>bloody</b>: bloody content.</description></item>
+                /// <item><description><b>explosion</b>: explosions and smoke.</description></item>
+                /// <item><description><b>outfit</b>: special attire.</description></item>
+                /// <item><description><b>logo</b>: special logos.</description></item>
+                /// <item><description><b>weapon</b>: weapons.</description></item>
+                /// <item><description><b>politics</b>: political content.</description></item>
+                /// <item><description><b>violence</b>: fighting.</description></item>
+                /// <item><description><b>crowd</b>: crowd gathering.</description></item>
+                /// <item><description><b>parade</b>: parades.</description></item>
+                /// <item><description><b>carcrash</b>: car accident scenes.</description></item>
+                /// <item><description><b>flag</b>: flags.</description></item>
+                /// <item><description><b>location</b>: landmarks.</description></item>
+                /// <item><description><b>others</b>: others.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The score of the video snapshot in the terrorist content review result. Valid values: <c>[0,100]</c>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</para>
+                /// <para>The hit score of the video screenshot for the terrorism and political content detection result. Value range: <c>[0-100]</c>, with a precision of 10 decimal places. The hit result indicates the probability of the corresponding classification label. A higher value indicates higher accuracy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100.00</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Score { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the snapshot in the video. Unit: milliseconds.</para>
+                /// <para>The position in the video. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3005</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6438BD76-D523-46FC-956F-****</para>

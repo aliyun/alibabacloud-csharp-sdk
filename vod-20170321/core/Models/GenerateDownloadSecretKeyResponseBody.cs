@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GenerateDownloadSecretKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The key file for secure download.</para>
+        /// <para>The generated secure download key.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AppEncryptKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E99B9BAD-7F9D-552B-A689-B72E92EA040E</para>

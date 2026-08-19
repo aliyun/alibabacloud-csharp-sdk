@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billable region where the data was collected.</para>
+        /// <para>The usage region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>The time interval between the entries returned. Unit: seconds.</para>
+        /// <para>The time interval between records. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The accelerated domain name.</para>
+        /// <para>The accelerated domain name information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T12:20:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B955107D-E658-4E77-****-E0AC3D31693E</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T10:20:00Z</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the data. Valid values:</para>
+        /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bps</b>: bandwidth</description></item>
-        /// <item><description><b>traf</b>: traffic</description></item>
+        /// <item><description><b>bps</b>: bandwidth.</description></item>
+        /// <item><description><b>traf</b>: traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>static</para>
+        /// <para>bps</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
