@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The clipboard-related policy.</para>
+            /// <para>The clipboard policy.</para>
             /// </summary>
             [NameInMap("ClipboardPolicy")]
             [Validation(Required=false)]
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardLimit { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of rich text that can be downloaded from the cloud via the clipboard.</para>
+                /// <para>The maximum size of rich text that can be downloaded from the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for rich text clipboard downloads from the cloud.</para>
+                /// <para>The size unit for rich text downloaded from the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of rich text that can be uploaded to the cloud via the clipboard.</para>
+                /// <para>The maximum size of rich text that can be uploaded to the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for rich text clipboard uploads to the cloud.</para>
+                /// <para>The size unit for rich text uploaded to the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of text that can be downloaded from the cloud via the clipboard.</para>
+                /// <para>The maximum size of text that can be downloaded from the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for text clipboard downloads from the cloud.</para>
+                /// <para>The size unit for text downloaded from the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboardReadSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of text that can be uploaded to the cloud via the clipboard.</para>
+                /// <para>The maximum size of text that can be uploaded to the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -435,7 +435,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The size unit for text clipboard uploads to the cloud.</para>
+                /// <para>The size unit for text uploaded to the cloud browser through the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The time in seconds before a session is disconnected when no operation is performed.</para>
+            /// <para>The no-operation disconnect time, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -527,7 +527,36 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PolicyVersion { get; set; }
 
             /// <summary>
-            /// <para>The display policy.</para>
+            /// <para>The server-side access IP address whitelist rules to revoke in this request.</para>
+            /// </summary>
+            [NameInMap("RevokeAccessPolicyRules")]
+            [Validation(Required=false)]
+            public List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> RevokeAccessPolicyRules { get; set; }
+            public class ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules : TeaModel {
+                /// <summary>
+                /// <para>The IPv4 address or CIDR block to revoke.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.1.0/24</para>
+                /// </summary>
+                [NameInMap("CidrIp")]
+                [Validation(Required=false)]
+                public string CidrIp { get; set; }
+
+                /// <summary>
+                /// <para>The description of the access IP address whitelist rule to revoke.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>office network</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The video policy.</para>
             /// </summary>
             [NameInMap("VideoPolicy")]
             [Validation(Required=false)]
@@ -553,7 +582,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy WatermarkPolicy { get; set; }
             public class ModifyBrowserInstanceGroupRequestPolicyWatermarkPolicy : TeaModel {
                 /// <summary>
-                /// <para>The watermark switch.</para>
+                /// <para>Specifies whether to enable the watermark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>off</para>
