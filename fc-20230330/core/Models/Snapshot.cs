@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Snapshot : TeaModel {
         /// <summary>
+        /// <para>The total disk snapshot size, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactDiskTotalSizeInB { get; set; }
 
         /// <summary>
+        /// <para>The used disk snapshot size, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactDiskUsedSizeInB { get; set; }
 
         /// <summary>
+        /// <para>The memory snapshot cache size, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactMemCacheSizeInB { get; set; }
 
         /// <summary>
+        /// <para>The total memory snapshot size, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactMemTotalSizeInB { get; set; }
 
         /// <summary>
+        /// <para>The used memory snapshot size, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactMemUsedSizeInB { get; set; }
 
         /// <summary>
+        /// <para>The CPU specification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +76,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The snapshot creation time in UTC RFC3339 format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +87,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The snapshot description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +98,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The disk specification, in MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +109,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? DiskSizeMB { get; set; }
 
         /// <summary>
+        /// <para>The environment variables saved when creating the snapshot.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("envs")]
@@ -107,6 +117,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public Dictionary<string, string> Envs { get; set; }
 
         /// <summary>
+        /// <para>The snapshot expiration time in UTC RFC3339 format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,6 +128,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
+        /// <para>The function name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,6 +139,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionName { get; set; }
 
         /// <summary>
+        /// <para>The function image digest.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,6 +150,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
+        /// <para>The function image repository address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -147,6 +161,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ImageRepository { get; set; }
 
         /// <summary>
+        /// <para>The memory specification, in MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -157,6 +172,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? MemoryMB { get; set; }
 
         /// <summary>
+        /// <para>The operating system type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,6 +183,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string OsType { get; set; }
 
         /// <summary>
+        /// <para>The function alias or version used when creating the snapshot.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -177,6 +194,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
+        /// <para>The MicroSandbox readiness check command.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,6 +205,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ReadyCommand { get; set; }
 
         /// <summary>
+        /// <para>The specific function version resolved when creating the snapshot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -195,6 +215,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ResolvedVersion { get; set; }
 
         /// <summary>
+        /// <para>The snapshot ID, a standard UUID string generated by the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -205,6 +226,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
+        /// <para>The source session ID used to create the snapshot.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -215,6 +237,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SourceSessionId { get; set; }
 
         /// <summary>
+        /// <para>The MicroSandbox start command.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -225,6 +248,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string StartCommand { get; set; }
 
         /// <summary>
+        /// <para>The snapshot status. Currently, only Available is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

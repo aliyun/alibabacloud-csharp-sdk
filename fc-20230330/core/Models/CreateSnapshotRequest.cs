@@ -8,12 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class DeleteSessionRequest : TeaModel {
+    public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The function alias or version associated with the session ID to delete.</para>
+        /// <para>The request body for creating a snapshot.</para>
+        /// </summary>
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public CreateSnapshotInput Body { get; set; }
+
+        /// <summary>
+        /// <para>The function alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliasName1</para>
+        /// <para>alias</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

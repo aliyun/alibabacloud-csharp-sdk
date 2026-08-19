@@ -728,7 +728,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
+        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types to implement session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -775,7 +775,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
+        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types to implement session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -822,7 +822,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
+        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types to implement session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -841,7 +841,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
+        /// <para>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types to implement session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -856,6 +856,182 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateSessionWithOptionsAsync(functionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user snapshot from a normal and unexpired micro-sandbox session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation creates a user snapshot from a specified micro-sandbox session.</description></item>
+        /// <item><description>The optional parameter <c>qualifier</c> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <c>LATEST</c>.</description></item>
+        /// <item><description>The <c>sessionId</c> parameter is required to specify the client session ID from which to create the snapshot.</description></item>
+        /// <item><description>The <c>description</c> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
+        public CreateSnapshotResponse CreateSnapshotWithOptions(string functionName, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user snapshot from a normal and unexpired micro-sandbox session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation creates a user snapshot from a specified micro-sandbox session.</description></item>
+        /// <item><description>The optional parameter <c>qualifier</c> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <c>LATEST</c>.</description></item>
+        /// <item><description>The <c>sessionId</c> parameter is required to specify the client session ID from which to create the snapshot.</description></item>
+        /// <item><description>The <c>description</c> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
+        public async Task<CreateSnapshotResponse> CreateSnapshotWithOptionsAsync(string functionName, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user snapshot from a normal and unexpired micro-sandbox session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation creates a user snapshot from a specified micro-sandbox session.</description></item>
+        /// <item><description>The optional parameter <c>qualifier</c> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <c>LATEST</c>.</description></item>
+        /// <item><description>The <c>sessionId</c> parameter is required to specify the client session ID from which to create the snapshot.</description></item>
+        /// <item><description>The <c>description</c> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
+        public CreateSnapshotResponse CreateSnapshot(string functionName, CreateSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSnapshotWithOptions(functionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user snapshot from a normal and unexpired micro-sandbox session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation creates a user snapshot from a specified micro-sandbox session.</description></item>
+        /// <item><description>The optional parameter <c>qualifier</c> identifies the valid alias or specific function version used when creating the source session. If omitted, it defaults to <c>LATEST</c>.</description></item>
+        /// <item><description>The <c>sessionId</c> parameter is required to specify the client session ID from which to create the snapshot.</description></item>
+        /// <item><description>The <c>description</c> parameter is optional. If provided, it cannot contain control characters and is limited to 256 UTF-8 bytes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
+        public async Task<CreateSnapshotResponse> CreateSnapshotAsync(string functionName, CreateSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSnapshotWithOptionsAsync(functionName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2102,7 +2278,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified session and prohibits new requests from being routed to it. Clears the session metadata from the database, so subsequent requests with the same session ID are treated as new sessions. Releases resources and performs session cleanup. In session isolation scenarios, terminates running requests and releases the instance bound to the session. In non-session isolation scenarios, allows running requests to continue and gracefully terminates them.</para>
+        /// <para>Deletes a specified session, blocks new request routing, and purges session metadata from the database. Subsequent requests from the client carrying the same SessionID are treated as a new session. This operation releases resources and cleans up the session. In session isolation scenarios, the system stops running requests and releases instances bound to the session. In non-session isolation scenarios, running requests continue to run and terminate gracefully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2148,7 +2324,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified session and prohibits new requests from being routed to it. Clears the session metadata from the database, so subsequent requests with the same session ID are treated as new sessions. Releases resources and performs session cleanup. In session isolation scenarios, terminates running requests and releases the instance bound to the session. In non-session isolation scenarios, allows running requests to continue and gracefully terminates them.</para>
+        /// <para>Deletes a specified session, blocks new request routing, and purges session metadata from the database. Subsequent requests from the client carrying the same SessionID are treated as a new session. This operation releases resources and cleans up the session. In session isolation scenarios, the system stops running requests and releases instances bound to the session. In non-session isolation scenarios, running requests continue to run and terminate gracefully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2194,7 +2370,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified session and prohibits new requests from being routed to it. Clears the session metadata from the database, so subsequent requests with the same session ID are treated as new sessions. Releases resources and performs session cleanup. In session isolation scenarios, terminates running requests and releases the instance bound to the session. In non-session isolation scenarios, allows running requests to continue and gracefully terminates them.</para>
+        /// <para>Deletes a specified session, blocks new request routing, and purges session metadata from the database. Subsequent requests from the client carrying the same SessionID are treated as a new session. This operation releases resources and cleans up the session. In session isolation scenarios, the system stops running requests and releases instances bound to the session. In non-session isolation scenarios, running requests continue to run and terminate gracefully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2213,7 +2389,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified session and prohibits new requests from being routed to it. Clears the session metadata from the database, so subsequent requests with the same session ID are treated as new sessions. Releases resources and performs session cleanup. In session isolation scenarios, terminates running requests and releases the instance bound to the session. In non-session isolation scenarios, allows running requests to continue and gracefully terminates them.</para>
+        /// <para>Deletes a specified session, blocks new request routing, and purges session metadata from the database. Subsequent requests from the client carrying the same SessionID are treated as a new session. This operation releases resources and cleans up the session. In session isolation scenarios, the system stops running requests and releases instances bound to the session. In non-session isolation scenarios, running requests continue to run and terminate gracefully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2228,6 +2404,168 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteSessionWithOptionsAsync(functionName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user MicroSandbox snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes a user MicroSandbox snapshot under the specified function.</description></item>
+        /// <item><description>After successful deletion, the snapshot enters an asynchronous deletion process. The operation returns 202 Accepted to indicate that the deletion request has been accepted, without waiting for the cleanup of underlying physical resources such as templates and artifacts to complete.</description></item>
+        /// <item><description>Repeated deletion of a snapshot that is already being deleted still returns 202 Accepted.</description></item>
+        /// <item><description>If the specified snapshot does not exist under the current function scope, 204 No Content is returned to support idempotent deletion.</description></item>
+        /// <item><description>If the snapshot is still being used by a resumed session, or there are consumer relations that have not been confirmed as clearable, 409 SnapshotInUse is returned and the snapshot is not deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
+        public DeleteSnapshotResponse DeleteSnapshotWithOptions(string functionName, string snapshotId, DeleteSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(snapshotId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteSnapshotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user MicroSandbox snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes a user MicroSandbox snapshot under the specified function.</description></item>
+        /// <item><description>After successful deletion, the snapshot enters an asynchronous deletion process. The operation returns 202 Accepted to indicate that the deletion request has been accepted, without waiting for the cleanup of underlying physical resources such as templates and artifacts to complete.</description></item>
+        /// <item><description>Repeated deletion of a snapshot that is already being deleted still returns 202 Accepted.</description></item>
+        /// <item><description>If the specified snapshot does not exist under the current function scope, 204 No Content is returned to support idempotent deletion.</description></item>
+        /// <item><description>If the snapshot is still being used by a resumed session, or there are consumer relations that have not been confirmed as clearable, 409 SnapshotInUse is returned and the snapshot is not deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
+        public async Task<DeleteSnapshotResponse> DeleteSnapshotWithOptionsAsync(string functionName, string snapshotId, DeleteSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(snapshotId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteSnapshotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user MicroSandbox snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes a user MicroSandbox snapshot under the specified function.</description></item>
+        /// <item><description>After successful deletion, the snapshot enters an asynchronous deletion process. The operation returns 202 Accepted to indicate that the deletion request has been accepted, without waiting for the cleanup of underlying physical resources such as templates and artifacts to complete.</description></item>
+        /// <item><description>Repeated deletion of a snapshot that is already being deleted still returns 202 Accepted.</description></item>
+        /// <item><description>If the specified snapshot does not exist under the current function scope, 204 No Content is returned to support idempotent deletion.</description></item>
+        /// <item><description>If the snapshot is still being used by a resumed session, or there are consumer relations that have not been confirmed as clearable, 409 SnapshotInUse is returned and the snapshot is not deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
+        public DeleteSnapshotResponse DeleteSnapshot(string functionName, string snapshotId, DeleteSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSnapshotWithOptions(functionName, snapshotId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a user MicroSandbox snapshot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes a user MicroSandbox snapshot under the specified function.</description></item>
+        /// <item><description>After successful deletion, the snapshot enters an asynchronous deletion process. The operation returns 202 Accepted to indicate that the deletion request has been accepted, without waiting for the cleanup of underlying physical resources such as templates and artifacts to complete.</description></item>
+        /// <item><description>Repeated deletion of a snapshot that is already being deleted still returns 202 Accepted.</description></item>
+        /// <item><description>If the specified snapshot does not exist under the current function scope, 204 No Content is returned to support idempotent deletion.</description></item>
+        /// <item><description>If the snapshot is still being used by a resumed session, or there are consumer relations that have not been confirmed as clearable, 409 SnapshotInUse is returned and the snapshot is not deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotResponse
+        /// </returns>
+        public async Task<DeleteSnapshotResponse> DeleteSnapshotAsync(string functionName, string snapshotId, DeleteSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSnapshotWithOptionsAsync(functionName, snapshotId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4242,6 +4580,160 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetSessionWithOptionsAsync(functionName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</description></item>
+        /// <item><description>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</description></item>
+        /// <item><description>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSnapshotResponse
+        /// </returns>
+        public GetSnapshotResponse GetSnapshotWithOptions(string functionName, string snapshotId, GetSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(snapshotId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSnapshotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</description></item>
+        /// <item><description>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</description></item>
+        /// <item><description>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSnapshotResponse
+        /// </returns>
+        public async Task<GetSnapshotResponse> GetSnapshotWithOptionsAsync(string functionName, string snapshotId, GetSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSnapshot",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/snapshots/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(snapshotId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSnapshotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</description></item>
+        /// <item><description>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</description></item>
+        /// <item><description>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSnapshotResponse
+        /// </returns>
+        public GetSnapshotResponse GetSnapshot(string functionName, string snapshotId, GetSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSnapshotWithOptions(functionName, snapshotId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves the MicroSandbox snapshot information of a specified function for the user.</description></item>
+        /// <item><description>Snapshot details are returned only when the snapshot belongs to the current function, has a status of Available, and has not expired.</description></item>
+        /// <item><description>If the snapshot does not exist, has expired, is being created, is being deleted, is an internal snapshot, or does not belong to the current function, it is treated as invisible and a 404 SnapshotNotFound error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSnapshotResponse
+        /// </returns>
+        public async Task<GetSnapshotResponse> GetSnapshotAsync(string functionName, string snapshotId, GetSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSnapshotWithOptionsAsync(functionName, snapshotId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6664,6 +7156,212 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListSessionsWithOptionsAsync(functionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation lists MicroSandbox snapshots visible to the current account.</description></item>
+        /// <item><description>Only unexpired snapshots in the Available state are returned.</description></item>
+        /// <item><description>Four filtering methods are supported: account-level listing, filtering by function, filtering by function and source session ID, and filtering by function, source session ID, and qualifier at creation time.</description></item>
+        /// <item><description>Results are paginated in stable descending order by creation time and snapshot ID.</description></item>
+        /// <item><description>ListSnapshots uses a search index for queries, so eventual consistency delays may occur within a short period. GetSnapshot and creating a session from a snapshot use strongly consistent reads from the primary table.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public ListSnapshotsResponse ListSnapshotsWithOptions(ListSnapshotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["functionName"] = request.FunctionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSnapshots",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/snapshots",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSnapshotsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation lists MicroSandbox snapshots visible to the current account.</description></item>
+        /// <item><description>Only unexpired snapshots in the Available state are returned.</description></item>
+        /// <item><description>Four filtering methods are supported: account-level listing, filtering by function, filtering by function and source session ID, and filtering by function, source session ID, and qualifier at creation time.</description></item>
+        /// <item><description>Results are paginated in stable descending order by creation time and snapshot ID.</description></item>
+        /// <item><description>ListSnapshots uses a search index for queries, so eventual consistency delays may occur within a short period. GetSnapshot and creating a session from a snapshot use strongly consistent reads from the primary table.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public async Task<ListSnapshotsResponse> ListSnapshotsWithOptionsAsync(ListSnapshotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["functionName"] = request.FunctionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSnapshots",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/snapshots",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation lists MicroSandbox snapshots visible to the current account.</description></item>
+        /// <item><description>Only unexpired snapshots in the Available state are returned.</description></item>
+        /// <item><description>Four filtering methods are supported: account-level listing, filtering by function, filtering by function and source session ID, and filtering by function, source session ID, and qualifier at creation time.</description></item>
+        /// <item><description>Results are paginated in stable descending order by creation time and snapshot ID.</description></item>
+        /// <item><description>ListSnapshots uses a search index for queries, so eventual consistency delays may occur within a short period. GetSnapshot and creating a session from a snapshot use strongly consistent reads from the primary table.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSnapshotsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists snapshot information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation lists MicroSandbox snapshots visible to the current account.</description></item>
+        /// <item><description>Only unexpired snapshots in the Available state are returned.</description></item>
+        /// <item><description>Four filtering methods are supported: account-level listing, filtering by function, filtering by function and source session ID, and filtering by function, source session ID, and qualifier at creation time.</description></item>
+        /// <item><description>Results are paginated in stable descending order by creation time and snapshot ID.</description></item>
+        /// <item><description>ListSnapshots uses a search index for queries, so eventual consistency delays may occur within a short period. GetSnapshot and creating a session from a snapshot use strongly consistent reads from the primary table.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public async Task<ListSnapshotsResponse> ListSnapshotsAsync(ListSnapshotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSnapshotsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The session configuration.</para>
+        /// <para>The session configuration for creating the session.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
