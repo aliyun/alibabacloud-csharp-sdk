@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationResourcesResponseBodyAuthorizationResources> AuthorizationResources { get; set; }
         public class ListAuthorizationResourcesResponseBodyAuthorizationResources : TeaModel {
             /// <summary>
-            /// <para>The resource entity ID associated with the authorization resource.</para>
+            /// <para>The ID of the resource entity associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity type associated with the authorization resource. Valid values:</para>
+            /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_account_role: cloud role.</description></item>
             /// </list>
@@ -70,6 +70,41 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
+            /// <para>The effective condition.</para>
+            /// </summary>
+            [NameInMap("Condition")]
+            [Validation(Required=false)]
+            public ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition Condition { get; set; }
+            public class ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition : TeaModel {
+                /// <summary>
+                /// <para>The effective condition when used as a credential.</para>
+                /// </summary>
+                [NameInMap("CredentialCondition")]
+                [Validation(Required=false)]
+                public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition CredentialCondition { get; set; }
+                public class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition : TeaModel {
+                    /// <summary>
+                    /// <para>Specifies whether same-name identity accounts are supported.</para>
+                    /// </summary>
+                    [NameInMap("AllowSameNameIdentity")]
+                    [Validation(Required=false)]
+                    public bool? AllowSameNameIdentity { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1787023451494</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
+            /// <summary>
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
@@ -79,10 +114,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1787023451494</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The number of entries per page in the paged query. This is the paging size.</para>
+        /// <para>The number of entries per page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in this call. Use this token for the next page query.</para>
+        /// <para>The token returned for the next page query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -112,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -3694,6 +3694,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["AuthorizationRuleId"] = request.AuthorizationRuleId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -3753,6 +3757,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationRuleId))
             {
                 query["AuthorizationRuleId"] = request.AuthorizationRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -19061,7 +19069,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行容灾切换</para>
+        /// <para>Performs a disaster recovery switchover.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19107,7 +19115,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行容灾切换</para>
+        /// <para>Performs a disaster recovery switchover.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19153,7 +19161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行容灾切换</para>
+        /// <para>Performs a disaster recovery switchover.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19171,7 +19179,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行容灾切换</para>
+        /// <para>Performs a disaster recovery switchover.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21181,7 +21189,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an authorized resource.</para>
+        /// <para>Queries the information of an authorization resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21231,7 +21239,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an authorized resource.</para>
+        /// <para>Queries the information of an authorization resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21281,7 +21289,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an authorized resource.</para>
+        /// <para>Queries the information of an authorization resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21299,7 +21307,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an authorized resource.</para>
+        /// <para>Queries the information of an authorization resource.</para>
         /// </summary>
         /// 
         /// <param name="request">

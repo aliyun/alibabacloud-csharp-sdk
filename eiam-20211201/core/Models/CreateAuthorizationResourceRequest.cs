@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_account_role: cloud role.</description></item>
+        /// <item><description>cloud_account_role: cloud role</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +55,31 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The effective condition.</para>
+        /// </summary>
+        [NameInMap("Condition")]
+        [Validation(Required=false)]
+        public CreateAuthorizationResourceRequestCondition Condition { get; set; }
+        public class CreateAuthorizationResourceRequestCondition : TeaModel {
+            /// <summary>
+            /// <para>The effective condition when used as a credential.</para>
+            /// </summary>
+            [NameInMap("CredentialCondition")]
+            [Validation(Required=false)]
+            public CreateAuthorizationResourceRequestConditionCredentialCondition CredentialCondition { get; set; }
+            public class CreateAuthorizationResourceRequestConditionCredentialCondition : TeaModel {
+                /// <summary>
+                /// <para>Specifies whether same-name identity accounts are supported.</para>
+                /// </summary>
+                [NameInMap("AllowSameNameIdentity")]
+                [Validation(Required=false)]
+                public bool? AllowSameNameIdentity { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The instance ID.</para>

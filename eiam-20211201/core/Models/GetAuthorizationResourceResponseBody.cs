@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetAuthorizationResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authorized resource.</para>
+        /// <para>The authorization resource.</para>
         /// </summary>
         [NameInMap("AuthorizationResource")]
         [Validation(Required=false)]
         public GetAuthorizationResourceResponseBodyAuthorizationResource AuthorizationResource { get; set; }
         public class GetAuthorizationResourceResponseBodyAuthorizationResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource entity associated with the authorized resource.</para>
+            /// <para>The resource entity ID associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource entity associated with the authorized resource. Valid values:</para>
+            /// <para>The resource entity type associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_account_role: cloud role.</description></item>
             /// </list>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</para>
+            /// <para>The cloud account ID to which the resource entity associated with the authorization resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -68,6 +68,41 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("CloudAccountId")]
             [Validation(Required=false)]
             public string CloudAccountId { get; set; }
+
+            /// <summary>
+            /// <para>The condition restriction.</para>
+            /// </summary>
+            [NameInMap("Condition")]
+            [Validation(Required=false)]
+            public GetAuthorizationResourceResponseBodyAuthorizationResourceCondition Condition { get; set; }
+            public class GetAuthorizationResourceResponseBodyAuthorizationResourceCondition : TeaModel {
+                /// <summary>
+                /// <para>The credential condition.</para>
+                /// </summary>
+                [NameInMap("CredentialCondition")]
+                [Validation(Required=false)]
+                public GetAuthorizationResourceResponseBodyAuthorizationResourceConditionCredentialCondition CredentialCondition { get; set; }
+                public class GetAuthorizationResourceResponseBodyAuthorizationResourceConditionCredentialCondition : TeaModel {
+                    /// <summary>
+                    /// <para>Specifies whether same-name identity accounts are supported.</para>
+                    /// </summary>
+                    [NameInMap("AllowSameNameIdentity")]
+                    [Validation(Required=false)]
+                    public bool? AllowSameNameIdentity { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1787023451494</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
 
             /// <summary>
             /// <para>The instance ID.</para>
@@ -78,6 +113,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1787023451494</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
 
         }
 

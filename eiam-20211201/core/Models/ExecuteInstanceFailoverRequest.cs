@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ExecuteInstanceFailoverRequest : TeaModel {
         /// <summary>
-        /// <para>故障转移状态</para>
+        /// <para>The failover status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>inactive: The primary instance is active.</description></item>
+        /// <item><description>active: The replica instance is active.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceFailoverStatus { get; set; }
 
         /// <summary>
-        /// <para>IDaaS 的副本实例 ID</para>
+        /// <para>The replica instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

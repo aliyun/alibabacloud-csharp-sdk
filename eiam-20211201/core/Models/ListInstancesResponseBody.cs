@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The instance creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</para>
+            /// <para>The failover activation status of the instance. Valid values: active (activated) or inactive (not activated).</para>
             /// 
             /// <b>Example:</b>
             /// <para>inactive</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The service code of the Alibaba Cloud service that manages the instance.</para>
+            /// <para>The service code of the cloud service that manages the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sase</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PrimaryInstanceRegionId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the disaster recovery data replication, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The time when the disaster recovery data replication was created. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778499337000</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the instance is managed by an Alibaba Cloud service.</para>
+            /// <para>Indicates whether the instance is managed by a cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

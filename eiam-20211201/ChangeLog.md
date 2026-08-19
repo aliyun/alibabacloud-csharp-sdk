@@ -1,3 +1,13 @@
+2026-08-19 Version: 1.26.1
+- Update API CreateAuthorizationResource: add request parameters Condition.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.Condition.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.CreateTime.
+- Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.UpdateTime.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.Condition.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.CreateTime.
+- Update API ListAuthorizationResources: add response parameters Body.AuthorizationResources.$.UpdateTime.
+
+
 2026-08-14 Version: 1.26.0
 - Support API ExecuteInstanceFailover.
 
