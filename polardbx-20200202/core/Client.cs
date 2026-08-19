@@ -21148,6 +21148,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignStoragePrimaryAzone))
+            {
+                query["AlignStoragePrimaryAzone"] = request.AlignStoragePrimaryAzone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -21179,6 +21183,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNSpecMapJson))
             {
                 query["SpecifiedDNSpecMapJson"] = request.SpecifiedDNSpecMapJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
             {
@@ -21230,6 +21238,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignStoragePrimaryAzone))
+            {
+                query["AlignStoragePrimaryAzone"] = request.AlignStoragePrimaryAzone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -21261,6 +21273,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecifiedDNSpecMapJson))
             {
                 query["SpecifiedDNSpecMapJson"] = request.SpecifiedDNSpecMapJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
             {

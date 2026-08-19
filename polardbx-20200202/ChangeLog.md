@@ -1,3 +1,9 @@
+2026-08-19 Version: 3.9.1
+- Update API ModifyDBInstanceClass: add request parameters AlignStoragePrimaryAzone.
+- Update API ModifyDBInstanceClass: add request parameters StorageType.
+- Update API ModifyDBInstanceClass: add response parameters Body.TaskId.
+
+
 2026-08-18 Version: 3.9.0
 - Support API AllocateContextDBPublicConnection.
 - Support API CreateContextDB.

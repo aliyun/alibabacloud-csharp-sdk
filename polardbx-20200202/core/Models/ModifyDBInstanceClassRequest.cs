@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
+        [NameInMap("AlignStoragePrimaryAzone")]
+        [Validation(Required=false)]
+        public bool? AlignStoragePrimaryAzone { get; set; }
+
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use any unique string.</para>
+        /// <para>The client token. This parameter is used to ensure the idempotence of the request. You can use any unique string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -21,14 +25,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para><b>Target specifications for Enterprise Edition compute node specification changes</b></para>
-        /// <para><b>Primary instance compute node specifications (Enterprise Edition CN) general-purpose</b>	</para>
+        /// <para><b>Primary instance compute node specifications (Enterprise Edition CN) General-purpose</b>	</para>
         /// <list type="bullet">
         /// <item><description>polarx.x4.medium.2e	2 cores, 8 GB (general-purpose)</description></item>
         /// <item><description>polarx.x4.large.2e	4 cores, 16 GB (general-purpose)</description></item>
         /// <item><description>polarx.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</description></item>
         /// <item><description>polarx.x4.2xlarge.2e 16 cores, 64 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Primary instance compute node specifications (Enterprise Edition CN) dedicated</b>	</para>
+        /// <para><b>Primary instance compute node specifications (Enterprise Edition CN) Dedicated</b>	</para>
         /// <list type="bullet">
         /// <item><description>polarx.x8.large.2e	4 cores, 32 GB (dedicated)</description></item>
         /// <item><description>polarx.x8.xlarge.2e	8 cores, 64 GB (dedicated)</description></item>
@@ -38,14 +42,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>polarx.st.8xlarge.2e	60 cores, 470 GB (dedicated)</description></item>
         /// <item><description>polarx.st.12xlarge.2e	90 cores, 720 GB (dedicated)</description></item>
         /// </list>
-        /// <para><b>Read-only instance compute node specifications (Enterprise Edition CN) general-purpose</b>	</para>
+        /// <para><b>Read-only instance compute node specifications (Enterprise Edition CN) General-purpose</b>	</para>
         /// <list type="bullet">
         /// <item><description>polarxro.x4.medium.2e	2 cores, 8 GB (general-purpose)</description></item>
         /// <item><description>polarxro.x4.large.2e	4 cores, 16 GB (general-purpose)</description></item>
         /// <item><description>polarxro.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</description></item>
         /// <item><description>polarxro.x4.2xlarge.2e	16 cores, 64 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Read-only instance compute node specifications (Enterprise Edition CN) dedicated</b>	</para>
+        /// <para><b>Read-only instance compute node specifications (Enterprise Edition CN) Dedicated</b>	</para>
         /// <list type="bullet">
         /// <item><description>polarxro.x8.large.2e	4 cores, 32 GB (dedicated)</description></item>
         /// <item><description>polarxro.x8.xlarge.2e	8 cores, 64 GB (dedicated)</description></item>
@@ -76,14 +80,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para><b>Target specifications for Enterprise Edition storage node specification changes</b></para>
-        /// <para><b>Storage node specifications (Enterprise Edition DN) general-purpose</b>	</para>
+        /// <para><b>Storage node specifications (Enterprise Edition DN) General-purpose</b>	</para>
         /// <list type="bullet">
         /// <item><description>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</description></item>
         /// <item><description>mysql.n4.large.25	4 cores, 16 GB (general-purpose)</description></item>
         /// <item><description>mysql.n4.xlarge.25	8 cores, 32 GB (general-purpose)</description></item>
         /// <item><description>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Storage node specifications (Enterprise Edition DN) dedicated</b>	</para>
+        /// <para><b>Storage node specifications (Enterprise Edition DN) Dedicated</b>	</para>
         /// <list type="bullet">
         /// <item><description>mysql.x8.large.25	4 cores, 32 GB (dedicated)</description></item>
         /// <item><description>mysql.x8.xlarge.25	8 cores, 64 GB (dedicated)</description></item>
@@ -93,14 +97,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>mysql.st.8xlarge.25	60 cores, 470 GB (dedicated)</description></item>
         /// <item><description>mysql.st.12xlarge.25	90 cores, 720 GB (dedicated)</description></item>
         /// </list>
-        /// <para><b>Read-only instance storage node specifications (Enterprise Edition DN) general-purpose</b>	</para>
+        /// <para><b>Read-only instance storage node specifications (Enterprise Edition DN) General-purpose</b>	</para>
         /// <list type="bullet">
         /// <item><description>rds.mysql.s2.xlarge	2 cores, 8 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.large.1	4 cores, 16 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.xlarge.1	8 cores, 32 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.2xlarge.1	16 cores, 64 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Read-only instance storage node specifications (Enterprise Edition DN) dedicated</b>	</para>
+        /// <para><b>Read-only instance storage node specifications (Enterprise Edition DN) Dedicated</b>	</para>
         /// <list type="bullet">
         /// <item><description>mysqlro.x8.large.1	4 cores, 32 GB (dedicated)</description></item>
         /// <item><description>mysqlro.x8.xlarge.1	8 cores, 64 GB (dedicated)</description></item>
@@ -164,7 +168,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SpecifiedDNSpecMapJson { get; set; }
 
         /// <summary>
-        /// <para>The switch start time. The switch time range is [start time T, T+30m]. This parameter is not yet available.</para>
+        /// <para>Set this parameter to cloud_auto when migrating from local disks to cloud disks. If this parameter is not specified, the storage type remains unchanged.</para>
+        /// </summary>
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
+        /// <summary>
+        /// <para>The switchover start time. The switchover time range is [start time T, T+30m]. This parameter is not yet available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-11T17:10:00Z</para>
@@ -174,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The switch time. Valid values:</para>
+        /// <para>The switchover time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: immediately.</description></item>
         /// <item><description>1: within the O&amp;M window.</description></item>
@@ -189,7 +200,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para><b>Target specifications for Standard Edition specification changes</b></para>
-        /// <para><b>Primary instance node specifications (for Standard Edition) (general-purpose):</b></para>
+        /// <para><b>Primary instance node specifications (Standard Edition) (General-purpose):</b></para>
         /// <list type="bullet">
         /// <item><description>mysql.n2.medium.25	2 cores, 4 GB (general-purpose)</description></item>
         /// <item><description>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</description></item>
@@ -204,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</description></item>
         /// <item><description>mysql.n8.2xlarge.25	16 cores, 128 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Primary instance node specifications (for Standard Edition) (dedicated):</b></para>
+        /// <para><b>Primary instance node specifications (Standard Edition) (Dedicated):</b></para>
         /// <list type="bullet">
         /// <item><description>mysql.x2.medium.25	2 cores, 4 GB (dedicated)</description></item>
         /// <item><description>mysql.x4.medium.25	2 cores, 8 GB (dedicated)</description></item>
@@ -219,14 +230,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <item><description>mysql.x4.2xlarge.25	16 cores, 64 GB (dedicated)</description></item>
         /// <item><description>mysql.x8.2xlarge.25	16 cores, 128 GB (dedicated)</description></item>
         /// </list>
-        /// <para><b>Read-only instance node specifications (for Standard Edition) general-purpose</b>	</para>
+        /// <para><b>Read-only instance node specifications (Standard Edition) General-purpose</b>	</para>
         /// <list type="bullet">
         /// <item><description>rds.mysql.s2.xlarge 	2 cores, 8 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.large.1 	4 cores, 16 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.xlarge.1 	8 cores, 32 GB (general-purpose)</description></item>
         /// <item><description>mysqlro.x4.2xlarge.1 	16 cores, 64 GB (general-purpose)</description></item>
         /// </list>
-        /// <para><b>Read-only instance node specifications (for Standard Edition) dedicated</b>	</para>
+        /// <para><b>Read-only instance node specifications (Standard Edition) Dedicated</b>	</para>
         /// <list type="bullet">
         /// <item><description>mysqlro.x8.large.1 	4 cores, 32 GB (dedicated) </description></item>
         /// <item><description>mysqlro.x8.xlarge.1 	8 cores, 64 GB (dedicated) </description></item>
