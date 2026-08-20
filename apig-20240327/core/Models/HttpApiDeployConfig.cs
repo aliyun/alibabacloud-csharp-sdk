@@ -196,6 +196,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }
 
         /// <summary>
+        /// <para>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ordinary</para>
+        /// </summary>
+        [NameInMap("restApiRouteMode")]
+        [Validation(Required=false)]
+        public string RestApiRouteMode { get; set; }
+
+        /// <summary>
         /// <para>The backend service information.</para>
         /// 
         /// <b>if can be null:</b>
@@ -374,7 +384,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The subdomain content list.</para>
+        /// <para>The list of subdomain contents.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]
