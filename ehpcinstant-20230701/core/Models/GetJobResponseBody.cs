@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 /// <para>The computing power level. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>General: general-purpose.</description></item>
-                /// <item><description>Performance: compute-optimized.</description></item>
+                /// <item><description>Performance: performance-optimized.</description></item>
                 /// </list>
                 /// <para>Default value: General.</para>
                 /// 
@@ -131,6 +131,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
+                /// <para>The resource pool.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testpool</para>
                 /// </summary>
@@ -138,6 +140,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 [Validation(Required=false)]
                 public string Pool { get; set; }
 
+                /// <summary>
+                /// <para>The priority.</para>
+                /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
@@ -246,17 +251,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             /// <summary>
             /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: the job is queued.</description></item>
-            /// <item><description>Initing: the job is being initialized.</description></item>
-            /// <item><description>Succeed: the job succeeded.</description></item>
-            /// <item><description>Failed: the job failed.</description></item>
-            /// <item><description>Running: the job is running.</description></item>
-            /// <item><description>Exception: a scheduling exception occurred.</description></item>
-            /// <item><description>Retrying: the job is being retried.</description></item>
-            /// <item><description>Expired: the job timed out.</description></item>
-            /// <item><description>Deleted: the job is deleted.</description></item>
-            /// <item><description>Suspended: the job is suspended.</description></item>
-            /// <item><description>Restarting: the job is being restarted.</description></item>
+            /// <item><description>Pending: The job is queued.</description></item>
+            /// <item><description>Initing: The job is being initialized.</description></item>
+            /// <item><description>Succeed: The job ran successfully.</description></item>
+            /// <item><description>Failed: The job failed.</description></item>
+            /// <item><description>Running: The job is running.</description></item>
+            /// <item><description>Exception: A scheduling exception occurred.</description></item>
+            /// <item><description>Retrying: The job is being retried.</description></item>
+            /// <item><description>Expired: The job timed out.</description></item>
+            /// <item><description>Deleted: The job has been deleted.</description></item>
+            /// <item><description>Suspended: The job is in hibernation.</description></item>
+            /// <item><description>Restarting: The job is being restarted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -543,7 +548,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Image { get; set; }
 
                             /// <summary>
-                            /// <para>The preprocessing script. The script must be Base64-encoded.</para>
+                            /// <para>The pre-processing script. The script must be Base64-encoded.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</para>
@@ -587,7 +592,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the job is long-running.</para>
+                /// <para>Indicates whether the job is a long-running job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

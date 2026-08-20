@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>MyPool</para>
+            /// </summary>
+            [NameInMap("PoolName")]
+            [Validation(Required=false)]
+            public string PoolName { get; set; }
+
+            /// <summary>
             /// <para>The status of the job. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Pending: The job is in the queue.</para>

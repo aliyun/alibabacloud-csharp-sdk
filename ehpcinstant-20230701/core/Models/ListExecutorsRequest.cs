@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobTemplateId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>MyPool</para>
+            /// </summary>
+            [NameInMap("PoolName")]
+            [Validation(Required=false)]
+            public string PoolName { get; set; }
+
+            /// <summary>
             /// <para>A list of executor statuses.</para>
             /// </summary>
             [NameInMap("Status")]

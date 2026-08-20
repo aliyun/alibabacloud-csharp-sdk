@@ -36,13 +36,6 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 /// <summary>
                 /// <para>The dependency type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AfterSucceeded: <b>All tasks</b> in the dependent job or array job run successfully (exit code 0).</description></item>
-                /// <item><description>AfterFailed: <b>Any task</b> in the dependent job or array job fails (exit code is not 0).</description></item>
-                /// <item><description>AfterAny: The dependent job finishes running (succeeded or failed).</description></item>
-                /// <item><description>AfterCorresponding: The corresponding task in the dependent array job runs successfully (exit code 0).</description></item>
-                /// </list>
-                /// <para>Default value: AfterSucceeded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AfterSucceeded</para>
@@ -73,10 +66,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AllocationSpec { get; set; }
 
             /// <summary>
-            /// <para>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</para>
+            /// <para>The computing power level. This parameter takes effect only when the resource type is economy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>General: general-purpose.</description></item>
-            /// <item><description>Performance: compute-optimized.</description></item>
+            /// <item><description>Performance: compute-optimized instance.</description></item>
             /// </list>
             /// <para>Default value: General</para>
             /// 
@@ -215,7 +208,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestSecurityPolicySecurityGroup SecurityGroup { get; set; }
             public class CreateJobRequestSecurityPolicySecurityGroup : TeaModel {
                 /// <summary>
-                /// <para>The array of security group IDs.</para>
+                /// <para>The security group ID array.</para>
                 /// </summary>
                 [NameInMap("SecurityGroupIds")]
                 [Validation(Required=false)]
@@ -241,17 +234,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestTasksExecutorPolicy ExecutorPolicy { get; set; }
             public class CreateJobRequestTasksExecutorPolicy : TeaModel {
                 /// <summary>
-                /// <para>The array job details. Sub-job index values are passed to the runtime environment through environment variables, which can be referenced by user applications. The environment variables include:</para>
+                /// <para>The details of the array job. The sub-job index values are passed to the runtime environment through environment variables, which can be referenced by user applications. The environment variables include:</para>
                 /// <list type="bullet">
-                /// <item><description>EHPC_JOB_NAME: the job name, corresponding to the JobName parameter.</description></item>
-                /// <item><description>EHPC_JOB_ID: the job ID.</description></item>
-                /// <item><description>EHPC_TASK_NAME: the task name, corresponding to the TaskName parameter.</description></item>
-                /// <item><description>EHPC_EXECUTOR_ID: the executor ID.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_ID: the sub-job index value.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_COUNT: the total number of sub-jobs.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_MAX: the maximum sub-job index value, corresponding to the IndexStart parameter.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_MIN: the minimum sub-job index value, corresponding to the IndexEnd parameter.</description></item>
-                /// <item><description>EHPC_ARRAY_TASK_STEP: the sub-job index step, corresponding to the IndexStep parameter.</description></item>
+                /// <item><description>EHPC_JOB_NAME: The job name, corresponding to the JobName parameter.</description></item>
+                /// <item><description>EHPC_JOB_ID: The job ID.</description></item>
+                /// <item><description>EHPC_TASK_NAME: The task name, corresponding to the TaskName parameter.</description></item>
+                /// <item><description>EHPC_EXECUTOR_ID: The executor ID.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_ID: The sub-job index value.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_COUNT: The total number of sub-jobs.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_MAX: The maximum sub-job index value, corresponding to the IndexStart parameter.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_MIN: The minimum sub-job index value, corresponding to the IndexEnd parameter.</description></item>
+                /// <item><description>EHPC_ARRAY_TASK_STEP: The sub-job index step, corresponding to the IndexStep parameter.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ArraySpec")]
@@ -279,9 +272,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public int? IndexStart { get; set; }
 
                     /// <summary>
-                    /// <para>The interval between indexes in an array job.</para>
+                    /// <para>The step size of the array job index.</para>
                     /// <remarks>
-                    /// <para>If the array job has the properties IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three sub-jobs with indexes 1, 3, and 5. Your application can access these indexes through environment variables.</para>
+                    /// <para>If the array job properties are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three child jobs with index values of 1, 3, and 5. Your application can access these values through environment variables.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -295,9 +288,6 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 /// <summary>
                 /// <para>The maximum number of nodes for the job.</para>
-                /// <remarks>
-                /// <para>The value must comply with the following formula: <c>MaxCount = (IndexEnd - IndexStart) / IndexStep + 1</c></para>
-                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -326,7 +316,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public CreateJobRequestTasksTaskSpec TaskSpec { get; set; }
             public class CreateJobRequestTasksTaskSpec : TeaModel {
                 /// <summary>
-                /// <para>The resource information of the runtime environment.</para>
+                /// <para>The runtime environment resource information.</para>
                 /// </summary>
                 [NameInMap("Resource")]
                 [Validation(Required=false)]
@@ -383,11 +373,6 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                     /// <summary>
                     /// <para>The hostname prefix of the runtime environment. The following limits apply:</para>
-                    /// <list type="bullet">
-                    /// <item><description>A period (.) and a hyphen (-) cannot be used as the first or last character, or consecutively.</description></item>
-                    /// <item><description>Windows environment: The value can be up to 10 characters in length, cannot contain periods (.), and cannot consist of digits only. Uppercase and lowercase letters, digits, and hyphens (-) are allowed.</description></item>
-                    /// <item><description>Linux environment: The value can be up to 32 characters in length and can contain multiple periods (.). The hostname is divided into segments by periods. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>compute</para>
@@ -430,13 +415,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> ExitCodeActions { get; set; }
                     public class CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions : TeaModel {
                         /// <summary>
-                        /// <para>The next action for the node. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><para>Retry: When a specific exit code is matched, the job starts a new retry.</para>
-                        /// </description></item>
-                        /// <item><description><para>Exit: When a specific exit code is matched, the job exits.</para>
-                        /// </description></item>
-                        /// </list>
+                        /// <para>The next action for the task.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -504,13 +483,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public List<string> Arg { get; set; }
 
                         /// <summary>
-                        /// <para>The list of container startup commands. A maximum of 20 commands are supported. Each command can contain up to 256 characters.</para>
-                        /// <remarks>
-                        /// <ol>
-                        /// <item><description>If a startup command contains spaces (for example, <c>sleep 60s</c>), pass the JSON parameter as <c>[&quot;sleep&quot;, &quot;60s&quot;]</c>.</description></item>
-                        /// <item><description>If a startup command is complex, use a combination of <c>Command: [&quot;/bin/bash&quot;]</c> and <c>Arg:[&quot;-c&quot;, &quot;&lt;customized command&gt;&quot;]</c>, where <c>&lt;customized command&gt;</c> is a user-defined command that can contain spaces and other characters.</description></item>
-                        /// </ol>
-                        /// </remarks>
+                        /// <para>The list of container startup commands. A maximum of 20 commands are supported, and each command can be up to 256 characters in length.</para>
                         /// </summary>
                         [NameInMap("Command")]
                         [Validation(Required=false)]
@@ -557,7 +530,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string Image { get; set; }
 
                         /// <summary>
-                        /// <para>The list of mount parameters for a self-managed image registry. The parameters are in key-value format and passed as a JSON string.</para>
+                        /// <para>The list of mount parameters for a self-managed image registry. The parameters are in key-value format and passed as JSON.</para>
                         /// <list type="bullet">
                         /// <item><description>Reference format: {&quot;ImageRegistryType&quot;:&quot;https&quot;,&quot;ImageRegistryServer&quot;:&quot;xxx&quot;,&quot;ImageRegistryUserName&quot;:&quot;xxx&quot;,&quot;ImageRegistryPassword&quot;:&quot;xxx&quot;}</description></item>
                         /// </list>
@@ -624,11 +597,11 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         public string Image { get; set; }
 
                         /// <summary>
-                        /// <para>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters are:</para>
+                        /// <para>The logon password for the virtual machine environment. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
                         /// <para>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/</para>
                         /// <para>For Windows environments, the password cannot start with a forward slash (/).</para>
                         /// <remarks>
-                        /// <para>If you specify the Password parameter, use HTTPS to send the request to prevent password leakage.</para>
+                        /// <para>If you specify the Password parameter, use HTTPS to send the request to avoid password leaks.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -663,23 +636,23 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
-                /// <para>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</para>
+                /// <para>The list of data volumes mounted to the task. A maximum of 10 volumes are supported.</para>
                 /// </summary>
                 [NameInMap("VolumeMount")]
                 [Validation(Required=false)]
                 public List<CreateJobRequestTasksTaskSpecVolumeMount> VolumeMount { get; set; }
                 public class CreateJobRequestTasksTaskSpecVolumeMount : TeaModel {
                     /// <summary>
-                    /// <para>The list of volume mount parameters. Passed as key-value pairs in JSON format.</para>
+                    /// <para>The list of volume mount parameters. Specified in key-value format and passed as JSON.</para>
                     /// <list type="bullet">
                     /// <item><description><para>Reference format for mounting NAS: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</para>
                     /// <remarks>
-                    /// <para>server specifies the mount target address of the NAS file system. path specifies a subdirectory under the NAS path, starting with /, and the directory must already exist. vers specifies the NFS protocol version for mounting NAS. Version 3 is recommended. options specifies custom parameters for mounting NAS, in the format &quot;xxx,xxx,xxx&quot;.</para>
+                    /// <para>server specifies the mount point address of the NAS file system. path specifies a subdirectory under the NAS path, which must start with / and the directory must already exist. vers specifies the NFS protocol version for mounting NAS. Version 3 is recommended. options specifies custom parameters for mounting NAS, in the format &quot;xxx,xxx,xxx&quot;.</para>
                     /// </remarks>
                     /// </description></item>
                     /// <item><description><para>Reference format for mounting OSS: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</para>
                     /// <remarks>
-                    /// <para>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the overview page of the target bucket. path specifies the directory structure relative to the root of the bucket when mounting. The default value is /. The directory must already exist. akId specifies the AccessKey ID used for direct authorization with an AccessKey pair. akSecret specifies the AccessKey secret used for direct authorization with an AccessKey pair.</para>
+                    /// <para>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can obtain this value from the overview page of the target bucket in the OSS console. path specifies the directory structure relative to the bucket root for mounting. The default value is /. The directory must already exist. akId specifies the AccessKey ID used for direct AccessKey authorization. akSecret specifies the AccessKey Secret used for direct AccessKey authorization.</para>
                     /// </remarks>
                     /// </description></item>
                     /// </list>
@@ -712,7 +685,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public bool? ReadOnly { get; set; }
 
                     /// <summary>
-                    /// <para>The supported data volume type. Valid values:</para>
+                    /// <para>The supported volume type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>alicloud/nas: mounts a NAS file system.</description></item>
                     /// <item><description>alicloud/oss: mounts an OSS bucket.</description></item>
@@ -730,10 +703,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the job is a long-running job. Valid values:</para>
+            /// <para>Specifies whether the job is long-running. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: background service job.</description></item>
-            /// <item><description>false: batch job.</description></item>
+            /// <item><description>true: The job is a backend service job.</description></item>
+            /// <item><description>false: The job is a batch job.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 

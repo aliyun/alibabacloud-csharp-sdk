@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListJobExecutorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Statistics about executor statuses.</para>
+        /// <para>The executor status statistics.</para>
         /// </summary>
         [NameInMap("ExecutorStatus")]
         [Validation(Required=false)]
         public ListJobExecutorsResponseBodyExecutorStatus ExecutorStatus { get; set; }
         public class ListJobExecutorsResponseBodyExecutorStatus : TeaModel {
             /// <summary>
-            /// <para>The number of executors in the Deleted state.</para>
+            /// <para>The number of executors in the deleted state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Deleted { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Exception state.</para>
+            /// <para>The number of executors in the exception state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Exception { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Failed state.</para>
+            /// <para>The number of executors in the failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Failed { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Initing state.</para>
+            /// <para>The number of executors in the initializing state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Initing { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Pending state.</para>
+            /// <para>The number of executors in the queued state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Pending { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Restarting state.</para>
+            /// <para>The number of executors in the restarting state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Restarting { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Running state.</para>
+            /// <para>The number of executors in the running state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Running { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Succeeded state.</para>
+            /// <para>The number of executors in the succeeded state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Succeeded { get; set; }
 
             /// <summary>
-            /// <para>The number of executors in the Suspended state.</para>
+            /// <para>The number of executors in the hibernation state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,21 +109,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>A list of executors.</para>
+        /// <para>The list of executors.</para>
         /// </summary>
         [NameInMap("Executors")]
         [Validation(Required=false)]
         public List<ListJobExecutorsResponseBodyExecutors> Executors { get; set; }
         public class ListJobExecutorsResponseBodyExecutors : TeaModel {
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Standard: Standard.</para>
-            /// </description></item>
-            /// <item><description><para>Dedicated: Dedicated. To use this resource type, you must be added to the whitelist.</para>
-            /// </description></item>
-            /// <item><description><para>Economic: Economy. To use this resource type, you must be added to the whitelist.</para>
-            /// </description></item>
+            /// <item><description>Standard: standard.</description></item>
+            /// <item><description>Dedicated: dedicated. You must be added to the whitelist to use this type.</description></item>
+            /// <item><description>Economic: economy. You must be added to the whitelist to use this type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +131,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string AllocationSpec { get; set; }
 
             /// <summary>
-            /// <para>The index of the executor.</para>
+            /// <para>The array index of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -144,7 +141,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? ArrayIndex { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the compute resources.</para>
+            /// <para>The retention duration of compute resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -154,7 +151,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? BlockDuration { get; set; }
 
             /// <summary>
-            /// <para>The time when the executor was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:10</para>
@@ -164,7 +161,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the executor ended.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:18</para>
@@ -174,7 +171,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the executor. The format is \<c>JobId-TaskName-ArrayIndex\\</c>.</para>
+            /// <para>The executor ID. The format is JobId-TaskName-ArrayIndex.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-xxxx-Task0-1</para>
@@ -188,21 +185,21 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>A list of public IP addresses of the nodes.</para>
+            /// <para>The list of node public IP addresses.</para>
             /// </summary>
             [NameInMap("ExternalIpAddress")]
             [Validation(Required=false)]
             public List<string> ExternalIpAddress { get; set; }
 
             /// <summary>
-            /// <para>An array of node hostnames.</para>
+            /// <para>The array of node hostnames.</para>
             /// </summary>
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public List<string> HostName { get; set; }
 
             /// <summary>
-            /// <para>A list of node IP addresses.</para>
+            /// <para>The list of node IP addresses.</para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
@@ -213,7 +210,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public bool? Preemptible { get; set; }
 
             /// <summary>
-            /// <para>The time when the executor started.</para>
+            /// <para>The start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:13</para>
@@ -223,30 +220,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the executor. Valid values:</para>
+            /// <para>The executor status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: In queue</para>
-            /// </description></item>
-            /// <item><description><para>Initing: Initializing</para>
-            /// </description></item>
-            /// <item><description><para>Succeed: Succeeded</para>
-            /// </description></item>
-            /// <item><description><para>Failed: Failed</para>
-            /// </description></item>
-            /// <item><description><para>Running: Running</para>
-            /// </description></item>
-            /// <item><description><para>Exception: Abnormal scheduling</para>
-            /// </description></item>
-            /// <item><description><para>Retrying: Retrying</para>
-            /// </description></item>
-            /// <item><description><para>Expired: Timed out</para>
-            /// </description></item>
-            /// <item><description><para>Suspended: Job hibernating</para>
-            /// </description></item>
-            /// <item><description><para>Restarting: Job restarting</para>
-            /// </description></item>
-            /// <item><description><para>Deleted: Deleted</para>
-            /// </description></item>
+            /// <item><description>Pending: queued.</description></item>
+            /// <item><description>Initing: initializing.</description></item>
+            /// <item><description>Succeed: succeeded.</description></item>
+            /// <item><description>Failed: failed.</description></item>
+            /// <item><description>Running: running.</description></item>
+            /// <item><description>Exception: scheduling exception.</description></item>
+            /// <item><description>Retrying: retrying.</description></item>
+            /// <item><description>Expired: timed out.</description></item>
+            /// <item><description>Suspended: in hibernation.</description></item>
+            /// <item><description>Restarting: restarting.</description></item>
+            /// <item><description>Deleted: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -257,7 +243,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the status.</para>
+            /// <para>The description of the status reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ExecutorReady</para>
@@ -267,14 +253,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>A list of executor tags.</para>
+            /// <para>The list of executor tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListJobExecutorsResponseBodyExecutorsTags> Tags { get; set; }
             public class ListJobExecutorsResponseBodyExecutorsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the executor.</para>
+                /// <para>The executor tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -284,7 +270,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the executor.</para>
+                /// <para>The executor tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -318,7 +304,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -348,7 +334,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

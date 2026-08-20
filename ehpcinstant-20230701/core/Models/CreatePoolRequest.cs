@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class CreatePoolRequest : TeaModel {
         /// <summary>
-        /// <para>The resource pool name.</para>
+        /// <para>The name of the resource pool.</para>
         /// <list type="bullet">
         /// <item><description>The name can be up to 15 characters in length.</description></item>
         /// <item><description>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <para>The priority of the resource pool.</para>
         /// <list type="bullet">
         /// <item><description>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</description></item>
-        /// <item><description>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The priority of a resource pool takes precedence over the priority of a job.</description></item>
+        /// <item><description>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,6 +66,35 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [NameInMap("SchedulingPolicyId")]
         [Validation(Required=false)]
         public string SchedulingPolicyId { get; set; }
+
+        /// <summary>
+        /// <para>The tag information.</para>
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreatePoolRequestTags> Tags { get; set; }
+        public class CreatePoolRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

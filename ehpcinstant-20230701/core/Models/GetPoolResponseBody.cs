@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the resource pool.</para>
+        /// <para>The resource pool information.</para>
         /// </summary>
         [NameInMap("PoolInfo")]
         [Validation(Required=false)]
@@ -27,7 +27,17 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of executors that are in use in the resource pool.</para>
+            /// <para>The ID of the resource pool creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200428053788xxxx</para>
+            /// </summary>
+            [NameInMap("Creator")]
+            [Validation(Required=false)]
+            public string Creator { get; set; }
+
+            /// <summary>
+            /// <para>The number of executor nodes that are currently running in the resource pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -39,10 +49,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             /// <summary>
             /// <para>Indicates whether the resource pool is the default resource pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +61,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent executors per user in the resource pool.</para>
+            /// <para>The maximum number of executor nodes that can run concurrently in the resource pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -63,12 +71,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? MaxExecutorNum { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource pool.</para>
+            /// <para>The resource pool name.</para>
             /// <list type="bullet">
-            /// <item><description><para>The name can be up to 15 characters long.</para>
-            /// </description></item>
-            /// <item><description><para>The name can contain letters, digits, underscores (_), and periods (.).</para>
-            /// </description></item>
+            /// <item><description>The name can be up to 15 characters in length.</description></item>
+            /// <item><description>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +87,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             /// <summary>
             /// <para>The priority of the resource pool.</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values: 1 to 99. A larger value indicates a higher priority. Default value: 1.</para>
-            /// </description></item>
-            /// <item><description><para>Jobs in a resource pool with a higher priority are scheduled before pending jobs in a resource pool with a lower priority. The priority of the resource pool takes precedence over the priority of a job.</para>
-            /// </description></item>
+            /// <item><description>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</description></item>
+            /// <item><description>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in a resource pool with a lower priority value. The resource pool priority takes precedence over the job priority.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The reason for the error.</para>
+            /// <para>The error reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Fails to *** pool: ***.</para>
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling policy.</para>
+            /// <para>The scheduling policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-xxx</para>
@@ -115,18 +119,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string SchedulingPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource pool. Valid values:</para>
+            /// <para>The resource pool status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Creating</c>: The resource pool is being created.</para>
-            /// </description></item>
-            /// <item><description><para><c>Updating</c>: The resource pool is being updated.</para>
-            /// </description></item>
-            /// <item><description><para><c>Deleting</c>: The resource pool is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><c>Working</c>: The resource pool is active.</para>
-            /// </description></item>
-            /// <item><description><para><c>Deleted</c>: The resource pool has been deleted.</para>
-            /// </description></item>
+            /// <item><description>Creating: The resource pool is being created.</description></item>
+            /// <item><description>Updating: The resource pool is being updated.</description></item>
+            /// <item><description>Deleting: The resource pool is being deleted.</description></item>
+            /// <item><description>Working: The resource pool is running.</description></item>
+            /// <item><description>Deleted: The resource pool has been deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,6 +134,35 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The tag information.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetPoolResponseBodyPoolInfoTags> Tags { get; set; }
+            public class GetPoolResponseBodyPoolInfoTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The time when the resource pool was last updated.</para>
@@ -149,7 +177,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>

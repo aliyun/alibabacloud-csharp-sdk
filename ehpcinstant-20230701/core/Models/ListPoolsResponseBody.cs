@@ -136,6 +136,28 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListPoolsResponseBodyPoolListTags> Tags { get; set; }
+            public class ListPoolsResponseBodyPoolListTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The time when the resource pool was last updated.</para>
             /// 

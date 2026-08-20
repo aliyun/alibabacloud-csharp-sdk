@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public class ListPoolsRequestFilter : TeaModel {
             /// <summary>
             /// <para>The list of resource pool names to query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;MyPool&quot;]</para>
             /// </summary>
             [NameInMap("PoolName")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
             /// <summary>
             /// <para>The list of resource pool statuses to query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;Working&quot;]</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

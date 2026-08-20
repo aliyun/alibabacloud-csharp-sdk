@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <summary>
         /// <para>The name of the resource pool.</para>
         /// <list type="bullet">
-        /// <item><description><para>The name can be up to 15 characters long.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</para>
-        /// </description></item>
+        /// <item><description>The name can be up to 15 characters in length.</description></item>
+        /// <item><description>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,10 +27,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// <summary>
         /// <para>The priority of the resource pool.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 to 99. The default value is 1, which specifies the lowest priority.</para>
-        /// </description></item>
-        /// <item><description><para>Jobs in a higher-priority resource pool are scheduled before pending jobs in lower-priority pools. A resource pool\&quot;s priority overrides a job\&quot;s priority.</para>
-        /// </description></item>
+        /// <item><description>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</description></item>
+        /// <item><description>Jobs submitted to a resource pool with a higher priority value are scheduled before pending jobs in resource pools with lower priority values. The priority of a resource pool takes precedence over the priority of a job.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,14 +39,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The limits on the resources that a user can use concurrently in the resource pool.</para>
+        /// <para>The resource quota limit for concurrent usage by a user within a resource pool.</para>
         /// </summary>
         [NameInMap("ResourceLimits")]
         [Validation(Required=false)]
         public string ResourceLimitsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduling policy.</para>
+        /// <para>The scheduling policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-xxxx</para>

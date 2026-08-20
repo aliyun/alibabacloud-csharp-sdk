@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListExecutorEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the running event.</para>
+        /// <para>The list of runtime events.</para>
         /// </summary>
         [NameInMap("ExecutorEventList")]
         [Validation(Required=false)]
         public List<ListExecutorEventsResponseBodyExecutorEventList> ExecutorEventList { get; set; }
         public class ListExecutorEventsResponseBodyExecutorEventList : TeaModel {
             /// <summary>
-            /// <para>The content of the running event.</para>
+            /// <para>The content of the runtime event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Executor created successfully</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the executor. The format is JobId-TaskName-ArrayIndex.</para>
+            /// <para>The Executor ID. Format: JobId-TaskName-ArrayIndex.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-xxxx-Task0-1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The level of the running event. Valid values:</para>
+            /// <para>The runtime event level. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Normal</description></item>
             /// <item><description>Warning</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The event of the running event.</para>
+            /// <para>The time when the runtime event occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:13</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
