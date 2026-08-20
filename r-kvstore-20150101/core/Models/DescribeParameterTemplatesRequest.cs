@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Overview</a>. Valid values:</para>
+        /// <para>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Architecture overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>logic</b>: The instance is a cluster master-replica instance or a read/write splitting instance.</description></item>
-        /// <item><description><b>normal</b>: The instance is a standard master-replica instance.</description></item>
+        /// <item><description><b>logic</b>: cluster or read/write splitting architecture.</description></item>
+        /// <item><description><b>normal</b>: standard architecture (primary/secondary).</description></item>
         /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;If <b>EngineVersion</b> is set to <b>6.0</b>, this parameter does not support the value <b>logic</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// <para>The database engine that is run on the instance. Set the value to <b>Redis</b>.</para>
+        /// <para>The database type. Set the value to <b>Redis</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -65,9 +66,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</para>
+        /// <para>The parameter category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>account</para>
+        /// </summary>
+        [NameInMap("ParameterCategory")]
+        [Validation(Required=false)]
+        public string ParameterCategory { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the resource group ID.</para>
         /// <remarks>
-        /// <para> You can also query the ID of a resource group in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <para>You can also obtain the resource group ID in the console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

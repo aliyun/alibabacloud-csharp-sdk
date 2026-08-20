@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class CreateAccountResponseBody : TeaModel {
+    public class ModifyAccountParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The account name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demoaccount</para>
@@ -20,34 +20,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demoaccount</para>
-        /// </summary>
-        [NameInMap("AcountName")]
-        [Validation(Required=false)]
-        public string AcountName { get; set; }
-
-        /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
+        /// <para>r-bp1s4h3oosz5y8ilc7</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ABAF95F6-35C1-4177-AF3A-70969EBD****</para>
+        /// <para>{&quot;access-db-id&quot;:&quot;1&quot;,&quot;cu-limit&quot;:&quot;10&quot;}</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Parameters { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

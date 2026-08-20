@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The description of the account.</para>
         /// <list type="bullet">
-        /// <item><description>The description must start with a letter, and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
+        /// <item><description>Must start with a Chinese character or an English letter. Cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>Can contain Chinese characters, English letters, digits, underscores (_), and hyphens (-). </description></item>
+        /// <item><description>Must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the account. The name must meet the following requirements:</para>
+        /// <para>The account name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must start with a lowercase letter and can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>The name can be up to 100 characters in length.</description></item>
-        /// <item><description>The name cannot be one of the reserved words listed in the <a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Reserved words for Redis account names</a> section.</description></item>
+        /// <item><description>Starts with a lowercase letter and contains only lowercase letters, digits, or underscores (_).</description></item>
+        /// <item><description>Contains up to 100 characters.</description></item>
+        /// <item><description>Cannot be a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Redis reserved account name</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Redis reserved account name</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
+        /// <para>The password of the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The following special characters are supported: <c>!@#$%^&amp;*()_+-=</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The permissions of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RoleReadOnly</b>: The account has read-only permissions.</description></item>
-        /// <item><description><b>RoleReadWrite</b>: The account has read and write permissions.</description></item>
+        /// <item><description><b>RoleReadOnly</b>: read-only permissions.</description></item>
+        /// <item><description><b>RoleReadWrite</b>: read and write permissions. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The type of the account. Set the value to <b>Normal</b>, which indicates that the account is a standard account.</para>
+        /// <para>The account type. Set the value to <b>Normal</b> (standard account).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,6 +93,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The account parameters to modify in JSON format. The new values overwrite the original values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;access-db-id&quot;:&quot;1&quot;,&quot;cu-limit&quot;:&quot;10&quot;}</para>
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string Parameters { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

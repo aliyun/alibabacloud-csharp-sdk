@@ -58,40 +58,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"},
                 {"eu-west-1-oxs", "r-kvstore.aliyuncs.com"},
                 {"rus-west-1-pop", "r-kvstore.aliyuncs.com"},
-                {"us-west-1", "r-kvstore.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"},
+                {"cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"},
+                {"cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"},
+                {"ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"},
+                {"cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"},
                 {"us-east-1", "r-kvstore.us-east-1.aliyuncs.com"},
+                {"us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"},
+                {"eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"},
+                {"us-west-1", "r-kvstore.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"},
                 {"na-south-1", "r-kvstore.na-south-1.aliyuncs.com"},
                 {"me-east-1", "r-kvstore.me-east-1.aliyuncs.com"},
                 {"me-central-1", "r-kvstore.me-central-1.aliyuncs.com"},
-                {"eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"},
-                {"eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"},
+                {"ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"},
                 {"cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"},
-                {"ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("r-kvstore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1305,16 +1303,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Creates an account for a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
+        /// <para>This API operation supports only instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running status to use this API.  </description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
-        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
+        /// <item><description>The instance status must be Running when you call this API operation. </description></item>
+        /// <item><description>You can create up to 18 accounts for each instance.<remarks>
+        /// <para>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1366,6 +1364,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -1403,16 +1405,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Creates an account for a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
+        /// <para>This API operation supports only instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running status to use this API.  </description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
-        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
+        /// <item><description>The instance status must be Running when you call this API operation. </description></item>
+        /// <item><description>You can create up to 18 accounts for each instance.<remarks>
+        /// <para>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1464,6 +1466,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -1501,16 +1507,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Creates an account for a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
+        /// <para>This API operation supports only instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running status to use this API.  </description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
-        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
+        /// <item><description>The instance status must be Running when you call this API operation. </description></item>
+        /// <item><description>You can create up to 18 accounts for each instance.<remarks>
+        /// <para>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1531,16 +1537,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an account for an ApsaraDB for Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Creates an account for a Tair (Redis® OSS-Compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports only instances compatible with Redis 4.0 or later versions.  </para>
+        /// <para>This API operation supports only instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the running status to use this API.  </description></item>
-        /// <item><description>You can create up to 18 accounts for an instance.  <remarks>
-        /// <para>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account Management</a>.</para>
+        /// <item><description>The instance status must be Running when you call this API operation. </description></item>
+        /// <item><description>You can create up to 18 accounts for each instance.<remarks>
+        /// <para>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -6977,7 +6983,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
+        /// <para>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7010,6 +7016,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -7017,6 +7031,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchAccountName))
+            {
+                query["SearchAccountName"] = request.SearchAccountName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -7043,7 +7061,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
+        /// <para>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7076,6 +7094,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -7083,6 +7109,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchAccountName))
+            {
+                query["SearchAccountName"] = request.SearchAccountName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -7109,7 +7139,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
+        /// <para>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7127,7 +7157,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a specific account in a specified ApsaraDB for Redis (Tair-compatible) instance.</para>
+        /// <para>Queries the information about an account in a specified ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16981,12 +17011,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
+        /// <para>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17027,6 +17057,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterCategory))
+            {
+                query["ParameterCategory"] = request.ParameterCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -17064,12 +17098,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
+        /// <para>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17110,6 +17144,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterCategory))
+            {
+                query["ParameterCategory"] = request.ParameterCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -17147,12 +17185,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
+        /// <para>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17170,12 +17208,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
+        /// <para>Queries the parameter list and default values of a Tair (Redis® OSS-Compatible) database instance for different architectures and major engine versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23013,6 +23051,170 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改账号参数</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前仅支持Tair Serverless KV实例。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountParameterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountParameterResponse
+        /// </returns>
+        public ModifyAccountParameterResponse ModifyAccountParameterWithOptions(ModifyAccountParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAccountParameter",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAccountParameterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改账号参数</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前仅支持Tair Serverless KV实例。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountParameterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountParameterResponse
+        /// </returns>
+        public async Task<ModifyAccountParameterResponse> ModifyAccountParameterWithOptionsAsync(ModifyAccountParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAccountParameter",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAccountParameterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改账号参数</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前仅支持Tair Serverless KV实例。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountParameterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountParameterResponse
+        /// </returns>
+        public ModifyAccountParameterResponse ModifyAccountParameter(ModifyAccountParameterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAccountParameterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改账号参数</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前仅支持Tair Serverless KV实例。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAccountParameterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountParameterResponse
+        /// </returns>
+        public async Task<ModifyAccountParameterResponse> ModifyAccountParameterAsync(ModifyAccountParameterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAccountParameterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
@@ -27825,13 +28027,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</para>
+        /// <para>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27978,13 +28180,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</para>
+        /// <para>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -28131,13 +28333,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</para>
+        /// <para>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -28156,13 +28358,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Changes the specifications of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> For more information about the procedure, impacts, limits, and fees of this operation, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</para>
+        /// <para>For information about the execution process, impacts, feature limits, and billing of specification changes, see <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
