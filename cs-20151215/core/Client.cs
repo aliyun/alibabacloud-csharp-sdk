@@ -2005,7 +2005,17 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
+        /// <h3>Generate OpenAPI request parameters through the console</h3>
+        /// <para>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</para>
+        /// <ol>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <b>Clusters</b> in the left-side navigation pane.</description></item>
+        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
+        /// <item><description>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
+        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<remarks>
+        /// <para>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -2464,7 +2474,17 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
+        /// <h3>Generate OpenAPI request parameters through the console</h3>
+        /// <para>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</para>
+        /// <ol>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <b>Clusters</b> in the left-side navigation pane.</description></item>
+        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
+        /// <item><description>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
+        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<remarks>
+        /// <para>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -2923,7 +2943,17 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
+        /// <h3>Generate OpenAPI request parameters through the console</h3>
+        /// <para>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</para>
+        /// <ol>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <b>Clusters</b> in the left-side navigation pane.</description></item>
+        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
+        /// <item><description>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
+        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<remarks>
+        /// <para>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -2947,7 +2977,17 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Generate OpenAPI request parameters by using the console.</h3>
+        /// <h3>Generate OpenAPI request parameters through the console</h3>
+        /// <para>When you call the CreateCluster operation to create a cluster, if the call fails due to an incorrect combination of request parameters, you can use the console to generate the required request parameter combination for creating a cluster. Perform the following steps:</para>
+        /// <ol>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <b>Clusters</b> in the left-side navigation pane.</description></item>
+        /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Template</b>.</description></item>
+        /// <item><description>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</description></item>
+        /// <item><description>After the configuration is complete, on the <b>Confirm Configuration</b> page, click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the parameter combination required for creating the cluster. You can copy and use the parameters.<remarks>
+        /// <para>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and alternative parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters and deprecation of OpenAPIs related to ACK cluster management</a>.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
