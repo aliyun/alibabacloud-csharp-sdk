@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inline</para>
         /// </summary>
         [NameInMap("EventMode")]
         [Validation(Required=false)]
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public ChatMessagesRequestInputs Inputs { get; set; }
         public class ChatMessagesRequestInputs : TeaModel {
             /// <summary>
-            /// <para>The user-specific agent ID.</para>
+            /// <para>The custom agent ID for the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d1b7d639-f34e-44c7-8231-987da14d****</para>
@@ -61,6 +64,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string CustomAgentId { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable deep thinking mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableThinking")]
             [Validation(Required=false)]
             public string EnableThinking { get; set; }
@@ -75,6 +84,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            /// <summary>
+            /// <para>The model ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen3.7-max</para>
+            /// </summary>
             [NameInMap("ModelId")]
             [Validation(Required=false)]
             public string ModelId { get; set; }
@@ -89,6 +104,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The thinking depth.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("ThinkEffort")]
             [Validation(Required=false)]
             public string ThinkEffort { get; set; }
@@ -120,7 +141,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance rm-bp14as9914vd3**** disk usage, whether expansion is needed</para>
+        /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

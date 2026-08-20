@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inline</para>
         /// </summary>
         [NameInMap("EventMode")]
         [Validation(Required=false)]
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance rm-bp14as9914vd3**** disk usage, whether expansion is needed</para>
+        /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
