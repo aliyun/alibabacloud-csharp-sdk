@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                body["CallerNumber"] = request.CallerNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
@@ -67,6 +71,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
                 body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerLineCode))
+            {
+                body["CustomerLineCode"] = request.CustomerLineCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
             {
@@ -126,6 +134,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 body["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                body["CallerNumber"] = request.CallerNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
             {
                 body["CallerUacAccountId"] = request.CallerUacAccountId;
@@ -133,6 +145,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentWorkspaceId))
             {
                 body["CurrentWorkspaceId"] = request.CurrentWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerLineCode))
+            {
+                body["CustomerLineCode"] = request.CustomerLineCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
             {
