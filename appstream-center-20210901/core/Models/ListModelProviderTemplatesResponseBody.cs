@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The model provider template description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云百炼服务商</para>
+            /// <para>Alibaba Cloud Bailian provider</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The model provider template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云百炼</para>
+            /// <para>Alibaba Cloud Bailian</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -90,10 +90,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ProviderType { get; set; }
 
+            /// <summary>
+            /// <para>The WUYING secure gateway proxy ProviderKey.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>wuying-key-12345</para>
+            /// </summary>
+            [NameInMap("WuyingProviderKey")]
+            [Validation(Required=false)]
+            public string WuyingProviderKey { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The page number of the current query results.</para>
+        /// <para>The current page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

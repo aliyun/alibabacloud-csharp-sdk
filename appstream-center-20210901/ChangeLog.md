@@ -1,3 +1,7 @@
+2026-08-20 Version: 5.6.7
+- Update API ListModelProviderTemplates: add response parameters Body.Data.$.WuyingProviderKey.
+
+
 2026-08-19 Version: 5.6.6
 - Update API ModifyBrowserInstanceGroup: add request parameters Policy.RevokeAccessPolicyRules.
 

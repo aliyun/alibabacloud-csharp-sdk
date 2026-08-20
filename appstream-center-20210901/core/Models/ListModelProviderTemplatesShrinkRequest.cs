@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The name of the Agent provider.</para>
+        /// <para>The Agent provider name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
