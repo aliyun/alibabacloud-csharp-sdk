@@ -3656,6 +3656,598 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a software ban policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedPolicyResponse
+        /// </returns>
+        public CreateProhibitedPolicyResponse CreateProhibitedPolicyWithOptions(CreateProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceKill))
+            {
+                body["ForceKill"] = request.ForceKill;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextCh))
+            {
+                body["MainButtonTextCh"] = request.MainButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextEn))
+            {
+                body["MainButtonTextEn"] = request.MainButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextCh))
+            {
+                body["MinorButtonTextCh"] = request.MinorButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextEn))
+            {
+                body["MinorButtonTextEn"] = request.MinorButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptCh))
+            {
+                body["PromptCh"] = request.PromptCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptEn))
+            {
+                body["PromptEn"] = request.PromptEn;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleCh))
+            {
+                body["TitleCh"] = request.TitleCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleEn))
+            {
+                body["TitleEn"] = request.TitleEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software ban policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedPolicyResponse
+        /// </returns>
+        public async Task<CreateProhibitedPolicyResponse> CreateProhibitedPolicyWithOptionsAsync(CreateProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceKill))
+            {
+                body["ForceKill"] = request.ForceKill;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextCh))
+            {
+                body["MainButtonTextCh"] = request.MainButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextEn))
+            {
+                body["MainButtonTextEn"] = request.MainButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextCh))
+            {
+                body["MinorButtonTextCh"] = request.MinorButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextEn))
+            {
+                body["MinorButtonTextEn"] = request.MinorButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptCh))
+            {
+                body["PromptCh"] = request.PromptCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptEn))
+            {
+                body["PromptEn"] = request.PromptEn;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleCh))
+            {
+                body["TitleCh"] = request.TitleCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleEn))
+            {
+                body["TitleEn"] = request.TitleEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software ban policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedPolicyResponse
+        /// </returns>
+        public CreateProhibitedPolicyResponse CreateProhibitedPolicy(CreateProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateProhibitedPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software ban policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedPolicyResponse
+        /// </returns>
+        public async Task<CreateProhibitedPolicyResponse> CreateProhibitedPolicyAsync(CreateProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateProhibitedPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedSoftwareResponse
+        /// </returns>
+        public CreateProhibitedSoftwareResponse CreateProhibitedSoftwareWithOptions(CreateProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinuxProcesses))
+            {
+                bodyFlat["LinuxProcesses"] = request.LinuxProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MacOSProcesses))
+            {
+                bodyFlat["MacOSProcesses"] = request.MacOSProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowsProcesses))
+            {
+                bodyFlat["WindowsProcesses"] = request.WindowsProcesses;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<CreateProhibitedSoftwareResponse> CreateProhibitedSoftwareWithOptionsAsync(CreateProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinuxProcesses))
+            {
+                bodyFlat["LinuxProcesses"] = request.LinuxProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MacOSProcesses))
+            {
+                bodyFlat["MacOSProcesses"] = request.MacOSProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowsProcesses))
+            {
+                bodyFlat["WindowsProcesses"] = request.WindowsProcesses;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedSoftwareResponse
+        /// </returns>
+        public CreateProhibitedSoftwareResponse CreateProhibitedSoftware(CreateProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateProhibitedSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<CreateProhibitedSoftwareResponse> CreateProhibitedSoftwareAsync(CreateProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateProhibitedSoftwareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedTagResponse
+        /// </returns>
+        public CreateProhibitedTagResponse CreateProhibitedTagWithOptions(CreateProhibitedTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedTagResponse
+        /// </returns>
+        public async Task<CreateProhibitedTagResponse> CreateProhibitedTagWithOptionsAsync(CreateProhibitedTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProhibitedTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProhibitedTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedTagResponse
+        /// </returns>
+        public CreateProhibitedTagResponse CreateProhibitedTag(CreateProhibitedTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateProhibitedTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom disabled software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateProhibitedTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProhibitedTagResponse
+        /// </returns>
+        public async Task<CreateProhibitedTagResponse> CreateProhibitedTagAsync(CreateProhibitedTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateProhibitedTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create a device registration policy for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -6884,6 +7476,402 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes software prohibition policies in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedPoliciesResponse
+        /// </returns>
+        public DeleteProhibitedPoliciesResponse DeleteProhibitedPoliciesWithOptions(DeleteProhibitedPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyIds))
+            {
+                bodyFlat["PolicyIds"] = request.PolicyIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedPolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes software prohibition policies in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedPoliciesResponse
+        /// </returns>
+        public async Task<DeleteProhibitedPoliciesResponse> DeleteProhibitedPoliciesWithOptionsAsync(DeleteProhibitedPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyIds))
+            {
+                bodyFlat["PolicyIds"] = request.PolicyIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedPolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes software prohibition policies in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedPoliciesResponse
+        /// </returns>
+        public DeleteProhibitedPoliciesResponse DeleteProhibitedPolicies(DeleteProhibitedPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProhibitedPoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes software prohibition policies in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedPoliciesResponse
+        /// </returns>
+        public async Task<DeleteProhibitedPoliciesResponse> DeleteProhibitedPoliciesAsync(DeleteProhibitedPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProhibitedPoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom prohibited software in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedSoftwareResponse
+        /// </returns>
+        public DeleteProhibitedSoftwareResponse DeleteProhibitedSoftwareWithOptions(DeleteProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom prohibited software in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<DeleteProhibitedSoftwareResponse> DeleteProhibitedSoftwareWithOptionsAsync(DeleteProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom prohibited software in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedSoftwareResponse
+        /// </returns>
+        public DeleteProhibitedSoftwareResponse DeleteProhibitedSoftware(DeleteProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProhibitedSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom prohibited software in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<DeleteProhibitedSoftwareResponse> DeleteProhibitedSoftwareAsync(DeleteProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProhibitedSoftwareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除自定义标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedTagsResponse
+        /// </returns>
+        public DeleteProhibitedTagsResponse DeleteProhibitedTagsWithOptions(DeleteProhibitedTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedTags",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除自定义标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedTagsResponse
+        /// </returns>
+        public async Task<DeleteProhibitedTagsResponse> DeleteProhibitedTagsWithOptionsAsync(DeleteProhibitedTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProhibitedTags",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProhibitedTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除自定义标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedTagsResponse
+        /// </returns>
+        public DeleteProhibitedTagsResponse DeleteProhibitedTags(DeleteProhibitedTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProhibitedTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除自定义标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProhibitedTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProhibitedTagsResponse
+        /// </returns>
+        public async Task<DeleteProhibitedTagsResponse> DeleteProhibitedTagsAsync(DeleteProhibitedTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProhibitedTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Batch delete device registration policies under your Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -10020,6 +11008,242 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPrivateAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedPolicyResponse
+        /// </returns>
+        public GetProhibitedPolicyResponse GetProhibitedPolicyWithOptions(GetProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProhibitedPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedPolicyResponse
+        /// </returns>
+        public async Task<GetProhibitedPolicyResponse> GetProhibitedPolicyWithOptionsAsync(GetProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProhibitedPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedPolicyResponse
+        /// </returns>
+        public GetProhibitedPolicyResponse GetProhibitedPolicy(GetProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProhibitedPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedPolicyResponse
+        /// </returns>
+        public async Task<GetProhibitedPolicyResponse> GetProhibitedPolicyAsync(GetProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProhibitedPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified prohibited software.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedSoftwareResponse
+        /// </returns>
+        public GetProhibitedSoftwareResponse GetProhibitedSoftwareWithOptions(GetProhibitedSoftwareRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetProhibitedSoftwareShrinkRequest request = new GetProhibitedSoftwareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProhibitedSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified prohibited software.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<GetProhibitedSoftwareResponse> GetProhibitedSoftwareWithOptionsAsync(GetProhibitedSoftwareRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetProhibitedSoftwareShrinkRequest request = new GetProhibitedSoftwareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProhibitedSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified prohibited software.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedSoftwareResponse
+        /// </returns>
+        public GetProhibitedSoftwareResponse GetProhibitedSoftware(GetProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProhibitedSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified prohibited software.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<GetProhibitedSoftwareResponse> GetProhibitedSoftwareAsync(GetProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProhibitedSoftwareWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14932,6 +16156,426 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPrivateAccessTagsForDynamicRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedPoliciesResponse
+        /// </returns>
+        public ListProhibitedPoliciesResponse ListProhibitedPoliciesWithOptions(ListProhibitedPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedPoliciesShrinkRequest request = new ListProhibitedPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedPolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedPoliciesResponse
+        /// </returns>
+        public async Task<ListProhibitedPoliciesResponse> ListProhibitedPoliciesWithOptionsAsync(ListProhibitedPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedPoliciesShrinkRequest request = new ListProhibitedPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedPolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedPoliciesResponse
+        /// </returns>
+        public ListProhibitedPoliciesResponse ListProhibitedPolicies(ListProhibitedPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProhibitedPoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of software prohibition policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedPoliciesResponse
+        /// </returns>
+        public async Task<ListProhibitedPoliciesResponse> ListProhibitedPoliciesAsync(ListProhibitedPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProhibitedPoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedSoftwareResponse
+        /// </returns>
+        public ListProhibitedSoftwareResponse ListProhibitedSoftwareWithOptions(ListProhibitedSoftwareRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedSoftwareShrinkRequest request = new ListProhibitedSoftwareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagId))
+            {
+                request.TagIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagId, "TagId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<ListProhibitedSoftwareResponse> ListProhibitedSoftwareWithOptionsAsync(ListProhibitedSoftwareRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedSoftwareShrinkRequest request = new ListProhibitedSoftwareShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagId))
+            {
+                request.TagIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagId, "TagId", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedSoftwareResponse
+        /// </returns>
+        public ListProhibitedSoftwareResponse ListProhibitedSoftware(ListProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProhibitedSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software under the current Alibaba Cloud account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<ListProhibitedSoftwareResponse> ListProhibitedSoftwareAsync(ListProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProhibitedSoftwareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedTagsResponse
+        /// </returns>
+        public ListProhibitedTagsResponse ListProhibitedTagsWithOptions(ListProhibitedTagsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedTagsShrinkRequest request = new ListProhibitedTagsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIdShrink))
+            {
+                query["SoftwareId"] = request.SoftwareIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                query["TagIds"] = request.TagIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedTags",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProhibitedTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedTagsResponse
+        /// </returns>
+        public async Task<ListProhibitedTagsResponse> ListProhibitedTagsWithOptionsAsync(ListProhibitedTagsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProhibitedTagsShrinkRequest request = new ListProhibitedTagsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SoftwareId))
+            {
+                request.SoftwareIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SoftwareId, "SoftwareId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIdShrink))
+            {
+                query["SoftwareId"] = request.SoftwareIdShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                query["TagIds"] = request.TagIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProhibitedTags",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProhibitedTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedTagsResponse
+        /// </returns>
+        public ListProhibitedTagsResponse ListProhibitedTags(ListProhibitedTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProhibitedTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of prohibited software tags under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProhibitedTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProhibitedTagsResponse
+        /// </returns>
+        public async Task<ListProhibitedTagsResponse> ListProhibitedTagsAsync(ListProhibitedTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProhibitedTagsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20956,6 +22600,622 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePrivateAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedPolicyResponse
+        /// </returns>
+        public UpdateProhibitedPolicyResponse UpdateProhibitedPolicyWithOptions(UpdateProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceKill))
+            {
+                body["ForceKill"] = request.ForceKill;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextCh))
+            {
+                body["MainButtonTextCh"] = request.MainButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextEn))
+            {
+                body["MainButtonTextEn"] = request.MainButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextCh))
+            {
+                body["MinorButtonTextCh"] = request.MinorButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextEn))
+            {
+                body["MinorButtonTextEn"] = request.MinorButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptCh))
+            {
+                body["PromptCh"] = request.PromptCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptEn))
+            {
+                body["PromptEn"] = request.PromptEn;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleCh))
+            {
+                body["TitleCh"] = request.TitleCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleEn))
+            {
+                body["TitleEn"] = request.TitleEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedPolicyResponse
+        /// </returns>
+        public async Task<UpdateProhibitedPolicyResponse> UpdateProhibitedPolicyWithOptionsAsync(UpdateProhibitedPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceKill))
+            {
+                body["ForceKill"] = request.ForceKill;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextCh))
+            {
+                body["MainButtonTextCh"] = request.MainButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainButtonTextEn))
+            {
+                body["MainButtonTextEn"] = request.MainButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextCh))
+            {
+                body["MinorButtonTextCh"] = request.MinorButtonTextCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinorButtonTextEn))
+            {
+                body["MinorButtonTextEn"] = request.MinorButtonTextEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptCh))
+            {
+                body["PromptCh"] = request.PromptCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptEn))
+            {
+                body["PromptEn"] = request.PromptEn;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareIds))
+            {
+                bodyFlat["SoftwareIds"] = request.SoftwareIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleCh))
+            {
+                body["TitleCh"] = request.TitleCh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TitleEn))
+            {
+                body["TitleEn"] = request.TitleEn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedPolicyResponse
+        /// </returns>
+        public UpdateProhibitedPolicyResponse UpdateProhibitedPolicy(UpdateProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProhibitedPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a software prohibition policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedPolicyResponse
+        /// </returns>
+        public async Task<UpdateProhibitedPolicyResponse> UpdateProhibitedPolicyAsync(UpdateProhibitedPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProhibitedPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedSoftwareResponse
+        /// </returns>
+        public UpdateProhibitedSoftwareResponse UpdateProhibitedSoftwareWithOptions(UpdateProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinuxProcesses))
+            {
+                bodyFlat["LinuxProcesses"] = request.LinuxProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MacOSProcesses))
+            {
+                bodyFlat["MacOSProcesses"] = request.MacOSProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowsProcesses))
+            {
+                bodyFlat["WindowsProcesses"] = request.WindowsProcesses;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<UpdateProhibitedSoftwareResponse> UpdateProhibitedSoftwareWithOptionsAsync(UpdateProhibitedSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinuxProcesses))
+            {
+                bodyFlat["LinuxProcesses"] = request.LinuxProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MacOSProcesses))
+            {
+                bodyFlat["MacOSProcesses"] = request.MacOSProcesses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowsProcesses))
+            {
+                bodyFlat["WindowsProcesses"] = request.WindowsProcesses;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedSoftwareResponse
+        /// </returns>
+        public UpdateProhibitedSoftwareResponse UpdateProhibitedSoftware(UpdateProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProhibitedSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software entry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedSoftwareResponse
+        /// </returns>
+        public async Task<UpdateProhibitedSoftwareResponse> UpdateProhibitedSoftwareAsync(UpdateProhibitedSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProhibitedSoftwareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedTagResponse
+        /// </returns>
+        public UpdateProhibitedTagResponse UpdateProhibitedTagWithOptions(UpdateProhibitedTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedTagResponse
+        /// </returns>
+        public async Task<UpdateProhibitedTagResponse> UpdateProhibitedTagWithOptionsAsync(UpdateProhibitedTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProhibitedTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProhibitedTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedTagResponse
+        /// </returns>
+        public UpdateProhibitedTagResponse UpdateProhibitedTag(UpdateProhibitedTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProhibitedTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom prohibited software tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProhibitedTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProhibitedTagResponse
+        /// </returns>
+        public async Task<UpdateProhibitedTagResponse> UpdateProhibitedTagAsync(UpdateProhibitedTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProhibitedTagWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
